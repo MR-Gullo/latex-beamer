@@ -25,6 +25,9 @@ Please follow these instructions carefully:
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage{xcolor}
+% Set image search paths
+\graphicspath{{../images/}{../../shared/images/}}
+
 % Define custom colors for DS9 theme
 \definecolor{ds9blue}{RGB}{25,25,112}
 \definecolor{ds9gold}{RGB}{218,165,32}
@@ -96,6 +99,9 @@ Example output structure:
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage{xcolor}
+% Set image search paths
+\graphicspath{{../images/}{../../shared/images/}}
+
 % Define custom colors for DS9 theme
 \definecolor{ds9blue}{RGB}{25,25,112}
 \definecolor{ds9gold}{RGB}{218,165,32}
