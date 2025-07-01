@@ -1,0 +1,515 @@
+\documentclass{beamer}
+% Required packages
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{xcolor}
+% Define custom colors for DS9 theme
+\definecolor{ds9blue}{RGB}{25,25,112}
+\definecolor{ds9gold}{RGB}{218,165,32}
+\definecolor{ds9grey}{RGB}{105,105,105}
+\definecolor{ds9red}{RGB}{178,34,34}
+% Set up the Madrid theme with custom colors
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamercolor{palette primary}{bg=ds9blue,fg=white}
+\setbeamercolor{palette secondary}{bg=ds9grey,fg=white}
+\setbeamercolor{palette tertiary}{bg=ds9gold,fg=black}
+\setbeamercolor{palette quaternary}{bg=ds9red,fg=white}
+\setbeamercolor{structure}{fg=ds9blue}
+\setbeamercolor{title}{fg=ds9gold}
+\setbeamercolor{subtitle}{fg=ds9gold}
+\setbeamercolor{frametitle}{bg=ds9blue,fg=white}
+\setbeamercolor{block title}{bg=ds9blue,fg=white}
+\setbeamercolor{block body}{bg=ds9grey!20,fg=black}
+
+% Title page configuration
+\title[Critical AI Literacy]{AI Literacy}
+\subtitle{Addressing LLM Misuse in Educational Settings}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[April 2025]{April 17, 2025}
+
+\begin{document}
+
+% Title frame
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{AI Confidence vs Accuracy: XKCD's Take}
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+     \begin{figure}
+         \centering
+         \includegraphics[width=0.6\linewidth]{ai_methodology_2x.png}
+     
+      \caption*{XKCD \#2451: AI Methodology}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{figure}
+          \centering
+          \includegraphics[width=0.8\linewidth]{machine_learning_2x.png}
+                \caption*{XKCD \#1838: Machine Learning}
+      \end{figure}
+
+    \end{column}
+  \end{columns}
+  \vspace{0.5cm}
+  \tiny{Images from xkcd.com by Randall Munroe (CC BY-NC 2.5)}
+\end{frame}
+
+% Learning objectives frame
+\begin{frame}{Learning Objectives}
+\begin{block}{By the end of this presentation, you will be able to:}
+\begin{itemize}
+  \item Define LLM hallucinations and explain why they occur
+  \item Identify at least three strategies to critically evaluate AI-generated content
+  \item Apply principles of effective prompting to improve LLM response quality
+  \item Articulate ethical considerations for academic use of AI tools
+\end{itemize}
+\end{block}
+\end{frame}
+
+% Section frame - Understanding LLM Hallucinations
+\section{Understanding LLM Hallucinations}
+
+\begin{frame}{What Are LLM Hallucinations?}
+\begin{block}{Definition}
+Instances where AI generates content that is:
+\begin{itemize}
+  \item Factually incorrect | Nonsensical
+  \item Disconnected from the input prompt
+  \item Yet presented with high confidence
+\end{itemize}
+\end{block}
+
+\alert{}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{02c4ce1d-fdd3-47cd-8a44-ce141f1a4c98.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Why Do LLMs Hallucinate?}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Training Data Deficiencies}
+\begin{itemize}
+  \item Learn from unverified internet content
+  \item Reproduce biases and inaccuracies
+  \item Training data may be outdated
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{block}{Model Limitations}
+\begin{itemize}
+  \item Probabilistic word prediction
+  \item Not accessing verified facts
+  \item No genuine understanding
+\end{itemize}
+\end{block}
+
+\pause
+
+\column{0.5\textwidth}
+\begin{block}{Prompting Issues}
+\begin{itemize}
+  \item Vague or ambiguous requests
+  \item Overly complex prompts
+  \item LLM "fills in gaps" with fabrications
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{alertblock}{Key Insight}
+LLMs are sophisticated word predictors, not truth tellers!
+\end{alertblock}
+\end{columns}
+\end{frame}
+
+% Section frame - Student Interaction Patterns
+\section{Student Interaction Patterns}
+
+\begin{frame}{How Students Use LLMs}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{block}{Interaction Patterns (Anthropic Report)}
+Four primary interaction styles:
+\begin{itemize}
+  \item \textbf{Direct Problem Solving} (23-29\%)\\
+  Seeking quick answers
+  \item \textbf{Direct Output Creation} (23-29\%)\\
+  Generating essays, code, etc.
+  \item \textbf{Collaborative Problem Solving} (23-29\%)\\
+  Dialogue to work through problems
+  \item \textbf{Collaborative Output Creation} (23-29\%)\\
+  Iterative refinement of complex outputs
+\end{itemize}
+\end{block}
+
+\column{0.4\textwidth}
+\alert{}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{antyh.png}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Discipline-Specific Usage Patterns}
+\begin{block}{Disproportionate Usage by Field}
+\begin{itemize}
+  \item Computer Science: 36.8\% of conversations (vs. 5.4\% of degrees)
+  \item Natural Sciences/Mathematics: 15.2\% (vs. 9.2\%)
+  \item Business: 8.9\% (vs. 18.6\%)
+  \item Humanities: 6.4\% (vs. 12.5\%)
+\end{itemize}
+\end{block}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{grhanth.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{block}{Cognitive Functions (Bloom's Taxonomy)}
+Students primarily use LLMs for higher-order functions:
+\begin{itemize}
+  \item Creating: 39.8\%
+  \item Analyzing: 30.2\%
+  \item Applying: 10.9\%
+  \item Understanding: 10.0\%
+  \item Remembering: 1.8\%
+\end{itemize}
+\end{block}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{bloomsanthr.png}
+\end{figure}
+\end{frame}
+
+
+
+
+
+% Section frame - Learning Implications
+\section{Implications for Learning}
+
+\begin{frame}{Implications for Learning and Academic Integrity}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Hindrance to Critical Thinking}
+Bypassing opportunities to practice:
+\begin{itemize}
+  \item Information literacy
+  \item Source analysis
+  \item Logical reasoning
+  \item Evidence assessment
+  \item Argument construction
+\end{itemize}
+\end{block}
+
+\pause
+
+\column{0.5\textwidth}
+\begin{block}{Knowledge Base Erosion}
+\begin{itemize}
+  \item Missing foundational concepts
+  \item Gaps in understanding
+  \item Inability to handle complex topics
+\end{itemize}
+\end{block}
+\end{columns}
+
+\pause
+
+\begin{block}{Academic Integrity Challenges}
+\begin{itemize}
+  \item Blurred boundaries between assistance and cheating
+  \item Difficult to assess work authenticity
+  \item Need for new definitions of academic misconduct
+\end{itemize}
+\end{block}
+\end{frame}
+
+% Section frame - Critical Evaluation
+\section{Critical Evaluation Strategies}
+
+\begin{frame}{Critical Evaluation Strategies}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Cross-Referencing \& Verification}
+\begin{itemize}
+  \item Verify against multiple reliable sources
+  \item Textbooks, peer-reviewed articles
+  \item Check cited sources (LLMs often invent citations)
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{block}{Context Consistency Checks}
+\begin{itemize}
+  \item Does it answer the question asked?
+  \item Does it stay focused?
+  \item Are there internal contradictions?
+\end{itemize}
+\end{block}
+
+\pause
+
+\column{0.5\textwidth}
+\begin{block}{Plausibility \& "Gut Checks"}
+\begin{itemize}
+  \item Does it align with existing knowledge?
+  \item Is it reasonable or surprising?
+  \item Does it warrant skepticism?
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{block}{Identifying Bias Markers}
+\begin{itemize}
+  \item Stereotypical representations
+  \item Broad generalizations
+  \item Lack of diverse perspectives
+  \item Loaded language
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+% Section frame - Effective Prompting
+\section{Effective Prompting Techniques}
+
+
+
+\begin{frame}{Principles of Effective Prompting}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Clarity and Specificity}
+\begin{itemize}
+  \item Be precise about information needed
+  \item Avoid vague or ambiguous requests
+\end{itemize}
+\textbf{Poor:} "Tell me about climate change"
+\textbf{Better:} "Explain the primary impacts of climate change on Arctic sea ice levels over the past 50 years, citing key scientific findings."
+\end{block}
+
+\pause
+
+\column{0.5\textwidth}
+\begin{block}{Providing Context}
+\begin{itemize}
+  \item Supply relevant background
+  \item Indicate your role/purpose
+  \item Specify constraints or scope
+\end{itemize}
+\vspace{0.2cm}
+\textbf{Example:} "I am a university student writing a research paper for an introductory biology course. I need help brainstorming arguments about..."
+\end{block}
+\end{columns}
+
+\pause
+
+\begin{block}{Defining the Output}
+\begin{itemize}
+  \item Specify format, length, tone, audience
+  \item Example: "Summarize in three bullet points" or "Explain using an analogy suitable for high school students"
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Advanced Prompting Techniques}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Few-Shot Prompting}
+Include examples of desired input-output pattern:
+\begin{itemize}
+  \item Shows the AI what you want
+  \item Guides format and content
+  \item Quality of examples matters
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{block}{Role Assignment}
+\begin{itemize}
+  \item "Act as a critical reviewer..."
+  \item "Explain as a patient tutor..."
+  \item "Respond as an expert in..."
+\end{itemize}
+\end{block}
+
+\pause
+
+\column{0.5\textwidth}
+\begin{block}{Content Grounding}
+\begin{itemize}
+  \item "Based solely on the provided text..."
+  \item Limits speculation
+  \item Still requires verification
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{block}{Prompt Chaining}
+\begin{itemize}
+  \item Break complex tasks into steps
+  \item Review output before proceeding
+  \item Allows iterative refinement
+\end{itemize}
+\end{block}
+\end{columns}
+
+\end{frame}
+
+
+
+% Examples - I do, We do, You do
+\section{Examples}
+
+\begin{frame}{Example 1: "I Do" - Evaluating an LLM Response}
+\begin{block}{LLM Generated Statement}
+"The Heisenberg Uncertainty Principle states that the more precisely the position of a particle is determined, the less precisely its momentum can be measured. This was experimentally proven in 1927 by Werner Heisenberg using electron diffraction patterns, showing it's impossible to simultaneously know both values with perfect accuracy."
+\end{block}
+
+\pause
+
+\begin{block}{Evaluation Process}
+\begin{enumerate}
+  \item \textbf{Identify specific claims:}
+  \begin{itemize}
+    \item Definition of the Uncertainty Principle
+    \item Experimental proof by Heisenberg in 1927
+    \item Method: electron diffraction patterns
+  \end{itemize}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Example 1: Evaluating an LLM Response ("I Do")}
+        \begin{enumerate}
+            \item \textbf{Claim 1:} Definition of the Uncertainty Principle (cannot know position and momentum exactly).
+                \begin{itemize}
+                    \item \textbf{Evaluation:} \textcolor{green}{Accurate}. This is a correct statement of the principle.
+                \end{itemize}
+            \pause
+            \item \textbf{Claim 2:} Heisenberg proved it experimentally in 1927.
+                \begin{itemize}
+                    \item \textbf{Evaluation:} \textcolor{red}{Error}. Heisenberg derived the principle \emph{mathematically} from quantum mechanics and thought experiments (like the gamma-ray microscope) in 1927. It wasn't initially based on a specific laboratory experiment he performed. 
+                \end{itemize}
+                \pause
+            \item \textbf{Claim 3:} The method involved electron diffraction patterns.
+                \begin{itemize}
+                    \item \textbf{Evaluation:} \textcolor{red}{Incorrect}. Electron diffraction experiments (e.g., Davisson-Germer, 1927) demonstrated the \emph{wave nature} of electrons. While related to quantum mechanics, this is not the method Heisenberg used for the Uncertainty Principle's derivation or proof. This conflates distinct foundational experiments.
+                \end{itemize}
+        \end{enumerate}
+        \pause
+        \textbf{Conclusion:} While the definition is correct, the LLM response contains significant factual errors regarding the method and nature (theoretical vs. experimental) of the principle's origin.
+\end{frame}
+
+\begin{frame}{Example 2: "We Do" - Improving a Prompt}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Original Prompt}
+"Tell me about quantum entanglement."
+\end{block}
+
+\pause
+
+\begin{alertblock}{Problems with the Prompt}
+\begin{itemize}
+  \item Too vague and broad
+  \item No context or background
+  \item No specified audience/level
+  \item No format or structure
+\end{itemize}
+\end{alertblock}
+
+\pause
+
+\column{0.5\textwidth}
+\begin{block}{Improved Prompt}
+"Explain quantum entanglement at a first-year undergraduate physics level. Include:
+\begin{itemize}
+  \item A clear definition with the key mathematical relationship
+  \item One real-world experimental example
+  \item Its significance for quantum computing
+\end{itemize}
+Use simple analogies where appropriate and keep the explanation under 300 words."
+\end{block}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Example 3: "You Do" - Creating an AI Policy}
+\begin{block}{Scenario}
+You are designing a policy for AI use in a Computer Science 12 assignment where students:
+\begin{itemize}
+    \item Are given a completed math worksheet defining recursive sequences/formulas (e.g., Fibonacci, factorials, custom sequences).
+    \item Must implement these sequences as recursive functions in c++.
+    \item Need to test their functions with provided or self-generated test cases.
+    
+\end{itemize}
+\end{block}
+
+\begin{block}{Your Task}
+Develop a clear AI policy for this recursion coding assignment:
+\begin{itemize}
+    \item Which parts should be
+    \textcolor{red}{RED} (AI prohibited)? \\ 
+    \item Which parts could be
+    \textcolor{orange}{ORANGE} (AI permitted with constraints)? \\ 
+    \item Which parts might be
+    \textcolor{green}{GREEN} (AI encouraged)? \\ 
+    \item What specific disclosure requirements would you include?
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% Summary slide
+\section{Summary}
+
+\begin{frame}{Key Takeaways}
+\begin{block}{Critical AI Literacy Framework}
+\begin{itemize}
+  \item \textbf{Understand} LLM limitations and why hallucinations occur
+  \item \textbf{Evaluate} AI content critically using multiple verification strategies
+  \item \textbf{Prompt} effectively to improve output quality and relevance
+  \item \textbf{Apply} clear policies for ethical AI integration
+  \item \textbf{Practice} iterative refinement and critical dialogue
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Remember}
+LLMs are tools to augment human thinking, not replace it. The ultimate responsibility for the accuracy, integrity, and quality of any work rests with you, not the AI.
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+\centering
+\Huge{Questions?}
+\end{frame}
+% References slide with clickable links
+\begin{frame}{References}
+\begin{block}{Key sources}
+\begin{itemize}
+  \item \href{https://www.anthropic.com/news/anthropic-education-report-how-university-students-use-claude}{Anthropic Education Report: How University Students Use Claude}
+  \item \href{https://labelyourdata.com/articles/llm-fine-tuning/llm-hallucination}{LLM Hallucination: Understanding AI Text Errors}
+  \item \href{https://www.codecademy.com/article/ai-prompting-best-practices}{AI Prompting Best Practices}
+  \item \href{https://libguides.library.arizona.edu/ai-literacy-instructors/verify-facts}{Fact-checking is always needed - AI Literacy in the Age of ChatGPT}
+\end{itemize}
+\end{block}
+\end{frame}
+\end{document}

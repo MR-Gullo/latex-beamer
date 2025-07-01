@@ -1,0 +1,189 @@
+\documentclass{beamer}
+
+% Required packages
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Define custom colors
+\definecolor{deepblue}{RGB}{0,51,102}
+\definecolor{lightblue}{RGB}{235,244,255}
+\definecolor{darkgray}{RGB}{64,64,64}
+\definecolor{codegreen}{RGB}{104,180,104}
+
+% Theme configuration
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamercolor{structure}{fg=deepblue}
+\setbeamercolor{block title}{bg=deepblue,fg=white}
+\setbeamercolor{block body}{bg=lightblue,fg=black}
+
+% Title page configuration
+\title[Algorithm Analysis]{Think-Pair-Share: Algorithmic Detective Work}
+\subtitle{Discovering Patterns in Code Together}
+\author[Student Guide]{Collaborative Learning Session}
+\date{}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Our Mystery Today
+\begin{frame}{The Mystery We'll Solve Together}
+    \begin{block}{Our Challenge}
+        Today, we're going to be code detectives. We'll examine a mysterious function and uncover:
+        \begin{itemize}
+            \item What it does
+            \item How efficiently it works
+            \item Where we might use it in real life
+        \end{itemize}
+    \end{block}
+    
+    \begin{alertblock}{How We'll Work}
+        \begin{enumerate}
+            \item Think: Solo investigation (3-5 minutes)
+            \item Pair: Partner detective work (5-7 minutes)
+            \item Share: Team conference (7-10 minutes)
+        \end{enumerate}
+    \end{alertblock}
+\end{frame}
+
+% The Mystery Function
+\begin{frame}[fragile]{The Mystery Function}
+    \begin{block}{Code to Analyze}
+        \begin{lstlisting}[language=Python,basicstyle=\ttfamily\small]
+def mystery_function(arr):
+    result = 0
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] + arr[j] == 10:
+                result += 1
+    return result
+        \end{lstlisting}
+    \end{block}
+    
+    \begin{example}
+        Test Array: [2, 8, 5, 3, 7]
+    \end{example}
+\end{frame}
+
+% Think Phase
+\begin{frame}{Think Phase: Solo Investigation}
+    \begin{block}{Your Detective Notes}
+        On the paper provided, investigate:
+        \begin{enumerate}
+            \item What does each loop accomplish?
+            \item Trace the first three iterations
+            \item What patterns do you notice?
+        \end{enumerate}
+    \end{block}
+    
+    \begin{alertblock}{Investigation Tools}
+        \begin{itemize}
+            \item Use arrows to track the loops
+            \item Circle pairs that add to 10
+            \item Note how many comparisons you make
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+% Pair Phase
+\begin{frame}{Pair Phase: Compare Notes}
+    \begin{block}{Discussion Guide}
+        With your partner:
+        \begin{itemize}
+            \item Show how you traced the code
+            \item Compare your findings
+            \item Discuss any differences
+        \end{itemize}
+    \end{block}
+    
+    \begin{alertblock}{Key Questions}
+        \begin{enumerate}
+            \item Why does j start at i + 1?
+            \item How many times does the inner loop run?
+            \item What's the largest possible number of comparisons?
+        \end{enumerate}
+    \end{alertblock}
+\end{frame}
+
+% Share Phase Setup
+\begin{frame}{Share Phase: Team Conference}
+    \begin{block}{Discussion Format}
+        We'll build understanding together:
+        \begin{itemize}
+            \item Different pairs will share their insights
+            \item We'll compare approaches
+            \item Together, we'll reach conclusions
+        \end{itemize}
+    \end{block}
+    
+    \begin{alertblock}{Prepare to Share}
+        Be ready to discuss:
+        \begin{itemize}
+            \item Your method for counting operations
+            \item Any patterns you discovered
+            \item Real-world connections
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+
+
+% Common Pitfalls
+\begin{frame}{Detective's Tips}
+    \begin{block}{Watch Out For}
+        Common misunderstandings:
+        \begin{itemize}
+            \item Thinking loops always mean O(n²)
+            \item Missing the i + 1 pattern
+            \item Counting only successful matches
+        \end{itemize}
+    \end{block}
+    
+    \begin{alertblock}{Investigation Tips}
+        \begin{itemize}
+            \item Count ALL comparisons
+            \item Think about worst-case scenario
+            \item Consider what happens as array grows
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+% Extension Challenges
+\begin{frame}{Bonus Investigations}
+    \begin{block}{For Expert Detectives}
+        If you finish early, try:
+        \begin{enumerate}
+            \item Can we make this function faster?
+            \item What if we wanted ALL pairs that sum to 10?
+            \item How would sorting help/hurt?
+        \end{enumerate}
+    \end{block}
+    
+    
+\end{frame}
+
+% Wrap Up
+\begin{frame}{Case Closed: What We Learned}
+    \begin{block}{Key Discoveries}
+        \begin{itemize}
+            \item How nested loops affect complexity
+            \item Why starting position matters
+            \item Real-world applications of pair finding
+        \end{itemize}
+    \end{block}
+    
+    \begin{alertblock}{Next Steps}
+        \begin{itemize}
+            \item Apply these techniques to new problems
+            \item Look for similar patterns in other code
+            \item Share your detective skills!
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,291 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Define custom colors inspired by Star Trek DS9
+\definecolor{ds9blue}{RGB}{25,25,112} % Midnight Blue
+\definecolor{ds9gold}{RGB}{218,165,32} % Goldenrod
+\definecolor{ds9grey}{RGB}{105,105,105} % Dim Gray
+\definecolor{ds9red}{RGB}{178,34,34} % Firebrick
+
+% Customize the colors
+\setbeamercolor{title}{fg=ds9gold}
+\setbeamercolor{frametitle}{bg=ds9blue, fg=white}
+\setbeamercolor{block title}{bg=ds9gold, fg=black}
+\setbeamercolor{block body}{bg=ds9grey!20, fg=black}
+\setbeamercolor{section in toc}{fg=ds9gold}
+\setbeamercolor{subsection in toc}{fg=ds9gold!70}
+\setbeamercolor{footline}{bg=ds9blue, fg=white}
+\setbeamercolor{author in head/foot}{fg=white}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{title in head/foot}{fg=white}
+
+% Title page configuration
+\title[ ]{PHYS12 CH5: Friction, Drag Forces, and Elasticity}
+\subtitle{ }
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Oct 2024]{October 2024}
+
+% Add logo
+\logo{\includegraphics[width=0.1\linewidth]{cinec_logo.png}}
+
+% Table of contents at the beginning of each section
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+\begin{frame}
+\frametitle{Key Equations: Friction Forces}
+\begin{block}{Static and Kinetic Friction}
+\begin{align*}
+f_s &\leq \mu_s N \quad \text{(static friction)} \\
+f_k &= \mu_k N \quad \text{(kinetic friction)} \\
+N &= mg \quad \text{(normal force)}
+\end{align*}
+\end{block}
+
+
+\begin{alertblock}{Important Notes}
+\begin{itemize}
+\item $\mu_s$ = coefficient of static friction (typically 0.3-0.8)
+\item $\mu_k$ = coefficient of kinetic friction (typically less than $\mu_s$)
+\item $N$ = normal force (perpendicular to surface)
+\item $m$ = mass of object
+\item $g$ = acceleration due to gravity (9.80 m/s²)
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Equations: Drag Forces}
+\begin{block}{Drag Force Equation}
+\begin{align*}
+F_D &= \frac{1}{2}\rho C A v^2
+\end{align*}
+where:
+\begin{itemize}
+\item $F_D$ = drag force
+\item $\rho$ = fluid density (air: 1.20 kg/m³ at sea level)
+\item $C$ = drag coefficient
+\item $A$ = cross-sectional area
+\item $v$ = velocity
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Terminal Velocity}
+\begin{align*}
+v_t &\propto \sqrt{\frac{m}{A}} \\
+F_D &= mg \quad \text{(at terminal velocity)}
+\end{align*}
+\end{block}
+
+\begin{alertblock}{Terminal Velocity Notes}
+\begin{itemize}
+\item Terminal velocity occurs when drag force equals weight
+\item Proportional to square root of mass-to-area ratio
+\item Air resistance increases with velocity squared
+\item Dependent on body position (affects area $A$)
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Equations: Elasticity}
+\begin{block}{Stress and Strain Relationships}
+\begin{align*}
+\text{Stress} &= \frac{F}{A} \\
+\text{Strain} &= \frac{\Delta L}{L_0} \\
+Y &= \frac{\text{Stress}}{\text{Strain}}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Length Change}
+\begin{align*}
+\Delta L &= \frac{1}{Y}\frac{F}{A}L_0
+\end{align*}
+where:
+\begin{itemize}
+\item $Y$ = Young's modulus
+\item $F$ = applied force
+\item $A$ = cross-sectional area
+\item $\Delta L$ = change in length
+\item $L_0$ = original length
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Material Properties}
+\begin{itemize}
+\item Young's modulus is material-specific
+\item Bone: $Y \approx 9 \times 10^9$ N/m²
+\item Valid only in elastic region
+\item Assumes uniform cross-section
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\section{5.1 Friction}
+
+\begin{frame}
+\frametitle{Problem 4: Friction Force}
+\begin{block}{Problem Statement}
+Suppose you have a 120-kg wooden crate resting on a wood floor.
+\begin{itemize}
+    \item[(a)] What maximum force can you exert horizontally on the crate without moving it?
+    \item[(b)] If you continue to exert this force once the crate starts to slip, what will its acceleration then be?
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problem 4: Solution}
+\begin{block}{Part (a): Maximum Force}
+\begin{align*}
+f &\leq \mu_sN \\
+f &= \mu_smg \\
+f &= 0.5(120 \text{ kg})(9.80 \text{ m/s}^2) \\
+f &= 588 \text{ N}
+\end{align*}
+\end{block}
+
+\begin{block}{Part (b): Acceleration After Slipping}
+\begin{align*}
+f_k &= \mu_kmg = 0.3(120 \text{ kg})(9.80 \text{ m/s}^2) = 352.8 \text{ N} \\
+F_{net} &= 588 \text{ N} - 352.8 \text{ N} = 235.2 \text{ N} \\
+a &= \frac{F_{net}}{m} = \frac{235.2 \text{ N}}{120 \text{ kg}} = 1.96 \text{ m/s}^2
+\end{align*}
+\end{block}
+\end{frame}
+
+\section{5.2 Drag Forces}
+
+\begin{frame}
+\frametitle{Problem 21: Skydiver Terminal Velocity}
+\begin{block}{Problem Statement}
+A 60-kg and a 90-kg skydiver jump from an airplane at an altitude of 6000 m, both falling in a headfirst position.
+Make some assumption on their frontal areas and calculate their terminal velocities. \\
+How long will it take for each skydiver to reach the ground (assuming the time to reach terminal velocity is small)? \\
+Assume all values are accurate to three significant digits.
+\end{block}
+
+\begin{block}{Terminal Velocity}
+\begin{align*}
+v_t &\propto \sqrt{\frac{m}{A}} \\
+F_D &= mg \quad \text{(at terminal velocity)}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problem 21: Solution}
+\begin{block}{Terminal Velocities}
+Assumption: frontal area of 0.7 m² for both.
+\begin{align*}
+v_1 &= \left(\frac{60}{80}\right)^{0.5} \times 115 = 100 \text{ m/s} \\
+v_2 &= \left(\frac{90}{80}\right)^{0.5} \times 115 = 122 \text{ m/s}
+\end{align*}
+\end{block}
+
+\begin{block}{Time to Ground}
+\begin{align*}
+t_1 &= \frac{6000}{100} = 60.0 \text{ s} \\
+t_2 &= \frac{6000}{122} = 49.2 \text{ s}
+\end{align*}
+\end{block}
+\end{frame}
+
+\section{5.3 Elasticity: Stress and Strain}
+
+\begin{frame}
+\frametitle{Problem 30: Bone Compression}
+\begin{block}{Problem Statement}
+During a wrestling match, a 150 kg wrestler briefly stands on one hand during a maneuver. Calculate the shortening of the upper arm bone, given:
+\begin{itemize}
+    \item Length: 38.0 cm
+    \item Radius: 2.10 cm
+    \item Young's modulus for bone: $9 \times 10^9 \text{ N/m}^2$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Length Change}
+\begin{align*}
+\Delta L &= \frac{1}{Y}\frac{F}{A}L_0
+\end{align*}
+where:
+\begin{itemize}
+\item $Y$ = Young's modulus
+\item $F$ = applied force
+\item $A$ = cross-sectional area
+\item $\Delta L$ = change in length
+\item $L_0$ = original length
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Material Properties}
+\begin{itemize}
+\item Young's modulus is material-specific
+\item Bone: $Y \approx 9 \times 10^9$ N/m²
+\item Valid only in elastic region
+\item Assumes uniform cross-section
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problem 30: Solution}
+\begin{block}{Step-by-step Solution}
+\begin{align*}
+F &= mg = 150 \text{ kg} \times 9.80 \text{ m/s}^2 = 1470 \text{ N} \\
+A &= \pi r^2 = \pi(0.0210 \text{ m})^2 = 0.001385 \text{ m}^2 \\
+\Delta L &= \frac{1}{Y}\frac{F}{A}L_0 \\
+\Delta L &= \frac{1}{9 \times 10^9}\frac{1470}{0.001385}(0.380) \\
+\Delta L &= 4.5 \times 10^{-5} \text{ m}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+    \item Covered three main topics:
+    \begin{itemize}
+        \item Friction forces and acceleration
+        \item Drag forces and terminal velocity
+        \item Elasticity, stress, and strain
+    \end{itemize}
+    \item Solved problems involving:
+    \begin{itemize}
+        \item Static and kinetic friction
+        \item Terminal velocity calculations
+        \item Material deformation
+    \end{itemize}
+    \item Applied fundamental physics principles to real-world scenarios
+\end{itemize}
+\end{frame}
+
+\end{document}
+
+\end{document}

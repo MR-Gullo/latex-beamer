@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(gemini:*)",
+      "Bash(make build:*)",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": []
+  }
+}

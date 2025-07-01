@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{CS CH4 Exercise Review}
+\author{Mr. Gullo}
+\date{September 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+# Radioactive Decay Program: Code Review and Walkthrough
+
+This document provides a line-by-line review of a C++ program that calculates the amount of radioactive material remaining after a given time period. Let's go through each line, explaining its purpose and how it contributes to the overall functionality of the program.
+
+$$
+\text{Remaining Amount} = \text{Initial Amount} \times e^{-\lambda t}
+$$
+
+Where:
+- $e$ is Euler's number (approximately 2.71828)
+- $\lambda$ is the decay constant (0.00012 in this program)
+- $t$ is the time in years
+
+## Program Review
+
+1. `#include <iostream>`
+   - This line includes the Input/Output stream library, which provides functionality for console input and output.
+
+2. `#include <cmath>`
+   - This includes the C++ mathematical functions library, which we'll need for the exponential function.
+
+3. `using namespace std;`
+   - This line allows us to use elements of the standard namespace without prefixing them with `std::`.
+
+4. `/*` to `*/`
+   - This is a multi-line comment describing the purpose of the program.
+
+5. `const float E = 2.7182818;`
+   - Defines a constant `E` representing Euler's number. However, note that this constant is not used in the final calculation.
+
+6. `int main(){`
+   - This line begins the main function, the entry point of our program.
+
+7. `float startingAmount, numYears;`
+   - Declares two float variables to store the initial amount of radioactive material and the number of years.
+
+8. `cout << "Starting amount (grams): ";`
+   - Prompts the user to enter the starting amount of radioactive material.
+
+9. `cin >> startingAmount;`
+   - Reads the user's input for the starting amount and stores it in `startingAmount`.
+
+10. `cout << "Number of years: ";`
+    - Prompts the user to enter the number of years.
+
+11. `cin >> numYears;`
+    - Reads the user's input for the number of years and stores it in `numYears`.
+
+12. `cout << "The amount left after " << numYears << " years is "`
+    - Begins the output statement, inserting the number of years.
+
+13. `<< startingAmount * pow(E, -0.00012 * numYears)`
+    - Calculates the remaining amount using the formula $A = A_0 e^{-\lambda t}$
+    - Note: This line uses the `pow()` function from `<cmath>` instead of the defined `E` constant.
+
+14. `<< " grams\n";`
+    - Completes the output statement, adding "grams" and a newline.
+
+15. `return 0;`
+    - Indicates that the program has executed successfully.
+
+16. `}`
+    - Closes the main function.
+
+## Observations and Potential Improvements
+
+1. The program correctly implements the radioactive decay formula.
+2. It uses `pow(E, ...)` instead of the predefined `E` constant. Using `exp()` function would be more appropriate.
+3. The decay constant (0.00012) is hardcoded. It could be defined as a constant for better readability and maintainability.
+4. Error checking for input validation is not implemented.
+5. The program doesn't specify the units for the decay constant, which could lead to misinterpretation.
+
+By understanding each line of this program, we can see how it implements the radioactive decay formula and interacts with the user to provide a useful calculation tool.
+\end{document}

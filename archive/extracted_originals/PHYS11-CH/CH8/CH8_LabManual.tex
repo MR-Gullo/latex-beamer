@@ -1,0 +1,233 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage[rgb]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{wrapfig}
+
+% Define colors
+\definecolor{labblue}{RGB}{51,101,138}
+\definecolor{safetyyellow}{RGB}{255,240,150}
+\definecolor{conceptgreen}{RGB}{200,230,201}
+
+% Logo configuration
+\newcommand{\headerlogo}[1]{%
+    \includegraphics[height=20pt]{#1}%
+}
+
+% Configure page style
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\headerlogo{cinec_logo.png} \hspace{1em} Physics Laboratory}
+\fancyhead[R]{Momentum in Sports}
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{Laboratory Investigation S1:}}\\[0.5cm]
+{\LARGE \textbf{Momentum in Sports Physics}}\\[1cm]
+\rule{\textwidth}{0.4pt}
+\end{center}
+
+\section*{Experimental Overview}
+
+\textbf{Key Concept}:\\
+Momentum is the product of an object's mass and velocity, expressed mathematically as: $$\vec{p} = m\vec{v}$$
+
+In this investigation, you'll analyze the momentum of sports equipment in motion, connecting classroom physics to real-world athletics. By capturing slow-motion video of sports equipment in action, you'll discover how mass and velocity combine to create the dynamic interactions we see in sports.
+
+\begin{tcolorbox}[colback=conceptgreen!10,colframe=conceptgreen,title=\textbf{Investigation Strategy}]
+Choose a sport where an object's momentum plays a crucial role. Excellent choices include:
+\begin{itemize}
+\item A Frisbee catch
+\item A soccer ball being kicked
+\item A volleyball serve
+\item A basketball jump shot
+\item A Badminton serve
+\end{itemize}
+Consider which motion will be easiest to capture clearly on video while also being safe to measure.
+\end{tcolorbox}
+
+\section*{Materials and Equipment}
+\begin{itemize}
+\item Smartphone with video capability (120fps or higher recommended but not needed)
+\item Electric balance (accurate to at least 0.1g)
+\item Measuring tape or meter stick
+\item Your chosen sports equipment
+\item Spreadsheet software
+\item Ruler (for measuring distances on video playback)
+\item Reference object of known size (for video scale calibration)
+\end{itemize}
+
+\section*{Safety Considerations}
+\begin{tcolorbox}[colback=safetyyellow!30,colframe=safetyyellow!80,title=\textbf{Safety Protocol}]
+Before beginning your investigation:
+\begin{itemize}
+\item Choose a safe, open area appropriate for your sport
+\item Ensure no people or valuable objects are in the path of your sports equipment
+\item Follow all standard safety procedures for your chosen sport
+\item Have a spotter present during measurements and filming
+\item Secure loose clothing and remove jewelry that could interfere with movement
+\end{itemize}
+\end{tcolorbox}
+
+\section*{Experimental Procedure}
+
+\subsection*{Part 1: Mass Measurement}
+\begin{enumerate}[label=\arabic*.]
+\item Use the electric balance to measure your sports object's mass in kilograms
+\item Record this value with appropriate significant figures
+\item Measure and record any relevant dimensions of your object
+\end{enumerate}
+
+\subsection*{Part 2: Velocity Analysis}
+\begin{enumerate}[label=\arabic*.]
+\item Place your reference object (of known size) in the same plane as your intended motion
+\item Record your sports action in slow motion (try to keep the camera perpendicular to the motion)
+\item Repeat for at least 5 measurements
+\item Transfer the video to a computer for analysis
+
+\end{enumerate}
+
+\subsection*{Video Analysis}
+\begin{enumerate}[label=\arabic*.]
+\item Count the total frames for your object's motion
+\item Note your camera's frame rate (frames per second)
+\item Use your reference object to establish scale in the video
+\item Measure the distance your object travels
+\item Calculate velocity using: $$v = \frac{\text{distance}}{\text{time}} = \frac{\text{distance}}{\text{number of frames}/\text{frames per second}}$$
+\end{enumerate}
+
+\begin{tcolorbox}[colback=labblue!5,colframe=labblue,title=\textbf{Sample Calculation}]
+Let's analyze a basketball free throw:
+
+Given:
+\begin{itemize}
+\item Distance traveled: 4.2 meters (from player to hoop)
+\item Number of frames: 30 frames
+\item Camera frame rate: 240 frames per second
+\end{itemize}
+
+Time interval = $\frac{30 \text{ frames}}{240 \text{ frames/second}} = 0.125 \text{ seconds}$
+
+Velocity = $\frac{4.2 \text{ meters}}{0.125 \text{ seconds}} = 33.6 \text{ meters/second}$
+
+If the basketball's mass is 0.62 kg, its momentum would be:
+
+Momentum = $0.62 \text{ kg} \times 33.6 \text{ m/s} = 20.8 \text{ kg}\cdot\text{m/s}$
+
+\textit{Note: This example illustrates why precision in measurement is crucial - small errors in distance or frame counting can significantly affect your final momentum calculation.}
+\end{tcolorbox}
+
+\section*{Data Collection}
+Record your measurements in this format:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Measurement & Value & Units \\
+\midrule
+Object Mass & & kg \\
+Distance Traveled & & m \\
+Frame Count & & frames \\
+Time Interval & & s \\
+Calculated Velocity & & m/s \\
+Calculated Momentum & & kg⋅m/s \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{tcolorbox}[colback=conceptgreen!10,colframe=conceptgreen,title=\textbf{Video Recording Best Practices}]
+\begin{itemize}
+\item Use the highest frame rate available
+\item Keep the camera steady (tripod recommended)
+\item Ensure good lighting
+\item Position the camera perpendicular to the motion
+\item Include a reference object of known size in the frame
+\item Record multiple trials
+\end{itemize}
+\end{tcolorbox}
+
+\section*{Analysis Questions}
+\begin{enumerate}[label=\arabic*.]
+\item How does your object's momentum compare to other sports? Research typical values for comparison.
+\item What factors might affect the accuracy of your measurements?
+\item How might air resistance impact your results?
+\item Why is momentum important in your chosen sport?
+\item How could your measurement technique be improved?
+\end{enumerate}
+
+\section*{Additional Insights}
+Consider how momentum conservation applies in your sport. For example, in a collision between a bat and baseball, total momentum is conserved even as it transfers between objects. How does this principle manifest in your chosen sport?
+
+\textit{Optional Extension}: Compare the momentum of different techniques in your sport (e.g., different types of serves in tennis or different types of kicks in soccer).
+\section*{Assessment Rubric}
+
+\begin{tcolorbox}[colback=conceptgreen!10,colframe=conceptgreen,title=\textbf{Emerging}]
+\textbf{Description:} Beginning to grasp fundamental momentum concepts and video analysis methods, requiring significant guidance.
+
+\textbf{Skills and Abilities:}
+\begin{itemize}
+\item Can identify basic lab equipment and follow safety protocols with supervision
+\item Understands the basic momentum equation ($\vec{p} = m\vec{v}$) but struggles to apply it
+\item Can record mass measurements and frame counts but needs help with calculations
+\item Has difficulty converting video measurements to real-world velocities
+\item Requires assistance with video recording and analysis techniques
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=conceptgreen!10,colframe=conceptgreen,title=\textbf{Developing}]
+\textbf{Description:} Shows growing understanding of momentum principles and video analysis techniques, but needs support applying them.
+
+\textbf{Skills and Abilities:}
+\begin{itemize}
+\item Sets up video recording equipment with some assistance, following safety guidelines
+\item Records mass and video data systematically but may have inconsistent significant figures
+\item Can perform basic velocity calculations from frame counts with support
+\item Makes simple momentum calculations but may struggle with units
+\item Creates basic data tables but needs help organizing multiple trials
+\item Recognizes the relationship between mass and velocity in momentum but has difficulty explaining it
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=conceptgreen!10,colframe=conceptgreen,title=\textbf{Proficient}]
+\textbf{Description:} Demonstrates solid comprehension of momentum concepts and video analysis methods, working independently with minimal support.
+
+\textbf{Skills and Abilities:}
+\begin{itemize}
+\item Independently sets up video recording equipment and conducts trials safely
+\item Records precise measurements with appropriate units and significant figures
+\item Correctly analyzes video footage to determine velocities
+\item Calculates momentum values accurately with consistent units
+\item Creates clear data tables with all required measurements
+\item Identifies common sources of experimental error in video analysis
+\item Makes meaningful connections between calculated momentum and sports performance
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=conceptgreen!10,colframe=conceptgreen,title=\textbf{Extending}]
+\textbf{Description:} Shows advanced understanding and analytical capability, exploring momentum concepts beyond basic requirements.
+
+\textbf{Skills and Abilities:}
+\begin{itemize}
+\item Designs improvements to video analysis procedure to enhance accuracy
+\item Considers advanced factors like air resistance and rotation in analysis
+\item Provides sophisticated comparison of momentum values across different sports
+\item Makes insightful connections between momentum conservation and game strategies
+\item Proposes creative extensions to investigate related concepts like impulse
+\item Analyzes how different techniques in their chosen sport affect momentum values
+\item Critically evaluates limitations of video analysis methods and suggests improvements
+\end{itemize}
+\end{tcolorbox}
+
+
+\end{document}

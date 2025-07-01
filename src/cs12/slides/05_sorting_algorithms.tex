@@ -1,0 +1,151 @@
+\documentclass{beamer}
+
+% Required packages
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Define custom colors
+\definecolor{ds9blue}{RGB}{25,25,112}
+\definecolor{ds9gold}{RGB}{218,165,32}
+\definecolor{ds9grey}{RGB}{105,105,105}
+\definecolor{ds9red}{RGB}{178,34,34}
+
+% Theme setup
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamercolor{title}{fg=ds9blue,bg=ds9gold}
+\setbeamercolor{frametitle}{fg=ds9blue,bg=ds9gold!20}
+\setbeamercolor{block title}{fg=white,bg=ds9blue}
+\setbeamercolor{block body}{fg=black,bg=ds9grey!20}
+
+% Title page configuration
+\title[Sorting Algorithms]{C++ Sorting Algorithms}
+\subtitle{Implementation and Visualization}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[\today]{\today}
+
+% Code listing style
+\lstset{
+  language=C++,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{ds9blue},
+  stringstyle=\color{ds9red},
+  commentstyle=\color{ds9grey},
+  numbers=left,
+  numberstyle=\tiny,
+  frame=single,
+  breaklines=true
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Learning Objectives}
+\begin{block}{After this presentation, you will:}
+\begin{itemize}
+\item Understand five different sorting algorithms
+\item Be able to implement each sorting algorithm in C++
+\item Know the advantages and disadvantages of each method
+\item Recognize the time complexity of different algorithms
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Initial Array}
+\begin{block}{Numbers to Sort}
+Our example will use these 9 numbers: [7, 2, 9, 4, 5, 8, 3, 6, 10]
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Bubble Sort}
+\begin{block}{Algorithm Description}
+\begin{itemize}
+\item Repeatedly steps through the list
+\item Compares adjacent elements and swaps them if needed
+\item Continues until no swaps are needed
+\end{itemize}
+\end{block}
+
+\begin{lstlisting}
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++)
+        for (int j = 0; j < n-i-1; j++)
+            if (arr[j] > arr[j+1])
+                swap(arr[j], arr[j+1]);
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Bubble Sort Steps}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+7 & 2 & 9 & 4 & 5 & 8 & 3 & 6 & 10 \\
+\hline
+2 & 7 & 4 & 5 & 8 & 3 & 6 & 9 & 10 \\
+\hline
+2 & 4 & 5 & 7 & 3 & 6 & 8 & 9 & 10 \\
+\hline
+2 & 4 & 5 & 3 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+2 & 4 & 3 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Selection Sort}
+\begin{block}{Algorithm Description}
+\begin{itemize}
+\item Divides array into sorted and unsorted regions
+\item Finds minimum element in unsorted region
+\item Swaps it with first element of unsorted region
+\end{itemize}
+\end{block}
+
+\begin{lstlisting}
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        int min_idx = i;
+        for (int j = i+1; j < n; j++)
+            if (arr[j] < arr[min_idx])
+                min_idx = j;
+        swap(arr[min_idx], arr[i]);
+    }
+}
+\end{lstlisting}
+\end{frame}
+
+% Continue with remaining frames similarly...
+
+\begin{frame}{Time Complexity Comparison}
+\begin{block}{Time Complexity}
+\begin{itemize}
+\item Bubble Sort: O(n²)
+\item Selection Sort: O(n²)
+\item Insertion Sort: O(n²)
+\item Quick Sort: O(n log n) average, O(n²) worst case
+\item Merge Sort: O(n log n)
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{block}{Key Points}
+\begin{itemize}
+\item Bubble Sort: Simple but inefficient
+\item Selection Sort: Simple and performs well on small lists
+\item Insertion Sort: Efficient for small data sets
+\item Quick Sort: Generally the fastest in practice
+\item Merge Sort: Consistent performance but requires extra space
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}
