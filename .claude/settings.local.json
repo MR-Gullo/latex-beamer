@@ -11,7 +11,17 @@
       "Bash(git remote add:*)",
       "Bash(git push:*)",
       "Bash(/Users/joelgullo/dev/Cline/latex-beamer/build-separated.sh 01_intro_ai.tex)",
-      "Bash(/Users/joelgullo/dev/Cline/latex-beamer/build-separated.sh:*)"
+      "Bash(/Users/joelgullo/dev/Cline/latex-beamer/build-separated.sh:*)",
+      "Bash(mv:*)",
+      "Bash(true)",
+      "Bash(grep:*)",
+      "Bash(for file in *.tex)",
+      "Bash(do echo \"Building $file...\")",
+      "Bash(pdflatex:*)",
+      "Bash(/dev/null)",
+      "Bash(echo \"✅ $file built successfully\")",
+      "Bash(echo:*)",
+      "Bash(done)"
     ],
     "deny": []
   }

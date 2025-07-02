@@ -216,19 +216,7 @@ All LaTeX Beamer presentations must define image search paths in the document pr
 \end{figure}
 ```
 
-**Image in columns layout:**
-
-```latex
-\includegraphics[width=0.8\linewidth]{cs12-ai-machine_learning.png}
-```
-
-**Large standalone image:**
-
-```latex
-\includegraphics[width=8cm]{cs12-llm-student_interaction_styles.png}
-```
-
-## Image Naming Convention
+Image Naming Convention
 
 **Format:** `course-topic-description.extension`
 
@@ -241,28 +229,5 @@ All LaTeX Beamer presentations must define image search paths in the document pr
 
 ## Image Reference Checklist
 
-Before committing any LaTeX file with image references:
-
-- [ ] **File exists:** Image file present in `../images/` or `../../shared/images/`
-- [ ] **Naming convention:** Follows `course-topic-description.extension` pattern
 - [ ] **Width parameter:** Appropriate for layout context (`\linewidth`, `\textwidth`, or absolute units)
-- [ ] **Figure environment:** Used when centering or captioning required
-- [ ] **Attribution:** Included when required (copyright, Creative Commons, etc.)
 - [ ] **Accessibility:** Caption or alt-text provided for screen readers when applicable
-
-## Width Guidelines
-
-- **Single column images:** `width=0.5\linewidth` to `width=0.8\linewidth`
-- **Column layout images:** `width=0.6\linewidth` to `width=0.9\linewidth`
-- **Full-width images:** `width=\textwidth` or absolute units like `8cm`
-- **Small icons/diagrams:** `width=3cm` to `width=5cm`
-
-## Attribution Standards
-
-When using third-party images, include attribution:
-
-```latex
-{\tiny Images from xkcd.com by Randall Munroe, used under CC BY-NC license}
-```
-
-Place attribution below figure or at slide bottom.
