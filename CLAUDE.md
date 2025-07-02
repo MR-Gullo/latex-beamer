@@ -183,3 +183,86 @@ For files that serve a specific purpose, use a type prefix.
 - **Use lowercase:** `my-file.tex` instead of `My-File.tex`.
 - **Use hyphens for separators:** `descriptive-name-in-lowercase.md` instead of `descriptivename.md` or `descriptive_name.md`.
 - **Be descriptive:** Choose names that clearly indicate the file's content or purpose.
+
+# LaTeX Beamer Image Reference Standards
+
+## Image Path Configuration
+
+All LaTeX Beamer presentations must define image search paths in the document preamble:
+
+```latex
+\graphicspath{{../images/}{../../shared/images/}}
+```
+
+**Standard:** Use relative paths from slide location to maintain portability across course directories.
+
+## Image Reference Format
+
+### Basic Pattern
+
+```latex
+\includegraphics[width=0.5\linewidth]{filename.png}
+```
+
+### Complete Reference Examples
+
+**Single image with caption:**
+
+```latex
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{cs12-ai-methodology.png}
+    \caption*{XKCD \#2451: AI Methodology}
+\end{figure}
+```
+
+**Image in columns layout:**
+
+```latex
+\includegraphics[width=0.8\linewidth]{cs12-ai-machine_learning.png}
+```
+
+**Large standalone image:**
+
+```latex
+\includegraphics[width=8cm]{cs12-llm-student_interaction_styles.png}
+```
+
+## Image Naming Convention
+
+**Format:** `course-topic-description.extension`
+
+**Examples:**
+
+- `cs12-ai-methodology.png`
+- `cs12-llm-student_interaction_styles.png`
+- `phys11-waves-interference.jpg`
+- `phys12-quantum-uncertainty.png`
+
+## Image Reference Checklist
+
+Before committing any LaTeX file with image references:
+
+- [ ] **File exists:** Image file present in `../images/` or `../../shared/images/`
+- [ ] **Naming convention:** Follows `course-topic-description.extension` pattern
+- [ ] **Width parameter:** Appropriate for layout context (`\linewidth`, `\textwidth`, or absolute units)
+- [ ] **Figure environment:** Used when centering or captioning required
+- [ ] **Attribution:** Included when required (copyright, Creative Commons, etc.)
+- [ ] **Accessibility:** Caption or alt-text provided for screen readers when applicable
+
+## Width Guidelines
+
+- **Single column images:** `width=0.5\linewidth` to `width=0.8\linewidth`
+- **Column layout images:** `width=0.6\linewidth` to `width=0.9\linewidth`
+- **Full-width images:** `width=\textwidth` or absolute units like `8cm`
+- **Small icons/diagrams:** `width=3cm` to `width=5cm`
+
+## Attribution Standards
+
+When using third-party images, include attribution:
+
+```latex
+{\tiny Images from xkcd.com by Randall Munroe, used under CC BY-NC license}
+```
+
+Place attribution below figure or at slide bottom.

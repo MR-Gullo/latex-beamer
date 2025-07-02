@@ -1,0 +1,159 @@
+{
+  // LaTeX Workshop Configuration for Multi-Course Beamer Projects
+  
+  // Output Directory Configuration
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  
+  // Auto-build on save for live preview
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  
+  // Auto-clean auxiliary files after build (PDFs preserved)
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  
+  // Custom recipes for different build scenarios
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex ➜ clean",
+      "tools": ["pdflatex-outdir", "clean-aux"]
+    },
+    {
+      "name": "latexmk ➜ clean",
+      "tools": ["latexmk-outdir", "clean-aux"]
+    },
+    {
+      "name": "pdflatex (production)",
+      "tools": ["pdflatex-production"]
+    }
+  ],
+  
+  // Custom tools configuration
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex-outdir",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-aux-directory=build",
+        "-output-directory=build",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk-outdir",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-outdir=build",
+        "-auxdir=build",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex-production",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-aux-directory=output",
+        "-output-directory=output",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "clean-aux",
+      "command": "latexmk",
+      "args": [
+        "-c",
+        "-outdir=build",
+        "%DOCFILE%"
+      ],
+      "env": {}
+    }
+  ],
+  
+  // Clean configuration (excludes PDFs to preserve them)
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.snm",
+    "*.nav",
+    "*.vrb",
+    "*.synctex.gz"
+  ],
+  
+  // PDF viewer configuration
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.ref.viewer": "auto",
+  
+  // SyncTeX configuration for accurate cursor positioning
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  
+  // File watcher configuration (PDFs remain watched)
+  "latex-workshop.latex.watch.files.ignore": [
+    "**/*.aux",
+    "**/*.bbl",
+    "**/*.blg",
+    "**/*.idx",
+    "**/*.ind",
+    "**/*.lof",
+    "**/*.lot",
+    "**/*.out",
+    "**/*.toc",
+    "**/*.acn",
+    "**/*.acr",
+    "**/*.alg",
+    "**/*.glg",
+    "**/*.glo",
+    "**/*.gls",
+    "**/*.ist",
+    "**/*.fls",
+    "**/*.log",
+    "**/*.fdb_latexmk",
+    "**/*.snm",
+    "**/*.nav",
+    "**/*.vrb",
+    "**/build/*.aux",
+    "**/build/*.log",
+    "**/build/*.nav",
+    "**/build/*.snm",
+    "**/build/*.vrb",
+    "**/output/**"
+  ],
+  
+  // LaTeX language configuration
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.rootFile.useSubFile": true,
+  
+  // Beamer-specific settings
+  "latex-workshop.hover.preview.enabled": true,
+  "latex-workshop.hover.preview.scale": 0.8,
+  
+  // Multi-root workspace support
+  "latex-workshop.latex.search.rootFiles.enabled": true
+}
