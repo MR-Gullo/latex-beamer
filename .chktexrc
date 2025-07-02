@@ -1,0 +1,25 @@
+# This is a configuration file for chktex.
+# We can turn off warnings by their number using '-n<number>'.
+
+CmdLine {
+  # Suppress "Command terminated with space." It's good practice to fix
+  # the most obvious ones (like \item), but this warning can be very noisy.
+  # Let's suppress it after fixing the common cases.
+  -n1
+
+  # Suppress "Interword spacing (`\\ ') should perhaps be used."
+  # This is highly contextual and very difficult to fix automatically.
+  -n12
+
+  # Suppress "Intersentence spacing (`\\@') should perhaps be used."
+  # Same as above, best to suppress.
+  -n13
+
+  # Suppress "You should put a space in front of parenthesis."
+  # This is often a stylistic preference and safe to ignore.
+  -n36
+
+  # Suppress "User Regex". This is a custom rule that is misfiring on
+  # things like `\begin{itemize}`. It's safe to disable.
+  -n44
+}

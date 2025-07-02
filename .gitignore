@@ -17,6 +17,8 @@
 # LaTeX build directories
 **/build/
 **/output/
+aux/
+out/
 
 # OS generated files
 .DS_Store
@@ -28,7 +30,6 @@ ehthumbs.db
 Thumbs.db
 
 # IDE files
-.vscode/settings.json
 .idea/
 *.swp
 *.swo

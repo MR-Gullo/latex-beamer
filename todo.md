@@ -1,101 +1,276 @@
-Your Action Plan: A Hybrid Triage Approach
-
-We will stick to the prioritized plan, but now with concrete commands for your editor.
-
-1. **Priority 1: Fix the _Real_ LaTeX Errors.** (Manual)
-2. **Priority 2: Fix High-Impact Typography.** (Find/Replace with Regex)
-3. **Priority 3: Fix Common "Good Practice" Warnings.** (Find/Replace with Regex)
-4. **Priority 4: Configure `chktex` to Permanently Ignore Noise.** (Create a config file)
+Yes, it is possible to separate the PDF from the auxiliary build files when using the LaTeX-Workshop extension in Visual Studio Code, but it requires specific configurations, primarily with a LaTeX distribution like MiKTeX that supports a separate auxiliary directory. Below, I’ll outline how to achieve this by directing auxiliary files (e.g., .aux, .log, .synctex.gz) to one folder (e.g., `./aux`) while placing the PDF in a distinct output folder (e.g., `./out`). I’ll also address the issues you mentioned—build button creating a .txt file, PDF deletion, and image referencing—while incorporating insights from the web results and ensuring a clean project structure.
 
 ---
 
-### How to Use "Find and Replace in Files" in VS Code
+### Solution: Separating PDF from Auxiliary Build Files
 
-For the steps below, you will use this feature.
+#### Key Approach
 
-1. Open the "Search" panel on the sidebar (magnifying glass icon).
-2. Or, use the keyboard shortcut:
-   - **macOS:** `Cmd + Shift + H`
-   - **Windows/Linux:** `Ctrl + Shift + H`
-3. In the search panel, make sure to enable **Regular Expression mode**. It's the icon that looks like `.*`. This is crucial for making the replacements "clever."
-4. In the "files to include" field, type `*.tex` to ensure you only change your LaTeX source files.
+To separate the PDF from auxiliary files, you can leverage MiKTeX’s `--aux-directory` option in combination with the `--output-directory` option for tools like `pdflatex`. The LaTeX-Workshop extension allows you to configure these options in the `latex-workshop.latex.tools` and `latex-workshop.latex.recipes` settings. However, note that not all LaTeX tools (e.g., `bibtex`, `biber`, `makeindex`) natively support `--aux-directory`, which can complicate multi-tool workflows. For simplicity, using `latexmk` with a custom configuration or a dedicated tool like `pdflatex` with explicit directory settings is recommended.
+
+#### Step-by-Step Configuration
+
+1. **Set Up the Output and Auxiliary Directories**
+
+   - Open VSCode settings (Ctrl+, or Cmd+, on macOS) and navigate to the LaTeX-Workshop settings.
+   - Set `"latex-workshop.latex.outDir": "./out"` to direct the PDF and other output files to the `./out` directory.
+   - Note: The `--aux-directory` flag is specific to MiKTeX and not supported by TeX Live, so ensure you’re using MiKTeX if you want to separate auxiliary files into a different folder (e.g., `./aux`). If using TeX Live, all build files, including the PDF, typically go to the same output directory unless post-processing scripts are used.
+
+2. **Configure LaTeX Tools**
+
+   - Edit the `settings.json` file in your VSCode workspace (`.vscode/settings.json`) or global user settings. Add or modify the `latex-workshop.latex.tools` setting to include both `--aux-directory` and `--output-directory` for MiKTeX’s `pdflatex`. For example:
+     ```json
+     "latex-workshop.latex.tools": [
+       {
+         "name": "pdflatex",
+         "command": "pdflatex",
+         "args": [
+           "-synctex=1",
+           "-interaction=nonstopmode",
+           "-file-line-error",
+           "--aux-directory=./aux",
+           "--output-directory=%OUTDIR%",
+           "%DOC%"
+         ],
+         "env": {}
+       },
+       {
+         "name": "bibtex",
+         "command": "bibtex",
+         "args": ["./aux/%DOCFILE%"],
+         "env": {}
+       }
+     ]
+     ```
+   - **Notes**:
+     - The `--aux-directory=./aux` flag tells MiKTeX to place auxiliary files (e.g., .aux, .log) in the `./aux` folder.
+     - The `--output-directory=%OUTDIR%` flag directs the PDF to the `./out` folder, as defined by `latex-workshop.latex.outDir`.
+     - For `bibtex` or `biber`, you need to specify the auxiliary directory path (e.g., `./aux/%DOCFILE%`) because these tools need to find the .aux file in the auxiliary directory.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)
+     - If using `latexmk`, it does not support `--aux-directory` directly, but you can configure it to use a custom `.latexmkrc` file (see below).
+
+3. **Define a Recipe**
+
+   - Create a recipe that uses the configured tools. For example:
+     ```json
+     "latex-workshop.latex.recipes": [
+       {
+         "name": "pdflatex",
+         "tools": ["pdflatex"]
+       },
+       {
+         "name": "pdflatex -> bibtex -> pdflatex x2",
+         "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+       }
+     ]
+     ```
+   - Set the default recipe to ensure the correct toolchain is used:
+     ```json
+     "latex-workshop.latex.recipe.default": "pdflatex"
+     ```
+   - If your project uses bibliographies, the multi-step recipe ensures `bibtex` processes the .aux file correctly.
+
+4. **Using `latexmk` with a Custom `.latexmkrc` File**
+
+   - If you prefer `latexmk` (common for its automation of multi-step builds), you can use a `.latexmkrc` file to separate auxiliary files and the PDF. Create a `.latexmkrc` file in your project root with:
+     ```perl
+     $out_dir = 'out';
+     $aux_dir = 'aux';
+     ```
+   - Update the `latexmk` tool in `settings.json`:
+     ```json
+     "latex-workshop.latex.tools": [
+       {
+         "name": "latexmk",
+         "command": "latexmk",
+         "args": [
+           "-synctex=1",
+           "-interaction=nonstopmode",
+           "-file-line-error",
+           "-pdf",
+           "-outdir=%OUTDIR%",
+           "%DOC%"
+         ],
+         "env": {}
+       }
+     ]
+     ```
+   - Ensure `latex-workshop.latex.outDir` is set to `./out`. The `.latexmkrc` file’s `$aux_dir` setting will direct auxiliary files to `./aux`, while `$out_dir` keeps the PDF in `./out`.[](https://nelsonaloysio.medium.com/setting-up-vs-code-to-write-in-latex-using-latexmk-and-biber-plus-extras-b4b37c844495)
+
+5. **Prevent PDF Deletion**
+
+   - The issue of the PDF being deleted likely stems from the clean settings. Check `latex-workshop.latex.clean.fileTypes` in `settings.json`. The default list includes auxiliary files like `*.aux`, `*.log`, etc., but should not include `*.pdf`. If it does, remove `*.pdf` or `%DOCFILE%.pdf` to prevent deletion:
+     ```json
+     "latex-workshop.latex.clean.fileTypes": [
+       "*.aux",
+       "*.log",
+       "*.fls",
+       "*.out",
+       "*.synctex.gz"
+     ]
+     ```
+   - Also, verify `latex-workshop.latex.autoClean.run`. Set it to `"never"` to disable automatic cleaning, or `"onFailed"` to clean only if the build fails:
+     ```json
+     "latex-workshop.latex.autoClean.run": "never"
+     ```
+
+6. **Fix Image Referencing Issues**
+
+   - Image referencing issues occur when LaTeX cannot find image files due to incorrect paths. Since the .tex file is in the project root and the PDF is output to `./out`, image paths should be specified relative to the .tex file’s location. For example, if images are in a folder `./images`, use:
+     ```latex
+     \includegraphics{images/figure.png}
+     ```
+   - Ensure the `graphicspath` command is set correctly in your .tex file if images are in multiple directories:
+     ```latex
+     \graphicspath{{./images/}}
+     ```
+   - If images are still not found, verify the directory structure and ensure no absolute paths are used unless necessary. The working directory for LaTeX is typically the .tex file’s directory, not the output directory.[](https://paulwintz.com/latex-in-vscode/)
+
+7. **Fix Build Button Creating a .txt File**
+
+   - The build button (Ctrl+Alt+B) creating a .txt file suggests a misconfigured recipe or tool. Check the active recipe in the LaTeX-Workshop sidebar or `latex-workshop.latex.recipe.default`. Ensure it uses a valid LaTeX compiler like `pdflatex` or `latexmk` with `-pdf` or equivalent flags. For example, if the recipe uses `latex` instead of `pdflatex`, it may produce a DVI file, but a .txt file indicates a possible custom script or error in the command. Verify the tool configuration (e.g., `pdflatex` or `latexmk`) and ensure no erroneous arguments are redirecting output to a .txt file.
+
+8. **SyncTeX Considerations**
+
+   - The SyncTeX file (.synctex.gz) may still be generated in the source directory or the auxiliary directory, depending on the tool. For `pdflatex` with MiKTeX, it typically goes to the `--aux-directory`. Ensure `latex-workshop.synctex.synctexjs.enabled` is set to `true` and `latex-workshop.view.pdf.viewer` is set to `"tab"` for proper PDF preview and navigation:
+     ```json
+     "latex-workshop.synctex.synctexjs.enabled": true,
+     "latex-workshop.view.pdf.viewer": "tab"
+     ```
+   - If SyncTeX fails, ensure the `--synctex=1` flag is included in the tool arguments.[](https://tex.stackexchange.com/questions/538797/go-to-source-for-latex-on-vs-code-does-not-seem-to-work)
+
+#### Example Directory Structure
+
+After configuration, your project might look like:
+
+```
+project_root/
+├── main.tex
+├── images/
+│   └── figure.png
+├── aux/
+│   ├── main.aux
+│   ├── main.log
+│   ├── main.synctex.gz
+├── out/
+│   ├── main.pdf
+├── .vscode/
+│   └── settings.json
+├── .latexmkrc (if using latexmk)
+```
+
+#### Additional Notes
+
+- **MiKTeX vs. TeX Live**: MiKTeX’s `--aux-directory` is not available in TeX Live. If using TeX Live, you can use a post-processing script to move the PDF to a separate directory after compilation, but this is more complex. Alternatively, use `latexmk` with a `.latexmkrc` file as described.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)[](https://www.reddit.com/r/LaTeX/comments/qm1ao6/how_to_prevent_vs_code_from_creating_auxiliary/)
+- **Cleaning Auxiliary Files**: To clean only auxiliary files, use the LaTeX-Workshop clean command (Ctrl+Alt+C) or configure `latex-workshop.latex.clean.subfolder.enabled` to `true` to include files in the `./aux` directory:
+  ```json
+  "latex-workshop.latex.clean.subfolder.enabled": true
+  ```
+- **Git Integration**: To keep your project clean for version control, add `./aux` and `./out` to your `.gitignore` file to avoid tracking temporary files.[](https://danmackinlay.name/notebook/vs_code_for_latex)
+- **Multi-File Projects**: For projects with multiple .tex files, add a magic comment like `% !TEX root = main.tex` to each subfile to ensure the correct root file is compiled.[](https://stackoverflow.com/questions/65595001/specify-the-file-to-be-compiled-in-vscode-latex-workshop)
+- **Dependencies**: Ensure MiKTeX and Perl (for `latexmk`) are installed. If `latexmk` fails due to missing Perl, install it or use `pdflatex` directly.[](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install)
+
+#### Troubleshooting Persistent Issues
+
+- **PDF Still in Auxiliary Directory**: If the PDF ends up in `./aux` instead of `./out`, double-check the `--output-directory` flag in the tool configuration and ensure `latex-workshop.latex.outDir` matches.
+- **BibTeX/Biber Issues**: If bibliography tools fail to find the .aux file, ensure their arguments point to the correct directory (e.g., `./aux/%DOCFILE%`). For `biber`, you may need to specify the output directory explicitly in some cases.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)
+- **Performance**: For large documents, ensure your LaTeX distribution (MiKTeX) is up-to-date to avoid compilation issues.[](https://tex.stackexchange.com/questions/tagged/latex-workshop)
+
+#### Final Settings Example
+
+Here’s a complete `settings.json` example for MiKTeX with separated PDF and auxiliary files:
+
+```json
+{
+  "latex-workshop.latex.outDir": "./out",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.log",
+    "*.fls",
+    "*.out",
+    "*.synctex.gz"
+  ],
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.synctex.synctexjs.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "--aux-directory=./aux",
+        "--output-directory=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["./aux/%DOCFILE%"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex",
+      "tools": ["pdflatex"]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex x2",
+      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "pdflatex"
+}
+```
+
+#### Testing the Setup
+
+1. Create a simple `main.tex` file with an image reference:
+   ```latex
+   \documentclass{article}
+   \usepackage{graphicx}
+   \graphicspath{{./images/}}
+   \begin{document}
+   Hello, World!
+   \includegraphics{images/figure.png}
+   \end{document}
+   ```
+2. Save and build (Ctrl+Alt+B). Check that:
+   - The PDF appears in `./out/main.pdf`.
+   - Auxiliary files (e.g., .aux, .log) are in `./aux`.
+   - The PDF is not deleted after cleaning (Ctrl+Alt+C).
+   - The image is correctly rendered in the PDF.
+
+#### Limitations
+
+- **TeX Live Users**: Without `--aux-directory`, you’ll need a post-processing script or manual file movement to separate the PDF, which is less straightforward.
+- **Complex Workflows**: Tools like `makeindex` may require additional configuration to locate auxiliary files, potentially requiring custom scripts.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)
+- **SyncTeX**: The `.synctex.gz` file may still appear in `./aux` or `./out`, depending on the tool, but this doesn’t affect functionality as long as SyncTeX is enabled.
 
 ---
 
-### Step 1: Fix the Real LaTeX Errors (Manual Fixes)
+### Addressing Your Specific Issues
 
-These cannot be fixed with a global find and replace because they are context-specific.
-
-- **Problem:** `Overfull \\vbox (...) too high`
-
-  - **Action:**
-    1. Go to the lines mentioned in the error (e.g., line 69, 168, 424 in `01_intro_ai.tex`).
-    2. Assess the slide's content. The best fix is to **shorten the text** or split the content into two frames.
-    3. If you absolutely need all the content, add the `[allowframebreaks]` option to the frame: `\begin{frame}[allowframebreaks]`.
-
-- **Problem:** `Package siunitx: Detected the "physics" package...`
-
-  - **Action:**
-    1. Open your main `.tex` file (the one with `\documentclass`).
-    2. Add this single line to your preamble (before `\begin{document}`):
-       ```latex
-       \AtBeginDocument{\RenewCommandCopy\qty\SI}
-       ```
+- **Build Button Creating a .txt File**: This issue is likely due to a misconfigured recipe or an invalid command. Ensure the recipe uses `pdflatex` or `latexmk` with the `-pdf` flag. Check the VSCode output panel (View > Output > LaTeX Workshop) for errors indicating why a .txt file is generated. If a custom script is involved, remove or correct it.
+- **PDF Deletion**: As addressed, ensure `*.pdf` is not in `latex-workshop.latex.clean.fileTypes` and set `latex-workshop.latex.autoClean.run` to `"never"` or `"onFailed"`.
+- **Image Referencing Issues**: Use relative paths from the .tex file’s location. If issues persist, check the LaTeX log (Ctrl+Alt+J) for errors related to `\includegraphics` and verify the image file exists in the specified path.
 
 ---
 
-### Step 2: Fix High-Impact Typographical Warnings (Regex Replace)
+### Conclusion
 
-These are perfect for a global, "smart" replacement.
+By using MiKTeX with `--aux-directory=./aux` and `--output-directory=%OUTDIR%`, you can separate the PDF (in `./out`) from auxiliary files (in `./aux`) while keeping .tex files in the project root. Alternatively, `latexmk` with a `.latexmkrc` file achieves similar results. The provided `settings.json` configuration ensures proper compilation, prevents PDF deletion, and supports image referencing. For TeX Live users, consider a single output directory or a custom script for PDF separation. Always test with a simple document to verify the setup before applying it to complex projects.
 
-- **Problem:** `[chktex] 18: Use either \`\` or '' as an alternative to '\"'.`
-
-  - **Explanation:** Automating this is risky because it's hard to tell an opening quote from a closing one. A manual search is safest. However, we can use regex to find them for you to fix one by one.
-  - **Action (Safe but Manual):**
-    1. In the "Search" field, type `"` (you can turn off regex for this simple search).
-    2. VS Code will show you all instances.
-    3. For each one, manually replace it with ` `` ` (opening) or `''` (closing) in the editor.
-
-- **Problem:** `[chktex] 8: Wrong length of dash may have been used.`
-
-  - **Explanation:** We can't know the intended dash type everywhere, but we can make educated guesses. Let's find the most common cases.
-  - **Action (Fixing number ranges):**
-    - **Find:** `(\d)-(\d)`
-    - **Replace:** `$1--$2`
-    - _(This finds a digit, a hyphen, and another digit, and replaces the hyphen with an en-dash (`--`), preserving the digits.)_
-  - **Action (Fixing sentence breaks):**
-    - **Find:** `(\s)-(\s)`
-    - **Replace:** `$1---$2`
-    - _(This finds a hyphen surrounded by spaces and replaces it with an em-dash (`---`), preserving the spaces.)_
-
-- **Problem:** `[chktex] 11: You should use \\ldots to achieve an ellipsis.`
-
-  - **Explanation:** This is a safe and easy global replacement.
-  - **Action:**
-    - **Find:** `\.\.\.`
-    - **Replace:** `\\ldots`
-    - _(The `\.` escapes the dot, which is a special character in regex. The `\\` in replace is to escape the backslash.)_
+For further details, refer to the LaTeX-Workshop wiki or MiKTeX documentation. If issues persist, share specific error messages from the LaTeX Workshop output panel for targeted assistance.[](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile)[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)[](https://www.reddit.com/r/LaTeX/comments/qm1ao6/how_to_prevent_vs_code_from_creating_auxiliary/)
 
 ---
 
-### Step 3: Fix Common "Good Practice" Warnings (Regex Replace)
-
-Let's fix the most numerous and annoying warning safely.
-
-- **Problem:** `[chktex] 1: Command terminated with space.`
-  - **Explanation:** This happens with commands like `\item `, `\section `, `\includegraphics `, etc. We can find a command followed by a space and a newline, and fix it.
-  - **Action (for list items):**
-    - **Find:** `(\\item) ` (note the space at the end)
-    - **Replace:** `$1{}`
-    - _(This finds `\item ` and replaces it with `\item{}`. The capture group `$1` re-inserts `\item`.)_
-  - **Action (for commands at the end of a line):**
-    - **Find:** `(\\(?:section|subsection|subsubsection|includegraphics|label|caption|emph|textbf|textit))\s*$`
-    - **Replace:** `$1{}`
-    - _(This is a more advanced pattern that finds various commands at the end of a line (with optional spaces) and adds `{}`. Be careful and review the changes before saving all.)_
-
----
-
-### Step 4: Configure `chktex` to Hide the Noise (Most Efficient)
+# Configure `chktex` to Hide the Noise (Most Efficient)
 
 For warnings that are stylistic, too numerous, or too risky to automate, the best solution is to tell `chktex` to ignore them.
 
@@ -133,12 +308,3 @@ CmdLine {
 ```
 
 3. **Important:** After saving the `.chktexrc` file, **reload VS Code** for the changes to take effect. Use the command palette (`Cmd+Shift+P` or `Ctrl+Shift+P`) and run `Developer: Reload Window`.
-
-### Summary of Recommendations
-
-| Warning Type                             | My Recommendation                 | How to Fix in VS Code                                                                             |
-| :--------------------------------------- | :-------------------------------- | :------------------------------------------------------------------------------------------------ |
-| **LaTeX Errors** (`Overfull`, `Package`) | **FIX MANUALLY**                  | Go to the line number and edit the code directly.                                                 |
-| **Typography** (`"`, `-`, `...`)         | **FIX WITH REGEX**                | Use "Find/Replace in Files" with the specific regex patterns provided above.                      |
-| **Spacing** (`\command `)                | **Fix with Regex, then SUPPRESS** | Use Find/Replace for common cases like `\item`, then add `-n1` to `.chktexrc` to ignore the rest. |
-| **Parenthesis Spacing**, **User Regex**  | **SUPPRESS**                      | Add `-n36` and `-n44` to your `.chktexrc` file to silence these warnings permanently.             |

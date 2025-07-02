@@ -9,7 +9,9 @@
       "WebFetch(domain:github.com)",
       "Bash(git commit:*)",
       "Bash(git remote add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(/Users/joelgullo/dev/Cline/latex-beamer/build-separated.sh 01_intro_ai.tex)",
+      "Bash(/Users/joelgullo/dev/Cline/latex-beamer/build-separated.sh:*)"
     ],
     "deny": []
   }
