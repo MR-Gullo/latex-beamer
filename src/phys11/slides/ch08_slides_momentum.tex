@@ -1,0 +1,348 @@
+\documentclass{beamer}
+
+% Required packages
+\usepackage{xcolor}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+% Define custom colors inspired by Star Trek DS9
+\definecolor{ds9blue}{RGB}{25,25,112}  % Midnight Blue
+\definecolor{ds9gold}{RGB}{218,165,32} % Goldenrod
+\definecolor{ds9grey}{RGB}{105,105,105}% Dim Gray
+\definecolor{ds9red}{RGB}{178,34,34}   % Firebrick
+
+% Theme configuration
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamercolor{structure}{fg=ds9blue}
+\setbeamercolor{title}{fg=ds9blue,bg=ds9gold!20}
+\setbeamercolor{frametitle}{fg=ds9blue,bg=ds9gold!10}
+\setbeamercolor{block title}{fg=white,bg=ds9blue}
+\setbeamercolor{block body}{fg=black,bg=ds9gold!10}
+
+% Title page information
+\title[Understanding Momentum]{PHYS11 CH8: Understanding Momentum}
+\subtitle{From Everyday Motion to Conservation Laws}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[]{}
+\institute{}
+
+\begin{document}
+
+% Title frame
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Opening Question Frame
+\begin{frame}{Think About This...}
+\begin{block}{Opening Scenario}
+Why is it harder to stop...
+\begin{itemize}
+\item A heavy truck moving slowly, or
+\item A light car moving quickly?
+\end{itemize}
+\end{block}
+\begin{itemize}
+\item This question introduces us to the concept of \textbf{momentum}
+\item By the end of this lesson, you'll understand exactly why both situations are challenging!
+\end{itemize}
+\end{frame}
+
+% Learning Objectives
+\begin{frame}{Learning Objectives}
+\begin{block}{By the end of this lesson, you will be able to:}
+\begin{itemize}
+\item \textbf{Explain} momentum using everyday examples
+\item \textbf{Calculate} the momentum of moving objects
+\item \textbf{Describe} how force and time relate to changing momentum
+\item \textbf{Apply} conservation of momentum to real situations
+\item \textbf{Analyze} different types of collisions
+\end{itemize}
+\end{block}
+\end{frame}
+
+% What is Momentum? Conceptual Introduction
+\begin{frame}{Understanding Momentum: The Basics}
+\begin{block}{Momentum: A Measure of Motion}
+Think of momentum as an object's "motion strength"
+\end{block}
+
+\begin{itemize}
+\item Like a moving bowling ball vs. a moving ping pong ball
+\item Two factors determine momentum:
+    \begin{itemize}
+    \item How much stuff is moving (mass)
+    \item How fast it's moving (velocity)
+    \end{itemize}
+\item More mass OR more velocity = more momentum
+\end{itemize}
+
+\begin{alertblock}{Key Point}
+Momentum combines MASS and VELOCITY into a single measure of motion
+\end{alertblock}
+\end{frame}
+
+% Mathematical Definition
+\begin{frame}{The Mathematics of Momentum}
+\begin{block}{Definition}
+Momentum ($\vec{p}$) = mass × velocity
+$$\vec{p} = m\vec{v}$$
+\end{block}
+
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Units:}
+\begin{itemize}
+\item Mass (kg)
+\item Velocity (m/s)
+\item Momentum (kg⋅m/s)
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Remember:}
+\begin{itemize}
+\item Momentum is a vector
+\item Direction matters!
+\item Same direction as velocity
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% Real-World Examples Frame
+\begin{frame}{Momentum in Real Life}
+\begin{block}{Sports Examples}
+\begin{itemize}
+\item Football player running (large mass, moderate velocity)
+\item Baseball pitch (small mass, high velocity)
+\item Ice skater gliding (medium mass, low velocity)
+\end{itemize}
+\end{block}
+
+\begin{block}{Transportation Examples}
+\begin{itemize}
+\item Heavy truck at highway speed
+\item Bicycle commuter
+\item High-speed train
+\end{itemize}
+\end{block}
+\end{frame}
+
+% I Do: Worked Example
+\begin{frame}{Example: Understanding Momentum (I Do)}
+\begin{block}{Problem}
+A 75 kg football player runs at 8 m/s. Calculate their momentum.
+\end{block}
+
+\pause
+
+\begin{block}{Step-by-Step Solution}
+1. Identify what we know:
+   \begin{itemize}
+   \item Mass (m) = 75 kg
+   \item Velocity (v) = 8 m/s
+   \end{itemize}
+
+   \pause
+   
+2. Apply the momentum formula:
+   $$\vec{p} = m\vec{v} = (75\text{ kg})(8\text{ m/s}) = 600\text{ kg⋅m/s}$$
+\end{block}
+\end{frame}
+
+% We Do: Interactive Example
+\begin{frame}{Let's Try Together (We Do)}
+\begin{block}{Problem}
+A 0.145 kg baseball is thrown at 40 m/s. Calculate:
+\begin{itemize}
+\item The ball's momentum
+\item Compare it to the football player's momentum
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{block}{Solution Steps}
+1. Calculate baseball momentum:
+   $$\vec{p} = (0.145\text{ kg})(40\text{ m/s}) = 5.8\text{ kg⋅m/s}$$
+   
+2. Compare:
+   \begin{itemize}
+   \item Baseball: 5.8 kg⋅m/s
+   \item Football player: 600 kg⋅m/s
+   \end{itemize}
+\end{block}
+\end{frame}
+
+% Impulse Introduction
+\begin{frame}{Changing Momentum: Understanding Impulse}
+\begin{block}{Key Concept: Impulse}
+Impulse = Force × Time = Change in Momentum
+$$F\Delta t = \Delta p$$
+\end{block}
+
+\begin{itemize}
+\item Same effect can be achieved by:
+    \begin{itemize}
+    \item Large force for short time
+    \item Small force for long time
+    \end{itemize}
+\item Examples:
+    \begin{itemize}
+    \item Catching a baseball (extend arms to increase time)
+    \item Car airbags (increase collision time)
+    \item Karate board break (large force, very short time)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+% Conservation of Momentum Introduction
+\begin{frame}{Conservation of Momentum}
+\begin{block}{The Big Idea}
+In an isolated system (no external forces), total momentum stays constant
+\end{block}
+
+\pause
+
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Before Collision}
+\begin{itemize}
+\item Object 1 momentum
+\item Object 2 momentum
+\item Total = $p_1 + p_2$
+\end{itemize}
+
+\pause
+
+\column{0.5\textwidth}
+\textbf{After Collision}
+\begin{itemize}
+\item Object 1 new momentum
+\item Object 2 new momentum
+\item Total = $p'_1 + p'_2$
+\end{itemize}
+\end{columns}
+
+\pause
+
+\begin{alertblock}{Key Equation}
+$$p_1 + p_2 = p'_1 + p'_2$$
+\end{alertblock}
+\end{frame}
+
+% Types of Collisions
+\begin{frame}{Understanding Collisions}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Elastic Collisions}
+\begin{itemize}
+\item Objects bounce apart
+\item Kinetic energy preserved
+\item Example: Pool balls
+\item Perfect elasticity rare
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Inelastic Collisions}
+\begin{itemize}
+\item Objects stick together
+\item Energy converted to heat/sound
+\item Example: Car crashes
+\item More common in real life
+\end{itemize}
+\end{columns}
+
+\pause
+
+\begin{alertblock}{Remember}
+Momentum is conserved in BOTH types of collisions!
+\end{alertblock}
+\end{frame}
+
+% You Do: Practice Problem
+\begin{frame}{Your Turn! (You Do)}
+\begin{block}{Challenge Problem}
+A 1200 kg car moving at 15 m/s collides with a stationary 800 kg car. They stick together.
+What is their final velocity?
+\end{block}
+
+\begin{block}{Hints}
+\begin{itemize}
+\item This is an inelastic collision (they stick together)
+\item Use conservation of momentum
+\item Remember: mass$_1$v$_1$ + mass$_2$v$_2$ = (mass$_1$ + mass$_2$)v$_\text{final}$
+\end{itemize}
+\end{block}
+
+\pause
+
+\begin{block}{Solution Framework}
+$(1200)(15) + (800)(0) = (1200 + 800)v_\text{final}$
+\end{block}
+\end{frame}
+
+% Real-World Applications
+\begin{frame}{Momentum in the Real World}
+\begin{block}{Safety Applications}
+\begin{itemize}
+\item Vehicle crumple zones
+\item Sports padding and helmets
+\item Playground surface materials
+\end{itemize}
+\end{block}
+
+\begin{block}{Engineering Applications}
+\begin{itemize}
+\item Rocket propulsion
+\item Impact testing
+\item Vehicle design
+\end{itemize}
+\end{block}
+\end{frame}
+
+% Summary Frame
+\begin{frame}{Key Takeaways}
+\begin{block}{Main Concepts}
+\begin{itemize}
+\item Momentum = mass × velocity
+\item Impulse changes momentum
+\item Momentum is conserved in isolated systems
+\item Collisions can be elastic or inelastic
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Why This Matters}
+Understanding momentum helps us:
+\begin{itemize}
+\item Design safer vehicles
+\item Improve sports equipment
+\item Predict motion in collisions
+\item Solve real-world problems
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+% Questions Frame
+\begin{frame}{Questions to Consider}
+\begin{block}{Think About}
+\begin{itemize}
+\item Why do heavy vehicles need longer to stop?
+\item How do martial artists break boards?
+\item Why do catchers "give" with the ball?
+\item How do airbags protect us?
+\end{itemize}
+\end{block}
+
+\begin{block}{Next Steps}
+\begin{itemize}
+\item Practice with example problems
+\item Connect concepts to daily life
+\item Observe momentum in action
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

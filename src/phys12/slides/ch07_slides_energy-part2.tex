@@ -1,0 +1,201 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Define custom colors inspired by Star Trek DS9
+\definecolor{ds9blue}{RGB}{25,25,112} % Midnight Blue
+\definecolor{ds9gold}{RGB}{218,165,32} % Goldenrod
+\definecolor{ds9grey}{RGB}{105,105,105} % Dim Gray
+\definecolor{ds9red}{RGB}{178,34,34} % Firebrick
+
+% Customize the colors
+\setbeamercolor{title}{fg=ds9gold}
+\setbeamercolor{frametitle}{bg=ds9blue, fg=white}
+\setbeamercolor{block title}{bg=ds9gold, fg=black}
+\setbeamercolor{block body}{bg=ds9grey!20, fg=black}
+\setbeamercolor{section in toc}{fg=ds9gold}
+\setbeamercolor{subsection in toc}{fg=ds9gold!70}
+\setbeamercolor{footline}{bg=ds9blue, fg=white}
+\setbeamercolor{author in head/foot}{fg=white}
+\setbeamercolor{date in head/foot}{fg=white}
+\setbeamercolor{title in head/foot}{fg=white}
+
+% Title page configuration
+\title[PHYS12 CH7.4-7.6]{Work and Energy}
+\subtitle{Chapter 7.1-7.3}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Nov 2024]{November 2024}
+
+% Add logo
+\logo{\includegraphics[width=0.1\linewidth]{cinec_logo.png}}
+
+% Table of contents at the beginning of each section
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{7.4 Conservative Forces and Potential Energy}
+
+\begin{frame}
+\frametitle{Conservative Forces}
+\begin{itemize}
+    \item A force is conservative if the work done by it on a particle is independent of the path taken
+    \item Examples of conservative forces:
+    \begin{itemize}
+        \item Gravitational force
+        \item Elastic force (springs)
+        \item Electrostatic force
+    \end{itemize}
+    \item Work done by conservative forces:
+    \begin{itemize}
+        \item Can be recovered
+        \item Depends only on initial and final positions
+        \item Path-independent
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Potential Energy}
+\begin{itemize}
+    \item Potential energy: energy stored due to position or configuration
+    \item For conservative forces:
+    \[\Delta PE = -W_{\text{cons}}\]
+    where:
+    \begin{itemize}
+        \item $\Delta PE$ is change in potential energy
+        \item $W_{\text{cons}}$ is work done by conservative force
+    \end{itemize}
+    \item Types:
+    \begin{itemize}
+        \item Gravitational potential energy
+        \item Elastic potential energy
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{7.5 Conservation of Mechanical Energy}
+
+\begin{frame}
+\frametitle{Conservation of Mechanical Energy}
+\begin{itemize}
+    \item Mechanical energy = Kinetic energy + Potential energy
+    \[E = K + PE\]
+    \item When only conservative forces act:
+    \[E_{\text{initial}} = E_{\text{final}}\]
+    \item Or:
+    \[K_i + PE_i = K_f + PE_f\]
+    \item This principle helps solve many physics problems!
+\end{itemize}
+\end{frame}
+
+\section{7.6 Nonconservative Forces}
+
+\begin{frame}
+\frametitle{Nonconservative Forces}
+\begin{itemize}
+    \item Work depends on path taken
+    \item Examples:
+    \begin{itemize}
+        \item Friction
+        \item Air resistance
+        \item Tension in a rope
+    \end{itemize}
+    \item With nonconservative forces:
+    \[\Delta E = W_{\text{nc}}\]
+    where $W_{\text{nc}}$ is work done by nonconservative forces
+\end{itemize}
+\end{frame}
+
+\section{Example Problems: I do, We do, You do}
+
+\begin{frame}
+\frametitle{I Do: Roller Coaster Problem}
+A roller coaster car (mass 500 kg) starts from rest at height 40 m. What is its speed at height 15 m?
+\end{frame}
+
+\begin{frame}
+\begin{block}{Solution}
+Using conservation of mechanical energy:
+\begin{align*}
+E_i &= E_f \\
+mgh_i + \frac{1}{2}mv_i^2 &= mgh_f + \frac{1}{2}mv_f^2 \\
+(500)(9.8)(40) + 0 &= (500)(9.8)(15) + \frac{1}{2}(500)v_f^2 \\
+196000 &= 73500 + 250v_f^2 \\
+v_f &= 22.6 \text{ m/s}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Spring Problem}
+Let's solve together: A 2 kg mass is attached to a spring (k = 100 N/m) and compressed 0.3 m. What height will it reach when released?
+\end{frame}
+
+\begin{frame}
+\begin{block}{Step-by-Step}
+1. Initial energy (compressed spring):
+\[\frac{1}{2}kx^2 = \frac{1}{2}(100)(0.3)^2 = 4.5 \text{ J}\]
+2. At maximum height:
+\[mgh = 4.5 \text{ J}\]
+3. Solve for h:
+\[h = \frac{4.5}{(2)(9.8)} = 0.23 \text{ m}\]
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Practice Problem}
+Now try this one:
+
+\begin{block}{Problem}
+A 0.5 kg ball is thrown upward with initial velocity 15 m/s. Calculate:
+\begin{itemize}
+    \item Maximum height reached
+    \item Velocity when it returns to half the maximum height
+\end{itemize}
+Use conservation of energy principles!
+\end{block}
+\pause
+\begin{block}{Hint}
+Start with:
+\[\frac{1}{2}mv_i^2 = mgh_{\text{max}}\]
+Then use conservation of energy again for the second part.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Takeaways}
+\begin{itemize}
+    \item Conservative forces:
+    \begin{itemize}
+        \item Path-independent work
+        \item Enable potential energy definition
+    \end{itemize}
+    \item Conservation of mechanical energy:
+    \begin{itemize}
+        \item Powerful problem-solving tool
+        \item Only valid for conservative forces
+    \end{itemize}
+    \item Nonconservative forces:
+    \begin{itemize}
+        \item Change total mechanical energy
+        \item Require additional work calculations
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
