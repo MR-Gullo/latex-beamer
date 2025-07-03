@@ -111,3 +111,6 @@ convention: phys11-`<topic>`-`<description>`.`<ext>`.
 104 + phys11-math-sine-cosine-laws.png
 105 - sohcahtoa.png
 106 + phys11-math-trigonometry-sohcahtoa.png
+
+- chargvecsOIP.jpg
++ phys11-electrostatics-coulombs-law-diagram-cropped.jpg
