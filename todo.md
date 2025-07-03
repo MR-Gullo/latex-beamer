@@ -1,310 +1,155 @@
-Yes, it is possible to separate the PDF from the auxiliary build files when using the LaTeX-Workshop extension in Visual Studio Code, but it requires specific configurations, primarily with a LaTeX distribution like MiKTeX that supports a separate auxiliary directory. Below, I’ll outline how to achieve this by directing auxiliary files (e.g., .aux, .log, .synctex.gz) to one folder (e.g., `./aux`) while placing the PDF in a distinct output folder (e.g., `./out`). I’ll also address the issues you mentioned—build button creating a .txt file, PDF deletion, and image referencing—while incorporating insights from the web results and ensuring a clean project structure.
+# Physics 12 Image Reference Update Task
 
----
+## Objective
+Update all image references in LaTeX Beamer presentations in the `src/phys12/slides/` directory to use the standardized naming convention defined in `src/phys12/images/newnames.md`.
 
-### Solution: Separating PDF from Auxiliary Build Files
+## Task Details
 
-#### Key Approach
+### Step 1: Comprehensive Image Reference Analysis
+- Search through all `.tex` files in `/Users/joelgullo/dev/latex-beamer/src/phys12/slides/` directory
+- Identify all image references using `\includegraphics` commands
+- Extract image filenames (without paths) and create a comprehensive list
+- Look for patterns like `\includegraphics[...]{filename.ext}` and collect all referenced filenames
 
-To separate the PDF from auxiliary files, you can leverage MiKTeX’s `--aux-directory` option in combination with the `--output-directory` option for tools like `pdflatex`. The LaTeX-Workshop extension allows you to configure these options in the `latex-workshop.latex.tools` and `latex-workshop.latex.recipes` settings. However, note that not all LaTeX tools (e.g., `bibtex`, `biber`, `makeindex`) natively support `--aux-directory`, which can complicate multi-tool workflows. For simplicity, using `latexmk` with a custom configuration or a dedicated tool like `pdflatex` with explicit directory settings is recommended.
+### Step 2: Apply Name Mappings from newnames.md
+Update image references using these key mappings from `src/phys12/images/newnames.md`:
 
-#### Step-by-Step Configuration
+**Circuit Images:**
+- `3seriescap.png` → `phys12-circuits-capacitors-in-series.png`
+- `amvolmm.jpg` → `phys12-circuits-ammeter-voltmeter-connection.jpg`
+- `cap.png` → `phys12-circuits-capacitor-symbol.png`
+- `caps.png` → `phys12-circuits-capacitor-types.png`
+- `capseriesparalel.png` → `phys12-circuits-capacitors-series-parallel-comparison.png`
+- `dischcurve.png` → `phys12-circuits-capacitor-discharge-curve.png`
+- `ecg.png` → `phys12-circuits-ecg-waveform.png`
+- `image.png` → `phys12-circuits-rc-circuit-diagram.png`
+- `inres.png` → `phys12-circuits-internal-resistance.png`
+- `modelviews.png` → `phys12-circuits-circuit-model-views.png`
+- `OIP-C.jpg` → `phys12-circuits-kirchhoffs-junction-rule.jpg`
+- `paralelcap.png` → `phys12-circuits-capacitors-in-parallel.png`
+- `ParallelCircuitbat.jpg` → `phys12-circuits-parallel-circuit-with-battery.jpg`
+- `rms.png` → `phys12-circuits-rms-voltage-ac.png`
+- `seriescap.png` → `phys12-circuits-capacitor-in-series.png`
+- `seriesparralcap.png` → `phys12-circuits-series-parallel-capacitor-combo.png`
+- `serres.png` → `phys12-circuits-resistors-in-series.png`
+- `wheatstone.jpg` → `phys12-circuits-wheatstone-bridge.jpg`
+- `Screenshot 2024-11-12 133942.png` → `phys12-circuits-rc-circuit-charging-graph.png`
+- `Screenshot 2024-11-19 073715.png` → `phys12-circuits-kirchhoffs-loop-rule-example.png`
 
-1. **Set Up the Output and Auxiliary Directories**
+**Magnetism Images:**
+- `chflux.png` → `phys12-magnetism-magnetic-flux-through-loop.png`
+- `eddy.png` → `phys12-magnetism-eddy-currents.png`
+- `genyr.png` → `phys12-magnetism-electric-generator-diagram.png`
+- `halleffct.png` → `phys12-magnetism-hall-effect.png`
+- `mangle.png` → `phys12-magnetism-magnetic-field-angle.png`
+- `mggmgcrc.png` → `phys12-magnetism-magnetic-force-on-current-loop.png`
+- `mgng.png` → `phys12-magnetism-magnetic-field-generator.png`
+- `mgngd.png` → `phys12-magnetism-magnetic-field-lines-generator.png`
+- `mgRHR.png` → `phys12-magnetism-right-hand-rule-force.png`
+- `mgtrq.png` → `phys12-magnetism-torque-on-current-loop.png`
+- `mmgmg.png` → `phys12-magnetism-magnetic-force-on-wire.png`
+- `rhr1-.png` → `phys12-magnetism-right-hand-rule-current.png`
 
-   - Open VSCode settings (Ctrl+, or Cmd+, on macOS) and navigate to the LaTeX-Workshop settings.
-   - Set `"latex-workshop.latex.outDir": "./out"` to direct the PDF and other output files to the `./out` directory.
-   - Note: The `--aux-directory` flag is specific to MiKTeX and not supported by TeX Live, so ensure you’re using MiKTeX if you want to separate auxiliary files into a different folder (e.g., `./aux`). If using TeX Live, all build files, including the PDF, typically go to the same output directory unless post-processing scripts are used.
+**Electrostatics Images:**
+- `charge.png` → `phys12-electrostatics-charge-interactions.png`
+- `equippt.png` → `phys12-electrostatics-equipotential-lines.png`
+- `Pith_ball_electroscope_operating_principle.svg.png` → `phys12-electrostatics-pith-ball-electroscope.png`
+- `plates.png` → `phys12-electrostatics-parallel-plates-electric-field.png`
+- `repel.png` → `phys12-electrostatics-charge-repulsion.png`
+- `repellines.png` → `phys12-electrostatics-field-lines-repulsion.png`
+- `Van_de_Graaff_Generator.svg.png` → `phys12-electrostatics-van-de-graaff-generator.png`
 
-2. **Configure LaTeX Tools**
+**Gravity Images:**
+- `cavend.png` → `phys12-gravity-cavendish-experiment.png`
+- `dwarf-planets.jpg` → `phys12-gravity-dwarf-planets.jpg`
+- `newt.png` → `phys12-gravity-newtons-law-of-gravitation.png`
+- `newtch.png` → `phys12-gravity-newtons-cannon-thought-experiment.png`
+- `th-991058791.jpg` → `phys12-gravity-newtons-law-of-universal-gravitation-formula.jpg`
+- `kepfirst.png` → `phys12-gravity-keplers-first-law.png`
+- `Keplar.png` → `phys12-gravity-kepler-orbital-diagram.png`
 
-   - Edit the `settings.json` file in your VSCode workspace (`.vscode/settings.json`) or global user settings. Add or modify the `latex-workshop.latex.tools` setting to include both `--aux-directory` and `--output-directory` for MiKTeX’s `pdflatex`. For example:
-     ```json
-     "latex-workshop.latex.tools": [
-       {
-         "name": "pdflatex",
-         "command": "pdflatex",
-         "args": [
-           "-synctex=1",
-           "-interaction=nonstopmode",
-           "-file-line-error",
-           "--aux-directory=./aux",
-           "--output-directory=%OUTDIR%",
-           "%DOC%"
-         ],
-         "env": {}
-       },
-       {
-         "name": "bibtex",
-         "command": "bibtex",
-         "args": ["./aux/%DOCFILE%"],
-         "env": {}
-       }
-     ]
-     ```
-   - **Notes**:
-     - The `--aux-directory=./aux` flag tells MiKTeX to place auxiliary files (e.g., .aux, .log) in the `./aux` folder.
-     - The `--output-directory=%OUTDIR%` flag directs the PDF to the `./out` folder, as defined by `latex-workshop.latex.outDir`.
-     - For `bibtex` or `biber`, you need to specify the auxiliary directory path (e.g., `./aux/%DOCFILE%`) because these tools need to find the .aux file in the auxiliary directory.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)
-     - If using `latexmk`, it does not support `--aux-directory` directly, but you can configure it to use a custom `.latexmkrc` file (see below).
+**Vector Images:**
+- `vectarr.png` → `phys12-vectors-vector-addition.png`
+- `21fig.png` → `phys12-vectors-vector-addition-figure-21.png`
+- `4 fig.png` → `phys12-vectors-vector-addition-figure-4.png`
+- `Picture 3.23.png` → `phys12-vectors-vector-diagram-3-23.png`
+- `vectcomp.png` → `phys12-vectors-vector-components.png`
 
-3. **Define a Recipe**
+**Mechanics Images:**
+- `arc.png` → `phys12-mechanics-circular-motion-arc.png`
+- `centerseek.png` → `phys12-mechanics-centripetal-acceleration.png`
+- `centforce.png` → `phys12-mechanics-centripetal-force-diagram.png`
+- `wheelomega.png` → `phys12-mechanics-angular-velocity-wheel.png`
 
-   - Create a recipe that uses the configured tools. For example:
-     ```json
-     "latex-workshop.latex.recipes": [
-       {
-         "name": "pdflatex",
-         "tools": ["pdflatex"]
-       },
-       {
-         "name": "pdflatex -> bibtex -> pdflatex x2",
-         "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
-       }
-     ]
-     ```
-   - Set the default recipe to ensure the correct toolchain is used:
-     ```json
-     "latex-workshop.latex.recipe.default": "pdflatex"
-     ```
-   - If your project uses bibliographies, the multi-step recipe ensures `bibtex` processes the .aux file correctly.
+**Formula Sheet Images:**
+- `nesw.png` → `phys12-navigation-compass-directions.png`
+- `nrt.png` → `phys12-formulas-newton-relativity-thermodynamics.png`
+- `rt.png` → `phys12-formulas-relativity-thermodynamics.png`
 
-4. **Using `latexmk` with a Custom `.latexmkrc` File**
+**Miscellaneous Images:**
+- `cinec_logo.png` → `phys12-shared-cinec-logo.png`
+- `Change-5.jpg` → `phys12-nuclear-atomic-change-process.jpg`
 
-   - If you prefer `latexmk` (common for its automation of multi-step builds), you can use a `.latexmkrc` file to separate auxiliary files and the PDF. Create a `.latexmkrc` file in your project root with:
-     ```perl
-     $out_dir = 'out';
-     $aux_dir = 'aux';
-     ```
-   - Update the `latexmk` tool in `settings.json`:
-     ```json
-     "latex-workshop.latex.tools": [
-       {
-         "name": "latexmk",
-         "command": "latexmk",
-         "args": [
-           "-synctex=1",
-           "-interaction=nonstopmode",
-           "-file-line-error",
-           "-pdf",
-           "-outdir=%OUTDIR%",
-           "%DOC%"
-         ],
-         "env": {}
-       }
-     ]
-     ```
-   - Ensure `latex-workshop.latex.outDir` is set to `./out`. The `.latexmkrc` file’s `$aux_dir` setting will direct auxiliary files to `./aux`, while `$out_dir` keeps the PDF in `./out`.[](https://nelsonaloysio.medium.com/setting-up-vs-code-to-write-in-latex-using-latexmk-and-biber-plus-extras-b4b37c844495)
+### Step 3: Systematic File Updates
+- Read each `.tex` file individually to understand current image references
+- Apply exact filename replacements within `\includegraphics` commands
+- Ensure only exact filename matches are replaced (not partial matches)
+- Preserve all other formatting, paths, and parameters
 
-5. **Prevent PDF Deletion**
+### Step 4: Create Analysis Reports
+- **List A:** Images referenced in `.tex` files but NOT found in newnames.md mapping
+- **List B:** Images in newnames.md mapping but NOT referenced in any `.tex` files
+- Include counts and categorization for better understanding of coverage
 
-   - The issue of the PDF being deleted likely stems from the clean settings. Check `latex-workshop.latex.clean.fileTypes` in `settings.json`. The default list includes auxiliary files like `*.aux`, `*.log`, etc., but should not include `*.pdf`. If it does, remove `*.pdf` or `%DOCFILE%.pdf` to prevent deletion:
-     ```json
-     "latex-workshop.latex.clean.fileTypes": [
-       "*.aux",
-       "*.log",
-       "*.fls",
-       "*.out",
-       "*.synctex.gz"
-     ]
-     ```
-   - Also, verify `latex-workshop.latex.autoClean.run`. Set it to `"never"` to disable automatic cleaning, or `"onFailed"` to clean only if the build fails:
-     ```json
-     "latex-workshop.latex.autoClean.run": "never"
-     ```
+### Expected Files to Process
+Based on directory listing, process these `.tex` files:
+- ch01-03_review_test-prep.tex
+- ch03_slides_vectors.tex
+- ch04-05-09_review.tex
+- ch04_slides_motion.tex
+- ch05_slides_forces.tex
+- ch06_slides_circular-motion-part1.tex
+- ch06_slides_circular-motion-part2.tex
+- ch07_assign_bill-nye-energy.tex
+- ch07_assign_video-analysis.tex
+- ch07_lab_energy.tex
+- ch07_slides_energy-part1.tex
+- ch07_slides_energy-part2.tex
+- ch07_slides_energy-part3.tex
+- ch08_assign_photo-journal-v2.tex
+- ch08_assign_photo-journal.tex
+- ch08_lab_momentum.tex
+- ch08_slides_momentum.tex
+- ch09_assign_problem-solving.tex
+- ch09_assign_roof-ladder.tex
+- ch09_slides_equilibrium.tex
+- ch18_slides_electric-fields.tex
+- ch19_notes_chinese.tex
+- ch19_slides_electric-potential.tex
+- ch20-21_notes_chinese.tex
+- ch20-21_slides_electric-current.tex
+- ch22-23_slides_electromagnetic-induction.tex
+- ch22_slides_magnetism-v2.tex
+- ch22_slides_magnetism.tex
+- ch23_slides_electromagnetic-waves.tex
+- misc_colour.tex
+- misc_communications-project.tex
+- misc_dnd.tex
+- test_ch04.tex
+- util_ch05_archive.tex
+- util_formula-jigsaw.tex
+- util_formula-sheet.tex
+- util_template-phys12.tex
 
-6. **Fix Image Referencing Issues**
+### Success Criteria
+- All old image names from the mapping have been replaced with new standardized names
+- No broken image references introduced
+- Comprehensive analysis of coverage (referenced vs mapped images)
+- All changes follow the `phys12-[topic]-[description].[ext]` naming convention
+- Maintain LaTeX file integrity and compilation compatibility
 
-   - Image referencing issues occur when LaTeX cannot find image files due to incorrect paths. Since the .tex file is in the project root and the PDF is output to `./out`, image paths should be specified relative to the .tex file’s location. For example, if images are in a folder `./images`, use:
-     ```latex
-     \includegraphics{images/figure.png}
-     ```
-   - Ensure the `graphicspath` command is set correctly in your .tex file if images are in multiple directories:
-     ```latex
-     \graphicspath{{./images/}}
-     ```
-   - If images are still not found, verify the directory structure and ensure no absolute paths are used unless necessary. The working directory for LaTeX is typically the .tex file’s directory, not the output directory.[](https://paulwintz.com/latex-in-vscode/)
-
-7. **Fix Build Button Creating a .txt File**
-
-   - The build button (Ctrl+Alt+B) creating a .txt file suggests a misconfigured recipe or tool. Check the active recipe in the LaTeX-Workshop sidebar or `latex-workshop.latex.recipe.default`. Ensure it uses a valid LaTeX compiler like `pdflatex` or `latexmk` with `-pdf` or equivalent flags. For example, if the recipe uses `latex` instead of `pdflatex`, it may produce a DVI file, but a .txt file indicates a possible custom script or error in the command. Verify the tool configuration (e.g., `pdflatex` or `latexmk`) and ensure no erroneous arguments are redirecting output to a .txt file.
-
-8. **SyncTeX Considerations**
-
-   - The SyncTeX file (.synctex.gz) may still be generated in the source directory or the auxiliary directory, depending on the tool. For `pdflatex` with MiKTeX, it typically goes to the `--aux-directory`. Ensure `latex-workshop.synctex.synctexjs.enabled` is set to `true` and `latex-workshop.view.pdf.viewer` is set to `"tab"` for proper PDF preview and navigation:
-     ```json
-     "latex-workshop.synctex.synctexjs.enabled": true,
-     "latex-workshop.view.pdf.viewer": "tab"
-     ```
-   - If SyncTeX fails, ensure the `--synctex=1` flag is included in the tool arguments.[](https://tex.stackexchange.com/questions/538797/go-to-source-for-latex-on-vs-code-does-not-seem-to-work)
-
-#### Example Directory Structure
-
-After configuration, your project might look like:
-
-```
-project_root/
-├── main.tex
-├── images/
-│   └── figure.png
-├── aux/
-│   ├── main.aux
-│   ├── main.log
-│   ├── main.synctex.gz
-├── out/
-│   ├── main.pdf
-├── .vscode/
-│   └── settings.json
-├── .latexmkrc (if using latexmk)
-```
-
-#### Additional Notes
-
-- **MiKTeX vs. TeX Live**: MiKTeX’s `--aux-directory` is not available in TeX Live. If using TeX Live, you can use a post-processing script to move the PDF to a separate directory after compilation, but this is more complex. Alternatively, use `latexmk` with a `.latexmkrc` file as described.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)[](https://www.reddit.com/r/LaTeX/comments/qm1ao6/how_to_prevent_vs_code_from_creating_auxiliary/)
-- **Cleaning Auxiliary Files**: To clean only auxiliary files, use the LaTeX-Workshop clean command (Ctrl+Alt+C) or configure `latex-workshop.latex.clean.subfolder.enabled` to `true` to include files in the `./aux` directory:
-  ```json
-  "latex-workshop.latex.clean.subfolder.enabled": true
-  ```
-- **Git Integration**: To keep your project clean for version control, add `./aux` and `./out` to your `.gitignore` file to avoid tracking temporary files.[](https://danmackinlay.name/notebook/vs_code_for_latex)
-- **Multi-File Projects**: For projects with multiple .tex files, add a magic comment like `% !TEX root = main.tex` to each subfile to ensure the correct root file is compiled.[](https://stackoverflow.com/questions/65595001/specify-the-file-to-be-compiled-in-vscode-latex-workshop)
-- **Dependencies**: Ensure MiKTeX and Perl (for `latexmk`) are installed. If `latexmk` fails due to missing Perl, install it or use `pdflatex` directly.[](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install)
-
-#### Troubleshooting Persistent Issues
-
-- **PDF Still in Auxiliary Directory**: If the PDF ends up in `./aux` instead of `./out`, double-check the `--output-directory` flag in the tool configuration and ensure `latex-workshop.latex.outDir` matches.
-- **BibTeX/Biber Issues**: If bibliography tools fail to find the .aux file, ensure their arguments point to the correct directory (e.g., `./aux/%DOCFILE%`). For `biber`, you may need to specify the output directory explicitly in some cases.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)
-- **Performance**: For large documents, ensure your LaTeX distribution (MiKTeX) is up-to-date to avoid compilation issues.[](https://tex.stackexchange.com/questions/tagged/latex-workshop)
-
-#### Final Settings Example
-
-Here’s a complete `settings.json` example for MiKTeX with separated PDF and auxiliary files:
-
-```json
-{
-  "latex-workshop.latex.outDir": "./out",
-  "latex-workshop.latex.clean.fileTypes": [
-    "*.aux",
-    "*.log",
-    "*.fls",
-    "*.out",
-    "*.synctex.gz"
-  ],
-  "latex-workshop.latex.autoClean.run": "never",
-  "latex-workshop.latex.clean.subfolder.enabled": true,
-  "latex-workshop.synctex.synctexjs.enabled": true,
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.tools": [
-    {
-      "name": "pdflatex",
-      "command": "pdflatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "--aux-directory=./aux",
-        "--output-directory=%OUTDIR%",
-        "%DOC%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "bibtex",
-      "command": "bibtex",
-      "args": ["./aux/%DOCFILE%"],
-      "env": {}
-    }
-  ],
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "pdflatex",
-      "tools": ["pdflatex"]
-    },
-    {
-      "name": "pdflatex -> bibtex -> pdflatex x2",
-      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
-    }
-  ],
-  "latex-workshop.latex.recipe.default": "pdflatex"
-}
-```
-
-#### Testing the Setup
-
-1. Create a simple `main.tex` file with an image reference:
-   ```latex
-   \documentclass{article}
-   \usepackage{graphicx}
-   \graphicspath{{./images/}}
-   \begin{document}
-   Hello, World!
-   \includegraphics{images/figure.png}
-   \end{document}
-   ```
-2. Save and build (Ctrl+Alt+B). Check that:
-   - The PDF appears in `./out/main.pdf`.
-   - Auxiliary files (e.g., .aux, .log) are in `./aux`.
-   - The PDF is not deleted after cleaning (Ctrl+Alt+C).
-   - The image is correctly rendered in the PDF.
-
-#### Limitations
-
-- **TeX Live Users**: Without `--aux-directory`, you’ll need a post-processing script or manual file movement to separate the PDF, which is less straightforward.
-- **Complex Workflows**: Tools like `makeindex` may require additional configuration to locate auxiliary files, potentially requiring custom scripts.[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)
-- **SyncTeX**: The `.synctex.gz` file may still appear in `./aux` or `./out`, depending on the tool, but this doesn’t affect functionality as long as SyncTeX is enabled.
-
----
-
-### Addressing Your Specific Issues
-
-- **Build Button Creating a .txt File**: This issue is likely due to a misconfigured recipe or an invalid command. Ensure the recipe uses `pdflatex` or `latexmk` with the `-pdf` flag. Check the VSCode output panel (View > Output > LaTeX Workshop) for errors indicating why a .txt file is generated. If a custom script is involved, remove or correct it.
-- **PDF Deletion**: As addressed, ensure `*.pdf` is not in `latex-workshop.latex.clean.fileTypes` and set `latex-workshop.latex.autoClean.run` to `"never"` or `"onFailed"`.
-- **Image Referencing Issues**: Use relative paths from the .tex file’s location. If issues persist, check the LaTeX log (Ctrl+Alt+J) for errors related to `\includegraphics` and verify the image file exists in the specified path.
-
----
-
-### Conclusion
-
-By using MiKTeX with `--aux-directory=./aux` and `--output-directory=%OUTDIR%`, you can separate the PDF (in `./out`) from auxiliary files (in `./aux`) while keeping .tex files in the project root. Alternatively, `latexmk` with a `.latexmkrc` file achieves similar results. The provided `settings.json` configuration ensures proper compilation, prevents PDF deletion, and supports image referencing. For TeX Live users, consider a single output directory or a custom script for PDF separation. Always test with a simple document to verify the setup before applying it to complex projects.
-
-For further details, refer to the LaTeX-Workshop wiki or MiKTeX documentation. If issues persist, share specific error messages from the LaTeX Workshop output panel for targeted assistance.[](https://github.com/James-Yu/LaTeX-Workshop/wiki/Compile)[](https://tex.stackexchange.com/questions/525604/save-auxiliary-latex-files-in-another-folder-in-vsc)[](https://www.reddit.com/r/LaTeX/comments/qm1ao6/how_to_prevent_vs_code_from_creating_auxiliary/)
-
----
-
-# Configure `chktex` to Hide the Noise (Most Efficient)
-
-For warnings that are stylistic, too numerous, or too risky to automate, the best solution is to tell `chktex` to ignore them.
-
-1. In the **root directory of your project**, create a new file named `.chktexrc`.
-2. Paste the following content into it. This configuration is tailored to the noisiest warnings in your log.
-
-**Your `.chktexrc` file:**
-
-```
-# This is a configuration file for chktex.
-# We can turn off warnings by their number using '-n<number>'.
-
-CmdLine {
-  # Suppress "Command terminated with space." It's good practice to fix
-  # the most obvious ones (like \item), but this warning can be very noisy.
-  # Let's suppress it after fixing the common cases.
-  -n1
-
-  # Suppress "Interword spacing (`\\ ') should perhaps be used."
-  # This is highly contextual and very difficult to fix automatically.
-  -n12
-
-  # Suppress "Intersentence spacing (`\\@') should perhaps be used."
-  # Same as above, best to suppress.
-  -n13
-
-  # Suppress "You should put a space in front of parenthesis."
-  # This is often a stylistic preference and safe to ignore.
-  -n36
-
-  # Suppress "User Regex". This is a custom rule that is misfiring on
-  # things like `\begin{itemize}`. It's safe to disable.
-  -n44
-}
-```
-
-3. **Important:** After saving the `.chktexrc` file, **reload VS Code** for the changes to take effect. Use the command palette (`Cmd+Shift+P` or `Ctrl+Shift+P`) and run `Developer: Reload Window`.
+### Notes
+- Similar to the phys11 project, some files may already use the standardized naming convention
+- Focus on exact string matching within `\includegraphics{}` commands
+- Preserve any subdirectory paths that may be present
+- Create detailed documentation of what was changed and what remains unmapped
