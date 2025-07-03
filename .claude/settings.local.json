@@ -22,7 +22,10 @@
       "Bash(echo \"✅ $file built successfully\")",
       "Bash(echo:*)",
       "Bash(done)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(for:*)",
+      "Bash(do cp \"$file\" \"/Users/joelgullo/dev/latex-beamer/src/phys11/images/\")",
+      "Bash(comm:*)"
     ],
     "deny": []
   }

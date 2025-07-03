@@ -96,3 +96,34 @@ phys12-`<topic>`-`<description>`.`<ext>`.
 92 + phys12-vectors-vector-addition.png
 93 - wheatstone.jpg
 94 + phys12-circuits-wheatstone-bridge.jpg
+
+## Newly Added Images from Archive (2025-07-02)
+
+95 - 21fig.png
+96 + phys12-vectors-vector-addition-figure-21.png
+97 - 4 fig.png
+98 + phys12-vectors-vector-addition-figure-4.png
+99 - arc.png
+100 + phys12-mechanics-circular-motion-arc.png
+101 - centerseek.png
+102 + phys12-mechanics-centripetal-acceleration.png
+103 - centforce.png
+104 + phys12-mechanics-centripetal-force-diagram.png
+105 - Change-5.jpg
+106 + phys12-nuclear-atomic-change-process.jpg
+107 - kepfirst.png
+108 + phys12-gravity-keplers-first-law.png
+109 - Keplar.png
+110 + phys12-gravity-kepler-orbital-diagram.png
+111 - nesw.png
+112 + phys12-navigation-compass-directions.png
+113 - nrt.png
+114 + phys12-formulas-newton-relativity-thermodynamics.png
+115 - Picture 3.23.png
+116 + phys12-vectors-vector-diagram-3-23.png
+117 - rt.png
+118 + phys12-formulas-relativity-thermodynamics.png
+119 - vectcomp.png
+120 + phys12-vectors-vector-components.png
+121 - wheelomega.png
+122 + phys12-mechanics-angular-velocity-wheel.png
