@@ -6,15 +6,15 @@
     },
     {
       "name": "Computer Science 12",
-      "path": "./src/cs12"
+      "path": "src/cs12"
     },
     {
       "name": "Physics 11",
-      "path": "./src/phys11"
+      "path": "src/phys11"
     },
     {
       "name": "Physics 12",
-      "path": "./src/phys12"
+      "path": "src/phys12"
     }
   ],
   "settings": {

@@ -1,20 +1,26 @@
-# Physics 12 Image Reference Update Task
+# # IMPORTANT, ALREADY EXECUTED ONCE, ASK THE USER TO CHECK THE RESULTS.
+
+Physics 12 Image Reference Update Task
 
 ## Objective
+
 Update all image references in LaTeX Beamer presentations in the `src/phys12/slides/` directory to use the standardized naming convention defined in `src/phys12/images/newnames.md`.
 
 ## Task Details
 
 ### Step 1: Comprehensive Image Reference Analysis
+
 - Search through all `.tex` files in `/Users/joelgullo/dev/latex-beamer/src/phys12/slides/` directory
 - Identify all image references using `\includegraphics` commands
 - Extract image filenames (without paths) and create a comprehensive list
 - Look for patterns like `\includegraphics[...]{filename.ext}` and collect all referenced filenames
 
 ### Step 2: Apply Name Mappings from newnames.md
+
 Update image references using these key mappings from `src/phys12/images/newnames.md`:
 
 **Circuit Images:**
+
 - `3seriescap.png` → `phys12-circuits-capacitors-in-series.png`
 - `amvolmm.jpg` → `phys12-circuits-ammeter-voltmeter-connection.jpg`
 - `cap.png` → `phys12-circuits-capacitor-symbol.png`
@@ -37,6 +43,7 @@ Update image references using these key mappings from `src/phys12/images/newname
 - `Screenshot 2024-11-19 073715.png` → `phys12-circuits-kirchhoffs-loop-rule-example.png`
 
 **Magnetism Images:**
+
 - `chflux.png` → `phys12-magnetism-magnetic-flux-through-loop.png`
 - `eddy.png` → `phys12-magnetism-eddy-currents.png`
 - `genyr.png` → `phys12-magnetism-electric-generator-diagram.png`
@@ -51,6 +58,7 @@ Update image references using these key mappings from `src/phys12/images/newname
 - `rhr1-.png` → `phys12-magnetism-right-hand-rule-current.png`
 
 **Electrostatics Images:**
+
 - `charge.png` → `phys12-electrostatics-charge-interactions.png`
 - `equippt.png` → `phys12-electrostatics-equipotential-lines.png`
 - `Pith_ball_electroscope_operating_principle.svg.png` → `phys12-electrostatics-pith-ball-electroscope.png`
@@ -60,6 +68,7 @@ Update image references using these key mappings from `src/phys12/images/newname
 - `Van_de_Graaff_Generator.svg.png` → `phys12-electrostatics-van-de-graaff-generator.png`
 
 **Gravity Images:**
+
 - `cavend.png` → `phys12-gravity-cavendish-experiment.png`
 - `dwarf-planets.jpg` → `phys12-gravity-dwarf-planets.jpg`
 - `newt.png` → `phys12-gravity-newtons-law-of-gravitation.png`
@@ -69,6 +78,7 @@ Update image references using these key mappings from `src/phys12/images/newname
 - `Keplar.png` → `phys12-gravity-kepler-orbital-diagram.png`
 
 **Vector Images:**
+
 - `vectarr.png` → `phys12-vectors-vector-addition.png`
 - `21fig.png` → `phys12-vectors-vector-addition-figure-21.png`
 - `4 fig.png` → `phys12-vectors-vector-addition-figure-4.png`
@@ -76,33 +86,40 @@ Update image references using these key mappings from `src/phys12/images/newname
 - `vectcomp.png` → `phys12-vectors-vector-components.png`
 
 **Mechanics Images:**
+
 - `arc.png` → `phys12-mechanics-circular-motion-arc.png`
 - `centerseek.png` → `phys12-mechanics-centripetal-acceleration.png`
 - `centforce.png` → `phys12-mechanics-centripetal-force-diagram.png`
 - `wheelomega.png` → `phys12-mechanics-angular-velocity-wheel.png`
 
 **Formula Sheet Images:**
+
 - `nesw.png` → `phys12-navigation-compass-directions.png`
 - `nrt.png` → `phys12-formulas-newton-relativity-thermodynamics.png`
 - `rt.png` → `phys12-formulas-relativity-thermodynamics.png`
 
 **Miscellaneous Images:**
+
 - `cinec_logo.png` → `phys12-shared-cinec-logo.png`
 - `Change-5.jpg` → `phys12-nuclear-atomic-change-process.jpg`
 
 ### Step 3: Systematic File Updates
+
 - Read each `.tex` file individually to understand current image references
 - Apply exact filename replacements within `\includegraphics` commands
 - Ensure only exact filename matches are replaced (not partial matches)
 - Preserve all other formatting, paths, and parameters
 
 ### Step 4: Create Analysis Reports
+
 - **List A:** Images referenced in `.tex` files but NOT found in newnames.md mapping
 - **List B:** Images in newnames.md mapping but NOT referenced in any `.tex` files
 - Include counts and categorization for better understanding of coverage
 
 ### Expected Files to Process
+
 Based on directory listing, process these `.tex` files:
+
 - ch01-03_review_test-prep.tex
 - ch03_slides_vectors.tex
 - ch04-05-09_review.tex
@@ -142,6 +159,7 @@ Based on directory listing, process these `.tex` files:
 - util_template-phys12.tex
 
 ### Success Criteria
+
 - All old image names from the mapping have been replaced with new standardized names
 - No broken image references introduced
 - Comprehensive analysis of coverage (referenced vs mapped images)
@@ -149,6 +167,7 @@ Based on directory listing, process these `.tex` files:
 - Maintain LaTeX file integrity and compilation compatibility
 
 ### Notes
+
 - Similar to the phys11 project, some files may already use the standardized naming convention
 - Focus on exact string matching within `\includegraphics{}` commands
 - Preserve any subdirectory paths that may be present
