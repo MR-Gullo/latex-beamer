@@ -172,3 +172,11 @@ Based on directory listing, process these `.tex` files:
 - Focus on exact string matching within `\includegraphics{}` commands
 - Preserve any subdirectory paths that may be present
 - Create detailed documentation of what was changed and what remains unmapped
+
+# Next todo
+
+│ > There are several incorrect image references to the folder @images/ in the files in @slides/ because the images have been moved from other directories and renamed to │
+│ a standard. Please search through all image references in the files and cross-reference them with all of the images in the folder. Fix any of the image references │
+│ that are incorrect and list at the end of the image directory removing and name mapping a file the images that still have problems or the references that still have │
+│ problems. this is that file @images/newnames.md and an example of an incorrect reference that points to a dir that no longer exists and an image that has been renamed:
+\includegraphics[width=0.5\linewidth]{CH5/Screenshot 2024-10-29 103504.png} from @slides/ch05_slides_forces.tex
