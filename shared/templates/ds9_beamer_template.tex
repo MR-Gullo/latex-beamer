@@ -1,0 +1,89 @@
+\documentclass{beamer}
+% Required packages
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{xcolor}
+% Set image search paths
+\graphicspath{{../images/}{../../shared/images/}}
+
+% Define custom colors for DS9 theme
+\definecolor{ds9blue}{RGB}{25,25,112}
+\definecolor{ds9gold}{RGB}{218,165,32}
+\definecolor{ds9grey}{RGB}{105,105,105}
+\definecolor{ds9red}{RGB}{178,34,34}
+% Set up the Madrid theme with custom colors
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamercolor{palette primary}{bg=ds9blue,fg=white}
+\setbeamercolor{palette secondary}{bg=ds9grey,fg=white}
+\setbeamercolor{palette tertiary}{bg=ds9gold,fg=black}
+\setbeamercolor{palette quaternary}{bg=ds9red,fg=white}
+\setbeamercolor{structure}{fg=ds9blue}
+\setbeamercolor{title}{fg=ds9gold}
+\setbeamercolor{subtitle}{fg=ds9gold}
+\setbeamercolor{frametitle}{bg=ds9blue,fg=white}
+\setbeamercolor{block title}{bg=ds9blue,fg=white}
+\setbeamercolor{block body}{bg=ds9grey!20,fg=black}
+
+% Title page configuration
+\title[Sample Template]{DS9 Beamer Template}
+\subtitle{Sample Presentation Using DS9 Theme}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[\today]{\today}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Sample slide 1
+\begin{frame}
+\frametitle{Sample Slide 1}
+\begin{block}{Block Title}
+This is a sample block demonstrating the DS9 theme colors.
+\end{block}
+
+\begin{itemize}
+\item First bullet point with DS9 blue structure color
+\item Second bullet point showing text formatting
+\item Third bullet point with mathematical notation: $E = mc^2$
+\end{itemize}
+
+\begin{alertblock}{Alert Block}
+This is an alert block example.
+\end{alertblock}
+\end{frame}
+
+% Sample slide 2
+\begin{frame}
+\frametitle{Sample Slide 2}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{Left Column}
+This demonstrates the two-column layout with DS9 theme styling.
+\end{block}
+
+\begin{itemize}
+\item Left column content
+\item Using DS9 colors
+\item Gold titles on blue background
+\end{itemize}
+
+\column{0.5\textwidth}
+\begin{block}{Right Column}
+The right column shows how the theme looks with different content types.
+\end{block}
+
+Mathematical example:
+\begin{align}
+F &= ma \\
+\vec{B} &= \mu_0 I \vec{dl} \times \frac{\vec{r}}{r^3}
+\end{align}
+\end{columns}
+\end{frame}
+
+\end{document}
