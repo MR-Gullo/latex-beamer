@@ -127,3 +127,10 @@ phys12-`<topic>`-`<description>`.`<ext>`.
 120 + phys12-vectors-vector-components.png
 121 - wheelomega.png
 122 + phys12-mechanics-angular-velocity-wheel.png
+
+## Cross-Course Shared Resources (Added 2025-07-17)
+
+123 - sohcahtoa.png (shared from Physics 11)
+124 + phys12-math-sohcahtoa-mnemonic.png
+125 - sincoslaw.png (shared from Physics 11)
+126 + phys12-math-sine-cosine-laws.png
