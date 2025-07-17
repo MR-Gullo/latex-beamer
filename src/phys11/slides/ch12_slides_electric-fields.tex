@@ -2,9 +2,12 @@
 
 % Required packages
 \usepackage{amsmath}
+\usepackage{physics}
 \usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage{siunitx}
+\usepackage{xcolor}
+% Set image search paths
+\graphicspath{{../images/}{../../shared/images/}}
 
 % Define custom colors for Star Trek DS9 theme
 \definecolor{ds9blue}{RGB}{25,25,112}  % Midnight Blue
@@ -12,8 +15,9 @@
 \definecolor{ds9grey}{RGB}{105,105,105} % Dim Gray
 \definecolor{ds9red}{RGB}{178,34,34}   % Firebrick
 
-% Set theme
+% Set up the Madrid theme with custom colors
 \usetheme{Madrid}
+\usecolortheme{whale}
 
 % Customize colors
 \setbeamercolor{palette primary}{bg=ds9blue,fg=white}
