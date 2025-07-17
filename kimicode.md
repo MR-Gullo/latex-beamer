@@ -35,7 +35,7 @@ export ANTHROPIC_MODEL="moonshotai/kimi-k2"  # Specify Kimi K2 as the model
 ```
 
 - Replace `or-sk-YOUR-OPENROUTER-API-KEY` with your actual OpenRouter API key.
-- Here is my API KEY from open router: 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
+- Here is my API KEY from open router: ****\*****
 -
 - The `ANTHROPIC_BASE_URL` is set to OpenRouter's endpoint, and `ANTHROPIC_MODEL` specifies Kimi K2, which is supported via OpenRouter (see openrouter.ai/models).
 - OpenRouter automatically routes the request to Groq's infrastructure if Kimi K2 is hosted there, leveraging Groq's recent integration trends (noted in X posts from July 16, 2025).
