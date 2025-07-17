@@ -88,6 +88,12 @@
 - **Physics 11 Build Errors**: `src/phys11/slides/builderrors.md`
 - **Image Mappings**: `src/phys12/images/newnames.md`, `src/phys11/images/newnames.md`
 
+### Original Image Archives
+- **Physics 11 Original Images**: `archive/PHYS11-CH/images/` - Contains all original images before renaming/moving
+- **Physics 12 Original Images**: `archive/Phys12-CH/images/` - Contains all original images before renaming/moving
+
+**Note**: The archive directories preserve the original image files with their cryptic names. The current `src/phys11/images/` and `src/phys12/images/` directories contain the renamed/reorganized versions according to the standardized naming conventions.
+
 ## Next Steps Recommendations
 
 1. **Address critical missing images** (4 Physics 12 + 16 Physics 11)
