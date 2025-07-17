@@ -1,26 +1,22 @@
 \documentclass{beamer}
-
 % Required packages
 \usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage{physics}
-
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{tikz}
 % Set image search paths
 \graphicspath{{../images/}{../../shared/images/}}
 
-% Define custom colors (Star Trek DS9 inspired)
-\definecolor{ds9blue}{RGB}{25,25,112}    % Midnight Blue
-\definecolor{ds9gold}{RGB}{218,165,32}   % Goldenrod
-\definecolor{ds9grey}{RGB}{105,105,105}  % Dim Gray
-\definecolor{ds9red}{RGB}{178,34,34}     % Firebrick
-
-% Customize theme
+% Define custom colors for DS9 theme
+\definecolor{ds9blue}{RGB}{25,25,112}
+\definecolor{ds9gold}{RGB}{218,165,32}
+\definecolor{ds9grey}{RGB}{105,105,105}
+\definecolor{ds9red}{RGB}{178,34,34}
+% Set up the Madrid theme with custom colors
 \usetheme{Madrid}
-\usecolortheme{default}
-
-% Color customizations
+\usecolortheme{whale}
 \setbeamercolor{palette primary}{bg=ds9blue,fg=white}
 \setbeamercolor{palette secondary}{bg=ds9grey,fg=white}
 \setbeamercolor{palette tertiary}{bg=ds9gold,fg=black}
