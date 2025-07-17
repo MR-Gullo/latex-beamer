@@ -114,3 +114,12 @@ convention: phys11-`<topic>`-`<description>`.`<ext>`.
 
 - chargvecsOIP.jpg
 + phys11-electrostatics-coulombs-law-diagram-cropped.jpg
+
+## Shared Resources (Available from shared/images/)
+
+- cinec_logo.png → shared/images/cinec_logo.png
++ Available globally via graphicspath configuration
+- sohcahtoa.png → shared/images/math-trigonometry-sohcahtoa.png
++ Available globally via graphicspath configuration  
+- sincoslaw.png → shared/images/math-sine-cosine-laws.png
++ Available globally via graphicspath configuration

@@ -128,9 +128,11 @@ phys12-`<topic>`-`<description>`.`<ext>`.
 121 - wheelomega.png
 122 + phys12-mechanics-angular-velocity-wheel.png
 
-## Cross-Course Shared Resources (Added 2025-07-17)
+## Cross-Course Shared Resources (Available from shared/images/)
 
-123 - sohcahtoa.png (shared from Physics 11)
-124 + phys12-math-sohcahtoa-mnemonic.png
-125 - sincoslaw.png (shared from Physics 11)
-126 + phys12-math-sine-cosine-laws.png
+123 - sohcahtoa.png → shared/images/math-trigonometry-sohcahtoa.png
+124 + Available globally via graphicspath configuration
+125 - sincoslaw.png → shared/images/math-sine-cosine-laws.png  
+126 + Available globally via graphicspath configuration
+127 - cinec_logo.png → shared/images/cinec_logo.png
+128 + Available globally via graphicspath configuration
