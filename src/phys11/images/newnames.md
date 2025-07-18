@@ -115,6 +115,17 @@ convention: phys11-`<topic>`-`<description>`.`<ext>`.
 - chargvecsOIP.jpg
 + phys11-electrostatics-coulombs-law-diagram-cropped.jpg
 
+## Recently Added Missing Images (2025-07-17)
+
+107 - Screenshot 2024-10-11 141024.png
+108 + phys11-screenshots-test-prep-141024.png
+
+109 - Screenshot 2024-10-11 141044.png  
+110 + phys11-screenshots-test-prep-141044.png
+
+111 - cinec_logo.png (copied from shared)
+112 + phys11-shared-cinec-logo.png
+
 ## Shared Resources (Available from shared/images/)
 
 - cinec_logo.png → shared/images/cinec_logo.png
@@ -123,3 +134,24 @@ convention: phys11-`<topic>`-`<description>`.`<ext>`.
 + Available globally via graphicspath configuration  
 - sincoslaw.png → shared/images/math-sine-cosine-laws.png
 + Available globally via graphicspath configuration
+
+## Missing Images Still Needed (From Build Errors Report)
+
+These images are referenced in LaTeX files but still missing:
+
+**Energy/Machine Images:**
+- InclinePlane.png (2 references) - Inclined plane diagram with force vectors
+- Pulley.png (1 reference) - Pulley system diagram  
+
+**Chapter-specific Images:**
+- CH4/Porcupinebros.jpg - Porcupine analogy image
+- CH4/towtruck.png (2 references) - Tow truck example
+- CH4/CraigFBD.png - Craig free body diagram
+- CH4/Picture.png (2 references) - Chapter 4 picture
+- CH5.4/Friction-Plot-980x724.png - Friction plot diagram
+
+**Miscellaneous Images:**
+- 2024_09_22_d75bb9ada91612339d1ag-12.jpg (6 references) - Test prep image
+- comparison-three-temperature-scales-vector-16434650-2940992563.jpg - Temperature scales comparison
+
+**Total Missing:** ~16 images still need to be created or located
