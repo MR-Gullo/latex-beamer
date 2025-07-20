@@ -1,33 +1,9 @@
 \documentclass{beamer}
+% Use DS9 global theme
+\usepackage{../../../shared/templates/ds9_theme}
 
-% Required packages
-\usepackage{amsmath, amssymb, amsfonts}
-\usepackage{graphicx}
-\usepackage{xcolor}
-
-% Set image search paths
-\graphicspath{{../images/}{../../shared/images/}}
-\usepackage{physics}
+% Additional packages
 \usepackage{booktabs}
-
-% Define DS9-inspired color scheme
-\definecolor{ds9blue}{RGB}{25,25,112}      % Midnight Blue
-\definecolor{ds9gold}{RGB}{218,165,32}     % Goldenrod
-\definecolor{ds9grey}{RGB}{105,105,105}    % Dim Gray
-\definecolor{ds9red}{RGB}{178,34,34}       % Firebrick
-
-% Theme setup
-\usetheme{Madrid}
-\usecolortheme{default}
-
-% Color customizations
-\setbeamercolor{palette primary}{bg=ds9blue,fg=white}
-\setbeamercolor{palette secondary}{bg=ds9grey,fg=white}
-\setbeamercolor{palette tertiary}{bg=ds9gold,fg=black}
-\setbeamercolor{palette quaternary}{bg=ds9red,fg=white}
-\setbeamercolor{structure}{fg=ds9blue}
-\setbeamercolor{title}{fg=ds9gold}
-\setbeamercolor{subtitle}{fg=ds9gold}
 \setbeamercolor{frametitle}{bg=ds9blue,fg=white}
 \setbeamercolor{block title}{bg=ds9blue,fg=white}
 \setbeamercolor{block body}{bg=ds9grey!20,fg=black}

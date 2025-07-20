@@ -1,25 +1,9 @@
 \documentclass{beamer}
+% Use DS9 global theme
+\usepackage{../../../shared/templates/ds9_theme}
 
-% Packages
-\usepackage{tikz}
+% Additional packages for code
 \usepackage{listings}
-\usepackage{xcolor}
-\usepackage{graphicx}
-
-% Set image search paths
-\graphicspath{{../images/}{../../shared/images/}}
-
-% Custom colors
-\definecolor{ds9blue}{RGB}{25,25,112}
-\definecolor{ds9gold}{RGB}{218,165,32}
-\definecolor{ds9grey}{RGB}{105,105,105}
-\definecolor{ds9red}{RGB}{178,34,34}
-
-% Theme setup
-\usetheme{Madrid}
-\usecolortheme[named=ds9blue]{structure}
-\setbeamercolor{title}{fg=ds9gold,bg=ds9blue}
-\setbeamercolor{frametitle}{fg=ds9blue,bg=ds9gold!20}
 
 % Title page configuration
 \title[Array Searching]{ Array Search Algorithms}
