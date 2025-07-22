@@ -15,7 +15,6 @@ Target sections: <sections>{{sec}}</sections>
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:<specified sections>}
-\subtitle{<appropriate subtitle>}
 \author[Mr. Gullo]{Mr. Gullo}
 \date[<short date>]{<full date>}
 ```
@@ -57,8 +56,8 @@ For all example problems, use the GUESS method structure:
 ## Formatting and Technical Guidelines
 
 ### LaTeX Formatting Requirements
+- Use `\begin{frame}[allowframebreaks]` for every new frame to handle content overflow
 - Use clear, descriptive frame titles for organization and navigation
-- Include `\section{Topic Name}` commands to populate the table of contents structure
 - Employ proper LaTeX formatting: mathematical equations, itemized lists, appropriate spacing
 - Use `\alert{[description of external image]}` only for placeholders referencing external image files
 
@@ -69,14 +68,5 @@ For all example problems, use the GUESS method structure:
   - Thick lines for visibility during projection
   - Minimal complexity focusing on key conceptual understanding
   - Consistent styling with the DS9 theme colors
-
-## Planning and Development Process
-
-Before generating the final LaTeX document, create a detailed outline in `<presentation_outline>` tags that includes:
-
-- **Section-by-section concept extraction**: List the key physics concepts, definitions, and principles from each specified textbook section
-- **Visualization planning**: Identify specific plots, graphs, or diagrams needed to illustrate abstract concepts, including axis labels, data ranges, and visual elements
-- **Example problem selection**: Choose three problems from the PDF that represent different difficulty levels and cover various aspects of the content
-- **Slide sequence organization**: Plan the logical flow and structure of your presentation frames
 
 Generate the complete LaTeX Beamer document in an artifact, ensuring all requirements are met and the presentation flows logically from introduction through practice exercises.

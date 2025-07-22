@@ -1,0 +1,251 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
+
+% Title page configuration
+\title[Problem Solving]{PHYS11 CH:Problem Solving Techniques}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Jul 22, 2025]{July 22, 2025}
+
+\begin{document}
+
+% Title Frame
+\begin{frame}[allowframebreaks]
+    \titlepage
+\end{frame}
+
+% Introduction to the GUESS Method
+\begin{frame}[allowframebreaks]
+    \frametitle{A Structured Approach to Problem Solving}
+    \begin{block}{What is the GUESS Method?}
+        Physics word problems can be complex. The \alert{GUESS method} is a systematic, step-by-step process designed to break down problems into manageable parts.
+        \vspace{1em}
+
+        It helps you organize information, select the right tools, and build a clear path to the solution.
+        \vspace{1em}
+
+        GUESS is an acronym that stands for:
+        \begin{itemize}
+            \item \textbf{G} - Givens
+            \item \textbf{U} - Unknown
+            \item \textbf{E} - Equation
+            \item \textbf{S} - Substitute
+            \item \textbf{S} - Solve
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+% G - Givens
+\begin{frame}[allowframebreaks]
+    \frametitle{Step 1: G is for Givens}
+    \begin{block}{Identify and List Knowns}
+        The first step is to carefully read the problem and identify every piece of information provided.
+        \begin{itemize}
+            \item List all known quantities.
+            \item Assign the correct variable symbol to each quantity (e.g., $v$ for velocity, $t$ for time).
+            \item Always include the units (e.g., m/s, kg, s).
+            \item Write down any relevant constants (e.g., acceleration due to gravity, $g \approx 9.8 \, \text{m/s}^2$).
+        \end{itemize}
+    \end{block}
+    \begin{exampleblock}{Example}
+        \textit{"A car travels at a constant speed of 15 m/s for 120 seconds."}
+        \vspace{1em}
+        
+        \textbf{Givens:}
+        \begin{itemize}
+            \item Velocity ($v$) = 15 m/s
+            \item Time ($t$) = 120 s
+        \end{itemize}
+    \end{exampleblock}
+\end{frame}
+
+% U - Unknown
+\begin{frame}[allowframebreaks]
+    \frametitle{Step 2: U is for Unknown}
+    \begin{block}{Identify the Goal}
+        Determine exactly what the problem is asking you to find. This is your target variable.
+        \begin{itemize}
+            \item Identify the quantity you need to solve for.
+            \item Write it down using its variable symbol.
+            \item Represent the unknown with a question mark (e.g., $d = ?$).
+        \end{itemize}
+        This step gives your work a clear focus.
+    \end{block}
+    \begin{exampleblock}{Example}
+        \textit{"...How far does the car travel?"}
+        \vspace{1em}
+        
+        \textbf{Unknown:}
+        \begin{itemize}
+            \item Distance ($d$) = ?
+        \end{itemize}
+    \end{exampleblock}
+\end{frame}
+
+% E - Equation
+\begin{frame}[allowframebreaks]
+    \frametitle{Step 3: E is for Equation}
+    \begin{block}{Find the Right Tool}
+        Based on your list of \alert{Givens} and your \alert{Unknown}, select a physics equation that connects them.
+        \begin{itemize}
+            \item Look at your formula sheet or recall relevant principles.
+            \item The chosen equation should contain the variables you listed in the G and U steps.
+            \item Sometimes you may need to rearrange the equation to solve for your unknown. It's often best to do this \textit{before} substituting numbers.
+        \end{itemize}
+    \end{block}
+    \begin{exampleblock}{Example}
+        \textbf{Givens:} $v$, $t$ \\
+        \textbf{Unknown:} $d$
+        \vspace{1em}
+
+        \textbf{Equation:}
+        The relationship between speed, distance, and time is:
+        \[ v = \frac{d}{t} \]
+        Or, solved for our unknown ($d$):
+        \[ d = v \cdot t \]
+    \end{exampleblock}
+\end{frame}
+
+% S - Substitute
+\begin{frame}[allowframebreaks]
+    \frametitle{Step 4: S is for Substitute}
+    \begin{block}{Plug in the Numbers}
+        Now that you have the correct equation, substitute the values from your \alert{Givens} list into the equation.
+        \begin{itemize}
+            \item Replace the variable symbols with their numerical values.
+            \item \textbf{Crucially, include the units with the numbers.} This helps you check your work and ensure the final units are correct (dimensional analysis).
+        \end{itemize}
+    \end{block}
+    \begin{exampleblock}{Example}
+        \textbf{Equation:}
+        \[ d = v \cdot t \]
+        \vspace{1em}
+        
+        \textbf{Substitute:}
+        \[ d = (15 \, \text{m/s}) \cdot (120 \, \text{s}) \]
+    \end{exampleblock}
+\end{frame}
+
+% S - Solve
+\begin{frame}[allowframebreaks]
+    \frametitle{Step 5: S is for Solve}
+    \begin{block}{Calculate the Answer}
+        Perform the final calculation to find the value of your unknown.
+        \begin{itemize}
+            \item Do the math.
+            \item Pay attention to how the units combine or cancel. In the example, seconds (s) in the denominator and numerator will cancel, leaving meters (m).
+            \item Clearly state your final answer with the correct units and appropriate significant figures.
+            \item Box your final answer to make it stand out.
+        \end{itemize}
+    \end{block}
+    \begin{exampleblock}{Example}
+        \textbf{Substitute:}
+        \[ d = (15 \, \text{m/s}) \cdot (120 \, \text{s}) \]
+        \vspace{1em}
+        
+        \textbf{Solve:}
+        \[ d = 1800 \, \text{m} \]
+        \begin{center}
+        \fcolorbox{ds9blue}{ds9lightblue!20}{\large $d = 1.8$ km}
+        \end{center}
+    \end{exampleblock}
+\end{frame}
+
+% I Do - Fully Worked Example
+\begin{frame}[allowframebreaks]
+    \frametitle{Example Problem: "I Do"}
+    \begin{block}{Problem}
+        A ball is dropped from a height of 78 m. How long does it take to hit the ground? (Assume g = 9.8 m/s² and initial velocity is 0).
+    \end{block}
+    
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \begin{alertblock}{G - Givens}
+                \begin{itemize}
+                    \item Displacement ($\Delta y$) = 78 m
+                    \item Initial velocity ($v_0$) = 0 m/s
+                    \item Acceleration ($a$) = 9.8 m/s²
+                \end{itemize}
+            \end{alertblock}
+            \begin{alertblock}{U - Unknown}
+                \begin{itemize}
+                    \item Time ($t$) = ?
+                \end{itemize}
+            \end{alertblock}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{alertblock}{E - Equation}
+                We need an equation with $\Delta y, v_0, a, t$.
+                \[ \Delta y = v_0 t + \frac{1}{2} a t^2 \]
+                Since $v_0 = 0$, this simplifies to:
+                \[ \Delta y = \frac{1}{2} a t^2 \]
+                Solving for t:  $t = \sqrt{\frac{2\Delta y}{a}}$
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+    
+    \begin{alertblock}{S - Substitute}
+        \[ t = \sqrt{\frac{2 \cdot (78 \, \text{m})}{9.8 \, \text{m/s}^2}} \]
+    \end{alertblock}
+    
+    \begin{alertblock}{S - Solve}
+        \[ t = \sqrt{\frac{156 \, \text{m}}{9.8 \, \text{m/s}^2}} = \sqrt{15.918 \, \text{s}^2} \approx 3.99 \, \text{s} \]
+        \begin{center}
+        \fcolorbox{ds9blue}{ds9lightblue!20}{\large $t \approx 3.99$ s}
+        \end{center}
+    \end{alertblock}
+\end{frame}
+
+% Simple visualization for the example
+\begin{frame}[allowframebreaks]
+    \frametitle{Visualizing the Problem}
+    A simple diagram helps confirm your understanding of the "Givens".
+    \begin{figure}
+    \begin{tikzpicture}[scale=1.5]
+        % Draw building side
+        \draw[thick] (0,4) -- (0,0);
+        \fill[pattern=north east lines] (-0.2,4) rectangle (0,0);
+        
+        % Draw ground
+        \draw[thick, fill=gray!30] (-2,-0.1) rectangle (2,0);
+        
+        % Ball at the top
+        \node[circle, fill=ds9red, label=right:{$v_0 = 0$ m/s}] at (0.5, 3.8) {};
+        
+        % Displacement arrow and label
+        \draw[<->, thick, ds9blue] (1,3.8) -- (1,0);
+        \node[ds9blue, right] at (1, 2) {$\Delta y = 78$ m};
+        
+        % Acceleration vector
+        \draw[->, thick, ds9orange] (0.5, 3) -- (0.5, 2.2);
+        \node[ds9orange, right] at (0.5, 2.6) {$a = 9.8 \, \text{m/s}^2$};
+
+        % Question mark for time
+        \node[scale=2, ds9green, right] at (-1.5, 1) {$t = ?$};
+        
+    \end{tikzpicture}
+    \caption{A falling ball under gravity.}
+    \end{figure}
+\end{frame}
+
+
+% Summary Slide
+\begin{frame}[allowframebreaks]
+    \frametitle{Summary: Your Path to a Solution}
+    \begin{block}{Remember to GUESS!}
+        The GUESS method provides a reliable framework for tackling physics problems. It turns a potentially confusing word problem into a clear checklist.
+    \end{block}
+    \begin{itemize}
+        \item[\textbf{G}] \textbf{Givens:} What do I know? List variables and units.
+        \item[\textbf{U}] \textbf{Unknown:} What do I need to find? Identify the target.
+        \item[\textbf{E}] \textbf{Equation:} What's the connection? Find the right formula.
+        \item[\textbf{S}] \textbf{Substitute:} Plug in the known values \textit{with units}.
+        \item[\textbf{S}] \textbf{Solve:} Calculate the answer and check your final units.
+    \end{itemize}
+    \begin{alertblock}{Master this process!}
+        Using this method consistently will build your confidence and problem-solving skills.
+    \end{alertblock}
+\end{frame}
+
+
+\end{document}
