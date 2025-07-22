@@ -11,11 +11,15 @@
 \RequirePackage{siunitx}
 \RequirePackage{xcolor}
 \RequirePackage{tikz}
+\RequirePackage{pgfplots}
 \RequirePackage{listings}
 \RequirePackage{verbatim}
 
 % Set image search paths
 \graphicspath{{../images/}{../../shared/images/}{../../../shared/images/}}
+
+% Configure pgfplots for consistency
+\pgfplotsset{compat=1.18}
 
 % Define custom colors for DS9 theme
 \definecolor{ds9blue}{RGB}{25,25,112}
@@ -36,14 +40,5 @@
 \setbeamercolor{frametitle}{bg=ds9blue,fg=white}
 \setbeamercolor{block title}{bg=ds9blue,fg=white}
 \setbeamercolor{block body}{bg=ds9grey!20,fg=black}
-
-% Optional: Table of contents at the beginning of each section
-\AtBeginSection[]
-{
-  \begin{frame}
-    \frametitle{Table of Contents}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
 
 \endinput
