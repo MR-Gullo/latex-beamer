@@ -19,33 +19,14 @@ Please follow these instructions carefully:
 1. All output must begin with the following LaTeX preamble exactly as shown (this is required and non-negotiable):
 
 \documentclass{beamer}
-% Required packages
-\usepackage{amsmath}
-\usepackage{physics}
-\usepackage{graphicx}
-\usepackage{siunitx}
-\usepackage{xcolor}
-% Set image search paths
-\graphicspath{{../images/}{../../shared/images/}}
+% Use DS9 global theme
+\usepackage{../../../shared/templates/ds9_theme}
 
-% Define custom colors for DS9 theme
-\definecolor{ds9blue}{RGB}{25,25,112}
-\definecolor{ds9gold}{RGB}{218,165,32}
-\definecolor{ds9grey}{RGB}{105,105,105}
-\definecolor{ds9red}{RGB}{178,34,34}
-% Set up the Madrid theme with custom colors
-\usetheme{Madrid}
-\usecolortheme{whale}
-\setbeamercolor{palette primary}{bg=ds9blue,fg=white}
-\setbeamercolor{palette secondary}{bg=ds9grey,fg=white}
-\setbeamercolor{palette tertiary}{bg=ds9gold,fg=black}
-\setbeamercolor{palette quaternary}{bg=ds9red,fg=white}
-\setbeamercolor{structure}{fg=ds9blue}
-\setbeamercolor{title}{fg=ds9gold}
-\setbeamercolor{subtitle}{fg=ds9gold}
-\setbeamercolor{frametitle}{bg=ds9blue,fg=white}
-\setbeamercolor{block title}{bg=ds9blue,fg=white}
-\setbeamercolor{block body}{bg=ds9grey!20,fg=black}
+% Title page configuration
+\title[Short Title]{PHYS11 CH:<specified sections>}
+\subtitle{<appropriate subtitle>}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[<short date>]{<full date>}
 
 </preamble_instructions>
 
@@ -54,11 +35,7 @@ Please follow these instructions carefully:
 3. Create a complete LaTeX Beamer presentation document with the following structure:
    a. Use the beamer document class and required packages as specified in the preamble above.
    b. Use the custom color scheme and Madrid theme as defined in the preamble.
-   c. Create a title page with the following configuration:
-   \title[Short Title]{PHYS11 CH:<specified sections>}
-   \subtitle{<appropriate subtitle>}
-   \author[Mr. Gullo]{Mr. Gullo}
-   \date[<short date>]{<full date>}
+   c. The title page configuration is already included in the preamble above
 
 4. Include the following content in your presentation:
    a. A learning objectives slide
@@ -93,35 +70,14 @@ It's OK for this section to be quite long. Then, generate the complete LaTeX Bea
 <output_example>
 Example output structure:
 \documentclass{beamer}
-% Required packages
-\usepackage{amsmath}
-\usepackage{physics}
-\usepackage{graphicx}
-\usepackage{siunitx}
-\usepackage{xcolor}
-% Set image search paths
-\graphicspath{{../images/}{../../shared/images/}}
+% Use DS9 global theme
+\usepackage{../../../shared/templates/ds9_theme}
 
-% Define custom colors for DS9 theme
-\definecolor{ds9blue}{RGB}{25,25,112}
-\definecolor{ds9gold}{RGB}{218,165,32}
-\definecolor{ds9grey}{RGB}{105,105,105}
-\definecolor{ds9red}{RGB}{178,34,34}
-% Set up the Madrid theme with custom colors
-\usetheme{Madrid}
-\usecolortheme{whale}
-\setbeamercolor{palette primary}{bg=ds9blue,fg=white}
-\setbeamercolor{palette secondary}{bg=ds9grey,fg=white}
-\setbeamercolor{palette tertiary}{bg=ds9gold,fg=black}
-\setbeamercolor{palette quaternary}{bg=ds9red,fg=white}
-\setbeamercolor{structure}{fg=ds9blue}
-\setbeamercolor{title}{fg=ds9gold}
-\setbeamercolor{subtitle}{fg=ds9gold}
-\setbeamercolor{frametitle}{bg=ds9blue,fg=white}
-\setbeamercolor{block title}{bg=ds9blue,fg=white}
-\setbeamercolor{block body}{bg=ds9grey!20,fg=black}
-
-[Title page configuration]
+% Title page configuration
+\title[Short Title]{PHYS11 CH:<specified sections>}
+\subtitle{<appropriate subtitle>}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[<short date>]{<full date>}
 \begin{document}
 \frame{\titlepage}
 [Content frames]
