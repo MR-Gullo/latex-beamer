@@ -7,12 +7,12 @@ Here is the PDF content of the textbook:
 </pdf_content>
 
 These are the sections you should focus on:
-<sections>
+`<sections>`
 {{sec}}
-</sections>
+`</sections>`
 
 Please follow these instructions carefully:
-</system>
+`</system>`
 
 <preamble_instructions>
 
@@ -23,15 +23,14 @@ Please follow these instructions carefully:
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Short Title]{PHYS11 CH:<specified sections>}
-\subtitle{<appropriate subtitle>}
+\title[Short Title]{PHYS11 CH:`<specified sections>`}
+\subtitle{`<appropriate subtitle>`}
 \author[Mr. Gullo]{Mr. Gullo}
-\date[<short date>]{<full date>}
+\date[`<short date>`]{`<full date>`}
 
 </preamble_instructions>
 
-<content_instructions>
-2. Read through the provided PDF content and extract the relevant information for the specified sections.
+<content_instructions> 2. Read through the provided PDF content and extract the relevant information for the specified sections.
 
 3. Include the following content in your presentation with detailed attention to each component:
 
@@ -42,41 +41,41 @@ Please follow these instructions carefully:
    c. **Essential equations slide** - Critical formulas from the sections with brief explanations of when and how to use them, including clear variable definitions and units.
 
    d. **Concept visualization slides** - For each abstract physics concept that would benefit from visual representation, create a two-frame sequence:
-      
-      **Context Frame**: Begin with a frame that introduces the concept and explains what will be visualized, setting up the audience's understanding before presenting the visual element.
-      
-      **Visualization Frame**: Follow with a dedicated frame containing either:
-      - Custom plots created using tikz/pgfplots (position/velocity/acceleration vs time graphs, wave functions, energy plots, etc.)
-      - External images referenced using \alert{[description]} placeholders (photographs, diagrams, real-world examples)
-      
-      For tikz/pgfplots visualizations, use simple, easily readable plots with:
-      - Large, clear axis labels and units
-      - Appropriate scales and tick marks
-      - Thick lines for visibility during projection
-      - Minimal complexity focusing on key conceptual understanding
-      - Consistent styling with the DS9 theme colors
+
+   **Context Frame**: Begin with a frame that introduces the concept and explains what will be visualized, setting up the audience's understanding before presenting the visual element.
+
+   **Visualization Frame**: Follow with a dedicated frame containing either:
+
+   - Custom plots created using tikz/pgfplots (position/velocity/acceleration vs time graphs, wave functions, energy plots, etc.)
+   - External images referenced using \alert{[description]} placeholders (photographs, diagrams, real-world examples)
+
+   For tikz/pgfplots visualizations, use simple, easily readable plots with:
+
+   - Large, clear axis labels and units
+   - Appropriate scales and tick marks
+   - Thick lines for visibility during projection
+   - Minimal complexity focusing on key conceptual understanding
+   - Consistent styling with the DS9 theme colors
 
    e. **"I do, We do, You do" example series** - Three related problems of increasing independence using only problems from the provided PDF:
 
-      - **"I do"**: Present a complete worked example problem from the relevant sections with detailed step-by-step solution using the GUESS method (see GUESS method section below).
-      - **"We do"**: Present a partially solved problem designed for classroom participation and discussion, leaving key steps for audience input.
-      - **"You do"**: Present an unsolved practice problem for independent student work, providing only the problem statement.
+   - **"I do"**: Present a complete worked example problem from the relevant sections with detailed step-by-step solution using the GUESS method (see GUESS method section below).
+   - **"We do"**: Present a partially solved problem designed for classroom participation and discussion, leaving key steps for audience input.
+   - **"You do"**: Present an unsolved practice problem for independent student work, providing only the problem statement.
 
    f. **Summary slide** - Key takeaways, main concepts review, and connections between ideas presented in the lesson.
 
-5. Use appropriate LaTeX commands for equations, lists, and other formatting elements as needed.
-
-6. For external visual elements not created with tikz/pgfplots, use placeholders with descriptions in alert boxes like this: \alert{[description of relevant external image]} where appropriate to enhance understanding.
-
-7. Ensure that each frame uses \begin{frame}[allowframebreaks] to handle content overflow and has a clear, descriptive title for organization and navigation.
-</content_instructions>
+4. Use appropriate LaTeX commands for equations, lists, and other formatting elements as needed.
+5. For external visual elements not created with tikz/pgfplots, use placeholders with descriptions in alert boxes like this: \alert{[description of relevant external image]} where appropriate to enhance understanding.
+   </content_instructions>
 
 <guess_method_instructions>
+
 ## GUESS Method for Problem Solving
 
 For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method:
 
-- **G - Givens**: List all known quantities with correct variable symbols and units (e.g., v₀ = 5 m/s, a = -9.8 m/s²)
+- **G - Givens**: List all known quantities with correct variable symbols and units following standard physics notation conventions where subscripts clearly indicate initial (i) and final (f) states (e.g., v₀ = 5 m/s, vf = 12 m/s, a = -9.8 m/s²). For complex scenarios or clarity, use descriptive subscripts with abbreviations or whole words (especially when dealing with multiple objects in a system). Denote vector quantities with a small arrow over the variable
 - **U - Unknown**: Clearly identify the quantity being asked for with proper variable symbol
 - **E - Equation**: Select and write the physics equation that relates the givens and unknown
 - **S - Substitute**: Plug known values with units into the equation, showing the substitution step clearly
@@ -86,9 +85,9 @@ This method should be explicitly shown in your "I do" example and referenced in 
 </guess_method_instructions>
 
 <technical_formatting_guidelines>
+
 ## LaTeX Formatting Requirements
 
-- Use `\begin{frame}[allowframebreaks]` for every new frame to handle content overflow properly
 - Use clear, descriptive frame titles that help with navigation and organization
 - Employ proper LaTeX formatting for mathematical equations using appropriate math environments
 - Use itemized lists with proper spacing and hierarchy
@@ -99,6 +98,7 @@ This method should be explicitly shown in your "I do" example and referenced in 
 ## Visualization Standards for tikz/pgfplots
 
 When creating concept visualization slides, adhere to these technical standards:
+
 - Create simple, easily readable plots focusing on conceptual understanding rather than complex details
 - Use large, clear axis labels with proper units clearly indicated
 - Choose appropriate scales and tick marks that highlight the important features
@@ -110,9 +110,10 @@ When creating concept visualization slides, adhere to these technical standards:
 ### DS9 Theme Color Reference for Plots
 
 When using colors in tikz/pgfplots, use these exact color names (no underscores):
+
 - `ds9blue` - primary theme color for main data lines
 - `ds9gold` - accent color for highlights
-- `ds9grey` - secondary color for auxiliary elements  
+- `ds9grey` - secondary color for auxiliary elements
 - `ds9red` - attention color for special cases
 - Standard colors: `blue`, `red`, `green`, `orange`, `purple`, `black`
 - Color mixing: Use `ds9blue!20` for 20% opacity or lighter shades
@@ -122,31 +123,28 @@ When using colors in tikz/pgfplots, use these exact color names (no underscores)
 ## Title and Preamble Formatting Guidelines
 
 ### Title Formatting Requirements
+
 - **Short title in brackets**: Must NOT contain ampersands (&) - use "and" instead
-  - ✅ Correct: `\title[Kinematics Graphs and Equations]{...}`  
+  - ✅ Correct: `\title[Kinematics Graphs and Equations]{...}`
   - ❌ Incorrect: `\title[Kinematics Graphs & Equations]{...}` (causes compilation error)
 - **Subtitle**: Ampersands can be used with proper escaping: `\&`
 - **Date formatting**: Use consistent date format matching the example
 
 ### Common Preamble Issues to Avoid
+
 - Ampersands in short titles cause "Misplaced alignment tab character" errors
 - Color names with underscores cause "I do not know the key" errors
 - Always test compilation after generation
-</technical_formatting_guidelines>
+  </technical_formatting_guidelines>
 
 <planning_instructions>
 Before generating the final output, wrap your planning process in <presentation_outline> tags:
 
 1. Extract and list key concepts and definitions from each specified section, organizing them logically for presentation flow.
-
 2. Identify and plan specific concept visualization opportunities for each section, determining which abstract physics concepts would benefit most from tikz/pgfplots illustrations. Avoid using complex tikz constructions; focus on clear, simple diagrams.
-
 3. Carefully select and outline the "I do, We do, You do" examples from the provided PDF content, ensuring they cover different aspects of the content and demonstrate increasing complexity. Plan how each will use the GUESS method structure.
-
 4. Plan your complete presentation structure, including the order of slides and specific content for each frame. Consider the logical flow from learning objectives through concept introduction, visualization, practice, and summary.
-
 5. Include \section{[Content to include in outline]} markers to ensure that the presentation outline has the correct topics and sections properly organized and populated.
-
 6. Plan the integration of tikz/pgfplots visualizations, specifying which concepts will be illustrated and how they will enhance student understanding.
 
 It's perfectly acceptable for this planning section to be quite comprehensive and detailed. The time spent in thorough planning will result in a much more effective and well-organized final presentation.
@@ -160,15 +158,15 @@ Example output structure showing proper formatting and organization:
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Short Title]{PHYS11 CH:<specified sections>}
-\subtitle{<appropriate subtitle>}
+\title[Short Title]{PHYS11 CH:`<specified sections>`}
+\subtitle{`<appropriate subtitle>`}
 \author[Mr. Gullo]{Mr. Gullo}
-\date[<short date>]{<full date>}
+\date[`<short date>`]{`<full date>`}
 
 \begin{document}
 \frame{\titlepage}
 
-\begin{frame}[allowframebreaks]
+\begin{frame}
 \frametitle{Learning Objectives}
 [Content with clear learning outcomes]
 \end{frame}
@@ -179,26 +177,28 @@ Example output structure showing proper formatting and organization:
 </output_example>
 
 <compilation_testing>
+
 ## Compilation Testing Guidelines
 
 After generating the LaTeX code, mentally verify these common issues:
 
 ### Pre-Compilation Checklist
-1. **Title formatting**: Ensure no ampersands (&) in short title brackets
-2. **Color names**: Verify all colors use correct names without underscores  
-3. **Tikz syntax**: Check that all tikz/pgfplots code uses valid syntax
-4. **Frame structure**: Confirm all frames use `\begin{frame}[allowframebreaks]`
 
-### Expected Compilation Process
-- First run: `pdflatex filename.tex` 
+1. **Title formatting**: Ensure no ampersands (&) in short title brackets
+2. **Color names**: Verify all colors use correct names without underscores
+3. **Tikz syntax**: Check that all tikz/pgfplots code uses valid syntax
+4. Expected Compilation Process
+
+- First run: `pdflatex filename.tex`
 - Common warnings are acceptable (overfull boxes, rerun suggestions)
 - Fatal errors must be addressed immediately
 
 ### Common Error Patterns to Avoid
+
 - "Misplaced alignment tab character" → Check for & in short titles
 - "I do not know the key" → Check color names for underscores
 - "Undefined control sequence" → Verify all LaTeX commands are correct
-</compilation_testing>
+  </compilation_testing>
 
 <final_instructions>
 Please proceed with your comprehensive presentation outline using the <presentation_outline> tags, then generate the complete LaTeX Beamer presentation. You must use an artifact for the final output. Ensure that all requirements from both the content instructions and technical guidelines are met, with particular attention to the GUESS method integration and tikz/pgfplots visualization requirements. The presentation should flow logically from introduction through interactive practice exercises, maintaining the educational and professional standards expected for physics instruction.
