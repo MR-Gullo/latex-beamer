@@ -3,249 +3,316 @@
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Problem Solving]{PHYS11 CH:Problem Solving Techniques}
+\title[Kinematics Graphs and Equations]{PHYS11 CH:2.3-2.4, 3.1-3.2}
+\subtitle{Graphical Analysis of Motion \& Kinematic Equations}
 \author[Mr. Gullo]{Mr. Gullo}
-\date[Jul 22, 2025]{July 22, 2025}
+\date[Jul 23, 2025]{July 23, 2025}
 
 \begin{document}
+\frame{\titlepage}
 
-% Title Frame
 \begin{frame}[allowframebreaks]
-    \titlepage
+\frametitle{Learning Objectives}
+\begin{block}{Lesson Goals}
+After this lesson, you will be able to:
+\begin{itemize}
+    \item Analyze motion using position vs. time and velocity vs. time graphs.
+    \item Interpret the slope of a position-time graph as velocity.
+    \item Interpret the slope of a velocity-time graph as acceleration.
+    \item Calculate displacement from the area under a velocity-time graph.
+    \item Define and calculate acceleration as the rate of change of velocity.
+    \item Solve one-dimensional motion problems involving constant acceleration using the kinematic equations.
+\end{itemize}
+\end{block}
 \end{frame}
 
-% Introduction to the GUESS Method
+\section{Graphical Analysis of Motion}
+
 \begin{frame}[allowframebreaks]
-    \frametitle{A Structured Approach to Problem Solving}
-    \begin{block}{What is the GUESS Method?}
-        Physics word problems can be complex. The \alert{GUESS method} is a systematic, step-by-step process designed to break down problems into manageable parts.
-        \vspace{1em}
+\frametitle{Position vs. Time (P-T) Graphs}
+\begin{block}{What P-T Graphs Show}
+A position vs. time graph plots an object's position on the vertical axis against time on the horizontal axis. It provides a visual representation of an object's motion.
+\end{block}
 
-        It helps you organize information, select the right tools, and build a clear path to the solution.
-        \vspace{1em}
-
-        GUESS is an acronym that stands for:
-        \begin{itemize}
-            \item \textbf{G} - Givens
-            \item \textbf{U} - Unknown
-            \item \textbf{E} - Equation
-            \item \textbf{S} - Substitute
-            \item \textbf{S} - Solve
-        \end{itemize}
-    \end{block}
+\begin{block}{The Meaning of the Slope}
+The most important feature of a position-time graph is its \alert{slope}.
+\begin{itemize}
+    \item \textbf{Slope = Velocity} ($ \text{slope} = \frac{\Delta \text{position}}{\Delta \text{time}} = \text{velocity} $)
+    \item A \alert{steeper slope} indicates a \alert{higher speed}.
+    \item A \alert{positive slope} indicates motion in the \alert{positive direction}.
+    \item A \alert{negative slope} indicates motion in the \alert{negative direction}.
+    \item A \alert{zero slope} (horizontal line) means the object is \alert{at rest}.
+    \item A \alert{curved line} indicates that the velocity is changing, meaning the object is \alert{accelerating}.
+\end{itemize}
+\end{block}
 \end{frame}
 
-% G - Givens
 \begin{frame}[allowframebreaks]
-    \frametitle{Step 1: G is for Givens}
-    \begin{block}{Identify and List Knowns}
-        The first step is to carefully read the problem and identify every piece of information provided.
-        \begin{itemize}
-            \item List all known quantities.
-            \item Assign the correct variable symbol to each quantity (e.g., $v$ for velocity, $t$ for time).
-            \item Always include the units (e.g., m/s, kg, s).
-            \item Write down any relevant constants (e.g., acceleration due to gravity, $g \approx 9.8 \, \text{m/s}^2$).
-        \end{itemize}
-    \end{block}
-    \begin{exampleblock}{Example}
-        \textit{"A car travels at a constant speed of 15 m/s for 120 seconds."}
-        \vspace{1em}
-        
-        \textbf{Givens:}
-        \begin{itemize}
-            \item Velocity ($v$) = 15 m/s
-            \item Time ($t$) = 120 s
-        \end{itemize}
-    \end{exampleblock}
+\frametitle{Concept Visualization: P-T Graphs (Context)}
+\begin{block}{Visualizing Motion}
+The following graph illustrates how different types of motion appear on a position vs. time graph.
+
+Pay close attention to the slope of each line and what it tells us about the object's velocity.
+\end{block}
 \end{frame}
 
-% U - Unknown
 \begin{frame}[allowframebreaks]
-    \frametitle{Step 2: U is for Unknown}
-    \begin{block}{Identify the Goal}
-        Determine exactly what the problem is asking you to find. This is your target variable.
-        \begin{itemize}
-            \item Identify the quantity you need to solve for.
-            \item Write it down using its variable symbol.
-            \item Represent the unknown with a question mark (e.g., $d = ?$).
-        \end{itemize}
-        This step gives your work a clear focus.
-    \end{block}
-    \begin{exampleblock}{Example}
-        \textit{"...How far does the car travel?"}
-        \vspace{1em}
-        
-        \textbf{Unknown:}
-        \begin{itemize}
-            \item Distance ($d$) = ?
-        \end{itemize}
-    \end{exampleblock}
+\frametitle{Concept Visualization: P-T Graphs}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=0.7\textheight,
+    xlabel={Time (s)},
+    ylabel={Position (m)},
+    xmin=0, xmax=6,
+    ymin=-5, ymax=20,
+    axis lines=center,
+    label style={at={(ticklabel cs:1.05)},anchor=west},
+    legend pos=outer north east,
+    ]
+    % Constant Positive Velocity
+    \addplot[ds9blue, very thick, domain=0:5] {2*x + 5} node[pos=0.8, anchor=south west, sloped] {Constant +V};
+    % Zero Velocity
+    \addplot[green, very thick, domain=0:5] {18} node[pos=0.5, above] {Zero V};
+    % Constant Negative Velocity
+    \addplot[ds9red, very thick, domain=0:5] {-3*x + 15} node[pos=0.7, anchor=north west, sloped] {Constant -V};
+    % Accelerating
+    \addplot[orange, very thick, domain=0:4.5] {x^2 - 4} node[pos=0.8, anchor=west] {Accelerating};
+\end{axis}
+\end{tikzpicture}
+\caption{Different motions on a P-T graph.}
+\end{figure}
 \end{frame}
 
-% E - Equation
 \begin{frame}[allowframebreaks]
-    \frametitle{Step 3: E is for Equation}
-    \begin{block}{Find the Right Tool}
-        Based on your list of \alert{Givens} and your \alert{Unknown}, select a physics equation that connects them.
-        \begin{itemize}
-            \item Look at your formula sheet or recall relevant principles.
-            \item The chosen equation should contain the variables you listed in the G and U steps.
-            \item Sometimes you may need to rearrange the equation to solve for your unknown. It's often best to do this \textit{before} substituting numbers.
-        \end{itemize}
-    \end{block}
-    \begin{exampleblock}{Example}
-        \textbf{Givens:} $v$, $t$ \\
-        \textbf{Unknown:} $d$
-        \vspace{1em}
+\frametitle{Velocity vs. Time (V-T) Graphs}
+\begin{block}{What V-T Graphs Show}
+A velocity vs. time graph plots an object's instantaneous velocity on the vertical axis against time on the horizontal axis.
+\end{block}
 
-        \textbf{Equation:}
-        The relationship between speed, distance, and time is:
-        \[ v = \frac{d}{t} \]
-        Or, solved for our unknown ($d$):
-        \[ d = v \cdot t \]
-    \end{exampleblock}
-\end{frame}
-
-% S - Substitute
-\begin{frame}[allowframebreaks]
-    \frametitle{Step 4: S is for Substitute}
-    \begin{block}{Plug in the Numbers}
-        Now that you have the correct equation, substitute the values from your \alert{Givens} list into the equation.
-        \begin{itemize}
-            \item Replace the variable symbols with their numerical values.
-            \item \textbf{Crucially, include the units with the numbers.} This helps you check your work and ensure the final units are correct (dimensional analysis).
-        \end{itemize}
-    \end{block}
-    \begin{exampleblock}{Example}
-        \textbf{Equation:}
-        \[ d = v \cdot t \]
-        \vspace{1em}
-        
-        \textbf{Substitute:}
-        \[ d = (15 \, \text{m/s}) \cdot (120 \, \text{s}) \]
-    \end{exampleblock}
-\end{frame}
-
-% S - Solve
-\begin{frame}[allowframebreaks]
-    \frametitle{Step 5: S is for Solve}
-    \begin{block}{Calculate the Answer}
-        Perform the final calculation to find the value of your unknown.
-        \begin{itemize}
-            \item Do the math.
-            \item Pay attention to how the units combine or cancel. In the example, seconds (s) in the denominator and numerator will cancel, leaving meters (m).
-            \item Clearly state your final answer with the correct units and appropriate significant figures.
-            \item Box your final answer to make it stand out.
-        \end{itemize}
-    \end{block}
-    \begin{exampleblock}{Example}
-        \textbf{Substitute:}
-        \[ d = (15 \, \text{m/s}) \cdot (120 \, \text{s}) \]
-        \vspace{1em}
-        
-        \textbf{Solve:}
-        \[ d = 1800 \, \text{m} \]
-        \begin{center}
-        \fcolorbox{ds9blue}{ds9lightblue!20}{\large $d = 1.8$ km}
-        \end{center}
-    \end{exampleblock}
-\end{frame}
-
-% I Do - Fully Worked Example
-\begin{frame}[allowframebreaks]
-    \frametitle{Example Problem: "I Do"}
-    \begin{block}{Problem}
-        A ball is dropped from a height of 78 m. How long does it take to hit the ground? (Assume g = 9.8 m/s² and initial velocity is 0).
-    \end{block}
-    
-    \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
-            \begin{alertblock}{G - Givens}
-                \begin{itemize}
-                    \item Displacement ($\Delta y$) = 78 m
-                    \item Initial velocity ($v_0$) = 0 m/s
-                    \item Acceleration ($a$) = 9.8 m/s²
-                \end{itemize}
-            \end{alertblock}
-            \begin{alertblock}{U - Unknown}
-                \begin{itemize}
-                    \item Time ($t$) = ?
-                \end{itemize}
-            \end{alertblock}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{alertblock}{E - Equation}
-                We need an equation with $\Delta y, v_0, a, t$.
-                \[ \Delta y = v_0 t + \frac{1}{2} a t^2 \]
-                Since $v_0 = 0$, this simplifies to:
-                \[ \Delta y = \frac{1}{2} a t^2 \]
-                Solving for t:  $t = \sqrt{\frac{2\Delta y}{a}}$
-            \end{alertblock}
-        \end{column}
-    \end{columns}
-    
-    \begin{alertblock}{S - Substitute}
-        \[ t = \sqrt{\frac{2 \cdot (78 \, \text{m})}{9.8 \, \text{m/s}^2}} \]
-    \end{alertblock}
-    
-    \begin{alertblock}{S - Solve}
-        \[ t = \sqrt{\frac{156 \, \text{m}}{9.8 \, \text{m/s}^2}} = \sqrt{15.918 \, \text{s}^2} \approx 3.99 \, \text{s} \]
-        \begin{center}
-        \fcolorbox{ds9blue}{ds9lightblue!20}{\large $t \approx 3.99$ s}
-        \end{center}
-    \end{alertblock}
-\end{frame}
-
-% Simple visualization for the example
-\begin{frame}[allowframebreaks]
-    \frametitle{Visualizing the Problem}
-    A simple diagram helps confirm your understanding of the "Givens".
-    \begin{figure}
-    \begin{tikzpicture}[scale=1.5]
-        % Draw building side
-        \draw[thick] (0,4) -- (0,0);
-        \fill[pattern=north east lines] (-0.2,4) rectangle (0,0);
-        
-        % Draw ground
-        \draw[thick, fill=gray!30] (-2,-0.1) rectangle (2,0);
-        
-        % Ball at the top
-        \node[circle, fill=ds9red, label=right:{$v_0 = 0$ m/s}] at (0.5, 3.8) {};
-        
-        % Displacement arrow and label
-        \draw[<->, thick, ds9blue] (1,3.8) -- (1,0);
-        \node[ds9blue, right] at (1, 2) {$\Delta y = 78$ m};
-        
-        % Acceleration vector
-        \draw[->, thick, ds9orange] (0.5, 3) -- (0.5, 2.2);
-        \node[ds9orange, right] at (0.5, 2.6) {$a = 9.8 \, \text{m/s}^2$};
-
-        % Question mark for time
-        \node[scale=2, ds9green, right] at (-1.5, 1) {$t = ?$};
-        
-    \end{tikzpicture}
-    \caption{A falling ball under gravity.}
-    \end{figure}
-\end{frame}
-
-
-% Summary Slide
-\begin{frame}[allowframebreaks]
-    \frametitle{Summary: Your Path to a Solution}
-    \begin{block}{Remember to GUESS!}
-        The GUESS method provides a reliable framework for tackling physics problems. It turns a potentially confusing word problem into a clear checklist.
-    \end{block}
+\begin{block}{Key Features of V-T Graphs}
+V-T graphs give us two crucial pieces of information about an object's motion:
+\begin{enumerate}
+    \item \textbf{Slope = Acceleration}
     \begin{itemize}
-        \item[\textbf{G}] \textbf{Givens:} What do I know? List variables and units.
-        \item[\textbf{U}] \textbf{Unknown:} What do I need to find? Identify the target.
-        \item[\textbf{E}] \textbf{Equation:} What's the connection? Find the right formula.
-        \item[\textbf{S}] \textbf{Substitute:} Plug in the known values \textit{with units}.
-        \item[\textbf{S}] \textbf{Solve:} Calculate the answer and check your final units.
+        \item The slope of the line reveals the object's acceleration ($ a = \frac{\Delta v}{\Delta t} $).
+        \item A positive slope means positive acceleration; a negative slope means negative acceleration.
+        \item A zero slope (horizontal line) means zero acceleration (constant velocity).
     \end{itemize}
-    \begin{alertblock}{Master this process!}
-        Using this method consistently will build your confidence and problem-solving skills.
-    \end{alertblock}
+    \item \textbf{Area = Displacement}
+    \begin{itemize}
+        \item The area between the graph line and the time axis is equal to the object's displacement ($ \Delta d = v \cdot t $).
+    \end{itemize}
+\end{enumerate}
+\end{block}
 \end{frame}
 
+\begin{frame}[allowframebreaks]
+\frametitle{Concept Visualization: V-T Graphs (Context)}
+\begin{block}{Visualizing Acceleration and Displacement}
+The next graph shows the motion of an object with constant positive acceleration.
+
+We will use this single graph to visualize both its acceleration (from the slope) and its displacement (from the area under the curve).
+\end{block}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Concept Visualization: V-T Graphs}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=0.7\textheight,
+    xlabel={Time (s)},
+    ylabel={Velocity (m/s)},
+    xmin=0, xmax=6,
+    ymin=0, ymax=12,
+    axis lines=left,
+    label style={at={(ticklabel cs:1.05)},anchor=south},
+    ]
+    % Data plot
+    \addplot[ds9blue, very thick] coordinates {(0, 2) (5, 10)}
+    node[pos=0.6, sloped, above=2pt] {\textbf{Slope = Acceleration}};
+
+    % Shaded Area for Displacement
+    \addplot[fill=ds9blue!20, opacity=0.4, forget plot] coordinates {(0, 0) (4, 8.4) (4, 0)} -- cycle;
+    
+    \node at (axis cs:2, 3) {\textbf{Area = Displacement}};
+\end{axis}
+\end{tikzpicture}
+\caption{Slope and Area on a V-T Graph.}
+\end{figure}
+\end{frame}
+
+\section{Equations of Motion}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Acceleration}
+\begin{block}{Definition}
+Acceleration is the rate at which an object's velocity changes over time. It is a vector quantity, meaning it has both magnitude and direction.
+\end{block}
+
+\begin{block}{Calculating Average Acceleration}
+Average acceleration ($a$) is calculated by dividing the change in velocity ($\Delta v$) by the time interval ($\Delta t$).
+\begin{equation*}
+a = \frac{\Delta v}{\Delta t} = \frac{v_f - v_o}{t_f - t_o}
+\end{equation*}
+\begin{itemize}
+    \item The standard unit for acceleration is \alert{meters per second squared (m/s²)}.
+    \item \alert{Positive acceleration} means the velocity is becoming more positive.
+    \item \alert{Negative acceleration} (or deceleration) means the velocity is becoming more negative.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{The Kinematic Equations}
+\begin{block}{For Motion with Constant Acceleration}
+These equations relate displacement, velocity, acceleration, and time. They are the essential tools for solving problems where acceleration is constant.
+
+\begin{itemize}
+    \item[] \textbf{Velocity from time:} \hspace{1.1cm} $ v_f = v_o + at $
+    \item[] \textbf{Displacement from time:} \quad $ d = d_o + v_o t + \frac{1}{2}at^2 $
+    \item[] \textbf{Velocity from displacement:} $ v_f^2 = v_o^2 + 2a(d - d_o) $
+    \item[] \textbf{Average velocity:} \hspace{1.4cm} $ \bar{v} = \frac{v_o + v_f}{2} $
+\end{itemize}
+\end{block}
+
+\begin{block}{Variable Definitions}
+\begin{itemize}
+    \item $d$: final position (m)
+    \item $d_o$: initial position (m)
+    \item $v_f$: final velocity (m/s)
+    \item $v_o$: initial velocity (m/s)
+    \item $a$: acceleration (m/s²)
+    \item $t$: time interval (s)
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{Problem Solving Workshop}
+
+\begin{frame}[allowframebreaks]
+\frametitle{"I Do" Example: Calculating Final Velocity}
+\begin{block}{Problem}
+A drag racer starts from rest and accelerates uniformly at 25 m/s² for 4.0 s. What is its final velocity?
+\end{block}
+
+\begin{alertblock}{G - Givens}
+\begin{itemize}
+    \item Initial velocity ($v_o$) = 0 m/s ("starts from rest")
+    \item Acceleration ($a$) = 25 m/s²
+    \item Time ($t$) = 4.0 s
+\end{itemize}
+\end{alertblock}
+
+\begin{alertblock}{U - Unknown}
+\begin{itemize}
+    \item Final velocity ($v_f$) = ?
+\end{itemize}
+\end{alertblock}
+
+\begin{alertblock}{E - Equation}
+We need an equation that relates $v_f$, $v_o$, $a$, and $t$.
+\begin{equation*}
+v_f = v_o + at
+\end{equation*}
+\end{alertblock}
+
+\begin{alertblock}{S - Substitute}
+\begin{equation*}
+v_f = 0 \text{ m/s} + (25 \text{ m/s}^2)(4.0 \text{ s})
+\end{equation*}
+\end{alertblock}
+
+\begin{alertblock}{S - Solve}
+\begin{equation*}
+v_f = 100 \text{ m/s}
+\end{equation*}
+The racer's final velocity is 100 m/s.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{"We Do" Example: Calculating Acceleration}
+\begin{block}{Problem}
+A car is traveling at 15 m/s. It accelerates uniformly to 35 m/s over 5.0 s. What is its acceleration?
+\end{block}
+
+\begin{alertblock}{G - Givens}
+\begin{itemize}
+    \item Initial velocity ($v_o$) = 15 m/s
+    \item Final velocity ($v_f$) = 35 m/s
+    \item Time ($t$) = 5.0 s
+\end{itemize}
+\end{alertblock}
+
+\begin{alertblock}{U - Unknown}
+\begin{itemize}
+    \item Acceleration ($a$) = ?
+\end{itemize}
+\end{alertblock}
+
+\begin{alertblock}{E - Equation}
+We can rearrange $v_f = v_o + at$ to solve for $a$.
+\begin{equation*}
+a = \frac{v_f - v_o}{t}
+\end{equation*}
+\end{alertblock}
+
+\begin{alertblock}{S - Substitute}
+\begin{itemize}
+    \item \textit{Let's substitute the values together...}
+\end{itemize}
+\end{alertblock}
+
+\begin{alertblock}{S - Solve}
+\begin{itemize}
+    \item \textit{What is the final answer with units?}
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{"You Do" Example: Calculating Displacement}
+\begin{block}{Problem}
+A sprinter accelerates from rest at a rate of 5.0 m/s². How far does she travel in the first 3.0 seconds?
+\end{block}
+
+\begin{block}{Your Turn}
+Use the GUESS method to solve the problem on your own.
+\begin{itemize}
+    \item \textbf{G}ivens: What information are you given?
+    \item \textbf{U}nknown: What do you need to find?
+    \item \textbf{E}quation: Which kinematic equation should you use?
+    \item \textbf{S}ubstitute: Plug the known values into your equation.
+    \item \textbf{S}olve: Calculate the final answer.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Summary}
+\begin{block}{Key Takeaways}
+\begin{itemize}
+    \item \textbf{Graphs tell a story:} Motion can be clearly described and analyzed using position-time and velocity-time graphs.
+    \item \textbf{Position-Time Graphs:}
+    \begin{itemize}
+        \item Slope is velocity.
+    \end{itemize}
+    \item \textbf{Velocity-Time Graphs:}
+    \begin{itemize}
+        \item Slope is acceleration.
+        \item Area under the curve is displacement.
+    \end{itemize}
+    \item \textbf{Kinematic Equations:} A powerful set of tools for solving problems involving constant acceleration. Always use a structured method like GUESS to solve physics problems.
+\end{itemize}
+\end{block}
+\end{frame}
 
 \end{document}

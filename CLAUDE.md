@@ -231,3 +231,35 @@ Image Naming Convention
 
 - [ ] **Width parameter:** Appropriate for layout context (`\linewidth`, `\textwidth`, or absolute units)
 - [ ] **Accessibility:** Caption or alt-text provided for screen readers when applicable
+
+# LaTeX Compilation Guidelines
+
+## Common Compilation Issues and Solutions
+
+When building LaTeX Beamer presentations, these are the most frequent errors and their fixes:
+
+### Title Formatting Errors
+- **Error**: "Misplaced alignment tab character &"
+- **Cause**: Ampersands (&) in short title brackets
+- **Solution**: Use "and" instead of "&" in short titles
+  - ✅ Correct: `\title[Kinematics Graphs and Equations]{...}`
+  - ❌ Incorrect: `\title[Kinematics Graphs & Equations]{...}`
+
+### Color Reference Errors  
+- **Error**: "I do not know the key '/tikz/ds9_blue'"
+- **Cause**: Incorrect color names with underscores
+- **Solution**: Use correct DS9 theme color names without underscores:
+  - `ds9blue`, `ds9gold`, `ds9grey`, `ds9red`
+  - Standard colors: `blue`, `red`, `green`, `orange`, `purple`, `black`
+
+### Compilation Command
+```bash
+pdflatex filename.tex
+```
+
+### Expected Warnings (Safe to Ignore)
+- Overfull/underfull box warnings
+- "Rerun to get outlines right" messages
+- Package compatibility warnings
+
+**Always test compilation after generating or modifying LaTeX files.**
