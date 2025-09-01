@@ -1,53 +1,162 @@
-# CS12 LaTeX Beamer Organization Plan
+# CS12 LaTeX Beamer Organization Plan - ALIGNED WITH ACTUAL COURSE STRUCTURE
 
-## Created Files Overview
+## Real Course Structure Analysis
 
-Based on the lesson structure shown in the directory tree, the course contains significantly more lessons than initially catalogued. This updated plan reflects all lessons from the actual course structure.
+Based on the actual lesson directory at `/Users/joelgullo/Library/CloudStorage/OneDrive-Personal/Documents/NANMO-2024/Courses/01-ComputerScience-12/Lessons`, the course follows this precise structure:
 
-## Complete File Structure
+## **AUTHORITATIVE LESSON STRUCTURE** (From OneDrive Source)
 
-### Fundamentals (Lessons 1-11)
-1. `01_gentle-introduction-to-c.tex` - Gentle introduction to C++
-2. `02_integer-datatypes.tex` - Integer data types and usage
-3. `03_floats-and-byte-size.tex` - Floating point numbers and memory
-4. `04_number-systems.tex` - Binary, decimal, hexadecimal systems
-5. `05_relational-expressions.tex` - Comparison operators and expressions
-6. `06_truth-tables.tex` - Boolean logic and truth tables
-7. `07_else-if.tex` - Else-if conditional structures
-8. `08_switch-and-loops.tex` - Switch statements and basic loops
-9. `09_for-loops.tex` - For loop syntax and patterns
-10. `09ytd_pop-quiz-1.tex` - Pop quiz 1
-11. `10_problem-set.tex` - Problem set exercises
+### Core Programming Fundamentals (Lessons 1-11)
+1. `01_GentleIntroductiontoC 1/` - **HAS CONTENT** - IDE setup, Hello World, C++ program structure
+2. `02_IntegerDatatypes/` - **HAS CONTENT** - Comments, int, char, bool datatypes  
+3. `03_floatsAndByteSize/` - **HAS CONTENT** - Float types, memory usage, type conversion
+4. `04_NumberSystems/` - **HAS CONTENT** - Number systems, math libraries  
+5. `05_RelationalExpressions/` - **HAS DIRECTORY**
+6. `06_TruthTables/` - **HAS DIRECTORY**
+7. `07_ElseIf/` - **HAS DIRECTORY**
+8. `08_switchAndLoops/` - **HAS DIRECTORY**
+9. `09_forLoops/` - **HAS DIRECTORY**
+10. `09YTD_PopQuiz_1/` - **HAS DIRECTORY**
+11. `10_problemSet/` - **HAS DIRECTORY**
 
 ### Functions and Advanced Control (Lessons 11-16)
-11. `11_functions.tex` - Function definitions and usage
-12. `12_quiz.tex` - Quiz on functions
-13. `13_recursive-sequence-series.tex` - Recursive sequences and series
-14. `14_recursive-programming.tex` - Recursive programming techniques
-15. `15_scope.tex` - Variable scope concepts
-16. `16_mystery-functions-quiz.tex` - Mystery functions quiz
+11. `11_functions/` - **HAS DIRECTORY**
+12. `12_Quiz/` - **HAS DIRECTORY**
+13. `13_recursiveSequenceSeries/` - **HAS DIRECTORY**
+14. `14_recursiveProgramming/` - **HAS DIRECTORY**
+15. `15_scope/` - **HAS DIRECTORY**
+16. `16_mysteryFunctionsQuiz/` - **HAS DIRECTORY**
 
-### Arrays and Data Structures (Lessons 17-23)
-17. `17_arrays.tex` - Array fundamentals
-18. `18_sorting-algorithms-project.tex` - Sorting algorithms project
-19. `18.5_git-holiday-assignment.tex` - Git version control assignment
-20. `19_big-o.tex` - Big O notation and complexity analysis
-21. `20_searching-array.tex` - Array searching algorithms
-22. `21_first-projects.tex` - First major projects
-23. `21.5_prompt-engineering.tex` - Prompt engineering concepts
+### Arrays and Data Structures (Lessons 17-26)
+17. `17_arrays/` - **HAS DIRECTORY**
+18. `18_sortingAlgorithmsProject/` - **HAS DIRECTORY**
+19. `18.5 Git Holiday Assignment/` - **HAS DIRECTORY**
+20. `19_bigO/` - **HAS DIRECTORY**
+21. `20_searchingArray/` - **HAS DIRECTORY**
+22. `21_firstProjects/` - **HAS DIRECTORY**
+23. `21.5_Prompt Engineering/` - **HAS DIRECTORY**
+24. `22_2Darrays/` - **HAS DIRECTORY**
+25. `23_2dArray_projects/` - **HAS DIRECTORY**
+26. `24_strings/` - **HAS DIRECTORY**
+27. `25_fileIO/` - **HAS DIRECTORY**
+28. `25.6_VSCODE/` - **HAS DIRECTORY**
+29. `26_WebDevProject/` - **HAS DIRECTORY** (Comprehensive web dev portfolio project)
 
-### Advanced Data Structures (Lessons 22-26)
-22. `22_2d-arrays.tex` - Two-dimensional arrays
-23. `23_2d-array-projects.tex` - 2D array projects
-24. `24_strings.tex` - String data types and operations
-25. `25_file-io.tex` - File input/output operations
-26. `25.6_vscode.tex` - VS Code development environment
+### Specialized Short Courses (Lessons 39-40)
+30. `39introduction_to_debugging_shortcourse-main/` - **HAS DIRECTORY**
+31. `40debugging_with_vs_code_shortcourse-main/` - **HAS DIRECTORY**
+32. `40git_github_in_depth_short_course-main/` - **HAS DIRECTORY**
 
-### Specialized Topics (Lessons 26-40+)
-26. `26_web-dev-project.tex` - Web development project
-39. `39_introduction-to-debugging-shortcourse-main.tex` - Debugging introduction
-40. `40_debugging-with-vs-code-shortcourse-main.tex` - VS Code debugging
-40. `40_git-github-in-depth-short-course-main.tex` - Git/GitHub in depth course
+## **MISMATCH ANALYSIS: Current Slides vs Real Course**
+
+### **CORRECTLY NAMED FILES** (Match actual structure)
+✅ `01_introduction-to-cpp.tex` - Maps to `01_GentleIntroductiontoC 1/`
+✅ `02_integer-datatypes.tex` - Maps to `02_IntegerDatatypes/`  
+✅ `03_floats-and-byte-size.tex` - Maps to `03_floatsAndByteSize/`
+✅ `04_number-systems.tex` - Maps to `04_NumberSystems/`
+✅ Various numbered lessons through 26 - Generally match directory structure
+
+### **INCORRECTLY NAMED FILES** (Don't match real structure)
+❌ `01_ai_literacy.tex` - **NOT PART OF CORE CS12 CURRICULUM** (Extra content?)
+❌ `02_floats-memory-usage-cin.tex` - Should be integrated with lesson 3
+❌ `03_number-systems-math-libraries.tex` - Should be integrated with lesson 4  
+❌ `04_if-else.tex` - Topic not in lesson 4 (relational expressions come first)
+
+### **DUPLICATE LESSON ISSUES** (Multiple files for same lesson)
+- Lesson 2: `02_integer-datatypes.tex` ✅ vs `02_floats-memory-usage-cin.tex` ❌
+- Lesson 3: `03_floats-and-byte-size.tex` ✅ vs `03_number-systems-math-libraries.tex` ❌
+- Lesson 4: `04_number-systems.tex` ✅ vs `04_if-else.tex` ❌
+- [Multiple other duplicates as identified earlier]
+
+## Current LaTeX Implementation Status
+
+### **CONTENT FILES** (Complete/Substantial Development)
+1. `01_introduction-to-cpp.tex` - **COMPLETE** - Full intro lesson with IDE setup, Hello World, program structure (430 lines)
+2. `01_ai_literacy.tex` - **COMPLETE** - AI literacy presentation with hallucinations, student patterns (433 lines)
+
+### **TEMPLATE FILES** (Minimal/Placeholder Content)
+
+#### Fundamentals (Lessons 2-11)
+2. `02_integer-datatypes.tex` - **TEMPLATE** - Basic DS9 template with overview only
+2. `02_floats-memory-usage-cin.tex` - **TEMPLATE** - Default theme, placeholder content
+3. `03_floats-and-byte-size.tex` - **TEMPLATE** - DS9 template with overview only  
+3. `03_number-systems-math-libraries.tex` - **TEMPLATE** - Default theme, placeholder content
+4. `04_number-systems.tex` - **TEMPLATE** - DS9 template with overview only
+4. `04_if-else.tex` - **TEMPLATE** - Default theme, placeholder content
+5. `05_relational-expressions.tex` - **FILE NOT FOUND**
+5. `05_truth-tables.tex` - **NEEDS ANALYSIS**
+6. `06_truth-tables.tex` - **NEEDS ANALYSIS**  
+6. `06_schoology-quiz-homework.tex` - **NEEDS ANALYSIS**
+7. `07_else-if.tex` - **NEEDS ANALYSIS**
+7. `07_if-elseif-else.tex` - **NEEDS ANALYSIS**
+8. `08_switch-and-loops.tex` - **NEEDS ANALYSIS**
+8. `08_switch-while.tex` - **NEEDS ANALYSIS**
+8. `08_place_based_learning.tex` - **NEEDS ANALYSIS**
+9. `09_for-loops.tex` - **NEEDS ANALYSIS**
+9. `09_prompt_engineering.tex` - **NEEDS ANALYSIS**
+10. `09ytd_pop-quiz-1.tex` - **NEEDS ANALYSIS**
+10. `10_problem-set-1-loops.tex` - **NEEDS ANALYSIS**
+
+#### Functions and Advanced Control (Lessons 11-16)
+11. `11_functions.tex` - **NEEDS ANALYSIS**
+11. `11_skill-milestone-term-1-keyboard.tex` - **NEEDS ANALYSIS**
+12. `12_functions.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+12. `12_quiz.tex` - **NEEDS ANALYSIS**
+13. `13_recursive-sequence-series.tex` - **NEEDS ANALYSIS**
+13. `13_practice-problems-for-upcoming-reading-quiz.tex` - **NEEDS ANALYSIS**
+14. `14_recursive-programming.tex` - **NEEDS ANALYSIS**
+14. `14_recursion-sequence-series.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+15. `15_scope.tex` - **NEEDS ANALYSIS**
+16. `16_mystery-functions-quiz.tex` - **NEEDS ANALYSIS**
+
+#### Arrays and Data Structures (Lessons 17-26)
+17. `17_arrays.tex` - **NEEDS ANALYSIS**
+18. `18_sorting-algorithms-project.tex` - **NEEDS ANALYSIS**
+18. `18_sorting-project.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+19. `18.5_git-holiday-assignment.tex` - **NEEDS ANALYSIS**
+19. `19_big-o.tex` - **NEEDS ANALYSIS**
+19. `19_big-o-introduction.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+20. `20_searching-array.tex` - **NEEDS ANALYSIS**
+20. `20_sorting-algorithms.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+21. `21_first-projects.tex` - **NEEDS ANALYSIS**
+21. `21_git-mastery-holiday-assignment.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+22. `21.5_prompt-engineering.tex` - **NEEDS ANALYSIS**
+22. `22_2d-arrays.tex` - **NEEDS ANALYSIS**
+22. `22_git-explore.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+23. `23_2d-array-projects.tex` - **NEEDS ANALYSIS**
+23. `23_skill-milestone-term-2-keyboard.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+24. `24_strings.tex` - **NEEDS ANALYSIS**
+24. `24_searching-arrays.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+25. `25_file-io.tex` - **NEEDS ANALYSIS**
+25. `25_organizing-projects.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+26. `25.6_vscode.tex` - **NEEDS ANALYSIS**
+26. `26_2d-array.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+26. `26_web-dev-project.tex` - **NEEDS ANALYSIS**
+27. `27_strings.tex` - **NEEDS ANALYSIS** (DUPLICATE)
+
+#### Specialized Topics (Lessons 39-40)
+39. `39_introduction-to-debugging-shortcourse-main.tex` - **NEEDS ANALYSIS**
+40. `40_debugging-with-vs-code-shortcourse-main.tex` - **NEEDS ANALYSIS**
+40. `40_git-github-in-depth-short-course-main.tex` - **NEEDS ANALYSIS**
+
+## Major Issues Identified
+
+### **DUPLICATE FILE PROBLEM**
+Multiple lessons have 2+ files with different naming conventions:
+- `02_integer-datatypes.tex` vs `02_floats-memory-usage-cin.tex`
+- `03_floats-and-byte-size.tex` vs `03_number-systems-math-libraries.tex`
+- `04_number-systems.tex` vs `04_if-else.tex`
+- `18_sorting-algorithms-project.tex` vs `18_sorting-project.tex`
+- `19_big-o.tex` vs `19_big-o-introduction.tex`
+- And many more...
+
+### **THEME INCONSISTENCY**
+- Content files use `../../../shared/templates/ds9_theme`
+- Template files inconsistently use `DS9` theme vs `default`
+
+### **DELETED FILE ISSUE**
+- `01_gentle-introduction-to-c.tex` marked as DELETED in git status
+- Should be renamed to match content: `01_introduction-to-cpp.tex`
 
 ## Course Structure Analysis
 
@@ -96,9 +205,56 @@ The course contains **40+ lessons** organized into distinct learning modules, si
 - Specialized short courses integrated into main sequence
 - Need to create LaTeX files for all identified lessons
 
-### Recommended Approach
-1. **Phase 1**: Create placeholder files for all 40+ lessons
-2. **Phase 2**: Develop high-priority core content (lessons 1-16)
+## **CRITICAL ACTION ITEMS** - Fix Structure Alignment
+
+### **1. File Consolidation Based on Real Course Structure**
+
+**DELETE INCORRECT FILES** (Don't match real course):
+```bash
+# These files don't align with actual course structure
+rm slides/02_floats-memory-usage-cin.tex  # Wrong lesson content
+rm slides/03_number-systems-math-libraries.tex  # Wrong lesson content  
+rm slides/04_if-else.tex  # Wrong lesson 4 content
+# [Additional duplicates as identified]
+```
+
+**KEEP CORRECT FILES** (Match real course structure):
+```bash
+# These files align with actual OneDrive lesson structure
+✅ slides/01_introduction-to-cpp.tex  # Maps to 01_GentleIntroductiontoC 1/
+✅ slides/02_integer-datatypes.tex    # Maps to 02_IntegerDatatypes/  
+✅ slides/03_floats-and-byte-size.tex # Maps to 03_floatsAndByteSize/
+✅ slides/04_number-systems.tex       # Maps to 04_NumberSystems/
+```
+
+### **2. Content Alignment Priorities**
+
+**HIGH PRIORITY** - Align with source content:
+1. **Lesson 1**: `01_introduction-to-cpp.tex` ✅ (Already complete, matches source content)
+2. **Lesson 2**: Expand `02_integer-datatypes.tex` template with content from `02_IntegerDatatypes/02_cpp_intDatatypes.md`
+3. **Lesson 3**: Expand `03_floats-and-byte-size.tex` template with content from `03_floatsAndByteSize/Floats and memory.md`
+4. **Lesson 4**: Expand `04_number-systems.tex` template with content from `04_NumberSystems/04_numberSystemsCmath.md`
+
+**MEDIUM PRIORITY** - Create from source directories:
+- Lessons 5-11: Analyze source directories and create corresponding LaTeX files
+- Lessons 11-16: Functions and advanced control structures  
+
+**LOW PRIORITY** - Advanced topics:
+- Lessons 17-26: Arrays, projects, data structures
+- Lessons 39-40: Specialized debugging/git courses
+
+### **3. Address AI Literacy Content**
+- `01_ai_literacy.tex` is complete but **not part of core CS12 curriculum**
+- **Decision needed**: Keep as supplementary lesson or move to separate directory?
+
+### **4. Standardize All Files**
+- **Theme**: Convert all to DS9 theme with `\usetheme{DS9}`
+- **Paths**: Use `\graphicspath{{../images/}{../../shared/images/}}`  
+- **Structure**: Follow naming convention matching OneDrive directories
+
+## Recommended Development Approach
+1. **Phase 1**: Resolve duplicate files and standardize themes
+2. **Phase 2**: Develop high-priority core content (lessons 1-16)  
 3. **Phase 3**: Implement project-based lessons (17-26)
 4. **Phase 4**: Integrate specialized short courses and advanced topics
 
