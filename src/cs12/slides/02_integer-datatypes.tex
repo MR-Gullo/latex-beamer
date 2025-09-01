@@ -47,17 +47,14 @@ Comments are text in your code that is completely ignored by the compiler. They 
 \frametitle{Code Example: Comments}
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
-
 using namespace std;
 
 // Use a double forward slash to create a single line comment
-
 /*
     Use a forward slash and a star to make a multiline comment
     these are useful for large pieces of text or to remove sections
     from your code without deleting it.
 */
-
 int main()
 {
   // cout << "Hello World" << endl; // This line is disabled by a comment
@@ -151,8 +148,6 @@ Today we will look at three fundamental types that store whole numbers or concep
 \frametitle{I Do: Integer Operations Demo}
 Let's walk through this code and see what it does.
 \begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
-#include <iostream>
-using namespace std;
 int main()
 {
    int x = 34;
@@ -179,8 +174,6 @@ int main()
 \frametitle{We Do: Predict the Output!}
 What will the output be for each question?
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
-#include <iostream>
-using namespace std;
 int main()
 {
    int x;
@@ -207,8 +200,6 @@ int main()
 Complete the integer exercises on Schoology. Use the following template to organize your solutions. Remember to declare a variable before you use it!
 \end{block}
 \begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
-#include <iostream>
-using namespace std;
 
 int main()
 {
@@ -233,7 +224,7 @@ int main()
 \begin{itemize}
     \item Understand that \texttt{char} variables store single characters using single quotes.
     \item Recognize that characters are represented by numerical ASCII values.
-    \item Identify common special characters (escape sequences) like \texttt{\\n} and \texttt{\\t}.
+    \item Identify common special characters (escape sequences) like \texttt{\textbackslash n} and \texttt{\textbackslash t}.
 \end{itemize}
 \end{frame}
 
@@ -271,8 +262,6 @@ Some characters are not printable. We use an "escape sequence" (a backslash foll
 \frametitle{We Do: Character Predictions}
 Remember, characters are just numbers. What is the output here?
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
-#include <iostream>
-using namespace std;
 int main()
 {
    int x;
@@ -323,8 +312,6 @@ When evaluating a condition, C++ considers any non-zero integer to be \texttt{tr
 \frametitle{We Do: Boolean Predictions}
 What will the output be? Remember \texttt{true} is 1, \texttt{false} is 0.
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
-#include <iostream>
-using namespace std;
 int main()
 {
    int x;
@@ -404,8 +391,6 @@ Write C++ code to determine the range (smallest and largest values) for each of 
 \end{enumerate}
 Here's a hint for the first one... what happens when you subtract 1 from 0 with an unsigned integer?
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
-#include <iostream>
-using namespace std;
 int main()
 {
    unsigned int a = 0;
