@@ -18,6 +18,15 @@
     },
     {
       "path": "../Teacher-Workflow-Prompts/prompts"
+    },
+    {
+      "path": "src/cs12"
+    },
+    {
+      "path": "src/phys11"
+    },
+    {
+      "path": "src/phys12"
     }
   ],
   "settings": {
