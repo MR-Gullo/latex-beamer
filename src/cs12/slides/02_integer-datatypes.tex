@@ -46,6 +46,7 @@ Comments are text in your code that is completely ignored by the compiler. They 
 
 \begin{frame}[fragile]
 \frametitle{Code Example: Comments}
+\textbf{Demo File:} \texttt{02\_comments.cpp} (Interactive - run and modify)
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
 using namespace std;
@@ -147,7 +148,8 @@ Today we will look at three fundamental types that store whole numbers or concep
 
 \begin{frame}[fragile]
 \frametitle{I Do: Integer Operations Demo}
-Let's walk through this code and see what it does.\pause
+\textbf{Demo File:} \texttt{02\_dataTypesIntegers.cpp} (Interactive - comprehensive demo)
+\\Let's walk through this code and see what it does.\pause
 \begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 int main()
 {
@@ -171,49 +173,6 @@ int main()
 \end{minted}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{We Do: Predict the Output!}
-What will the output be for each question?\pause
-\begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
-int main()
-{
-   int x;
-   // Question 1
-   x = 99 / 20;
-   cout << "Question 1:\t" << x << endl;
-   // Question 2
-   x = 27 % 10;
-   cout << "Question 2:\t" << x << endl;
-   // Question 3
-   x = 100 / 10 / 2;
-   cout << "Question 3:\t" << x << endl;
-   return 0;
-}
-\end{minted}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{You Do: Integer Exercises}
-\begin{block}{Your Turn}
-Complete the integer exercises on Schoology. Use the following template to organize your solutions. Remember to declare a variable before you use it!
-\end{block}
-\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
-
-int main()
-{
-   int x;   // Declare variables here
-   char c;
-
-   // Question 0 (example)
-   x = 1 + 1;
-   cout << "Question 0:\t" << x << endl;
-
-   // Your code for other questions goes here...
-
-   return 0;
-}
-\end{minted}
-\end{frame}
 
 \section{The \texttt{char} Datatype}
 
@@ -244,42 +203,90 @@ This means we can perform math on characters! \texttt{'a' - 32} would result in 
 \frametitle{Common Special Characters}
 Some characters are not printable. We use an "escape sequence" (a backslash followed by a letter) to represent them.\pause
 \begin{center}
-\begin{tabular}{|c|l|}
+\scriptsize
+\begin{tabular}{|c|c|l|}
 \hline
-\textbf{Sequence} & \textbf{Meaning} \\ \hline
-\texttt{\textbackslash n} & Newline \\
-\texttt{\textbackslash t} & Horizontal Tab \\
-\texttt{\textbackslash\textbackslash} & Backslash \\
-\texttt{\textbackslash'} & Single quote \\
-\texttt{\textbackslash"} & Double quote \\ \hline
+\textbf{Escape} & \textbf{Character} & \textbf{Meaning} \\
+\textbf{Character} & \textbf{Represented} & \\
+\hline
+\texttt{\textbackslash n} & Newline & Move to a new line \\
+\texttt{\textbackslash t} & Horizontal Tab & Move to the next horizontal tab setting \\
+\texttt{\textbackslash a} & Alert & Issue an alert (annoying bell sound) \\
+\texttt{\textbackslash\textbackslash} & Backslash & Since \textbackslash{} is an escape character we need \\
+& & to use two of them if we actually want \\
+& & an \textbackslash{} to show up \\
+\texttt{\textbackslash?} & Question Mark & ? Character \\
+\texttt{\textbackslash'} & Single quote & ' character \\
+\texttt{\textbackslash"} & Double quote & " character \\
+\texttt{\textbackslash 0} & Null character & Insert the null character; zero or \\
+& & 00000000 in ASCII. We will use this \\
+& & a lot later in the course. \\
+\hline
 \end{tabular}
 \end{center}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{We Do: Character Predictions}
-Remember, characters are just numbers. What is the output here?\pause
-\begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
-int main()
-{
-   int x;
-   char c;
-
-   // Question 7
-   x = 'a'; // 'a' has ASCII value 97
-   cout << "Question 7:\t" << x << endl;
-   
-   // Question 8
-   x = 'z' - 'a'; // (122 - 97)
-   cout << "Question 8:\t" << x << endl;
-
-   // Question 9
-   c = 100; // ASCII 100 is 'd'
-   cout << "Question 9:\t" << c << endl;
-   return 0;
-}
-\end{minted}
+\begin{frame}
+\frametitle{ASCII Codes (For Reference Only)}
+\begin{center}
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Lowercase} & \textbf{Binary} & \textbf{Lowercase} & \textbf{Binary} & \textbf{Uppercase} & \textbf{Binary} & \textbf{Uppercase} & \textbf{Binary} \\
+\textbf{Letter} & \textbf{Code} & \textbf{Letter} & \textbf{Code} & \textbf{Letter} & \textbf{Code} & \textbf{Letter} & \textbf{Code} \\
+\hline
+a & 01100001 & n & 01101110 & A & 01000001 & N & 01001110 \\
+b & 01100010 & o & 01101111 & B & 01000010 & O & 01001111 \\
+c & 01100011 & p & 01110000 & C & 01000011 & P & 01010000 \\
+d & 01100100 & q & 01110001 & D & 01000100 & Q & 01010001 \\
+e & 01100101 & r & 01110010 & E & 01000101 & R & 01010010 \\
+f & 01100110 & s & 01110011 & F & 01000110 & S & 01010011 \\
+g & 01100111 & t & 01110100 & G & 01000111 & T & 01010100 \\
+h & 01101000 & u & 01110101 & H & 01001000 & U & 01010101 \\
+i & 01101001 & v & 01110110 & I & 01001001 & V & 01010110 \\
+j & 01101010 & w & 01110111 & J & 01001010 & W & 01010111 \\
+k & 01101011 & x & 01111000 & K & 01001011 & X & 01011000 \\
+l & 01101100 & y & 01111001 & L & 01001100 & Y & 01011001 \\
+m & 01101101 & z & 01111010 & M & 01001101 & Z & 01011010 \\
+\hline
+\end{tabular}
+\end{center}
 \end{frame}
+
+\begin{frame}
+\frametitle{Converting from Binary to Decimal}
+\begin{alertblock}{Example: Character 'M'}
+'M' is represented by: 01001101 in binary\\
+Let's convert this to decimal
+\end{alertblock}
+
+\begin{columns}[T]
+    \begin{column}{0.6\textwidth}
+        \begin{block}{Binary Powers Calculation}
+        \scriptsize
+        \begin{align*}
+        0 \times 2^7 &= 0 \\
+        1 \times 2^6 &= 64 \\
+        0 \times 2^5 &= 0 \\
+        0 \times 2^4 &= 0 \\
+        1 \times 2^3 &= 8 \\
+        1 \times 2^2 &= 4 \\
+        0 \times 2^1 &= 0 \\
+        1 \times 2^0 &= 1
+        \end{align*}
+        \end{block}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \begin{exampleblock}{Result}
+        \Large
+        64 + 8 + 4 + 1 = 77
+        
+        So 'M' = ASCII 77
+        \end{exampleblock}
+    \end{column}
+\end{columns}
+\end{frame}
+
 
 \section{The \texttt{bool} Datatype}
 
@@ -306,9 +313,100 @@ When evaluating a condition, C++ considers any non-zero integer to be \texttt{tr
 \end{exampleblock}
 \end{frame}
 
+
+\section{Common Errors}
+
+\begin{frame}
+\frametitle{Common Errors and How to Fix Them}
+I'm going to compile these as we come across common errors.
+\end{frame}
+
+\begin{frame}
+\frametitle{Error 1: Missing Semicolon}
+\begin{alertblock}{Error: \texttt{expected ';' before '\}' token}}
+One of your lines is likely missing the semicolon at the end.\\
+Look at the lines before the line number of the error. (in this case just before 59)
+\end{alertblock}
+\begin{itemize}
+    \item \textbf{Meaning:} You missed a semicolon at the end of a line.
+    \item \textbf{Fix:} Look at the line \textit{before} the error number and add a \texttt{;}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Error 2: Variable Redeclaration}
+\begin{alertblock}{Error: \texttt{redeclaration of 'int x'}}
+You have used 'int x =' more than once. After the declaration you only need 'x ='
+\end{alertblock}
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int x = 0;
+.
+.
+.
+x = 100;
+\end{minted}
+\begin{itemize}
+    \item \textbf{Meaning:} You declared the same variable twice.
+    \item \textbf{Fix:} Declare the type only once. After that, just use the variable name.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Error 3: Undeclared Variable}
+\begin{alertblock}{Error: \texttt{'y' was not declared in this scope}}
+You have used 'y =' without declaring a type. Fix this by adding a type (int, float, char, etc.)
+\end{alertblock}
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int y = 100;
+\end{minted}
+\begin{itemize}
+    \item \textbf{Meaning:} You tried to use a variable before creating it.
+    \item \textbf{Fix:} Make sure you have a declaration line like \texttt{int y;} before you try to use \texttt{y}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Error 4: Wrong Quote Type for Char}
+\begin{alertblock}{Error: \texttt{invalid conversion from 'const char*' to 'char'}}
+You have used double quotes "a" instead of 'a' for a char datatype.
+\end{alertblock}
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+char c = 'a';
+\end{minted}
+\begin{itemize}
+    \item \textbf{Meaning:} You used double quotes (\texttt{"a"}) for a \texttt{char}.
+    \item \textbf{Fix:} \texttt{char} types must use single quotes: \texttt{char c = 'a';}
+\end{itemize}
+\end{frame}
+
+\section{Exercises}
+
+\begin{frame}[fragile]
+\frametitle{We Do: Predict the Output!}
+\textbf{Answer File:} \texttt{02\_quizQuestions.cpp} (\textcolor{red}{HIDDEN - contains solutions})
+\\What will the output be for each question?\pause
+\begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
+int main()
+{
+   int x;
+   // Question 1
+   x = 99 / 20;
+   cout << "Question 1:\t" << x << endl;
+   // Question 2
+   x = 27 % 10;
+   cout << "Question 2:\t" << x << endl;
+   // Question 3
+   x = 100 / 10 / 2;
+   cout << "Question 3:\t" << x << endl;
+   return 0;
+}
+\end{minted}
+\end{frame}
+
 \begin{frame}[fragile]
 \frametitle{We Do: Boolean Predictions}
-What will the output be? Remember \texttt{true} is 1, \texttt{false} is 0.\pause
+\textbf{Answer File:} \texttt{02\_quizQuestions.cpp} (\textcolor{red}{HIDDEN - contains solutions})
+\\What will the output be? Remember \texttt{true} is 1, \texttt{false} is 0.\pause
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
 int main()
 {
@@ -330,41 +428,78 @@ int main()
 \end{minted}
 \end{frame}
 
-\section{Common Errors}
+\begin{frame}[fragile]
+\frametitle{We Do: Character Predictions}
+\textbf{Answer File:} \texttt{02\_quizQuestions.cpp} (\textcolor{red}{HIDDEN - contains solutions})
+\\Remember, characters are just numbers. What is the output here?\pause
+\begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
+int main()
+{
+   int x;
+   char c;
 
-\begin{frame}
-\frametitle{Common Errors and How to Fix Them}
-\begin{alertblock}{Error: \texttt{expected ';' before '\}' token}}
-\begin{itemize}
-    \item \textbf{Meaning:} You missed a semicolon at the end of a line.
-    \item \textbf{Fix:} Look at the line \textit{before} the error number and add a \texttt{;}
-\end{itemize}
-\end{alertblock}\pause
+   // Question 7
+   x = 'a'; // 'a' has ASCII value 97
+   cout << "Question 7:\t" << x << endl;
+   
+   // Question 8
+   x = 'z' - 'a'; // (122 - 97)
+   cout << "Question 8:\t" << x << endl;
 
-\begin{alertblock}{Error: \texttt{redeclaration of 'int x'}}
-\begin{itemize}
-    \item \textbf{Meaning:} You declared the same variable twice.
-    \item \textbf{Fix:} Declare the type only once. After that, just use the variable name.\\
-    Correct: \texttt{int x = 5; x = 10;}
-\end{itemize}
-\end{alertblock}\pause
-
-\begin{alertblock}{Error: \texttt{'y' was not declared in this scope}}
-\begin{itemize}
-    \item \textbf{Meaning:} You tried to use a variable before creating it.
-    \item \textbf{Fix:} Make sure you have a declaration line like \texttt{int y;} before you try to use \texttt{y}.
-\end{itemize}
-\end{alertblock}
+   // Question 9
+   c = 100; // ASCII 100 is 'd'
+   cout << "Question 9:\t" << c << endl;
+   return 0;
+}
+\end{minted}
 \end{frame}
 
-\begin{frame}
-    
-\begin{alertblock}{Error: \texttt{invalid conversion from 'const char*' to 'char'}}
-\begin{itemize}
-    \item \textbf{Meaning:} You used double quotes (\texttt{"a"}) for a \texttt{char}.
-    \item \textbf{Fix:} \texttt{char} types must use single quotes: \texttt{char c = 'a';}
-\end{itemize}
-\end{alertblock}
+\begin{frame}[fragile]
+\frametitle{You Do: Integer Exercises}
+\textbf{Template File:} \texttt{02\_quizQuestionsTemplate.cpp} (Student starting point)
+\begin{block}{Your Turn}
+Complete the integer exercises on Schoology. Use the following template to organize your solutions. Remember to declare a variable before you use it!
+\end{block}
+\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int x;   // only use "int x =" once, after that only use "x ="
+   char c;
+
+   // Question 0 (example)
+   x = 1 + 1;
+   cout << "Question 0:\t" << x << endl;
+
+   // Your code for other questions goes here...
+
+   return 0;
+}
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercises: INT}
+\textbf{Template File:} \texttt{02\_quizQuestionsTemplate.cpp} (Student template)
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x;    // only use "int x =" once, after that only use "x = "
+    char c;
+
+    // Question 0 (example)
+    x = 1 + 1;
+    cout << "Question 0:\t" << x << endl;
+
+    return 0;
+}
+\end{minted}
 \end{frame}
 
 \section{Homework and Challenge}
@@ -389,17 +524,53 @@ Write C++ code to determine the range (smallest and largest values) for each of 
     \item \texttt{int}
     \item \texttt{short int}
 \end{enumerate}
-Here's a hint for the first one... what happens when you subtract 1 from 0 with an unsigned integer?
+Note: These questions are intended as a way to challenge students who already have some programming experience. Don't worry if you have no idea how to do this, we'll get there.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Extension Question (Challenging)}
+\textbf{Starter File:} \texttt{Challenge.cpp} (Partial solution)
+\\\textbf{Complete Answer:} \texttt{02\_intMinMax.cpp} (\textcolor{red}{HIDDEN - advanced solution})
+\\Here's a hint for the first one... what happens when you subtract 1 from 0 with an unsigned integer?
 \pause
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
+#include <iostream>
+using namespace std;
+
 int main()
 {
    unsigned int a = 0;
-   cout << "The max of an unsigned int is: " << a - 1 << endl;
+   int b;
+   short int c;
+   
+   cout << "The range of an unsigned int is: [0, " << a - 1 << "]\n";
+   
+   // these are incomplete, you will likely need loops to find these values
+   cout << "The range of an int is: [" << 0 << ", " << 0 << "]\n";
+   cout << "The range of a short int is: [" << 0 << " , " << 0 << "]\n";
    return 0;
 }
 \end{minted}
-\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Loop Structures for Advanced Students}
+For the challenge question, you may need these loop structures:
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+// Different loop structures
+while(<test>)
+{
+}
+//-----------------------------------------------------
+do
+{
+}while(<test>); // this statement has the semicolon
+//-----------------------------------------------------
+for(int i = 0; i < 100; i = i + 1)
+{
+}
+\end{minted}
 \end{frame}
 
 

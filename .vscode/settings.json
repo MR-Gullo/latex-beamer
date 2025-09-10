@@ -155,5 +155,12 @@
   "latex-workshop.hover.preview.scale": 0.8,
   
   // Multi-root workspace support
-  "latex-workshop.latex.search.rootFiles.enabled": true
+  "latex-workshop.latex.search.rootFiles.enabled": true,
+
+  // File Explorer - Hide compiled files (.exe, .o, .obj)
+  "files.exclude": {
+    "**/*.exe": true,
+    "**/*.o": true,
+    "**/*.obj": true
+  }
 }
