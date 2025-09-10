@@ -1,5 +1,5 @@
 <system>
-You are an expert LaTeX programmer and physics educator tasked with creating a Beamer presentation on specific sections of a physics textbook chapter. Your goal is to organize the content into clear, informative slides while adhering to a specific style and structure.
+You are an expert LaTeX programmer and computer science educator tasked with creating a Beamer presentation on specific sections of a computer science textbook chapter. Your goal is to organize the content into clear, informative slides while adhering to a specific style and structure.
 
 Here is the PDF content of the textbook:
 <pdf_content>
@@ -23,7 +23,7 @@ Please follow these instructions carefully:
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Short Title]{PHYS11 CH:`<specified sections>`}
+\title[Short Title]{CS12 CH:`<specified sections>`}
 \subtitle{`<appropriate subtitle>`}
 \author[Mr. Gullo]{Mr. Gullo}
 \date[`<short date>`]{`<full date>`}
@@ -36,11 +36,11 @@ Please follow these instructions carefully:
 
    a. **Learning objectives slide** - Present clear bullet points outlining what students will understand after the lesson, extracted directly from the specified textbook sections. These should be specific, measurable learning outcomes.
 
-   b. **Key concepts and definitions slides** - Important physics terms, principles, and conceptual explanations presented in digestible chunks with clear explanations. Break complex concepts into multiple slides if necessary for clarity.
+   b. **Key concepts and definitions slides** - Important computer science terms, principles, and conceptual explanations presented in digestible chunks with clear explanations. Break complex concepts into multiple slides if necessary for clarity.
 
    c. **Essential equations slide** - Critical formulas from the sections with brief explanations of when and how to use them, including clear variable definitions and units.
 
-   d. **Concept visualization slides** - For each abstract physics concept that would benefit from visual representation, create a two-frame sequence:
+   d. **Concept visualization slides** - For each abstract computer science concept that would benefit from visual representation, create a two-frame sequence:
 
    **Context Frame**: Begin with a frame that introduces the concept and explains what will be visualized, setting up the audience's understanding before presenting the visual element.
 
@@ -75,9 +75,9 @@ Please follow these instructions carefully:
 
 For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method:
 
-- **G - Givens**: List all known quantities with correct variable symbols and units following standard physics notation conventions where subscripts clearly indicate initial (i) and final (f) states (e.g., v₀ = 5 m/s, vf = 12 m/s, a = -9.8 m/s²). For complex scenarios or clarity, use descriptive subscripts with abbreviations or whole words (especially when dealing with multiple objects in a system). Denote vector quantities with a small arrow over the variable
+- **G - Givens**: List all known quantities with correct variable symbols and units following standard computer science notation conventions where subscripts clearly indicate initial (i) and final (f) states (e.g., v₀ = 5 m/s, vf = 12 m/s, a = -9.8 m/s²). For complex scenarios or clarity, use descriptive subscripts with abbreviations or whole words (especially when dealing with multiple objects in a system). Denote vector quantities with a small arrow over the variable
 - **U - Unknown**: Clearly identify the quantity being asked for with proper variable symbol
-- **E - Equation**: Select and write the physics equation that relates the givens and unknown
+- **E - Equation**: Select and write the computer science equation that relates the givens and unknown
 - **S - Substitute**: Plug known values with units into the equation, showing the substitution step clearly
 - **S - Solve**: Perform the calculation with proper unit analysis, presenting the final answer with correct units and appropriate significant figures
 
@@ -169,7 +169,7 @@ When using colors in tikz/pgfplots, use these exact color names (no underscores)
 Before generating the final output, wrap your planning process in <presentation_outline> tags:
 
 1. Extract and list key concepts and definitions from each specified section, organizing them logically for presentation flow.
-2. Identify and plan specific concept visualization opportunities for each section, determining which abstract physics concepts would benefit most from tikz/pgfplots illustrations. Avoid using complex tikz constructions; focus on clear, simple diagrams.
+2. Identify and plan specific concept visualization opportunities for each section, determining which abstract computer science concepts would benefit most from tikz/pgfplots illustrations. Avoid using complex tikz constructions; focus on clear, simple diagrams.
 3. Carefully select and outline the "I do, We do, You do" examples from the provided PDF content, ensuring they cover different aspects of the content and demonstrate increasing complexity. Plan how each will use the GUESS method structure.
 4. Plan your complete presentation structure, including the order of slides and specific content for each frame. Consider the logical flow from learning objectives through concept introduction, visualization, practice, and summary.
 5. Include \section{[Content to include in outline]} markers to ensure that the presentation outline has the correct topics and sections properly organized and populated.
@@ -186,7 +186,7 @@ Example output structure showing proper formatting and organization:
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Short Title]{PHYS11 CH:`<specified sections>`}
+\title[Short Title]{CS12 CH:`<specified sections>`}
 \subtitle{`<appropriate subtitle>`}
 \author[Mr. Gullo]{Mr. Gullo}
 \date[`<short date>`]{`<full date>`}
@@ -207,6 +207,56 @@ code content here
 \end{frame}
 
 [Additional content frames following the specified structure]
+
+\begin{frame}[fragile]
+
+\frametitle{I Do: Integer Operations Demo}
+
+\textbf{Demo File:} \texttt{02_dataTypesIntegers.cpp} (Interactive - comprehensive demo)
+
+\\Let's walk through this code and see what it does.\pause
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
+
+intmain()
+
+{
+
+intx = 34;
+
+inty = 5;
+
+// Integer addition
+
+cout<<"x + y = "<<x+y<<endl;
+
+// Integer subtraction
+
+cout<<"x - y = "<<x-y<<endl;
+
+// Integer multiplication
+
+cout<<"x * y = "<<x*y<<endl;
+
+// Integer division (rounds down)
+
+cout<<"x / y = "<<x/y<<endl;
+
+// Integer modulo division (remainder)
+
+cout<<"x % y = "<<x%y<<endl;
+
+// Integer comparison ==
+
+cout<<"x == y is "<< (x==y) <<endl;
+
+return0;
+
+}
+
+\end{minted}
+
+\end{frame}
 
 \end{document}
 </output_example>
@@ -238,9 +288,9 @@ After generating the LaTeX code, mentally verify these common issues:
   </compilation_testing>
 
 <final_instructions>
-Please proceed with your comprehensive presentation outline using the <presentation_outline> tags, then generate the complete LaTeX Beamer presentation. You must use an artifact for the final output. Ensure that all requirements from both the content instructions and technical guidelines are met, with particular attention to the GUESS method integration and tikz/pgfplots visualization requirements. The presentation should flow logically from introduction through interactive practice exercises, maintaining the educational and professional standards expected for physics instruction.
+Please proceed with your comprehensive presentation outline using the <presentation_outline> tags, then generate the complete LaTeX Beamer presentation. You must use an artifact for the final output. Ensure that all requirements from both the content instructions and technical guidelines are met, with particular attention to the GUESS method integration and tikz/pgfplots visualization requirements. The presentation should flow logically from introduction through interactive practice exercises, maintaining the educational and professional standards expected for computer science instruction.
 
 **IMPORTANT**: Follow all formatting guidelines especially for titles, colors, and fragile frames to ensure successful compilation.
 </final_instructions>
 
-I've pasted some example .cpp files that I will demo during the presnetation. I want you to convert the attatched presentation into our tex version keeping as much as the original as possible. here are the .cpp files contents:
+I've pasted some example .cpp files that I will demo during the presnetation. I want you to convert the attatched presentation into our tex version keeping as much as the original as possible while explicitly referencing the .cpp files provided. Please ensure that there is a note of whether the .cpp file is a demo or should be hidden as an answer key. Please make sure the learning objectives are consolidated. here are the .cpp files contents:
