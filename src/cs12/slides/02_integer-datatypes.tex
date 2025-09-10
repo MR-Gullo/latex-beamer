@@ -17,8 +17,8 @@
 \begin{frame}
 \frametitle{Learning Objectives}
 \begin{itemize}
-    \item Understand the purpose of comments in code.
-    \item Learn the syntax for single-line (\texttt{//}) and multi-line (\texttt{/* ... */}) comments in C++.
+    \item Understand the purpose of comments in code.\pause
+    \item Learn the syntax for single-line (\texttt{//}) and multi-line (\texttt{/* ... */}) comments in C++.\pause
     \item Use comments to document code and temporarily disable code for testing.
 \end{itemize}
 \end{frame}
@@ -28,13 +28,14 @@
 \begin{block}{For Human Eyes Only}
 Comments are text in your code that is completely ignored by the compiler. They are meant for you and other programmers to read and understand the code better.
 \end{block}
+\pause
 
 \begin{columns}[T]
     \begin{column}{0.5\textwidth}
         \begin{alertblock}{Single-Line Comments}
         Start with \texttt{//}. The compiler ignores everything from \texttt{//} to the end of the line.
         \end{alertblock}
-    \end{column}
+    \end{column}\pause
     \begin{column}{0.5\textwidth}
         \begin{exampleblock}{Multi-Line Comments}
         Start with \texttt{/*} and end with \texttt{*/}. Can span multiple lines. Useful for longer explanations or "commenting out" large blocks of code.
@@ -69,15 +70,15 @@ int main()
 \begin{frame}
 \frametitle{Learning Objectives}
 \begin{itemize}
-    \item Identify the fundamental integer-based datatypes in C++.
-    \item Differentiate between \texttt{int}, \texttt{char}, and \texttt{bool}.
+    \item Identify the fundamental integer-based datatypes in C++.\pause
+    \item Differentiate between \texttt{int}, \texttt{char}, and \texttt{bool}.\pause
     \item Understand the kind of data each type is designed to store.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Integer Datatypes (The Basics)}
-Today we will look at three fundamental types that store whole numbers or concepts based on them.
+Today we will look at three fundamental types that store whole numbers or concepts based on them.\pause
 
 \begin{columns}[T]
     \begin{column}{0.33\textwidth}
@@ -86,14 +87,14 @@ Today we will look at three fundamental types that store whole numbers or concep
         \vspace{1em}
         \textbf{Examples:} \texttt{23}, \texttt{19}, \texttt{-3}, \texttt{0}
         \end{alertblock}
-    \end{column}
+    \end{column}\pause
     \begin{column}{0.33\textwidth}
         \begin{exampleblock}{char}
         Short for 'character'. Stores a \textit{single} character.
         \vspace{1em}
         \textbf{Examples:} \texttt{'a'}, \texttt{'Z'}, \texttt{'\textbackslash n'}
         \end{exampleblock}
-    \end{column}
+    \end{column}\pause
     \begin{column}{0.33\textwidth}
         \begin{block}{bool}
         Short for 'Boolean'. Stores logical values.
@@ -109,8 +110,8 @@ Today we will look at three fundamental types that store whole numbers or concep
 \begin{frame}
 \frametitle{Learning Objectives: \texttt{int}}
 \begin{itemize}
-    \item Recognize valid mathematical and comparison operators for the \texttt{int} datatype.
-    \item Predict the outcome of integer division (\texttt{/}) and modulo (\texttt{\%}) operations.
+    \item Recognize valid mathematical and comparison operators for the \texttt{int} datatype.\pause
+    \item Predict the outcome of integer division (\texttt{/}) and modulo (\texttt{\%}) operations.\pause
     \item Declare and initialize integer variables.
 \end{itemize}
 \end{frame}
@@ -128,7 +129,7 @@ Today we will look at three fundamental types that store whole numbers or concep
             \item \texttt{\%} (Modulo - gives the remainder)
         \end{itemize}
         \end{alertblock}
-    \end{column}
+    \end{column}\pause
     \begin{column}{0.5\textwidth}
         \begin{exampleblock}{Comparison Operations}
         \begin{itemize}
@@ -146,7 +147,7 @@ Today we will look at three fundamental types that store whole numbers or concep
 
 \begin{frame}[fragile]
 \frametitle{I Do: Integer Operations Demo}
-Let's walk through this code and see what it does.
+Let's walk through this code and see what it does.\pause
 \begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 int main()
 {
@@ -172,7 +173,7 @@ int main()
 
 \begin{frame}[fragile]
 \frametitle{We Do: Predict the Output!}
-What will the output be for each question?
+What will the output be for each question?\pause
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
 int main()
 {
@@ -180,15 +181,12 @@ int main()
    // Question 1
    x = 99 / 20;
    cout << "Question 1:\t" << x << endl;
-
    // Question 2
    x = 27 % 10;
    cout << "Question 2:\t" << x << endl;
-
    // Question 3
    x = 100 / 10 / 2;
    cout << "Question 3:\t" << x << endl;
-
    return 0;
 }
 \end{minted}
@@ -222,8 +220,8 @@ int main()
 \begin{frame}
 \frametitle{Learning Objectives: \texttt{char}}
 \begin{itemize}
-    \item Understand that \texttt{char} variables store single characters using single quotes.
-    \item Recognize that characters are represented by numerical ASCII values.
+    \item Understand that \texttt{char} variables store single characters using single quotes.\pause
+    \item Recognize that characters are represented by numerical ASCII values.\pause
     \item Identify common special characters (escape sequences) like \texttt{\textbackslash n} and \texttt{\textbackslash t}.
 \end{itemize}
 \end{frame}
@@ -232,11 +230,11 @@ int main()
 \frametitle{Characters and ASCII}
 \begin{alertblock}{Characters are Numbers!}
 A \texttt{char} stores a single character like \texttt{'a'} or \texttt{'5'}. But behind the scenes, the computer stores it as an integer code. The most common system is \textbf{ASCII} (American Standard Code for Information Interchange).
-\end{alertblock}
+\end{alertblock}\pause
 \begin{exampleblock}{Example}
 The character \texttt{'A'} is stored as the number 65.
 \newline
-The character \texttt{'a'} is stored as the number 97.
+The character \texttt{'a'} is stored as the number 97.\pause
 \newline
 This means we can perform math on characters! \texttt{'a' - 32} would result in \texttt{'A'}.
 \end{exampleblock}
@@ -244,7 +242,7 @@ This means we can perform math on characters! \texttt{'a' - 32} would result in 
 
 \begin{frame}
 \frametitle{Common Special Characters}
-Some characters are not printable. We use an "escape sequence" (a backslash followed by a letter) to represent them.
+Some characters are not printable. We use an "escape sequence" (a backslash followed by a letter) to represent them.\pause
 \begin{center}
 \begin{tabular}{|c|l|}
 \hline
@@ -260,7 +258,7 @@ Some characters are not printable. We use an "escape sequence" (a backslash foll
 
 \begin{frame}[fragile]
 \frametitle{We Do: Character Predictions}
-Remember, characters are just numbers. What is the output here?
+Remember, characters are just numbers. What is the output here?\pause
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
 int main()
 {
@@ -270,7 +268,7 @@ int main()
    // Question 7
    x = 'a'; // 'a' has ASCII value 97
    cout << "Question 7:\t" << x << endl;
-
+   
    // Question 8
    x = 'z' - 'a'; // (122 - 97)
    cout << "Question 8:\t" << x << endl;
@@ -288,7 +286,7 @@ int main()
 \begin{frame}
 \frametitle{Learning Objectives: \texttt{bool}}
 \begin{itemize}
-    \item Understand the purpose of the \texttt{bool} datatype for representing logical states.
+    \item Understand the purpose of the \texttt{bool} datatype for representing logical states.\pause
     \item Know the relationship between \texttt{true}/\texttt{false} and their integer representations \texttt{1}/\texttt{0}.
 \end{itemize}
 \end{frame}
@@ -297,11 +295,11 @@ int main()
 \frametitle{Boolean Logic}
 \begin{block}{\texttt{bool}: True or False}
 A Boolean variable can only hold one of two values: \texttt{true} or \texttt{false}. They are the foundation of decision-making in programs.
-\end{block}
+\end{block}\pause
 
 \begin{alertblock}{Booleans are also Numbers!}
 In C++, \texttt{true} is represented by the integer \texttt{1}, and \texttt{false} is represented by the integer \texttt{0}.
-\end{alertblock}
+\end{alertblock}\pause
 
 \begin{exampleblock}{Important Note}
 When evaluating a condition, C++ considers any non-zero integer to be \texttt{true} and only \texttt{0} to be \texttt{false}.
@@ -310,7 +308,7 @@ When evaluating a condition, C++ considers any non-zero integer to be \texttt{tr
 
 \begin{frame}[fragile]
 \frametitle{We Do: Boolean Predictions}
-What will the output be? Remember \texttt{true} is 1, \texttt{false} is 0.
+What will the output be? Remember \texttt{true} is 1, \texttt{false} is 0.\pause
 \begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
 int main()
 {
@@ -319,15 +317,14 @@ int main()
    // Question 4
    x = true;
    cout << "Question 4:\t" << x << endl;
-
+   
    // Question 5
    x = false;
    cout << "Question 5:\t" << x << endl;
-
+   
    // Question 6
    x = (99 == 99); // Is 99 equal to 99? This is true.
    cout << "Question 6:\t" << x << endl;
-
    return 0;
 }
 \end{minted}
@@ -342,7 +339,7 @@ int main()
     \item \textbf{Meaning:} You missed a semicolon at the end of a line.
     \item \textbf{Fix:} Look at the line \textit{before} the error number and add a \texttt{;}
 \end{itemize}
-\end{alertblock}
+\end{alertblock}\pause
 
 \begin{alertblock}{Error: \texttt{redeclaration of 'int x'}}
 \begin{itemize}
@@ -350,7 +347,7 @@ int main()
     \item \textbf{Fix:} Declare the type only once. After that, just use the variable name.\\
     Correct: \texttt{int x = 5; x = 10;}
 \end{itemize}
-\end{alertblock}
+\end{alertblock}\pause
 
 \begin{alertblock}{Error: \texttt{'y' was not declared in this scope}}
 \begin{itemize}
@@ -393,6 +390,7 @@ Write C++ code to determine the range (smallest and largest values) for each of 
     \item \texttt{short int}
 \end{enumerate}
 Here's a hint for the first one... what happens when you subtract 1 from 0 with an unsigned integer?
+\pause
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
 int main()
 {
