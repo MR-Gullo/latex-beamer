@@ -157,10 +157,14 @@
   // Multi-root workspace support
   "latex-workshop.latex.search.rootFiles.enabled": true,
 
-  // File Explorer - Hide compiled files (.exe, .o, .obj)
+  // File Explorer - Hide compiled files (.exe, .o, .obj, executables without extensions)
   "files.exclude": {
     "**/*.exe": true,
     "**/*.o": true,
-    "**/*.obj": true
+    "**/*.obj": true,
+    "**/cpp/*": true,
+    "!**/cpp/*.cpp": true,
+    "!**/cpp/*.h": true,
+    "!**/cpp/*.hpp": true
   }
 }
