@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pdflatex:*)"
+      "Bash(pdflatex:*)",
+      "Read(//Users/joelgullo/.claude/**)",
+      "Bash(sed:*)"
     ],
     "deny": [],
     "ask": []
