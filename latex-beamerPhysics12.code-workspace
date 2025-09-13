@@ -5,28 +5,16 @@
       "path": "."
     },
     {
-      "path": "../../Library/CloudStorage/OneDrive-Personal/Documents/NANMO-2024/Courses/01-ComputerScience-12"
-    },
-    {
-      "path": "../../Library/CloudStorage/OneDrive-Personal/Documents/NANMO-2024/Courses/02-Physics-11"
-    },
-    {
-      "path": "../../Library/CloudStorage/OneDrive-Personal/Documents/NANMO-2024/Courses/03-Physics-12"
-    },
-    {
       "path": "../../Library/CloudStorage/OneDrive-Personal/Documents/NANMO-2024/Courses"
     },
     {
       "path": "../Teacher-Workflow-Prompts/prompts"
     },
     {
-      "path": "src/cs12"
-    },
-    {
-      "path": "src/phys11"
-    },
-    {
       "path": "src/phys12"
+    },
+    {
+      "path": "../../Library/CloudStorage/OneDrive-Personal/Documents/NANMO-2024/Courses/03-Physics-12"
     }
   ],
   "settings": {

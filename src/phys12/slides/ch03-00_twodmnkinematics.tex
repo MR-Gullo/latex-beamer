@@ -41,493 +41,223 @@
 \begin{frame}
 \frametitle{From Physics 11 to Physics 12}
 \begin{block}{Building on Foundations}
-This course builds directly upon the concepts you learned in Physics 11. Here's how we'll extend your understanding.
+This course builds directly upon the concepts you learned in Physics 11. We'll quickly review Chapter 2 (1D kinematics) and extend to 2D motion.
 \end{block}
 
 \begin{columns}[T]
     \begin{column}{0.5\textwidth}
-        \alert{Review from Physics 11}
+        \alert{From Chapter 2 (1D)}
         \begin{itemize}
-            \item<2-> Scalar vs. Vector quantities
-            \item<3-> Graphical vector addition (head-to-tail)
-            \item<4-> Basic 1D kinematics ($d = vt$, $a = \Delta v / \Delta t$)
-            \item<5-> Foundational concept of projectile motion
+            \item<2-> Position, displacement, distance
+            \item<3-> Scalars vs. vectors (+/- directions)
+            \item<4-> Kinematic equations for constant acceleration
+            \item<5-> Free fall and graphical analysis
         \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-        \alert{New Concepts \& Skills}
+        \alert{New in 2D}
         \begin{itemize}
-            \item<2-> Full derivation of all kinematic equations
-            \item<3-> Analytical vector addition (components)
-            \item<4-> Solving multi-stage and complex 1D/2D motion problems
-            \item<5-> Formal study of \textbf{Relative Velocity}
+            \item<2-> Vector components and trigonometry
+            \item<3-> Independence of horizontal/vertical motion
+            \item<4-> Projectile motion analysis
+            \item<5-> Relative velocity problems
         \end{itemize}
     \end{column}
 \end{columns}
 \end{frame}
 
-\part{Part 1: One-Dimensional Kinematics}
-
-\section{Position, Displacement, and Distance}
+\section{1D Kinematics Review}
 
 \begin{frame}
-\frametitle{Key Concepts: Position, Displacement, Distance}
-\begin{block}{Describing Motion}
-To describe motion, we first need to define where an object is.
-\end{block}
+\frametitle{Reference to Chapter 2: 1D Kinematics}
+\framesubtitle{Foundation for 2D Motion}
+\begin{block}{Quick Reference}
+For detailed explanations of 1D kinematics concepts, see \textbf{Chapter 2 slides}:
 \begin{itemize}
-    \item \textbf{Position ($x$)}: The location of an object at a particular time, measured relative to a \alert{reference frame}. The origin (x=0) is the reference point.
-    \item \textbf{Displacement ($\Delta x$)}: The change in position of an object. It is a \alert{vector} quantity, meaning it has both magnitude and direction.
-    \begin{itemize}
-        \item Equation: $\Delta x = x_f - x_0$
-        \item The sign (+ or -) indicates direction.
-    \end{itemize}
-    \item \textbf{Distance Traveled}: The total length of the path taken between two positions. It is a \alert{scalar} quantity (magnitude only, always positive).
+    \item Position, displacement, and distance
+    \item Scalars vs. vectors with detailed examples
+    \item Full derivation of kinematic equations
+    \item Free fall motion and analysis
+    \item Graphical analysis with worked examples
+    \item GUESS method for problem solving
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Concept Visualization: Displacement vs. Distance (Context)}
-\begin{block}{Scenario: A Professor's Pace}
-Imagine a professor lecturing. She starts at position $x_0 = 1.5$ m, walks to $x_f = 3.5$ m, and then walks back to $x_{final} = 0.5$ m.
-\bigskip
-Let's visualize the difference between her total distance traveled and her final displacement.
 \end{block}
-\alert{Key Question}: Are distance traveled and displacement the same?
+\begin{alertblock}{This Chapter}
+We'll focus on extending these concepts to 2D motion using vector components!
+\end{alertblock}
 \end{frame}
 
 \begin{frame}
-\frametitle{Concept Visualization: Displacement vs. Distance}
-\begin{tikzpicture}
-    % Axis
-    \draw[->, thick] (-1,0) -- (6,0) node[below] {$x$ (m)};
-    \foreach \x in {0,...,5} {
-        \draw (\x, -0.2) -- (\x, 0.2) node[below=4pt] {\x};
-    }
-
-    % Initial and Final Positions
-    \node[ds9blue, circle, fill, inner sep=2pt, label=above:{$x_0$}] at (1.5, 0) {};
-    \node[ds9gold, circle, fill, inner sep=2pt, label=above:{$x_f$}] at (0.5, 0) {};
-
-    % Path
-    \draw[->, ds9red, very thick, dashed] (1.5, 0.5) -- (3.5, 0.5) node[midway, above] {Leg 1 (+2.0 m)};
-    \draw[->, ds9red, very thick, dashed] (3.5, 1.0) -- (0.5, 1.0) node[midway, above] {Leg 2 (-3.0 m)};
-
-    % Displacement Vector
-    \draw[->, ds9blue, very thick] (1.5, -0.5) -- (0.5, -0.5) node[midway, below] {Displacement $\Delta x = -1.0$ m};
-\end{tikzpicture}
+\frametitle{1D Kinematics: Essential Review}
+\framesubtitle{Building on Chapter 2 Foundations}
+\begin{block}{Core Concepts (From Chapter 2)}
 \begin{itemize}
-    \item \textbf{Distance Traveled}: $|+2.0 \text{ m}| + |-3.0 \text{ m}| = \alert{5.0 \text{ m}}$
-    \item \textbf{Displacement}: $x_f - x_0 = 0.5 \text{ m} - 1.5 \text{ m} = \alert{-1.0 \text{ m}}$
+    \item \textbf{Position vs. Displacement}: $\Delta x = x_f - x_0$ (vector)
+    \item \textbf{Distance}: Total path length (scalar, always positive)
+    \item \textbf{Velocity}: $\bar{v} = \Delta x / \Delta t$ (vector)
+    \item \textbf{Speed}: Distance/time (scalar)
+    \item \textbf{Acceleration}: $\bar{a} = \Delta v / \Delta t$ (vector)
 \end{itemize}
+\end{block}
+\alert{Key 2D Extension}: In 1D, direction was simple (+ or -). In 2D, we need full vector mathematics!
 \end{frame}
 
-\section{Vectors, Scalars, Speed, and Velocity}
-
 \begin{frame}
-\frametitle{Key Concepts: Scalars and Vectors}
-\begin{block}{Two Types of Physical Quantities}
-In physics, every measurement is either a scalar or a vector.
-\end{block}
+\frametitle{Vectors in 1D vs. 2D: Quick Review}
+\framesubtitle{From Simple Signs to Full Components}
 \begin{columns}[T]
     \begin{column}{0.5\textwidth}
-        \alert{Scalar}
+        \alert{1D Motion (Chapter 2)}
         \begin{itemize}
-            \item A quantity with \textbf{magnitude} (a numerical value) only.
-            \item No direction.
-            \item Examples:
-            \begin{itemize}
-                \item Distance (5.0 m)
-                \item Speed (25 m/s)
-                \item Time (10 s)
-                \item Temperature (20°C)
-            \end{itemize}
+            \item Direction: + or - sign
+            \item Example: $v = +5$ m/s or $v = -3$ m/s
+            \item Vector addition: Simple algebra
         \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-        \alert{Vector}
+        \alert{2D Motion (This Chapter)}
         \begin{itemize}
-            \item A quantity with both \textbf{magnitude} and \textbf{direction}.
-            \item In 1D, direction is given by a + or - sign.
-            \item Examples:
-            \begin{itemize}
-                \item Displacement (-1.0 m)
-                \item Velocity (-15 m/s)
-                \item Acceleration (9.8 m/s²)
-                \item Force (500 N, down)
-            \end{itemize}
+            \item Direction: Angle and magnitude
+            \item Example: $\vec{v} = 5$ m/s at 30°
+            \item Vector addition: Components needed
         \end{itemize}
     \end{column}
 \end{columns}
+\vspace{1em}
+\begin{block}{Why This Matters}
+In 2D, we can't just use + and - to represent all possible directions. We need trigonometry and vector components!
+\end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Key Concepts: Speed and Velocity}
-\begin{block}{How Fast is an Object Moving?}
-Speed and velocity both describe the rate of motion, but they are not the same.
-\end{block}
+\frametitle{Acceleration: Quick Review}
+\framesubtitle{The Bridge to 2D Motion}
+\begin{block}{From Chapter 2}
 \begin{itemize}
-    \item \textbf{Average Speed} (Scalar): Total distance traveled divided by the elapsed time.
-    \begin{itemize}
-        \item $\text{Average Speed} = \frac{\text{Total Distance}}{\Delta t}$
-    \end{itemize}
-    \item \textbf{Average Velocity} ($\bar{v}$) (Vector): Displacement divided by elapsed time.
-    \begin{itemize}
-        \item $\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x_f - x_0}{t_f - t_0}$
-        \item The sign of velocity indicates the direction of motion.
-    \end{itemize}
-    \item \textbf{Instantaneous Velocity}: The velocity at a specific moment in time. This is what a car's speedometer shows (the magnitude part).
+    \item \textbf{Acceleration}: Rate of velocity change, $\bar{a} = \Delta v / \Delta t$
+    \item \textbf{Key Insight}: In 2D, acceleration can change speed, direction, or both!
+    \item \textbf{Free Fall}: $a = -g = -9.80$ m/s² (constant downward)
 \end{itemize}
+\end{block}
+\begin{alertblock}{2D Challenge}
+How do we handle acceleration that's not aligned with our motion direction? This is where vector components become essential!
+\end{alertblock}
 \end{frame}
 
-\section{Acceleration}
+\section{Kinematic Equations: Quick Reference}
 
 \begin{frame}
-\frametitle{Key Concepts: Acceleration}
-\begin{block}{How Quickly is Velocity Changing?}
-An object accelerates if its velocity is changing.
+\frametitle{Kinematic Equations: Review and Extension}
+\framesubtitle{From 1D to 2D Applications}
+\begin{block}{The Four Equations (From Chapter 2)}
+For constant acceleration only:
+\begin{align*}
+    v_f &= v_0 + at \\
+    \Delta x &= \frac{1}{2}(v_0 + v_f)t \\
+    \Delta x &= v_0 t + \frac{1}{2}at^2 \\
+    v_f^2 &= v_0^2 + 2a\Delta x
+\end{align*}
 \end{block}
+\begin{alertblock}{2D Strategy}
+We'll apply these equations \textbf{separately} to x and y components!
+\end{alertblock}
+\end{frame}
+
+\section{Free Fall: Review and 2D Extension}
+
+\begin{frame}
+\frametitle{Free Fall: Essential Concepts}
+\framesubtitle{Building on Chapter 2 for Projectile Motion}
+\begin{block}{Key Review (From Chapter 2)}
 \begin{itemize}
-    \item \textbf{Acceleration ($a$)}: The rate at which velocity changes. It is a \alert{vector} quantity.
-    \begin{itemize}
-        \item Equation: $\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_0}{t_f - t_0}$
-        \item SI Units: meters per second squared (m/s²).
-    \end{itemize}
-    \item Acceleration can be a change in \textbf{speed}, a change in \textbf{direction}, or both.
-    \item \textbf{Constant Acceleration}: Velocity changes by the same amount each second.
-    \item When an object slows down, its acceleration is in the \alert{opposite direction} of its motion.
+    \item \textbf{Free Fall}: Motion under gravity only ($a = -g = -9.80$ m/s²)
+    \item \textbf{Sign Convention}: Up = positive, so $a_y = -9.80$ m/s²
+    \item \textbf{Key Insight}: All objects fall at same rate (neglecting air resistance)
 \end{itemize}
+\end{block}
+\begin{alertblock}{2D Application}
+In projectile motion, only the \textbf{vertical component} follows free fall. The \textbf{horizontal component} has no acceleration!
+\end{alertblock}
 \end{frame}
 
 \begin{frame}
-\frametitle{Misconception Alert: Deceleration vs. Negative Acceleration}
-\begin{block}{Important Distinction}
-These two terms are often confused, but they have precise physical meanings.
-\end{block}
-
-\begin{itemize}
-    \item \textbf{Deceleration}: Refers to acceleration in the direction \textit{opposite} to the velocity. Deceleration always causes a decrease in speed.
-    \item \textbf{Negative Acceleration}: Refers to acceleration in the \textit{negative direction} as defined by your coordinate system. It may or may not be a deceleration.
-\end{itemize}
-\vfill
-\alert{[Diagram based on Figure 2.14 showing four scenarios for a car's motion, illustrating the difference between positive/negative acceleration and speeding up/slowing down in both positive and negative directions.]}
-\end{frame}
-
-\section{Kinematic Equations}
-
-\begin{frame}
-\frametitle{The Kinematic Equations (for Constant Acceleration)}
-\begin{block}{The Toolkit for Solving Motion Problems}
-These equations relate the five main kinematic variables. They only work when acceleration \textbf{a} is constant.
-\end{block}
-\begin{enumerate}
-    \item $v_f = v_0 + at$ \quad \small{(Doesn't use displacement)}
-    \item $\Delta x = \frac{1}{2}(v_0 + v_f)t$ \quad \small{(Doesn't use acceleration)}
-    \item $\Delta x = v_0 t + \frac{1}{2}at^2$ \quad \small{(Doesn't use final velocity)}
-    \item $v_f^2 = v_0^2 + 2a\Delta x$ \quad \small{(Doesn't use time)}
-\end{enumerate}
-\vfill
-\begin{columns}
-    \begin{column}{0.5\textwidth}
-        \textbf{Variables:}
+\frametitle{Free Fall Graphs: Quick Review}
+\framesubtitle{Essential Patterns for Projectile Motion}
+\begin{columns}[T]
+    \begin{column}{0.33\textwidth}
+        \textbf{Position vs. Time}
         \begin{itemize}
-            \item $\Delta x$: displacement
-            \item $v_0$: initial velocity
-            \item $v_f$: final velocity
+            \item Parabolic shape
+            \item Slope = velocity
         \end{itemize}
     \end{column}
-    \begin{column}{0.5\textwidth}
-        ~
+    \begin{column}{0.33\textwidth}
+        \textbf{Velocity vs. Time}
         \begin{itemize}
-            \item $a$: acceleration
-            \item $t$: time interval
+            \item Straight line
+            \item Slope = $-g$
+            \item Area = $\Delta y$
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+        \textbf{Acceleration vs. Time}
+        \begin{itemize}
+            \item Constant: $-g$
+            \item Always downward
         \end{itemize}
     \end{column}
 \end{columns}
-\end{frame}
-
-\section{Free Fall}
-
-\begin{frame}
-\frametitle{Key Concepts: Free Fall}
-\begin{block}{Motion Under Gravity's Influence}
-An object is in \textbf{free fall} if the only force acting on it is gravity. Air resistance is considered negligible.
+\vspace{1em}
+\begin{block}{2D Connection}
+These same patterns apply to the \textbf{vertical component} of projectile motion!
 \end{block}
-\begin{itemize}
-    \item All objects in free fall, regardless of their mass, have the same constant downward acceleration.
-    \item This is called the \textbf{acceleration due to gravity ($g$)}.
-    \item On Earth, the average value is $g = 9.80 \text{ m/s}^2$.
-    \item \textbf{Sign Convention}: We will almost always define the \alert{upward} direction as positive.
-    \begin{itemize}
-        \item This means acceleration for any free-fall problem will be:
-        \item $a = -g = -9.80 \text{ m/s}^2$
-    \end{itemize}
-\end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Concept Visualization: Object Thrown Upward (Context)}
-\begin{block}{Scenario: A Rock Thrown from a Cliff}
-A person throws a rock straight up into the air with an initial velocity of $+13.0$ m/s. It rises, slows down, stops momentarily at its peak, and then falls back down.
-
-We will now visualize the rock's position, velocity, and acceleration over time using graphs.
-\end{block}
-\begin{center}
-\alert{[Diagram of a person throwing a rock upwards from a cliff edge, similar to Figure 2.38]}
-\end{center}
-\end{frame}
+\section{Graphical Analysis: Essential Review}
 
 \begin{frame}
-\frametitle{Visualization: Position vs. Time}
-\begin{figure}
-\begin{tikzpicture}
-\begin{axis}[
-    width=\textwidth,
-    height=0.7\textheight,
-    axis lines=middle,
-    xlabel={Time, $t$ (s)},
-    ylabel={Vertical Position, $y$ (m)},
-    xmin=0, xmax=4,
-    ymin=-10, ymax=10,
-    xtick={0,1,2,3,4},
-    ytick={-10, -5, 0, 5, 10},
-    legend pos=outer north east,
-    grid=major,
-    thick,
-    ]
-    \addplot[ds9blue, domain=0:3.5, samples=100, line width=1.5pt] {13*x - 0.5*9.8*x^2};
-    \legend{$y(t) = v_0t + \frac{1}{2}at^2$}
-\end{axis}
-\end{tikzpicture}
-\caption{The position-time graph is a parabola, showing the rock rises to a peak and then falls.}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Visualization: Velocity vs. Time}
-\begin{figure}
-\begin{tikzpicture}
-\begin{axis}[
-    width=\textwidth,
-    height=0.7\textheight,
-    axis lines=middle,
-    xlabel={Time, $t$ (s)},
-    ylabel={Velocity, $v_y$ (m/s)},
-    xmin=0, xmax=4,
-    ymin=-20, ymax=15,
-    xtick={0,1,2,3,4},
-    ytick={-20, -15, -10, -5, 0, 5, 10, 15},
-    legend pos=outer north east,
-    grid=major,
-    thick,
-    ]
-    \addplot[ds9gold, domain=0:3.5, samples=2, line width=1.5pt] {13 - 9.8*x};
-    \legend{$v(t) = v_0 + at$}
-\end{axis}
-\end{tikzpicture}
-\caption{The velocity-time graph is a straight line with a constant negative slope, equal to $-g$.}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Visualization: Acceleration vs. Time}
-\begin{figure}
-\begin{tikzpicture}
-\begin{axis}[
-    width=\textwidth,
-    height=0.7\textheight,
-    axis lines=middle,
-    xlabel={Time, $t$ (s)},
-    ylabel={Acceleration, $a_y$ (m/s²)},
-    xmin=0, xmax=4,
-    ymin=-12, ymax=2,
-    xtick={0,1,2,3,4},
-    ytick={-12, -10, -8, -6, -4, -2, 0},
-    legend pos=outer north east,
-    grid=major,
-    thick,
-    ]
-    \addplot[ds9red, domain=0:3.5, samples=2, line width=1.5pt] {-9.8};
-    \legend{$a(t) = -g$}
-\end{axis}
-\end{tikzpicture}
-\caption{The acceleration is constant and negative throughout the entire flight.}
-\end{figure}
-\end{frame}
-
-\section{Graphical Analysis}
-
-\begin{frame}
-\frametitle{Graphical Analysis of Motion}
-\begin{block}{A Picture is Worth a Thousand Numbers}
-Graphs provide powerful insights into an object's motion.
-\end{block}
-\begin{itemize}
-    \item \textbf{Position vs. Time Graph ($x$ vs. $t$)}
-    \begin{itemize}
-        \item The \alert{slope} of the line is the \alert{velocity}.
+\frametitle{Motion Graphs: Key Relationships}
+\framesubtitle{Quick Review from Chapter 2}
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+        \textbf{Position-Time Graph}
         \begin{itemize}
-            \item Steeper slope $\rightarrow$ higher velocity.
-            \item Horizontal line $\rightarrow$ zero velocity (at rest).
-            \item Curved line $\rightarrow$ acceleration.
+            \item \alert{Slope} = velocity
+            \item Curved = acceleration
+            \item Steeper = faster
         \end{itemize}
-    \end{itemize}
-    \vfill
-    \item \textbf{Velocity vs. Time Graph ($v$ vs. $t$)}
-    \begin{itemize}
-        \item The \alert{slope} of the line is the \alert{acceleration}.
-        \item The \alert{area under the curve} is the \alert{displacement ($\Delta x$)}.
-    \end{itemize}
-\end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+        \textbf{Velocity-Time Graph}
+        \begin{itemize}
+            \item \alert{Slope} = acceleration
+            \item \alert{Area} = displacement
+            \item Horizontal = constant velocity
+        \end{itemize}
+    \end{column}
+\end{columns}
+\vspace{1em}
+\begin{block}{2D Application}
+We'll analyze x and y components separately using these same principles!
+\end{block}
 \end{frame}
 
+\section{1D Problem Solving: Quick Reference}
+
 \begin{frame}
-\frametitle{Concept Visualization: Graph Relationships (Context)}
-\begin{block}{Scenario: A Trip to the Store}
-Consider a simplified trip to a store 3 km away.
+\frametitle{Problem Solving: GUESS Method Review}
+\framesubtitle{From Chapter 2 to 2D Applications}
+\begin{block}{The GUESS Method (Chapter 2)}
 \begin{itemize}
-    \item You travel at a constant speed for 0.25 hours.
-    \item You immediately turn around and travel back at the same constant speed, arriving home after a total of 0.5 hours.
+    \item \textbf{G} - \alert{Givens}: List known quantities, define coordinate system
+    \item \textbf{U} - \alert{Unknown}: Identify what to find
+    \item \textbf{E} - \alert{Equation}: Choose appropriate kinematic equation
+    \item \textbf{S} - \alert{Substitute}: Plug in values with units
+    \item \textbf{S} - \alert{Solve}: Calculate and check units/significant figures
 \end{itemize}
-Let's see how the position, velocity, and speed graphs describe this trip.
 \end{block}
-\alert{Note:} This is a simplified model. We assume constant speed and no stopping time.
-\end{frame}
-
-\begin{frame}
-\frametitle{Graph Relationships: Position vs. Time}
-\begin{figure}
-\begin{tikzpicture}
-\begin{axis}[
-    width=\textwidth, height=0.7\textheight,
-    axis lines=middle, xlabel={Time (hours)}, ylabel={Position (km)},
-    xmin=0, xmax=0.6, ymin=0, ymax=3.5,
-    xtick={0,0.1,0.2,0.3,0.4,0.5,0.6},
-    ytick={0,1,2,3},
-    grid=major, thick,
-    ]
-    \addplot[ds9blue, mark=*, line width=1.5pt] coordinates {(0,0) (0.25,3) (0.5,0)};
-\end{axis}
-\end{tikzpicture}
-\caption{The slope is positive on the way out, and negative on the way back.}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Graph Relationships: Velocity vs. Time}
-\begin{figure}
-\begin{tikzpicture}
-\begin{axis}[
-    width=\textwidth, height=0.7\textheight,
-    axis lines=middle, xlabel={Time (hours)}, ylabel={Velocity (km/h)},
-    xmin=0, xmax=0.6, ymin=-15, ymax=15,
-    xtick={0,0.1,0.2,0.3,0.4,0.5,0.6},
-    ytick={-15,-10,-5,0,5,10,15},
-    grid=major, thick,
-    ]
-    \addplot[const plot, ds9gold, mark=*, line width=1.5pt] coordinates {(0,12) (0.25,12) (0.25,-12) (0.5,-12)};
-\end{axis}
-\end{tikzpicture}
-\caption{Velocity is constant and positive, then constant and negative.}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Graph Relationships: Speed vs. Time}
-\begin{figure}
-\begin{tikzpicture}
-\begin{axis}[
-    width=\textwidth, height=0.7\textheight,
-    axis lines=middle, xlabel={Time (hours)}, ylabel={Speed (km/h)},
-    xmin=0, xmax=0.6, ymin=0, ymax=14,
-    xtick={0,0.1,0.2,0.3,0.4,0.5,0.6},
-    ytick={0,2,4,6,8,10,12,14},
-    grid=major, thick,
-    ]
-    \addplot[const plot, ds9red, mark=*, line width=1.5pt] coordinates {(0,12) (0.5,12)};
-\end{axis}
-\end{tikzpicture}
-\caption{Speed, a scalar, is the magnitude of velocity and is always positive.}
-\end{figure}
-\end{frame}
-
-\section{1D Problem Solving}
-
-\begin{frame}[fragile]
-\frametitle{I do: Rock Thrown Upward (Ex. 2.14)}
-\begin{block}{Problem}
-A person on a cliff throws a rock straight up with an initial velocity of 13.0 m/s. Calculate the rock's position and velocity at t = 1.00 s. (Neglect air resistance, assume $y_0 = 0$).
-\end{block}
-\pause
-\begin{minted}[fontsize=\small]{text}
-G - Givens:
-  v_0 = +13.0 m/s
-  a = -9.80 m/s^2
-  t = 1.00 s
-  y_0 = 0 m
-
-U - Unknowns:
-  Position y_1 at t = 1.00 s
-  Velocity v_1 at t = 1.00 s
-
-E - Equations:
-  (1) y = y_0 + v_0*t + (1/2)*a*t^2
-  (2) v = v_0 + a*t
-
-S - Substitute (Position):
-  y_1 = 0 + (13.0 m/s)(1.00 s) + (1/2)(-9.80 m/s^2)(1.00 s)^2
-S - Solve (Position):
-  y_1 = 13.0 m - 4.90 m = +8.10 m
-
-S - Substitute (Velocity):
-  v_1 = 13.0 m/s + (-9.80 m/s^2)(1.00 s)
-S - Solve (Velocity):
-  v_1 = 13.0 m/s - 9.80 m/s = +3.20 m/s
-\end{minted}
-\end{frame}
-
-\begin{frame}
-\frametitle{We do: Rock Thrown Downward (Ex. 2.15)}
-\begin{block}{Problem}
-What if the person throws the rock straight down with a speed of 13.0 m/s? Calculate the velocity of the rock when it is 5.10 m below the starting point.
-\end{block}
-
-\textbf{G - Givens:}
-\begin{itemize}
-    \item $y_0 = 0$ m
-    \item $v_0 = \alert{?}$
-    \item $\Delta y = y_f - y_0 = \alert{?}$
-    \item $a = \alert{?}$
-\end{itemize}
-\pause
-\textbf{G - Givens (Filled):}
-\begin{itemize}
-    \item $y_0 = 0$ m
-    \item $v_0 = \alert{-13.0 \text{ m/s}}$ (downward is negative)
-    \item $\Delta y = y_f - y_0 = \alert{-5.10 \text{ m}}$
-    \item $a = \alert{-9.80 \text{ m/s}^2}$
-\end{itemize}
-\pause
-\textbf{U - Unknown:} Final velocity, $v_f$
-
-\textbf{E - Equation:} Which kinematic equation should we use? (Hint: We don't know time).
-\begin{center} \alert{$v_f^2 = v_0^2 + 2a\Delta y$} \end{center}
-\pause
-\textbf{S - Substitute \& Solve:} Your turn! Plug in the values and solve for $v_f$.
-\end{frame}
-
-\begin{frame}
-\frametitle{You do: Falling Ice}
-\begin{block}{Problem}
-A chunk of ice breaks off a glacier and falls 30.0 meters before it hits the water. Assuming it falls freely (there is no air resistance), how long does it take to hit the water?
-\end{block}
-\vfill
-\begin{center}
-    Use the GUESS method to structure your solution.
-\end{center}
-\vfill
-\begin{alertblock}{Hint}
-    What is the initial velocity of the ice chunk? Which kinematic equation relates displacement, initial velocity, acceleration, and time?
+\begin{alertblock}{2D Extension}
+For 2D problems: Apply GUESS \textbf{separately} to x and y components!
 \end{alertblock}
 \end{frame}
 
@@ -665,60 +395,6 @@ A \textbf{projectile} is any object that is thrown or launched and then moves su
     \end{itemize}
     \item Use the kinematic equations for each direction. Time ($t$) is the same for both.
 \end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Concept Visualization: Projectile Trajectory (Context)}
-\begin{block}{Scenario: The Path of a Cannonball}
-Let's trace the path of a projectile, paying close attention to its velocity vector.
-\begin{itemize}
-    \item How do the horizontal ($v_x$) and vertical ($v_y$) components of velocity change during the flight?
-    \item What is the velocity at the highest point (the apex) of the trajectory?
-\end{itemize}
-This visualization is key to understanding why we separate the motion into two parts.
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Concept Visualization: Projectile Trajectory}
-\begin{figure}
-\begin{tikzpicture}[scale=1.2]
-    \begin{axis}[
-        axis lines=middle, xlabel={$x$}, ylabel={$y$},
-        xmin=0, xmax=11, ymin=0, ymax=4,
-        xtick=\empty, ytick=\empty,
-        ]
-        \addplot[ds9blue, domain=0:10, samples=100, line width=1.5pt] {-(1/5)*x*(x-10)};
-        
-        % Velocity vectors
-        % Start
-        \draw[->, ds9red, thick] (0,0) -- (1.5, 1.2) node[above right] {$\vec{v}_0$};
-        \draw[->, gray, dashed] (0,0) -- (1.5, 0) node[below] {$v_{0x}$};
-        \draw[->, gray, dashed] (0,0) -- (0, 1.2) node[left] {$v_{0y}$};
-
-        % Mid-up
-        \draw[->, ds9red, thick] (2.5, 3) -- (4, 3.6) node[above] {$\vec{v}$};
-        \draw[->, gray, dashed] (2.5, 3) -- (4, 3) node[below] {$v_x$};
-        \draw[->, gray, dashed] (2.5, 3) -- (2.5, 3.6);
-
-        % Apex
-        \draw[->, ds9red, thick] (5, 3.75) -- (6.5, 3.75) node[above] {$\vec{v}$};
-        \node[below] at (5.75, 3.75) {$v_x$};
-        \node[right] at (5, 3.75) {$v_y=0$};
-
-        % Mid-down
-        \draw[->, ds9red, thick] (7.5, 3) -- (9, 2.4) node[right] {$\vec{v}$};
-        \draw[->, gray, dashed] (7.5, 3) -- (9, 3) node[above] {$v_x$};
-        \draw[->, gray, dashed] (7.5, 3) -- (7.5, 2.4);
-
-        % End
-        \draw[->, ds9red, thick] (10,0) -- (11.5, -1.2) node[below right] {$\vec{v}_f$};
-        \draw[->, gray, dashed] (10,0) -- (11.5, 0) node[below] {$v_{fx}$};
-        \draw[->, gray, dashed] (10,0) -- (10, -1.2) node[left] {$v_{fy}$};
-    \end{axis}
-\end{tikzpicture}
-\caption{$v_x$ is constant. $v_y$ decreases, becomes zero at the apex, and then increases in the negative direction.}
-\end{figure}
 \end{frame}
 
 \section{Relative Velocity}

@@ -1,0 +1,144 @@
+{
+  "folders": [
+    {
+      "name": "LaTeX Beamer Project",
+      "path": "."
+    },
+    {
+      "path": "../Teacher-Workflow-Prompts/prompts"
+    },
+    {
+      "path": "src/phys11"
+    },
+    {
+      "path": "../../Library/CloudStorage/OneDrive-Personal/Documents/NANMO-2024/Courses/02-Physics-11"
+    }
+  ],
+  "settings": {
+    // Workspace-specific LaTeX settings
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+
+    // Production build settings for final output
+    "latex-workshop.latex.magic.args": [
+      "-output-directory=output/%RELATIVE_DIR%",
+      "-aux-directory=build/%RELATIVE_DIR%"
+    ],
+
+    // File explorer settings (PDFs remain visible)
+    "files.exclude": {
+      "**/build/*.aux": true,
+      "**/build/*.log": true,
+      "**/build/*.fls": true,
+      "**/build/*.fdb_latexmk": true,
+      "**/build/*.synctex.gz": true,
+      "**/build/*.nav": true,
+      "**/build/*.snm": true,
+      "**/build/*.vrb": true,
+      "**/build/*.out": true,
+      "**/build/*.toc": true,
+      "**/*.aux": true,
+      "**/*.log": true,
+      "**/*.fls": true,
+      "**/*.fdb_latexmk": true,
+      "**/*.synctex.gz": true,
+      "**/*.nav": true,
+      "**/*.snm": true,
+      "**/*.vrb": true,
+      "**/*.out": true,
+      "**/*.toc": true
+    },
+
+    // Search settings (exclude auxiliary files but allow PDF search)
+    "search.exclude": {
+      "**/build/*.aux": true,
+      "**/build/*.log": true,
+      "**/build/*.fls": true,
+      "**/build/*.fdb_latexmk": true,
+      "**/build/*.synctex.gz": true,
+      "**/build/*.nav": true,
+      "**/build/*.snm": true,
+      "**/build/*.vrb": true,
+      "**/build/*.out": true,
+      "**/build/*.toc": true,
+      "**/output/**": true,
+      "**/*.aux": true,
+      "**/*.log": true
+    },
+
+    // Beamer-specific snippets and formatting
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80,
+
+    // Git settings
+    "git.ignoreLimitWarning": true
+  },
+  "extensions": {
+    "recommendations": [
+      "james-yu.latex-workshop",
+      "tecosaur.latex-utilities",
+      "valentjn.vscode-ltex"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build All Courses",
+        "type": "shell",
+        "command": "find",
+        "args": [
+          ".",
+          "-name",
+          "*.tex",
+          "-not",
+          "-path",
+          "*/build/*",
+          "-not",
+          "-path",
+          "*/output/*",
+          "-exec",
+          "pdflatex",
+          "-output-directory=build",
+          "-aux-directory=build",
+          "{}",
+          ";"
+        ],
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "Clean All Build Files",
+        "type": "shell",
+        "command": "rm",
+        "args": ["-rf", "build/", "output/"],
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "Organize Output for Distribution",
+        "type": "shell",
+        "command": "bash",
+        "args": [
+          "-c",
+          "mkdir -p output/{Computer-Science-12,PHYS11-CH,Phys12-CH} && find . -name '*.pdf' -path '*/build/*' -exec cp {} output/{} \\;"
+        ],
+        "group": "build",
+        "dependsOn": "Build All Courses"
+      }
+    ]
+  }
+}
