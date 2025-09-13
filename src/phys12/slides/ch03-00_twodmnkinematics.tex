@@ -302,6 +302,16 @@ A composite image showing the motion of two balls.
 \end{alertblock}
 \end{frame}
 
+\begin{frame}
+\frametitle{Visualization: Dropped vs. Fired Ball Experiment}
+\begin{center}
+\includegraphics[width=0.8\linewidth]{phys12-projectile-motion-trajectory-analysis.png}
+\end{center}
+\begin{block}{Key Observation}
+The strobe images show both balls at the same vertical positions at each time interval, demonstrating that horizontal motion does not affect vertical motion under gravity.
+\end{block}
+\end{frame}
+
 \section{Vectors in 2D}
 
 \begin{frame}
@@ -318,6 +328,16 @@ To add vectors graphically, we draw them one after another.
 \vfill
 \begin{alertblock}{[Diagram illustrating the head-to-tail method for adding vectors $\vec{A}$ and $\vec{B}$, showing the resultant vector $\vec{R}$. Based on Figure 3.10]}
 \end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualization: Vector Addition Example}
+\begin{center}
+\includegraphics[width=0.7\linewidth]{phys12-vectors-vector-addition-figure-4.png}
+\end{center}
+\begin{block}{Key Observation}
+The resultant vector $\vec{R} = \vec{A} + \vec{B}$ is drawn from the tail of the first vector to the head of the second vector.
+\end{block}
 \end{frame}
 
 \begin{frame}
@@ -342,6 +362,28 @@ Any 2D vector can be broken down into two perpendicular components. We typically
 \end{frame}
 
 \begin{frame}
+\frametitle{Advanced Topic: Rotated Coordinate Systems}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{block}{When Axes Are Rotated}
+Sometimes we need to resolve vectors along axes that are not aligned with the standard x-y coordinate system.
+\begin{itemize}
+    \item Common in navigation and engineering
+    \item The trigonometric principles remain the same
+    \item Adjust angles relative to the new axes
+\end{itemize}
+\end{block}
+
+\column{0.4\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{phys12-vectors-vector-addition-figure-21.png}
+\caption{Vector components along rotated axes}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
 \frametitle{Concept Visualization: Vector Components (Context)}
 \begin{block}{Breaking a Vector Apart}
 Let's visualize how a single vector $\vec{A}$ can be represented as the sum of its perpendicular components, $\vec{A}_x$ and $\vec{A}_y$.
@@ -352,6 +394,8 @@ This is the reverse of adding vectors and is a crucial first step for solving al
 
 \begin{frame}
 \frametitle{Concept Visualization: Vector Components}
+\begin{columns}
+\column{0.5\textwidth}
 \begin{figure}
 \begin{tikzpicture}[scale=1.5, thick]
     % Axes
@@ -369,8 +413,43 @@ This is the reverse of adding vectors and is a crucial first step for solving al
     % Right angle
     \draw (2.7,0) -- (2.7,0.3) -- (3,0.3);
 \end{tikzpicture}
-\caption{The vector $\vec{A}$ is the vector sum of its components: $\vec{A} = \vec{A}_x + \vec{A}_y$.}
+\caption{Mathematical representation of vector components}
 \end{figure}
+
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{phys12-vectors-vector-components.png}
+\caption{Alternative visualization of vector components}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Trigonometry Reference for Vector Components}
+\begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{math-trigonometry-sohcahtoa.png}
+        \caption{SOHCAHTOA mnemonic for finding vector components}
+    \end{figure}
+
+    \column{0.48\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{math-sine-cosine-laws.png}
+        \caption{Sine and cosine laws for non-right triangles}
+    \end{figure}
+\end{columns}
+\begin{block}{Key Applications}
+These trigonometric relationships are essential for:
+\begin{itemize}
+    \item Resolving vectors into components
+    \item Finding magnitude and direction from components
+    \item Solving vector addition problems
+\end{itemize}
+\end{block}
 \end{frame}
 
 \section{Projectile Motion}
@@ -418,6 +497,20 @@ Velocity is always measured \textit{relative} to a frame of reference.
 \end{frame}
 
 \begin{frame}
+\frametitle{Visualization: Train Relative Velocity Example}
+\begin{center}
+\includegraphics[width=0.8\linewidth]{phys12-relative-velocity-train.png}
+\end{center}
+\begin{block}{Understanding the Diagram}
+\begin{itemize}
+    \item The train moves with velocity $\vec{v}_{train/ground}$ relative to the ground
+    \item The person walks with velocity $\vec{v}_{person/train}$ relative to the train
+    \item The person's velocity relative to the ground is the vector sum: $\vec{v}_{person/ground} = \vec{v}_{person/train} + \vec{v}_{train/ground}$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
 \frametitle{Concept Visualization: Boat in a River (Context)}
 \begin{block}{Scenario: Crossing a Current}
 A boat tries to travel straight across a river. However, the river's current carries the boat downstream.
@@ -449,33 +542,48 @@ A diagram showing a river with a current flowing to the right.
 \begin{block}{Problem}
 A firework is shot with an initial speed of 70.0 m/s at an angle of 75.0° above the horizontal. (a) Calculate the height at which it explodes (its apex). (b) How much time passes until it explodes?
 \end{block}
-\pause
-\begin{minted}[fontsize=\small]{text}
-G - Givens:
-  v_0 = 70.0 m/s,  theta_0 = 75.0 deg
-  y_0 = 0 m, x_0 = 0 m
-  a_y = -9.80 m/s^2, a_x = 0 m/s^2
-  At apex, v_fy = 0 m/s
 
-U - Unknowns:  (a) Max height y_f (or h), (b) Time to apex t
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item $v_0 = 70.0$ m/s
+\item $\theta_0 = 75.0^\circ$
+\item $y_0 = 0$ m, $x_0 = 0$ m
+\item $a_y = -9.80$ m/s$^2$, $a_x = 0$ m/s$^2$
+\item At apex: $v_{fy} = 0$ m/s
+\end{itemize}
 
-E - Equations:
-  (1) Resolve v_0: v_0y = v_0*sin(theta_0)
-  (2) For height (a): v_fy^2 = v_0y^2 + 2*a_y*Delta_y
-  (3) For time (b): v_fy = v_0y + a_y*t
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item (a) $y_f = ?$
+\item (b) $t = ?$
+\end{itemize}
+\end{columns}
 
-S - Substitute & Solve:
-  (1) v_0y = (70.0 m/s)*sin(75.0) = 67.6 m/s
-  
-  (a) Height:
-  (0 m/s)^2 = (67.6 m/s)^2 + 2*(-9.80 m/s^2)*(y_f - 0)
-  0 = 4570 m^2/s^2 - (19.6 m/s^2)*y_f
-  y_f = 4570 / 19.6 = 233 m
-  
-  (b) Time:
-  0 m/s = 67.6 m/s + (-9.80 m/s^2)*t
-  t = -67.6 / -9.80 = 6.90 s
-\end{minted}
+\textbf{E - Equation}
+\begin{itemize}
+\item $v_{0y} = v_0 \sin\theta_0$
+\item $v_{fy}^2 = v_{0y}^2 + 2a_y\Delta y$
+\item Rearranged: $y_f = y_0 + \frac{v_{fy}^2 - v_{0y}^2}{2a_y}$
+\item $v_{fy} = v_{0y} + a_y t$
+\item Rearranged: $t = \frac{v_{fy} - v_{0y}}{a_y}$
+\end{itemize}
+
+\textbf{S - Substitute}
+\begin{itemize}
+\item $v_{0y} = (70.0 \text{ m/s})\sin(75.0^\circ) = 67.6$ m/s
+\item $y_f = 0 + \frac{(0)^2 - (67.6)^2}{2(-9.80)}$
+\item $t = \frac{0 - 67.6}{-9.80}$
+\end{itemize}
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $y_f = \frac{-4570}{-19.6} = 233$ m
+\item $t = \frac{-67.6}{-9.80} = 6.90$ s
+\item \boxed{y_f = 233 \text{ m}} and \boxed{t = 6.90 \text{ s}}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -483,24 +591,48 @@ S - Substitute & Solve:
 \begin{block}{Problem}
 A rock is ejected from a volcano with speed 25.0 m/s at 35.0° above the horizontal. It strikes the side of the volcano 20.0 m \textit{lower} than its starting point. (a) Calculate the time it takes.
 \end{block}
-\textbf{G - Givens:}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
 \begin{itemize}
-    \item $v_0 = 25.0$ m/s, $\theta_0 = 35.0^\circ$
-    \item $y_0 = 0$ m, so $\Delta y = y_f - y_0 = \alert{-20.0 \text{ m}}$
-    \item $a_y = -9.80$ m/s$^2$
+\item $v_0 = 25.0$ m/s
+\item $\theta_0 = 35.0^\circ$
+\item $y_0 = 0$ m
+\item $y_f = -20.0$ m
+\item $a_y = -9.80$ m/s$^2$
 \end{itemize}
-\pause
-\textbf{U - Unknown:} Time of flight, $t$.
-\pause
-\textbf{E - Equation:}
-First, find initial vertical velocity: $v_{0y} = v_0 \sin\theta_0 = (25.0)\sin(35.0^\circ) = 14.3$ m/s.
-\vfill
-Now, which y-direction kinematic equation involves $\Delta y$, $v_{0y}$, $a_y$, and $t$?
-\begin{center}\alert{$\Delta y = v_{0y}t + \frac{1}{2}a_y t^2$}\end{center}
-\pause
-\textbf{S - Substitute:}
-\begin{center} $-20.0 = (14.3)t + \frac{1}{2}(-9.80)t^2 \implies 4.90t^2 - 14.3t - 20.0 = 0$ \end{center}
-\textbf{S - Solve:} How do we solve this for $t$?
+
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $t = ?$
+\end{itemize}
+\end{columns}
+
+\textbf{E - Equation}
+\begin{itemize}
+\item $v_{0y} = v_0 \sin\theta_0$
+\item $\Delta y = v_{0y}t + \frac{1}{2}a_y t^2$
+\item Rearranged: $\frac{1}{2}a_y t^2 + v_{0y}t - \Delta y = 0$
+\end{itemize}
+
+\textbf{S - Substitute}
+\begin{itemize}
+\item $v_{0y} = (25.0)\sin(35.0^\circ) = 14.3$ m/s
+\item $\Delta y = -20.0 - 0 = -20.0$ m
+\item $-20.0 = (14.3)t + \frac{1}{2}(-9.80)t^2$
+\item $4.90t^2 - 14.3t - 20.0 = 0$
+\end{itemize}
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $t = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+\item $a = 4.90$, $b = -14.3$, $c = -20.0$
+\item $t = \frac{14.3 \pm \sqrt{204.49 + 392}}{9.80} = \frac{14.3 \pm 24.4}{9.80}$
+\item $t = 3.95$ s
+\item \boxed{t = 3.95 \text{ s}}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -512,14 +644,47 @@ A projectile is launched at ground level with an initial speed of 50.0 m/s at an
     \item What is the vertical distance ($y$) to the target?
 \end{enumerate}
 \end{block}
-\vfill
-\begin{center}
-Use the GUESS method. Remember to break the problem into x and y components.
-\end{center}
-\vfill
-\begin{alertblock}{Hint}
-First, resolve the initial velocity into $v_{0x}$ and $v_{0y}$. Then, solve the horizontal and vertical problems separately using $t = 3.00$ s.
-\end{alertblock}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item $v_0 = 50.0$ m/s
+\item $\theta_0 = 30.0^\circ$
+\item $x_0 = 0$ m, $y_0 = 0$ m
+\item $t = 3.00$ s
+\item $a_x = 0$ m/s$^2$, $a_y = -9.80$ m/s$^2$
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item (a) $x_f = ?$
+\item (b) $y_f = ?$
+\end{itemize}
+\end{columns}
+
+\textbf{E - Equation}
+\begin{itemize}
+\item $v_{0x} = v_0 \cos\theta_0$, $v_{0y} = v_0 \sin\theta_0$
+\item $x_f = x_0 + v_{0x}t + \frac{1}{2}a_x t^2$
+\item $y_f = y_0 + v_{0y}t + \frac{1}{2}a_y t^2$
+\end{itemize}
+
+\textbf{S - Substitute}
+\begin{itemize}
+\item $v_{0x} = (50.0)\cos(30.0^\circ) = 43.3$ m/s
+\item $v_{0y} = (50.0)\sin(30.0^\circ) = 25.0$ m/s
+\item $x_f = 0 + (43.3)(3.00) + \frac{1}{2}(0)(3.00)^2$
+\item $y_f = 0 + (25.0)(3.00) + \frac{1}{2}(-9.80)(3.00)^2$
+\end{itemize}
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $x_f = 130$ m
+\item $y_f = 30.9$ m
+\item \boxed{x_f = 130 \text{ m}} and \boxed{y_f = 30.9 \text{ m}}
+\end{itemize}
 \end{frame}
 
 \begin{frame}

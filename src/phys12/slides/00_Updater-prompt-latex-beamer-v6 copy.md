@@ -78,22 +78,102 @@ Please follow these instructions carefully:
    f. **Summary slide** - Key takeaways, main concepts review, and connections between ideas presented in the lesson.
 
 4. Use appropriate LaTeX commands for equations, lists, and other formatting elements as needed.
-5. For external visual elements not created with tikz/pgfplots, use placeholders with descriptions in alert boxes like this: \alert{[description of relevant external image]} where appropriate to enhance understanding.
+5. For external visual elements, use placeholders with descriptions in alert boxes like this: \alert{[description of relevant external image]} where appropriate to enhance understanding.
    </content_instructions>
 
 <guess_method_instructions>
 
 ## GUESS Method for Problem Solving
 
-For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method:
+For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method. Each letter in the acronym should have its own LaTeX block with appropriate formatting:
 
-- **G - Givens**: List all known quantities with correct variable symbols and units following standard physics notation conventions where subscripts clearly indicate initial (i) and final (f) states (e.g., v₀ = 5 m/s, vf = 12 m/s, a = -9.8 m/s²). For complex scenarios or clarity, use descriptive subscripts with abbreviations or whole words (especially when dealing with multiple objects in a system). Denote vector quantities with a small arrow over the variable
-- **U - Unknown**: Clearly identify the quantity being asked for with proper variable symbol
-- **E - Equation**: Select and write the physics equation that relates the givens and unknown
-- **S - Substitute**: Plug known values with units into the equation, showing the substitution step clearly
-- **S - Solve**: Perform the calculation with proper unit analysis, presenting the final answer with correct units and appropriate significant figures
+```latex
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item Known quantities with vars & units
+\item Standard notation conventions
+\item Subscripts for states: $v_0 = 5$ m/s, $v_f = 12$ m/s, $a = -9.8$ m/s²
+\item Vectors: $\vec{v}$
+\end{itemize}
 
-This method should be explicitly shown in your "I do" example and referenced in your "We do" and "You do" problems to reinforce consistent problem-solving methodology.
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item Identify target variable
+\item Use proper symbol: $v_f = ?$
+\item Include units in final answer
+\end{itemize}
+\end{columns}
+
+\textbf{E - Equation}
+\begin{itemize}
+\item Select appropriate equation
+\item \textbf{Rearrange} for unknown
+\item Show algebraic steps
+\item Isolate unknown on left
+\end{itemize}
+
+\textbf{S - Substitute}
+\begin{itemize}
+\item Plug values with units
+\item Show substitution clearly
+\item Maintain units throughout
+\end{itemize}
+
+\textbf{S - Solve}
+\begin{itemize}
+\item Calculate with unit analysis
+\item Present final answer with units
+\item Apply sig figs
+\item \boxed{final answer}
+\end{itemize}
+```
+
+**Dense GUESS example in LaTeX:**
+
+```latex
+\begin{frame}
+\frametitle{Example: GUESS Method - Dense Format}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item $v_0 = 10$ m/s
+\item $a = 2$ m/s²
+\item $t = 5$ s
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $v_f = ?$
+\end{itemize}
+\end{columns}
+
+\textbf{E - Equation}
+\begin{itemize}
+\item $v_f = v_0 + at$
+\end{itemize}
+
+\textbf{S - Substitute}
+\begin{itemize}
+\item $v_f = (10) + (2)(5)$
+\end{itemize}
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $v_f = 10 + 10 = 20$ m/s
+\item \boxed{v_f = 20 \text{ m/s}}
+\end{itemize}
+\end{frame}
+```
+
+This method should be explicitly shown in your "I do" example and referenced in your "We do" and "You do" problems to reinforce consistent problem-solving methodology. The rearrange step in the Equation section is particularly important for developing algebraic manipulation skills.
+
+**Dense Information Rule**: Maximize information density by using the most compact notation possible without sacrificing clarity. Use abbreviations, variables, and inline formatting to reduce vertical space while maintaining readability.
 </guess_method_instructions>
 
 <technical_formatting_guidelines>
@@ -104,7 +184,7 @@ This method should be explicitly shown in your "I do" example and referenced in 
 - Employ proper LaTeX formatting for mathematical equations using appropriate math environments
 - Use itemized lists with proper spacing and hierarchy
 - Ensure consistent formatting throughout the presentation
-- Use `\alert{[description of external image]}` only for placeholders referencing external image files that are not created with tikz/pgfplots
+- Use `\alert{[description of external image]}` only for placeholders referencing external image files
 - Place each included image in its own dedicated frame with a very short caption (one line maximum) to ensure the image and caption fit properly within the frame boundaries
 
 ## **CRITICAL: Fragile Frames for Code Blocks**
@@ -134,31 +214,6 @@ int main() {
 \end{frame}
 ```
 
-## Visualization Standards for tikz/pgfplots
-
-When creating concept visualization slides, adhere to these technical standards:
-
-- Create simple, easily readable plots focusing on conceptual understanding rather than complex details
-- Use large, clear axis labels with proper units clearly indicated
-- Choose appropriate scales and tick marks that highlight the important features
-- Use thick lines (line width of at least 1.5pt) for visibility during classroom projection
-- Maintain minimal complexity to avoid overwhelming students with unnecessary details
-- Use consistent styling that complements the DS9 theme colors
-- Ensure all text in plots is large enough to be readable from the back of a classroom
-
-### DS9 Theme Color Reference for Plots
-
-When using colors in tikz/pgfplots, use these exact color names (no underscores):
-
-- `ds9blue` - primary theme color for main data lines
-- `ds9gold` - accent color for highlights
-- `ds9grey` - secondary color for auxiliary elements (Note: use `gray` for broader compatibility)
-- `ds9red` - attention color for special cases
-- Standard colors: `blue`, `red`, `green`, `orange`, `purple`, `black`, `gray`
-- Color mixing: Use `ds9blue!20` for 20% opacity or lighter shades
-
-**CRITICAL**: Never use underscores in color names (e.g., avoid `ds9_blue`, use `ds9blue`)
-
 ## Title and Preamble Formatting Guidelines
 
 ### Title Formatting Requirements
@@ -181,11 +236,11 @@ When using colors in tikz/pgfplots, use these exact color names (no underscores)
 Before generating the final output, wrap your planning process in <presentation_outline> tags:
 
 1. Extract and list key concepts and definitions from each specified section, organizing them logically for presentation flow.
-2. Identify and plan specific concept visualization opportunities for each section, determining which abstract physics concepts would benefit most from tikz/pgfplots illustrations. Avoid using complex tikz constructions; focus on clear, simple diagrams.
+2. Identify and plan specific concept visualization opportunities for each section, determining which abstract physics concepts would benefit most from illustrations.
 3. Carefully select and outline the "I do, We do, You do" examples from the provided PDF content, ensuring they cover different aspects of the content and demonstrate increasing complexity. Plan how each will use the GUESS method structure.
 4. Plan your complete presentation structure, including the order of slides and specific content for each frame. Consider the logical flow from learning objectives through concept introduction, visualization, practice, and summary.
 5. Include \section{[Content to include in outline]} markers to ensure that the presentation outline has the correct topics and sections properly organized and populated.
-6. Plan the integration of tikz/pgfplots visualizations, specifying which concepts will be illustrated and how they will enhance student understanding.
+6. Plan the integration of visualizations, specifying which concepts will be illustrated and how they will enhance student understanding.
 
 It's perfectly acceptable for this planning section to be quite comprehensive and detailed. The time spent in thorough planning will result in a much more effective and well-organized final presentation.
 </planning_instructions>
@@ -234,8 +289,7 @@ After generating the LaTeX code, mentally verify these common issues:
 1. **Title formatting**: Ensure no ampersands (&) in short title brackets
 2. **Color names**: Verify all colors use correct names without underscores
 3. **Fragile frames**: Ensure all frames with code blocks have `[fragile]` option
-4. **Tikz syntax**: Check that all tikz/pgfplots code uses valid syntax
-5. Expected Compilation Process
+4. Expected Compilation Process
 
 - First run: `pdflatex filename.tex`
 - Common warnings are acceptable (overfull boxes, rerun suggestions)
@@ -250,7 +304,7 @@ After generating the LaTeX code, mentally verify these common issues:
   </compilation_testing>
 
 <final_instructions>
-Please proceed with your comprehensive presentation outline using the <presentation_outline> tags, then generate the complete LaTeX Beamer presentation. You must use an artifact for the final output. Ensure that all requirements from both the content instructions and technical guidelines are met, with particular attention to the GUESS method integration and tikz/pgfplots visualization requirements. The presentation should flow logically from introduction through interactive practice exercises, maintaining the educational and professional standards expected for physics instruction.
+Please proceed with your comprehensive presentation outline using the <presentation_outline> tags, then generate the complete LaTeX Beamer presentation. You must use an artifact for the final output. Ensure that all requirements from both the content instructions and technical guidelines are met, with particular attention to the GUESS method integration and visualization requirements. The presentation should flow logically from introduction through interactive practice exercises, maintaining the educational and professional standards expected for physics instruction.
 
 ## ESL-Friendly Improvements
 
