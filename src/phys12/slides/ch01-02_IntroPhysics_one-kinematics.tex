@@ -3,8 +3,8 @@
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[1D Kinematics Review]{PHYS12 CH:2.1-2.8}
-\subtitle{A Refresher on Motion in One Dimension}
+\title[1D Kinematics Review]{PHYS12 CH:1.1-1.4, 2.1-2.8}
+\subtitle{Progression from Physics 11 to Physics 12: Advanced Kinematics}
 \author[Mr. Gullo]{Mr. Gullo}
 \date[Aug 28, 2025]{August 28, 2025}
 
@@ -24,6 +24,24 @@ After this lesson, you will be able to:
     \item Apply the kinematic equations to solve problems involving motion.
     \item Interpret position-time and velocity-time graphs to describe motion.
     \item Describe the motion of objects in free-fall.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Physics 11 to Physics 12 Progression}
+\framesubtitle{Building on Your Foundation}
+\begin{itemize}
+    \item \alert{Physics 11 Foundation}: Basic kinematic concepts, graphical analysis, and problem-solving methods
+    \pause
+    \item \alert{Physics 12 Enhancement}: More complex applications, vector analysis, and real-world scenarios
+    \pause
+    \item \alert{Key Progression Areas}:
+    \begin{itemize}
+        \item Multi-dimensional motion analysis
+        \item Vector decomposition and composition
+        \item Advanced problem-solving strategies
+        \item Real-world applications and limitations
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -278,92 +296,146 @@ We will use a structured method to solve physics problems.
 \end{frame}
 
 \begin{frame}
-\frametitle{I Do: Freeway Acceleration}
+\frametitle{I Do: Freeway Acceleration - Problem Setup}
 \framesubtitle{Problem based on Ch. 2, Problem 24}
-\textbf{Problem:} A car enters a freeway, accelerating from rest at a rate of $2.40 \, \text{m/s}^2$ for $12.0 \, \text{s}$. How far does the car travel in this time?
-
+\begin{block}{Problem}
+A car enters a freeway, accelerating from rest at a rate of $2.40 \, \text{m/s}^2$ for $12.0 \, \text{s}$. How far does the car travel in this time?
+\end{block}
+\pause
 \begin{columns}[T]
-    \begin{column}{0.5\textwidth}
-        \begin{block}{G - Givens}
-            \begin{itemize}
-                \item Let the direction of motion be positive.
-                \item $\vec{a} = +2.40 \, \text{m/s}^2$
-                \item $t = 12.0 \, \text{s}$
-                \item $\vec{v}_0 = 0 \, \text{m/s}$ (starts from rest)
-                \item $\Delta \vec{x}_0 = 0 \, \text{m}$
-            \end{itemize}
-        \end{block}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-        \begin{block}{U - Unknown}
-            \begin{itemize}
-                \item Displacement: $\Delta \vec{x} = ?$
-            \end{itemize}
-        \end{block}
-    \end{column}
+\column{0.48\textwidth}
+\begin{G - Givens}
+\begin{itemize}
+\item Direction of motion: positive
+\item $\vec{a} = +2.40 \, \text{m/s}^2$, $t = 12.0 \, \text{s}$
+\item $\vec{v}_0 = 0 \, \text{m/s}$ (starts from rest)
+\end{itemize}
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $\Delta \vec{x} = ?$ (displacement)
+\end{itemize}
 \end{columns}
-
 \end{frame}
 
 \begin{frame}
+\frametitle{I Do: Freeway Acceleration - Equation Selection}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item Direction of motion: positive
+\item $\vec{a} = +2.40 \, \text{m/s}^2$, $t = 12.0 \, \text{s}$
+\item $\vec{v}_0 = 0 \, \text{m/s}$ (starts from rest)
+\end{itemize}
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $\Delta \vec{x} = ?$ (displacement)
+\end{itemize}
+\end{columns}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{E - Equation}
+\begin{itemize}
+\item Select: $\Delta x = v_0 t + \frac{1}{2}at^2$
+\item Already solved for displacement
+\end{itemize}
+\end{columns}
+\end{frame}
 
-\begin{block}{E - Equation}
-    We need an equation relating displacement, initial velocity, time, and acceleration.
-    \[ \Delta x = v_0 t + \frac{1}{2}at^2 \]
-\end{block}
-\begin{block}{S - Substitute}
-    \[ \Delta x = (0 \, \text{m/s})(12.0 \, \text{s}) + \frac{1}{2}(2.40 \, \text{m/s}^2)(12.0 \, \text{s})^2 \]
-\end{block}
-\begin{block}{S - Solve}
-    \[ \Delta x = 0 + \frac{1}{2}(2.40 \, \text{m/s}^2)(144 \, \text{s}^2) \]
-    \[ \Delta x = (1.20 \, \text{m/s}^2)(144 \, \text{s}^2) = 172.8 \, \text{m} \]
-    The car travels $\alert{173 \, \text{m}}$.
-\end{block}
+\begin{frame}
+\frametitle{I Do: Freeway Acceleration - Solution}
+\textbf{S - Substitute}
+\begin{itemize}
+\item Plug values with units:
+\[ \Delta x = (0 \, \text{m/s})(12.0 \, \text{s}) + \frac{1}{2}(2.40 \, \text{m/s}^2)(12.0 \, \text{s})^2 \]
+\end{itemize}
+\pause
+\textbf{S - Solve}
+\begin{itemize}
+\item Calculate with unit analysis:
+\[ \Delta x = 0 + \frac{1}{2}(2.40 \, \text{m/s}^2)(144 \, \text{s}^2) \]
+\[ \Delta x = (1.20 \, \text{m/s}^2)(144 \, \text{s}^2) = 172.8 \, \text{m} \]
+\item Apply sig figs: $\alert{173 \, \text{m}}$
+\item \boxed{173 \, \text{m}}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{We Do: Dolphin's Jump}
 \framesubtitle{Problem based on Ch. 2, Problem 45}
-\textbf{Problem:} A dolphin in an aquatic show jumps straight up out of the water at a velocity of $13.0 \, \text{m/s}$. How high does it rise above the water?
-
-\begin{block}{Givens}
-    \begin{itemize}
-        \item Let upwards be the positive direction.
-        \item Initial velocity: $\vec{v}_0 = +13.0 \, \text{m/s}$
-        \item Acceleration: $\vec{a} = -g = -9.80 \, \text{m/s}^2$
-        \item \alert{Key Insight:} At its maximum height, the dolphin's instantaneous vertical velocity is zero: $\vec{v} = 0 \, \text{m/s}$
-    \end{itemize}
+\begin{block}{Problem}
+A dolphin in an aquatic show jumps straight up out of the water at a velocity of $13.0 \, \text{m/s}$. How high does it rise above the water?
 \end{block}
-\begin{block}{Unknown}
-    Maximum vertical displacement: $\Delta \vec{y} = ?$
-\end{block}
-
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item Upwards is positive
+\item $\vec{v}_0 = +13.0 \, \text{m/s}$, $\vec{a} = -9.80 \, \text{m/s}^2$
+\item At max height: $\vec{v} = 0 \, \text{m/s}$
+\end{itemize}
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $\Delta \vec{y} = ?$ (height)
+\end{itemize}
+\end{columns}
 \end{frame}
 
 \begin{frame}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item Upwards is positive
+\item $\vec{v}_0 = +13.0 \, \text{m/s}$, $\vec{a} = -9.80 \, \text{m/s}^2$
+\item At max height: $\vec{v} = 0 \, \text{m/s}$
+\end{itemize}
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $\Delta \vec{y} = ?$ (height)
+\end{itemize}
+\end{columns}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{E - Equation}
+\begin{itemize}
+\item Select: $v^2 = v_0^2 + 2a\Delta y$
+\item Rearrange: $\Delta y = \frac{v^2 - v_0^2}{2a}$
+\end{itemize}
+\end{columns}
+\end{frame}
 
-\begin{alertblock}{Equation}
-    Which equation connects displacement, initial velocity, final velocity, and acceleration, without needing time?
-    \visible<2->{\[ v^2 = v_0^2 + 2a\Delta y \]}
-\end{alertblock}
-\begin{alertblock}{Substitute \& Solve}
-    \visible<2->{Let's plug in the values and solve for $\Delta y$.}
-    \visible<3->{
-    \begin{align*}
-    (0 \, \text{m/s})^2 &= (13.0 \, \text{m/s})^2 + 2(-9.80 \, \text{m/s}^2)\Delta y \\
-    \pause
-    0 &= 169 \, \text{m}^2/\text{s}^2 - (19.6 \, \text{m/s}^2)\Delta y \\
-    (19.6 \, \text{m/s}^2)\Delta y &= 169 \, \text{m}^2/\text{s}^2 \\
-    \Delta y &= \frac{169 \, \text{m}^2/\text{s}^2}{19.6 \, \text{m/s}^2} = \alert{8.62 \, \text{m}}
-    \end{align*}
-    }
-\end{alertblock}
+\begin{frame}
+\textbf{S - Substitute}
+\begin{itemize}
+    \item Plug values: $\Delta y = \frac{(0)^2 - (13.0)^2}{2(-9.80)}$
+\end{itemize}
+\pause
+\textbf{S - Solve}
+\begin{itemize}
+    \item Calculate: $\Delta y = \frac{0 - 169}{-19.6} = \frac{-169}{-19.6}$
+    \item $\Delta y = 8.62 \, \text{m}$
+    \item \boxed{8.62 \, \text{m}}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{You Do: Swan's Takeoff}
 \framesubtitle{Problem based on Ch. 2, Problem 31}
-\textbf{Problem:} A swan on a lake accelerates from rest at an average rate of $0.350 \, \text{m/s}^2$ to take off. It must reach a velocity of $6.00 \, \text{m/s}$ to get airborne.
+\begin{block}{Problem}
+A swan on a lake accelerates from rest at an average rate of $0.350 \, \text{m/s}^2$ to take off. It must reach a velocity of $6.00 \, \text{m/s}$ to get airborne.
+\end{block}
 \begin{enumerate}
     \item How far does it travel before becoming airborne?
     \item How long does this take?
@@ -391,39 +463,58 @@ We will use a structured method to solve physics problems.
 \section{Conclusion}
 
 \begin{frame}
+\frametitle{Reading Homework}
+\framesubtitle{Foundational Physics Concepts}
+Please review these foundational sections for our next class:
+
+\begin{itemize}
+    \item \textbf{Section 1.5}: Physical Quantities and Units
+    \item \textbf{Section 1.6}: Vector Addition and Subtraction
+    \item \textbf{Section 1.7}: Vector Components
+    \item \textbf{Section 1.8}: Relative Velocity
+\end{itemize}
+
+\begin{beamercolorbox}[rounded=true,shadow=true]{info}
+\centering
+\textbf{Focus on:} Understanding vector operations and relative motion concepts. These will be essential for our upcoming 2D motion unit.
+\end{beamercolorbox}
+\end{frame}
+
+\begin{frame}
 \frametitle{Summary}
 \framesubtitle{Key Takeaways from 1D Kinematics}
 \begin{itemize}
     \item \textbf{Scalars vs. Vectors}: Distance and speed are scalars; displacement, velocity, and acceleration are vectors (direction matters!).
+    \pause
     \item \textbf{Constant Acceleration}: The kinematic equations are powerful tools, but they only apply when acceleration is constant. Free-fall is a key example ($a = -g$).
+    \pause
     \item \textbf{Graphical Analysis}: Graphs provide a visual understanding of motion.
     \begin{itemize}
         \item Slope of position-time graph $\rightarrow$ velocity
         \item Slope of velocity-time graph $\rightarrow$ acceleration
         \item Area under velocity-time graph $\rightarrow$ displacement
     \end{itemize}
+    \pause
     \item \textbf{Problem Solving}: A structured approach like the GUESS method is crucial for success.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Homework: Foundations of Physics}
-\framesubtitle{Please review these foundational concepts for our next class.}
+\frametitle{Homework: Physics 11 Review}
+\framesubtitle{Essential Preparation for Advanced Topics}
 
-To ensure we have a strong foundation before moving on to more complex topics, please read the following sections from Chapter 1:
+To ensure success in Physics 12, please review these fundamental concepts from Physics 11:
 
 \begin{itemize}
-    \item \textbf{Section 1.1}: Physics: An Introduction
-    \item \textbf{Section 1.2}: Physical Quantities and Units
-    \item \textbf{Section 1.3}: Accuracy, Precision, and Significant Figures
-    \item \textbf{Section 1.4}: Approximation
+    \item \textbf{Chapter 1 Review}: Units, measurements, and significant figures
+    \item \textbf{Chapter 2 Review}: Kinematic equations and problem-solving methods
+    \item \textbf{Graphical Analysis}: Position-time and velocity-time graphs
+    \item \textbf{Vector Basics}: Adding and subtracting vectors graphically
 \end{itemize}
-
-\vspace{1em}
 
 \begin{beamercolorbox}[rounded=true,shadow=true]{info}
 \centering
-\textbf{Focus on:} Understanding the difference between accuracy and precision, the rules for significant figures, and the base SI units. These concepts are essential for all labs and problem-solving activities this year.
+\textbf{Focus on:} Mastering the GUESS method and understanding the difference between scalars and vectors. These skills will be critical for our upcoming 2D motion unit.
 \end{beamercolorbox}
 
 \end{frame}

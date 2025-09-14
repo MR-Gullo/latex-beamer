@@ -85,7 +85,13 @@ Please follow these instructions carefully:
 
 ## GUESS Method for Problem Solving
 
-For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method. Each letter in the acronym should have its own LaTeX block with appropriate formatting:
+For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method. **Each letter in the acronym should have its own dedicated frame with appropriate formatting to prevent overfull vbox errors:**
+
+- **Frame 1**: G and U blocks in separate columns within the same frame (Givens in left column, Unknown in right column)
+- **Frame 2**: E block in its own frame (Equation)
+- **Frame 3**: S and S blocks together in one frame (Substitute and Solve)
+
+**Important**: To avoid LaTeX compilation errors with overfull vbox, each GUESS component must be placed in its own frame as shown in the examples below.
 
 ```latex
 \begin{columns}[T]
@@ -107,6 +113,10 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 \end{itemize}
 \end{columns}
 
+\begin{frame}
+\frametitle{E - Equation}
+\begin{columns}[T]
+\column{0.48\textwidth}
 \textbf{E - Equation}
 \begin{itemize}
 \item Select appropriate equation
@@ -114,6 +124,8 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 \item Show algebraic steps
 \item Isolate unknown on left
 \end{itemize}
+\end{columns}
+\end{frame}
 
 \textbf{S - Substitute}
 \begin{itemize}
@@ -152,12 +164,18 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 \item $v_f = ?$
 \end{itemize}
 \end{columns}
+\end{frame}
 
+\begin{frame}
+\frametitle{E - Equation}
 \textbf{E - Equation}
 \begin{itemize}
 \item $v_f = v_0 + at$
 \end{itemize}
+\end{frame}
 
+\begin{frame}
+\frametitle{S - Substitute and Solve}
 \textbf{S - Substitute}
 \begin{itemize}
 \item $v_f = (10) + (2)(5)$
@@ -172,6 +190,11 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 ```
 
 This method should be explicitly shown in your "I do" example and referenced in your "We do" and "You do" problems to reinforce consistent problem-solving methodology. The rearrange step in the Equation section is particularly important for developing algebraic manipulation skills.
+
+**Critical Requirement**: Always place GUESS components in separate frames to prevent overfull vbox LaTeX compilation errors. Specifically:
+- Frame 1: G (Givens) and U (Unknown) in separate columns side-by-side
+- Frame 2: E (Equation) alone in its own frame
+- Frame 3: S (Substitute) and S (Solve) together in one frame
 
 **Dense Information Rule**: Maximize information density by using the most compact notation possible without sacrificing clarity. Use abbreviations, variables, and inline formatting to reduce vertical space while maintaining readability.
 </guess_method_instructions>

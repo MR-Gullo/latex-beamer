@@ -85,19 +85,24 @@ Please follow these instructions carefully:
 
 ## GUESS Method for Problem Solving
 
-For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method. Each letter in the acronym should have its own LaTeX block with appropriate formatting:
+For all example problems in your "I do, We do, You do" series, structure solutions using the GUESS method. **Each letter in the acronym should have its own LaTeX block with appropriate formatting, with the G and U blocks specifically wrapped in columns together, and the equation block wrapped in its own column:**
 
 ```latex
+\begin{frame}
+\begin{block}{Problem}
+state the problem
+\end{block}
+\pause
 \begin{columns}[T]
 \column{0.48\textwidth}
 \textbf{G - Givens}
 \begin{itemize}
-\item Known quantities with vars & units
+\item Known quantities with vars & units (combine similar quantities)
 \item Standard notation conventions
 \item Subscripts for states: $v_0 = 5$ m/s, $v_f = 12$ m/s, $a = -9.8$ m/s²
 \item Vectors: $\vec{v}$
 \end{itemize}
-
+\pause
 \column{0.48\textwidth}
 \textbf{U - Unknown}
 \begin{itemize}
@@ -106,7 +111,30 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 \item Include units in final answer
 \end{itemize}
 \end{columns}
-
+\end{frame}
+\pause
+\begin{frame}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item Known quantities with vars & units (combine similar quantities)
+\item Standard notation conventions
+\item Subscripts for states: $v_0 = 5$ m/s, $v_f = 12$ m/s, $a = -9.8$ m/s²
+\item Vectors: $\vec{v}$
+\end{itemize}
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item Identify target variable
+\item Use proper symbol: $v_f = ?$
+\item Include units in final answer
+\end{itemize}
+\end{columns}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
 \textbf{E - Equation}
 \begin{itemize}
 \item Select appropriate equation
@@ -114,14 +142,17 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 \item Show algebraic steps
 \item Isolate unknown on left
 \end{itemize}
-
+\end{columns}
+\end{frame}
+\pause
+\begin{frame}
 \textbf{S - Substitute}
 \begin{itemize}
 \item Plug values with units
 \item Show substitution clearly
 \item Maintain units throughout
 \end{itemize}
-
+\pause
 \textbf{S - Solve}
 \begin{itemize}
 \item Calculate with unit analysis
@@ -129,44 +160,80 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 \item Apply sig figs
 \item \boxed{final answer}
 \end{itemize}
+\end{frame}
+
 ```
 
 **Dense GUESS example in LaTeX:**
 
 ```latex
 \begin{frame}
-\frametitle{Example: GUESS Method - Dense Format}
+\frametitle{I Do: Freeway Acceleration}
+\framesubtitle{Problem based on Ch. 2, Problem 24}
+\begin{block}{Problem}
+A car enters a freeway, accelerating from rest at a rate of $2.40 \, \text{m/s}^2$ for $12.0 \, \text{s}$. How far does the car travel in this time?
+\end{block}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{G - Givens}
+\begin{itemize}
+\item Direction of motion: positive
+\item $\vec{a} = +2.40 \, \text{m/s}^2$, $t = 12.0 \, \text{s}$
+\item $\vec{v}_0 = 0 \, \text{m/s}$ (starts from rest)
+\end{itemize}
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $\Delta \vec{x} = ?$ (displacement)
+\end{itemize}
+\end{columns}
+\end{frame}
 
+\begin{frame}
+\frametitle{I Do: Freeway Acceleration}
 \begin{columns}[T]
 \column{0.48\textwidth}
 \textbf{G - Givens}
 \begin{itemize}
-\item $v_0 = 10$ m/s
-\item $a = 2$ m/s²
-\item $t = 5$ s
+\item Direction of motion: positive
+\item $\vec{a} = +2.40 \, \text{m/s}^2$, $t = 12.0 \, \text{s}$
+\item $\vec{v}_0 = 0 \, \text{m/s}$ (starts from rest)
 \end{itemize}
-
+\pause
 \column{0.48\textwidth}
 \textbf{U - Unknown}
 \begin{itemize}
-\item $v_f = ?$
+\item $\Delta \vec{x} = ?$ (displacement)
 \end{itemize}
 \end{columns}
-
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
 \textbf{E - Equation}
 \begin{itemize}
-\item $v_f = v_0 + at$
+\item Select: $\Delta x = v_0 t + \frac{1}{2}at^2$
+\item Already solved for displacement
 \end{itemize}
+\end{columns}
+\end{frame}
 
+\begin{frame}
+\frametitle{I Do: Freeway Acceleration}
 \textbf{S - Substitute}
 \begin{itemize}
-\item $v_f = (10) + (2)(5)$
+\item Plug values with units:
+\[ \Delta x = (0 \, \text{m/s})(12.0 \, \text{s}) + \frac{1}{2}(2.40 \, \text{m/s}^2)(12.0 \, \text{s})^2 \]
 \end{itemize}
-
+\pause
 \textbf{S - Solve}
 \begin{itemize}
-\item $v_f = 10 + 10 = 20$ m/s
-\item \boxed{v_f = 20 \text{ m/s}}
+\item Calculate with unit analysis:
+\[ \Delta x = 0 + \frac{1}{2}(2.40 \, \text{m/s}^2)(144 \, \text{s}^2) \]
+\[ \Delta x = (1.20 \, \text{m/s}^2)(144 \, \text{s}^2) = 172.8 \, \text{m} \]
+\item Apply sig figs: $\alert{173 \, \text{m}}$
+\item \boxed{173 \, \text{m}}
 \end{itemize}
 \end{frame}
 ```
@@ -174,7 +241,12 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 This method should be explicitly shown in your "I do" example and referenced in your "We do" and "You do" problems to reinforce consistent problem-solving methodology. The rearrange step in the Equation section is particularly important for developing algebraic manipulation skills.
 
 **Dense Information Rule**: Maximize information density by using the most compact notation possible without sacrificing clarity. Use abbreviations, variables, and inline formatting to reduce vertical space while maintaining readability.
-</guess_method_instructions>
+
+**Combined Givens Rule**: Combine similar quantities into single lines to increase information density. Group related variables together:
+
+- ✅ Combined: $v_0 = 5$ m/s, $v_f = 12$ m/s, $a = -9.8$ m/s²
+- ❌ Separate: $v_0 = 5$ m/s; $v_f = 12$ m/s; $a = -9.8$ m/s²
+  </guess_method_instructions>
 
 <technical_formatting_guidelines>
 

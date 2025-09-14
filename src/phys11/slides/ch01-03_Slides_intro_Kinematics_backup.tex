@@ -3,7 +3,7 @@
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Configure image paths
-\graphicspath{{../images/}{../../shared/images/}}
+\graphicspath{{../images/}}
 
 % Title page configuration
 \title[Intro to Physics and Kinematics]{PHYS11 CH:1-3}
@@ -380,46 +380,6 @@ $\vec{v}$: final velocity (m/s)
 \alert{Note:} We often write these without vector arrows in 1D problems, using +/- signs for direction.
 \end{frame}
 
-\section{Mathematical Connections: Quadratic Equations}
-
-\begin{frame}
-\frametitle{Kinematic Equations as Quadratic Analogies}
-\begin{itemize}
-    \item The kinematic equations have strong mathematical connections to quadratic equations
-    \pause
-    \item Standard form of a quadratic equation:
-    $$ax^2 + bx + c = 0$$
-    \pause
-    \item Analogous kinematic equation:
-    $$x = x_0 + v_0t + \frac{1}{2}at^2$$
-    \pause
-    \item Where:
-    \begin{itemize}
-        \item $x$ is the position (analogous to $y$ in the quadratic)
-        \item $t$ is time (analogous to $x$ in the quadratic)
-        \item $x_0$ is the initial position (analogous to $c$)
-        \item $v_0$ is the initial velocity (analogous to $b$)
-        \item $\frac{1}{2}a$ is half the acceleration (analogous to $a$)
-    \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Vertex Form Applications}
-\begin{itemize}
-    \item Vertex form of a quadratic equation:
-    $$y = a(x - h)^2 + k$$
-    \pause
-    \item Analogous kinematic equation:
-    $$x = x_0 + v_0t + \frac{1}{2}a(t - t_p)^2$$
-    \pause
-    \item Where $t_p$ is the time at which the position reaches its peak
-    \pause
-    \item Particularly useful for describing projectile motion
-    \item Helps analyze maximum height and time of flight
-\end{itemize}
-\end{frame}
-
 \section{Problem Solving}
 
 \begin{frame}
@@ -540,101 +500,6 @@ A motorcycle moving at a constant velocity suddenly accelerates at a rate of 4.0
         \[ v_i = 15 \, \text{m/s} \]
 \end{description}
 \end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Advanced Example: Jet Car Acceleration}
-\begin{block}{Problem}
-Show that the acceleration of a jet car is $5.0 \, \text{m/s}^2$ at any point on the velocity-time graph.
-\end{block}
-\pause
-\textbf{Note:} The jet car velocity-time graph image would be displayed here.\\
-The graph shows a straight line with constant slope, indicating constant acceleration.
-\end{frame}
-
-\begin{frame}
-\frametitle{Jet Car Analysis}
-\begin{itemize}
-    \item Slope of v-t graph represents acceleration
-    \item Straight line indicates constant acceleration
-    \item Slope = $\frac{\Delta \vec{v}}{\Delta t} = \frac{\vec{v}}{t} = 5.0 \, \text{m/s}^2$
-\end{itemize}
-\pause
-\begin{alertblock}{Key Insight}
-The acceleration is $5.0 \, \text{m/s}^2$ at any point on the graph because the slope is constant.
-\end{alertblock}
-\end{frame}
-
-\begin{frame}
-\frametitle{Challenge Problem: Two-Phase Motion}
-\begin{block}{Problem Statement}
-A car undergoes two-phase motion:
-\begin{itemize}
-\item Phase 1: Accelerates from rest at $3.0 \, \text{m/s}^2$ to $21.0 \, \text{m/s}$
-\item Phase 2: Decelerates at $4.0 \, \text{m/s}^2$ until stopping
-\end{itemize}
-\vspace{0.5cm}
-\textbf{Question:} Find the total time of travel.
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Two-Phase Motion Visualization}
-\begin{center}
-\begin{tikzpicture}[scale=0.8]
-\draw[->] (0,0) -- (8,0) node[right] {Time (s)};
-\draw[->] (0,0) -- (0,5) node[above] {Velocity (m/s)};
-\draw[thick, ds9blue] (0,0) -- (4,4) -- (8,0);
-\draw[dashed] (4,0) -- (4,4);
-\draw[dashed] (0,4) -- (4,4);
-\node[left] at (0,4) {21};
-\node[below] at (4,0) {$t_1$};
-\node[below] at (8,0) {$t_2$};
-\node[above, ds9blue, rotate=35] at (2,2) {$a = 3.0 \, \text{m/s}^2$};
-\node[above, ds9blue, rotate=-35] at (6,2) {$a = -4.0 \, \text{m/s}^2$};
-\end{tikzpicture}
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Solution: Phase 1 - Acceleration}
-\textbf{Phase 1 (Acceleration):}
-\begin{itemize}
-\item Initial velocity: $v_0 = 0 \, \text{m/s}$
-\item Final velocity: $v = 21.0 \, \text{m/s}$
-\item Acceleration: $a = 3.0 \, \text{m/s}^2$
-\end{itemize}
-Using the equation: $v = v_0 + at_1$
-\begin{align*}
-21 &= 0 + 3t_1 \\
-t_1 &= \frac{21}{3} = 7.0 \, \text{s}
-\end{align*}
-\textbf{Time for Phase 1: $7.0 \, \text{s}$}
-\end{frame}
-
-\begin{frame}
-\frametitle{Solution: Phase 2 - Deceleration}
-\textbf{Phase 2 (Deceleration):}
-\begin{itemize}
-\item Initial velocity: $v_0 = 21.0 \, \text{m/s}$
-\item Final velocity: $v = 0 \, \text{m/s}$
-\item Deceleration: $a = -4.0 \, \text{m/s}^2$
-\end{itemize}
-Using the equation: $v = v_0 + at_2$
-\begin{align*}
-0 &= 21 + (-4)t_2 \\
-4t_2 &= 21 \\
-t_2 &= \frac{21}{4} = 5.25 \, \text{s}
-\end{align*}
-\textbf{Time for Phase 2: $5.25 \, \text{s}$}
-\pause
-\textbf{Total time:}
-\begin{align*}
-t_{\text{total}} &= t_1 + t_2 \\
-&= 7.0 \, \text{s} + 5.25 \, \text{s} \\
-&= 12.25 \, \text{s}
-\end{align*}
-\textbf{Answer:} The total time of travel is $12.25 \, \text{s}$
 \end{frame}
 
 \begin{frame}
