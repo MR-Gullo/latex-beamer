@@ -167,8 +167,9 @@ state the problem
 **Dense GUESS example in LaTeX:**
 
 ```latex
+
 \begin{frame}
-\frametitle{I Do: Freeway Acceleration}
+\frametitle{I Do: Freeway Acceleration - Problem Setup}
 \framesubtitle{Problem based on Ch. 2, Problem 24}
 \begin{block}{Problem}
 A car enters a freeway, accelerating from rest at a rate of $2.40 \, \text{m/s}^2$ for $12.0 \, \text{s}$. How far does the car travel in this time?
@@ -176,58 +177,64 @@ A car enters a freeway, accelerating from rest at a rate of $2.40 \, \text{m/s}^
 \pause
 \begin{columns}[T]
 \column{0.48\textwidth}
-\begin{G - Givens}
+\begin{block}{G - Givens}
 \begin{itemize}
 \item Direction of motion: positive
 \item $\vec{a} = +2.40 \, \text{m/s}^2$, $t = 12.0 \, \text{s}$
 \item $\vec{v}_0 = 0 \, \text{m/s}$ (starts from rest)
 \end{itemize}
+\end{block}
 \pause
 \column{0.48\textwidth}
-\textbf{U - Unknown}
+\begin{block}{U - Unknown}
 \begin{itemize}
 \item $\Delta \vec{x} = ?$ (displacement)
 \end{itemize}
+\end{block}
 \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{I Do: Freeway Acceleration}
+\frametitle{I Do: Freeway Acceleration - Equation Selection}
 \begin{columns}[T]
 \column{0.48\textwidth}
-\textbf{G - Givens}
+\begin{block}{G - Givens}
 \begin{itemize}
 \item Direction of motion: positive
 \item $\vec{a} = +2.40 \, \text{m/s}^2$, $t = 12.0 \, \text{s}$
 \item $\vec{v}_0 = 0 \, \text{m/s}$ (starts from rest)
 \end{itemize}
+\end{block}
 \pause
 \column{0.48\textwidth}
-\textbf{U - Unknown}
+\begin{block}{U - Unknown}
 \begin{itemize}
 \item $\Delta \vec{x} = ?$ (displacement)
 \end{itemize}
+\end{block}
 \end{columns}
 \pause
 \begin{columns}[T]
 \column{0.48\textwidth}
-\textbf{E - Equation}
+\begin{block}{E - Equation}
 \begin{itemize}
 \item Select: $\Delta x = v_0 t + \frac{1}{2}at^2$
 \item Already solved for displacement
 \end{itemize}
+\end{block}
 \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{I Do: Freeway Acceleration}
-\textbf{S - Substitute}
+\frametitle{I Do: Freeway Acceleration - Solution}
+\begin{block}{S - Substitute}
 \begin{itemize}
 \item Plug values with units:
 \[ \Delta x = (0 \, \text{m/s})(12.0 \, \text{s}) + \frac{1}{2}(2.40 \, \text{m/s}^2)(12.0 \, \text{s})^2 \]
 \end{itemize}
+\end{block}
 \pause
-\textbf{S - Solve}
+\begin{block}{S - Solve}
 \begin{itemize}
 \item Calculate with unit analysis:
 \[ \Delta x = 0 + \frac{1}{2}(2.40 \, \text{m/s}^2)(144 \, \text{s}^2) \]
@@ -235,7 +242,9 @@ A car enters a freeway, accelerating from rest at a rate of $2.40 \, \text{m/s}^
 \item Apply sig figs: $\alert{173 \, \text{m}}$
 \item \boxed{173 \, \text{m}}
 \end{itemize}
+\end{block}
 \end{frame}
+
 ```
 
 This method should be explicitly shown in your "I do" example and referenced in your "We do" and "You do" problems to reinforce consistent problem-solving methodology. The rearrange step in the Equation section is particularly important for developing algebraic manipulation skills.
