@@ -1,0 +1,610 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../../latex-beamer/shared/templates/ds9_theme}
+
+
+% Title page configuration
+\title[Short Title]{PHYS11 CH:2.1-2.4 Kinematics in One Dimension}
+\subtitle{Motion, Speed, Velocity, and Graphs}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Sep 13, 2025]{September 13, 2025}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\framesubtitle{Sections 2.1-2.4}
+\begin{block}{By the end of this lesson, you will be able to:}
+    \begin{itemize}
+        \item \textbf{2.1:} Describe motion in different reference frames, define distance and displacement, and solve problems involving both. \pause
+        \item \textbf{2.2:} Calculate the average speed of an object and relate displacement to average velocity. \pause
+        \item \textbf{2.3:} Explain the meaning of slope in position vs. time graphs and solve problems using them. \pause
+        \item \textbf{2.4:} Explain the meaning of slope and area in velocity vs. time graphs and solve problems using them.
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\section{2.1 Relative Motion, Distance, and Displacement}
+
+\begin{frame}
+\frametitle{Key Concepts: Motion is Relative}
+\begin{itemize}
+    \item \alert{Kinematics}: The study of motion without considering its causes. \pause
+    \item \alert{Position}: An object's location at a particular time. \pause
+    \item To describe position, you need a \alert{reference frame}: a coordinate system from which positions are measured. \pause
+    \item \textbf{Example}: A person on a train is stationary relative to the train, but moving relative to the ground. There is no single "correct" reference frame.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Concepts: Distance vs. Displacement}
+\begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Distance}
+        \begin{itemize}
+            \item The total length of the path traveled.
+            \item A \alert{scalar} quantity: it has magnitude (size) but \textbf{no direction}.
+            \item Example: "I walked 10 meters."
+        \end{itemize}
+    \end{block}
+    \pause
+    \column{0.48\textwidth}
+    \begin{block}{Displacement ($\Delta \vec{d}$)}
+        \begin{itemize}
+            \item The change in position from start to end.
+            \item A \alert{vector} quantity: it has both \textbf{magnitude and direction}.
+            \item Example: "I walked 10 meters \alert{east}."
+            \item Formula: $\Delta \vec{d} = \vec{d}_{final} - \vec{d}_{initial}$
+        \end{itemize}
+    \end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Context}
+\framesubtitle{Distance vs. Displacement Example}
+\begin{itemize}
+    \item Imagine driving from your home to school, a trip of 5 km.
+    \pause
+    \item After school, your parent drives back home along the same route.
+    \pause
+    \item We will visualize the \alert{total distance} traveled and the \alert{total displacement} for the entire round trip.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Round Trip}
+\begin{alertblock}{[Diagram based on Figure 2.6]}
+A diagram showing a car starting at "Home", driving 5 km to "School", and then returning to "Home".
+\end{alertblock}
+\pause
+\begin{itemize}
+    \item \textbf{Distance Traveled}:
+    \begin{itemize}
+        \item To school: 5 km
+        \item Back home: 5 km
+        \item Total distance = $5 \text{ km} + 5 \text{ km} = \alert{10 \text{ km}}$
+    \end{itemize}
+    \pause
+    \item \textbf{Total Displacement}:
+    \begin{itemize}
+        \item Initial Position ($d_o$): Home
+        \item Final Position ($d_f$): Home
+        \item $\Delta d = d_f - d_o = \text{Home} - \text{Home} = \alert{0 \text{ km}}$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Calculating Distance and Displacement}
+\framesubtitle{Problem based on Ch. 2, Worked Example p. 14}
+\begin{block}{Problem}
+A cyclist rides 3 km west and then turns around and rides 2 km east.
+\begin{enumerate}
+    \item What is her displacement?
+    \item What distance does she ride?
+\end{enumerate}
+\end{block}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{G - Givens}
+\begin{itemize}
+    \item Let East be the positive (+) direction.
+    \item Displacement 1 ($\Delta \vec{d}_1$): 3 km west = -3 km
+    \item Displacement 2 ($\Delta \vec{d}_2$): 2 km east = +2 km
+\end{itemize}
+\end{block}
+\pause
+\column{0.48\textwidth}
+\begin{block}{U - Unknown}
+\begin{itemize}
+    \item Total Displacement ($\Delta \vec{d}_{total}$) = ?
+    \item Total Distance ($d_{total}$) = ?
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Calculating Distance and Displacement - Solution}
+\begin{block}{E - Equations}
+\begin{itemize}
+    \item $\Delta \vec{d}_{total} = \Delta \vec{d}_1 + \Delta \vec{d}_2$
+    \item $d_{total} = |\Delta \vec{d}_1| + |\Delta \vec{d}_2|$ (sum of magnitudes)
+\end{itemize}
+\end{block}
+\pause
+\begin{columns}
+\column{0.48\textwidth}
+\begin{block}{S - Substitute \& Solve (Displacement)}
+\begin{itemize}
+    \item $\Delta \vec{d}_{total} = (-3 \text{ km}) + (+2 \text{ km})$
+    \item $\Delta \vec{d}_{total} = -1 \text{ km}$
+    \item \boxed{\Delta \vec{d}_{total} = 1 \text{ km west}}
+\end{itemize}
+\end{block}
+\column{0.48\textwidth}
+\begin{block}{S - Substitute \& Solve (Distance)}
+\begin{itemize}
+    \item $d_{total} = |-3 \text{ km}| + |+2 \text{ km}|$
+    \item $d_{total} = 3 \text{ km} + 2 \text{ km}$
+    \item \boxed{d_{total} = 5 \text{ km}}
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Practice Together}
+\framesubtitle{Problem based on Ch. 2, Practice Problem 1, p. 15}
+\begin{block}{Problem}
+On an axis where right is positive, a student walks 32 m to the right and then 17 m to the left. What are the displacement and distance?
+\end{block}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{G - Givens}
+\begin{itemize}
+    \item Direction: Right is positive (+)
+    \item $\Delta \vec{d}_1 = \alert{+32 \text{ m}}$
+    \item $\Delta \vec{d}_2 = \alert{-17 \text{ m}}$
+\end{itemize}
+\end{block}
+\column{0.48\textwidth}
+\begin{block}{U - Unknown}
+\begin{itemize}
+    \item $\Delta \vec{d}_{total} = ?$
+    \item $d_{total} = ?$
+\end{itemize}
+\end{block}
+\end{columns}
+\pause
+\begin{alertblock}{Your turn!}
+Now, let's substitute these into the equations and solve. What do we get?
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Independent Practice}
+\framesubtitle{Problem based on Ch. 2, Practice Problem 2, p. 15}
+\begin{block}{Problem}
+Tiana jogs 1.5 km along a straight path (let's call this the positive direction). She then turns and jogs 2.4 km in the opposite direction. Finally, she turns back and jogs 0.7 km in the original direction.
+\newline\newline
+What are her final displacement and total distance jogged? Use the GUESS method.
+\end{block}
+\end{frame}
+
+\section{2.2 Speed and Velocity}
+
+\begin{frame}
+\frametitle{Key Concepts: Speed vs. Velocity}
+\begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Average Speed ($v_{avg}$)}
+        \begin{itemize}
+            \item Rate of motion.
+            \item A \alert{scalar} quantity (magnitude only).
+            \item Tells you how fast, but not in what direction.
+            \item $v_{avg} = \frac{\text{total distance}}{\text{elapsed time}}$
+        \end{itemize}
+    \end{block}
+    \pause
+    \column{0.48\textwidth}
+    \begin{block}{Average Velocity ($\vec{v}_{avg}$)}
+        \begin{itemize}
+            \item Rate of change of position.
+            \item A \alert{vector} quantity (magnitude and direction).
+            \item Tells you how fast \textbf{and} in what direction.
+            \item $\vec{v}_{avg} = \frac{\text{displacement}}{\text{elapsed time}} = \frac{\Delta \vec{d}}{\Delta t}$
+        \end{itemize}
+    \end{block}
+\end{columns}
+\note{Emphasize that a car's speedometer shows instantaneous speed, not velocity.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Essential Equations: Speed and Velocity}
+\begin{block}{Average Speed}
+\[ v_{avg} = \frac{d}{\Delta t} \]
+\begin{itemize}
+    \item $d$ is the total distance traveled (a scalar).
+    \item $\Delta t$ is the change in time ($t_f - t_o$).
+    \item Units: meters per second (m/s), kilometers per hour (km/h).
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{Average Velocity}
+\[ \vec{v}_{avg} = \frac{\Delta \vec{d}}{\Delta t} = \frac{\vec{d}_f - \vec{d}_o}{t_f - t_o} \]
+\begin{itemize}
+    \item $\Delta \vec{d}$ is the displacement (a vector).
+    \item Direction of velocity is the same as the direction of displacement.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Solving for Displacement}
+\framesubtitle{Problem based on Ch. 2, Worked Example p. 26}
+\begin{block}{Problem}
+Layla jogs with an average velocity of 2.4 m/s east. What is her displacement after 46 seconds?
+\end{block}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{G - Givens}
+\begin{itemize}
+    \item $\vec{v}_{avg} = 2.4$ m/s east
+    \item $\Delta t = 46$ s
+\end{itemize}
+\end{block}
+\pause
+\column{0.48\textwidth}
+\begin{block}{U - Unknown}
+\begin{itemize}
+    \item $\Delta \vec{d} = ?$
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Solving for Displacement - Equation and Solution}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{E - Equation}
+\begin{itemize}
+    \item Start with: $\vec{v}_{avg} = \frac{\Delta \vec{d}}{\Delta t}$
+    \item Rearrange for the unknown:
+    \item $\Delta t \cdot \vec{v}_{avg} = \frac{\Delta \vec{d}}{\Delta t} \cdot \Delta t$
+    \item \alert{$\Delta \vec{d} = \vec{v}_{avg} \cdot \Delta t$}
+\end{itemize}
+\end{block}
+\column{0.48\textwidth}
+\pause
+\begin{block}{S - Substitute}
+\begin{itemize}
+    \item $\Delta \vec{d} = (2.4 \, \text{m/s east}) \cdot (46 \, \text{s})$
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{S - Solve}
+\begin{itemize}
+    \item $\Delta \vec{d} = 110.4 \, \text{m east}$
+    \item Apply sig figs (2 s.f.):
+    \item \boxed{\Delta \vec{d} = 1.1 \times 10^2 \text{ m east}}
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Calculating Average Speed}
+\framesubtitle{Problem based on Ch. 2, Practice Problem 9, p. 23}
+\begin{block}{Problem}
+A pitcher throws a baseball from the pitcher's mound to home plate in 0.46 s. The distance is 18.4 m. What was the average speed of the baseball?
+\end{block}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{G - Givens}
+\begin{itemize}
+    \item $d = \alert{18.4 \text{ m}}$
+    \item $\Delta t = \alert{0.46 \text{ s}}$
+\end{itemize}
+\end{block}
+\column{0.48\textwidth}
+\begin{block}{U - Unknown}
+\begin{itemize}
+    \item $v_{avg} = ?$
+\end{itemize}
+\end{block}
+\end{columns}
+\pause
+\begin{alertblock}{Your turn!}
+Which equation do we need? Is any rearrangement required? Let's solve it.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Independent Practice}
+\framesubtitle{Problem based on Ch. 2, Practice Problem 11, p. 27}
+\begin{block}{Problem}
+A trucker drives along a straight highway for 0.25 h with a displacement of 16 km south. What is the trucker's average velocity?
+\newline\newline
+Use the GUESS method to find the solution. Be mindful of your units!
+\end{block}
+\end{frame}
+
+\section{2.3 Position vs. Time Graphs}
+
+\begin{frame}
+\frametitle{Key Concepts: Position vs. Time Graphs}
+\begin{itemize}
+    \item A graph of position (y-axis) versus time (x-axis) provides a visual description of motion.
+    \pause
+    \item The \alert{slope} of the line is a key piece of information.
+    \[ \text{slope} = \frac{\text{rise}}{\text{run}} = \frac{\Delta \text{position}}{\Delta \text{time}} = \frac{\Delta d}{\Delta t} \]
+    \pause
+    \item Since $\vec{v}_{avg} = \frac{\Delta \vec{d}}{\Delta t}$, the \textbf{slope of a position-time graph is the velocity}.
+    \pause
+    \item The \alert{y-intercept} of the graph is the object's initial position ($d_o$).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Interpreting Position-Time Graphs}
+\begin{itemize}
+    \item \textbf{Straight Line}: The slope is constant, which means the \alert{velocity is constant}.
+    \pause
+    \item \textbf{Positive Slope}: Object is moving in the positive direction.
+    \pause
+    \item \textbf{Negative Slope}: Object is moving in the negative direction.
+    \pause
+    \item \textbf{Zero Slope (Horizontal Line)}: The position is not changing. The object is \alert{at rest} ($v=0$).
+    \pause
+    \item \textbf{Curved Line}: The slope is changing, which means the \alert{velocity is changing} (the object is accelerating).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Context}
+\framesubtitle{Graphing a Jet Car}
+\begin{itemize}
+    \item Let's analyze the motion of a jet-powered car.
+    \pause
+    \item First, we'll look at a simplified case where its velocity is constant. The position-time graph will be a straight line.
+    \pause
+    \item Then, we will look at the car as it is speeding up. The position-time graph for this motion will be a curve. We will see how to find its velocity at a specific instant.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Constant Velocity}
+\begin{alertblock}{[Graph based on Figure 2.12]}
+A position vs. time graph for a jet car.
+\begin{itemize}
+    \item The y-axis is Position (m), x-axis is Time (s).
+    \item The graph is a straight line with a positive slope.
+    \item The line starts at a y-intercept of $d_o = 400$ m.
+    \item The slope is labeled $\bar{v} = \Delta d / \Delta t$.
+\end{itemize}
+\end{alertblock}
+\pause
+\textbf{Interpretation}: The car is moving at a constant positive velocity. Its initial position was 400 m from the origin.
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Changing Velocity}
+\begin{alertblock}{[Graph based on Figure 2.13]}
+A position vs. time graph for a jet car that is speeding up.
+\begin{itemize}
+    \item The graph is a curve that gets progressively steeper.
+    \item Two points, P and Q, are marked on the curve.
+    \item A tangent line is drawn at point P, showing a shallow slope.
+    \item A tangent line is drawn at point Q, showing a much steeper slope.
+\end{itemize}
+\end{alertblock}
+\pause
+\textbf{Interpretation}: The slope is increasing, so the velocity is increasing. To find the \alert{instantaneous velocity} at any point, we find the slope of the line tangent to the curve at that point.
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Calculating Velocity from a Graph}
+\framesubtitle{Problem based on Ch. 2, Worked Example p. 36}
+\begin{block}{Problem}
+Find the average velocity of the car whose position is graphed in Figure 2.12 (the constant velocity graph).
+\end{block}
+\pause
+\begin{block}{Strategy}
+Velocity is the slope of the position-time graph. We can pick any two points on the line to calculate the slope.
+\end{block}
+\pause
+\begin{block}{Solution}
+\begin{itemize}
+    \item Choose two points from the graph:
+    \begin{itemize}
+        \item Point 1: ($t_i = 0.50$ s, $d_i = 525$ m)
+        \item Point 2: ($t_f = 6.4$ s, $d_f = 2000$ m)
+    \end{itemize}
+    \item Calculate the slope:
+    \[ \vec{v}_{avg} = \frac{\Delta d}{\Delta t} = \frac{d_f - d_i}{t_f - t_i} \]
+    \[ \vec{v}_{avg} = \frac{2000 \, \text{m} - 525 \, \text{m}}{6.4 \, \text{s} - 0.50 \, \text{s}} = \frac{1475 \, \text{m}}{5.9 \, \text{s}} \]
+    \item \boxed{\vec{v}_{avg} \approx 250 \text{ m/s}}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Instantaneous Velocity}
+\framesubtitle{Problem based on Ch. 2, Worked Example p. 38}
+\begin{block}{Problem}
+Calculate the instantaneous velocity of the jet car at t = 25 s from the curved graph in Figure 2.13.
+\end{block}
+\pause
+\begin{block}{Strategy}
+The instantaneous velocity is the slope of the tangent line at that point. The book provides the endpoints for the tangent line at t=25s.
+\end{block}
+\pause
+\begin{block}{Solution}
+\begin{itemize}
+    \item The tangent line at t=25s passes through:
+    \begin{itemize}
+        \item Point 1: ($t_i = 19$ s, $d_i = 1300$ m)
+        \item Point 2: ($t_f = 32$ s, $d_f = 3120$ m)
+    \end{itemize}
+    \item \alert{Let's calculate the slope together:}
+    \[ \vec{v}_{inst} = \frac{\Delta d}{\Delta t} = \frac{3120 \, \text{m} - 1300 \, \text{m}}{32 \, \text{s} - 19 \, \text{s}} = ? \]
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Independent Practice}
+\framesubtitle{Problem based on Ch. 2, Practice Problem 16, p. 39}
+\begin{block}{Problem}
+Calculate the average velocity of the object shown in the graph below over the whole time interval (0 s to 80 s).
+\end{block}
+\begin{alertblock}{[Graph from p. 39]}
+A position-time graph.
+\begin{itemize}
+    \item Starts at position 5 m at t=0 s.
+    \item Ends at position 25 m at t=80 s.
+    \item The line is composed of several straight segments with different slopes.
+\end{itemize}
+\end{alertblock}
+\note{Hint: For average velocity, you only need the start and end points!}
+\end{frame}
+
+\section{2.4 Velocity vs. Time Graphs}
+
+\begin{frame}
+\frametitle{Key Concepts: Velocity vs. Time Graphs}
+A graph of velocity (y-axis) versus time (x-axis) also tells a story.
+
+\begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{block}{Slope = Acceleration}
+        \begin{itemize}
+            \item The slope of a v-t graph is the rate of change of velocity.
+            \[ \text{slope} = \frac{\text{rise}}{\text{run}} = \frac{\Delta v}{\Delta t} \]
+            \item This is the definition of \alert{acceleration ($a$)}.
+            \item A positive slope means speeding up in the positive direction.
+            \item A negative slope means slowing down (or speeding up in the negative direction).
+            \item A zero slope means \alert{constant velocity}.
+        \end{itemize}
+    \end{block}
+    \pause
+    \column{0.48\textwidth}
+    \begin{block}{Area = Displacement}
+        \begin{itemize}
+            \item The area under the v-t graph represents displacement.
+            \item Think of `Area = height × width`.
+            \item For a v-t graph, this is `v × t`.
+            \item Since $d = v \cdot t$, the \alert{area is the displacement ($\Delta d$)}.
+            \item For sloped lines, this area might be a triangle or trapezoid.
+        \end{itemize}
+    \end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: V-T Graph}
+\begin{alertblock}{[Graph based on Figure 2.18]}
+A velocity vs. time graph for a jet car speeding up.
+\begin{itemize}
+    \item The y-axis is Velocity (m/s), x-axis is Time (s).
+    \item The graph is a straight line with a constant positive slope, starting from a positive y-intercept.
+    \item The slope is labeled $a = \Delta v / \Delta t$.
+\end{itemize}
+\end{alertblock}
+\pause
+\begin{itemize}
+    \item \textbf{To find acceleration}: Calculate the \alert{slope} of the line.
+    \item \textbf{To find displacement}: Calculate the \alert{area under the line} (a trapezoid in this case).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Analyzing a V-T Graph}
+\framesubtitle{Problem based on Ch. 2, Worked Example p. 46}
+\begin{block}{Problem}
+Using the v-t graph (Fig 2.18), find (a) the displacement and (b) the acceleration of the jet car.
+\end{block}
+\pause
+\begin{block}{Solution (a): Displacement = Area}
+\begin{itemize}
+    \item The shape under the graph from t=0 to t=30s is a trapezoid.
+    \item Area = $\frac{1}{2}(b_1 + b_2)h$. Here, the "height" is along the time axis.
+    \item $b_1$ (initial velocity) $\approx 20$ m/s, $b_2$ (final velocity) $\approx 160$ m/s, $h$ (time) = 30 s.
+    \item Area = $\frac{1}{2}(20 + 160)\text{m/s} \cdot 30\text{s} = \frac{1}{2}(180)\text{m/s} \cdot 30\text{s} = \alert{2700 \text{ m}}$.
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{Solution (b): Acceleration = Slope}
+\begin{itemize}
+    \item Pick two points: (5 s, 40 m/s) and (25 s, 140 m/s).
+    \[ a = \frac{\Delta v}{\Delta t} = \frac{140 - 40 \, \text{m/s}}{25 - 5 \, \text{s}} = \frac{100 \, \text{m/s}}{20 \, \text{s}} = \alert{5 \, \text{m/s}^2} \]
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Reading a V-T Graph}
+\framesubtitle{Problem based on Ch. 2, Practice Problem 20, p. 50}
+\begin{block}{Problem}
+Consider the velocity vs. time graph of a person in an elevator. What is the instantaneous velocity at t = 10 s and t = 23 s?
+\end{block}
+\begin{alertblock}{[Graph from p. 50]}
+A v-t graph showing three segments:
+\begin{itemize}
+    \item From 0 to 3s: velocity increases linearly to 3 m/s.
+    \item From 3 to 18s: velocity is constant at 3 m/s (horizontal line).
+    \item From 18 to 23s: velocity decreases linearly to 0 m/s.
+\end{itemize}
+\end{alertblock}
+\pause
+\begin{itemize}
+    \item How do we find instantaneous velocity from a v-t graph? \alert{We just read the value off the y-axis!}
+    \item At t = 10 s, the velocity is...?
+    \item At t = 23 s, the velocity is...?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Independent Practice}
+\framesubtitle{Problem based on Ch. 2, Practice Problem 21, p. 51}
+\begin{block}{Problem}
+Using the same elevator graph, calculate the net displacement and the average velocity for the entire time interval shown (0 to 23 s).
+\end{block}
+\begin{alertblock}{[Graph from p. 50]}
+A v-t graph showing three segments for an elevator ride.
+\end{alertblock}
+\begin{itemize}
+    \item \textbf{Hint for Displacement}: Find the total area under the graph. Break the trapezoid into a triangle, a rectangle, and another triangle.
+    \item \textbf{Hint for Avg. Velocity}: Once you have the total displacement, use $\vec{v}_{avg} = \frac{\Delta \vec{d}}{\Delta t}$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\begin{block}{Key Takeaways}
+    \begin{itemize}
+        \item \textbf{Scalars} have magnitude only (distance, speed). \textbf{Vectors} have magnitude and direction (displacement, velocity). \pause
+        \item An object's motion depends on the \textbf{reference frame}. \pause
+        \item \textbf{Position vs. Time Graphs}:
+        \begin{itemize}
+            \item \alert{Slope} is \textbf{velocity}.
+        \end{itemize} \pause
+        \item \textbf{Velocity vs. Time Graphs}:
+        \begin{itemize}
+            \item \alert{Slope} is \textbf{acceleration}.
+            \item \alert{Area under the graph} is \textbf{displacement}.
+        \end{itemize}
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

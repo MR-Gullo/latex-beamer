@@ -15,7 +15,7 @@ Please follow these instructions carefully:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../latex-beamer/shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:`<specified sections>`}
@@ -192,6 +192,7 @@ For all example problems in your "I do, We do, You do" series, structure solutio
 This method should be explicitly shown in your "I do" example and referenced in your "We do" and "You do" problems to reinforce consistent problem-solving methodology. The rearrange step in the Equation section is particularly important for developing algebraic manipulation skills.
 
 **Critical Requirement**: Always place GUESS components in separate frames to prevent overfull vbox LaTeX compilation errors. Specifically:
+
 - Frame 1: G (Givens) and U (Unknown) in separate columns side-by-side
 - Frame 2: E (Equation) alone in its own frame
 - Frame 3: S (Substitute) and S (Solve) together in one frame
