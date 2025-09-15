@@ -1,4 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n}{pi\PYGZus{}approx}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{3.14159}\PYG{p}{;}
-\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{gravity}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{9.81}\PYG{p}{;}
-\end{MintedVerbatim}

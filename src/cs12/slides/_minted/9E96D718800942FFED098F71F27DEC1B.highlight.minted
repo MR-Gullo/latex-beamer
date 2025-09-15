@@ -1,5 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{      }\PYG{c+c1}{// Size of the int data type}
-\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{my\PYGZus{}var}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}
-\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{my\PYGZus{}var}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{   }\PYG{c+c1}{// Size of the variable my\PYGZus{}var}
-\end{MintedVerbatim}

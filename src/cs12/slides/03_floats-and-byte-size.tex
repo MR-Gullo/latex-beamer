@@ -1,13 +1,12 @@
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
 \usepackage{../../../shared/templates/ds9_theme}
-\usepackage{minted} % For code highlighting
 
 % Title page configuration
-\title[Floats and Memory]{PHYS11 CH:Lesson 3}
-\subtitle{Floats, Byte-Size, and Type-Conversion}
+\title[Floats and Memory]{CS12 CH:Floats, Memory, and Input}
+\subtitle{Data Types, Memory Size, and User Input}
 \author[Mr. Gullo]{Mr. Gullo}
-\date[Sep 10, 2025]{September 10, 2025}
+\date[Sep 15, 2025]{September 15, 2025}
 
 \begin{document}
 \frame{\titlepage}
@@ -19,7 +18,7 @@
     \item Differentiate between integer division and floating-point division.
     \item Define fundamental memory concepts: Bit and Byte.
     \item Use the \texttt{sizeof()} operator to determine the memory footprint of various data types.
-    \item Understand binary (base-2) numbers and how to convert them to decimal (base-10).
+    \item Understand binary (base-2) numbers and how to represent them in C++.
     \item Use \texttt{cin} to get input from a user via the console.
 \end{itemize}
 \end{frame}
@@ -39,30 +38,32 @@
 \end{block}
 \begin{itemize}
     \item Floats support standard arithmetic operations: addition, subtraction, multiplication, and division.
-    \item \alert{Modulo division (\%)} is generally not supported for floating-point types.
+    \item \alert{Modulo division (\%)} is not supported for floating-point types.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Concept: Integer vs. Floating-Point Division}
-When you perform division in C++, the type of the numbers involved matters greatly.
+\frametitle{Essential Equations: Integer vs. Float Division}
+The data type of your numbers dictates the type of division C++ performs.
+
 \begin{itemize}
-    \item \textbf{Integer Division}: If you divide two integers, C++ performs integer division. This means the result is also an integer, and any fractional part is \alert{truncated} (cut off, not rounded).
+    \item \textbf{Integer Division}: If both operands are integers, the result is an integer. Any fractional part is \alert{truncated} (cut off).
     \begin{itemize}
-        \item Example: \texttt{5 / 4} evaluates to \texttt{1}.
+        \item \[ \frac{5}{4} \rightarrow 1 \]
     \end{itemize}
     \pause
-    \item \textbf{Floating-Point Division}: If at least one of the numbers in the division is a float, C++ performs floating-point division, and the result is a float.
+    \item \textbf{Floating-Point Division}: If at least one operand is a float, the result is a float, preserving the decimal.
     \begin{itemize}
-        \item Example: \texttt{5.0 / 4} evaluates to \texttt{1.25}.
+        \item \[ \frac{5.0}{4} \rightarrow 1.25 \]
     \end{itemize}
 \end{itemize}
+\pause
 \vspace{1em}
-Next, we will look at a code demo to see this in action.
+This is one of the most common sources of bugs for new programmers!
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Visualization: Division in Action}
+\frametitle{Code Demo: Division in Action}
 \textbf{Demo File:} \texttt{03\_intDivision.cpp} (Interactive - comprehensive demo)
 \newline
 \vspace{1em}
@@ -77,10 +78,10 @@ int main()
 {
    float a = 5;
    float b = 4;
-   float c = 5/4; // What will c be?
+   float c = 5/4; // Integer division occurs *before* assignment!
 
    cout << "5/4 = " << 5/4 << endl;         // Integer division
-   cout << "c = " << c << endl;             // Result of integer division
+   cout << "c = " << c << endl;             // Result of prior integer division
    cout << "5.0/4 = " << 5.0/4 << endl;     // Floating-point division
    cout << "5/4.0 = " << 5/4.0 << endl;     // Floating-point division
    cout << "a/b = " << a/b << endl;         // Floating-point division (vars)
@@ -88,14 +89,6 @@ int main()
    return 0;
 }
 \end{minted}
-\pause
-\begin{block}{Terminal Output}
-\texttt{5/4 = 1} \newline
-\texttt{c = 1} \newline
-\texttt{5.0/4 = 1.25} \newline
-\texttt{5/4.0 = 1.25} \newline
-\texttt{a/b = 1.25}
-\end{block}
 \end{frame}
 
 \section{Memory and Data Types}
@@ -121,64 +114,80 @@ All data in a computer is stored as binary digits, or bits.
 \end{frame}
 
 \begin{frame}
+\frametitle{Context: Visualizing a Byte}
+The terms "bit" and "byte" can be abstract. To make this concrete, the next slide visualizes how 8 individual bits come together to form a single byte, the fundamental unit used to measure the size of data types like \texttt{int} and \texttt{char}.
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualization: 8 Bits in 1 Byte}
+\centering
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.9, transform shape]
+    % Draw the outer Byte box
+    \node[draw, thick, ds9blue, minimum width=8.4cm, minimum height=1.4cm, label={[ds9gold]above:\textbf{1 Byte}}] (byte) at (0,0) {};
+
+    % Draw the 8 Bit boxes inside
+    \foreach \i [count=\xi from 0] in {7,6,5,4,3,2,1,0} {
+        \node[draw, thick, minimum size=1cm] (bit\i) at (-3.5+\xi, 0) {$2^\i$};
+    }
+\end{tikzpicture}
+\caption{A byte is a sequence of 8 bits.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
 \frametitle{Key Concept: The \texttt{sizeof()} Operator}
 Different data types require different amounts of memory to store their values.
 
 \begin{itemize}
-    \item C++ has a built-in operator called \texttt{sizeof()} that tells you how much memory (in bytes) a data type or variable occupies.
-    \item This is useful for understanding memory usage and can vary slightly between different computer architectures (e.g., 32-bit vs. 64-bit systems).
+    \item C++ has a built-in operator called \texttt{sizeof()} that tells you how much memory (in \alert{bytes}) a data type or variable occupies.
+    \item This can vary slightly between computer architectures (e.g., 32-bit vs. 64-bit systems).
 \end{itemize}
 \pause
 \begin{block}{Syntax Examples}
 \texttt{sizeof(int)} \hfill \textit{// Returns the size of an integer} \\
-\texttt{sizeof(float)} \hfill \textit{// Returns the size of a float} \\
-\texttt{int myAge = 30;} \\
 \texttt{sizeof(myAge)} \hfill \textit{// Returns the size of the variable myAge}
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{Visualization: Data Type Sizes}
-This program demonstrates how to use \texttt{sizeof()} to check the memory allocation for common data types.
-
-\textbf{Demo File:} \texttt{03\_dataTypesSizes.cpp} (Demo, also Answer Key for Q3.d)
-\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    cout << "Integers:\n";
-    cout << "Data Type    Bytes\n"
-        << "---------     -----" << endl
-        << "int           " << sizeof(int) << endl
-        << "char          " << sizeof(char) << endl
-        << "bool          " << sizeof(bool) << endl;
-
-    cout << "\nFloating-Point:\n";
-    cout << "Data Type    Bytes\n"
-        << "---------     -----" << endl
-        << "float         " << sizeof(float) << endl
-        << "double        " << sizeof(double) << endl;
-  return 0;
-}
-\end{minted}
-\pause
-\begin{block}{Typical Terminal Output}
-\texttt{Integers:} \newline
-\texttt{Data Type    Bytes} \newline
-\texttt{---------     -----} \newline
-\texttt{int           4} \newline
-\texttt{char          1} \newline
-\texttt{bool          1} \newline
-\newline
-\texttt{Floating-Point:} \newline
-\texttt{Data Type    Bytes} \newline
-\texttt{---------     -----} \newline
-\texttt{float         4} \newline
-\texttt{double        8}
-\end{block}
+\begin{frame}
+\frametitle{Context: Visualizing Data Type Sizes}
+Running a program to see the output of \texttt{sizeof()} is useful, but a graph can help us instantly compare the memory footprint of different data types. The next slide shows a bar chart of common data types and their typical sizes in bytes on a 64-bit system.
 \end{frame}
+
+\begin{frame}
+\frametitle{Visualization: Typical Data Type Sizes}
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=20pt,
+    width=\textwidth,
+    height=0.7\textheight,
+    enlarge x limits=0.2,
+    xlabel={Data Type},
+    ylabel={Size in Bytes},
+    symbolic x coords={bool, char, int, float, double},
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    ymin=0,
+    axis line style={-},
+    tickwidth=0pt,
+    label style={font=\bfseries},
+    tick label style={font=\small},
+    ymajorgrids=true,
+    grid style=dashed,
+]
+\addplot[fill=ds9blue, draw=none] coordinates {
+    (bool,1) (char,1) (int,4) (float,4) (double,8)
+};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
 
 \section{Number Systems}
 
@@ -202,8 +211,8 @@ int main()
     \item When you print the number, C++ will automatically display it in its decimal (base-10) representation.
 \end{itemize}
 \vspace{1em}
-\textbf{Demo File Snippet from:} \texttt{03\_intDivision.cpp}
-\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
+\textbf{Code Example:}
+\begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
 
 int main()
@@ -220,7 +229,7 @@ int main()
 
 \section{User Input}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Key Concept: Getting Input with \texttt{cin}}
 \begin{itemize}
     \item To make programs interactive, we need a way to get input from the user.
@@ -240,41 +249,116 @@ cout << "You are " << age << " years old." << endl;
 \end{block}
 \end{frame}
 
-\section{Practice Problems}
+\section{Code Quality}
+
+\begin{frame}
+\frametitle{Why Does Code Formatting Matter?}
+\begin{itemize}
+    \item \textbf{Readability}: Code is read far more often than it is written. Consistent formatting makes it easier for you (and others) to understand what the code is doing.
+    \pause
+    \item \textbf{Collaboration}: When working in a team, a shared style guide prevents confusion and makes code reviews more efficient. Everyone is on the same page.
+    \pause
+    \item \textbf{Maintainability}: It's easier to find bugs and add new features to well-formatted code. Messy code hides problems.
+    \pause
+    \item \textbf{Professionalism}: Just like good grammar and spelling in an essay, good formatting is a sign of a careful and professional programmer.
+\end{itemize}
+\vspace{1em}
+\begin{alertblock}{The Golden Rule}
+Write your code as if the person who has to maintain it is a violent psychopath who knows where you live.
+\end{alertblock}
+\end{frame}
 
 \begin{frame}[fragile]
-\frametitle{I Do: Grade Calculator}
-\textbf{Problem:} Write a program that asks for the total possible score on a test, then calculates and displays the minimum score required to earn grades from A to F based on predefined percentages.
-\vspace{1em}
+\frametitle{Common C++ Formatting Rules}
+While style guides vary, most agree on a few key principles:
 
 \begin{columns}[T]
-\begin{column}{0.4\textwidth}
-    \textbf{G - Givens}
-    \begin{itemize}
-        \item Grade A = 86\%
-        \item Grade B = 73\%
-        \item Grade C+ = 67\%
-        \item Grade C = 60\%
-        \item Grade C- = 50\%
-        \item User input for total score.
-    \end{itemize}
-    \textbf{U - Unknown}
-    \begin{itemize}
-        \item The score cutoff for each letter grade.
-    \end{itemize}
-    \textbf{E - Equation/Logic}
-    \begin{itemize}
-        \item \small{\texttt{cutoff = total * \% / 100}}
-    \end{itemize}
+\begin{column}{0.5\textwidth}
+    \textbf{Bad (Inconsistent)}
+    \begin{minted}[fontsize=\tiny, frame=lines]{cpp}
+#include <iostream>
+int main(){
+int x=5;int y=10;
+if(x<y){
+std::cout<<"x is smaller"<<std::endl;
+}
+return 0;}
+    \end{minted}
 \end{column}
-\begin{column}{0.6\textwidth}
-    \textbf{S - Substitute \& Solve}
-    \newline
-    \textbf{Demo File:} \texttt{03\_grades.cpp}
-    \begin{minted}[fontsize=\tiny, frame=lines, linenos]{cpp}
+\begin{column}{0.5\textwidth}
+    \textbf{Good (Consistent)}
+    \begin{minted}[fontsize=\tiny, frame=lines]{cpp}
+#include <iostream>
+
+int main() {
+    int x = 5;
+    int y = 10;
+
+    if (x < y) {
+        std::cout << "x is smaller" << std::endl;
+    }
+
+    return 0;
+}
+    \end{minted}
+\end{column}
+\end{columns}
+
+\begin{itemize}
+    \item \textbf{Indentation}: Use a consistent number of spaces (e.g., 4) for each level of nesting.
+    \item \textbf{Spacing}: Use spaces around operators (`=`, `+`, `<`) to improve readability.
+    \item \textbf{Brace Style}: Pick one style for your curly braces ("\{\}") and stick with it.
+\end{itemize}
+\end{frame}
+
+\section{Practice with U-P-E-R}
+
+\begin{frame}
+\frametitle{I Do: Grade Calculator - Understand}
+\textbf{Problem:} Write a program that asks for the total possible score on a test, then calculates and displays the minimum score required to earn grades from A to F based on predefined percentages.
+
+\vspace{1em}
+\textbf{U - Understand the Problem}
+\begin{itemize}
+    \item \textbf{Goal:} Calculate grade cutoffs based on a total score.
+    \item \textbf{Inputs:} One integer for the total possible score.
+    \item \textbf{Outputs:} Three sentences, each stating the required score for a specific grade (A, B, C-).
+    \item \textbf{Example:} If input is 100, output for an A (86\%) should be 86. If input is 200, output for an A should be 172.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Grade Calculator - Plan}
+\textbf{P - Plan the Logic}
+\begin{itemize}
+    \item \textbf{Variables:}
+    \begin{itemize}
+        \item \texttt{int totalScore;} to store user input.
+        \item Use constants for percentages to avoid "magic numbers":
+        \item \texttt{const int GRADE\_A = 86;}
+        \item \texttt{const int GRADE\_B = 73;}
+        \item \texttt{const int GRADE\_C\_MINUS = 50;}
+    \end{itemize}
+    \item \textbf{Steps (Pseudocode):}
+    \begin{enumerate}
+        \item Display a prompt asking for the total possible score.
+        \item Read the user's input into the \texttt{totalScore} variable.
+        \item Calculate the cutoff for an 'A': \texttt{totalScore * 86 / 100}.
+        \item Print the result for 'A'.
+        \item Repeat calculation and printing for 'B' (73\%) and 'C-' (50\%).
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{I Do: Grade Calculator - Execute \& Review}
+\textbf{File:} \texttt{03\_grades.cpp} (Answer Key)
+\vspace{1em}
+\textbf{E - Execute (Write the Code)}
+\begin{minted}[fontsize=\tiny, frame=lines, linenos]{cpp}
 #include <iostream>
 using namespace std;
-
+// Grade cutoffs
 const int GRADE_A = 86;
 const int GRADE_B = 73;
 const int GRADE_C_MINUS = 50;
@@ -284,74 +368,114 @@ int main() {
    cout << "Enter total possible score: ";
    cin >> totalScore;
 
-   cout << "For an A, a mark of " 
-        << totalScore * GRADE_A / 100 
-        << " is required."  << endl;
-   cout << "For a B, a mark of " 
-        << totalScore * GRADE_B / 100 
-        << " is required."  << endl;
-   cout << "For a C-, a mark of " 
-        << totalScore * GRADE_C_MINUS / 100
-        << " is required."  << endl;
+   cout << "For an A, a mark of " << totalScore * GRADE_A / 100 << " is required." << endl;
+   cout << "For a B, a mark of " << totalScore * GRADE_B / 100 << " is required." << endl;
+   cout << "For a C-, a mark of " << totalScore * GRADE_C_MINUS / 100 << " is required." << endl;
    return 0;
 }
-    \end{minted}
-\end{column}
-\end{columns}
+\end{minted}
+\pause
+\textbf{R - Review and Test}
+\begin{itemize}
+    \item Compile and run. Does it build without errors?
+    \item Test with example: Input 100. Output is 86, 73, 50. Correct.
+    \item Test with another value: Input 200. Output is 172, 146, 100. Correct.
+    \item What happens if we use floats? The result would be more precise, but here integer truncation is acceptable.
+\end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{We Do: Arithmetic Sequence - Understand \& Plan}
+\textbf{Problem (Q5a):} Write a code chunk that prompts for $n$ and displays the $n^{th}$ number in the sequence: $11, 15, 19, 23, \dots$
+
+\vspace{1em}
+\textbf{U - Understand}
+\begin{itemize}
+    \item \textbf{Goal:} Find the value of a term in a sequence.
+    \item \textbf{Inputs:} The term number, $n$.
+    \item \textbf{Outputs:} A sentence showing the term and its value.
+    \item \textbf{Example:} If $n=1$, output is 11. If $n=3$, output is 19.
+\end{itemize}
+\pause
+\textbf{P - Plan}
+\begin{itemize}
+    \item \textbf{Variables:} \texttt{int n;} for input, \texttt{int termValue;} for result.
+    \item \textbf{Formula:} The $n^{th}$ term of an arithmetic sequence is $a_n = a + (n-1)d$.
+    \item Here, first term $a=11$ and common difference $d=4$.
+\end{itemize}
+\end{frame}
 
 \begin{frame}[fragile]
-\frametitle{We Do: Arithmetic Sequence Term}
-\textbf{Problem (Q5a):} Write a code chunk that prompts the user for $n$ and displays the $n^{th}$ number in the arithmetic sequence: $11, 15, 19, 23, \dots$
-\vspace{1em}
+\frametitle{We Do: Arithmetic Sequence - Execute \& Review}
+\textbf{E - Execute the Plan} \\
+Based on our plan, how do we translate the formula $a_n = 11 + (n-1) \times 4$ into C++?
 
-\textbf{G - Givens}
-\begin{itemize}
-    \item First term, $a = 11$.
-    \item Common difference, $d = 4$.
-    \item The term number, $n$, will be provided by the user.
-\end{itemize}
-\pause
-\textbf{U - Unknown}
-\begin{itemize}
-    \item The value of the $n^{th}$ term.
-\end{itemize}
-\pause
-\textbf{E - Equation}
-\begin{itemize}
-    \item The formula for the $n^{th}$ term of an arithmetic sequence is:
-    \[ a_n = a + (n-1)d \]
-\end{itemize}
-\pause
-\textbf{S - Substitute \& Solve (Code)}
-\begin{minted}[fontsize=\scriptsize, frame=lines, breaklines]{cpp}
-int n;
-cout << "Enter the term number you want to find: ";
-cin >> n;
+\begin{minted}[fontsize=\small, frame=lines, breaklines]{cpp}
+#include <iostream>
+using namespace std;
 
-// Calculate the nth term using the formula
-int term = _______________________; // What goes here?
+int main() {
+    int n;
+    cout << "Enter the term number you want to find: ";
+    cin >> n;
 
-cout << "Term " << n << " is " << term << endl;
+    // Calculate the nth term using the formula
+    int termValue = _______________________; // What goes here?
+
+    cout << "Term " << n << " is " << termValue << endl;
+    return 0;
+}
 \end{minted}
+\pause
+\textbf{R - Review}
+\begin{itemize}
+    \item Once we fill in the blank, we'll test with our examples.
+    \item If we input 3, does \texttt{11 + (3-1)*4} give us 19? Yes.
+\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{You Do: Arithmetic Series Sum}
-\textbf{Problem (Q5b):} Write a code chunk that prompts the user for $n$ and displays the \textit{sum} of the first $n$ terms in the following arithmetic series:
-\[ 2 + 5 + 8 + 11 + \dots \]
-\vspace{1em}
+\textbf{Problem (Q5b):} Write a code chunk that prompts for $n$ and displays the \textit{sum} of the first $n$ terms in the series: $2 + 5 + 8 + 11 + \dots$
 
-\begin{alertblock}{Your Task}
-Use the GUESS method to plan your solution.
+\vspace{1em}
+\begin{alertblock}{Your Task: Use the U-P-E-R Method}
 \begin{enumerate}
-    \item Identify the Givens (first term, common difference).
-    \item Identify the Unknown (the sum).
-    \item Find the correct Equation for the sum of an arithmetic series.
-    \item Substitute your values into the formula and implement it in C++.
+    \item \textbf{Understand}: What are the inputs/outputs? Work out an example for $n=3$ (sum should be $2+5+8=15$).
+    \item \textbf{Plan}: What variables do you need? What is the formula for the sum of an arithmetic series? ($S_n = \frac{n}{2}(2a + (n-1)d)$).
+    \item \textbf{Execute}: Translate your plan and formula into C++.
+    \item \textbf{Review}: Test your code with your example case. Does it work?
 \end{enumerate}
 \end{alertblock}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Homework Submission: 03 First C++ Calculations }
+
+\begin{alertblock}{Instructions}
+\begin{itemize}
+    \item Submit your completed Jupyter Notebook file named: \\ \texttt{firstnameLastname\_floats.ipynb}.
+    \pause
+    \item Complete all questions in Parts 1 through 6 from the lesson notebook.
+    \pause
+    \item You are encouraged to collaborate with your peers, but the work you submit must be your own.
+    \pause
+    \item Please make an effort to organize and format your document similarly to the sample provided in class.
+\end{itemize}
+\end{alertblock}
+
+\pause
+
+\begin{block}{Grading Breakdown}
+    \begin{itemize}
+        \item Content Completion (Parts 1-6): \textbf{6 pts}
+        \item Formatting and Structure: \textbf{1 pt}
+    \end{itemize}
+\end{block}
+
 \end{frame}
 
 \begin{frame}
@@ -362,6 +486,7 @@ Use the GUESS method to plan your solution.
     \item The \texttt{sizeof()} operator returns the memory size of a data type in \alert{bytes}.
     \item Computers store data using the \alert{binary} (base-2) system. In C++, you can denote a binary number with the \texttt{0b} prefix.
     \item \texttt{cin >> variable;} is the standard way to read user input from the console.
+    \item The \alert{U-P-E-R} method provides a structured approach to solving programming problems.
 \end{itemize}
 \end{frame}
 

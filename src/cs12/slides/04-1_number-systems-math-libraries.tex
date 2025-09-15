@@ -1,0 +1,415 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
+
+% Title page configuration
+\title[Number Systems and Math]{CS12 CH:4.2-4.6: Data Types, Number Systems, and Math Functions}
+\subtitle{Floating-Point Numbers, Memory, Binary, and User Input}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Sep 15, 2025]{September 15, 2025}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{itemize}
+    \item Understand and use the \texttt{float} data type for calculations involving decimals.
+    \item Explain the concepts of \alert{bit} and \alert{byte} and use the \texttt{sizeof()} operator to determine data type memory usage.
+    \item Convert numbers between binary (base-2) and decimal (base-10) systems.
+    \item Use \texttt{cin} to get user input from the console.
+    \item Apply mathematical functions from the \texttt{<cmath>} library to solve problems.
+\end{itemize}
+\end{frame}
+
+\section{Floats and Memory}
+
+\begin{frame}
+\frametitle{Key Concept: The \texttt{float} Data Type}
+\begin{itemize}
+    \item The \texttt{float} data type is used to store numbers that have a fractional part (decimal points).
+    \item It stands for "floating-point" number.
+    \item \textbf{Declaration Example:}
+\end{itemize}
+\begin{block}{C++ Declaration}
+\texttt{float pi = 3.14159;} \\
+\texttt{float price = 19.99;}
+\end{block}
+\begin{itemize}
+    \item It supports standard arithmetic operations: +, -, *, /
+    \item \alert{Note:} Modulo division (\%) is not supported for floats.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Integer vs. Floating-Point Division}
+\begin{alertblock}{Critical Concept}
+The type of division C++ performs depends on the data types of the operands.
+\begin{itemize}
+    \item If \textbf{both} operands are integers, C++ performs \alert{integer division} (the result is truncated).
+    \item If \textbf{at least one} operand is a float or double, C++ performs \alert{floating-point division}.
+\end{itemize}
+\end{alertblock}
+
+\pause
+
+\textbf{Demo File:} \texttt{01\_floatDivision.cpp} (Interactive Demo)
+\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a = 5;
+    float b = 4;
+    float c = 5 / 4; // Integer division occurs HERE, then result is stored
+
+    cout << "5/4 = " << 5/4 << endl;         // int / int   -> integer division
+    cout << "c = " << c << endl;             // result of int division stored as float
+    cout << "5.0/4 = " << 5.0/4 << endl;     // double / int  -> float division
+    cout << "a/b = " << a/b << endl;         // float / float -> float division
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Concepts: Bit and Byte}
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+        \begin{block}{Bit}
+            \begin{itemize}
+                \item The smallest unit of data in a computer.
+                \item A single binary value, either \alert{0} or \alert{1}.
+            \end{itemize}
+        \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+        \begin{block}{Byte}
+            \begin{itemize}
+                \item A group of \alert{8 bits}.
+                \item The standard unit of measurement for memory size.
+            \end{itemize}
+        \end{block}
+    \end{column}
+\end{columns}
+\vfill
+\alert{[An image showing a single bit (a 0 or 1) and a byte as a collection of 8 bits]}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Memory Size: The \texttt{sizeof()} Operator}
+The \texttt{sizeof()} operator is a compile-time operator that determines the size in \alert{bytes} of a variable or data type.
+
+\vfill
+
+\textbf{Demo File:} \texttt{02\_sizeofDemo.cpp} (Interactive Demo)
+\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "sizeof(char)  = " << sizeof(char) << " bytes" << endl;
+    cout << "sizeof(int)   = " << sizeof(int) << " bytes" << endl;
+    cout << "sizeof(float) = " << sizeof(float) << " bytes" << endl;
+    cout << "sizeof(double) = " << sizeof(double) << " bytes" << endl;
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+\section{Number Systems}
+
+\begin{frame}
+\frametitle{Number Systems: Base-10 vs. Base-2}
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+        \begin{block}{Decimal (Base-10)}
+            \begin{itemize}
+                \item The system we use every day.
+                \item Uses ten digits (0-9).
+                \item Each place value is a power of 10.
+                \item Example: $827_{10}$ is\\ $8 \times 10^2 + 2 \times 10^1 + 7 \times 10^0$
+            \end{itemize}
+        \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+        \begin{block}{Binary (Base-2)}
+            \begin{itemize}
+                \item The system computers use.
+                \item Uses two digits (0 and 1).
+                \item Each place value is a power of 2.
+                \item Example: $101_2$ is\\ $1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 5_{10}$
+            \end{itemize}
+        \end{block}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Converting Binary to Decimal}
+To convert a binary number to decimal, multiply each binary digit by its corresponding power of 2 and sum the results.
+
+\begin{exampleblock}{Example: Convert $1011001_2$ to decimal}
+\begin{align*}
+1011001_2 &= (1 \times 2^6) + (0 \times 2^5) + (1 \times 2^4) + (1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) \\
+&= (1 \times 64) + (0 \times 32) + (1 \times 16) + (1 \times 8) + (0 \times 4) + (0 \times 2) + (1 \times 1) \\
+&= 64 + 0 + 16 + 8 + 0 + 0 + 1 \\
+&= 89_{10}
+\end{align*}
+\end{exampleblock}
+
+\begin{alertblock}{Binary in C++}
+You can write a binary number in C++ by prefixing it with \texttt{0b}.
+\end{alertblock}
+\texttt{int myNum = 0b1011001; // Same as int myNum = 89;}
+\end{frame}
+
+\section{Math and Input}
+
+\begin{frame}
+\frametitle{User Input with \texttt{cin} and Math with \texttt{<cmath>}}
+\begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+        \begin{block}{\texttt{cin} for Input}
+            \begin{itemize}
+                \item The \texttt{cin} object reads input from the keyboard.
+                \item It requires the \texttt{<iostream>} library.
+                \item The extraction operator \texttt{>>} is used to get the value.
+                \item \textbf{Syntax:} \texttt{cin >> variable;}
+            \end{itemize}
+        \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+        \begin{block}{\texttt{<cmath>} for Math}
+            \begin{itemize}
+                \item A library for advanced math functions.
+                \item Must be included: \texttt{\#include <cmath>}
+                \item Provides functions like:
+                \begin{itemize}
+                    \item \texttt{sqrt(x)} - square root
+                    \item \texttt{pow(base, exp)} - power
+                \end{itemize}
+            \end{itemize}
+        \end{block}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Essential Equations}
+Here are the key formulas for our upcoming problems.
+
+\begin{block}{Distance Formula}
+The distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ is:
+$$ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$
+\end{block}
+
+\begin{block}{Radioactive Decay}
+The amount of a radioactive isotope remaining after $t$ years is:
+$$ remaining = (original) \times e^{-0.00012t} $$
+where $e \approx 2.71828$. Note: In C++, you can use \texttt{exp(x)} for $e^x$.
+\end{block}
+
+\begin{block}{Fourth Root}
+The fourth root of a number $x$ is $x^{1/4}$, which can be calculated in C++ using \texttt{pow(x, 0.25)}.
+\end{block}
+\end{frame}
+
+\section{Problem Solving with U-P-E-R}
+
+\begin{frame}
+\frametitle{I Do: Distance Between Two Points - Understand}
+\textbf{Problem:} Write a C++ program to calculate the distance between two points with coordinates \alert{(7, 12)} and \alert{(3, 9)}.
+
+\vfill
+\textbf{U - Understand the Problem}
+\begin{itemize}
+    \item \textbf{Goal:} Calculate the distance between two specific points.
+    \item \textbf{Inputs:} The coordinates are given (hard-coded). No user input needed.
+    \begin{itemize}
+        \item Point 1: (7, 12)
+        \item Point 2: (3, 9)
+    \end{itemize}
+    \item \textbf{Outputs:} A sentence displaying the final calculated distance. E.g., "The distance is: 5.0".
+    \item \textbf{Example:} By hand, $d = \sqrt{(3 - 7)^2 + (9 - 12)^2} = \sqrt{(-4)^2 + (-3)^2} = \sqrt{16 + 9} = \sqrt{25} = 5$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Distance Between Two Points - Plan}
+\textbf{P - Plan the Logic}
+\begin{itemize}
+    \item \textbf{Variables:} We need containers for our coordinates and the final answer.
+    \begin{itemize}
+        \item \texttt{float x1 = 7.0, y1 = 12.0;}
+        \item \texttt{float x2 = 3.0, y2 = 9.0;}
+        \item \texttt{float distance;}
+    \end{itemize}
+    \item \textbf{Steps (Pseudocode):}
+    \begin{enumerate}
+        \item Include the necessary libraries: \texttt{iostream} for output and \texttt{cmath} for math functions.
+        \item In \texttt{main()}, declare and initialize variables for the coordinates.
+        \item Declare a variable to hold the distance.
+        \item Calculate the distance using the formula. Remember to use \texttt{sqrt()} for the square root and \texttt{pow(base, 2)} for squaring.
+        \item Store the result in the \texttt{distance} variable.
+        \item Print the result in a clear, descriptive sentence.
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{I Do: Distance Between Two Points - Execute \& Review}
+\textbf{E - Execute (Write the Code)}
+\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
+#include <iostream>
+#include <cmath> // Required for sqrt() and pow()
+
+int main() {
+    // Hard-coded values for this specific problem
+    float x1 = 7.0, y1 = 12.0;
+    float x2 = 3.0, y2 = 9.0;
+    float distance;
+
+    // Calculate the distance using the formula
+    distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+
+    // Display the result
+    std::cout << "The distance is: " << distance << std::endl;
+
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+
+\begin{frame}
+    
+\textbf{R - Review and Test}
+\begin{itemize}
+    \item Compile the code to check for syntax errors.
+    \item Run the program.
+    \item Check the output: Does it display "The distance is: 5"? Yes.
+    \item The code correctly implements the plan and matches our hand-calculated example.
+\end{itemize}
+\textbf{Answer Key:} \texttt{exercises/exercise2.cpp} (Hidden - general solution)
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Fourth Root - Understand}
+\textbf{Problem:} Write a C++ program to find the fourth root of \alert{1728.896400}. You will need to use the \texttt{pow()} function from the \texttt{<cmath>} library.
+
+\vfill
+\textbf{U - Understand the Problem}
+\begin{itemize}
+    \item \textbf{Goal:} Find the fourth root of a specific number.
+    \item \textbf{Inputs:} The number is given: \texttt{1728.896400}.
+    \item \textbf{Outputs:} A sentence showing the result.
+    \item \textbf{Example:} We know $6^4 = 1296$ and $7^4 = 2401$. Our answer should be between 6 and 7.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Fourth Root - Plan}
+\textbf{P - Plan the Logic}
+\begin{itemize}
+    \item \textbf{Variables:} What variables do we need? \pause
+    \begin{itemize}
+        \item \texttt{float number = 1728.896400;}
+        \item \texttt{float fourthRoot;}
+    \end{itemize} \pause
+    \item \textbf{Steps (Pseudocode):}
+    \begin{enumerate}
+        \item Include libraries. Which ones? \alert{<iostream> and <cmath>} \pause
+        \item Declare and initialize our number variable. \pause
+        \item Declare a variable for the answer. \pause
+        \item Calculate the fourth root. A fourth root is the same as raising to what power? \alert{The 1/4 or 0.25 power}. \pause
+        \item Which C++ function do we use? \alert{\texttt{pow(base, exponent)}}. \pause
+        \item Print the result.
+    \end{enumerate}
+\end{itemize}
+\textbf{Answer Key:} \texttt{exercises/exercise1.cpp} (Hidden - general solution)
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{We Do: Fourth Root - Execute \& Review}
+\textbf{E - Execute (Let's Write the Code)}
+\begin{minted}[fontsize=\small, frame=lines, linenos, highlightlines={7}]{cpp}
+#include <iostream>
+#include <cmath>
+
+int main() {
+    float number = 1728.896400;
+    float fourthRoot;
+    // How do we write the next line?
+\end{minted}
+\pause
+\begin{minted}[fontsize=\small, frame=lines, linenos, highlightlines={7}]{cpp}
+    fourthRoot = pow(number, 0.25);
+
+    std::cout << "The fourth root is: " << fourthRoot << std::endl;
+    return 0;
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Radioactive Decay}
+\textbf{Problem:} Using the formula $remaining = (original)e^{-0.00012t}$, write a C++ program to determine the amount of radioactive material remaining after \alert{1000 years}, assuming an initial amount of \alert{100 grams}. Use the \texttt{exp()} function from \texttt{<cmath>}.
+
+\vfill
+
+\begin{block}{Your Turn: Use the U-P-E-R Method}
+\begin{itemize}
+    \item \textbf{U - Understand}: What is the goal? What are your inputs and outputs? Work a simple example (e.g., t=0).
+    \item \textbf{P - Plan}: What variables will you need? Write down the steps in pseudocode. The formula is $remaining = 100 \times \exp(-0.00012 \times 1000)$.
+    \item \textbf{E - Execute}: Translate your plan into a C++ program.
+    \item \textbf{R - Review}: Compile and run your code. Does the answer make sense? (Should be less than 100).
+\end{itemize}
+\end{block}
+\vfill
+\textbf{Answer Key:} \texttt{exercises/exercise3.cpp} (Hidden - general solution)
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework and Practice}
+
+\begin{block}{Assignment: 04 Number Systems Exercises}
+    \begin{itemize}
+        \item \textbf{Task:} Complete Parts 0-3 of the Jupyter Notebook (`.ipynb`) file as demonstrated in class.
+        \item \textbf{Submission:} Submit your completed file named in the format \alert{\texttt{firstnameLastname\_floats.ipynb}}.
+        \item \textbf{Due Date:} \alert{Tuesday, September 23, 2025 at 11:59 pm}.
+        \item \textbf{Collaboration:} I encourage you to work together, but the final document you submit must be your own.
+    \end{itemize}
+\end{block}
+
+\vfill
+
+\begin{alertblock}{Additional Practice}
+For more practice with number systems, please complete the assigned modules on the \textbf{Delta Math} website. Focus on:
+\begin{itemize}
+    \item Binary Conversions
+    \item Hexadecimal Conversions
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+    \item \texttt{float} and \texttt{double} are essential for calculations with decimal numbers.
+    \item Division with integers \alert{truncates}, while division involving a float results in a float.
+    \item \texttt{sizeof()} tells you how many \alert{bytes} a data type occupies in memory.
+    \item Computers use the \alert{binary} (base-2) number system.
+    \item The \texttt{cin} object is used to get input from the user.
+    \item The \texttt{<cmath>} library provides powerful math functions like \texttt{sqrt()}, \texttt{pow()}, and \texttt{exp()}.
+    \item The \alert{U-P-E-R method} provides a structured way to solve programming problems.
+\end{itemize}
+\end{frame}
+
+\end{document}
