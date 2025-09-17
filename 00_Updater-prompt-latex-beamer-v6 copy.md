@@ -13,7 +13,7 @@ Please follow these instructions carefully:
 \usepackage{../../../../latex-beamer/shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Short Title]{PHYS11 CH:`<specified sections>`}
+\title[Short Title]{PHYS12 CH:`<specified sections>`}
 \subtitle{`<appropriate subtitle>`}
 \author[Mr. Gullo]{Mr. Gullo}
 \date[`<short date>`]{`<full date>`}
@@ -345,6 +345,8 @@ Please proceed with your comprehensive presentation outline using the <presentat
 please ensure the following progression from physics 11 to physics 12 is explicitly included at the directly after the learning objectives and that the outline makes sense with this new context. Please ensure that the sections not included are explicitly listed as reading homework just before the summary frame. Please ensure the presentation had flow by adding \pause to strategically reveal information on the slides.
 
 **IMPORTANT**: Follow all formatting guidelines especially for titles, colors, and fragile frames to ensure successful compilation.
+
+**EXTREMELY IMPORTANT**: you must maintain image references as much as possible from the original presentation.
 
 The sections to focus on and the Chapter contents follow next:
 </final_instructions>
