@@ -346,7 +346,10 @@ please ensure the following progression from physics 11 to physics 12 is explici
 
 **IMPORTANT**: Follow all formatting guidelines especially for titles, colors, and fragile frames to ensure successful compilation.
 
-**EXTREMELY IMPORTANT**: you must maintain image references as much as possible from the original presentation.
+**EXTREMELY IMPORTANT**: you must maintain image references as much as possible from the original presentation. do NOT remove any \begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{image-ref.png}
+\end{figure} from the orginal presentation EVER!
 
 The sections to focus on and the Chapter contents follow next:
 </final_instructions>
