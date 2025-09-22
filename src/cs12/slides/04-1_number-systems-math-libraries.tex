@@ -3,10 +3,10 @@
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Number Systems and Math]{CS12 CH:4.2-4.6: Data Types, Number Systems, and Math Functions}
-\subtitle{Floating-Point Numbers, Memory, Binary, and User Input}
+\title[Number Systems and Math]{CS12 CH:4: Number Systems and Math}
+\subtitle{Binary, Hexadecimal, and the Math Library}
 \author[Mr. Gullo]{Mr. Gullo}
-\date[Sep 15, 2025]{September 15, 2025}
+\date[Sep 19, 2025]{September 19, 2025}
 
 \begin{document}
 \frame{\titlepage}
@@ -16,113 +16,17 @@
 \begin{frame}
 \frametitle{Learning Objectives}
 \begin{itemize}
-    \item Understand and use the \texttt{float} data type for calculations involving decimals.
-    \item Explain the concepts of \alert{bit} and \alert{byte} and use the \texttt{sizeof()} operator to determine data type memory usage.
-    \item Convert numbers between binary (base-2) and decimal (base-10) systems.
-    \item Use \texttt{cin} to get user input from the console.
-    \item Apply mathematical functions from the \texttt{<cmath>} library to solve problems.
+    \item Convert numbers between decimal (base-10), binary (base-2), and hexadecimal (base-16).
+    \item Explain why hexadecimal is a convenient representation for binary data.
+    \item Perform basic binary addition.
+    \item Apply mathematical functions from the \texttt{<cmath>} library to solve complex problems.
 \end{itemize}
-\end{frame}
-
-\section{Floats and Memory}
-
-\begin{frame}
-\frametitle{Key Concept: The \texttt{float} Data Type}
-\begin{itemize}
-    \item The \texttt{float} data type is used to store numbers that have a fractional part (decimal points).
-    \item It stands for "floating-point" number.
-    \item \textbf{Declaration Example:}
-\end{itemize}
-\begin{block}{C++ Declaration}
-\texttt{float pi = 3.14159;} \\
-\texttt{float price = 19.99;}
-\end{block}
-\begin{itemize}
-    \item It supports standard arithmetic operations: +, -, *, /
-    \item \alert{Note:} Modulo division (\%) is not supported for floats.
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Integer vs. Floating-Point Division}
-\begin{alertblock}{Critical Concept}
-The type of division C++ performs depends on the data types of the operands.
-\begin{itemize}
-    \item If \textbf{both} operands are integers, C++ performs \alert{integer division} (the result is truncated).
-    \item If \textbf{at least one} operand is a float or double, C++ performs \alert{floating-point division}.
-\end{itemize}
-\end{alertblock}
-
-\pause
-
-\textbf{Demo File:} \texttt{01\_floatDivision.cpp} (Interactive Demo)
-\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
-#include <iostream>
-using namespace std;
-
-int main() {
-    float a = 5;
-    float b = 4;
-    float c = 5 / 4; // Integer division occurs HERE, then result is stored
-
-    cout << "5/4 = " << 5/4 << endl;         // int / int   -> integer division
-    cout << "c = " << c << endl;             // result of int division stored as float
-    cout << "5.0/4 = " << 5.0/4 << endl;     // double / int  -> float division
-    cout << "a/b = " << a/b << endl;         // float / float -> float division
-    return 0;
-}
-\end{minted}
-\end{frame}
-
-\begin{frame}
-\frametitle{Key Concepts: Bit and Byte}
-\begin{columns}[T]
-    \begin{column}{0.5\textwidth}
-        \begin{block}{Bit}
-            \begin{itemize}
-                \item The smallest unit of data in a computer.
-                \item A single binary value, either \alert{0} or \alert{1}.
-            \end{itemize}
-        \end{block}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-        \begin{block}{Byte}
-            \begin{itemize}
-                \item A group of \alert{8 bits}.
-                \item The standard unit of measurement for memory size.
-            \end{itemize}
-        \end{block}
-    \end{column}
-\end{columns}
-\vfill
-\alert{[An image showing a single bit (a 0 or 1) and a byte as a collection of 8 bits]}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Memory Size: The \texttt{sizeof()} Operator}
-The \texttt{sizeof()} operator is a compile-time operator that determines the size in \alert{bytes} of a variable or data type.
-
-\vfill
-
-\textbf{Demo File:} \texttt{02\_sizeofDemo.cpp} (Interactive Demo)
-\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
-#include <iostream>
-using namespace std;
-
-int main() {
-    cout << "sizeof(char)  = " << sizeof(char) << " bytes" << endl;
-    cout << "sizeof(int)   = " << sizeof(int) << " bytes" << endl;
-    cout << "sizeof(float) = " << sizeof(float) << " bytes" << endl;
-    cout << "sizeof(double) = " << sizeof(double) << " bytes" << endl;
-    return 0;
-}
-\end{minted}
 \end{frame}
 
 \section{Number Systems}
 
 \begin{frame}
-\frametitle{Number Systems: Base-10 vs. Base-2}
+\frametitle{Review: Base-10 (Decimal) vs. Base-2 (Binary)}
 \begin{columns}[T]
     \begin{column}{0.5\textwidth}
         \begin{block}{Decimal (Base-10)}
@@ -148,54 +52,154 @@ int main() {
 \end{frame}
 
 \begin{frame}
+\frametitle{Key Concept: Hexadecimal (Base-16)}
+\begin{itemize}
+    \item A base-16 number system used as a \alert{human-friendly representation} of binary.
+    \item Uses 16 symbols: \textbf{0-9} and \textbf{A-F}.
+    \item \textbf{A} represents 10, \textbf{B} is 11, ..., \textbf{F} is 15.
+    \item Why use it? It's compact. One hex digit represents a group of four binary digits (a "nibble").
+\end{itemize}
+
+\begin{exampleblock}{Example}
+It's much easier to read and write \texttt{0xAF} than \texttt{10101111}.
+\end{exampleblock}
+
+\begin{alertblock}{Hexadecimal in C++}
+You can write a hexadecimal number in C++ by prefixing it with \texttt{0x}.
+\end{alertblock}
+\texttt{int myNum = 0x1A; // Same as int myNum = 26;}
+\end{frame}
+
+\begin{frame}
+\frametitle{Context: Visualizing Binary to Hexadecimal}
+\begin{itemize}
+    \item The key to converting between binary and hexadecimal is to think in groups of four.
+    \item A group of 4 bits is often called a \alert{nibble}.
+    \item A nibble can represent $2^4 = 16$ different values (from 0 to 15).
+    \item This maps perfectly to the 16 symbols in hexadecimal (0 to F).
+    \item On the next slide, we will see a direct mapping from every possible 4-bit binary value to its corresponding hexadecimal digit.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualization: Binary to Hexadecimal Mapping}
+\begin{center}
+\begin{tikzpicture}
+\node[draw=ds9blue, thick, rounded corners, inner sep=10pt] {
+\begin{tabular}{ccc|ccc}
+\hline
+\textbf{Hex} & \textbf{Decimal} & \textbf{Binary} & \textbf{Hex} & \textbf{Decimal} & \textbf{Binary} \\
+\hline
+\texttt{0} & 0  & \texttt{0000} & \texttt{8} & 8  & \texttt{1000} \\
+\texttt{1} & 1  & \texttt{0001} & \texttt{9} & 9  & \texttt{1001} \\
+\texttt{2} & 2  & \texttt{0010} & \texttt{A} & 10 & \texttt{1010} \\
+\texttt{3} & 3  & \texttt{0011} & \texttt{B} & 11 & \texttt{1011} \\
+\texttt{4} & 4  & \texttt{0100} & \texttt{C} & 12 & \texttt{1100} \\
+\texttt{5} & 5  & \texttt{0101} & \texttt{D} & 13 & \texttt{1101} \\
+\texttt{6} & 6  & \texttt{0110} & \texttt{E} & 14 & \texttt{1110} \\
+\texttt{7} & 7  & \texttt{0111} & \texttt{F} & 15 & \texttt{1111} \\
+\hline
+\end{tabular}
+};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}
 \frametitle{Converting Binary to Decimal}
 To convert a binary number to decimal, multiply each binary digit by its corresponding power of 2 and sum the results.
 
 \begin{exampleblock}{Example: Convert $1011001_2$ to decimal}
 \begin{align*}
-1011001_2 &= (1 \times 2^6) + (0 \times 2^5) + (1 \times 2^4) + (1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) \\
-&= (1 \times 64) + (0 \times 32) + (1 \times 16) + (1 \times 8) + (0 \times 4) + (0 \times 2) + (1 \times 1) \\
+1011001_2 &= (1 \times 2^6) + (0 \times 2^5) + (1 \times 2^4) \\
+&\quad + (1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) \\
+&= (1 \times 64) + (0 \times 32) + (1 \times 16) \\
+&\quad + (1 \times 8) + (0 \times 4) + (0 \times 2) + (1 \times 1) \\
 &= 64 + 0 + 16 + 8 + 0 + 0 + 1 \\
 &= 89_{10}
 \end{align*}
 \end{exampleblock}
+\end{frame}
 
+\begin{frame}
+\frametitle{Binary in C++}
 \begin{alertblock}{Binary in C++}
 You can write a binary number in C++ by prefixing it with \texttt{0b}.
 \end{alertblock}
 \texttt{int myNum = 0b1011001; // Same as int myNum = 89;}
-\end{frame}
 
-\section{Math and Input}
+\begin{alertblock}{Hexadecimal in C++}
+You can write a hexadecimal number in C++ by prefixing it with \texttt{0x}.
+\end{alertblock}
+\texttt{int myNum = 0x1A; // Same as int myNum = 26;}
+\end{frame}
 
 \begin{frame}
-\frametitle{User Input with \texttt{cin} and Math with \texttt{<cmath>}}
-\begin{columns}[T]
-    \begin{column}{0.5\textwidth}
-        \begin{block}{\texttt{cin} for Input}
-            \begin{itemize}
-                \item The \texttt{cin} object reads input from the keyboard.
-                \item It requires the \texttt{<iostream>} library.
-                \item The extraction operator \texttt{>>} is used to get the value.
-                \item \textbf{Syntax:} \texttt{cin >> variable;}
-            \end{itemize}
-        \end{block}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-        \begin{block}{\texttt{<cmath>} for Math}
-            \begin{itemize}
-                \item A library for advanced math functions.
-                \item Must be included: \texttt{\#include <cmath>}
-                \item Provides functions like:
-                \begin{itemize}
-                    \item \texttt{sqrt(x)} - square root
-                    \item \texttt{pow(base, exp)} - power
-                \end{itemize}
-            \end{itemize}
-        \end{block}
-    \end{column}
-\end{columns}
+\frametitle{Converting Decimal to Binary}
+To convert a decimal number to binary, repeatedly divide the decimal number by 2 and record the remainders. The binary result is the sequence of remainders read in \alert{reverse order}.
+
+\begin{exampleblock}{Example: Convert $29_{10}$ to binary}
+\begin{tabular}{r c l}
+ $29 / 2$ & = 14 & Remainder \textbf{1} \\
+ $14 / 2$ & = 7  & Remainder \textbf{0} \\
+ $7 / 2$  & = 3  & Remainder \textbf{1} \\
+ $3 / 2$  & = 1  & Remainder \textbf{1} \\
+ $1 / 2$  & = 0  & Remainder \textbf{1} \\
+\end{tabular}
+\vfill
+Reading the remainders from bottom to top gives: \alert{$11101_2$}.
+\end{exampleblock}
 \end{frame}
+
+\begin{frame}
+\frametitle{Number System Operations: Binary Addition}
+Binary addition follows simple rules, similar to decimal addition.
+
+\begin{block}{Rules for Binary Addition}
+\begin{itemize}
+    \item $0 + 0 = 0$
+    \item $0 + 1 = 1$
+    \item $1 + 0 = 1$
+    \item $1 + 1 = 0$, carry the 1
+    \item $1 + 1 + 1 = 1$, carry the 1
+\end{itemize}
+\end{block}
+
+\begin{exampleblock}{Example: Add $1011_2 + 0110_2$}
+\begin{center}
+\begin{tabular}{r}
+\texttt{  111  (carry bits)} \\
+\texttt{  1011 (11 decimal)} \\
+\texttt{+ 0110 ( 6 decimal)} \\
+\texttt{------} \\
+\texttt{ 10001 (17 decimal)}
+\end{tabular}
+\end{center}
+\end{exampleblock}
+\end{frame}
+
+\section{C++ Math Library}
+
+\begin{frame}
+\frametitle{Advanced Math with \texttt{<cmath>}}
+\begin{itemize}
+    \item C++ provides a library for advanced mathematical functions.
+    \item To use it, you must include the header file:
+\end{itemize}
+\begin{block}{C++ Include Directive}
+\texttt{\#include <cmath>}
+\end{block}
+\begin{itemize}
+    \item It provides many useful functions, including:
+    \begin{itemize}
+        \item \texttt{sqrt(x)} - Calculates the square root of \texttt{x}.
+        \item \texttt{pow(base, exp)} - Raises \texttt{base} to the power of \texttt{exp}.
+        \item \texttt{exp(x)} - Calculates the value of $e^x$.
+        \item And many more like \texttt{sin()}, \texttt{cos()}, \texttt{log()}, etc.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Essential Equations}
@@ -220,84 +224,113 @@ The fourth root of a number $x$ is $x^{1/4}$, which can be calculated in C++ usi
 \section{Problem Solving with U-P-E-R}
 
 \begin{frame}
-\frametitle{I Do: Distance Between Two Points - Understand}
-\textbf{Problem:} Write a C++ program to calculate the distance between two points with coordinates \alert{(7, 12)} and \alert{(3, 9)}.
+\frametitle{I Do: Binary to Decimal - Understand}
+\textbf{Problem:} Convert the binary number \alert{$11010_2$} to its decimal equivalent.
 
 \vfill
 \textbf{U - Understand the Problem}
 \begin{itemize}
-    \item \textbf{Goal:} Calculate the distance between two specific points.
-    \item \textbf{Inputs:} The coordinates are given (hard-coded). No user input needed.
-    \begin{itemize}
-        \item Point 1: (7, 12)
-        \item Point 2: (3, 9)
-    \end{itemize}
-    \item \textbf{Outputs:} A sentence displaying the final calculated distance. E.g., "The distance is: 5.0".
-    \item \textbf{Example:} By hand, $d = \sqrt{(3 - 7)^2 + (9 - 12)^2} = \sqrt{(-4)^2 + (-3)^2} = \sqrt{16 + 9} = \sqrt{25} = 5$.
+    \item \textbf{Goal:} Find the base-10 value of a given base-2 number.
+    \item \textbf{Inputs:} The binary number $11010_2$.
+    \item \textbf{Outputs:} A single integer in base-10.
+    \item \textbf{Example:} We know $10_2$ should be $2_{10}$.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{I Do: Distance Between Two Points - Plan}
+\frametitle{I Do: Binary to Decimal - Plan}
 \textbf{P - Plan the Logic}
 \begin{itemize}
-    \item \textbf{Variables:} We need containers for our coordinates and the final answer.
-    \begin{itemize}
-        \item \texttt{float x1 = 7.0, y1 = 12.0;}
-        \item \texttt{float x2 = 3.0, y2 = 9.0;}
-        \item \texttt{float distance;}
-    \end{itemize}
-    \item \textbf{Steps (Pseudocode):}
+    \item \textbf{Variables:} No variables needed for this manual calculation.
+    \item \textbf{Steps (Algorithm):}
     \begin{enumerate}
-        \item Include the necessary libraries: \texttt{iostream} for output and \texttt{cmath} for math functions.
-        \item In \texttt{main()}, declare and initialize variables for the coordinates.
-        \item Declare a variable to hold the distance.
-        \item Calculate the distance using the formula. Remember to use \texttt{sqrt()} for the square root and \texttt{pow(base, 2)} for squaring.
-        \item Store the result in the \texttt{distance} variable.
-        \item Print the result in a clear, descriptive sentence.
+        \item Write down the binary number: 1 1 0 1 0.
+        \item Assign place values (powers of 2) from right to left, starting with $2^0$.
+        \begin{center}
+        $2^4 \quad 2^3 \quad 2^2 \quad 2^1 \quad 2^0$
+        \end{center}
+        \item Multiply each binary digit by its corresponding place value.
+        \item Sum all the resulting products.
     \end{enumerate}
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{I Do: Distance Between Two Points - Execute \& Review}
-\textbf{E - Execute (Write the Code)}
-\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
-#include <iostream>
-#include <cmath> // Required for sqrt() and pow()
-
-int main() {
-    // Hard-coded values for this specific problem
-    float x1 = 7.0, y1 = 12.0;
-    float x2 = 3.0, y2 = 9.0;
-    float distance;
-
-    // Calculate the distance using the formula
-    distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-
-    // Display the result
-    std::cout << "The distance is: " << distance << std::endl;
-
-    return 0;
-}
-\end{minted}
+\begin{frame}
+\frametitle{I Do: Binary to Decimal - Execute}
+\textbf{E - Execute the Plan}
+\begin{align*}
+11010_2 &= (1 \times 2^4) + (1 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (0 \times 2^0) \\
+\pause
+&= (1 \times 16) + (1 \times 8) + (0 \times 4) + (1 \times 2) + (0 \times 1) \\
+\pause
+&= 16 + 8 + 0 + 2 + 0 \\
+\pause
+&= 26_{10}
+\end{align*}
 \end{frame}
 
-
 \begin{frame}
-    
+\frametitle{I Do: Binary to Decimal - Review}
 \textbf{R - Review and Test}
 \begin{itemize}
-    \item Compile the code to check for syntax errors.
-    \item Run the program.
-    \item Check the output: Does it display "The distance is: 5"? Yes.
-    \item The code correctly implements the plan and matches our hand-calculated example.
+    \item The final answer is \alert{$26_{10}$}.
+    \item Does this seem reasonable?
+    \item Let's check our place value calculations: $2^0=1, 2^1=2, 2^2=4, 2^3=8, 2^4=16$. Correct.
+    \item Let's check the sum: $16 + 8 + 2 = 26$. Correct.
+    \item The process was followed correctly and the arithmetic is verified.
 \end{itemize}
-\textbf{Answer Key:} \texttt{exercises/exercise2.cpp} (Hidden - general solution)
 \end{frame}
 
 \begin{frame}
-\frametitle{We Do: Fourth Root - Understand}
+\frametitle{We Do (Concept): Decimal to Binary}
+\textbf{Problem:} Convert the decimal number \alert{$42_{10}$} to its binary equivalent.
+
+\vfill
+\textbf{U - Understand the Problem}
+\begin{itemize}
+    \item \textbf{Goal:} Find the base-2 representation of $42_{10}$.
+    \item \textbf{Inputs:} The integer 42.
+    \item \textbf{Outputs:} A string of 1s and 0s.
+\end{itemize}
+\pause
+\textbf{P - Plan the Logic}
+\begin{itemize}
+    \item \textbf{Steps (Algorithm):}
+    \begin{enumerate}
+        \item We will use the \alert{division-by-2} method.
+        \item Divide the number by 2 and write down the remainder.
+        \item Use the quotient from the previous step as the new number to divide.
+        \item Repeat until the quotient is 0.
+        \item Read the list of remainders \alert{backwards}.
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do (Concept): Decimal to Binary - Execute \& Review}
+\textbf{E - Execute the Plan}
+\begin{tabular}{r c l}
+ $42 \div 2$ & = 21 & Remainder \alert{?} \pause \textbf{0} \\
+ $21 \div 2$ & = 10 & Remainder \alert{?} \pause \textbf{1} \\
+ $10 \div 2$ & = 5  & Remainder \alert{?} \pause \textbf{0} \\
+ $5 \div 2$  & = 2  & Remainder \alert{?} \pause \textbf{1} \\
+ $2 \div 2$  & = 1  & Remainder \alert{?} \pause \textbf{0} \\
+ $1 \div 2$  & = 0  & Remainder \alert{?} \pause \textbf{1} \\
+\end{tabular}
+
+\vfill
+\pause
+\textbf{R - Review and Test}
+\begin{itemize}
+    \item Reading the remainders backwards, we get: \alert{$101010_2$}.
+    \item Let's check by converting back:
+    \item $1 \times 32 + 0 \times 16 + 1 \times 8 + 0 \times 4 + 1 \times 2 + 0 \times 1$
+    \item $32 + 8 + 2 = 42$. The conversion is correct!
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do (Coding): Fourth Root - Understand}
 \textbf{Problem:} Write a C++ program to find the fourth root of \alert{1728.896400}. You will need to use the \texttt{pow()} function from the \texttt{<cmath>} library.
 
 \vfill
@@ -311,7 +344,7 @@ int main() {
 \end{frame}
 
 \begin{frame}
-\frametitle{We Do: Fourth Root - Plan}
+\frametitle{We Do (Coding): Fourth Root - Plan}
 \textbf{P - Plan the Logic}
 \begin{itemize}
     \item \textbf{Variables:} What variables do we need? \pause
@@ -333,7 +366,7 @@ int main() {
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{We Do: Fourth Root - Execute \& Review}
+\frametitle{We Do (Coding): Fourth Root - Execute \& Review}
 \textbf{E - Execute (Let's Write the Code)}
 \begin{minted}[fontsize=\small, frame=lines, linenos, highlightlines={7}]{cpp}
 #include <iostream>
@@ -352,11 +385,28 @@ int main() {
     return 0;
 }
 \end{minted}
-
 \end{frame}
 
 \begin{frame}
-\frametitle{You Do: Radioactive Decay}
+\frametitle{You Do (Practice): Distance Between Two Points}
+\textbf{Problem:} Write a C++ program to calculate the distance between two points with coordinates \alert{(7, 12)} and \alert{(3, 9)}. You must use the \texttt{sqrt()} and \texttt{pow()} functions from the \texttt{<cmath>} library.
+
+\vfill
+
+\begin{block}{Your Turn: Use the U-P-E-R Method}
+\begin{itemize}
+    \item \textbf{U - Understand}: What is the goal? What are your inputs and outputs? Calculate the expected answer by hand first: $d = \sqrt{(3-7)^2 + (9-12)^2} = \sqrt{16+9} = \sqrt{25} = 5$.
+    \item \textbf{P - Plan}: What variables will you need for x1, y1, x2, y2, and the distance? Write down the steps in pseudocode.
+    \item \textbf{E - Execute}: Translate your plan into a C++ program. Remember to \texttt{\#include <cmath>}.
+    \item \textbf{R - Review}: Compile and run your code. Does the output match your hand-calculated answer of 5?
+\end{itemize}
+\end{block}
+\vfill
+\textbf{Answer Key:} \texttt{exercises/exercise2.cpp} (Hidden - general solution)
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do (Practice): Radioactive Decay}
 \textbf{Problem:} Using the formula $remaining = (original)e^{-0.00012t}$, write a C++ program to determine the amount of radioactive material remaining after \alert{1000 years}, assuming an initial amount of \alert{100 grams}. Use the \texttt{exp()} function from \texttt{<cmath>}.
 
 \vfill
@@ -372,6 +422,8 @@ int main() {
 \vfill
 \textbf{Answer Key:} \texttt{exercises/exercise3.cpp} (Hidden - general solution)
 \end{frame}
+
+\section{Assignment}
 
 \begin{frame}
 \frametitle{Homework and Practice}
@@ -394,7 +446,6 @@ For more practice with number systems, please complete the assigned modules on t
     \item Hexadecimal Conversions
 \end{itemize}
 \end{alertblock}
-
 \end{frame}
 
 \section{Summary}
@@ -402,13 +453,15 @@ For more practice with number systems, please complete the assigned modules on t
 \begin{frame}
 \frametitle{Summary}
 \begin{itemize}
-    \item \texttt{float} and \texttt{double} are essential for calculations with decimal numbers.
-    \item Division with integers \alert{truncates}, while division involving a float results in a float.
-    \item \texttt{sizeof()} tells you how many \alert{bytes} a data type occupies in memory.
-    \item Computers use the \alert{binary} (base-2) number system.
-    \item The \texttt{cin} object is used to get input from the user.
-    \item The \texttt{<cmath>} library provides powerful math functions like \texttt{sqrt()}, \texttt{pow()}, and \texttt{exp()}.
-    \item The \alert{U-P-E-R method} provides a structured way to solve programming problems.
+    \item Computers operate using the \alert{binary} (base-2) number system.
+    \item \alert{Hexadecimal} (base-16) is a compact, human-readable representation of binary, where 1 hex digit maps to 4 bits.
+    \item We can convert between number systems using specific algorithms:
+    \begin{itemize}
+        \item Binary $\rightarrow$ Decimal: Sum of powers of 2.
+        \item Decimal $\rightarrow$ Binary: Repeated division by 2.
+    \end{itemize}
+    \item The \texttt{<cmath>} library in C++ provides powerful functions for complex mathematical operations like square roots (\texttt{sqrt}) and powers (\texttt{pow}).
+    \item The \alert{U-P-E-R method} is a reliable strategy for breaking down and solving both conceptual and programming problems.
 \end{itemize}
 \end{frame}
 
