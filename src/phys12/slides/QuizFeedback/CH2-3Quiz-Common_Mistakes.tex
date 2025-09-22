@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quiz 2-3 Solution Guide}
+\lhead{Physics 12}
+\cfoot{\thepage}
+
+\title{CH 2-3 Quiz: Solution Guide for Common Mistakes}
+\author{Physics 12}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Target Questions for Review}
+
+These are the two questions that showed the lowest performance on Quiz 2-3. Review these solutions carefully to understand the correct approach.
+
+\subsection{Essential Kinematic Equations}
+
+\begin{align}
+y &= y_0 + v_0 t + \frac{1}{2}at^2 \tag{4}\\
+v &= v_0 + at \tag{1}\\
+v^2 &= v_0^2 + 2a\Delta y \tag{3}
+\end{align}
+
+Remember: $a_y = -g = -9.80$ m/s² for vertical motion
+
+\section{Problem 1: Hot-Air Balloon Coin Drop}
+
+\textbf{Common Error:} Many students forgot that the balloon is rising, giving the coin an initial upward velocity.
+
+\textbf{G - Given:} $y_0 = 300$ m, $y = 0$ m, $v_0 = 10.0$ m/s, $a = -9.80$ m/s$^2$
+
+\textbf{U - Unknown:} Time $t$
+
+\textbf{E - Equation:} $y = y_0 + v_0 t + \frac{1}{2}at^2$
+
+\textbf{S - Substitute and Solve:}
+$$0 = 300 + 10.0t + \frac{1}{2}(-9.80)t^2$$
+$$4.90t^2 - 10.0t - 300 = 0$$
+$$t = \frac{10.0 \pm \sqrt{(10.0)^2 - 4(4.90)(-300)}}{2(4.90)} = \boxed{8.91 \text{ s}}$$
+
+\textbf{Key Insight:} The initial upward velocity means the coin travels higher before falling, increasing total time.
+
+\section{Problem 2: Distance vs. Displacement}
+
+\textbf{Common Error:} Confusing distance (total path length) with displacement (straight-line from start to finish).
+
+\textbf{Given:} 3 blocks north + 1 block east, each block = 120 m
+
+\textbf{Distance:} Sum of actual path traveled
+$$\text{Distance} = (3 \times 120) + (1 \times 120) = 480 \text{ m}$$
+
+\textbf{Displacement:} Straight-line from start to finish
+$$\text{Displacement} = \sqrt{(360)^2 + (120)^2} = 380 \text{ m}$$
+
+\textbf{Key Difference:} Distance = 480 m (actual path), Displacement = 380 m (net result)
+
+\section{Quick Review Tips}
+
+\begin{itemize}
+\item \textbf{Sign conventions:} Upward velocity = positive, gravity = negative
+\item \textbf{Initial conditions:} Don't forget initial velocity when objects are dropped from moving platforms
+\item \textbf{Distance vs. Displacement:} Distance = total path, Displacement = net change in position
+\item \textbf{Check units:} Always include units in final answers
+\end{itemize}
+
+\end{document}
