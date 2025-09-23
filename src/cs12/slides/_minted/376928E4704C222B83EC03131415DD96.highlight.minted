@@ -1,0 +1,23 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{   }\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n}{x\PYGZus{}1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x\PYGZus{}2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y\PYGZus{}2}\PYG{p}{;}
+
+\PYG{+w}{   }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Enter the first x\PYGZhy{}value: }\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{   }\PYG{n}{cin}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{x\PYGZus{}1}\PYG{p}{;}
+\PYG{+w}{   }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Enter the first y\PYGZhy{}value: }\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{   }\PYG{n}{cin}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{y\PYGZus{}1}\PYG{p}{;}
+\PYG{+w}{   }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Enter the second x\PYGZhy{}value: }\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{   }\PYG{n}{cin}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{x\PYGZus{}2}\PYG{p}{;}
+\PYG{+w}{   }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Enter the second y\PYGZhy{}value: }\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{   }\PYG{n}{cin}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{y\PYGZus{}2}\PYG{p}{;}
+
+\PYG{+w}{   }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{The slope between the two points is: }\PYG{l+s}{\PYGZdq{}}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{y\PYGZus{}2}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{y\PYGZus{}1}\PYG{p}{)}\PYG{o}{/}\PYG{p}{(}\PYG{n}{x\PYGZus{}2}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{x\PYGZus{}1}\PYG{p}{)}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{endl}\PYG{p}{;}
+
+\PYG{+w}{   }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

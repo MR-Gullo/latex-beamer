@@ -1,12 +1,13 @@
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{minted}
 
 % Title page configuration
-\title[Number Systems and Math]{CS12 CH:4: Number Systems and Math}
-\subtitle{Binary, Hexadecimal, and the Math Library}
+\title[Number Systems and Math]{CS12 CH: Number Systems and Math Library Functions}
+\subtitle{Base Conversions and the \texttt{<cmath>} Library}
 \author[Mr. Gullo]{Mr. Gullo}
-\date[Sep 19, 2025]{September 19, 2025}
+\date[Sep 22, 2025]{September 22, 2025}
 
 \begin{document}
 \frame{\titlepage}
@@ -15,36 +16,36 @@
 
 \begin{frame}
 \frametitle{Learning Objectives}
+By the end of this lesson, you will be able to:
 \begin{itemize}
     \item Convert numbers between decimal (base-10), binary (base-2), and hexadecimal (base-16).
-    \item Explain why hexadecimal is a convenient representation for binary data.
-    \item Perform basic binary addition.
-    \item Apply mathematical functions from the \texttt{<cmath>} library to solve complex problems.
+    \item Use the repeated division algorithm to convert decimal numbers to binary.
+    \item Explain why hexadecimal is a convenient, human-readable representation for binary data.
+    \item Include and use the \texttt{<cmath>} library to perform advanced mathematical calculations in C++.
+    \item Apply functions like \texttt{pow()}, \texttt{sqrt()}, and \texttt{exp()} to solve programming problems using the U-P-E-R method.
 \end{itemize}
 \end{frame}
 
 \section{Number Systems}
 
 \begin{frame}
-\frametitle{Review: Base-10 (Decimal) vs. Base-2 (Binary)}
+\frametitle{Key Concepts: Number Systems Review}
 \begin{columns}[T]
     \begin{column}{0.5\textwidth}
         \begin{block}{Decimal (Base-10)}
             \begin{itemize}
-                \item The system we use every day.
                 \item Uses ten digits (0-9).
                 \item Each place value is a power of 10.
-                \item Example: $827_{10}$ is\\ $8 \times 10^2 + 2 \times 10^1 + 7 \times 10^0$
+                \item Ex: $4095 = 4 \times 10^3 + 0 \times 10^2 + 9 \times 10^1 + 5 \times 10^0$
             \end{itemize}
         \end{block}
     \end{column}
     \begin{column}{0.5\textwidth}
         \begin{block}{Binary (Base-2)}
             \begin{itemize}
-                \item The system computers use.
                 \item Uses two digits (0 and 1).
                 \item Each place value is a power of 2.
-                \item Example: $101_2$ is\\ $1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 5_{10}$
+                \item Ex: $1010_2 = 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 0 \times 2^0 = 10_{10}$
             \end{itemize}
         \end{block}
     \end{column}
@@ -52,399 +53,290 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Key Concept: Hexadecimal (Base-16)}
+\frametitle{Key Concepts: Hexadecimal (Base-16)}
 \begin{itemize}
     \item A base-16 number system used as a \alert{human-friendly representation} of binary.
-    \item Uses 16 symbols: \textbf{0-9} and \textbf{A-F}.
-    \item \textbf{A} represents 10, \textbf{B} is 11, ..., \textbf{F} is 15.
-    \item Why use it? It's compact. One hex digit represents a group of four binary digits (a "nibble").
+    \item Uses 16 symbols: \textbf{0-9} and \textbf{A-F} (where A=10, ..., F=15).
+    \item \textbf{Why use it?} It's compact. One hex digit represents a group of four binary digits.
 \end{itemize}
-
 \begin{exampleblock}{Example}
-It's much easier to read and write \texttt{0xAF} than \texttt{10101111}.
+It's much easier to read and write \texttt{0xE90B} than \texttt{0b1110100100001011}.
 \end{exampleblock}
-
-\begin{alertblock}{Hexadecimal in C++}
-You can write a hexadecimal number in C++ by prefixing it with \texttt{0x}.
-\end{alertblock}
-\texttt{int myNum = 0x1A; // Same as int myNum = 26;}
-\end{frame}
-
-\begin{frame}
-\frametitle{Context: Visualizing Binary to Hexadecimal}
-\begin{itemize}
-    \item The key to converting between binary and hexadecimal is to think in groups of four.
-    \item A group of 4 bits is often called a \alert{nibble}.
-    \item A nibble can represent $2^4 = 16$ different values (from 0 to 15).
-    \item This maps perfectly to the 16 symbols in hexadecimal (0 to F).
-    \item On the next slide, we will see a direct mapping from every possible 4-bit binary value to its corresponding hexadecimal digit.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Visualization: Binary to Hexadecimal Mapping}
-\begin{center}
-\begin{tikzpicture}
-\node[draw=ds9blue, thick, rounded corners, inner sep=10pt] {
-\begin{tabular}{ccc|ccc}
-\hline
-\textbf{Hex} & \textbf{Decimal} & \textbf{Binary} & \textbf{Hex} & \textbf{Decimal} & \textbf{Binary} \\
-\hline
-\texttt{0} & 0  & \texttt{0000} & \texttt{8} & 8  & \texttt{1000} \\
-\texttt{1} & 1  & \texttt{0001} & \texttt{9} & 9  & \texttt{1001} \\
-\texttt{2} & 2  & \texttt{0010} & \texttt{A} & 10 & \texttt{1010} \\
-\texttt{3} & 3  & \texttt{0011} & \texttt{B} & 11 & \texttt{1011} \\
-\texttt{4} & 4  & \texttt{0100} & \texttt{C} & 12 & \texttt{1100} \\
-\texttt{5} & 5  & \texttt{0101} & \texttt{D} & 13 & \texttt{1101} \\
-\texttt{6} & 6  & \texttt{0110} & \texttt{E} & 14 & \texttt{1110} \\
-\texttt{7} & 7  & \texttt{0111} & \texttt{F} & 15 & \texttt{1111} \\
-\hline
-\end{tabular}
-};
-\end{tikzpicture}
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Converting Binary to Decimal}
-To convert a binary number to decimal, multiply each binary digit by its corresponding power of 2 and sum the results.
-
-\begin{exampleblock}{Example: Convert $1011001_2$ to decimal}
-\begin{align*}
-1011001_2 &= (1 \times 2^6) + (0 \times 2^5) + (1 \times 2^4) \\
-&\quad + (1 \times 2^3) + (0 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) \\
-&= (1 \times 64) + (0 \times 32) + (1 \times 16) \\
-&\quad + (1 \times 8) + (0 \times 4) + (0 \times 2) + (1 \times 1) \\
-&= 64 + 0 + 16 + 8 + 0 + 0 + 1 \\
-&= 89_{10}
-\end{align*}
-\end{exampleblock}
-\end{frame}
-
-\begin{frame}
-\frametitle{Binary in C++}
-\begin{alertblock}{Binary in C++}
-You can write a binary number in C++ by prefixing it with \texttt{0b}.
-\end{alertblock}
-\texttt{int myNum = 0b1011001; // Same as int myNum = 89;}
-
-\begin{alertblock}{Hexadecimal in C++}
-You can write a hexadecimal number in C++ by prefixing it with \texttt{0x}.
-\end{alertblock}
-\texttt{int myNum = 0x1A; // Same as int myNum = 26;}
-\end{frame}
-
-\begin{frame}
-\frametitle{Converting Decimal to Binary}
-To convert a decimal number to binary, repeatedly divide the decimal number by 2 and record the remainders. The binary result is the sequence of remainders read in \alert{reverse order}.
-
-\begin{exampleblock}{Example: Convert $29_{10}$ to binary}
-\begin{tabular}{r c l}
- $29 / 2$ & = 14 & Remainder \textbf{1} \\
- $14 / 2$ & = 7  & Remainder \textbf{0} \\
- $7 / 2$  & = 3  & Remainder \textbf{1} \\
- $3 / 2$  & = 1  & Remainder \textbf{1} \\
- $1 / 2$  & = 0  & Remainder \textbf{1} \\
-\end{tabular}
 \vfill
-Reading the remainders from bottom to top gives: \alert{$11101_2$}.
-\end{exampleblock}
+\alert{[Table showing Decimal (0-15), Hex (0-F), and Binary (0000-1111) equivalents.]}
 \end{frame}
 
 \begin{frame}
-\frametitle{Number System Operations: Binary Addition}
-Binary addition follows simple rules, similar to decimal addition.
-
-\begin{block}{Rules for Binary Addition}
+\frametitle{Context: Decimal to Binary Conversion}
 \begin{itemize}
-    \item $0 + 0 = 0$
-    \item $0 + 1 = 1$
-    \item $1 + 0 = 1$
-    \item $1 + 1 = 0$, carry the 1
-    \item $1 + 1 + 1 = 1$, carry the 1
+    \item To convert a decimal number to binary, we use an algorithm called \alert{repeated division}.
+    \item The process involves repeatedly dividing the decimal number by 2 and recording the remainder each time.
+    \item The final binary number is formed by reading the sequence of remainders in \textbf{reverse order}.
+    \item The next slide shows a diagram of this process for converting the decimal number 197.
 \end{itemize}
-\end{block}
+\end{frame}
 
-\begin{exampleblock}{Example: Add $1011_2 + 0110_2$}
+\begin{frame}
+\frametitle{Visualization: The Repeated Division Algorithm}
 \begin{center}
-\begin{tabular}{r}
-\texttt{  111  (carry bits)} \\
-\texttt{  1011 (11 decimal)} \\
-\texttt{+ 0110 ( 6 decimal)} \\
-\texttt{------} \\
-\texttt{ 10001 (17 decimal)}
-\end{tabular}
+    \alert{[Diagram showing the repeated division of 197 by 2, with each step's quotient and remainder. An arrow indicates reading the remainders backwards to get the final binary number: 11000101.]}
 \end{center}
-\end{exampleblock}
 \end{frame}
 
-\section{C++ Math Library}
+\section{The cmath Library}
 
-\begin{frame}
-\frametitle{Advanced Math with \texttt{<cmath>}}
+\begin{frame}[fragile]
+\frametitle{Key Concepts: The \texttt{<cmath>} Library}
 \begin{itemize}
-    \item C++ provides a library for advanced mathematical functions.
-    \item To use it, you must include the header file:
+    \item C++ has a built-in library for common mathematical functions.
+    \item To use these functions, you must add an include directive at the top of your program:
 \end{itemize}
-\begin{block}{C++ Include Directive}
-\texttt{\#include <cmath>}
+\begin{block}{\texttt{\#include <cmath>}}
+\begin{minted}[fontsize=\small]{cpp}
+#include <iostream>
+#include <cmath> // This line gives you access to math functions
+using namespace std;
+
+int main() {
+    // ... your code ...
+}
+\end{minted}
 \end{block}
-\begin{itemize}
-    \item It provides many useful functions, including:
-    \begin{itemize}
-        \item \texttt{sqrt(x)} - Calculates the square root of \texttt{x}.
-        \item \texttt{pow(base, exp)} - Raises \texttt{base} to the power of \texttt{exp}.
-        \item \texttt{exp(x)} - Calculates the value of $e^x$.
-        \item And many more like \texttt{sin()}, \texttt{cos()}, \texttt{log()}, etc.
-    \end{itemize}
-\end{itemize}
 \end{frame}
 
-
 \begin{frame}
-\frametitle{Essential Equations}
-Here are the key formulas for our upcoming problems.
-
-\begin{block}{Distance Formula}
-The distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ is:
+\frametitle{Essential Equations for Exercises}
+\begin{block}{Slope of a Line (Exercise 0)}
+$$ \text{slope} = \frac{y_2 - y_1}{x_2 - x_1} $$
+\end{block}
+\pause
+\begin{block}{Fourth Root (Exercise 1)}
+The fourth root of a number $x$ is $x^{1/4}$. In C++, this is calculated using \texttt{pow(x, 0.25)}.
+\end{block}
+\pause
+\begin{block}{Distance Between Two Points (Exercise 2)}
 $$ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$
 \end{block}
-
-\begin{block}{Radioactive Decay}
-The amount of a radioactive isotope remaining after $t$ years is:
-$$ remaining = (original) \times e^{-0.00012t} $$
-where $e \approx 2.71828$. Note: In C++, you can use \texttt{exp(x)} for $e^x$.
-\end{block}
-
-\begin{block}{Fourth Root}
-The fourth root of a number $x$ is $x^{1/4}$, which can be calculated in C++ using \texttt{pow(x, 0.25)}.
+\pause
+\begin{block}{Radioactive Decay (Exercise 3)}
+$$ \text{remaining} = (\text{original}) \times e^{-0.00012t} $$
+In C++, use \texttt{original * exp(-0.00012 * t)}.
 \end{block}
 \end{frame}
 
 \section{Problem Solving with U-P-E-R}
 
 \begin{frame}
-\frametitle{I Do: Binary to Decimal - Understand}
-\textbf{Problem:} Convert the binary number \alert{$11010_2$} to its decimal equivalent.
-
+\frametitle{I Do: Slope Calculator - Understand}
+\textbf{Problem (Exercise 0):} Write a C++ program to calculate the slope of the line connecting two points, $(x_1, y_1)$ and $(x_2, y_2)$.
 \vfill
 \textbf{U - Understand the Problem}
 \begin{itemize}
-    \item \textbf{Goal:} Find the base-10 value of a given base-2 number.
-    \item \textbf{Inputs:} The binary number $11010_2$.
-    \item \textbf{Outputs:} A single integer in base-10.
-    \item \textbf{Example:} We know $10_2$ should be $2_{10}$.
+    \item \textbf{Goal:} Calculate the slope using the formula $\frac{y_2 - y_1}{x_2 - x_1}$.
+    \item \textbf{Inputs:} Four numbers from the user: \texttt{x\_1}, \texttt{y\_1}, \texttt{x\_2}, \texttt{y\_2}. These should be `float`s to allow for decimals.
+    \item \textbf{Outputs:} A sentence displaying the calculated slope.
+    \item \textbf{Example:} If the points are (2, 3) and (6, 5), the slope is $\frac{5 - 3}{6 - 2} = \frac{2}{4} = 0.5$.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{I Do: Binary to Decimal - Plan}
+\frametitle{I Do: Slope Calculator - Plan}
 \textbf{P - Plan the Logic}
 \begin{itemize}
-    \item \textbf{Variables:} No variables needed for this manual calculation.
-    \item \textbf{Steps (Algorithm):}
-    \begin{enumerate}
-        \item Write down the binary number: 1 1 0 1 0.
-        \item Assign place values (powers of 2) from right to left, starting with $2^0$.
-        \begin{center}
-        $2^4 \quad 2^3 \quad 2^2 \quad 2^1 \quad 2^0$
-        \end{center}
-        \item Multiply each binary digit by its corresponding place value.
-        \item Sum all the resulting products.
-    \end{enumerate}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{I Do: Binary to Decimal - Execute}
-\textbf{E - Execute the Plan}
-\begin{align*}
-11010_2 &= (1 \times 2^4) + (1 \times 2^3) + (0 \times 2^2) + (1 \times 2^1) + (0 \times 2^0) \\
-\pause
-&= (1 \times 16) + (1 \times 8) + (0 \times 4) + (1 \times 2) + (0 \times 1) \\
-\pause
-&= 16 + 8 + 0 + 2 + 0 \\
-\pause
-&= 26_{10}
-\end{align*}
-\end{frame}
-
-\begin{frame}
-\frametitle{I Do: Binary to Decimal - Review}
-\textbf{R - Review and Test}
-\begin{itemize}
-    \item The final answer is \alert{$26_{10}$}.
-    \item Does this seem reasonable?
-    \item Let's check our place value calculations: $2^0=1, 2^1=2, 2^2=4, 2^3=8, 2^4=16$. Correct.
-    \item Let's check the sum: $16 + 8 + 2 = 26$. Correct.
-    \item The process was followed correctly and the arithmetic is verified.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{We Do (Concept): Decimal to Binary}
-\textbf{Problem:} Convert the decimal number \alert{$42_{10}$} to its binary equivalent.
-
-\vfill
-\textbf{U - Understand the Problem}
-\begin{itemize}
-    \item \textbf{Goal:} Find the base-2 representation of $42_{10}$.
-    \item \textbf{Inputs:} The integer 42.
-    \item \textbf{Outputs:} A string of 1s and 0s.
-\end{itemize}
-\pause
-\textbf{P - Plan the Logic}
-\begin{itemize}
-    \item \textbf{Steps (Algorithm):}
-    \begin{enumerate}
-        \item We will use the \alert{division-by-2} method.
-        \item Divide the number by 2 and write down the remainder.
-        \item Use the quotient from the previous step as the new number to divide.
-        \item Repeat until the quotient is 0.
-        \item Read the list of remainders \alert{backwards}.
-    \end{enumerate}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{We Do (Concept): Decimal to Binary - Execute \& Review}
-\textbf{E - Execute the Plan}
-\begin{tabular}{r c l}
- $42 \div 2$ & = 21 & Remainder \alert{?} \pause \textbf{0} \\
- $21 \div 2$ & = 10 & Remainder \alert{?} \pause \textbf{1} \\
- $10 \div 2$ & = 5  & Remainder \alert{?} \pause \textbf{0} \\
- $5 \div 2$  & = 2  & Remainder \alert{?} \pause \textbf{1} \\
- $2 \div 2$  & = 1  & Remainder \alert{?} \pause \textbf{0} \\
- $1 \div 2$  & = 0  & Remainder \alert{?} \pause \textbf{1} \\
-\end{tabular}
-
-\vfill
-\pause
-\textbf{R - Review and Test}
-\begin{itemize}
-    \item Reading the remainders backwards, we get: \alert{$101010_2$}.
-    \item Let's check by converting back:
-    \item $1 \times 32 + 0 \times 16 + 1 \times 8 + 0 \times 4 + 1 \times 2 + 0 \times 1$
-    \item $32 + 8 + 2 = 42$. The conversion is correct!
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{We Do (Coding): Fourth Root - Understand}
-\textbf{Problem:} Write a C++ program to find the fourth root of \alert{1728.896400}. You will need to use the \texttt{pow()} function from the \texttt{<cmath>} library.
-
-\vfill
-\textbf{U - Understand the Problem}
-\begin{itemize}
-    \item \textbf{Goal:} Find the fourth root of a specific number.
-    \item \textbf{Inputs:} The number is given: \texttt{1728.896400}.
-    \item \textbf{Outputs:} A sentence showing the result.
-    \item \textbf{Example:} We know $6^4 = 1296$ and $7^4 = 2401$. Our answer should be between 6 and 7.
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{We Do (Coding): Fourth Root - Plan}
-\textbf{P - Plan the Logic}
-\begin{itemize}
-    \item \textbf{Variables:} What variables do we need? \pause
-    \begin{itemize}
-        \item \texttt{float number = 1728.896400;}
-        \item \texttt{float fourthRoot;}
-    \end{itemize} \pause
+    \item \textbf{Variables:}
+    \texttt{float x\_1, y\_1, x\_2, y\_2;}
     \item \textbf{Steps (Pseudocode):}
     \begin{enumerate}
-        \item Include libraries. Which ones? \alert{<iostream> and <cmath>} \pause
-        \item Declare and initialize our number variable. \pause
-        \item Declare a variable for the answer. \pause
-        \item Calculate the fourth root. A fourth root is the same as raising to what power? \alert{The 1/4 or 0.25 power}. \pause
-        \item Which C++ function do we use? \alert{\texttt{pow(base, exponent)}}. \pause
-        \item Print the result.
+        \item Ask the user to enter the first x-value and store it in \texttt{x\_1}.
+        \item Ask the user for the first y-value and store it in \texttt{y\_1}.
+        \item Ask for the second x-value and store it in \texttt{x\_2}.
+        \item Ask for the second y-value and store it in \texttt{y\_2}.
+        \item Calculate the slope: \texttt{(y\_2 - y\_1) / (x\_2 - x\_1)}.
+        \item Print the result to the screen in a descriptive sentence.
     \end{enumerate}
 \end{itemize}
-\textbf{Answer Key:} \texttt{exercises/exercise1.cpp} (Hidden - general solution)
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{We Do (Coding): Fourth Root - Execute \& Review}
-\textbf{E - Execute (Let's Write the Code)}
-\begin{minted}[fontsize=\small, frame=lines, linenos, highlightlines={7}]{cpp}
+\frametitle{I Do: Slope Calculator - Execute}
+\textbf{E - Execute (Write the Code)}
+\textbf{Demo File:} \texttt{exercises/exercise0.cpp} (Interactive Demo)
+\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
 #include <iostream>
-#include <cmath>
+using namespace std;
 
-int main() {
-    float number = 1728.896400;
-    float fourthRoot;
-    // How do we write the next line?
-\end{minted}
-\pause
-\begin{minted}[fontsize=\small, frame=lines, linenos, highlightlines={7}]{cpp}
-    fourthRoot = pow(number, 0.25);
+int main(){
+   float x_1, y_1, x_2, y_2;
 
-    std::cout << "The fourth root is: " << fourthRoot << std::endl;
-    return 0;
+   cout << "Enter the first x-value: ";
+   cin >> x_1;
+   cout << "Enter the first y-value: ";
+   cin >> y_1;
+   cout << "Enter the second x-value: ";
+   cin >> x_2;
+   cout << "Enter the second y-value: ";
+   cin >> y_2;
+
+   cout << "The slope between the two points is: "
+        << (y_2 - y_1)/(x_2 - x_1)
+        << endl;
+
+   return 0;
 }
 \end{minted}
 \end{frame}
 
 \begin{frame}
-\frametitle{You Do (Practice): Distance Between Two Points}
-\textbf{Problem:} Write a C++ program to calculate the distance between two points with coordinates \alert{(7, 12)} and \alert{(3, 9)}. You must use the \texttt{sqrt()} and \texttt{pow()} functions from the \texttt{<cmath>} library.
-
-\vfill
-
-\begin{block}{Your Turn: Use the U-P-E-R Method}
+\frametitle{I Do: Slope Calculator - Review}
+\textbf{R - Review and Test}
 \begin{itemize}
-    \item \textbf{U - Understand}: What is the goal? What are your inputs and outputs? Calculate the expected answer by hand first: $d = \sqrt{(3-7)^2 + (9-12)^2} = \sqrt{16+9} = \sqrt{25} = 5$.
-    \item \textbf{P - Plan}: What variables will you need for x1, y1, x2, y2, and the distance? Write down the steps in pseudocode.
-    \item \textbf{E - Execute}: Translate your plan into a C++ program. Remember to \texttt{\#include <cmath>}.
-    \item \textbf{R - Review}: Compile and run your code. Does the output match your hand-calculated answer of 5?
+    \item \textbf{Compile:} Does the code compile without errors? Yes.
+    \item \textbf{Test with Example:}
+    \begin{itemize}
+        \item Run the program.
+        \item Input: `2`, `3`, `6`, `5`.
+        \item Expected Output: "The slope...is: 0.5"
+        \item Actual Output: Matches the expected output.
+    \end{itemize}
+    \item \textbf{Debug:} The prompt assumes valid input, but a robust program would need to handle division by zero if $x_2 = x_1$.
 \end{itemize}
-\end{block}
-\vfill
-\textbf{Answer Key:} \texttt{exercises/exercise2.cpp} (Hidden - general solution)
 \end{frame}
 
 \begin{frame}
-\frametitle{You Do (Practice): Radioactive Decay}
-\textbf{Problem:} Using the formula $remaining = (original)e^{-0.00012t}$, write a C++ program to determine the amount of radioactive material remaining after \alert{1000 years}, assuming an initial amount of \alert{100 grams}. Use the \texttt{exp()} function from \texttt{<cmath>}.
-
+\frametitle{We Do: Fourth Root - Understand}
+\textbf{Problem (Exercise 1):} Write a program that calculates the fourth root of a number. First, test it with 81.0, then with 1,728.896400.
 \vfill
-
-\begin{block}{Your Turn: Use the U-P-E-R Method}
+\textbf{U - Understand the Problem}
 \begin{itemize}
-    \item \textbf{U - Understand}: What is the goal? What are your inputs and outputs? Work a simple example (e.g., t=0).
-    \item \textbf{P - Plan}: What variables will you need? Write down the steps in pseudocode. The formula is $remaining = 100 \times \exp(-0.00012 \times 1000)$.
-    \item \textbf{E - Execute}: Translate your plan into a C++ program.
-    \item \textbf{R - Review}: Compile and run your code. Does the answer make sense? (Should be less than 100).
+    \item \textbf{Goal:} Calculate $x^{1/4}$ for a given number $x$.
+    \item \textbf{Inputs:} A single floating-point number from the user.
+    \item \textbf{Outputs:} A sentence displaying the result.
+    \item \textbf{Example:} For input 81.0, output should be "The fourth root... is 3".
 \end{itemize}
-\end{block}
-\vfill
-\textbf{Answer Key:} \texttt{exercises/exercise3.cpp} (Hidden - general solution)
 \end{frame}
+
+\begin{frame}
+\frametitle{We Do: Fourth Root - Plan}
+\textbf{P - Plan the Logic}
+\begin{itemize}
+    \item \textbf{Variables:} What variables will we need?
+    \begin{itemize}
+        \item \pause \texttt{float number;}
+        \item \pause \texttt{float root;}
+    \end{itemize}
+    \item \textbf{Steps (Pseudocode):}
+    \begin{enumerate}
+        \item Include which two libraries? \pause \alert{<iostream> and <cmath>}
+        \item Prompt the user for a number.
+        \item Store it in the \texttt{number} variable.
+        \item Calculate the fourth root. Which function do we use? \pause \alert{\texttt{pow(base, exponent)}}
+        \item How would you call it? \pause \alert{\texttt{root = pow(number, 0.25);}}
+        \item Print the final answer.
+    \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{We Do: Fourth Root - Execute}
+\textbf{E - Execute (Write the Code)}
+\textbf{Answer Key:} \texttt{exercises/exercise1.cpp} (Hidden Answer Key)
+\begin{minted}[fontsize=\small, frame=lines, linenos]{cpp}
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+   float x;
+
+   cout << "Enter a real number: ";
+   cin >> x;
+
+   // How do we calculate the root and print it?
+   // Let's complete the code together.
+
+
+   return 0;
+}
+\end{minted}
+\pause
+\begin{alertblock}{Solution}
+\begin{minted}[fontsize=\small]{cpp}
+   cout << "The fourth root of " << x << " is "
+        << pow(x, 0.25) << endl;
+\end{minted}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Fourth Root - Review}
+\textbf{R - Review and Test}
+\begin{itemize}
+    \item \textbf{Compile:} Does our completed code compile?
+    \item \textbf{Test Case 1:}
+    \begin{itemize}
+        \item Input: \texttt{81.0}
+        \item Does it output 3? \pause Yes.
+    \end{itemize}
+    \item \textbf{Test Case 2 (from problem):}
+    \begin{itemize}
+        \item Input: \texttt{1728.896400}
+        \item What is the output? \pause Approx. 6.45. This seems correct.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Distance Formula - Understand}
+\textbf{Problem (Exercise 2):} Write a program to calculate the distance between two points, given their coordinates $(x_1, y_1)$ and $(x_2, y_2)$.
+\vfill
+\textbf{U - Understand the Problem}
+\begin{itemize}
+    \item \textbf{Your Task:} On paper, write down the Goal, Inputs, Outputs, and an Example for this problem.
+    \item \textbf{Hint:} For your example, manually calculate the distance between (7, 12) and (3, 9). The answer should be 5.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Distance Formula - Plan}
+\textbf{P - Plan the Logic}
+\begin{itemize}
+    \item \textbf{Your Task:} On paper, list the variables you will need and write the pseudocode steps to solve the problem.
+    \item \textbf{Hint:} How can you combine `pow()` and `sqrt()` to implement the distance formula?
+\end{itemize}
+\textbf{Answer Key:} \texttt{exercises/exercise2.cpp} (Hidden Answer Key)
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{You Do: Distance Formula - Execute}
+\textbf{E - Execute (Write the Code)}
+\begin{itemize}
+    \item \textbf{Your Task:} Translate your plan into a C++ program.
+    \item \textbf{Hint:} Remember to include the necessary libraries and use `using namespace std;`.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Distance Formula - Review}
+\textbf{R - Review and Test}
+\begin{itemize}
+    \item \textbf{Your Task:} Compile your code. Once it's free of syntax errors, run it.
+    \item \textbf{Test:} When you run the program, does the output match the answer (5) that you calculated by hand? If not, debug your logic.
+\end{itemize}
+\end{frame}
+
 
 \section{Assignment}
-
 \begin{frame}
-\frametitle{Homework and Practice}
-
-\begin{block}{Assignment: 04 Number Systems Exercises}
+\frametitle{Assignment: 04 Number Systems Exercises}
+\begin{block}{Programming Assignment}
     \begin{itemize}
-        \item \textbf{Task:} Complete Parts 0-3 of the Jupyter Notebook (`.ipynb`) file as demonstrated in class.
-        \item \textbf{Submission:} Submit your completed file named in the format \alert{\texttt{firstnameLastname\_floats.ipynb}}.
-        \item \textbf{Due Date:} \alert{Tuesday, September 23, 2025 at 11:59 pm}.
-        \item \textbf{Collaboration:} I encourage you to work together, but the final document you submit must be your own.
+        \item \textbf{Task:} Complete Parts 0-3 of the exercises as demonstrated in class.
+        \item \textbf{Submission:} Submit your completed Jupyter Notebook file named in the format \alert{\texttt{firstnameLastname\_floats.ipynb}}.
     \end{itemize}
 \end{block}
-
 \vfill
-
-\begin{alertblock}{Additional Practice}
-For more practice with number systems, please complete the assigned modules on the \textbf{Delta Math} website. Focus on:
-\begin{itemize}
-    \item Binary Conversions
-    \item Hexadecimal Conversions
-\end{itemize}
+\begin{alertblock}{Collaboration Policy}
+I encourage you to work together, but the final document you submit must be your own.
 \end{alertblock}
 \end{frame}
 
@@ -453,15 +345,10 @@ For more practice with number systems, please complete the assigned modules on t
 \begin{frame}
 \frametitle{Summary}
 \begin{itemize}
-    \item Computers operate using the \alert{binary} (base-2) number system.
-    \item \alert{Hexadecimal} (base-16) is a compact, human-readable representation of binary, where 1 hex digit maps to 4 bits.
-    \item We can convert between number systems using specific algorithms:
-    \begin{itemize}
-        \item Binary $\rightarrow$ Decimal: Sum of powers of 2.
-        \item Decimal $\rightarrow$ Binary: Repeated division by 2.
-    \end{itemize}
-    \item The \texttt{<cmath>} library in C++ provides powerful functions for complex mathematical operations like square roots (\texttt{sqrt}) and powers (\texttt{pow}).
-    \item The \alert{U-P-E-R method} is a reliable strategy for breaking down and solving both conceptual and programming problems.
+    \item Computers operate using \alert{binary} (base-2), while humans often use \alert{hexadecimal} (base-16) as a compact shorthand.
+    \item We can convert between number systems using specific algorithms like \alert{repeated division by 2}.
+    \item The \texttt{<cmath>} library in C++ provides powerful functions for complex math, such as \texttt{pow()}, \texttt{sqrt()}, and \texttt{exp()}.
+    \item The \alert{U-P-E-R method} (Understand, Plan, Execute, Review) is a reliable strategy for breaking down and solving any programming problem.
 \end{itemize}
 \end{frame}
 
