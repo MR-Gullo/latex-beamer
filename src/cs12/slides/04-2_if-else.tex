@@ -3,7 +3,7 @@
 \usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title[Short Title]{CS12 CH:5.3 - 5.5}
+\title[Relational Logic and Control Flow]{CS12 CH:5.3 - 5.5}
 \subtitle{Relational Expressions \& The if/else Statement}
 \author[Mr. Gullo]{Mr. Gullo}
 \date[Sep 23]{September 23rd, 2025}
@@ -97,12 +97,37 @@ The next slide shows a flowchart of this process.
 \begin{frame}
 \frametitle{Concept Visualization: \texttt{if/else} Flowchart}
 \begin{figure}
-    \includegraphics[width=0.4\linewidth]{cs12-if-else-flowchart.png}
-    \caption{A conceptual flowchart of an if/else statement.}
+    \includegraphics[width=0.5\linewidth]{cs12-if-else-flowchart.png}
 \end{figure}
 \end{frame}
 
-\section{Common Pitfalls}
+\section{Live Demos \& Common Pitfalls}
+
+\begin{frame}[fragile]
+\frametitle{Demo: \texttt{if/else} in Action}
+\framesubtitle{File: \texttt{05e\_ifElseIntro.cpp}}
+This program demonstrates a complete \texttt{if/else} structure that responds to user input.
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int inputNumber;
+
+   cout << "Please enter an integer: ";
+   cin >> inputNumber;
+
+   if(inputNumber % 2 == 0)
+      cout << "The number you entered is even\n";
+   else
+      cout << "The number you entered is odd\n";
+
+   return 0;
+}
+\end{minted}
+\end{frame}
 
 \begin{frame}
 \frametitle{Common Pitfall: Assignment vs. Comparison}
@@ -143,7 +168,6 @@ Final value of x: 13
 The condition assigned \texttt{13} to \texttt{x}, evaluated to \texttt{13} (which is `true`), and changed the value of \texttt{x}.
 \end{frame}
 
-
 \begin{frame}
 \frametitle{Common Pitfall: Comparing Floating-Point Numbers}
 \framesubtitle{Why \texttt{==} is Unreliable for Floats}
@@ -159,14 +183,60 @@ Floating-point numbers (\texttt{float}, \texttt{double}) are stored as binary ap
 \end{frame}
 
 \begin{frame}[fragile]
+\frametitle{Demo: Floating-Point Inaccuracy}
+\framesubtitle{File: \texttt{floatEqualPitfall.cpp}}
+This loop adds 0.1 to two variables repeatedly. We expect their difference to always be 1.0, but floating-point errors accumulate and eventually cause the comparison to fail.
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+const float DIFF = 0.1;
+
+int main(){
+   float a = 2.0;
+   float b = 1.0;
+
+   for(int i = 0; i  < 1000; i++){
+      cout.precision(20);
+      if(a - b != 1.0){ // This will eventually be true!
+         cout << "a = " << a << '\n';
+         cout << "b = " << b << '\n';
+         cout << a << " - " << b << " = " << a - b << '\n';
+         break;
+      }
+      a += DIFF;
+      b += DIFF;
+   }
+   return 0;
+}
+\end{minted}
+\end{frame}
+
+\begin{frame}
 \frametitle{Solution: Comparing Floats with a Tolerance}
 The correct way to compare floats is to check if their difference is smaller than a tiny tolerance value, often called \texttt{EPSILON}.
 
-\textbf{Logic:} \texttt{abs(value1 - value2) < EPSILON}
+\begin{itemize}
+    \item This treats numbers that are "close enough" as equal.
+    \item The logic is to check if the \alert{absolute value} of the difference is within our tolerance.
+\end{itemize}
 \vfill
+\begin{center}
+    \textbf{Logic:} \texttt{abs(value1 - value2) < EPSILON}
+\end{center}
+\end{frame}
 
-\begin{minted}[fontsize=\small, frame=lines]{cpp}
+
+\begin{frame}[fragile]
+\frametitle{Demo: Correct Float Comparison}
+\framesubtitle{File: \texttt{05d\_compareFloats.cpp}}
+This program compares the wrong way (\texttt{==}) and the right way (\texttt{abs(...) < EPSILON}).
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
 #include <cmath> // For abs()
+using namespace std;
 
 const float PI = 3.14159;
 const float EPSILON = 0.0001;
@@ -174,12 +244,13 @@ const float EPSILON = 0.0001;
 int main() {
    float calculatedPi = 2 * asin(1.0); // A more precise PI
 
-   // Test 1: Incorrect direct comparison
-   cout << "Direct comparison: " << (calculatedPi == PI) << endl;
+   // Test 1: Incorrect direct comparison (outputs 0 for false)
+   cout << "Direct comparison (==): " << (calculatedPi == PI) << endl;
 
-   // Test 2: Correct comparison with tolerance
+   // Test 2: Correct comparison with tolerance (outputs 1 for true)
    bool areEqual = abs(calculatedPi - PI) < EPSILON;
    cout << "Tolerance comparison: " << areEqual << endl;
+
    return 0;
 }
 \end{minted}
@@ -284,7 +355,7 @@ int main() {
 
     // TODO: Use an if/else statement to calculate the salary.
     // If hours <= 40, salary is hours * regular_rate.
-    // Otherwise, it is (40 * regular_rate) + (overtime_hours * overtime_rate).
+    // Otherwise, it is (40 * regular_rate) + ((hours - 40) * overtime_rate).
 
     cout << fixed << setprecision(2); // Format output to 2 decimal places
     cout << "The weekly salary is: $" << salary << endl;
