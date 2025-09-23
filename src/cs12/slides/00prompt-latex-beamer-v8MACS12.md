@@ -47,11 +47,11 @@ Please follow these instructions carefully:
    - Minimal complexity focusing on key conceptual understanding
    - Consistent styling with the DS9 theme colors
 
-   e. **"I do, We do, You do" example series** - Three related problems of increasing independence using only problems from the provided PDF. Explicitly reference the provided .cpp files for these examples. Include a note indicating if a file is for an interactive demo or a hidden answer key.
+   e. **Template code exercises** - Create structured coding exercises with starter template code and commented TODOs for students to complete. Explicitly reference the provided .cpp files for these examples.
 
-   - **"I do"**: Present a complete worked example problem from the relevant sections with a detailed step-by-step solution using the U-P-E-R method (see U-P-E-R method section below).
-   - **"We do"**: Present a partially solved problem designed for classroom participation and discussion, leaving key steps for audience input.
-   - **"You do"**: Present an unsolved practice problem for independent student work, providing only the problem statement.
+   - **Template Setup**: Provide a well-structured starting point with proper includes, main function setup, and variable declarations.
+   - **Commented TODOs**: Include clear, numbered TODO comments indicating what students need to implement.
+   - **Exercise Context**: Provide the problem statement and expected outcomes clearly.
 
    f. **Summary slide** - Key takeaways, main concepts review, and connections between ideas presented in the lesson.
 
@@ -59,99 +59,8 @@ Please follow these instructions carefully:
 5. For all visual elements including custom diagrams, use placeholders with descriptions in alert boxes like this: \alert{[description of relevant image]} where appropriate to enhance understanding.
    </content_instructions>
 
-<uper_method_instructions>
 
-## U-P-E-R ("Super") Method for Problem Solving
 
-For all example problems in your "I do, We do, You do" series, structure solutions using the U-P-E-R method. **Each letter in the acronym should have its own dedicated frame with appropriate formatting to prevent overfull vbox errors and improve readability:**
-
-- **Frame 1**: U block (Understand)
-- **Frame 2**: P block (Plan)
-- **Frame 3**: E block (Execute)
-- **Frame 4**: R block (Review)
-
-### For the Overall Problem-Solving Strategy: U-P-E-R ("Super")
-
-This mnemonic guides students through the entire process from reading the problem to having a working solution. Think of it as being a "super" problem solver.
-
-- **U - Understand**:
-  - **Goal**: What is the program supposed to do?
-  - **Inputs**: What information will the user or a file provide? What are their data types (number, text, etc.)?
-  - **Outputs**: What should the program display on the screen? What is the exact format?
-  - **Examples**: Work through a simple example by hand. If the input is 5, what should the output be?
-- **P - Plan**:
-  - **Variables**: What containers (variables) do you need to store your information? Give them meaningful names.
-  - **Steps**: Write down the sequence of actions needed in plain English or "pseudocode."
-- **E - Execute**:
-  - **Translate**: Convert your plan into C++ code, step by step. This is where you focus on the correct syntax (cin, cout, if, ;, {}).
-- **R - Review**:
-  - **Compile & Run**: Check for any syntax errors (typos) the compiler finds.
-  - **Test**: Run the program with the example inputs you used in the "Understand" phase. Does the output match?
-  - **Debug**: If the output is wrong, trace through your code line by line to find the logical error. Test with different values, including edge cases.
-
-### U-P-E-R LaTeX Formatting Example:
-
-```latex
-\begin{frame}
-\frametitle{I Do: Example Problem - Understand}
-\textbf{U - Understand the Problem}
-\begin{itemize}
-    \item \textbf{Goal:} Calculate the area of a rectangle.
-    \item \textbf{Inputs:} Length (integer), Width (integer).
-    \item \textbf{Outputs:} A sentence stating "The area is [area]."
-    \item \textbf{Example:} If length is 10 and width is 5, output should be "The area is 50."
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{I Do: Example Problem - Plan}
-\textbf{P - Plan the Logic}
-\begin{itemize}
-    \item \textbf{Variables:} \texttt{int length; int width; int area;}
-    \item \textbf{Steps (Pseudocode):}
-    \begin{enumerate}
-        \item Ask the user for the length.
-        \item Store it in the \texttt{length} variable.
-        \item Ask the user for the width.
-        \item Store it in the \texttt{width} variable.
-        \item Calculate area: \texttt{area = length * width}.
-        \item Print the result.
-    \end{enumerate}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{I Do: Example Problem - Execute}
-\textbf{E - Execute (Write the Code)}
-\begin{minted}[fontsize=\small]{cpp}
-#include <iostream>
-using namespace std;
-int main() {
-    int length, width, area;
-    cout << "Enter length: ";
-    cin >> length;
-    cout << "Enter width: ";
-    cin >> width;
-    area = length * width;
-    cout << "The area is " << area << ".";
-    return 0;
-}
-\end{minted}
-\end{frame}
-
-\begin{frame}
-\frametitle{I Do: Example Problem - Review}
-\textbf{R - Review and Test}
-\begin{itemize}
-    \item Compile the code to check for syntax errors.
-    \item Run with the example: Input 10 and 5.
-    \item Check the output: Does it display "The area is 50."? Yes.
-    \item Test edge cases: What if the input is 0?
-\end{itemize}
-\end{frame}
-```
-
-</uper_method_instructions>
 
 <technical_formatting_guidelines>
 
@@ -235,7 +144,7 @@ Before generating the final output, wrap your planning process in <presentation_
 
 1. Extract and list key concepts and definitions from each specified section, organizing them logically for presentation flow.
 2. Identify and plan specific concept visualization opportunities for each section, determining which abstract computer science concepts would benefit most from visual illustrations. Use external tools for creating clear, simple diagrams.
-3. Carefully select and outline the "I do, We do, You do" examples from the provided PDF content, ensuring they cover different aspects of the content and demonstrate increasing complexity. Plan how each will use the U-P-E-R method structure.
+3. Carefully select and outline template code exercises from the provided PDF content, ensuring they cover different aspects of the content and provide clear starting points for student implementation. Plan how each will include starter code and commented TODOs.
 4. Plan your complete presentation structure, including the order of slides and specific content for each frame. Consider the logical flow from learning objectives through concept introduction, visualization, practice, and summary.
 5. Include \section{[Content to include in outline]} markers to ensure that the presentation outline has the correct topics and sections properly organized and populated.
 6. Plan the integration of visual elements, specifying which concepts will be illustrated and how they will enhance student understanding.
@@ -275,11 +184,11 @@ code content here
 
 \begin{frame}[fragile]
 
-\frametitle{I Do: Integer Operations Demo}
+\frametitle{Integer Operations Exercise}
 
-\textbf{Demo File:} \texttt{02_dataTypesIntegers.cpp} (Interactive - comprehensive demo)
+\textbf{Exercise File:} \texttt{02\_dataTypesIntegers.cpp} (Template with TODOs)
 
-\\Let's walk through this code and see what it does.\pause
+\textbf{Objective:} Complete the TODOs to demonstrate integer operations.\pause
 
 \begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
@@ -287,29 +196,17 @@ using namespace std;
 
 int main()
 {
-int x = 34;
-int y = 5;
+    int x = 34;
+    int y = 5;
 
-    // Integer addition
-    cout << "x + y = " << x + y << endl;
-
-    // Integer subtraction
-    cout << "x - y = " << x - y << endl;
-
-    // Integer multiplication
-    cout << "x * y = " << x * y << endl;
-
-    // Integer division (rounds down)
-    cout << "x / y = " << x / y << endl;
-
-    // Integer modulo division (remainder)
-    cout << "x \% y = " << x % y << endl;
-
-    // Integer comparison ==
-    cout << "x == y is " << (x == y) << endl;
+    // TODO 1: Add x and y, display the result
+    // TODO 2: Subtract y from x, display the result
+    // TODO 3: Multiply x and y, display the result
+    // TODO 4: Divide x by y, display the result
+    // TODO 5: Calculate remainder of x divided by y
+    // TODO 6: Compare x and y for equality, display result
 
     return 0;
-
 }
 \end{minted}
 
@@ -346,9 +243,9 @@ After generating the LaTeX code, mentally verify these common issues:
   </compilation_testing>
 
 <final_instructions>
-Please proceed with your comprehensive presentation outline using the <presentation_outline> tags, then generate the complete LaTeX Beamer presentation. You must use an artifact for the final output. Ensure that all requirements from both the content instructions and technical guidelines are met, with particular attention to the U-P-E-R method integration. The presentation should flow logically from introduction through interactive practice exercises, maintaining the educational and professional standards expected for computer science instruction.
+Please proceed with your comprehensive presentation outline using the <presentation_outline> tags, then generate the complete LaTeX Beamer presentation. You must use an artifact for the final output. Ensure that all requirements from both the content instructions and technical guidelines are met, with particular attention to the template-based exercise integration. The presentation should flow logically from introduction through structured coding exercises, maintaining the educational and professional standards expected for computer science instruction.
 
-When generating the presentation, convert the original content while explicitly referencing the provided .cpp files, including a note on whether each file is an interactive demo or a hidden answer key.
+When generating the presentation, convert the original content while explicitly referencing the provided .cpp files, including clear template setups and commented TODOs for student implementation.
 
 **IMPORTANT**: Follow all formatting guidelines especially for titles, colors, fragile frames, and special characters to ensure successful compilation.
 </final_instructions>
