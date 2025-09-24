@@ -20,7 +20,7 @@ Please follow these instructions carefully:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:`<specified sections>`}
@@ -103,12 +103,14 @@ This method should be explicitly shown in your "I do" example and referenced in 
 - ❌ Incorrect: `\begin{frame}` (will cause "Paragraph ended before \FV@BeginScanning was complete" errors)
 
 **This applies to any frame containing:**
+
 - `\begin{minted}{language}` blocks
-- `\begin{lstlisting}` blocks  
+- `\begin{lstlisting}` blocks
 - `\begin{verbatim}` environments
 - Any other verbatim-like content
 
 **Example of proper fragile frame usage:**
+
 ```latex
 \begin{frame}[fragile]
 \frametitle{Code Example}
@@ -181,7 +183,7 @@ Example output structure showing proper formatting and organization:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:`<specified sections>`}

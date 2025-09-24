@@ -20,7 +20,7 @@ Please follow these instructions carefully:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:`<specified sections>`}
@@ -155,7 +155,7 @@ Example output structure showing proper formatting and organization:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:`<specified sections>`}

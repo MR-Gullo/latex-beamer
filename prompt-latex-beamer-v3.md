@@ -8,10 +8,11 @@ Target sections: <sections>{{sec}}</sections>
 ## Required LaTeX Structure
 
 **Preamble (use exactly):**
+
 ```latex
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:<specified sections>}
@@ -25,23 +26,24 @@ Target sections: <sections>{{sec}}</sections>
 Create slides with:
 
 1. **Learning objectives** - Key concepts from specified sections
-2. **Definitions & concepts** - Important terms and principles 
+2. **Definitions & concepts** - Important terms and principles
 3. **Key equations** - Relevant formulas with explanations
 4. **Concept visualization frames** - Simple pgfplots graphs that illustrate physics concepts:
    - Position vs time graphs for kinematics
-   - Force diagrams and vector plots  
+   - Force diagrams and vector plots
    - Wave functions and periodic behavior
    - Energy vs position plots
    - Other relevant physics visualizations
 5. **Example series** (use problems from PDF only):
    - "I do": Complete solved example
-   - "We do": Partially solved for participation  
+   - "We do": Partially solved for participation
    - "You do": Unsolved problem for practice
 6. **Summary** - Main takeaways
 
 ## Plot Guidelines
 
 Use pgfplots for concept visualization:
+
 - **Simple, clean plots** with clear axes labels
 - **Large fonts** (12pt+) for readability
 - **Minimal data points** - focus on trends/concepts
@@ -49,6 +51,7 @@ Use pgfplots for concept visualization:
 - **Appropriate scales** and units
 
 **Example plot structure:**
+
 ```latex
 \begin{tikzpicture}
 \begin{axis}[
@@ -75,6 +78,7 @@ Use pgfplots for concept visualization:
 ## Planning Process
 
 Before generating LaTeX, outline in `<presentation_outline>` tags:
+
 - Key concepts per section
 - Specific plots needed (with brief descriptions)
 - Three example problems (different difficulty/concepts)

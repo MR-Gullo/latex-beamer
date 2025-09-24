@@ -8,10 +8,11 @@ Target sections: <sections>{{sec}}</sections>
 ## Required LaTeX Structure
 
 **Preamble (use exactly):**
+
 ```latex
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:<specified sections>}
@@ -25,12 +26,12 @@ Target sections: <sections>{{sec}}</sections>
 Create slides with:
 
 1. **Learning objectives** - Key concepts from specified sections
-2. **Definitions & concepts** - Important terms and principles 
+2. **Definitions & concepts** - Important terms and principles
 3. **Key equations** - Relevant formulas with explanations
 4. **Concept visualization frames** - Simple plots illustrating physics concepts using tikz/pgfplots
 5. **Example series** (use problems from PDF only):
    - "I do": Complete solved example
-   - "We do": Partially solved for participation  
+   - "We do": Partially solved for participation
    - "You do": Unsolved problem for practice
 6. **Summary** - Main takeaways
 
@@ -45,6 +46,7 @@ Create slides with:
 ## Planning Process
 
 Before generating LaTeX, outline in `<presentation_outline>` tags:
+
 - Key concepts per section
 - Specific plots needed for visualization
 - Three example problems (different difficulty/concepts)

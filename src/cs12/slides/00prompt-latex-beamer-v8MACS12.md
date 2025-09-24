@@ -10,7 +10,7 @@ Please follow these instructions carefully:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{CS12 CH:`<specified sections>`}
@@ -58,9 +58,6 @@ Please follow these instructions carefully:
 4. Use appropriate LaTeX commands for equations, lists, and other formatting elements as needed.
 5. For all visual elements including custom diagrams, use placeholders with descriptions in alert boxes like this: \alert{[description of relevant image]} where appropriate to enhance understanding.
    </content_instructions>
-
-
-
 
 <technical_formatting_guidelines>
 
@@ -157,7 +154,7 @@ Example output structure showing proper formatting and organization:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{CS12 CH:`<specified sections>`}
@@ -186,7 +183,7 @@ code content here
 
 \frametitle{Integer Operations Exercise}
 
-\textbf{Exercise File:} \texttt{02\_dataTypesIntegers.cpp} (Template with TODOs)
+\textbf{Exercise File:} \texttt{02_dataTypesIntegers.cpp} (Template with TODOs)
 
 \textbf{Objective:} Complete the TODOs to demonstrate integer operations.\pause
 
@@ -196,8 +193,8 @@ using namespace std;
 
 int main()
 {
-    int x = 34;
-    int y = 5;
+int x = 34;
+int y = 5;
 
     // TODO 1: Add x and y, display the result
     // TODO 2: Subtract y from x, display the result
@@ -207,6 +204,7 @@ int main()
     // TODO 6: Compare x and y for equality, display result
 
     return 0;
+
 }
 \end{minted}
 

@@ -8,10 +8,11 @@ Target sections: <sections>{{sec}}</sections>
 ## Required LaTeX Structure
 
 **Preamble (use exactly):**
+
 ```latex
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:<specified sections>}
@@ -24,6 +25,7 @@ Target sections: <sections>{{sec}}</sections>
 Create a comprehensive slideshow containing:
 
 ### Core Content Slides
+
 1. **Learning objectives slide** - Clear bullet points outlining what students will understand after the lesson, extracted directly from the specified textbook sections
 
 2. **Key concepts and definitions slides** - Important physics terms, principles, and conceptual explanations presented in digestible chunks with clear explanations
@@ -38,13 +40,16 @@ Create a comprehensive slideshow containing:
    - Other relevant physics visualizations specific to your sections
 
 ### Interactive Learning Sequence
+
 5. **"I do, We do, You do" example series** - Three related problems of increasing independence (use only problems from the provided PDF):
    - **"I do"**: Complete worked example with detailed step-by-step solution using the GUESS method
    - **"We do"**: Partially solved problem designed for classroom participation and discussion
    - **"You do"**: Unsolved practice problem for independent student work
 
 ### GUESS Method for Problem Solving
+
 For all example problems, use the GUESS method structure:
+
 - **G - Givens**: List all known quantities with correct variable symbols (e.g., v₀ = 5 m/s)
 - **U - Unknown**: Identify the quantity being asked for
 - **E - Equation**: Select the physics equation relating givens and unknown
@@ -56,12 +61,14 @@ For all example problems, use the GUESS method structure:
 ## Formatting and Technical Guidelines
 
 ### LaTeX Formatting Requirements
+
 - Use `\begin{frame}[allowframebreaks]` for every new frame to handle content overflow
 - Use clear, descriptive frame titles for organization and navigation
 - Employ proper LaTeX formatting: mathematical equations, itemized lists, appropriate spacing
 - Use `\alert{[description of external image]}` only for placeholders referencing external image files
 
 ### Visualization Standards
+
 - Create simple, easily readable plots using tikz/pgfplots with:
   - Large, clear axis labels and units
   - Appropriate scales and tick marks

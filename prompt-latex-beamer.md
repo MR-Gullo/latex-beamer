@@ -20,7 +20,7 @@ Please follow these instructions carefully:
 
 \documentclass{beamer}
 % Use DS9 global theme
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:<specified sections>}
@@ -71,7 +71,7 @@ It's OK for this section to be quite long. Then, generate the complete LaTeX Bea
 Example output structure:
 \documentclass{beamer}
 % Use DS9 global theme
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{PHYS11 CH:<specified sections>}
