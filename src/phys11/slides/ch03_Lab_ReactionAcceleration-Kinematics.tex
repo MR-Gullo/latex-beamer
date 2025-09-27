@@ -1,0 +1,200 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../../latex-beamer/shared/templates/ds9_theme}
+
+% Title page configuration
+\title[Reaction Time Lab]{PHYS11 CH: Reaction Time Lab}
+\subtitle{Measuring Human Reaction Time with Kinematics}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Sep 27, 2025]{September 27, 2025}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\framesubtitle{What You Will Accomplish Today}
+    \begin{itemize}
+        \item \textbf{Apply Kinematics:} Use kinematic equations to calculate an unknown variable (time) from experimental data.
+        \item \textbf{Connect Concepts:} Understand the connection between a physical measurement (distance) and a calculated physics quantity (reaction time).
+        \item \textbf{Improve Lab Skills:} Practice making careful measurements, collecting multiple trials, and identifying sources of experimental uncertainty.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Video: The Science of Reaction Time}
+    \vfill
+    \begin{alertblock}{Media}
+        Play the context video about reaction time in sports.
+    \end{alertblock}
+    \vfill
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary: What is Reaction Time?}
+\framesubtitle{Key Ideas from the Video}
+    \begin{block}{Definition}
+        Reaction time is the total delay between detecting a stimulus and executing a physical response.
+    \end{block}
+    \pause
+    \begin{itemize}
+        \item The process involves a signal traveling from your senses (eyes) to your brain, and then from your brain to your muscles. \pause
+        \item This delay, though short, is measurable and critical in high-speed situations. \pause
+        \item In sports, even a few hundredths of a second can determine the outcome.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Video: The Science of Hitting a Fastball}
+    \vfill
+    \begin{alertblock}{Media}
+        Play the video on hitting a fastball.
+    \end{alertblock}
+    \vfill
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary: Factors Affecting Reaction Time}
+\framesubtitle{What Makes You Faster or Slower?}
+    As the videos showed, your reaction time is not always the same. Several factors can influence it:
+    \begin{columns}[T]
+        \column{0.48\textwidth}
+            \begin{block}{Physiological Factors}
+                \begin{itemize}
+                    \item \textbf{Alertness:} Tiredness slows down nerve signals.
+                    \item \textbf{Stimulants:} Caffeine can temporarily shorten reaction time.
+                \end{itemize}
+            \end{block}
+        
+        \column{0.48\textwidth}
+            \begin{block}{Cognitive Factors}
+                \begin{itemize}
+                    \item \textbf{Distractions:} Loud noises or other tasks increase the brain's processing time.
+                    \item \textbf{Prediction:} Elite athletes "see into the future" by anticipating the trajectory of a ball based on the pitcher's body language.
+                \end{itemize}
+            \end{block}
+    \end{columns}
+    \vfill
+    \begin{alertblock}{Think About This:}
+    As you do the lab, consider which of these factors might be affecting your own results today.
+    \end{alertblock}
+\end{frame}
+
+\section{The Physics of the Experiment}
+
+\begin{frame}
+\frametitle{The Physics of the Ruler Drop}
+\framesubtitle{The Equation We Will Use}
+    We will use the derivation from this kinematic equation:
+    \[ \Delta x = v_0 t + \frac{1}{2} a t^2 \]
+    \pause
+    Since the ruler is dropped ($v_0=0$) and in free fall ($a=g$), it simplifies and we can solve for time ($t$).
+    
+    \begin{block}{Your Reaction Time Equation}
+        \[ t = \sqrt{\frac{2 \Delta x}{g}} \]
+    \end{block}
+    \pause
+    \vfill
+    \begin{columns}[T]
+        \column{0.5\textwidth}
+            \textbf{Variables:}
+            \begin{itemize}
+                \item $t$ = reaction time
+                \item $\Delta x$ = distance ruler fell
+                \item $g = 9.8 \, \text{m/s}^2$
+            \end{itemize}
+        \column{0.5\textwidth}
+            \textbf{Units:}
+            \begin{itemize}
+                \item $t$ in \textbf{seconds (s)}
+                \item $\Delta x$ must be in \textbf{meters (m)!}
+                \item $g$ in \textbf{m/s$^2$}
+            \end{itemize}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab Procedure: Setup}
+\framesubtitle{Equipment and Safety}
+    \begin{columns}[T]
+        \column{0.48\textwidth}
+        \textbf{Equipment:}
+            \begin{itemize}
+                \item One 30 cm ruler
+                \item A partner
+                \item Paper and pencil for recording data
+            \end{itemize}
+        
+        \column{0.48\textwidth}
+        \textbf{Safety First!}
+            \begin{alertblock}{}
+                Move slowly and carefully. Do not grab at the ruler too quickly or you might hit your partner's hand.
+            \end{alertblock}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab Procedure: Data Collection}
+\framesubtitle{How to Do the Lab}
+    \begin{enumerate}
+        \item \textbf{Hold:} Your partner holds the ruler vertically. The 0 cm mark should be at the bottom.
+        \item \textbf{Ready:} Place your thumb and index finger around the 0 cm mark, but \textit{do not touch} the ruler.
+        \item \textbf{Drop:} Your partner will drop the ruler without warning.
+        \item \textbf{Catch:} As soon as you see it fall, catch it!
+        \item \textbf{Measure:} Read the distance in centimeters at the top edge of your fingers. This is $\Delta x$ for this trial.
+        \item \textbf{Record:} Write this distance in your data table.
+        \item \textbf{Repeat:} Perform a total of 5 trials to get a good average.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Data Analysis Steps}
+\framesubtitle{From Distance to Time}
+    Once you have your 5 distance measurements:
+    
+    \begin{enumerate}
+        \item \textbf{Find the Average:} Add your 5 distances together and divide by 5. This gives you an average distance in \textbf{cm}. \pause
+        
+        \item \alert{\textbf{Convert Units!}} Take your average distance in cm and divide by 100 to convert it to \textbf{meters (m)}. This is your final $\Delta x$. \pause
+        
+        \item \textbf{Calculate Time:} Plug your $\Delta x$ (in meters) into the equation to find your reaction time in seconds.
+            \[ t = \sqrt{\frac{2 \times \Delta x}{9.8}} \]
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework: Analysis \& Discussion}
+\framesubtitle{Thinking About Your Results}
+    After you calculate your reaction time, answer these questions in your lab notebook.
+    \begin{itemize}
+        \item Are your measurements for each trial exactly the same? Why or why not? What does this tell you about measurement?
+        \item What do you think were the biggest sources of error in this experiment? How could you make it more accurate?
+        \item If you performed this experiment on Jupiter ($g \approx 25 \, \text{m/s}^2$), would the ruler fall a longer or shorter distance during the same reaction time? Explain your answer.
+        \item How could you apply what you learned about reaction time to a real-world situation (e.g., driving, sports)?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\framesubtitle{Key Takeaways}
+    \begin{itemize}
+        \item Human reaction time is a physical delay that can be measured using physics. \pause
+        \item By measuring the \textbf{distance} an object falls in free fall, we can calculate the \textbf{time} it was falling. \pause
+        \item We used the principles of kinematics for an object in \textbf{free fall} ($v_0 = 0$, $a=g$) to derive our key lab equation:
+    \end{itemize}
+    \begin{center}
+    \begin{block}{}
+        \[ t = \sqrt{\frac{2 \Delta x}{g}} \]
+    \end{block}
+    \end{center}
+    \vfill
+    \begin{alertblock}{}
+        This lab is a perfect example of how we use physics models to understand and quantify the world around us.
+    \end{alertblock}
+\end{frame}
+
+\end{document}
