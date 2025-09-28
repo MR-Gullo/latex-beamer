@@ -12,6 +12,9 @@
     },
     {
       "path": "src/cs12"
+    },
+    {
+      "path": "../open_latest_submissions"
     }
   ],
   "settings": {
