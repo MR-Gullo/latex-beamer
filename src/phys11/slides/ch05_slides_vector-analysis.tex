@@ -17,30 +17,40 @@
   \end{frame}
 }
 
-% Add logo
-\logo{\includegraphics[width=0.1\linewidth]{cinec_logo.png}}
-
 \begin{document}
 
 \frame{\titlepage}
 
 \begin{frame}
-\frametitle{Introduction to Vector Analysis}
+\frametitle{Learning Objectives}
+By the end of this lesson, you will be able to:
+\pause
 \begin{itemize}
-    \item Vectors are essential in physics for describing quantities with magnitude and direction
-    \item Key topics:
-    \begin{itemize}
-        \item Vector addition and subtraction
-        \item Resolving vectors into components
-        \item Vector applications in real-world problems
-    \end{itemize}
+    \item Understand and apply graphical methods for vector addition \pause
+    \item Use the tip-to-tail method to add vectors graphically \pause
+    \item Apply analytical methods to add and subtract vectors \pause
+    \item Resolve vectors into perpendicular components \pause
+    \item Calculate magnitude and direction of resultant vectors \pause
+    \item Solve real-world physics problems using vector analysis
 \end{itemize}
 \end{frame}
 
-\section{Vector Operations}
+\section{Graphical Methods for Vector Addition}
 
 \begin{frame}
-\frametitle{Trig Review}
+\frametitle{What is a Vector?}
+\begin{itemize}
+    \item A \textbf{vector} is a quantity that has both magnitude and direction \pause
+    \item Examples: displacement, velocity, acceleration, force \pause
+    \item A \textbf{scalar} has only magnitude \pause
+    \item Examples: distance, speed, mass, temperature \pause
+\end{itemize}
+\vspace{0.3cm}
+\textbf{Vector Notation:} $\vec{A}$ or $\mathbf{A}$
+\end{frame}
+
+\begin{frame}
+\frametitle{Trigonometry Review}
 \begin{columns}[T] % Top-aligned columns
     \column{0.48\textwidth}
     \begin{figure}
@@ -57,6 +67,26 @@
     \end{figure}
 \end{columns}
 \end{frame}
+
+\begin{frame}
+\frametitle{Graphical Vector Addition: Tip-to-Tail Method}
+\textbf{Steps:}
+\pause
+\begin{enumerate}
+    \item Draw the first vector to scale with proper direction \pause
+    \item Place the tail of the second vector at the tip of the first \pause
+    \item Draw the resultant from the tail of the first to the tip of the last \pause
+    \item Measure the magnitude and direction of the resultant
+\end{enumerate}
+\pause
+\vspace{0.3cm}
+\textbf{Important:} Vector addition is commutative: $\vec{A} + \vec{B} = \vec{B} + \vec{A}$
+
+\vspace{0.2cm}
+\alert{[See Figure 5.3 - Tip-to-tail method illustration]}
+\end{frame}
+
+\section{Analytical Methods for Vector Addition}
 
 \begin{frame}
 \frametitle{Vector Addition and Subtraction}
@@ -96,93 +126,252 @@
     \item Magnitude: $A = \sqrt{A_x^2 + A_y^2}$
     \item Direction: $\tan\theta = \frac{A_y}{A_x}$
 \end{itemize}
+
+\vspace{0.3cm}
+\alert{[See Figure 5.7 - Vector components diagram]}
 \end{frame}
 
-\section{Vector Applications}
+\section{Vector Applications and Problem Solving}
 
 \begin{frame}
-\frametitle{Example 1: River Crossing Problem}
-Problem: A river flows SW to NE at 7.1 m/s. A boat moving at 13 m/s wants to reach a point due east.
+\frametitle{Example 1: River Crossing Problem - Setup}
+\textbf{Problem:} A river flows SW to NE at 7.1 m/s. A boat moving at 13 m/s wants to reach a point due east. At what angle should the boat head?
+\pause
+\vspace{0.3cm}
 
-
-\end{frame}
-\begin{frame}
-\frametitle{Example 1: River Crossing Problem}
-Problem: A river flows SW to NE at 7.1 m/s. A boat moving at 13 m/s wants to reach a point due east.\\
-
-Solution:
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
 \begin{itemize}
-    \item River velocity components: $v_{rx} = v_{ry} = 7.1\cos45° = 5.02$ m/s
-    \item Boat must counteract river's y-component: $v_{by} = -5.02$ m/s
-    \item Angle of boat's heading: $\theta = \arcsin(-5.02/13) \approx -22.6°$
+\item $v_r = 7.1$ m/s (SW to NE)
+\item $v_b = 13$ m/s
+\item Direction: due east
 \end{itemize}
-Answer: The boat should head 22.6° south of east.
-\end{frame}
 
-\begin{frame}
-\frametitle{Example 2: Displacement Problem}
-Problem: A person walks 10.0 m north, then 2.0 m east. Find the resultant displacement.
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Example 2: Displacement Problem}
-Problem: A person walks 10.0 m north, then 2.0 m east. Find the resultant displacement.
-
-Solution:
+\column{0.48\textwidth}
+\textbf{U - Unknown}
 \begin{itemize}
-    \item Use Pythagorean theorem: $R = \sqrt{10.0^2 + 2.0^2} \approx 10.2$ m
-    \item Angle: $\theta = \arctan(10.0/2.0) \approx 78.7°$ north of east
+\item Angle $\theta = ?$
+\item (relative to east)
 \end{itemize}
-Answer: $\vec{R} = 10.2$ m, 78.7° north of east
+\end{columns}
 \end{frame}
-\section{Projectile Motion}
 
 \begin{frame}
-\frametitle{Projectile Motion Basics}
+\frametitle{Example 1: River Crossing Problem - Equation}
+\textbf{E - Equation}
 \begin{itemize}
-    \item Combination of horizontal and vertical motion
-    \item Horizontal motion: constant velocity (neglecting air resistance)
-    \item Vertical motion: constant acceleration due to gravity
-    \item Key equations:
+\item River components: $v_{rx} = v_r\cos 45°$, $v_{ry} = v_r\sin 45°$ \pause
+\item For eastward motion: $v_{by} = -v_{ry}$ \pause
+\item Angle: $\theta = \arcsin(v_{by}/v_b)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 1: River Crossing Problem - Solution}
+\textbf{S - Substitute}
+\begin{itemize}
+\item $v_{rx} = v_{ry} = 7.1\cos 45° = 5.02$ m/s \pause
+\item $v_{by} = -5.02$ m/s \pause
+\item $\theta = \arcsin(-5.02/13)$
+\end{itemize}
+\pause
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $\theta \approx -22.6°$
+\item \boxed{\text{The boat should head } 22.6° \text{ south of east}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 2: Displacement Problem - Setup}
+\textbf{Problem:} A person walks 10.0 m north, then 2.0 m east. Find the resultant displacement.
+\pause
+\vspace{0.3cm}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item $d_1 = 10.0$ m (north)
+\item $d_2 = 2.0$ m (east)
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item Magnitude: $R = ?$
+\item Direction: $\theta = ?$
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 2: Displacement Problem - Equation}
+\textbf{E - Equation}
+\begin{itemize}
+\item Pythagorean theorem: $R = \sqrt{d_1^2 + d_2^2}$ \pause
+\item Direction: $\theta = \arctan(d_1/d_2)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 2: Displacement Problem - Solution}
+\textbf{S - Substitute and Solve}
+\begin{itemize}
+\item $R = \sqrt{(10.0)^2 + (2.0)^2}$ \pause
+\item $R = \sqrt{100 + 4} = \sqrt{104} \approx 10.2$ m \pause
+\item $\theta = \arctan(10.0/2.0) = \arctan(5.0) \approx 78.7°$
+\end{itemize}
+\pause
+
+\textbf{Answer:}
+\begin{itemize}
+\item \boxed{\vec{R} = 10.2 \text{ m, } 78.7° \text{ north of east}}
+\end{itemize}
+\end{frame}
+\section{Projectile Motion (Section 5.3)}
+
+\begin{frame}
+\frametitle{What is Projectile Motion?}
+\begin{itemize}
+    \item An object moving through the air under the influence of gravity only \pause
+    \item Examples: thrown ball, kicked soccer ball, fired cannon \pause
+    \item Two independent motions:
     \begin{itemize}
-        \item Range: $R = \frac{v_0^2 \sin(2\theta)}{g}$
-        \item Maximum height: $h_{\max} = \frac{v_0^2 \sin^2\theta}{2g}$
-        \item Time of flight: $t = \frac{2v_0 \sin\theta}{g}$
+        \item Horizontal: constant velocity (no acceleration) \pause
+        \item Vertical: constant acceleration ($a = -g = -9.8$ m/s²)
     \end{itemize}
 \end{itemize}
+\pause
+\vspace{0.3cm}
+\textbf{Key Assumption:} Air resistance is negligible
+
+\vspace{0.2cm}
+\alert{[See Figure 5.27 - Projectile motion trajectory]}
 \end{frame}
 
 \begin{frame}
-\frametitle{Example 3: Projectile Motion Problem}
-Problem: A water-balloon cannon fires at 30 m/s, 50° above horizontal. Find the range.
-
-\end{frame}
-\begin{frame}
-\frametitle{Example 3: Projectile Motion Problem}
-Problem: A water-balloon cannon fires at 30 m/s, 50° above horizontal. Find the range.
-
-Solution:
+\frametitle{Projectile Motion Equations}
+\textbf{Horizontal Motion:}
 \begin{itemize}
-    \item Use range equation: $R = \frac{v_0^2 \sin(2\theta)}{g}$
-    \item $R = \frac{(30 \text{ m/s})^2 \sin(2 * 50°)}{9.8 \text{ m/s}^2} \approx 90.44$ m
+    \item $v_x = v_0 \cos\theta$ (constant) \pause
+    \item $x = v_0 t \cos\theta$ \pause
 \end{itemize}
-Answer: The water balloon will fall approximately 90.44 m away.
+
+\textbf{Vertical Motion:}
+\begin{itemize}
+    \item $v_y = v_0 \sin\theta - gt$ \pause
+    \item $y = v_0 t \sin\theta - \frac{1}{2}gt^2$ \pause
+\end{itemize}
+
+\textbf{Special Formulas:}
+\begin{itemize}
+    \item Range: $R = \frac{v_0^2 \sin(2\theta)}{g}$ \pause
+    \item Maximum height: $h_{\max} = \frac{v_0^2 \sin^2\theta}{2g}$
+\end{itemize}
+
+\vspace{0.2cm}
+\alert{[See Figure 5.29 - Horizontal and vertical components of projectile motion]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 3: Projectile Motion - Setup}
+\textbf{Problem:} A water-balloon cannon fires at 30 m/s, 50° above horizontal. Find the range.
+\pause
+\vspace{0.3cm}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item $v_0 = 30$ m/s
+\item $\theta = 50°$
+\item $g = 9.8$ m/s²
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item Range: $R = ?$
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 3: Projectile Motion - Equation}
+\textbf{E - Equation}
+\begin{itemize}
+\item Range formula: $R = \frac{v_0^2 \sin(2\theta)}{g}$ \pause
+\item Note: $\sin(2\theta) = \sin(2 \times 50°) = \sin(100°)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 3: Projectile Motion - Solution}
+\textbf{S - Substitute}
+\begin{itemize}
+\item $R = \frac{(30)^2 \sin(100°)}{9.8}$ \pause
+\item $R = \frac{900 \times 0.9848}{9.8}$ \pause
+\item $R = \frac{886.3}{9.8}$
+\end{itemize}
+\pause
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $R \approx 90.4$ m
+\item \boxed{\text{The water balloon will fall approximately } 90.4 \text{ m away}}
+\end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Conclusion}
+\frametitle{Reading Homework}
+\textbf{Additional Topics for Self-Study:}
+\pause
 \begin{itemize}
-    \item Vector analysis is crucial for understanding motion in physics
-    \item Key concepts covered:
+    \item \textbf{Section 5.4:} Inclined Planes \pause
     \begin{itemize}
-        \item Vector addition and subtraction
-        \item Resolving vectors into components
-        \item Applications in real-world problems
-        \item Basics of projectile motion
+        \item Forces on inclined surfaces
+        \item Normal and parallel components
+        \item Friction on slopes
     \end{itemize}
-    \item These concepts help analyze complex motions and solve practical problems
-    \item Practice with various examples to master vector analysis
+    \pause
+    \item \textbf{Section 5.5:} Simple Harmonic Motion \pause
+    \begin{itemize}
+        \item Oscillatory motion
+        \item Springs and pendulums
+        \item Period and frequency
+    \end{itemize}
 \end{itemize}
+\pause
+\vspace{0.3cm}
+\textbf{Note:} These sections will be covered in future lessons
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary: Sections 5.1-5.3}
+\textbf{Section 5.1 - Graphical Methods:}
+\begin{itemize}
+    \item Tip-to-tail method for vector addition
+\end{itemize}
+\pause
+
+\textbf{Section 5.2 - Analytical Methods:}
+\begin{itemize}
+    \item Resolving vectors into components
+    \item Using trigonometry for vector calculations
+\end{itemize}
+\pause
+
+\textbf{Section 5.3 - Projectile Motion:}
+\begin{itemize}
+    \item Independent horizontal and vertical motion
+    \item Key equations for range, height, and time
+\end{itemize}
+\pause
+
+\vspace{0.3cm}
+\textbf{Practice problems are essential for mastery!}
 \end{frame}
 
 \begin{frame}
