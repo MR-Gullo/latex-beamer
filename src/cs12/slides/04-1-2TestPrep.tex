@@ -1,0 +1,334 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
+
+% Title page configuration
+\title[Short Title]{CS12 CH:1-4 Review}
+\subtitle{Program Structure, Data Types, and Math}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Oct 8, 2025]{October 8, 2025}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\framesubtitle{Consolidated Review of Chapters 1-4}
+\begin{itemize}
+    \item Understand the basic 5-part structure of a C++ program.\pause
+    \item Identify and use fundamental data types: \texttt{int}, \texttt{float}, \texttt{char}, and \texttt{bool}.\pause
+    \item Differentiate between integer and floating-point division.\pause
+    \item Explain fundamental memory concepts: Bit and Byte.\pause
+    \item Use \texttt{cin} to get input from a user.\pause
+    \item Include and use the \texttt{<cmath>} library for advanced math calculations.
+\end{itemize}
+\end{frame}
+
+\section{C++ Program Fundamentals}
+
+\begin{frame}[fragile]
+\frametitle{The 5 Parts of a C++ Program}
+\framesubtitle{A Quick Refresher}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+    \begin{enumerate}
+        \item \alert{Pre-processor Directives} \\ \texttt{\#include <...>}\pause
+        \item \alert{Constant Definitions} \\ \texttt{const float pi = ...;}\pause
+        \item \alert{Main Body Heading} \\ \texttt{int main() \{\}}\pause
+        \item \alert{Variable Declarations} \\ \texttt{float diameter = ...;}\pause
+        \item \alert{Main Body Statements} \\ \texttt{cout << ...;}
+    \end{enumerate}
+\end{column}\pause
+\begin{column}{0.5\textwidth}
+\begin{minted}[fontsize=\tiny, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+const float pi = 3.14159;
+
+int main()
+{
+    float diameter = 13.5;
+
+    cout << "Area is "
+         << pi * (diameter/2) * (diameter/2)
+         << endl;
+
+    return 0;
+}
+\end{minted}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Code Comments}
+\begin{block}{For Human Eyes Only}
+Comments are text in your code that is completely ignored by the compiler. Use them to explain \textit{why} your code does something.
+\end{block}
+\pause
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{alertblock}{Single-Line Comments}
+Start with \texttt{//}. The compiler ignores everything to the end of the line.
+\begin{minted}[fontsize=\scriptsize]{cpp}
+// Calculate the area
+float area = l * w;
+\end{minted}
+\end{alertblock}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{exampleblock}{Multi-Line Comments}
+Start with \texttt{/*} and end with \texttt{*/}. Can span multiple lines.
+\begin{minted}[fontsize=\scriptsize]{cpp}
+/* This function calculates
+   the distance between two
+   points in a 2D plane. */
+\end{minted}
+\end{exampleblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Core Data Types \& Memory}
+
+\begin{frame}
+\frametitle{Fundamental Data Types}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+    \begin{alertblock}{\texttt{int}}
+        Stores positive and negative \alert{whole numbers}.\pause
+        \begin{itemize}
+            \item Examples: \texttt{-5}, \texttt{0}, \texttt{100}\pause
+            \item Operations: \texttt{+}, \texttt{-}, \texttt{*}, \texttt{/}, \texttt{\%}
+        \end{itemize}
+    \end{alertblock}
+    \pause
+    \begin{exampleblock}{\texttt{char}}
+        Stores a \alert{single character}. Internally, it's a number (ASCII).\pause
+        \begin{itemize}
+            \item Examples: \texttt{'A'}, \texttt{'?'}, \texttt{'\textbackslash n'}
+        \end{itemize}
+    \end{exampleblock}
+\end{column}\pause
+\begin{column}{0.5\textwidth}
+    \begin{block}{\texttt{float}}
+        Stores numbers with \alert{decimal points}.\pause
+        \begin{itemize}
+            \item Examples: \texttt{3.14}, \texttt{-0.05}\pause
+            \item No modulo \texttt{\%} operator.
+        \end{itemize}
+    \end{block}
+    \pause
+    \begin{alertblock}{\texttt{bool}}
+        Stores logical values: \alert{true} or \alert{false}.\pause
+        \begin{itemize}
+            \item Internally: \texttt{true} is 1, \texttt{false} is 0.
+        \end{itemize}
+    \end{alertblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Essential Concept: Integer vs. Float Division}
+This is one of the most common sources of bugs for new programmers!
+\pause
+\begin{itemize}
+    \item \textbf{Integer Division}: If \alert{both} numbers are integers, the result is an integer. The decimal part is \alert{truncated} (cut off).\pause
+    \begin{itemize}
+        \item \texttt{5 / 4} \hfill $\rightarrow$ \texttt{1}
+    \end{itemize}
+    \pause
+    \item \textbf{Floating-Point Division}: If \alert{at least one} number is a float, the result is a float, preserving the decimal.\pause
+    \begin{itemize}
+        \item \texttt{5.0 / 4} \hfill $\rightarrow$ \texttt{1.25}\pause
+        \item \texttt{5 / 4.0} \hfill $\rightarrow$ \texttt{1.25}
+    \end{itemize}
+\end{itemize}
+\pause
+\begin{alertblock}{Key Rule}
+The division type is determined \textit{before} the result is assigned to a variable.
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Context: Visualizing Memory}
+All data types—integers, characters, floats—are stored in the computer's memory as sequences of binary digits (bits).\pause
+
+To understand how much space they take, we need to understand the basic units of memory: bits and bytes.
+\end{frame}
+
+
+\section{User Interaction \& Math}
+
+\begin{frame}[fragile]
+\frametitle{Getting User Input with \texttt{cin}}
+\begin{itemize}
+    \item To make programs interactive, we read input from the user with \texttt{cin}.\pause
+    \item \texttt{cin} is part of the \texttt{<iostream>} library.\pause
+    \item It uses the extraction operator \texttt{>>} to "pull" data from the keyboard into a variable.
+\end{itemize}
+\pause
+\begin{exampleblock}{Example: Reading an integer}
+\begin{minted}[fontsize=\small, frame=lines, linenos, breaklines]{cpp}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age; // Variable to store input
+
+    cout << "Please enter your age: "; // Prompt
+    cin >> age; // Read keyboard input into 'age'
+
+    cout << "You are " << age << " years old." << endl;
+
+    return 0;
+}
+\end{minted}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{The \texttt{<cmath>} Library}
+\begin{itemize}
+    \item For advanced math, C++ provides the \texttt{<cmath>} library.\pause
+    \item You must include it at the top of your program to use its functions:
+\end{itemize}
+\begin{minted}[fontsize=\small]{cpp}
+#include <cmath>
+\end{minted}
+\pause
+\begin{alertblock}{Common Functions}
+    \begin{itemize}
+        \item \texttt{pow(base, exp)}: Calculates base to the power of exp. (\(x^y\))\pause
+        \item \texttt{sqrt(x)}: Calculates the square root of x. (\(\sqrt{x}\))\pause
+        \item \texttt{exp(x)}: Calculates the exponential function. (\(e^x\))
+    \end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Essential Equations Review}
+\begin{block}{Distance Between Two Points}
+$$ d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$
+\end{block}
+\pause
+\begin{block}{Slope of a Line}
+$$ \text{slope} = \frac{y_2 - y_1}{x_2 - x_1} $$
+\end{block}
+\pause
+\begin{block}{Radioactive Decay}
+$$ \text{remaining} = (\text{original}) \times e^{-0.00012t} $$
+\end{block}
+\end{frame}
+
+\section{Review Exercises}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 1: Combined Arithmetic}
+\textbf{Exercise File:} \texttt{review_arithmetic.cpp}\pause
+
+\textbf{Objective:} Test your understanding of integer vs. float division by calculating an average.\pause
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int test1, test2, test3;
+
+    // TODO 1: Prompt the user to enter three integer test scores.
+    
+    // TODO 2: Read the three scores into the variables test1, test2, and test3.
+    
+    // TODO 3: Calculate the average of the three scores.
+    // BE CAREFUL! The result should be a float. How do you avoid
+    // integer division here?
+    
+    // TODO 4: Print the average score to the console.
+
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 2: Distance Formula}
+\textbf{Exercise File:} \texttt{review_distance.cpp}\pause
+
+\textbf{Objective:} Combine user input, floating-point math, and the \texttt{<cmath>} library.\pause
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
+#include <iostream>
+#include <cmath> // Don't forget this!
+using namespace std;
+
+int main() {
+    float x1, y1, x2, y2;
+    float distance;
+
+    // TODO 1: Prompt the user for the coordinates of two points (x1, y1) and (x2, y2).
+    
+    // TODO 2: Read the four float values from the user.
+    
+    // TODO 3: Calculate the distance using the formula.
+    // HINT: You will need pow() for squaring and sqrt() for the root.
+    
+    // TODO 4: Print the calculated distance.
+
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 3: ASCII Character Math}
+\textbf{Exercise File:} \texttt{review_char_math.cpp}\pause
+
+\textbf{Objective:} Reinforce that characters are numbers by converting character case.\pause
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
+#include <iostream>
+using namespace std;
+
+int main() {
+    char uppercaseChar;
+    char lowercaseChar;
+
+    // TODO 1: Prompt the user to enter a single uppercase letter.
+    
+    // TODO 2: Read the character into the 'uppercaseChar' variable.
+    
+    // TODO 3: Calculate the corresponding lowercase letter.
+    // HINT: The ASCII value for 'a' is 32 greater than 'A'.
+    // Perform an addition operation on the char variable.
+    
+    // TODO 4: Print the original uppercase letter and the new lowercase letter.
+
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{Summary: Key Takeaways}
+\begin{itemize}
+    \item \textbf{Structure is Key}: All C++ programs follow a predictable 5-part structure, which makes them easier to read and write.
+    \pause
+    \item \textbf{Data Types Matter}: The type of a variable (\texttt{int}, \texttt{float}, etc.) determines what it can store and how it behaves in calculations, especially division.
+    \pause
+    \item \textbf{Memory is Finite}: Data is stored in memory as bits and bytes. \texttt{sizeof()} shows us that different types have different memory footprints.
+    \pause
+    \item \textbf{Programs are Interactive}: \texttt{cin} is our tool for getting input from the user, making our programs dynamic.
+    \pause
+    \item \textbf{Libraries Extend Power}: We don't have to reinvent the wheel. Libraries like \texttt{<cmath>} provide powerful, pre-built functions to solve complex problems.
+\end{itemize}
+\end{frame}
+
+
+\end{document}

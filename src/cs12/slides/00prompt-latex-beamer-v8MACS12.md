@@ -10,7 +10,7 @@ Please follow these instructions carefully:
 
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usepackage{../../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Short Title]{CS12 CH:`<specified sections>`}

@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{test1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{test2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{test3}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 1: Prompt the user to enter three integer test scores.}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 2: Read the three scores into the variables test1, test2, and test3.}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 3: Calculate the average of the three scores.}
+\PYG{+w}{    }\PYG{c+c1}{// BE CAREFUL! The result should be a float. How do you avoid}
+\PYG{+w}{    }\PYG{c+c1}{// integer division here?}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 4: Print the average score to the console.}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
