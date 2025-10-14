@@ -1,0 +1,23 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{sales}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{commission}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Enter total sales: \PYGZdl{}}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{cin}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{sales}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 1: Check if sales \PYGZlt{}= 10000, calculate 5\PYGZpc{} commission}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 2: Check if sales \PYGZlt{}= 50000, calculate 8\PYGZpc{} commission}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 3: Check if sales \PYGZlt{}= 100000, calculate 10\PYGZpc{} commission}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 4: For sales \PYGZgt{} 100000, calculate 12\PYGZpc{} commission}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 5: Output the commission with appropriate formatting}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

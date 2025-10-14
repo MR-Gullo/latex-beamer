@@ -1,24 +1,444 @@
-% CS12 - Truth Tables
 \documentclass{beamer}
-\usetheme{default}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
 
-\title{Truth Tables}
-\author{CS12}
-\date{}
+% Title page configuration
+\title[Truth Tables and Logic]{CS12 CH: Truth Tables}
+\subtitle{Logical Expressions and Truth Tables in Excel}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Dec 2024]{December 2024}
 
 \begin{document}
+\frame{\titlepage}
 
 \begin{frame}
-    \titlepage
+\frametitle{Learning Objectives}
+After this lesson, you will be able to:
+\begin{itemize}
+    \item Understand the eight standard logical operators: NOT, AND, OR, XOR, NAND, NOR, IF, and IFF\pause
+    \item Construct truth tables for logical expressions\pause
+    \item Evaluate complex logical expressions using truth tables\pause
+    \item Apply logical operators to solve real-world problems (e.g., leap year calculations)\pause
+    \item Create truth tables in Excel with proper formatting and formulas\pause
+    \item Use conditional formatting to visualize Boolean values
+\end{itemize}
 \end{frame}
 
-% Placeholder content - to be developed
-\begin{frame}{Truth Tables}
-    \begin{itemize}
-        \item Logical operators
-        \item Boolean logic
-        \item Truth table construction
-    \end{itemize}
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Review: If-Else Statements}
+Last class we examined C++ if-else statements.\pause
+
+Today we focus on the \alert{conditional part} --- the logical expressions that determine which branch executes.\pause
+
+\textbf{Key Question:} How do we systematically evaluate complex logical conditions?\pause
+
+\vspace{0.3cm}
+\textbf{Answer:} Truth tables provide the systematic approach!
+\end{frame}
+
+\begin{frame}
+\frametitle{Motivating Example: Leap Year}
+To test if a year $y$ is a leap year, one of the following must be true:
+\begin{enumerate}
+    \item $y$ is divisible by 400, \alert{or}
+    \item $y$ is divisible by 4 \alert{but not} divisible by 100
+\end{enumerate}\pause
+
+\vspace{0.3cm}
+This involves multiple logical conditions combined with AND, OR, and NOT operators.\pause
+
+\vspace{0.3cm}
+\textbf{Truth tables} help us understand and evaluate these complex expressions systematically.
+\end{frame}
+
+\section{The Eight Standard Logical Operators}
+
+\begin{frame}
+\frametitle{Overview of Logical Operators}
+We will examine 8 standard truth tables:\pause
+
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Basic Operators:}
+\begin{itemize}
+    \item NOT\pause
+    \item AND\pause
+    \item OR\pause
+    \item XOR
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Advanced Operators:}
+\begin{itemize}
+    \item NAND\pause
+    \item NOR\pause
+    \item IF (Implication)\pause
+    \item IFF (Biconditional)
+\end{itemize}
+\end{columns}
+
+\vspace{0.3cm}
+\alert{Note:} Don't worry about memorizing --- you'll have these as reference material.
+\end{frame}
+
+\begin{frame}
+\frametitle{Interactive Gates Demo}
+\textbf{Explore Logic Gates with Tinkercad!}
+
+\vspace{0.3cm}
+Visit this interactive circuit simulator to see logic gates in action:
+
+\vspace{0.3cm}
+\begin{center}
+\url{https://www.tinkercad.com/things/iq7BxA6CfDq-copy-of-gates/editel?sharecode=-bJi8AUPsx77y4DyGFV2Jsf5slVafWCLiGEDvuhlpKQ}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{What you'll find:}
+\begin{itemize}
+    \item Interactive AND, OR, NOT, XOR, NAND, and NOR gates
+    \item Real-time input/output visualization
+    \item Hands-on experimentation with different input combinations
+\end{itemize}
+
+\vspace{0.3cm}
+\alert{Tip:} Try different input combinations to verify the truth tables we're studying!
+\end{frame}
+
+\begin{frame}
+\frametitle{NOT Operator}
+\textbf{Negation:} Reverses the truth value of an expression.\pause
+
+\begin{itemize}
+    \item TRUE becomes FALSE\pause
+    \item FALSE becomes TRUE
+\end{itemize}\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{p} & \textbf{NOT p} \\
+\hline
+TRUE & FALSE \\
+\hline
+FALSE & TRUE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=NOT(A1)}
+\end{frame}
+
+\begin{frame}
+\frametitle{AND Operator}
+\textbf{Conjunction:} TRUE if \alert{both} expressions are TRUE.\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{p} & \textbf{q} & \textbf{p AND q} \\
+\hline
+TRUE & TRUE & TRUE \\
+\hline
+TRUE & FALSE & FALSE \\
+\hline
+FALSE & TRUE & FALSE \\
+\hline
+FALSE & FALSE & FALSE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=AND(A1,A2)}
+\end{frame}
+
+\begin{frame}
+\frametitle{OR Operator}
+\textbf{Disjunction:} TRUE if \alert{either} expression is TRUE.\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{p} & \textbf{q} & \textbf{p OR q} \\
+\hline
+TRUE & TRUE & TRUE \\
+\hline
+TRUE & FALSE & TRUE \\
+\hline
+FALSE & TRUE & TRUE \\
+\hline
+FALSE & FALSE & FALSE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=OR(A1,A2)}
+\end{frame}
+
+\begin{frame}
+\frametitle{XOR Operator}
+\textbf{Exclusive OR:} TRUE if either is TRUE \alert{but not both}.\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{p} & \textbf{q} & \textbf{p XOR q} \\
+\hline
+TRUE & TRUE & FALSE \\
+\hline
+TRUE & FALSE & TRUE \\
+\hline
+FALSE & TRUE & TRUE \\
+\hline
+FALSE & FALSE & FALSE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=XOR(A1,A2)}
+\end{frame}
+
+\begin{frame}
+\frametitle{NAND Operator}
+\textbf{Negation of AND:} The opposite of AND.\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{p} & \textbf{q} & \textbf{p NAND q} \\
+\hline
+TRUE & TRUE & FALSE \\
+\hline
+TRUE & FALSE & TRUE \\
+\hline
+FALSE & TRUE & TRUE \\
+\hline
+FALSE & FALSE & TRUE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=NOT(AND(A1,A2))}
+\end{frame}
+
+\begin{frame}
+\frametitle{NOR Operator}
+\textbf{Negation of OR:} The opposite of OR.\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{p} & \textbf{q} & \textbf{p NOR q} \\
+\hline
+TRUE & TRUE & FALSE \\
+\hline
+TRUE & FALSE & FALSE \\
+\hline
+FALSE & TRUE & FALSE \\
+\hline
+FALSE & FALSE & TRUE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=NOT(OR(A1,A2))}\pause
+
+\alert{Note:} NOR doesn't exist in Excel, so use NOT(OR(...))
+\end{frame}
+
+\begin{frame}
+\frametitle{IF Operator (Implication)}
+\textbf{Conditional:} ``If p then q'' or ``p implies q'' (symbolically: $p \rightarrow q$).\pause
+
+FALSE only when TRUE $\rightarrow$ FALSE\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{p} & \textbf{q} & \textbf{p $\rightarrow$ q} \\
+\hline
+TRUE & TRUE & TRUE \\
+\hline
+TRUE & FALSE & FALSE \\
+\hline
+FALSE & TRUE & TRUE \\
+\hline
+FALSE & FALSE & TRUE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=IF(AND(A1=TRUE,A2=FALSE), FALSE, TRUE)}
+\end{frame}
+
+\begin{frame}
+\frametitle{IFF Operator (Biconditional)}
+\textbf{If and Only If:} Symbolically $p \leftrightarrow q$\pause
+
+TRUE if both expressions have the \alert{same} truth value.\pause
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{p} & \textbf{q} & \textbf{p $\leftrightarrow$ q} \\
+\hline
+TRUE & TRUE & TRUE \\
+\hline
+TRUE & FALSE & FALSE \\
+\hline
+FALSE & TRUE & FALSE \\
+\hline
+FALSE & FALSE & TRUE \\
+\hline
+\end{tabular}
+\end{center}\pause
+
+\vspace{0.3cm}
+\textbf{Excel Formula:} \texttt{=IF(A1=A2, TRUE, FALSE)} or simply \texttt{=A1=A2}
+\end{frame}
+
+\section{Creating Truth Tables in Excel}
+
+\begin{frame}
+\frametitle{Excel Conditional Formatting}
+To make truth tables easier to read, we use \alert{conditional formatting} to color TRUE and FALSE values.\pause
+
+\vspace{0.3cm}
+\textbf{Steps:}
+\begin{enumerate}
+    \item Select the cell(s) you want to format\pause
+    \item Click Conditional Formatting $\rightarrow$ Highlight Cells Rules $\rightarrow$ Equal To...\pause
+    \item Enter FALSE and choose a color (e.g., red/pink)\pause
+    \item Repeat for TRUE with a different color (e.g., green)\pause
+    \item Use Format Painter to copy formatting to other cells
+\end{enumerate}\pause
+
+\vspace{0.3cm}
+\alert{Tip:} Double-click Format Painter to apply multiple times. Press ESC to cancel.
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel Conditional Formatting --- Visual}
+\alert{[Screenshot showing Excel conditional formatting menu and steps]}
+
+\vspace{0.5cm}
+After setting up once, you can use the Format Painter to copy the formatting throughout your spreadsheet.
+\end{frame}
+
+\section{Best Practices and Tips}
+
+\begin{frame}
+\frametitle{Important Note on Complexity}
+\textbf{Don't worry if this feels challenging!}\pause
+
+This lesson is meant as an \alert{introduction} to logical expressions and truth tables.\pause
+
+\vspace{0.3cm}
+We won't pursue this topic extensively, so:\pause
+\begin{itemize}
+    \item Focus on understanding the basic concepts\pause
+    \item Do your best with the exercises\pause
+    \item Don't stress if you don't grasp everything immediately
+\end{itemize}\pause
+
+\vspace{0.3cm}
+\textbf{For those interested in deeper study:}
+\begin{enumerate}
+    \item Deductions\pause
+    \item Boolean algebra
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Criteria for Your Exercises}
+When completing truth table exercises:\pause
+
+\begin{itemize}
+    \item All values (except input variables p, q, r, s) should be \alert{calculated using Excel formulas}\pause
+    \item Use plenty of \alert{intermediate steps} --- break complex expressions into smaller parts\pause
+    \item In exercises 12-13, it's okay to use \texttt{NOT(OR(...))} instead of \texttt{NOR(...)} since Excel doesn't have a built-in NOR function\pause
+    \item Assign intermediate steps their own column/letter for clarity
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Simplification Tip}
+\textbf{Use intermediate steps!}\pause
+
+You can assign intermediate results their own letter and refer to them later.\pause
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{itemize}
+    \item Column C: $p \wedge q$ (label as ``r'')\pause
+    \item Column D: $\neg r$ (uses result from Column C)
+\end{itemize}\pause
+
+\vspace{0.3cm}
+This makes complex expressions:
+\begin{itemize}
+    \item Easier to build\pause
+    \item Easier to debug\pause
+    \item Easier to understand
+\end{itemize}
+\end{frame}
+
+\section{Assignment}
+
+\begin{frame}
+\frametitle{Your Assignment: Truth Tables in Excel}
+\textbf{Complete the truth table exercises using the provided template.}\pause
+
+\vspace{0.3cm}
+\textbf{Template File:} \texttt{student-truth-tables-template.pdf}\pause
+
+\vspace{0.3cm}
+\textbf{Requirements:}
+\begin{itemize}
+    \item Create your truth tables in Excel\pause
+    \item Use conditional formatting for TRUE/FALSE values\pause
+    \item Use formulas for all calculated columns\pause
+    \item Include intermediate steps where helpful\pause
+    \item Save your completed work
+\end{itemize}\pause
+
+\vspace{0.3cm}
+\textbf{Submission:}
+
+Please submit your Excel file as: \alert{firstnameLastname\_truthtables.xlsx}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+Today we covered:\pause
+
+\begin{itemize}
+    \item The eight standard logical operators: NOT, AND, OR, XOR, NAND, NOR, IF, and IFF\pause
+    \item How to construct and read truth tables\pause
+    \item Creating truth tables in Excel with formulas\pause
+    \item Using conditional formatting to visualize Boolean values\pause
+    \item Best practices: use intermediate steps and clear labeling
+\end{itemize}\pause
+
+\vspace{0.3cm}
+\textbf{Remember:} Truth tables are a systematic way to evaluate logical expressions --- essential for understanding complex conditionals in programming!
 \end{frame}
 
 \end{document}
