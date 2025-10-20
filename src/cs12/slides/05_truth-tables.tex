@@ -288,6 +288,27 @@ FALSE & FALSE & TRUE \\
 \end{frame}
 
 \begin{frame}
+\frametitle{Understanding Implication: The Cat Analogy}
+\textbf{Statement:} ``If the cat is on the mat, then the cat will purr''\pause
+
+\vspace{0.3cm}
+Let's analyze each case:
+
+\begin{itemize}
+    \item \textbf{TRUE $\rightarrow$ TRUE:} Cat is on the mat AND cat purrs. \alert{True --- promise kept!}\pause
+    
+    \item \textbf{TRUE $\rightarrow$ FALSE:} Cat is on the mat BUT cat doesn't purr. \alert{False --- promise broken!}\pause
+    
+    \item \textbf{FALSE $\rightarrow$ TRUE:} Cat is not on the mat AND cat purrs. \alert{True --- promise not violated!}\pause
+    
+    \item \textbf{FALSE $\rightarrow$ FALSE:} Cat is not on the mat AND cat doesn't purr. \alert{True --- promise not violated!}
+\end{itemize}\pause
+
+\vspace{0.3cm}
+\textbf{Key Insight:} An implication is only false when the premise is true but the conclusion is false. If the premise is false, the implication is automatically true regardless of the conclusion.
+\end{frame}
+
+\begin{frame}
 \frametitle{IFF Operator (Biconditional)}
 \textbf{If and Only If:} Symbolically $p \leftrightarrow q$\pause
 
