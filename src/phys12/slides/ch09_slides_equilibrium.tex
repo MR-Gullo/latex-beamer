@@ -3,24 +3,10 @@
 \usepackage{../../../../shared/templates/ds9_theme}
 
 % Title page configuration
-\title{Lesson CH:9}
+\title[Statics and Torque]{PHYS12 CH: 9}
 \subtitle{Statics and Torque}
 \author{Mr. Gullo}
 \date{November 2024}
-
-% Add logo
-\logo{\includegraphics[width=0.1\linewidth]{phys12-shared-cinec-logo.png}}
-
-
-% Table of contents at the beginning of each section
-\AtBeginSection[]
-{
-  \begin{frame}
-    \frametitle{Table of Contents}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
-
 
 \begin{document}
 
@@ -33,7 +19,9 @@
 \begin{block}{First Condition for Equilibrium}
 \begin{itemize}
     \item Net external force must be zero ($\sum \vec{F} = \vec{0}$)
+    \pause
     \item Applies to both linear and rotational motion
+    \pause
     \item Required for absence of acceleration
 \end{itemize}
 \end{block}
@@ -51,8 +39,11 @@
 Torque ($\tau$) is the rotational equivalent of force:
 \begin{itemize}
     \item Measures effectiveness of force in changing angular velocity
+    \pause
     \item Represents rotational acceleration capability
+    \pause
     \item Defined as: $\tau = rF\sin\theta$
+    \pause
     \item where:
     \begin{itemize}
         \item $r$ is distance from pivot to force application point
@@ -66,8 +57,11 @@ Torque ($\tau$) is the rotational equivalent of force:
 \begin{block}{Second Condition for Equilibrium}
 \begin{itemize}
     \item Net external torque must be zero ($\sum \vec{\tau} = \vec{0}$)
+    \pause
     \item Torque ($\vec{\tau}$) = $rF \sin \theta$
+    \pause
     \item Where $\vec{r}$ is position vector from pivot point, $\vec{F}$ is force vector
+    \pause
     \item Perpendicular lever arm ($r_\perp$) is shortest distance from pivot to force line
 \end{itemize}
 \end{block}
@@ -85,11 +79,13 @@ Torque ($\tau$) is the rotational equivalent of force:
         \item When displaced, experiences force/torque opposing displacement
         \item System returns to original position
     \end{itemize}
+    \pause
     \item \textbf{Unstable Equilibrium}
     \begin{itemize}
         \item When displaced, experiences force/torque in same direction as displacement
         \item System moves further from original position
     \end{itemize}
+    \pause
     \item \textbf{Neutral Equilibrium}
     \begin{itemize}
         \item Equilibrium independent of displacement
@@ -104,7 +100,9 @@ Torque ($\tau$) is the rotational equivalent of force:
     \item \textbf{Basic Principles}
     \begin{itemize}
         \item Devices that multiply or augment applied forces
+        \pause
         \item Trade-off between force and distance
+        \pause
         \item Examples: lever, nail puller, wheelbarrow, crank
     \end{itemize}
     \end{itemize}
@@ -118,11 +116,15 @@ Torque ($\tau$) is the rotational equivalent of force:
 
 
 \begin{frame}
+\frametitle{Mechanical Advantage}
+\begin{itemize}
     \item \textbf{Mechanical Advantage}
     \begin{itemize}
         \item Ratio of output force to input force
+        \pause
         \item Key measure of machine effectiveness
     \end{itemize}
+\end{itemize}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Screenshot 2024-11-04 120504.png}
@@ -139,6 +141,7 @@ Torque ($\tau$) is the rotational equivalent of force:
 When tightening a bolt, you push perpendicularly on a wrench with a force of 165 N at a distance of 0.140 m from the center of the bolt.
 \begin{itemize}
     \item[(a)] How much torque are you exerting in newton $\times$ meters (relative to the center of the bolt)?
+    \pause
     \item[(b)] Convert this torque to foot-pounds.
 \end{itemize}
 \end{frame}
@@ -151,6 +154,7 @@ When tightening a bolt, you push perpendicularly on a wrench with a force of 165
     \begin{itemize}
         \item $\tau = 0.140 \text{ m} \times 165 \text{ N} = 23.1 \text{ N} \cdot \text{m}$
     \end{itemize}
+    \pause
     \item[(b)] Converting to foot-pounds:
     \begin{itemize}
         \item $\tau = 23.1 \text{ N}\cdot\text{m} \times \frac{0.738 \text{ ft}\cdot\text{lb}}{1 \text{ N}\cdot\text{m}} = 17.0 \text{ ft}\cdot\text{lb}$
@@ -179,12 +183,18 @@ A wall under construction with bracing:
         \item Height: 17.0 m
         \item Length: 11.0 m
     \end{itemize}
+    \pause
     \item Wind force: 650 N per square meter
+    \pause
     \item 10 braces at 35° angle
+    \pause
     \item Wind acts at half height
+    \pause
     \item Wall can pivot at base
+    \pause
     \item All braces exert equal forces
 \end{itemize}
+\pause
 \textbf{Goal:} Calculate force exerted by each brace
 \end{frame}
 
@@ -194,7 +204,9 @@ A wall under construction with bracing:
     \item Key considerations:
     \begin{itemize}
         \item Take pivot point at wall base
+        \pause
         \item Neglect wall thickness
+        \pause
         \item Forces acting:
         \begin{itemize}
             \item $$F_{brace} \times 10$$
@@ -202,6 +214,7 @@ A wall under construction with bracing:
             \item Normal force (N)
         \end{itemize}
     \end{itemize}
+    \pause
     \item Using second condition for equilibrium:
     $$\text{net}\tau = 0 \Rightarrow \text{net}\tau_{\text{cw}} = -\text{net}\tau_{\text{ccw}}$$
 \end{itemize}
@@ -221,6 +234,7 @@ Wind force calculation:
 F_{\text{wind}} &= \frac{F}{A} \times A = 650\text{ N/m}^2 \times 11.0\text{ m} \times 17.0\text{ m} \\
 &= 121,550\text{ N}
 \end{align*}
+\pause
 \end{frame}
 
 \begin{frame}
@@ -232,10 +246,13 @@ F_b = \frac{121,550\text{ N}}{10 \times 0.5736} = 2.12 \times 10^4\text{ N}
 
 \begin{itemize}
     \item Each brace must exert a force of 21.2 kN
+    \pause
     \item This significant force demonstrates:
     \begin{itemize}
         \item Importance of proper bracing in construction
+        \pause
         \item Impact of wind loads on tall structures
+        \pause
         \item Need for careful engineering calculations
     \end{itemize}
 \end{itemize}
@@ -257,6 +274,7 @@ F_b = \frac{121,550\text{ N}}{10 \times 0.5736} = 2.12 \times 10^4\text{ N}
 The center of gravity of a 5.0 kg pole held by a pole vaulter is 2.00 m from the left hand, and the hands are 0.700 m apart. Calculate the force exerted by:
 \begin{itemize}
     \item[(a)] his right hand
+    \pause
     \item[(b)] his left hand
 \begin{figure}[H]
     \centering
@@ -273,12 +291,16 @@ Using the center of gravity as reference:
     \item[(a)] Taking pivot at left hand:
     \begin{itemize}
         \item net $\tau = 0$
+        \pause
         \item $F_R(0.7 \text{ m}) = (5.0 \text{ kg})(9.80 \text{ m/s}^2)(2.0 \text{ m})$
+        \pause
         \item $F_R = 140 \text{ N}$
     \end{itemize}
+    \pause
     \item[(b)] Total weight must be supported:
     \begin{itemize}
         \item $F_L + F_R = (5.0 \text{ kg})(9.80 \text{ m/s}^2)$
+        \pause
         \item $F_L = 49 \text{ N}$
     \end{itemize}
 \end{itemize}
@@ -308,10 +330,13 @@ Step-by-step explanation:
         \item Inner radius $(r_1) = 2.0 \text{ cm}$
         \item Outer radius $(r_2) = 30.0 \text{ cm}$
     \end{itemize}
+    \pause
     \item Calculate mechanical advantage:
     \begin{itemize}
       \item \mathrm{MA}=\frac{F_{\mathrm{o}}}{F_{\mathrm{i}}}=\frac{l_{\mathrm{i}}}{l_{\mathrm{o}}} .
+        \pause
         \item $\text{MA} = r_2/r_1$
+        \pause
         \item $\text{MA} = 30.0/2.0 = 15$
     \end{itemize}
 \end{enumerate}
@@ -387,6 +412,7 @@ Substituting the values:
 F_E \times r_1 &= (2.50 \text{ kg})(9.80 \text{ m/s}^2)\left(\frac{16.0 \text{ cm}}{4.0 \text{ cm}}-1\right) \\
 &+ (4.00 \text{ kg})(9.80 \text{ m/s}^2)\left(\frac{38.0 \text{ cm}}{4.00 \text{ cm}}-1\right)
 \end{align*}
+\pause
 
 \begin{block}{Final Result}
 Therefore:
