@@ -1,6 +1,6 @@
 \documentclass{beamer}
 % Use DS9 global theme
-\usepackage{../../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/ds9_theme}
 
 % Title page configuration
 \title[Statics and Torque]{PHYS12 CH: 9}
@@ -53,6 +53,43 @@ Torque ($\tau$) is the rotational equivalent of force:
 \end{itemize}
 \end{block}
 \end{frame}
+
+\begin{frame}
+\frametitle{Understanding the Angle $\theta$ in Torque}
+
+\begin{block}{Definition of $\theta$}
+\begin{itemize}
+    \item $\theta$ is the angle between the force vector ($\vec{F}$) and the position vector ($\vec{r}$) from pivot to point of application
+    \pause
+    \item As illustrated in Figure 9.6 and Figure 9.7
+    \pause
+    \item \textbf{Tip:} Always identify the shortest rotation needed to align the force with the position vector
+\end{itemize}
+\end{block}
+
+\begin{block}{Key Insight}
+The torque magnitude depends on how effectively the force can produce rotation - maximum when $\theta = 90^\circ$, zero when $\theta = 0^\circ$ or $180^\circ$
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Figure 9.6 - Torque Angle Visualization}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.3\linewidth]{fig9.6.png}
+    \caption{9.6: (d) The force produces a clockwise torque. (e) A smaller counterclockwise torque is produced by the same magnitude force acting at the same point but in a different direction. Here, $\theta$ is less than $90^{\circ}$. (f) Torque is zero here since the force just pulls on the hinges, producing no rotation. In this case, $\theta=0^{\circ}$.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Figure 9.7 - Torque Angle Examples}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{fig9.7.png}
+    \caption{9.7: The three factors $\mathbf{r}, \mathbf{F}$, and $\theta$ for pivot point A on a body are shown here- $\mathbf{r}$ is the distance from the chosen pivot point to the point where the force $\mathbf{F}$ is applied, and $\theta$ is the angle between $\mathbf{F}$ and the vector directed from the point of application to the pivot point. If the object can rotate around point A , it will rotate counterclockwise. This means that torque is counterclockwise relative to pivot $A$.}
+\end{figure}
+\end{frame}
+
 \begin{frame}
 \begin{block}{Second Condition for Equilibrium}
 \begin{itemize}
@@ -71,6 +108,7 @@ Torque ($\tau$) is the rotational equivalent of force:
     \includegraphics[width=1\linewidth]{Screenshot 2024-11-04 120123.png}
 \end{figure}
 \end{frame}
+
 \begin{frame}
 \frametitle{Types of Equilibrium}
 \begin{itemize}
@@ -333,7 +371,7 @@ Step-by-step explanation:
     \pause
     \item Calculate mechanical advantage:
     \begin{itemize}
-      \item \mathrm{MA}=\frac{F_{\mathrm{o}}}{F_{\mathrm{i}}}=\frac{l_{\mathrm{i}}}{l_{\mathrm{o}}} .
+      \item $\text{MA}=\frac{F_{\text{o}}}{F_{\text{i}}}=\frac{l_{\text{i}}}{l_{\text{o}}}$
         \pause
         \item $\text{MA} = r_2/r_1$
         \pause
