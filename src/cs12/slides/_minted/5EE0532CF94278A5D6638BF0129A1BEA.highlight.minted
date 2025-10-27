@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 1: Create outer loop for rows (i from 0 to length)}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 2: Create inner loop for columns (j from 0 to length)}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 3: Print \PYGZsq{}X\PYGZsq{} in inner loop}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 4: Print newline after inner loop completes}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

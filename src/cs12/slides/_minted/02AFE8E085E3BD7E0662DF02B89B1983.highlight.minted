@@ -1,7 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{+w}{    }\PYG{n}{fourthRoot}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{pow}\PYG{p}{(}\PYG{n}{number}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.25}\PYG{p}{)}\PYG{p}{;}
-
-\PYG{+w}{    }\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{The fourth root is: }\PYG{l+s}{\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{fourthRoot}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{:}\PYG{o}{:}\PYG{n}{endl}\PYG{p}{;}
-\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-\end{MintedVerbatim}

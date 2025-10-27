@@ -1,0 +1,18 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n}{fahrenheit}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{20.0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{float}\PYG{+w}{ }\PYG{n}{celsius}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Fahrenheit}\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s}{Celsius}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 1: Create for loop (i from 0 to 19)}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 2: Calculate celsius = (5.0/9.0)*(fahrenheit\PYGZhy{}32.0)}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 3: Print fahrenheit and celsius}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 4: Increment fahrenheit by 4}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

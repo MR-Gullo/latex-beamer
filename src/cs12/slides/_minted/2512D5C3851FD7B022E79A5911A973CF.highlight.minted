@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{sum}\PYG{+w}{ }\PYG{o}{+}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{;}\PYG{+w}{  }\PYG{c+c1}{// Add to running total}
+\PYG{n}{count}\PYG{o}{+}\PYG{o}{+}\PYG{p}{;}\PYG{+w}{       }\PYG{c+c1}{// Increment counter}
+\end{MintedVerbatim}

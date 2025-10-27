@@ -1,0 +1,19 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{unsigned}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{testNum}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{600851475143}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{unsigned}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{current\PYGZus{}n}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{unsigned}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{largestPrime}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 1: While loop: continue while testNum \PYGZgt{} 1}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 2: If testNum divisible by current\PYGZus{}n}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 3:   Update largestPrime = current\PYGZus{}n}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 4:   Divide testNum by current\PYGZus{}n}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 5: Else increment current\PYGZus{}n}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 6: Print largestPrime}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

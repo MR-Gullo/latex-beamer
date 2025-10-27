@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}
+
+\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{;}\PYG{+w}{   }\PYG{c+c1}{// x is now 16}
+\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}\PYG{+w}{  }\PYG{c+c1}{// x is now 6}
+\PYG{n}{x}\PYG{+w}{ }\PYG{o}{*}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{   }\PYG{c+c1}{// x is now 12}
+\PYG{n}{x}\PYG{+w}{ }\PYG{o}{/}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{   }\PYG{c+c1}{// x is now 6}
+\end{MintedVerbatim}
