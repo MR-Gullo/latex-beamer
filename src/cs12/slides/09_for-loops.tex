@@ -1,6 +1,6 @@
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
-\usetheme{Madrid}
+\usepackage{../../../shared/templates/ds9_theme}
 \usepackage{pgfplots}
 \usepackage{minted}
 
@@ -74,8 +74,9 @@ This control flow applies equally to while and for loops.
 using namespace std;
 
 int main() {
-    for(int i = 1; i <= 10; i++)
+    for(int i = 1; i <= 10; i++) {
         cout << i << endl;
+    }
     
     return 0;
 }
@@ -114,8 +115,9 @@ Next slide illustrates what happens when you try to access a loop variable outsi
 \begin{frame}[fragile]
 \frametitle{Variable Scope: The Loop Variable}
 \begin{minted}[fontsize=\small]{cpp}
-for(int i = 1; i <= 10; i++)
+for(int i = 1; i <= 10; i++) {
     cout << i << endl;
+}
 
 cout << i << endl;  // ERROR!
 \end{minted}
@@ -141,7 +143,7 @@ Next slide shows a visual representation of this concept.
 
 \begin{frame}
 \frametitle{Scope Visualization}
-\includegraphics[width=\textwidth]{../images/scope-loop.png}
+\includegraphics[width=0.6\textwidth]{../images/scope-loop.png}
 
 Variable \texttt{i} is born inside the for loop and dies when the loop ends.
 \end{frame}
