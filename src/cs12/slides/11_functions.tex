@@ -1,27 +1,395 @@
-\documentclass[10pt]{beamer}
-\usetheme{DS9}
-\graphicspath{{../images/}{../../shared/images/}}
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
 
-\title{Functions}
-\subtitle{CS12 - Lesson 11}
-\author{Computer Science 12}
-\date{}
+% Title page configuration
+\title[Functions]{CS12 CH11: Functions}
+\subtitle{Writing Reusable Code}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Oct 2025]{October 2025}
 
 \begin{document}
+\frame{\titlepage}
+
+\section{Introduction to Functions}
 
 \begin{frame}
-    \titlepage
+\frametitle{Learning Objectives}
+By the end of this lesson, you will be able to:
+\begin{itemize}
+    \item Identify the components of a function (return type, name, parameters, body)
+    \item Write functions with various return types (int, bool, char, void)
+    \item Implement functions that accept multiple parameters
+    \item Use return statements correctly to send values back to the caller
+    \item Apply functions to solve computational problems involving iteration and logic
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Overview}
-    \begin{itemize}
-        \item Function definitions and declarations
-        \item Parameters and return values
-        \item Function prototypes
-        \item Organizing code with functions
-    \end{itemize}
+\begin{frame}
+\frametitle{What is a Function?}
+A \textbf{function} is a reusable block of code that performs a specific task.\pause
+
+\textbf{Benefits:}
+\begin{itemize}
+    \item \textbf{Reusability}: Write once, use multiple times
+    \item \textbf{Modularity}: Break complex problems into smaller pieces
+    \item \textbf{Readability}: Makes code easier to understand
+    \item \textbf{Maintenance}: Update code in one place
+\end{itemize}
 \end{frame}
 
-% Content slides to be added
+\section{Function Anatomy}
+
+\begin{frame}
+\frametitle{Function Anatomy}
+Every function has four main components:\pause
+
+\begin{enumerate}
+    \item \textbf{Return Type}: The type of data the function returns (int, bool, char, void, etc.)
+    \item \textbf{Function Name}: How you reference the function (use descriptive names)
+    \item \textbf{Parameters}: Input values the function receives (in parentheses)
+    \item \textbf{Function Body}: The code that executes when called (in curly braces)
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Function Components: Example}
+\begin{minted}[fontsize=\small]{cpp}
+bool isEven(int a) {
+    if (a % 2 == 0)
+        return true;
+    else
+        return false;
+}
+\end{minted}
+\pause
+
+\textbf{Breaking it down:}
+\begin{itemize}
+    \item \textbf{Return type}: bool (returns true or false)
+    \item \textbf{Name}: isEven (descriptive name)
+    \item \textbf{Parameter}: int a (input value)
+    \item \textbf{Return statement}: returns the result
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Calling a Function}
+After defining a function, you call it by name with arguments:\pause
+
+\begin{minted}[fontsize=\small]{cpp}
+cout << isEven(22) << endl;  // Output: 1 (true)
+\end{minted}
+\pause
+
+\textbf{What happens:}
+\begin{itemize}
+    \item The value 22 is passed to parameter \texttt{a}
+    \item Function executes: \texttt{22 \% 2 == 0} is true
+    \item Function returns true (displayed as 1)
+\end{itemize}
+\end{frame}
+
+\section{Return Types and Parameters}
+
+\begin{frame}
+\frametitle{Return Types}
+Functions can return different types of data:\pause
+
+\begin{itemize}
+    \item \textbf{int}: Returns integer values
+    \item \textbf{bool}: Returns true or false
+    \item \textbf{char}: Returns a single character
+    \item \textbf{float/double}: Returns decimal numbers
+    \item \textbf{void}: Returns nothing (performs action only)
+\end{itemize}
+\pause
+
+\textbf{Important}: The return statement must match the return type!
+\end{frame}
+
+\begin{frame}
+\frametitle{Parameters vs Arguments}
+Understanding the terminology:\pause
+
+\textbf{Parameters:}
+\begin{itemize}
+    \item Variables listed in the function definition
+    \item Placeholders for values the function will receive
+    \item Example: \texttt{int a} in \texttt{bool isEven(int a)}
+\end{itemize}
+\pause
+
+\textbf{Arguments:}
+\begin{itemize}
+    \item Actual values passed when calling the function
+    \item Example: \texttt{22} in \texttt{isEven(22)}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Multiple Parameters}
+Functions can accept multiple parameters:\pause
+
+\begin{minted}[fontsize=\small]{cpp}
+int max(int a, int b) {
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+\end{minted}
+\pause
+
+\textbf{Usage:}
+\begin{minted}[fontsize=\small]{cpp}
+cout << max(10, 20) << endl;  // Output: 20
+\end{minted}
+
+Parameters are separated by commas in both definition and call.
+\end{frame}
+
+\section{Code Examples}
+
+\begin{frame}[fragile]
+\frametitle{Example 1: max Function}
+\textbf{Goal}: Return the larger of two integers\pause
+
+\begin{minted}[fontsize=\small]{cpp}
+int max(int a, int b) {
+    // Returns the bigger of the two numbers
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+\end{minted}
+\pause
+
+\textbf{Key concepts:}
+\begin{itemize}
+    \item Two parameters of same type
+    \item Conditional logic determines return value
+    \item Only one return statement executes
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Example 2: numberOfDigits Function}
+\textbf{Goal}: Count digits in an integer\pause
+
+\begin{minted}[fontsize=\scriptsize]{cpp}
+int numberOfDigits(int a) {
+    // Works for both positive and negative numbers
+    if (a == 0) return 1;
+    int numDigits = 0;
+    
+    while (a != 0) {
+        a /= 10;
+        numDigits++;
+    }
+    return numDigits;
+}
+\end{minted}
+\pause
+
+\textbf{Algorithm:}
+\begin{itemize}
+    \item Divide by 10 repeatedly to remove digits
+    \item Count iterations until no digits remain
+    \item Special case: zero has one digit
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Example 3: void Functions}
+Functions don't always need to return a value:\pause
+
+\begin{minted}[fontsize=\small]{cpp}
+void displayAuthor() {
+    cout << "This program was written by Mark Vuorela\n";
+}
+
+// Calling the function
+displayAuthor();
+\end{minted}
+\pause
+
+\textbf{void functions:}
+\begin{itemize}
+    \item Perform actions without returning values
+    \item Use \texttt{return;} (no value) or omit return
+    \item Useful for output, modification, or side effects
+\end{itemize}
+\end{frame}
+
+\section{Practice Exercises}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 1: myAbsolute}
+\textbf{Goal}: Return the absolute value of an integer\pause
+
+\textbf{Template with TODOs:}
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int myAbsolute(int a) {
+    // TODO 1: Check if a is positive
+    // TODO 2: If positive, return a
+    // TODO 3: If negative, return a * -1
+}
+\end{minted}
+\pause
+
+\textbf{Expected behavior:}
+\begin{itemize}
+    \item \texttt{myAbsolute(25)} returns 25
+    \item \texttt{myAbsolute(-25)} returns 25
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 2: myPower}
+\textbf{Goal}: Calculate $a^b$ where $b \geq 0$\pause
+
+\textbf{Template with TODOs:}
+\begin{minted}[fontsize=\scriptsize, frame=lines]{cpp}
+int myPower(int a, int b) {
+    int retVal = 1;
+    
+    // TODO 1: Create a loop that runs b times
+    // TODO 2: Inside loop, multiply retVal by a
+    // TODO 3: Return retVal
+}
+\end{minted}
+\pause
+
+\textbf{Expected behavior:}
+\begin{itemize}
+    \item \texttt{myPower(2, 3)} returns 8
+    \item \texttt{myPower(-3, 3)} returns -27
+    \item \texttt{myPower(5, 0)} returns 1
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 3: sumDigits}
+\textbf{Goal}: Return the sum of digits in an integer\pause
+
+\textbf{Template with TODOs:}
+\begin{minted}[fontsize=\scriptsize, frame=lines]{cpp}
+int sumDigits(int a) {
+    int sum = 0;
+    a = abs(a);  // Handle negative numbers
+    
+    // TODO 1: Create loop while a > 0
+    // TODO 2: Add rightmost digit (a % 10) to sum
+    // TODO 3: Remove rightmost digit (a /= 10)
+    // TODO 4: Return sum
+}
+\end{minted}
+\pause
+
+\textbf{Expected behavior:}
+\begin{itemize}
+    \item \texttt{sumDigits(33333)} returns 15
+    \item \texttt{sumDigits(-123)} returns 6
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 4: revDigits}
+\textbf{Goal}: Reverse the digits of a positive integer\pause
+
+\textbf{Template with TODOs:}
+\begin{minted}[fontsize=\scriptsize, frame=lines]{cpp}
+int revDigits(int a) {
+    int reversed = 0;
+    
+    // TODO 1: Create loop while a > 0
+    // TODO 2: Multiply reversed by 10
+    // TODO 3: Add rightmost digit (a % 10) to reversed
+    // TODO 4: Remove rightmost digit from a (a /= 10)
+    // TODO 5: Return reversed
+}
+\end{minted}
+\pause
+
+\textbf{Expected behavior:}
+\begin{itemize}
+    \item \texttt{revDigits(1234)} returns 4321
+    \item \texttt{revDigits(5005)} returns 5005
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 5: fibonacci}
+\textbf{Goal}: Return the $n^{th}$ Fibonacci number where $f_0 = f_1 = 1$\pause
+
+\textbf{Template with TODOs:}
+\begin{minted}[fontsize=\scriptsize, frame=lines]{cpp}
+int fibonacci(int n) {
+    int current = 1, last1 = 0, last2;
+    
+    // TODO 1: Create loop while n > 0
+    // TODO 2: Store last1 in last2
+    // TODO 3: Store current in last1
+    // TODO 4: Calculate new current (last1 + last2)
+    // TODO 5: Decrement n
+    // TODO 6: Return current
+}
+\end{minted}
+\pause
+
+\textbf{Expected behavior:}
+First 10 Fibonacci numbers: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 6: changeCase}
+\textbf{Goal}: Convert uppercase to lowercase and vice versa\pause
+
+\textbf{Template with TODOs:}
+\begin{minted}[fontsize=\scriptsize, frame=lines]{cpp}
+char changeCase(char c) {
+    int caseDifference = 'z' - 'Z';
+    
+    // TODO 1: Check if c is lowercase (a-z)
+    // TODO 2: If lowercase, return c - caseDifference
+    // TODO 3: Check if c is uppercase (A-Z)
+    // TODO 4: If uppercase, return c + caseDifference
+    // TODO 5: Otherwise, return c unchanged
+}
+\end{minted}
+\pause
+
+\textbf{Expected behavior:}
+\begin{itemize}
+    \item \texttt{changeCase('E')} returns 'e'
+    \item \texttt{changeCase('f')} returns 'F'
+    \item \texttt{changeCase('4')} returns '4'
+\end{itemize}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{Key Takeaways}
+\textbf{Functions enable code reuse and modularity:}
+\begin{itemize}
+    \item Every function has a return type, name, parameters, and body
+    \item Return type must match the value returned
+    \item void functions perform actions without returning values
+    \item Parameters receive values when function is called
+    \item Multiple parameters separated by commas
+\end{itemize}
+\pause
+
+\textbf{Common patterns:}
+\begin{itemize}
+    \item Conditional returns (max, myAbsolute)
+    \item Loop-based algorithms (numberOfDigits, sumDigits)
+    \item Digit manipulation (revDigits, sumDigits)
+    \item Character operations (changeCase)
+\end{itemize}
+\end{frame}
 
 \end{document}
