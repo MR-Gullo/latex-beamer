@@ -155,8 +155,9 @@ Variable \texttt{i} is born inside the for loop and dies when the loop ends.
 int y1 = 1893;
 int y2 = 1915;
 while(y1 <= y2) {
-    if(y1 % 400 == 0 || (y1 % 4 == 0 && y1 % 100 != 0))
+    if(y1 % 400 == 0 || (y1 % 4 == 0 && y1 % 100 != 0)) {
         cout << y1 << endl;
+    }
     y1++;
 }
 \end{minted}
@@ -167,8 +168,9 @@ while(y1 <= y2) {
 int y1 = 1893;
 int y2 = 1915;
 for(int i = y1; i <= y2; i++) {
-    if(i % 400 == 0 || (i % 4 == 0 && i % 100 != 0))
+    if(i % 400 == 0 || (i % 4 == 0 && i % 100 != 0)) {
         cout << i << endl;
+    }
 }
 \end{minted}
 \end{frame}
@@ -241,7 +243,7 @@ count++;       // Increment counter
 \frametitle{Common Syntax Error: Commas}
 \textbf{WRONG (commas):}
 \begin{minted}[fontsize=\small]{cpp}
-for(int i = 0, i < 10, i++) {
+for(int i = 0; i < 10; i++) {
     cout << i << '\n';
 }
 \end{minted}
