@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+IF (score \PYGZgt{}= 60)
+\PYGZob{}
+DISPLAY(\PYGZdq{}Pass\PYGZdq{})
+\PYGZcb{}
+ELSE
+\PYGZob{}
+DISPLAY(\PYGZdq{}Fail\PYGZdq{})
+\PYGZcb{}
+\end{MintedVerbatim}

@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+DISPLAY(\PYGZdq{}Hello World\PYGZdq{})
+DISPLAY(x)
+DISPLAY(\PYGZdq{}Your score is: \PYGZdq{}, score)
+\end{MintedVerbatim}

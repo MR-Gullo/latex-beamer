@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+REPEAT 3 TIMES
+\PYGZob{}
+DISPLAY(\PYGZdq{}Count: \PYGZdq{}, i)
+\PYGZcb{}
+\end{MintedVerbatim}

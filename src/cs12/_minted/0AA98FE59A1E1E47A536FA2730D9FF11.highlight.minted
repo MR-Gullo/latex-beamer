@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+temperature \PYGZlt{}\PYGZhy{} 75
+IF (temperature \PYGZgt{}= 70)
+\PYGZob{}
+DISPLAY(\PYGZdq{}It\PYGZsq{}s warm\PYGZdq{})
+\PYGZcb{}
+ELSE
+\PYGZob{}
+DISPLAY(\PYGZdq{}It\PYGZsq{}s cold\PYGZdq{})
+\PYGZcb{}
+\end{MintedVerbatim}

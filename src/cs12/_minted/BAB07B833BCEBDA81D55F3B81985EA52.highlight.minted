@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+list \PYGZlt{}\PYGZhy{} [10, 20, 30]
+APPEND(list, 40)           // Add to end: [10, 20, 30, 40]
+INSERT(list, 2, 15)        // Insert at position 2: [10, 15, 20, 30, 40]
+REMOVE(list, 3)            // Remove position 3: [10, 15, 30, 40]
+length \PYGZlt{}\PYGZhy{} LENGTH(list)     // Get size: 4
+\end{MintedVerbatim}

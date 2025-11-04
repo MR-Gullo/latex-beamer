@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+count \PYGZlt{}\PYGZhy{} 1
+REPEAT UNTIL (count \PYGZgt{} 5)
+\PYGZob{}
+DISPLAY(count)
+count \PYGZlt{}\PYGZhy{} count + 1
+\PYGZcb{}
+\end{MintedVerbatim}

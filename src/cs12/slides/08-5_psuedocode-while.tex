@@ -1,0 +1,523 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{minted} % For code highlighting
+% Title page configuration
+\title[CSP Pseudocode]{Computer Science Principles Pseudocode}
+\subtitle{For C++ Students}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Nov 2025]{November 2025}
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Learning Objectives}
+After this lesson, you will be able to:
+\begin{itemize}
+\item Explain what pseudocode is and why it is used
+\item Read and understand CSP pseudocode format
+\item Convert simple C++ code to CSP pseudocode
+\item Convert CSP pseudocode to C++ code
+\item Identify key differences between pseudocode and C++ syntax
+\end{itemize}
+\end{frame}
+\section{Introduction to Pseudocode}
+\begin{frame}
+\frametitle{What is Pseudocode?}
+\textbf{Pseudocode} is a way to write algorithms using simple, plain language.\pause
+\vspace{0.3cm}
+\textbf{Key Points:}
+\begin{itemize}
+\item Not a real programming language
+\item Cannot run on a computer
+\item Easy to read and understand
+\item Focuses on logic, not syntax
+\item Used on CSP exam
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Why Learn CSP Pseudocode?}
+\textbf{Reasons:}
+\begin{itemize}
+\item Required for Computer Science Principles exam
+\item Language-independent (works for any programming language)
+\item Easier to communicate ideas
+\item Less strict than real code
+\item Helps focus on problem-solving
+\end{itemize}\pause
+\vspace{0.3cm}
+\textbf{Good News:} If you know C++, learning pseudocode is easy!
+\end{frame}
+\section{Basic Syntax}
+\begin{frame}[fragile]
+\frametitle{Variables and Assignment}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+x <- 5
+name <- "Alice"
+isStudent <- true
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+int x = 5;
+string name = "Alice";
+bool isStudent = true;
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} Use $\leftarrow$ instead of =
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Display Output}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+DISPLAY("Hello World")
+DISPLAY(x)
+DISPLAY("Your score is: ", score)
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+cout << "Hello World" << endl;
+cout << x << endl;
+cout << "Your score is: " << score << endl;
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} Use DISPLAY() instead of cout
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Input from User}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+age <- INPUT()
+name <- INPUT()
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+int age;
+cin >> age;
+string name;
+cin >> name;
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} Use INPUT() instead of cin
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Comments}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+// This is a comment
+x <- 10  // Set x to 10
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+// This is a comment
+int x = 10;  // Set x to 10
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Same in both!} Use // for comments
+\end{frame}
+\section{Control Structures}
+\begin{frame}[fragile]
+\frametitle{IF Statements}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+IF (age >= 18)
+{
+DISPLAY("You can vote")
+}
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+if (age >= 18)
+{
+cout << "You can vote" << endl;
+}
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} IF is uppercase, parentheses optional
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{IF-ELSE Statements}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+IF (score >= 60)
+{
+DISPLAY("Pass")
+}
+ELSE
+{
+DISPLAY("Fail")
+}
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+if (score >= 60)
+{
+cout << "Pass" << endl;
+}
+else
+{
+cout << "Fail" << endl;
+}
+\end{minted}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Comparison Operators}
+\textbf{Same in Both:}
+\begin{itemize}
+\item = (equal to)
+\item $\neq$ (not equal to)
+\item $<$ (less than)
+\item $>$ (greater than)
+\item $\leq$ (less than or equal to)
+\item $\geq$ (greater than or equal to)
+\end{itemize}\pause
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{minted}[fontsize=\small]{text}
+IF (x = 5)        // equal
+IF (y != 0)       // not equal
+IF (age >= 18)    // greater or equal
+\end{minted}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{REPEAT UNTIL Loop}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+count <- 1
+REPEAT UNTIL (count > 5)
+{
+DISPLAY(count)
+count <- count + 1
+}
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+int count = 1;
+while (count <= 5)
+{
+cout << count << endl;
+count = count + 1;
+}
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} REPEAT UNTIL is like while loop
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{REPEAT n TIMES Loop}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+REPEAT 5 TIMES
+{
+DISPLAY("Hello")
+}
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+for (int i = 0; i < 5; i++)
+{
+cout << "Hello" << endl;
+}
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} Simpler syntax, no counter variable needed
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{FOR EACH Loop}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+numbers <- [10, 20, 30, 40]
+FOR EACH num IN numbers
+{
+DISPLAY(num)
+}
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+int numbers[] = {10, 20, 30, 40};
+for (int num : numbers)
+{
+cout << num << endl;
+}
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} Very similar to C++ range-based for loop
+\end{frame}
+\section{Data Structures}
+\begin{frame}[fragile]
+\frametitle{Lists (Arrays)}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+scores <- [85, 90, 78, 92]
+names <- ["Alice", "Bob", "Carol"]
+firstScore <- scores[1]
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+int scores[] = {85, 90, 78, 92};
+string names[] = {"Alice", "Bob", "Carol"};
+int firstScore = scores[0];
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{IMPORTANT:} CSP lists start at index 1, C++ arrays start at 0!
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{List Index Comparison}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{CSP (starts at 1):}
+\begin{minted}[fontsize=\scriptsize]{text}
+list <- [10, 20, 30]
+list[1] // 10
+list[2] // 20
+list[3] // 30
+\end{minted}
+\column{0.5\textwidth}
+\textbf{C++ (starts at 0):}
+\begin{minted}[fontsize=\scriptsize]{cpp}
+int list[] = {10, 20, 30};
+list[0] // 10
+list[1] // 20
+list[2] // 30
+\end{minted}
+\end{columns}\pause
+\vspace{0.5cm}
+\alert{Remember:} This is the biggest difference! Always check which system you are using.
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{List Operations}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\scriptsize]{text}
+list <- [10, 20, 30]
+APPEND(list, 40)           // Add to end: [10, 20, 30, 40]
+INSERT(list, 2, 15)        // Insert at position 2: [10, 15, 20, 30, 40]
+REMOVE(list, 3)            // Remove position 3: [10, 15, 30, 40]
+length <- LENGTH(list)     // Get size: 4
+\end{minted}
+\pause
+\textbf{C++ Equivalent (using vector):}
+\begin{minted}[fontsize=\scriptsize]{cpp}
+vector<int> list = {10, 20, 30};
+list.push_back(40);              // Add to end
+list.insert(list.begin()+1, 15); // Insert at position 1 (0-indexed)
+list.erase(list.begin()+2);      // Remove position 2 (0-indexed)
+int length = list.size();        // Get size
+\end{minted}
+\end{frame}
+\section{Procedures}
+\begin{frame}[fragile]
+\frametitle{Procedures (Functions)}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+PROCEDURE greet(name)
+{
+DISPLAY("Hello, ", name)
+}
+greet("Alice")
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+void greet(string name)
+{
+cout << "Hello, " << name << endl;
+}
+greet("Alice");
+\end{minted}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Procedures with Return Values}
+\textbf{CSP Pseudocode:}
+\begin{minted}[fontsize=\small]{text}
+PROCEDURE add(a, b)
+{
+RETURN (a + b)
+}
+sum <- add(5, 3)
+DISPLAY(sum)
+\end{minted}
+\pause
+\textbf{C++ Equivalent:}
+\begin{minted}[fontsize=\small]{cpp}
+int add(int a, int b)
+{
+return (a + b);
+}
+int sum = add(5, 3);
+cout << sum << endl;
+\end{minted}
+\end{frame}
+\section{Practice Exercises}
+\begin{frame}[fragile]
+\frametitle{Exercise 1: Variable Assignment}
+\textbf{Convert this C++ code to CSP pseudocode:}
+\begin{minted}[fontsize=\small]{cpp}
+int age = 16;
+string name = "Maria";
+bool isStudent = true;
+cout << "Name: " << name << endl;
+cout << "Age: " << age << endl;
+\end{minted}
+\pause
+\textbf{Answer:}
+\begin{minted}[fontsize=\small]{text}
+age <- 16
+name <- "Maria"
+isStudent <- true
+DISPLAY("Name: ", name)
+DISPLAY("Age: ", age)
+\end{minted}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 2: IF-ELSE Statement}
+\textbf{Convert this C++ code to CSP pseudocode:}
+\begin{minted}[fontsize=\small]{cpp}
+int temperature = 75;
+if (temperature >= 70)
+{
+cout << "It's warm" << endl;
+}
+else
+{
+cout << "It's cold" << endl;
+}
+\end{minted}
+\pause
+\textbf{Answer:}
+\begin{minted}[fontsize=\small]{text}
+temperature <- 75
+IF (temperature >= 70)
+{
+DISPLAY("It's warm")
+}
+ELSE
+{
+DISPLAY("It's cold")
+}
+\end{minted}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 3: Loop Conversion}
+\textbf{Convert this C++ code to CSP pseudocode:}
+\begin{minted}[fontsize=\small]{cpp}
+for (int i = 1; i <= 3; i++)
+{
+cout << "Count: " << i << endl;
+}
+\end{minted}
+\pause
+\textbf{Answer (Option 1):}
+\begin{minted}[fontsize=\small]{text}
+REPEAT 3 TIMES
+{
+DISPLAY("Count: ", i)
+}
+\end{minted}
+\pause
+\textbf{Answer (Option 2):}
+\begin{minted}[fontsize=\small]{text}
+i <- 1
+REPEAT UNTIL (i > 3)
+{
+DISPLAY("Count: ", i)
+i <- i + 1
+}
+\end{minted}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Exercise 4: List Operations}
+\textbf{Convert this C++ code to CSP pseudocode:}
+\begin{minted}[fontsize=\scriptsize]{cpp}
+vector<int> scores = {85, 90, 78};
+scores.push_back(92);
+for (int score : scores)
+{
+cout << score << endl;
+}
+\end{minted}
+\pause
+\textbf{Answer:}
+\begin{minted}[fontsize=\scriptsize]{text}
+scores <- [85, 90, 78]
+APPEND(scores, 92)
+FOR EACH score IN scores
+{
+DISPLAY(score)
+}
+\end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Remember:} CSP lists use 1-based indexing!
+\end{frame}
+\begin{frame}
+\frametitle{Common Mistakes to Avoid}
+\begin{enumerate}
+\item Using = instead of $\leftarrow$ for assignment
+\item Forgetting that lists start at index 1, not 0
+\item Writing lowercase (if, else, display) instead of uppercase
+\item Using semicolons (not needed in pseudocode)
+\item Using cout or cin instead of DISPLAY or INPUT
+\item Forgetting parentheses around conditions
+\end{enumerate}\pause
+
+\vspace{0.3cm}
+\textbf{Tip:} When converting between C++ and pseudocode, focus on the logic, not the exact syntax!
+\end{frame}
+\begin{frame}
+\frametitle{Quick Reference Guide}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{C++} & \textbf{CSP Pseudocode} \\
+\hline
+==
+= (assignment) & $\leftarrow$ \\
+cout << & DISPLAY() \\
+cin >> & INPUT() \\
+if & IF \\
+else & ELSE \\
+while & REPEAT UNTIL \\
+for (fixed count) & REPEAT n TIMES \\
+for (range) & FOR EACH \\
+vector & list \\
+.push\_back() & APPEND() \\
+.size() & LENGTH() \\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\textbf{Key Takeaways:}
+\begin{itemize}
+\item Pseudocode is easier to read than real code
+\item CSP pseudocode uses uppercase keywords
+\item Use $\leftarrow$ for assignment, not =
+\item Lists start at index 1 (not 0 like C++)
+\item DISPLAY replaces cout, INPUT replaces cin
+\item Control structures are similar but simpler
+\item Focus on logic, not exact syntax
+\end{itemize}\pause
+
+\vspace{0.3cm}
+\textbf{Next Steps:} Practice converting between C++ and pseudocode!
+\end{frame}
+\end{document}

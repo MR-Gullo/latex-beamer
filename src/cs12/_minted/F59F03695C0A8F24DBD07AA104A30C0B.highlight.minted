@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+scores \PYGZlt{}\PYGZhy{} [85, 90, 78, 92]
+names \PYGZlt{}\PYGZhy{} [\PYGZdq{}Alice\PYGZdq{}, \PYGZdq{}Bob\PYGZdq{}, \PYGZdq{}Carol\PYGZdq{}]
+firstScore \PYGZlt{}\PYGZhy{} scores[1]
+\end{MintedVerbatim}

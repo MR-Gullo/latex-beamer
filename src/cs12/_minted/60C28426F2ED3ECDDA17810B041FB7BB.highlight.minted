@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+IF (x = 5)        // equal
+IF (y != 0)       // not equal
+IF (age \PYGZgt{}= 18)    // greater or equal
+\end{MintedVerbatim}

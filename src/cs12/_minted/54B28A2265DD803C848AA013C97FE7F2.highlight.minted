@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+x \PYGZlt{}\PYGZhy{} 5
+name \PYGZlt{}\PYGZhy{} \PYGZdq{}Alice\PYGZdq{}
+isStudent \PYGZlt{}\PYGZhy{} true
+\end{MintedVerbatim}

@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+list \PYGZlt{}\PYGZhy{} [10, 20, 30]
+list[1] // 10
+list[2] // 20
+list[3] // 30
+\end{MintedVerbatim}

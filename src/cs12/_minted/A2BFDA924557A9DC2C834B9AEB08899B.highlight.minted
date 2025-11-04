@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+REPEAT 5 TIMES
+\PYGZob{}
+DISPLAY(\PYGZdq{}Hello\PYGZdq{})
+\PYGZcb{}
+\end{MintedVerbatim}

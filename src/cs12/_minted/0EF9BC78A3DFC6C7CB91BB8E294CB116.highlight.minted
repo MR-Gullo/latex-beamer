@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+PROCEDURE add(a, b)
+\PYGZob{}
+RETURN (a + b)
+\PYGZcb{}
+sum \PYGZlt{}\PYGZhy{} add(5, 3)
+DISPLAY(sum)
+\end{MintedVerbatim}

@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+// This is a comment
+x \PYGZlt{}\PYGZhy{} 10  // Set x to 10
+\end{MintedVerbatim}

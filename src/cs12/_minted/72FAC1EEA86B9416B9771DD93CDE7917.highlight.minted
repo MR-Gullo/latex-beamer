@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+age \PYGZlt{}\PYGZhy{} INPUT()
+name \PYGZlt{}\PYGZhy{} INPUT()
+\end{MintedVerbatim}

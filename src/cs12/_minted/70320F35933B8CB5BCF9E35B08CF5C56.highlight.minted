@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+PROCEDURE greet(name)
+\PYGZob{}
+DISPLAY(\PYGZdq{}Hello, \PYGZdq{}, name)
+\PYGZcb{}
+greet(\PYGZdq{}Alice\PYGZdq{})
+\end{MintedVerbatim}

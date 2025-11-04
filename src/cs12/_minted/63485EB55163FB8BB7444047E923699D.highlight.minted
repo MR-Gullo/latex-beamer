@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{list}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{30}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{n}{list}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{l+m+mi}{40}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{              }\PYG{c+c1}{// Add to end}
+\PYG{n}{list}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{list}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(}\PYG{p}{)}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{15}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Insert at position 1 (0\PYGZhy{}indexed)}
+\PYG{n}{list}\PYG{p}{.}\PYG{n}{erase}\PYG{p}{(}\PYG{n}{list}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(}\PYG{p}{)}\PYG{o}{+}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{      }\PYG{c+c1}{// Remove position 2 (0\PYGZhy{}indexed)}
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{list}\PYG{p}{.}\PYG{n}{size}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{        }\PYG{c+c1}{// Get size}
+\end{MintedVerbatim}

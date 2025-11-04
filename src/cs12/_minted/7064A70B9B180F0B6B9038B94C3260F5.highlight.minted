@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+IF (age \PYGZgt{}= 18)
+\PYGZob{}
+DISPLAY(\PYGZdq{}You can vote\PYGZdq{})
+\PYGZcb{}
+\end{MintedVerbatim}

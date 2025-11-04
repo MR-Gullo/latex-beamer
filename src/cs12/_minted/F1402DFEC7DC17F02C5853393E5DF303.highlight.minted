@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+scores \PYGZlt{}\PYGZhy{} [85, 90, 78]
+APPEND(scores, 92)
+FOR EACH score IN scores
+\PYGZob{}
+DISPLAY(score)
+\PYGZcb{}
+\end{MintedVerbatim}

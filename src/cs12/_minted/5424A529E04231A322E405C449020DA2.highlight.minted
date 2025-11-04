@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+numbers \PYGZlt{}\PYGZhy{} [10, 20, 30, 40]
+FOR EACH num IN numbers
+\PYGZob{}
+DISPLAY(num)
+\PYGZcb{}
+\end{MintedVerbatim}

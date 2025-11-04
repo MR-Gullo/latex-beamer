@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+i \PYGZlt{}\PYGZhy{} 1
+REPEAT UNTIL (i \PYGZgt{} 3)
+\PYGZob{}
+DISPLAY(\PYGZdq{}Count: \PYGZdq{}, i)
+i \PYGZlt{}\PYGZhy{} i + 1
+\PYGZcb{}
+\end{MintedVerbatim}

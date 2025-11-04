@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+age \PYGZlt{}\PYGZhy{} 16
+name \PYGZlt{}\PYGZhy{} \PYGZdq{}Maria\PYGZdq{}
+isStudent \PYGZlt{}\PYGZhy{} true
+DISPLAY(\PYGZdq{}Name: \PYGZdq{}, name)
+DISPLAY(\PYGZdq{}Age: \PYGZdq{}, age)
+\end{MintedVerbatim}
