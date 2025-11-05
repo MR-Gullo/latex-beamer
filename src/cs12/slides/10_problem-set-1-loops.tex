@@ -1,0 +1,417 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
+
+% Title page configuration
+\title[Problem Set 1]{CS12 CH:10}
+\subtitle{Problem Solving with Loops}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Nov 5, 2025]{November 5, 2025}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{itemize}
+\item Apply the 6-step problem-solving methodology to complex programming challenges
+\item Implement while and for loops to solve iterative problems
+\item Understand and apply optimization techniques to improve algorithm efficiency
+\item Master unsigned data types for handling large positive integers
+\item Develop algorithms for mathematical sequences and number theory problems
+\item Implement template-based code structure with clear TODO sections
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The 6-Step Problem Solving Process}
+\framesubtitle{A Systematic Approach to Complex Problems}
+\begin{enumerate}
+\item \textbf{Explore the Question}
+   \begin{itemize}
+   \item Understand all requirements
+   \item Identify constraints and edge cases
+   \item Simplify when possible
+   \end{itemize}
+\pause
+\item \textbf{Code Something Simple First}
+   \begin{itemize}
+   \item Start with a simplified version
+   \item Test with smaller numbers/simpler cases
+   \end{itemize}
+\pause
+\item \textbf{Run With Examples}
+   \begin{itemize}
+   \item Verify against known solutions
+   \item Test edge cases
+   \end{itemize}
+\pause
+\item \textbf{Get Something Working}
+   \begin{itemize}
+   \item Focus on correctness over efficiency
+   \item Ensure the core algorithm functions
+   \end{itemize}
+\pause
+\item \textbf{Make Optimizations}
+   \begin{itemize}
+   \item Improve efficiency after correctness is confirmed
+   \item Reduce unnecessary computations
+   \end{itemize}
+\item \textbf{Try Another Approach}
+   \begin{itemize}
+   \item Consider alternative algorithms
+   \item Compare performance characteristics
+   \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problem Set Overview}
+\framesubtitle{Today's Challenges}
+\begin{enumerate}
+\item \textbf{Basics of while and for loops}
+   \begin{itemize}
+   \item Generate sequences with specific patterns
+   \end{itemize}
+\item \textbf{Division without operators}
+   \begin{itemize}
+   \item Implement division and modulus using subtraction
+   \end{itemize}
+\item \textbf{Largest Prime Factor}
+   \begin{itemize}
+   \item Factor large numbers and identify prime factors
+   \end{itemize}
+\item \textbf{Smallest Multiple}
+   \begin{itemize}
+   \item Find LCM of numbers 1-20
+   \end{itemize}
+\item \textbf{Sum of Powers}
+   \begin{itemize}
+   \item Calculate geometric series
+   \end{itemize}
+\item \textbf{Greatest Common Factor}
+   \begin{itemize}
+   \item Implement Euclidean algorithm
+   \end{itemize}
+\item \textbf{Fibonacci Sequence}
+   \begin{itemize}
+   \item Generate terms in specified ranges
+   \end{itemize}
+\item \textbf{Palindromic Numbers}
+   \begin{itemize}
+   \item Check and find palindrome products
+   \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Key Concept: Unsigned Data Types}
+\framesubtitle{Handling Large Positive Integers}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Signed Integers}
+\begin{itemize}
+\item Use one bit for sign
+\item Range: $-2^{n-1}$ to $2^{n-1}-1$
+\item Example: \texttt{int} (32-bit)
+   \begin{itemize}
+   \item Range: $-2,147,483,648$ to $2,147,483,647$
+   \end{itemize}
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Unsigned Integers}
+\begin{itemize}
+\item All bits for magnitude
+\item Range: $0$ to $2^n-1$
+\item Example: \texttt{unsigned int} (32-bit)
+   \begin{itemize}
+   \item Range: $0$ to $4,294,967,295$
+   \end{itemize}
+\end{itemize}
+\end{columns}
+
+\vspace{0.5cm}
+\textbf{Common Issue:}
+\begin{lstlisting}[language=C++,basicstyle=\small]
+int testNum = 600851475143;  // ERROR! Too large
+unsigned long long testNum = 600851475143;  // Works!
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Problem 1: Loop Basics}
+\framesubtitle{Template Exercise}
+
+\textbf{Exercise File:} \texttt{problem1\_loops.cpp} (Template with TODOs)
+
+\textbf{Objective:} Complete the TODOs to generate sequences.\pause
+
+\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // TODO 1: Use a while loop to output multiples of 7 between 0 and 77 inclusive
+    // Expected output: 0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77
+    
+    // TODO 2: Use a for loop to output: 1000, 800, 600, ..., -1000
+    // Expected output: 1000, 800, 600, 400, 200, 0, -200, -400, -600, -800, -1000
+    
+    return 0;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Problem 4: Largest Prime Factor}
+\framesubtitle{Template Exercise}
+
+\textbf{Exercise File:} \texttt{problem4\_primeFactor.cpp} (Template with TODOs)
+
+\textbf{Objective:} Find the largest prime factor of a number.\pause
+
+\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    unsigned long long testNumber;
+    unsigned long long largestPrime = 0;
+    unsigned long long currentFactor = 2;
+    
+    cout << "Enter a positive integer greater than 1: ";
+    cin >> testNumber;
+    
+    // TODO 1: Implement algorithm to find largest prime factor
+    // Hint: Divide out factors starting from 2
+    // When testNumber % currentFactor == 0:
+    //    - Update largestPrime
+    //    - Divide testNumber by currentFactor
+    // Otherwise: increment currentFactor
+    // Continue until testNumber equals 1
+    
+    cout << "The largest prime factor is: " << largestPrime << endl;
+    
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Problem 5: Smallest Multiple}
+\framesubtitle{Template Exercise}
+
+\textbf{Exercise File:} \texttt{problem5\_smallestMultiple.cpp} (Template with TODOs)
+
+\textbf{Objective:} Find smallest number divisible by 1-20.\pause
+
+\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int smallestNumber = 0;
+    bool areWeDone = false;
+    
+    // TODO 1: Optimization - identify what numbers we need to check
+    // Hint: What's special about prime numbers 2,3,5,7,11,13,17,19?
+    
+    while(!areWeDone) {
+        areWeDone = true;
+        smallestNumber += /* TODO 2: Fill in optimized increment value */;
+        
+        // TODO 3: Check divisibility by all numbers from 1 to 20
+        // If not divisible by any number, set areWeDone to false and break
+    }
+    
+    cout << "The smallest number divisible by 1..20 is: " << smallestNumber << endl;
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problem 8: Fibonacci Sequence}
+\framesubtitle{Understanding the Sequence}
+
+\textbf{Definition:}
+\[f_n = \begin{cases} 
+f_0 = f_1 = 1 \\
+f_n = f_{n-1} + f_{n-2}
+\end{cases}\]
+
+\textbf{First 10 terms:} 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+
+\textbf{Key Implementation Strategy:}
+\begin{itemize}
+\item Keep track of three consecutive terms
+\item Use variables for: $f_n$, $f_{n-1}$, and $f_{n-2}$
+\item Shift values forward in each iteration
+\end{itemize}
+
+\alert{[Diagram showing Fibonacci sequence calculation]}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Problem 8: Fibonacci Implementation}
+\framesubtitle{Template Exercise}
+
+\textbf{Exercise File:} \texttt{problem8\_fibonacci.cpp} (Template with TODOs)
+
+\textbf{Objective:} Display Fibonacci numbers from $f_a$ to $f_b$.\pause
+
+\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int fibN = 1;    // Current term
+    int fibN_1 = 0;  // Previous term
+    int fibN_2 = 0;  // Two terms back
+    
+    int a, b;
+    cout << "Enter integers a and b (where 0 <= a <= b <= 50): ";
+    cin >> a >> b;
+    
+    // TODO 1: Find the ath term (don't print yet)
+    // Use a loop to calculate up to position a
+    
+    // TODO 2: Print from ath to bth term
+    // Handle both cases: a <= b and a > b
+    // Remember to shift the three terms appropriately
+    
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problem 9: Palindromic Numbers}
+\framesubtitle{Definition and Properties}
+
+\textbf{Palindrome:} A number that reads the same forward and backward
+
+\textbf{Examples:} 9, 232, 7007, 12321
+
+\textbf{Algorithm to Check Palindrome:}
+\begin{enumerate}
+\item Make a copy of the original number
+\item Reverse the digits using modulo and division
+\item Compare original with reversed number
+\end{enumerate}
+
+\textbf{Largest Palindrome Product Problem:}
+\begin{itemize}
+\item Find largest palindrome from product of two 3-digit numbers
+\item Brute force approach: Check all products from 999×999 down to 100×100
+\item Optimization: Inner loop can start at current outer loop value
+\end{itemize}
+
+\alert{[Diagram showing palindrome check algorithm]}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Problem 9: Palindrome Implementation}
+\framesubtitle{Template Exercise}
+
+\textbf{Exercise File:} \texttt{problem9\_palindrome.cpp} (Template with TODOs)
+
+\textbf{Objective:} Find largest palindrome from two 3-digit numbers.\pause
+
+\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+#include <iostream>
+using namespace std;
+
+bool isPalindrome(int number) {
+    // TODO 1: Implement palindrome check function
+    // Return true if number is palindrome, false otherwise
+    int original = number;
+    int reversed = 0;
+    
+    // Reverse the digits without destroying original
+    // Compare original with reversed
+    
+    return false; // Replace with actual condition
+}
+
+int main() {
+    int largestPalindrome = 0;
+    
+    // TODO 2: Implement nested loops to find largest palindrome
+    // Outer loop: from 999 down to 100
+    // Inner loop: from current outer value down to 100 (optimization)
+    // Check if product is palindrome and larger than current max
+    
+    cout << "The largest palindrome is: " << largestPalindrome << endl;
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+\frametitle{Optimization Techniques}
+\framesubtitle{Making Your Code More Efficient}
+
+\textbf{Problem 5 (Smallest Multiple) Optimization:}
+\begin{itemize}
+\item Check only multiples of primes $<$ 20
+\item Product: $2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13 \cdot 17 \cdot 19$
+\item Reduces checks by $\sim$99\%
+\end{itemize}
+
+\textbf{Problem 9 (Palindrome) Optimization:}
+\begin{itemize}
+\item Inner loop starts at outer loop value
+\item Avoids duplicate products (e.g., 123×456 and 456×123)
+\item Reduces iterations by approximately 50\%
+\end{itemize}
+
+\textbf{General Optimization Principles:}
+\begin{enumerate}
+\item Get it working first, then optimize
+\item Profile to identify bottlenecks
+\item Consider mathematical properties of the problem
+\item Reduce redundant calculations
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\framesubtitle{Key Takeaways}
+
+\textbf{Problem-Solving Methodology:}
+\begin{itemize}
+\item Break complex problems into smaller, manageable parts
+\item Start with simple cases and verify your approach
+\item Implement a working solution before optimizing
+\end{itemize}
+
+\textbf{Loop Implementation:}
+\begin{itemize}
+\item While loops: When iteration count is unknown
+\item For loops: When iteration count is known
+\item Proper initialization, condition, and increment are essential
+\end{itemize}
+
+\textbf{Algorithm Design:}
+\begin{itemize}
+\item Consider data type limitations (unsigned for large positives)
+\item Look for mathematical properties to optimize
+\item Test with edge cases and known solutions
+\end{itemize}
+
+\textbf{Next Steps:}
+\begin{itemize}
+\item Complete all template exercises
+\item Experiment with different optimization approaches
+\item Apply problem-solving methodology to new challenges
+\end{itemize}
+\end{frame}
+
+\end{document}
