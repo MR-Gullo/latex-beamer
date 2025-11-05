@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// TODO 1: Use a while loop to output multiples of 7 between 0 and 77 inclusive}
+\PYG{+w}{    }\PYG{c+c1}{// Expected output: 0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO 2: Use a for loop to output: 1000, 800, 600, ..., \PYGZhy{}1000}
+\PYG{+w}{    }\PYG{c+c1}{// Expected output: 1000, 800, 600, 400, 200, 0, \PYGZhy{}200, \PYGZhy{}400, \PYGZhy{}600, \PYGZhy{}800, \PYGZhy{}1000}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

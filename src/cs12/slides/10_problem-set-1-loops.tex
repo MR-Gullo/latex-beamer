@@ -133,10 +133,10 @@
 
 \vspace{0.5cm}
 \textbf{Common Issue:}
-\begin{lstlisting}[language=C++,basicstyle=\small]
+\begin{minted}[fontsize=\small]{cpp}
 int testNum = 600851475143;  // ERROR! Too large
 unsigned long long testNum = 600851475143;  // Works!
-\end{lstlisting}
+\end{minted}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -147,7 +147,7 @@ unsigned long long testNum = 600851475143;  // Works!
 
 \textbf{Objective:} Complete the TODOs to generate sequences.\pause
 
-\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
 using namespace std;
 
@@ -161,7 +161,7 @@ int main()
     
     return 0;
 }
-\end{lstlisting}
+\end{minted}
 
 \end{frame}
 
@@ -173,7 +173,7 @@ int main()
 
 \textbf{Objective:} Find the largest prime factor of a number.\pause
 
-\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
 using namespace std;
 
@@ -198,7 +198,7 @@ int main()
     
     return 0;
 }
-\end{lstlisting}
+\end{minted}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -209,7 +209,7 @@ int main()
 
 \textbf{Objective:} Find smallest number divisible by 1-20.\pause
 
-\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
 using namespace std;
 
@@ -232,7 +232,7 @@ int main()
     cout << "The smallest number divisible by 1..20 is: " << smallestNumber << endl;
     return 0;
 }
-\end{lstlisting}
+\end{minted}
 \end{frame}
 
 \begin{frame}
@@ -254,7 +254,11 @@ f_n = f_{n-1} + f_{n-2}
 \item Shift values forward in each iteration
 \end{itemize}
 
-\alert{[Diagram showing Fibonacci sequence calculation]}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{../images/fib_sequence.jpg}
+\caption{Fibonacci sequence calculation showing how each term is the sum of the previous two}
+\end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -265,7 +269,7 @@ f_n = f_{n-1} + f_{n-2}
 
 \textbf{Objective:} Display Fibonacci numbers from $f_a$ to $f_b$.\pause
 
-\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
 using namespace std;
 
@@ -288,7 +292,7 @@ int main()
     
     return 0;
 }
-\end{lstlisting}
+\end{minted}
 \end{frame}
 
 \begin{frame}
@@ -324,7 +328,7 @@ int main()
 
 \textbf{Objective:} Find largest palindrome from two 3-digit numbers.\pause
 
-\begin{lstlisting}[language=C++,basicstyle=\scriptsize,numbers=left,frame=single,breaklines=true]
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos, breaklines]{cpp}
 #include <iostream>
 using namespace std;
 
@@ -351,7 +355,7 @@ int main() {
     cout << "The largest palindrome is: " << largestPalindrome << endl;
     return 0;
 }
-\end{lstlisting}
+\end{minted}
 \end{frame}
 
 \begin{frame}
