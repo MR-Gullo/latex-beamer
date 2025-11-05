@@ -11,12 +11,12 @@
 \frame{\titlepage}
 \begin{frame}
 \frametitle{Learning Objectives}
-After this lesson, you will be able to:
+After this lesson, you will be able to:\pause
 \begin{itemize}
-\item Explain what pseudocode is and why it is used
-\item Read and understand CSP pseudocode format
-\item Convert simple C++ code to CSP pseudocode
-\item Convert CSP pseudocode to C++ code
+\item Explain what pseudocode is and why it is used\pause
+\item Read and understand CSP pseudocode format\pause
+\item Convert simple C++ code to CSP pseudocode\pause
+\item Convert CSP pseudocode to C++ code\pause
 \item Identify key differences between pseudocode and C++ syntax
 \end{itemize}
 \end{frame}
@@ -25,21 +25,21 @@ After this lesson, you will be able to:
 \frametitle{What is Pseudocode?}
 \textbf{Pseudocode} is a way to write algorithms using simple, plain language.\pause
 \vspace{0.3cm}
-\textbf{Key Points:}
+\textbf{Key Points:}\pause
 \begin{itemize}
-\item Not a real programming language
-\item Cannot run on a computer
-\item Easy to read and understand
+\item Not a real programming language\pause
+\item Cannot run on a computer\pause
+\item Easy to read and understand\pause
 \item Focuses on logic, not syntax
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{Why Learn CSP Pseudocode?}
-\textbf{Reasons:}
+\textbf{Reasons:}\pause
 \begin{itemize}
-\item Language-independent (works for any programming language)
-\item Easier to communicate ideas
-\item Less strict than real code
+\item Language-independent (works for any programming language)\pause
+\item Easier to communicate ideas\pause
+\item Less strict than real code\pause
 \item Helps focus on problem-solving
 \end{itemize}\pause
 \vspace{0.3cm}
@@ -168,21 +168,24 @@ else
 cout << "Fail" << endl;
 }
 \end{minted}
+\pause
+\vspace{0.3cm}
+\alert{Key Difference:} IF and ELSE are uppercase, no semicolons
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Comparison Operators}
-\textbf{Same in Both:}
+\textbf{Same in Both:}\pause
 \begin{itemize}
-\item = (equal to)
-\item $\neq$ (not equal to)
-\item $<$ (less than)
-\item $>$ (greater than)
-\item $\leq$ (less than or equal to)
+\item = (equal to)\pause
+\item $\neq$ (not equal to)\pause
+\item $<$ (less than)\pause
+\item $>$ (greater than)\pause
+\item $\leq$ (less than or equal to)\pause
 \item $\geq$ (greater than or equal to)
 \end{itemize}\pause
 
 \vspace{0.3cm}
-\textbf{Example:}
+\textbf{Example:}\pause
 \begin{minted}[fontsize=\small]{text}
 IF (x = 5)        // equal
 IF (y != 0)       // not equal
@@ -258,112 +261,7 @@ cout << num << endl;
 \vspace{0.3cm}
 \alert{Key Difference:} Very similar to C++ range-based for loop
 \end{frame}
-\section{Data Structures}
-\begin{frame}[fragile]
-\frametitle{Lists (Arrays)}
-\textbf{CSP Pseudocode:}
-\begin{minted}[fontsize=\small]{text}
-scores <- [85, 90, 78, 92]
-names <- ["Alice", "Bob", "Carol"]
-firstScore <- scores[1]
-\end{minted}
-\pause
-\textbf{C++ Equivalent:}
-\begin{minted}[fontsize=\small]{cpp}
-int scores[] = {85, 90, 78, 92};
-string names[] = {"Alice", "Bob", "Carol"};
-int firstScore = scores[0];
-\end{minted}
-\pause
-\vspace{0.3cm}
-\alert{IMPORTANT:} CSP lists start at index 1, C++ arrays start at 0!
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{List Index Comparison}
-\begin{columns}
-\column{0.5\textwidth}
-\textbf{CSP (starts at 1):}
-\begin{minted}[fontsize=\scriptsize]{text}
-list <- [10, 20, 30]
-list[1] // 10
-list[2] // 20
-list[3] // 30
-\end{minted}
-\column{0.5\textwidth}
-\textbf{C++ (starts at 0):}
-\begin{minted}[fontsize=\scriptsize]{cpp}
-int list[] = {10, 20, 30};
-list[0] // 10
-list[1] // 20
-list[2] // 30
-\end{minted}
-\end{columns}\pause
-\vspace{0.5cm}
-\alert{Remember:} This is the biggest difference! Always check which system you are using.
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{List Operations}
-\textbf{CSP Pseudocode:}
-\begin{minted}[fontsize=\scriptsize]{text}
-list <- [10, 20, 30]
-APPEND(list, 40)           // Add to end: [10, 20, 30, 40]
-INSERT(list, 2, 15)        // Insert at position 2: [10, 15, 20, 30, 40]
-REMOVE(list, 3)            // Remove position 3: [10, 15, 30, 40]
-length <- LENGTH(list)     // Get size: 4
-\end{minted}
-\pause
-\textbf{C++ Equivalent (using vector):}
-\begin{minted}[fontsize=\scriptsize]{cpp}
-vector<int> list = {10, 20, 30};
-list.push_back(40);              // Add to end
-list.insert(list.begin()+1, 15); // Insert at position 1 (0-indexed)
-list.erase(list.begin()+2);      // Remove position 2 (0-indexed)
-int length = list.size();        // Get size
-\end{minted}
-\end{frame}
-\section{Procedures}
-\begin{frame}[fragile]
-\frametitle{Procedures (Functions)}
-\textbf{CSP Pseudocode:}
-\begin{minted}[fontsize=\small]{text}
-PROCEDURE greet(name)
-{
-DISPLAY("Hello, ", name)
-}
-greet("Alice")
-\end{minted}
-\pause
-\textbf{C++ Equivalent:}
-\begin{minted}[fontsize=\small]{cpp}
-void greet(string name)
-{
-cout << "Hello, " << name << endl;
-}
-greet("Alice");
-\end{minted}
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Procedures with Return Values}
-\textbf{CSP Pseudocode:}
-\begin{minted}[fontsize=\small]{text}
-PROCEDURE add(a, b)
-{
-RETURN (a + b)
-}
-sum <- add(5, 3)
-DISPLAY(sum)
-\end{minted}
-\pause
-\textbf{C++ Equivalent:}
-\begin{minted}[fontsize=\small]{cpp}
-int add(int a, int b)
-{
-return (a + b);
-}
-int sum = add(5, 3);
-cout << sum << endl;
-\end{minted}
-\end{frame}
+
 \section{Practice Exercises}
 \begin{frame}[fragile]
 \frametitle{Exercise 1: Variable Assignment}
@@ -376,7 +274,7 @@ cout << "Name: " << name << endl;
 cout << "Age: " << age << endl;
 \end{minted}
 \pause
-\textbf{Answer:}
+\textbf{Answer:}\pause
 \begin{minted}[fontsize=\small]{text}
 age <- 16
 name <- "Maria"
@@ -400,7 +298,7 @@ cout << "It's cold" << endl;
 }
 \end{minted}
 \pause
-\textbf{Answer:}
+\textbf{Answer:}\pause
 \begin{minted}[fontsize=\small]{text}
 temperature <- 75
 IF (temperature >= 70)
@@ -423,7 +321,7 @@ cout << "Count: " << i << endl;
 }
 \end{minted}
 \pause
-\textbf{Answer (Option 1):}
+\textbf{Answer (Option 1):}\pause
 \begin{minted}[fontsize=\small]{text}
 REPEAT 3 TIMES
 {
@@ -431,7 +329,7 @@ DISPLAY("Count: ", i)
 }
 \end{minted}
 \pause
-\textbf{Answer (Option 2):}
+\textbf{Answer (Option 2):}\pause
 \begin{minted}[fontsize=\small]{text}
 i <- 1
 REPEAT UNTIL (i > 3)
@@ -441,39 +339,15 @@ i <- i + 1
 }
 \end{minted}
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{Exercise 4: List Operations}
-\textbf{Convert this C++ code to CSP pseudocode:}
-\begin{minted}[fontsize=\scriptsize]{cpp}
-vector<int> scores = {85, 90, 78};
-scores.push_back(92);
-for (int score : scores)
-{
-cout << score << endl;
-}
-\end{minted}
-\pause
-\textbf{Answer:}
-\begin{minted}[fontsize=\scriptsize]{text}
-scores <- [85, 90, 78]
-APPEND(scores, 92)
-FOR EACH score IN scores
-{
-DISPLAY(score)
-}
-\end{minted}
-\pause
-\vspace{0.3cm}
-\alert{Remember:} CSP lists use 1-based indexing!
-\end{frame}
+
 \begin{frame}
 \frametitle{Common Mistakes to Avoid}
 \begin{enumerate}
-\item Using = instead of $\leftarrow$ for assignment
-\item Forgetting that lists start at index 1, not 0
-\item Writing lowercase (if, else, display) instead of uppercase
-\item Using semicolons (not needed in pseudocode)
-\item Using cout or cin instead of DISPLAY or INPUT
+\item Using = instead of $\leftarrow$ for assignment\pause
+\item Forgetting that lists start at index 1, not 0\pause
+\item Writing lowercase (if, else, display) instead of uppercase\pause
+\item Using semicolons (not needed in pseudocode)\pause
+\item Using cout or cin instead of DISPLAY or INPUT\pause
 \item Forgetting parentheses around conditions
 \end{enumerate}\pause
 
@@ -504,14 +378,14 @@ vector & list \\
 
 \begin{frame}
 \frametitle{Summary}
-\textbf{Key Takeaways:}
+\textbf{Key Takeaways:}\pause
 \begin{itemize}
-\item Pseudocode is easier to read than real code
-\item CSP pseudocode uses uppercase keywords
-\item Use $\leftarrow$ for assignment, not =
-\item Lists start at index 1 (not 0 like C++)
-\item DISPLAY replaces cout, INPUT replaces cin
-\item Control structures are similar but simpler
+\item Pseudocode is easier to read than real code\pause
+\item CSP pseudocode uses uppercase keywords\pause
+\item Use $\leftarrow$ for assignment, not =\pause
+\item Lists start at index 1 (not 0 like C++)\pause
+\item DISPLAY replaces cout, INPUT replaces cin\pause
+\item Control structures are similar but simpler\pause
 \item Focus on logic, not exact syntax
 \end{itemize}\pause
 

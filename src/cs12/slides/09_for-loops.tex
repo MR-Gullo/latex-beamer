@@ -53,10 +53,10 @@ For loops are designed for counting through known values.\pause
 \begin{frame}
 \frametitle{Loop Flow Diagram Context}
 Both while and for loops follow the same fundamental control flow pattern.\pause
-
-The key difference is syntax organization: for loops package initialization, condition, and update in one line.\pause
-
-Next slide shows the visual flow that applies to both loop types.
+\begin{itemize}
+\item The key difference is syntax organization: for loops package initialization, condition, and update in one line.\pause
+\item Next slide shows the visual flow that applies to both loop types.
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -106,10 +106,10 @@ for(int i = 1; i <= 10; i++)
 \begin{frame}
 \frametitle{Variable Scope: Context}
 Variables declared in the for loop header have limited lifetime.\pause
-
-They only exist within the loop structure itself.\pause
-
-Next slide illustrates what happens when you try to access a loop variable outside its scope.
+\begin{itemize}
+\item They only exist within the loop structure itself.\pause
+\item Next slide illustrates what happens when you try to access a loop variable outside its scope.
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -135,10 +135,10 @@ The variable \texttt{i} only exists inside the for loop. It is destroyed after t
 \begin{frame}
 \frametitle{Scope Visualization Context}
 Understanding scope helps prevent common programming errors.\pause
-
-Think of scope as a boundary: variables created inside cannot escape outside.\pause
-
-Next slide shows a visual representation of this concept.
+\begin{itemize}
+\item Think of scope as a boundary: variables created inside cannot escape outside.\pause
+\item Next slide shows a visual representation of this concept.
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -266,12 +266,11 @@ Remember: semicolons separate the three for loop components.
 \begin{frame}
 \frametitle{Nested Loops: Context}
 Loops can be placed inside other loops, creating nested structures.\pause
-
-Each iteration of the outer loop runs the entire inner loop.\pause
-
-This is useful for working with multi-dimensional data like grids, tables, or coordinate systems.\pause
-
-Next slides show examples with different nesting depths.
+\begin{itemize}
+\item Each iteration of the outer loop runs the entire inner loop.\pause
+\item This is useful for working with multi-dimensional data like grids, tables, or coordinate systems.\pause
+\item Next slides show examples with different nesting depths.
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -320,10 +319,10 @@ cout << testValue << endl;
 \begin{frame}
 \frametitle{Nested Loop Visualization Context}
 Nested loops create a grid-like iteration pattern.\pause
-
-The outer loop controls rows, inner loop controls columns.\pause
-
-Next slide visualizes this concept.
+\begin{itemize}
+\item The outer loop controls rows, inner loop controls columns.\pause
+\item Next slide visualizes this concept.
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -532,14 +531,12 @@ int main() {
 \begin{frame}
 \frametitle{Prime Factors Algorithm Context}
 Finding prime factors uses division to break down numbers.\pause
-
-Algorithm repeatedly divides by smallest possible divisor.\pause
-
-Because we test divisors in order (2, 3, 4, ...), any divisor that works must be prime. Why?\pause
-
-If it had smaller factors, we would have already divided them out.\pause
-
-Next slide shows conceptual breakdown with smaller number.
+\begin{itemize}
+\item Algorithm repeatedly divides by smallest possible divisor.\pause
+\item Because we test divisors in order (2, 3, 4, ...), any divisor that works must be prime. Why?\pause
+\item If it had smaller factors, we would have already divided them out.\pause
+\item Next slide shows conceptual breakdown with smaller number.
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
