@@ -1,16 +1,12 @@
 \documentclass{beamer}
 % Use DS9 global theme
-\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{/Users/joelgullo/dev/latex-beamer/shared/templates/ds9_theme}
 
 % Title page configuration
 \title[PHYS12 CH7]{Work and Energy}
 \subtitle{Chapter 7.1-7.6: Conservative and Nonconservative Forces}
 \author[Mr. Gullo]{Mr. Gullo}
 \date[Nov 2024]{November 2024}
-
-% Add logo
-\logo{\includegraphics[width=0.1\linewidth]{phys12-shared-cinec-logo.png}}
-
 
 \begin{document}
 
@@ -76,18 +72,18 @@ Solving energy conservation problems where mechanical energy is NOT conserved. C
 \begin{itemize}
     \item Work is \textbf{zero} when:
     \begin{itemize}
-        \item Force and displacement are perpendicular ($\theta = 90°$)
+        \item Force and displacement are perpendicular ($\theta = 90$)
         \item There is no displacement ($d = 0$)
     \end{itemize}
     \pause
     \item Work is \textbf{positive} when:
     \begin{itemize}
-        \item Force and displacement are in same direction ($\theta < 90°$)
+        \item Force and displacement are in same direction ($\theta < 90$)
     \end{itemize}
     \pause
     \item Work is \textbf{negative} when:
     \begin{itemize}
-        \item Force and displacement are in opposite directions ($90° < \theta \leq 180°$)
+        \item Force and displacement are in opposite directions ($90 < \theta \leq 180$)
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -131,7 +127,7 @@ Solving energy conservation problems where mechanical energy is NOT conserved. C
 
 \begin{frame}
 \frametitle{Example 7.1: Calculating Work You Do to Push a Lawn Mower}
-A person pushing a lawn mower exerts a constant force of 75.0 N at an angle 35° below the horizontal.
+A person pushing a lawn mower exerts a constant force of 75.0 N at an angle 35 below the horizontal.
 \pause
 The lawn mower is pushed 25.0 m on level ground.
 \pause
@@ -147,7 +143,7 @@ The lawn mower is pushed 25.0 m on level ground.
 \textbf{Solution:}
 \begin{align}
     W &= Fd\cos\theta \nonumber \\
-    W &= (75.0\text{ N})(25.0\text{ m})\cos(35.0°) \nonumber \\
+    W &= (75.0\text{ N})(25.0\text{ m})\cos(35.0) \nonumber \\
     W &= 1536\text{ J} = 1.54 \times 10^3\text{ J} \nonumber \\
     \text{Convert to kcal:} &= 0.367\text{ kcal} \nonumber \\
     \text{Ratio to daily intake:} &= 1.53 \times 10^{-4} \nonumber
@@ -239,7 +235,7 @@ For conservative forces, ALL paths between points A and B require the same work.
 \end{block}
 
 \pause
-\textbf{VIDEO:} Pendulum showing continuous KE ↔ PE conversion (30-60 sec)
+\textbf{VIDEO:} Pendulum showing continuous KE $\leftrightarrow$ PE conversion (30-60 sec)
 \end{frame}
 
 \begin{frame}
@@ -291,10 +287,9 @@ This ONLY works when no nonconservative forces (like friction) do work on the sy
 \begin{frame}
 \frametitle{Energy Transformation Diagram}
 \begin{center}
-\textit{Image suggestion: Energy bar graphs showing KE and PE at different points of motion (e.g., ball thrown upward)}
-
-\textit{Search: "energy bar graph physics" or "kinetic potential energy transformation"}
-\end{center}
+\begin{center}
+		\includegraphics[width=0.5\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-07-29-45.png}
+	\end{center}
 \pause
 
 \begin{itemize}
@@ -308,13 +303,13 @@ This ONLY works when no nonconservative forces (like friction) do work on the sy
 \end{itemize}
 
 \pause
-\textbf{VIDEO SUGGESTION:} Bungee jump showing gravitational PE → KE → elastic PE (45-90 sec)
+\textbf{VIDEO SUGGESTION:} Bungee jump showing gravitational PE $\rightarrow$ KE $\rightarrow$ elastic PE (45-90 sec)
 \end{frame}
 
 \section{7.6 Nonconservative Forces}
 
 \begin{frame}
-\frametitle{Nonconservative Forces: The Game Changer}
+\frametitle{Nonconservative Forces:}
 \begin{block}{Definition}
 A force is \textbf{nonconservative} if the work done depends on the path taken.
 \end{block}
@@ -345,11 +340,12 @@ A force is \textbf{nonconservative} if the work done depends on the path taken.
     \pause
     \item Applied forces from people/motors
 \end{itemize}
+
 \pause
 \vspace{0.5cm}
-\textit{Image suggestion: Object sliding with friction arrows and heat indicators}
-
-\textit{Search: "friction force diagram heat"}
+\begin{center}
+		\includegraphics[width=\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-07-48-38.png}
+	\end{center}
 \end{column}
 
 \pause
@@ -430,7 +426,7 @@ $W_{nc}$ is typically negative (friction removes energy from system). Mechanical
 \begin{frame}
 \frametitle{Energy Flow with Friction}
 \begin{center}
-\textit{Image suggestion: Flow diagram showing mechanical energy → heat energy via friction}
+\textit{Image suggestion: Flow diagram showing mechanical energy $\rightarrow$ heat energy via friction}
 
 \textit{Search: "energy dissipation friction diagram" or "mechanical energy to thermal energy"}
 \end{center}
@@ -533,7 +529,7 @@ v_f &= \sqrt{225 - 112.7} = 10.6 \text{ m/s}
 \begin{frame}
 \frametitle{Example with Friction: Block Sliding Down Ramp}
 \begin{block}{Problem Setup}
-A 5 kg block slides down a 30° ramp from height 4 m. Coefficient of kinetic friction $\mu_k = 0.2$. Find final velocity at bottom.
+A 5 kg block slides down a 30 ramp from height 4 m. Coefficient of kinetic friction $\mu_k = 0.2$. Find final velocity at bottom.
 \end{block}
 \pause
 
@@ -554,11 +550,11 @@ A 5 kg block slides down a 30° ramp from height 4 m. Coefficient of kinetic fri
 \textbf{Step 2:} Calculate work by friction
 \pause
 \begin{itemize}
-    \item Normal force: $N = mg\cos(30°) = 5(9.8)(0.866) = 42.4$ N
+    \item Normal force: $N = mg\cos(30) = 5(9.8)(0.866) = 42.4$ N
     \pause
     \item Friction force: $f = \mu_k N = 0.2(42.4) = 8.48$ N
     \pause
-    \item Distance along ramp: $d = h/\sin(30°) = 4/0.5 = 8$ m
+    \item Distance along ramp: $d = h/\sin(30) = 4/0.5 = 8$ m
     \pause
     \item Work by friction: $W_f = -fd = -8.48(8) = -67.8$ J
 \end{itemize}
@@ -624,7 +620,7 @@ v_f &= 7.16 \text{ m/s}
 "Work by friction should be positive since it's a force"
 \end{alertblock}
 \pause
-\textbf{Reality:} Work by friction is negative because friction opposes motion ($\theta = 180°$, so $\cos\theta = -1$).
+\textbf{Reality:} Work by friction is negative because friction opposes motion ($\theta = 180$, so $\cos\theta = -1$).
 \pause
 
 \begin{alertblock}{Misconception 6}
@@ -673,7 +669,6 @@ v_f &= 7.16 \text{ m/s}
         \item If only conservative: use $KE_i + PE_i = KE_f + PE_f$
         \item If nonconservative present: use $W_{nc} = \Delta KE + \Delta PE$
     \end{itemize}
-\end{itemize}
 \end{frame}
 
 \end{document}
