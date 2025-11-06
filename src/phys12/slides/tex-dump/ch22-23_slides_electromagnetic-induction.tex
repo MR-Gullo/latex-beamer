@@ -1,0 +1,593 @@
+\documentclass{beamer}
+% Use DS9 global theme
+\usepackage{../../../../shared/templates/ds9_theme}
+
+% Title page configuration
+\title[Magnetism \& EM Induction]{PHYS11 CH: 22-23}
+\subtitle{Magnetism and Electromagnetic Induction}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[April 2025]{April 10, 2025}
+\institute[Physics]{PHYS11 - College Physics}
+
+\begin{document}
+
+% Title slide
+\frame{\titlepage}
+
+% Outline slide
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction to Magnetism}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this presentation, you will be able to:}
+\begin{itemize}
+    \item Describe the properties of magnets and magnetic fields
+    \item Apply the right hand rules to determine directions of magnetic forces and fields
+    \item Calculate magnetic forces on moving charges and current-carrying conductors
+    \item Explain electromagnetic induction and apply Faraday's law
+    \item Understand the operation of generators, motors, and transformers
+    \item Calculate inductance and analyze RL and RLC circuits
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Magnets and Magnetic Fields}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{itemize}
+    \item Magnets have north and south poles
+    \item North pole: attracted to Earth's geographic north
+    \item Like poles repel, unlike poles attract
+    \item Poles always occur in pairs (no magnetic monopoles)
+    \item All magnetism is created by electric current
+\end{itemize}
+\column{0.4\textwidth}
+\alert{[Image of bar magnets showing attraction between opposite poles and repulsion between like poles]}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Magnetic Field Lines}
+\begin{block}{Properties of Magnetic Field Lines}
+\begin{enumerate}
+    \item Field is tangent to the magnetic field line
+    \item Field strength is proportional to line density
+    \item Field lines cannot cross
+    \item Field lines are continuous loops
+\end{enumerate}
+\end{block}
+\alert{[Diagram showing magnetic field lines around a bar magnet]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ferromagnets and Electromagnets}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Ferromagnetic Materials:}
+\begin{itemize}
+    \item Iron, cobalt, nickel, gadolinium
+    \item Atoms act like small magnets
+    \item Form domains where magnetic moments align
+    \item Curie temperature: above this temperature, ferromagnetism disappears
+\end{itemize}
+\column{0.5\textwidth}
+\textbf{Electromagnets:}
+\begin{itemize}
+    \item Current through a wire creates magnetic field
+    \item Adding ferromagnetic core increases field strength
+    \item Applications: motors, generators, MRI machines
+\end{itemize}
+\end{columns}
+\alert{[Image showing magnetic domains in a ferromagnetic material]}
+\end{frame}
+
+\section{Magnetic Forces}
+
+\begin{frame}
+\frametitle{Force on a Moving Charge}
+\begin{block}{Magnetic Force Formula}
+\begin{equation}
+\vec{F} = q\vec{v} \times \vec{B} \quad \text{or} \quad F = qvB\sin\theta
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item $q$ = charge (C)
+    \item $v$ = velocity (m/s)
+    \item $B$ = magnetic field strength (T)
+    \item $\theta$ = angle between $\vec{v}$ and $\vec{B}$
+    \item Direction determined by Right Hand Rule 1 (RHR-1)
+\end{itemize}
+\alert{[Illustration of Right Hand Rule 1]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Right Hand Rule 1 (RHR-1)}
+\begin{block}{RHR-1 for Force on a Moving Charge}
+Point the thumb of your right hand in the direction of the velocity $\vec{v}$, fingers in the direction of the magnetic field $\vec{B}$, and the force $\vec{F}$ is perpendicular to the palm.
+\end{block}
+\begin{itemize}
+    \item For negative charges, force is in opposite direction
+    \item Force is always perpendicular to both $\vec{v}$ and $\vec{B}$
+    \item When $\vec{v}$ and $\vec{B}$ are parallel, $\vec{F} = 0$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Motion of Charged Particles in Magnetic Fields}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{itemize}
+    \item When velocity perpendicular to field, particles move in circular path
+    \item Radius of circular path: $r = \frac{mv}{qB}$
+    \item Magnetic force provides centripetal force
+    \item Period of revolution independent of speed
+    \item Helical path when velocity has component parallel to field
+\end{itemize}
+\column{0.4\textwidth}
+\alert{[Diagram showing circular motion of charged particle in magnetic field]}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Force on Current-Carrying Conductors}
+\begin{block}{Magnetic Force on a Current-Carrying Conductor}
+\begin{equation}
+\vec{F} = I\vec{l} \times \vec{B} \quad \text{or} \quad F = IlB\sin\theta
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item $I$ = current (A)
+    \item $l$ = length of conductor (m)
+    \item $B$ = magnetic field strength (T)
+    \item $\theta$ = angle between $\vec{l}$ and $\vec{B}$
+    \item Direction follows RHR-1 with thumb in direction of current
+\end{itemize}
+\alert{[Diagram showing force on a current-carrying wire in a magnetic field]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Torque on Current Loops}
+\begin{block}{Torque on a Current Loop}
+\begin{equation}
+\tau = NIAB\sin\theta
+\end{equation}
+\end{block}
+
+\begin{itemize}
+    \item $N$ = number of turns
+    \item $I$ = current (A)
+    \item $A$ = area of loop (m$^2$)
+    \item $B$ = magnetic field strength (T)
+    \item $\theta$ = angle between loop normal and $\vec{B}$
+\end{itemize}
+
+\textbf{Applications:} Electric motors, meters
+\alert{[Diagram of a current loop in a magnetic field showing torque]}
+\end{frame}
+
+\section{Magnetic Fields from Currents}
+
+\begin{frame}
+\frametitle{Magnetic Fields Produced by Currents}
+\begin{block}{Magnetic Field from a Long Straight Wire}
+\begin{equation}
+B = \frac{\mu_0 I}{2\pi r}
+\end{equation}
+\end{block}
+
+\begin{itemize}
+    \item $\mu_0 = 4\pi \times 10^{-7}$ T$\cdot$m/A (permeability of free space)
+    \item $I$ = current (A)
+    \item $r$ = distance from wire (m)
+    \item Direction determined by Right Hand Rule 2 (RHR-2)
+\end{itemize}
+\alert{[Diagram showing magnetic field lines around a current-carrying wire]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Right Hand Rule 2 (RHR-2)}
+\begin{block}{RHR-2 for Magnetic Field from Current}
+Point the thumb of your right hand in the direction of the current, and your fingers curl in the direction of the magnetic field lines.
+\end{block}
+\begin{itemize}
+    \item Field lines form concentric circles around a straight wire
+    \item Field strength decreases with distance from wire
+    \item Total field from any current path is the vector sum of fields from all segments
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Magnetic Fields from Loops and Solenoids}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Circular Loop:}
+\begin{equation}
+B = \frac{\mu_0 I}{2R} \quad \text{(at center)}
+\end{equation}
+\begin{itemize}
+    \item $R$ = radius of loop (m)
+    \item Direction from RHR-2
+\end{itemize}
+\column{0.5\textwidth}
+\textbf{Solenoid:}
+\begin{equation}
+B = \mu_0 n I \quad \text{(inside)}
+\end{equation}
+\begin{itemize}
+    \item $n$ = number of turns per unit length
+    \item Field inside is uniform
+\end{itemize}
+\end{columns}
+\alert{[Diagram comparing field patterns of loop and solenoid]}
+\end{frame}
+
+\section{Electromagnetic Induction}
+
+\begin{frame}
+\frametitle{Magnetic Flux}
+\begin{block}{Magnetic Flux Definition}
+\begin{equation}
+\Phi = BA\cos\theta
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item $B$ = magnetic field strength (T)
+    \item $A$ = area (m$^2$)
+    \item $\theta$ = angle between $\vec{B}$ and area normal
+    \item Units: T$\cdot$m$^2$ or weber (Wb)
+    \item Flux measures the amount of magnetic field passing through an area
+\end{itemize}
+\alert{[Diagram illustrating magnetic flux through a loop]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Faraday's Law of Induction}
+\begin{block}{Faraday's Law}
+\begin{equation}
+\text{emf} = -N\frac{\Delta\Phi}{\Delta t}
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item emf = induced electromotive force (voltage)
+    \item $N$ = number of turns in coil
+    \item $\Delta\Phi/\Delta t$ = rate of change of magnetic flux
+    \item Minus sign represents Lenz's law
+    \item Electromagnetic induction: process of inducing emf through changing magnetic flux
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lenz's Law}
+\begin{block}{Lenz's Law}
+The induced emf creates a current that produces a magnetic field that opposes the change in flux that produced it.
+\end{block}
+\begin{itemize}
+    \item Conservation of energy principle
+    \item Determines direction of induced current
+    \item Represented by minus sign in Faraday's law
+\end{itemize}
+\alert{[Diagram showing Lenz's law - induced current creating opposing magnetic field]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Motional Emf}
+\begin{block}{Motional Emf Formula}
+\begin{equation}
+\text{emf} = Blv \quad \text{(}B, l, \text{ and } v \text{ perpendicular)}
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item $B$ = magnetic field strength (T)
+    \item $l$ = length of conductor (m)
+    \item $v$ = velocity (m/s)
+    \item Special case of Faraday's law
+    \item Induced when conductor moves through magnetic field
+\end{itemize}
+\alert{[Diagram of a conductor moving through a magnetic field]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Eddy Currents and Magnetic Damping}
+\begin{itemize}
+    \item \textbf{Eddy currents}: current loops induced in moving conductors
+    \item Produced when conductors move through non-uniform magnetic fields
+    \item \textbf{Magnetic damping}: drag force created by eddy currents
+    \item Applications:
+    \begin{itemize}
+        \item Electromagnetic brakes
+        \item Metal detectors
+        \item Induction stoves
+        \item Damping in moving-coil meters
+    \end{itemize}
+\end{itemize}
+\alert{[Diagram showing eddy currents in a conductor moving through a magnetic field]}
+\end{frame}
+
+\section{Applications}
+
+\begin{frame}
+\frametitle{Electric Generators}
+\begin{block}{Induced EMF in a Generator}
+\begin{equation}
+\text{emf} = NAB\omega\sin\omega t
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item $N$ = number of turns
+    \item $A$ = area of coil (m$^2$)
+    \item $B$ = magnetic field strength (T)
+    \item $\omega$ = angular velocity (rad/s)
+    \item Peak emf: $\text{emf}_0 = NAB\omega$
+    \item Converts mechanical energy to electrical energy
+\end{itemize}
+\alert{[Diagram of a simple AC generator]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Back EMF in Motors}
+\begin{itemize}
+    \item Motors are generators running in reverse
+    \item Rotating coil in motor induces its own emf
+    \item \textbf{Back emf}: induced emf that opposes the applied voltage
+    \item Limits current through motor
+    \item Proportional to motor's rotation speed
+    \item Low back emf during startup → high current draw
+\end{itemize}
+\alert{[Diagram illustrating back emf in a motor]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Transformers}
+\begin{block}{Transformer Equations}
+\begin{align}
+\frac{V_s}{V_p} &= \frac{N_s}{N_p} \\
+\frac{I_s}{I_p} &= \frac{N_p}{N_s}
+\end{align}
+\end{block}
+\begin{itemize}
+    \item Use induction to change voltage levels
+    \item $V_p$, $V_s$ = primary and secondary voltages
+    \item $N_p$, $N_s$ = primary and secondary turns
+    \item $I_p$, $I_s$ = primary and secondary currents
+    \item Step-up: $N_s > N_p$, increases voltage
+    \item Step-down: $N_s < N_p$, decreases voltage
+    \item Power is conserved: $V_pI_p = V_sI_s$
+\end{itemize}
+\alert{[Diagram of transformer showing primary and secondary coils]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Electrical Safety Systems}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Three-Wire System:}
+\begin{itemize}
+    \item Live/hot wire
+    \item Neutral wire
+    \item Ground wire
+    \item Grounds appliance case
+\end{itemize}
+
+\textbf{Circuit Breakers/Fuses:}
+\begin{itemize}
+    \item Interrupt excessive currents
+    \item Prevent thermal hazards
+\end{itemize}
+\column{0.5\textwidth}
+\textbf{GFI (Ground Fault Interrupter):}
+\begin{itemize}
+    \item Detects current imbalance
+    \item Protects against shock
+    \item Uses induction principles
+\end{itemize}
+
+\textbf{Isolation Transformer:}
+\begin{itemize}
+    \item Insulates device from source
+    \item Prevents ground loops
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\section{Inductance and AC Circuits}
+
+\begin{frame}
+\frametitle{Inductance}
+\begin{block}{Self-Inductance}
+\begin{equation}
+\text{emf} = -L\frac{\Delta I}{\Delta t}
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item \textbf{Inductance}: property describing how effectively a device induces emf
+    \item $L$ = self-inductance (H, henry)
+    \item $\Delta I/\Delta t$ = rate of current change (A/s)
+    \item 1 H = 1 $\Omega\cdot$s
+    \item Self-inductance of a solenoid: $L = \frac{\mu_0N^2A}{l}$
+    \item Energy stored in inductor: $E_{ind} = \frac{1}{2}LI^2$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{RL Circuits}
+\begin{columns}
+\column{0.6\textwidth}
+\textbf{Current when turning on:}
+\begin{equation}
+I = I_0(1 - e^{-t/\tau})
+\end{equation}
+
+\textbf{Current when turning off:}
+\begin{equation}
+I = I_0e^{-t/\tau}
+\end{equation}
+
+\textbf{Time constant:} $\tau = \frac{L}{R}$
+\column{0.4\textwidth}
+\begin{itemize}
+    \item $I_0 = \frac{V}{R}$ is final current
+    \item Current rises to $0.632I_0$ in first time constant
+    \item Current falls to $0.368I_0$ in first time constant
+\end{itemize}
+\end{columns}
+\alert{[Graph showing current vs. time for RL circuit turning on and off]}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reactance in AC Circuits}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Inductive Reactance:}
+\begin{equation}
+X_L = 2\pi fL
+\end{equation}
+\begin{itemize}
+    \item In inductors, voltage leads current by 90°
+    \item Reactance increases with frequency
+\end{itemize}
+\column{0.5\textwidth}
+\textbf{Capacitive Reactance:}
+\begin{equation}
+X_C = \frac{1}{2\pi fC}
+\end{equation}
+\begin{itemize}
+    \item In capacitors, voltage lags current by 90°
+    \item Reactance decreases with frequency
+\end{itemize}
+\end{columns}
+\alert{[Phasor diagrams showing phase relationships between voltage and current]}
+\end{frame}
+
+\begin{frame}
+\frametitle{RLC Series Circuits}
+\begin{block}{Impedance in RLC Circuit}
+\begin{equation}
+Z = \sqrt{R^2 + (X_L - X_C)^2}
+\end{equation}
+\end{block}
+\begin{itemize}
+    \item \textbf{Impedance}: AC equivalent of resistance
+    \item \textbf{Resonant frequency}: $f_0 = \frac{1}{2\pi\sqrt{LC}}$
+    \item At resonance: $X_L = X_C$ and $Z = R$
+    \item \textbf{Phase angle}: $\cos\phi = \frac{R}{Z}$
+    \item \textbf{Average power}: $P_{ave} = I_{rms}V_{rms}\cos\phi$
+    \item \textbf{Power factor}: $\cos\phi$ (ranges from 0 to 1)
+\end{itemize}
+\alert{[Graph showing impedance vs. frequency with resonance peak]}
+\end{frame}
+
+\section{Example Problems}
+
+\begin{frame}
+\frametitle{I Do: Force on a Moving Charge}
+\begin{block}{Example Problem}
+An electron (charge $q = -1.6 \times 10^{-19}$ C) is moving at $v = 2.0 \times 10^7$ m/s perpendicular to a magnetic field of $B = 0.5$ T. Calculate the magnetic force on the electron.
+\end{block}
+
+\begin{align}
+F &= |q|vB\sin\theta \\
+&= (1.6 \times 10^{-19} \text{ C})(2.0 \times 10^7 \text{ m/s})(0.5 \text{ T})(\sin 90°) \\
+&= (1.6 \times 10^{-19})(2.0 \times 10^7)(0.5)(1) \\
+&= 1.6 \times 10^{-12} \text{ N}
+\end{align}
+
+Direction: Use RHR-1, but reverse direction since electron is negatively charged.
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Circular Motion in Magnetic Field}
+\begin{block}{Example Problem}
+A proton (mass $m = 1.67 \times 10^{-27}$ kg, charge $q = 1.6 \times 10^{-19}$ C) is moving at $v = 3.0 \times 10^6$ m/s perpendicular to a magnetic field of $B = 0.2$ T. Calculate the radius of its circular path.
+\end{block}
+
+\begin{align}
+r &= \frac{mv}{qB} \\
+&= \frac{(1.67 \times 10^{-27} \text{ kg})(3.0 \times 10^6 \text{ m/s})}{(1.6 \times 10^{-19} \text{ C})(0.2 \text{ T})} \\
+&= ?
+\end{align}
+
+Let's work through this together...
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Faraday's Law Application}
+\begin{block}{Example Problem}
+A 200-turn circular coil with area $0.25 \text{ m}^2$ is in a magnetic field that changes from 0.5 T to 0.8 T perpendicular to the coil over a time of 0.1 s. Calculate the magnitude of the induced emf.
+\end{block}
+
+\begin{align}
+\text{emf} &= -N\frac{\Delta\Phi}{\Delta t} \\
+&= -N\frac{\Delta(BA\cos\theta)}{\Delta t} \\
+&= ? \text{ V}
+\end{align}
+
+Try solving this problem yourself!
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{Key Equations}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Magnetic Forces:}
+\begin{align}
+F &= qvB\sin\theta \\
+F &= IlB\sin\theta \\
+\tau &= NIAB\sin\theta
+\end{align}
+
+\textbf{Magnetic Fields:}
+\begin{align}
+B &= \frac{\mu_0I}{2\pi r} \text{ (straight wire)} \\
+B &= \frac{\mu_0I}{2R} \text{ (loop center)} \\
+B &= \mu_0nI \text{ (solenoid)}
+\end{align}
+\column{0.5\textwidth}
+\textbf{Electromagnetic Induction:}
+\begin{align}
+\Phi &= BA\cos\theta \\
+\text{emf} &= -N\frac{\Delta\Phi}{\Delta t} \\
+\text{emf} &= Blv \text{ (motional)}
+\end{align}
+
+\textbf{AC Circuits:}
+\begin{align}
+X_L &= 2\pi fL \\
+X_C &= \frac{1}{2\pi fC} \\
+Z &= \sqrt{R^2 + (X_L - X_C)^2}
+\end{align}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Concepts}
+\begin{itemize}
+    \item Magnetic fields exert forces on moving charges and current-carrying conductors
+    \item The direction of magnetic forces and fields can be determined using right hand rules
+    \item Changing magnetic fields induce emfs (electromagnetic induction)
+    \item Lenz's law: induced effects oppose the change that caused them
+    \item Applications include generators, motors, and transformers
+    \item Inductors oppose changes in current
+    \item In AC circuits, impedance combines resistance and reactance
+    \item At resonance, inductive and capacitive reactances cancel
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Thank You!}
+\begin{center}
+\Large{Questions?}
+
+\vspace{1cm}
+\normalsize{Next class: Electromagnetic Waves}
+\end{center}
+\end{frame}
+
+\end{document}

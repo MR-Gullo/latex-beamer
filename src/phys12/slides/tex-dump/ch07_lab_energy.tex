@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+
+\title{Laboratory Manual: Work and Energy}
+\author{Physics Department}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Theoretical Background}
+
+The relationship between work and energy stands as one of physics' most elegant principles. When work is done on an object, that energy must go somewhere - typically manifesting as changes in the object's motion (kinetic energy) or position (potential energy).
+
+\begin{quote}
+\textbf{Work-Energy Theorem}: The net work done on an object equals its change in kinetic energy
+
+$$W_{net} = \Delta KE = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$$
+\end{quote}
+
+This experiment investigates this fundamental relationship using a cart-and-track system where we can precisely measure both the work done and the resulting change in kinetic energy.
+
+\section{Equipment}
+\begin{itemize}
+\item Multi-purpose mechanical track system with leveling adjustment
+\item Two photogate sensors
+\item Cart with light blocking sheet (width = \SI{0.002}{\meter})
+\item Calibrated mass set and pulley system
+\item Digital timer (integrated with photogates)
+\item Level indicator
+\end{itemize}
+
+\section{Experimental Setup}
+
+\subsection{Key Parameters}
+\begin{itemize}
+\item Fixed distance between photogates: \SI{0.30}{\meter}
+\item Cart mass (including attachments): \SI{0.225}{\kilogram}
+\item Light blocking sheet width: \SI{0.002}{\meter}
+\end{itemize}
+
+\subsection{Setup Procedure}
+1. Level the track using the adjustment screws and level indicator
+2. Mount photogates securely at \SI{0.30}{\meter} separation
+3. Attach pulley system to track end
+4. Verify light blocking sheet triggers both photogates cleanly
+
+\section{Data Collection}
+
+For each trial:
+\begin{enumerate}
+\item Record the pulling force ($F$) from the hanging mass
+\item Release the cart from rest
+\item Record timing data ($t_1$, $t_2$) from both photogates
+\item Repeat with different pulling forces (minimum 3 trials)
+\end{enumerate}
+
+\section{Analysis}
+
+\subsection{Calculations}
+For each trial, calculate:
+
+1. \textbf{Work Done}:
+   $$W = F \cdot d = F \cdot \SI{0.30}{\meter}$$
+
+2. \textbf{Change in Kinetic Energy}:
+   $$\Delta KE = \frac{m}{2}\left(\left(\frac{0.002}{t_2}\right)^2 - \left(\frac{0.002}{t_1}\right)^2\right)$$
+
+\subsection{Data Analysis Table}
+Below is a sample data table showing the measurements and calculations:
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ccccccc}
+\toprule
+$t_1$ (s) & $t_2$ (s) & $M$ (kg) & $s$ (m) & $F=9.8m_1$ (N) & $W=Fs$ (J) & $\Delta KE$ (J) \\
+\midrule
+0.07207 & 0.04399 & 0.225 & 0.30 & 0.0490 & 0.0147 & 0.0146 \\
+0.04964 & 0.03095 & 0.225 & 0.30 & 0.0980 & 0.0294 & 0.0287 \\
+0.04083 & 0.02542 & 0.225 & 0.30 & 0.1470 & 0.0441 & 0.0426 \\
+0.03259 & 0.02140 & 0.225 & 0.30 & 0.1960 & 0.0588 & 0.0559 \\
+0.03040 & 0.01965 & 0.225 & 0.30 & 0.2450 & 0.0735 & 0.0679 \\
+\bottomrule
+\end{tabular}
+\caption{Experimental measurements and calculated values}
+\end{table}
+
+Where:
+\begin{itemize}
+\item $t_1$, $t_2$ are photogate timing measurements
+\item $M$ is cart mass
+\item $m_1$ is hanging mass
+\item $s$ is distance between photogates
+\item $F$ is pulling force
+\item $W$ is work done
+\item $KE$ is change in kinetic energy
+
+\end{itemize}
+
+\section{Discussion Points}
+
+Consider these questions while conducting your analysis:
+
+\begin{enumerate}
+\item List potential sources of discrepancy between work ($W$) and change in kinetic energy ($\Delta KE$):
+    \begin{itemize}
+    \item Rolling friction effects
+    \item Pulley system friction
+    \item Air resistance
+    \item Mechanical vibrations
+    \item String elasticity
+    \end{itemize}
+
+\item Consider how friction would affect:
+    \begin{itemize}
+    \item The measured $\Delta KE$ versus calculated work
+    \item Results at different velocities
+    \item Measurements over varying distances
+    \end{itemize}
+
+\item Explain the advantages of photogate timing over direct velocity measurements:
+    \begin{itemize}
+    \item Precision considerations
+    \item Measurement errors
+    \item Practical limitations
+    \item Data reliability
+    \end{itemize}
+\end{enumerate}
+
+\section{Common Sources of Error}
+
+\begin{itemize}
+\item Track leveling imperfections
+\item Friction in the pulley system
+\item Air resistance
+\item Timing uncertainties in photogate measurements
+\item Cart wobble or vibration
+\end{itemize}
+
+\section{Extensions}
+
+For advanced investigation:
+\begin{itemize}
+\item Plot $W$ vs $\Delta KE$ and analyze the slope
+\item Investigate the effect of track angle on results
+\item Model the impact of friction quantitatively
+\end{itemize}
+
+\end{document}
