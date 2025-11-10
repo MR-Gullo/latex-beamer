@@ -1,0 +1,159 @@
+# BIG IDEAS 
+
+An object's motion can be predicted, analyzed, and described.
+Forces influence the motion of an object.
+Energy is found in different forms, is conserved, and has the ability to do work.
+Mechanical waves transfer energy but not matter.
+
+## Learning Standards
+
+| Curricular Competencies | Content |
+| :---: | :---: |
+| Students are expected to be able to do the following: <br> Questioning and predicting <br> - Demonstrate a sustained intellectual curiosity about a scientific topic or problem <br> of personal, local, or global interest <br> - Make observations aimed at identifying their own questions, including increasingly <br> abstract ones, about the natural world <br> - Formulate multiple hypotheses and predict multiple outcomes <br> Planning and conducting <br> - Collaboratively and individually plan, select, and use appropriate investigation <br> methods, including field work and lab experiments, to collect reliable data <br> (qualitative and quantitative) <br> - Assess risks and address ethical, cultural, and/or environmental issues <br> associated with their proposed methods <br> - Use appropriate SI units and appropriate equipment, including digital technologies, <br> to systematically and accurately collect and record data <br> - Apply the concepts of accuracy and precision to experimental procedures <br> and data: <br> - significant figures <br> - uncertainty <br> - scientific notation | Students are expected to know the following: <br> - vector and scalar quantities <br> - horizontal uniform and accelerated motion <br> - projectile motion <br> - contact forces and the factors that affect magnitude <br> and direction <br> - mass, force of gravity, and apparent weight <br> - Newton's laws of motion and free-body diagrams <br> - balanced and unbalanced forces in systems <br> - conservation of energy; principle of work and energy <br> - power and efficiency <br> - simple machines and mechanical advantage <br> - applications of simple machines by First Peoples <br> - electric circuits (DC), Ohm's law, and Kirchhoff's laws <br> - thermal equilibrium and specific heat capacity <br> - generation and propagation of waves <br> - properties and behaviours of waves <br> - characteristics of sound <br> - resonance and frequency of sound <br> - graphical methods in physics |
+
+## Learning Standards (continued)
+
+| Curricular Competencies | Content |
+| :---: | :---: |
+| Processing and analyzing data and information <br> - Experience and interpret the local environment <br> - Apply First Peoples perspectives and knowledge, other ways of knowing, and local knowledge <br> as sources of information <br> - Seek and analyze patterns, trends, and connections in data, including describing relationships <br> between variables, performing calculations, and identifying inconsistencies <br> - Construct, analyze, and interpret graphs, models, and/or diagrams <br> - Use knowledge of scientific concepts to draw conclusions that are consistent with evidence <br> - Analyze cause-and-effect relationships <br> Evaluating <br> - Evaluate their methods and experimental conditions, including identifying sources of error <br> or uncertainty, confounding variables, and possible alternative explanations and conclusions <br> - Describe specific ways to improve their investigation methods and the quality of their data <br> - Evaluate the validity and limitations of a model or analogy in relation to the phenomenon <br> modelled <br> - Demonstrate an awareness of assumptions, question information given, and identify bias <br> in their own work and in primary and secondary sources <br> - Consider the changes in knowledge over time as tools and technologies have developed <br> - Connect scientific explorations to careers in science <br> - Exercise a healthy, informed skepticism and use scientific knowledge and findings <br> to form their own investigations to evaluate claims in primary and secondary sources <br> - Consider social, ethical, and environmental implications of the findings from their own <br> and others' investigations <br> - Critically analyze the validity of information in primary and secondary sources and evaluate <br> the approaches used to solve problems <br> - Assess risks in the context of personal safety and social responsibility |  |
+
+## Learning Standards (continued)
+
+| Curricular Competencies | Content |
+| :---: | :---: |
+| Applying and innovating <br> - Contribute to care for self, others, community, and world through individual <br> or collaborative approaches <br> - Co-operatively design projects with local and/or global connections and applications <br> - Contribute to finding solutions to problems at a local and/or global level <br> through inquiry <br> - Implement multiple strategies to solve problems in real-life, applied, <br> and conceptual situations <br> - Consider the role of scientists in innovation <br> Communicating <br> - Formulate physical or mental theoretical models to describe a phenomenon <br> - Communicate scientific ideas and information, and perhaps a suggested course <br> of action, for a specific purpose and audience, constructing evidence-based <br> arguments and using appropriate scientific language, conventions, and <br> representations <br> - Express and reflect on a variety of experiences, perspectives, and worldviews <br> through place |  |
+
+- motion:
+
+Sample questions to support inquiry with students:
+
+- How can uniform motion and uniform acceleration be modelled?
+- How can the path of a projectile be changed?
+- Forces:
+
+Sample questions to support inquiry with students:
+
+- How can forces change the motion of an object?
+- How can Newton's laws be used to explain changes in motion?
+- Energy:
+
+Sample questions to support inquiry with students:
+
+- What is the relationship between work, energy, and power in a system?
+- How are the conservation laws applied in parallel and series circuits?
+- Why can't a machine be $100 \%$ efficient?
+- waves:
+
+Sample questions to support inquiry with students:
+
+- What are the factors that affect wave behaviours?
+- How would you investigate the relationships between the properties of a wave and properties of the medium?
+- How can you determine which harmonics are audible in different musical instruments?
+
+
+## Curricular Competencies - Elaborations
+
+- Questioning and predicting:
+
+Sample opportunities to support student inquiry:
+
+- Make observations to determine the effect that launch angle has on the path of a projectile.
+- Generate a hypothesis about the factors that affect the force of friction.
+- Find examples of simple machines developed by local First Peoples.
+- Observe the similarities and differences between series and parallel circuits.
+- Observe waves in natural settings (e.g., lakes, oceans, rivers).
+
+
+## - Planning and conducting:
+
+Sample opportunities to support student inquiry:
+
+- Choose appropriate equipment and variables to experimentally determine acceleration due to gravity.
+- Collect accurate and precise data to determine a spring constant, using correct units.
+- Compare weight measurements from a stationary and accelerating elevator (i.e., apparent weight).
+- Collect voltage and current data with analog and digital tools using appropriate units.
+- Use a calorimeter to collect accurate and precise data needed to determine specific heat capacity.
+- What data are needed to determine the speed of sound in air?
+- Processing and analyzing data and information:
+
+Sample opportunities to support student inquiry:
+
+- Derive equations and construct diagrams that use graphical vector addition or subtraction to determine a resultant for a physical phenomenon (e.g., displacement of an object, change in velocity or acceleration of an object, $F_{\text {net }}$ equations).
+- Compare an experimental result with a theoretical result and calculate $\%$ error or difference (e.g., acceleration due to gravity, coefficient of friction).
+- Diagram the orthogonal components of the forces acting on an object on a horizontal surface and an inclined plane.
+- Interpret free-body diagrams to develop an equation that describes the motion of an object.
+- Create and interpret circuit diagrams.
+- Identify wave behaviour patterns in mediums with different properties (e.g., material, fixed/open-end, densities).
+- Evaluating:
+
+Sample opportunities to support student inquiry:
+
+- Identify sources of random and systematic error in lab activities.
+- Investigate assumptions regarding surface area and the force of friction.
+- What are the limitations of free-body diagrams?
+- What explanations can you offer when your experimental data show that energy is not conserved?
+- Describe ways to improve accuracy and precision when launching projectiles.
+- Consider the social and environmental implications of noise pollution generated by sources such as ear buds, cell phones, or sporting events.
+
+
+## - Applying and innovating:
+
+Sample opportunities to support student inquiry:
+
+- Design and create a carnival game that applies the principles of projectile motion.
+- Collaboratively design an obstacle course that demonstrates Newton's laws.
+- Using exemplars of First Peoples traditional dwellings, design your own heat-efficient structure.
+- Use research to present possible innovations to replace the internal combustion engine.
+- How has an understanding of physics influenced innovations in sports (e.g., technical clothing and/or materials, ski design, luge technique, bicycle gears, skate parks)?
+- Communicating:
+
+Sample opportunities to support student inquiry:
+
+Curricular Competencies - Elaborations
+
+- Present and defend evidence to prove that an object has uniform or accelerated motion.
+- Visually represent the differences between scalar and vector quantities on a local map.
+- Model the reduction in friction on an object as the angle of inclination increases.
+- Create a model that demonstrates constructive and destructive interference of waves.
+- place: Place is any environment, locality, or context with which people interact to learn, create memory, reflect on history, connect with culture, and establish identity. The connection between people and place is foundational to First Peoples perspectives.
+
+Content - Elaborations
+
+- vector and scalar quantities:
+- addition and subtraction
+- right-angle triangle trigonometry
+- uniform and accelerated motion: graphical and quantitative analysis
+- projectile motion: 1D and 2D, including:
+- vertical launch
+- horizontal launch
+- angled launch
+- contact forces: for example, normal force, spring force, tension force, frictional force
+- Newton's laws of motion:
+- First: the concept of mass as a measure of inertia
+- Second: net force from one or more forces
+- Third: actions/reactions happen at the same time in pairs
+- forces in systems:
+- one-body and multi-body systems
+- inclined planes
+- angled forces
+- elevators
+- power and efficiency:
+- mechanical and electrical (e.g., light bulbs, simple machines, motors, steam engines, kettle)
+- numerical examples (e.g., resistance, power, and efficiency in circuits)
+- simple machines: lever, ramp, wedge, pulley, screw, wheel and axle
+- electric circuits (DC), Ohm's law, and Kirchhoff's laws: including terminal voltage versus electromotive force (EMF) (e.g., safety, power distribution, fuses/breakers, switches, overload, short circuits, alternators)
+- thermal equilibrium: as an application of law of conservation of energy (e.g., calorimeter)
+- propagation of waves:
+- transverse versus longitudinal
+$-\quad$ linear versus circular
+- properties and behaviours:
+- properties: differences between the properties of a wave and the properties of the medium, periodic versus pulse
+- behaviours: reflection (open and fixed end), refraction, transmission, diffraction, interference, Doppler shift, standing waves, interference patterns, law of superposition
+- characteristics: for example, pitch, volume, speed, Doppler effect, sonic boom
+- frequency: for example, harmonic, fundamental/natural, beat frequency
+- graphical methods:
+- plotting of linear relationships given a physical model (e.g., uniform motion, resistance)
+- calculation of the slope of a line of best fit, including significant figures and appropriate units
+- interpolation and extrapolation data from a constructed graph (e.g., position, instantaneous velocity)
+- calculations and interpretations of area under the curve on a constructed graph (e.g., displacement, work)
+
