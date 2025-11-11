@@ -19,12 +19,12 @@
 \frametitle{Learning Objectives}
 By the end of this lesson, students will be able to:
 \begin{itemize}
-\item Construct for loops with proper syntax (initialization, condition, update)
-\item Explain when to use for loops versus while loops
-\item Understand variable scope within loop structures
-\item Apply compound assignment operators (+=, -=, *=, /=)
-\item Debug common for loop syntax errors
-\item Implement nested loops for multi-dimensional iterations
+\item Construct for loops with proper syntax (initialization, condition, update)\pause
+\item Explain when to use for loops versus while loops\pause
+\item Understand variable scope within loop structures\pause
+\item Apply compound assignment operators (+=, -=, *=, /=)\pause
+\item Debug common for loop syntax errors\pause
+\item Implement nested loops for multi-dimensional iterations\pause
 \item Convert between while and for loop structures
 \end{itemize}
 \end{frame}
@@ -35,17 +35,17 @@ For loops are designed for counting through known values.\pause
 
 \textbf{Best use cases:}
 \begin{itemize}
-\item Repeat something a specific number of times (e.g., 10 times)
-\item Move from first element to last element of a list
+\item Repeat something a specific number of times (e.g., 10 times)\pause
+\item Move from first element to last element of a list\pause
 \item Move through each letter in a word or sentence
 \end{itemize}
 \pause
 
 \textbf{While loops are better for:}
 \begin{itemize}
-\item Unknown number of repetitions
-\item Getting user input
-\item Problems involving division or multiplication
+\item Unknown number of repetitions\pause
+\item Getting user input\pause
+\item Problems involving division or multiplication\pause
 \item Waiting for a condition change
 \end{itemize}
 \end{frame}
@@ -55,13 +55,12 @@ For loops are designed for counting through known values.\pause
 Both while and for loops follow the same fundamental control flow pattern.\pause
 \begin{itemize}
 \item The key difference is syntax organization: for loops package initialization, condition, and update in one line.\pause
-\item Next slide shows the visual flow that applies to both loop types.
-\end{itemize}
+\item Next slide shows the visual flow that applies to both loop types.\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Loop Flow Diagram}
-\includegraphics[width=0.6\textwidth]{../images/While-Loop-Flowchart.jpg}
+\includegraphics[width=0.6\textwidth]{../images/While-Loop-Flowchart.jpg}\pause
 
 This control flow applies equally to while and for loops.
 \end{frame}
@@ -108,8 +107,7 @@ for(int i = 1; i <= 10; i++)
 Variables declared in the for loop header have limited lifetime.\pause
 \begin{itemize}
 \item They only exist within the loop structure itself.\pause
-\item Next slide illustrates what happens when you try to access a loop variable outside its scope.
-\end{itemize}
+\item Next slide illustrates what happens when you try to access a loop variable outside its scope.\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -137,13 +135,12 @@ The variable \texttt{i} only exists inside the for loop. It is destroyed after t
 Understanding scope helps prevent common programming errors.\pause
 \begin{itemize}
 \item Think of scope as a boundary: variables created inside cannot escape outside.\pause
-\item Next slide shows a visual representation of this concept.
-\end{itemize}
+\item Next slide shows a visual representation of this concept.\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Scope Visualization}
-\includegraphics[width=0.6\textwidth]{../images/scope-loop.png}
+\includegraphics[width=0.6\textwidth]{../images/scope-loop.png}\pause
 
 Variable \texttt{i} is born inside the for loop and dies when the loop ends.
 \end{frame}
@@ -269,8 +266,7 @@ Loops can be placed inside other loops, creating nested structures.\pause
 \begin{itemize}
 \item Each iteration of the outer loop runs the entire inner loop.\pause
 \item This is useful for working with multi-dimensional data like grids, tables, or coordinate systems.\pause
-\item Next slides show examples with different nesting depths.
-\end{itemize}
+\item Next slides show examples with different nesting depths.\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -321,13 +317,12 @@ cout << testValue << endl;
 Nested loops create a grid-like iteration pattern.\pause
 \begin{itemize}
 \item The outer loop controls rows, inner loop controls columns.\pause
-\item Next slide visualizes this concept.
-\end{itemize}
+\item Next slide visualizes this concept.\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Nested Loop Visualization}
-\includegraphics[width=\textwidth]{../images/Nested-Loop.png}
+\includegraphics[width=\textwidth]{../images/Nested-Loop.png}\pause
 
 Each row represents one iteration of the outer loop.
 \end{frame}
@@ -535,8 +530,7 @@ Finding prime factors uses division to break down numbers.\pause
 \item Algorithm repeatedly divides by smallest possible divisor.\pause
 \item Because we test divisors in order (2, 3, 4, ...), any divisor that works must be prime. Why?\pause
 \item If it had smaller factors, we would have already divided them out.\pause
-\item Next slide shows conceptual breakdown with smaller number.
-\end{itemize}
+\item Next slide shows conceptual breakdown with smaller number.\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -565,12 +559,12 @@ Prime factors of 12: 2, 2, 3 (multiply: $2 \times 2 \times 3 = 12$)
 \frametitle{Summary}
 \textbf{Key takeaways:}
 \begin{itemize}
-\item For loops package initialization, condition, update in one line
-\item Best for known iteration counts
-\item Loop variables have limited scope (exist only in loop)
-\item Compound operators (+=, -=, *=, /=) save typing
-\item Use semicolons, not commas, in for loop header
-\item Nested loops multiply iteration counts
+\item For loops package initialization, condition, update in one line\pause
+\item Best for known iteration counts\pause
+\item Loop variables have limited scope (exist only in loop)\pause
+\item Compound operators (+=, -=, *=, /=) save typing\pause
+\item Use semicolons, not commas, in for loop header\pause
+\item Nested loops multiply iteration counts\pause
 \item Convert while to for when iteration count is known
 \end{itemize}
 \pause
