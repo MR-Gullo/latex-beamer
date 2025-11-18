@@ -15,10 +15,15 @@
 \frametitle{Learning Objectives}
 \begin{itemize}
 \item Apply the 6-step problem-solving methodology to complex programming challenges
+\pause
 \item Implement while and for loops to solve iterative problems
+\pause
 \item Understand and apply optimization techniques to improve algorithm efficiency
+\pause
 \item Master unsigned data types for handling large positive integers
+\pause
 \item Develop algorithms for mathematical sequences and number theory problems
+\pause
 \item Implement template-based code structure with clear TODO sections
 \end{itemize}
 \end{frame}
@@ -73,30 +78,37 @@
    \begin{itemize}
    \item Generate sequences with specific patterns
    \end{itemize}
+\pause
 \item \textbf{Division without operators}
    \begin{itemize}
    \item Implement division and modulus using subtraction
    \end{itemize}
+\pause
 \item \textbf{Largest Prime Factor}
    \begin{itemize}
    \item Factor large numbers and identify prime factors
    \end{itemize}
+\pause
 \item \textbf{Smallest Multiple}
    \begin{itemize}
    \item Find LCM of numbers 1-20
    \end{itemize}
+\pause
 \item \textbf{Sum of Powers}
    \begin{itemize}
    \item Calculate geometric series
    \end{itemize}
+\pause
 \item \textbf{Greatest Common Factor}
    \begin{itemize}
    \item Implement Euclidean algorithm
    \end{itemize}
+\pause
 \item \textbf{Fibonacci Sequence}
    \begin{itemize}
    \item Generate terms in specified ranges
    \end{itemize}
+\pause
 \item \textbf{Palindromic Numbers}
    \begin{itemize}
    \item Check and find palindrome products
@@ -136,6 +148,47 @@
 \begin{minted}[fontsize=\small]{cpp}
 int testNum = 600851475143;  // ERROR! Too large
 unsigned long long testNum = 600851475143;  // Works!
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Key Concept: Extended Integer Types}
+\framesubtitle{Long and Long Long for Larger Numbers}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Type} & \textbf{Bytes} & \textbf{Range} \\
+\hline
+\texttt{int} & 4 & $-2.1 \times 10^9$ to $2.1 \times 10^9$ \\
+\hline
+\texttt{long} & 4 or 8 & Platform dependent \\
+\hline
+\texttt{long long} & 8 & $-9.2 \times 10^{18}$ to $9.2 \times 10^{18}$ \\
+\hline
+\texttt{unsigned int} & 4 & $0$ to $4.3 \times 10^9$ \\
+\hline
+\texttt{unsigned long} & 4 or 8 & Platform dependent \\
+\hline
+\texttt{unsigned long long} & 8 & $0$ to $1.8 \times 10^{19}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\pause
+\textbf{When to Use Each Type:}
+\begin{itemize}
+\item \texttt{int}: Default choice for most applications
+\item \texttt{long long}: Large positive numbers like prime factors
+\item \texttt{unsigned long long}: Maximum positive range (Project Euler problems)
+\end{itemize}
+
+\pause
+\begin{minted}[fontsize=\small]{cpp}
+// Different approaches for the same large number
+signed long long signedNum = 600851475143;      // Can be negative
+unsigned long long unsignedNum = 600851475143LL; // Explicitly positive
 \end{minted}
 \end{frame}
 
@@ -245,8 +298,10 @@ f_0 = f_1 = 1 \\
 f_n = f_{n-1} + f_{n-2}
 \end{cases}\]
 
+\pause
 \textbf{First 10 terms:} 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 
+\pause
 \textbf{Key Implementation Strategy:}
 \begin{itemize}
 \item Keep track of three consecutive terms
@@ -254,6 +309,7 @@ f_n = f_{n-1} + f_{n-2}
 \item Shift values forward in each iteration
 \end{itemize}
 
+\pause
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{../images/fib_sequence.jpg}
@@ -301,8 +357,10 @@ int main()
 
 \textbf{Palindrome:} A number that reads the same forward and backward
 
+\pause
 \textbf{Examples:} 9, 232, 7007, 12321
 
+\pause
 \textbf{Algorithm to Check Palindrome:}
 \begin{enumerate}
 \item Make a copy of the original number
@@ -310,6 +368,7 @@ int main()
 \item Compare original with reversed number
 \end{enumerate}
 
+\pause
 \textbf{Largest Palindrome Product Problem:}
 \begin{itemize}
 \item Find largest palindrome from product of two 3-digit numbers
@@ -369,6 +428,7 @@ int main() {
 \item Reduces checks by $\sim$99\%
 \end{itemize}
 
+\pause
 \textbf{Problem 9 (Palindrome) Optimization:}
 \begin{itemize}
 \item Inner loop starts at outer loop value
@@ -376,6 +436,7 @@ int main() {
 \item Reduces iterations by approximately 50\%
 \end{itemize}
 
+\pause
 \textbf{General Optimization Principles:}
 \begin{enumerate}
 \item Get it working first, then optimize
@@ -396,6 +457,7 @@ int main() {
 \item Implement a working solution before optimizing
 \end{itemize}
 
+\pause
 \textbf{Loop Implementation:}
 \begin{itemize}
 \item While loops: When iteration count is unknown
@@ -403,6 +465,7 @@ int main() {
 \item Proper initialization, condition, and increment are essential
 \end{itemize}
 
+\pause
 \textbf{Algorithm Design:}
 \begin{itemize}
 \item Consider data type limitations (unsigned for large positives)
@@ -410,6 +473,7 @@ int main() {
 \item Test with edge cases and known solutions
 \end{itemize}
 
+\pause
 \textbf{Next Steps:}
 \begin{itemize}
 \item Complete all template exercises

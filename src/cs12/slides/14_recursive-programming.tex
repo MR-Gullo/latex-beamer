@@ -1,27 +1,835 @@
-\documentclass[10pt]{beamer}
-\usetheme{DS9}
-\graphicspath{{../images/}{../../shared/images/}}
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../../shared/templates/ds9_theme}
 
-\title{Recursive Programming}
-\subtitle{CS12 - Lesson 14}
-\author{Computer Science 12}
-\date{}
+% Title page configuration
+\title[Recursive Functions and Sequences]{CS12: Recursive Functions and Sequences}
+\subtitle{Understanding Recursion in Mathematics and Programming}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Nov 2024]{November 2024}
 
 \begin{document}
+\frame{\titlepage}
+
+\section{Learning Objectives}
 
 \begin{frame}
-    \titlepage
+\frametitle{Learning Objectives}
+
+By the end of this lesson, you will be able to:
+
+\begin{itemize}
+\item Define recursion and explain how it differs from iteration
+\item Write recursive sequences using mathematical notation
+\item Implement recursive functions in C++ with proper base cases
+\item Convert between explicit and recursive formulas
+\item Debug common recursive programming errors
+\item Apply recursion to solve mathematical and programming problems
+\end{itemize}
+
 \end{frame}
 
-\begin{frame}{Overview}
-    \begin{itemize}
-        \item Recursive function concepts
-        \item Base cases and recursive cases
-        \item Common recursive algorithms
-        \item Stack overflow and recursion limits
-    \end{itemize}
+\section{Introduction to Recursion}
+
+\begin{frame}
+\frametitle{What is Recursion?}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{resursion.png}
+\end{figure}
+
+\pause
+
+A process where the definition refers to the thing being defined
+
+\pause
+
+Key components:
+\pause
+\begin{itemize}
+\item Base case (stopping condition)
+\pause
+\item Recursive step (how to get from one level to the next)
+\end{itemize}
+
 \end{frame}
 
-% Content slides to be added
+\begin{frame}
+\frametitle{The Sleeping Story Example}
+
+A child couldn't sleep, so mother told a story about...
+
+\pause
+
+\begin{itemize}
+\item a frog who couldn't sleep, so its mother told a story about...
+\pause
+\item a bear who couldn't sleep, so its mother told a story about...
+\pause
+\item a weasel who fell asleep. \textbf{(BASE CASE)}
+\pause
+\item ...and the little bear fell asleep;
+\pause
+\item ...and the little frog fell asleep;
+\pause
+\item ...and the child fell asleep.
+\end{itemize}
+
+\end{frame}
+
+\section{Recursive Sequences}
+
+\begin{frame}
+\frametitle{Recursive Sequences: Definition}
+
+A \textbf{recursive sequence} is defined by:
+\begin{itemize}
+\item Initial term(s) (base case)
+\item A rule for finding subsequent terms (recursive equation)
+\end{itemize}
+
+\pause
+
+\textbf{General Form:}
+
+$$
+t_n = \begin{cases}
+t_1 = \text{initial value} \\
+t_n = f(t_{n-1}, t_{n-2}, ..., n)
+\end{cases}
+$$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Simple Example}
+
+$$
+t_n = \begin{cases}
+t_1 = 1 \\
+t_n = t_{n-1} + 1
+\end{cases}
+$$
+
+\pause
+
+Find the first 6 terms:
+
+\pause
+
+\begin{align*}
+t_1 &= 1 \\
+t_2 &= t_1 + 1 = 1 + 1 = 2 \\
+t_3 &= t_2 + 1 = 2 + 1 = 3 \\
+t_4 &= t_3 + 1 = 3 + 1 = 4
+\end{align*}
+
+\pause
+
+Pattern: $t_n = n$ (This is the explicit formula)
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Explicit vs Recursive Rules}
+
+\textbf{Recursive Rule:}
+
+$$
+t_n = \begin{cases}
+t_1 = 1 \\
+t_n = t_{n-1} + 1
+\end{cases}
+$$
+
+Uses previous term to find next term
+
+\pause
+
+\vspace{1em}
+
+\textbf{Explicit Rule:}
+
+$$t_n = n$$
+
+Directly calculates any term using only $n$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of Recursive Sequences}
+
+\textbf{Simple Recursive Rule:}
+
+$$
+t_n = \begin{cases}
+t_1 = 1 \\
+t_n = t_{n-1} + 1
+\end{cases}
+$$
+
+\pause
+
+\vspace{1em}
+
+\textbf{Multiple Term Dependencies (Fibonacci):}
+
+$$
+t_n = \begin{cases}
+t_1 = t_2 = 1 \\
+t_n = t_{n-1} + t_{n-2}
+\end{cases}
+$$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Common Sequence Types}
+
+\begin{enumerate}
+\item \textbf{Arithmetic:} $a_n = a_{n-1} + d$ (constant difference)
+\pause
+\item \textbf{Geometric:} $a_n = a_{n-1} \cdot r$ (constant ratio)
+\pause
+\item \textbf{Fibonacci:} $a_n = a_{n-1} + a_{n-2}$
+\pause
+\item \textbf{Complex:} $a_n = n + a_{n-1} + 6$
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Practice: Factorial Sequence}
+
+Find the first 5 terms:
+
+$$
+t_n = \begin{cases}
+t_1 = 1 \\
+t_n = n \cdot t_{n-1}
+\end{cases}
+$$
+
+\pause
+
+Solution:
+\begin{align*}
+t_1 &= 1 \\
+t_2 &= 2 \cdot t_1 = 2 \cdot 1 = 2 \\
+t_3 &= 3 \cdot t_2 = 3 \cdot 2 = 6 \\
+t_4 &= 4 \cdot t_3 = 4 \cdot 6 = 24 \\
+t_5 &= 5 \cdot t_4 = 5 \cdot 24 = 120
+\end{align*}
+
+This is the factorial function: $t_n = n!$
+
+\end{frame}
+
+\section{Recursive Functions in C++}
+
+\begin{frame}
+\frametitle{Anatomy of a Recursive Function}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{resursioncpp.jpg}
+\end{center}
+
+Every recursive function needs:
+\begin{itemize}
+\item \textbf{Base case:} Condition to stop recursion
+\item \textbf{Recursive step:} Function calls itself with modified input
+\item \textbf{Progress toward base case:} Each call must get closer to stopping
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Simple Example: countDown}
+
+\textbf{Demo File:} \texttt{countDown_demo.cpp}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+#include <iostream>
+using namespace std;
+
+void countDown(int n) {
+    // TODO 1: Add base case to stop when n < 0
+    
+    cout << n << " ";
+    
+    // TODO 2: Add recursive call to countDown(n-1)
+}
+
+int main() {
+    countDown(5);
+    return 0;
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{countDown Solution}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+#include <iostream>
+using namespace std;
+
+void countDown(int n) {
+    if (n < 0)  // Base case
+        return;
+    
+    cout << n << " ";
+    countDown(n - 1);  // Recursive call
+}
+
+int main() {
+    countDown(5);
+    return 0;
+}
+\end{minted}
+
+Output: \texttt{5 4 3 2 1 0}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Order Matters: countUp}
+
+\textbf{Demo File:} \texttt{countUp_demo.cpp}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+void countUp(int n) {
+    if (n < 0)
+        return;
+    
+    countUp(n - 1);    // Recursive call FIRST
+    cout << n << " ";  // Print AFTER
+}
+\end{minted}
+
+\pause
+
+Output: \texttt{0 1 2 3 4 5}
+
+The recursion unwinds in reverse order!
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Triangle Numbers}
+
+\textbf{Demo File:} \texttt{triangle_demo.cpp}
+
+\textbf{Mathematical Definition:}
+
+$$
+t_n = \begin{cases}
+t_0 = 0 \\
+t_n = n + t_{n-1}
+\end{cases}
+$$
+
+\pause
+
+\textbf{C++ Implementation:}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int triangle(int n) {
+    if (n == 0)
+        return 0;
+    else
+        return n + triangle(n - 1);
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Triangle Numbers Exercise}
+
+\textbf{Exercise File:} \texttt{triangle_demo.cpp} - \texttt{triangle()} function
+
+Complete the TODOs:
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int triangle(int n) {
+    // TODO 1: Add base case for n == 1, return 1
+    
+    // TODO 2: Add recursive case
+    // return n + triangle(n-1)
+}
+
+int main() {
+    cout << "Triangle(5) = " << triangle(5) << endl;
+    // Expected output: 15 (1+2+3+4+5)
+    return 0;
+}
+\end{minted}
+
+\end{frame}
+
+
+\section{Common Mistakes}
+
+\begin{frame}[fragile]
+\frametitle{Mistake 1: Forgetting Base Cases}
+
+\textbf{Incorrect (causes infinite recursion):}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int factorial(int n) {
+    return n * factorial(n - 1);
+}
+\end{minted}
+
+\pause
+
+\textbf{Correct:}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int factorial(int n) {
+    if (n == 0)  // Base case
+        return 1;
+    return n * factorial(n - 1);
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Mistake 2: Infinite Recursion}
+
+\textbf{Problem:} Never reaching base case
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int countDown(int n) {
+    cout << n << " ";
+    return countDown(n - 1);  // Never stops!
+}
+\end{minted}
+
+\pause
+
+\textbf{Solution:} Add proper base case
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int countDown(int n) {
+    if (n $<$ 0) return 0;  // Stops recursion
+    cout << n << " ";
+    return countDown(n - 1);
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Mistake 3: Stack Overflow}
+
+\textbf{Cause:} Too many recursive calls without base case
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int fibonacci(int n) {
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+// No base case = stack overflow
+\end{minted}
+
+\pause
+
+Each recursive call adds a layer to memory stack. Without base cases, stack runs out of space.
+
+\pause
+
+\textbf{Solution:}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int fibonacci(int n) {
+    if (n $\leq$ 1) return n;  // Base cases
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Mistake 4: Incorrect Recursive Step}
+
+\textbf{Incorrect:}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int sum(int n) {
+    if (n == 0) return 0;
+    return n + n - 1;  // Wrong! Not recursive
+}
+\end{minted}
+
+\pause
+
+\textbf{Correct:}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int sum(int n) {
+    if (n == 0) return 0;
+    return n + sum(n - 1);  // Proper recursive call
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Mistake 5: Not Checking Edge Cases}
+
+\textbf{Problem:} Negative numbers or invalid input
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int countDown(int n) {
+    cout << n << " ";
+    return countDown(n - 1);
+}
+// What if n is already negative?
+\end{minted}
+
+\pause
+
+\textbf{Solution:}
+
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+int countDown(int n) {
+    if (n $<$ 0) return 0;  // Handle edge case
+    cout << n << " ";
+    return countDown(n - 1);
+}
+\end{minted}
+
+\end{frame}
+
+\section{Common Programming Exercises}
+
+\begin{frame}
+\frametitle{Common Recursive Problems}
+
+From \texttt{recursionExercises.ipynb}:
+
+\begin{enumerate}
+\item Fibonacci sequence
+\item Counting digits in an integer
+\item Sum of digits
+\item Binary conversion (decimal to binary)
+\item Greatest Common Factor (GCD)
+\item Lowest Common Multiple (LCM)
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 1: Fibonacci Sequence}
+
+\textbf{Exercise File:} \texttt{recursionExercises.ipynb} or \texttt{ex1\_fibonocci.cpp}
+
+\textbf{Objective:} Implement Fibonacci sequence recursively
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n) {
+    // TODO 1: Add base cases for n == 0 and n == 1
+    // Both should return 1
+    
+    // TODO 2: Add recursive case
+    // return fibonacci(n-1) + fibonacci(n-2)
+}
+
+int main() {
+    cout << "Fibonacci(6) = " << fibonacci(6) << endl;
+    return 0;
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 2: Count Digits}
+
+\textbf{Exercise File:} \texttt{recursionExercises.ipynb} or \texttt{ex2\_digits.cpp}
+
+\textbf{Objective:} Count digits in a number recursively
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int numDigits(int n) {
+    // TODO 1: Add base case for n == 0, return 0
+    
+    // TODO 2: Add recursive case
+    // Hint: n/10 removes last digit
+    // return 1 + numDigits(n / 10)
+}
+
+int main() {
+    cout << "Number of digits in 12345: " 
+         << numDigits(12345) << endl;
+    // Expected: 5
+    return 0;
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 3: Sum of Digits}
+
+\textbf{Exercise File:} \texttt{ex3\_sumDigits.cpp}
+
+\textbf{Objective:} Find sum of digits using recursion
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int sumDigits(int n) {
+    // TODO 1: Add base case for n == 0, return 0
+    
+    // TODO 2: Add recursive case
+    // Hint: n % 10 gets last digit
+    //       n / 10 removes last digit
+    // return (n % 10) + sumDigits(n / 10)
+}
+
+int main() {
+    cout << "Sum of digits in 1000211: " 
+         << sumDigits(1000211) << endl;
+    // Expected: 5
+    return 0;
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 4: Binary Conversion}
+
+\textbf{Exercise File:} \texttt{ex4\_dec2bin.cpp}
+
+\textbf{Objective:} Output binary representation of decimal number
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+void printBinary(int n) {
+    // TODO 1: Add base case for n == 0, just return
+    
+    // TODO 2: Recursive call FIRST (this is important!)
+    // printBinary(n / 2)
+    
+    // TODO 3: Print last bit AFTER recursive call
+    // cout << (n % 2)
+}
+
+int main() {
+    cout << "99 in binary: ";
+    printBinary(99);  // Expected: 1100011
+    return 0;
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 5: GCD with Helper Function}
+
+\textbf{Exercise File:} \texttt{ex5\_gcd.cpp}
+
+Uses helper function to track current factor being tested
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+int gcd_helper(int m, int n, int current) {
+    // TODO 1: If current divides both m and n, return current
+    // if (m % current == 0 && n % current == 0)
+    //     return current
+    
+    // TODO 2: Otherwise, try next smaller value
+    // return gcd_helper(m, n, current - 1)
+}
+
+int gcd(int m, int n) {
+    return gcd_helper(m, n, n);
+}
+\end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exercise 6: LCM}
+
+\textbf{Exercise File:} Based on \texttt{recursionExercises.ipynb}
+
+\textbf{Objective:} Find lowest common multiple
+
+\textbf{Strategy:} Check multiples of first number until finding one divisible by second
+
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+int lcm_helper(int m, int n, int multiple) {
+    int candidate = m * multiple;
+    // TODO 1: If candidate divisible by n, return it
+    
+    // TODO 2: Otherwise try next multiple
+    // return lcm_helper(m, n, multiple + 1)
+}
+
+int lcm(int m, int n) {
+    return lcm_helper(m, n, 1);
+}
+\end{minted}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Real-World Application}
+
+\textbf{Swimming Pool Problem:}
+
+You add chlorine to a pool:
+\begin{itemize}
+\item First week: 750mL
+\item Every week after: 350mL
+\item 40\% evaporates each week
+\end{itemize}
+
+\pause
+
+Write recursive rule for chlorine amount each week.
+
+\pause
+
+\textbf{Solution:}
+
+$$
+c_n = \begin{cases}
+c_1 = 750 \\
+c_n = 0.6 \cdot c_{n-1} + 350
+\end{cases}
+$$
+
+\end{frame}
+
+\section{Advanced Topics}
+
+\begin{frame}
+\frametitle{Piece-wise Recursive Rules}
+
+Some sequences have different rules based on conditions:
+
+$$
+a_n = \begin{cases}
+7 & \text{if } n = 1 \\
+\frac{a_{n-1}}{2} & \text{if } a_{n-1} \text{ is even} \\
+3a_{n-1} + 1 & \text{if } a_{n-1} \text{ is odd}
+\end{cases}
+$$
+
+\pause
+
+This is the Collatz conjecture (3n+1 problem)!
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Explicit vs Recursive: Trade-offs}
+
+\textbf{Recursive Formula:}
+\begin{itemize}
+\item Shows relationship between terms
+\item Can be easier to understand pattern
+\item Must calculate all previous terms
+\end{itemize}
+
+\pause
+
+\textbf{Explicit Formula:}
+\begin{itemize}
+\item Directly calculates any term
+\item More efficient for large $n$
+\item May be harder to derive
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Helper Functions}
+
+For complex recursion, helper functions track additional state:
+
+\begin{itemize}
+\item GCD example: tracks current factor being tested
+\item LCM example: tracks current multiple being tested
+\item Allows main function to have clean interface
+\end{itemize}
+
+\pause
+
+\textbf{Pattern:}
+\begin{itemize}
+\item Main function: sets up initial call
+\item Helper function: does recursive work with extra parameters
+\end{itemize}
+
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{Key Takeaways}
+
+\textbf{Recursion is powerful but requires care:}
+
+\begin{itemize}
+\item Always include base case(s)
+\item Ensure progress toward base case
+\item Understand when recursion happens (before/after other code)
+\item Watch for stack overflow with deep recursion
+\item Test edge cases (negative numbers, zero, etc.)
+\end{itemize}
+
+\pause
+
+\vspace{1em}
+
+\textbf{Practice with both:}
+\begin{itemize}
+\item Mathematical recursive sequences
+\item C++ recursive function implementation
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Next Steps}
+
+\textbf{Complete these exercises:}
+
+\begin{enumerate}
+\item \texttt{recursiveSequences.ipynb} - Questions 1c-f, 2b/d/f, 3, 4, 7
+\item \texttt{recursionExercises.ipynb} - All 7 exercises
+\item Test your implementations thoroughly
+\item Compare recursive vs iterative solutions
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{Remember:} Every recursive problem can be solved iteratively, but recursion often provides more elegant solutions!
+
+\end{frame}
 
 \end{document}
