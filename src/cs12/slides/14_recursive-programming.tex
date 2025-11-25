@@ -20,10 +20,20 @@ By the end of this lesson, you will be able to:
 
 \begin{itemize}
 \item Define recursion and explain how it differs from iteration
+\pause
+
 \item Write recursive sequences using mathematical notation
+\pause
+
 \item Implement recursive functions in C++ with proper base cases
+\pause
+
 \item Convert between explicit and recursive formulas
+\pause
+
 \item Debug common recursive programming errors
+\pause
+
 \item Apply recursion to solve mathematical and programming problems
 \end{itemize}
 
@@ -247,7 +257,7 @@ Every recursive function needs:
 \begin{frame}[fragile]
 \frametitle{Simple Example: countDown}
 
-\textbf{Demo File:} \texttt{countDown_demo.cpp}
+\textbf{Demo File:} \texttt{countDown\_demo.cpp}
 
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
 #include <iostream>
@@ -297,7 +307,7 @@ Output: \texttt{5 4 3 2 1 0}
 \begin{frame}[fragile]
 \frametitle{Order Matters: countUp}
 
-\textbf{Demo File:} \texttt{countUp_demo.cpp}
+\textbf{Demo File:} \texttt{countUp\_demo.cpp}
 
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
 void countUp(int n) {
@@ -320,7 +330,7 @@ The recursion unwinds in reverse order!
 \begin{frame}[fragile]
 \frametitle{Triangle Numbers}
 
-\textbf{Demo File:} \texttt{triangle_demo.cpp}
+\textbf{Demo File:} \texttt{triangle\_demo.cpp}
 
 \textbf{Mathematical Definition:}
 
@@ -349,7 +359,7 @@ int triangle(int n) {
 \begin{frame}[fragile]
 \frametitle{Triangle Numbers Exercise}
 
-\textbf{Exercise File:} \texttt{triangle_demo.cpp} - \texttt{triangle()} function
+\textbf{Exercise File:} \texttt{triangle\_demo.cpp} - \texttt{triangle()} function
 
 Complete the TODOs:
 
@@ -419,7 +429,7 @@ int countDown(int n) {
 
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
 int countDown(int n) {
-    if (n $<$ 0) return 0;  // Stops recursion
+    if (n < 0) return 0;  // Stops recursion
     cout << n << " ";
     return countDown(n - 1);
 }
@@ -449,7 +459,7 @@ Each recursive call adds a layer to memory stack. Without base cases, stack runs
 
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
 int fibonacci(int n) {
-    if (n $\leq$ 1) return n;  // Base cases
+    if (n <= 1) return n;  // Base cases
     return fibonacci(n-1) + fibonacci(n-2);
 }
 \end{minted}
@@ -500,7 +510,7 @@ int countDown(int n) {
 
 \begin{minted}[fontsize=\small, frame=lines]{cpp}
 int countDown(int n) {
-    if (n $<$ 0) return 0;  // Handle edge case
+    if (n < 0) return 0;  // Handle edge case
     cout << n << " ";
     return countDown(n - 1);
 }

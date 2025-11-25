@@ -15,7 +15,7 @@
 % Learning Objectives
 \begin{frame}
 \frametitle{Learning Objectives}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Define and calculate linear momentum
 \item Understand impulse and its relationship to force
 \item Apply conservation of momentum in various scenarios
@@ -43,13 +43,8 @@
 \frametitle{Saturn V Launch Example}
 \framesubtitle{Initial Acceleration Calculation}
 
-% Placeholder image removed - insert appropriate Saturn V diagram here
-\begin{center}
-\textit{[Insert Saturn V rocket momentum diagram]}
-\end{center}
-
 \begin{block}{Saturn V Facts}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Largest and most powerful rocket ever successfully operated
 \item Used in Apollo moon missions
 \item Height: 111 meters (363 feet)
@@ -99,7 +94,7 @@ Use rocket acceleration equation:
 \begin{itemize}[<+->]
 \item Initial acceleration seems small: $2.20 \text{ m/s}^2$
 \item Acceleration increases as fuel burns because:
-    \begin{itemize}
+    \begin{itemize}[<+->]
     \item Mass ($m$) decreases
     \item Exhaust velocity ($v_e$) remains constant
     \item Fuel burn rate ($\Delta m/\Delta t$) remains constant
@@ -112,25 +107,7 @@ The seemingly small initial acceleration is sufficient because it continuously i
 \end{block}
 \end{frame}
 
-\begin{frame}{discussion time}
-    
-\end{frame}
 
-% Key Concepts - Linear Momentum
-\begin{frame}
-\frametitle{Linear Momentum}
-\begin{block}{Definition}
-Linear momentum $\vec{p} = m\vec{v}$
-\end{block}
-\begin{itemize}
-\item Vector quantity with direction same as velocity
-\item SI units: kg⋅m/s
-\item Proportional to both mass and velocity
-\end{itemize}
-\begin{equation*}
-\text{Total Momentum} = \sum_i m_i\vec{v}_i
-\end{equation*}
-\end{frame}
 
 
 
@@ -141,17 +118,18 @@ Linear momentum $\vec{p} = m\vec{v}$
 Linear momentum $\vec{p} = m\vec{v}$
 \end{block}
 
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Linear momentum is fundamentally defined as mass × velocity
 \item SI Units: kg·m/s
 \item Newton's Second Law in momentum form:
 \end{itemize}
 
+\pause
 \begin{equation*}
 \vec{F}_{\text{net}} = \frac{\Delta \vec{p}}{\Delta t}
 \end{equation*}
 
-\begin{itemize}
+\begin{itemize}[<+->]
 \item $\vec{F}_{\text{net}}$ is net external force
 \item $\Delta \vec{p}$ is change in momentum
 \item $\Delta t$ is time interval
@@ -164,11 +142,11 @@ Linear momentum $\vec{p} = m\vec{v}$
 \begin{block}{Key Equation}
 $\vec{J} = \vec{F}\Delta t = \Delta \vec{p}$
 \end{block}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Measures change in momentum
 \item Can reduce force by increasing time
 \item Applications:
-    \begin{itemize}
+    \begin{itemize}[<+->]
     \item Airbags
     \item Sports equipment
     \item Safety padding
@@ -176,7 +154,7 @@ $\vec{J} = \vec{F}\Delta t = \Delta \vec{p}$
 \end{itemize}
 \end{frame}
 \begin{frame}{Impulse Egg Drop}
-    Show impulse egg drop video
+     Impulse egg drop video
 \end{frame}
 % Section 8.2 Summary Frame
 \begin{frame}
@@ -185,12 +163,14 @@ $\vec{J} = \vec{F}\Delta t = \Delta \vec{p}$
 Impulse equals change in momentum
 \end{block}
 
+\pause
 \begin{align*}
 \vec{J} &= \vec{F}_{\text{net}}\Delta t \\
 &= \Delta \vec{p}
 \end{align*}
 
-\begin{itemize}
+\pause
+\begin{itemize}[<+->]
 \item Impulse is the product of force and time interval
 \item Forces typically vary over time
 \item Area under force-time curve equals impulse
@@ -204,11 +184,12 @@ Impulse equals change in momentum
 In an isolated system: $\vec{p}_{\text{tot}} = \text{constant}$
 \end{block}
 
-\begin{itemize}
+\pause
+\begin{itemize}[<+->]
 \item An isolated system has zero net external force
 \item $\vec{p}_{\text{initial}} = \vec{p}_{\text{final}}$
 \item Conserved in systems with:
-    \begin{itemize}
+    \begin{itemize}[<+->]
     \item No external forces
     \item During projectile motion (horizontal direction)
     \item In particle systems
@@ -216,13 +197,74 @@ In an isolated system: $\vec{p}_{\text{tot}} = \text{constant}$
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Subatomic Collisions and Momentum}
+\begin{block}{Significance}
+Conservation of momentum is critical in analyzing subatomic particle interactions.
+\end{block}
+
+\pause
+\begin{itemize}[<+->]
+\item Experimental Verification:
+    \begin{itemize}
+    \item Analyzing tracks in bubble chambers
+    \item Confirms momentum conservation even at microscopic scales
+    \end{itemize}
+\item Discovery of the Neutrino:
+    \begin{itemize}
+    \item Momentum appeared to be missing in beta decay
+    \item Pauli proposed an unseen particle (neutrino) carried the missing momentum
+    \item Later confirmed experimentally
+    \end{itemize}
+\item Quark Structure:
+    \begin{itemize}
+    \item Scattering experiments revealed proton structure
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Evidence for Quarks}
+\begin{block}{Scattering Experiments}
+Figure 8.5 illustrates how a particle scattering backward from another implies that its target is massive and dense.
+\end{block}
+
+\pause
+\begin{itemize}[<+->]
+\item Experiments seeking evidence that quarks make up protons (particles in nuclei)
+\item High-energy electrons were scattered off of protons (hydrogen nuclei)
+\item Electrons occasionally scattered straight backward
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+		\includegraphics[width=\linewidth]{pasted-images/Fig8-5_ch08_slides_momentum-09-39-41.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scattering Analysis}
+\begin{block}{Key Observation}
+A subatomic particle scatters straight backward from a target particle.
+\end{block}
+
+\pause
+\begin{itemize}[<+->]
+\item This backward scattering implies a very small and very dense particle makes up the proton
+\item This observation is considered nearly direct evidence of quarks
+\item The analysis relied on the same conservation of momentum principle that works on the large scale
+\end{itemize}
+\end{frame}
+
+
 % Sections 8.4 & 8.5 Summary Frame
 \begin{frame}
 \frametitle{8.4 & 8.5 Collisions in One Dimension}
 \begin{columns}[t]
 \begin{column}{0.48\textwidth}
 \textbf{Elastic Collisions}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Conserves kinetic energy
 \item Conserves momentum
 \item Final velocities calculable from initial conditions
@@ -231,7 +273,7 @@ In an isolated system: $\vec{p}_{\text{tot}} = \text{constant}$
 
 \begin{column}{0.48\textwidth}
 \textbf{Inelastic Collisions}
-\begin{itemize}
+\begin{itemize}[<+->]
 \item Kinetic energy not conserved
 \item Momentum conserved
 \item Perfectly inelastic: objects stick together
@@ -252,10 +294,11 @@ Sports science, safety systems, particle physics
 Break motion into perpendicular components
 \end{block}
 
-\begin{itemize}
+\pause
+\begin{itemize}[<+->]
 \item Choose x-axis parallel to incoming velocity
 \item For mass 2 initially at rest:
-    \begin{itemize}
+    \begin{itemize}[<+->]
     \item x-axis:
     \item $m_1v_1 = m_1v'_1\cos\theta_1 + m_2v'_2\cos\theta_2$
     \item y-axis:
@@ -280,16 +323,17 @@ Break motion into perpendicular components
 $a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g$
 \end{block}
 
-\begin{itemize}
+\pause
+\begin{itemize}[<+->]
 \item Based on Newton's Third Law
 \item Acceleration depends on:
-    \begin{enumerate}
+    \begin{enumerate}[<+->]
     \item Exhaust velocity ($v_e$)
     \item Fuel burn rate ($\Delta m/\Delta t$)
     \item Rocket mass ($m$)
     \end{enumerate}
 \item Greater acceleration with:
-    \begin{itemize}
+    \begin{itemize}[<+->]
     \item Higher exhaust velocity
     \item Faster fuel consumption
     \item Lower rocket mass
