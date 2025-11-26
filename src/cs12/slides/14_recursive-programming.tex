@@ -328,6 +328,89 @@ The recursion unwinds in reverse order!
 \end{frame}
 
 \begin{frame}[fragile]
+\frametitle{Visualizing countUp Execution}
+
+\scriptsize
+\begin{verbatim}
+main() calls countUp(3)
+│
+├─ countUp(3): n=3, n>=0, call countUp(2) first
+│  │
+│  ├─ countUp(2): n=2, n>=0, call countUp(1) first
+│  │  │
+│  │  ├─ countUp(1): n=1, n>=0, call countUp(0) first
+│  │  │  │
+│  │  │  ├─ countUp(0): n=0, n>=0, call countUp(-1) first
+│  │  │  │  │
+│  │  │  │  └─ countUp(-1): n<0, RETURN (base case)
+│  │  │  │
+│  │  │  └─ NOW print 0
+│  │  │
+│  │  └─ NOW print 1
+│  │
+│  └─ NOW print 2
+│
+└─ NOW print 3
+\end{verbatim}
+
+\normalsize
+\textbf{Output:} 0 1 2 3
+
+Stack unwinds from deepest call back up. Prints happen on the way OUT of recursion.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{The Call Stack: Winding and Unwinding}
+
+\begin{columns}
+\column{0.4\textwidth}
+\centering
+\textbf{The Stack} \\
+(at deepest recursion)
+\vspace{0.5em}
+
+\begin{tabular}{|c|}
+\hline
+\texttt{countUp(-1)} \\
+\hline
+\texttt{countUp(0)} \\
+\hline
+\texttt{countUp(1)} \\
+\hline
+\texttt{countUp(2)} \\
+\hline
+\texttt{countUp(3)} \\
+\hline
+\texttt{main()} \\
+\hline
+\end{tabular}
+
+\column{0.6\textwidth}
+\textbf{Execution Steps:}
+\vspace{0.5em}
+
+\scriptsize
+\begin{enumerate}
+    \item[$\downarrow$] \textbf{WINDING (Pushing)}
+    \item \texttt{countUp(3)} calls \texttt{countUp(2)}
+    \item \texttt{countUp(2)} calls \texttt{countUp(1)}
+    \item \texttt{countUp(1)} calls \texttt{countUp(0)}
+    \item \texttt{countUp(0)} calls \texttt{countUp(-1)}
+    \item \texttt{countUp(-1)} hits Base Case \& Returns
+    
+    \vspace{0.5em}
+    \item[$\uparrow$] \textbf{UNWINDING (Popping)}
+    \item \texttt{countUp(0)} resumes $\to$ \textbf{prints 0}
+    \item \texttt{countUp(1)} resumes $\to$ \textbf{prints 1}
+    \item \texttt{countUp(2)} resumes $\to$ \textbf{prints 2}
+    \item \texttt{countUp(3)} resumes $\to$ \textbf{prints 3}
+\end{enumerate}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]
 \frametitle{Triangle Numbers}
 
 \textbf{Demo File:} \texttt{triangle\_demo.cpp}
