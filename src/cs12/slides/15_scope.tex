@@ -1,263 +1,387 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{mathpazo}
-\usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage{tcolorbox}
-\usepackage{enumitem}
-\usepackage{tikz}
-\usepackage{graphicx}
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
 
-% Set page margins
-\geometry{margin=1in}
-
-% Configure fancy headers
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-\fancyhead[L]{\textit{C++ Variable Scope}}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-
-% Configure code listings
-\definecolor{codegray}{rgb}{0.95,0.95,0.95}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codecomment}{rgb}{0.5,0.5,0.5}
-\definecolor{codeblue}{rgb}{0,0,0.8}
-
-\lstset{
-    backgroundcolor=\color{codegray},
-    commentstyle=\color{codecomment},
-    keywordstyle=\color{codeblue},
-    stringstyle=\color{codegreen},
-    basicstyle=\ttfamily\small,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2,
-    frame=single,
-    language=C++
-}
-
-% Custom box styles
-\newtcolorbox{conceptbox}{
-    colback=blue!5,
-    colframe=blue!75!black,
-    fonttitle=\bfseries,
-    title=Key Concept
-}
-
-\newtcolorbox{warningbox}{
-    colback=red!5,
-    colframe=red!75!black,
-    fonttitle=\bfseries,
-    title=Common Pitfall
-}
-
-\title{\Huge{\textbf{Understanding Variable Scope in C++}}\\
-       \Large{A Comprehensive Guide with Examples}}
-\author{Mr. Gullo}
-\date{Nov, 2024}
+% Title page configuration
+\title[Variable Scope]{CS12 CH: Variable Scope}
+\subtitle{Visibility, Lifetime, and Memory Management}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Dec 04]{December 04, 2025}
 
 \begin{document}
+\frame{\titlepage}
 
-\maketitle
-\tableofcontents
-\newpage
-
-\section{Introduction to Variable Scope}
-Variable scope is a fundamental concept in C++ that determines where in your program a variable can be accessed. Understanding scope is crucial for:
+\begin{frame}
+\frametitle{Learning Objectives}
+By the end of this lesson, you will be able to:
 \begin{itemize}
-    \item Writing maintainable code
-    \item Preventing naming conflicts
-    \item Managing memory efficiently
-    \item Debugging effectively
+    \item \textbf{Define} variable scope and determine where a variable is accessible within a program.
+    \pause
+    \item \textbf{Distinguish} between Local and Global scope.
+    \pause
+    \item \textbf{Explain} the difference between Pass-by-Value (copy) and Pass-by-Reference (alias).
+    \pause
+    \item \textbf{Identify} variable shadowing and predict the output of nested scopes.
+    \pause
+    \item \textbf{Implement} functions using reference parameters to modify external variables.
+\end{itemize}
+\end{frame}
+
+% ==========================================
+% SECTION 1: BASIC SCOPE & LOCALITY
+% ==========================================
+
+\begin{frame}
+\frametitle{What is Scope?}
+\begin{block}{Definition}
+\textbf{Scope} is the region of code where a specific variable is visible and accessible.
+\end{block}
+
+\pause
+\vspace{1em}
+\textbf{Key Rules:}
+\begin{itemize}
+    \item Variables declared inside a function are \textbf{local} to that function.
+    \pause
+    \item Other functions cannot ``see'' or access these variables.
+    \pause
+    \item Local variables are destroyed when the function ends.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Scope Isolation}
+\textbf{The Concept:}
+Think of every function as a soundproof room.
+
+\pause
+\vspace{1em}
+\begin{itemize}
+    \item If you say a number inside \texttt{main()}, the function \texttt{display()} cannot hear it.
+    \pause
+    \item To share information, you must explicitly pass a note (parameter) through the door.
 \end{itemize}
 
-\section{Lesson 1: Function Scope and Variable Accessibility}
+\pause
+\vspace{1em}
 
-\begin{conceptbox}
-Variables declared inside a function are only accessible within that function unless explicitly passed to other functions.
-\end{conceptbox}
+\end{frame}
 
-\subsection{Example Code}
-\begin{lstlisting}
-void display();
+\begin{frame}
+\frametitle{Visualizing Memory Isolation}
+% Diagram representing separate memory scopes
+\begin{center}
+\begin{tikzpicture}
+    % Main Scope
+    \draw[fill=blue!10, thick] (0,0) rectangle (4,4);
+    \node[anchor=north west] at (0,4) {\textbf{Scope: main()}};
+    \node[draw, fill=white, minimum size=1cm] (A) at (2,2) {int a = 10};
+
+    % Other Function Scope
+    \draw[fill=red!10, thick] (6,0) rectangle (10,4);
+    \node[anchor=north west] at (6,4) {\textbf{Scope: display()}};
+    \node (B) at (8,2) {\textbf{?}};
+    
+    % Barrier
+    \draw[ultra thick, dashed] (5,-0.5) -- (5,4.5);
+    \node[fill=white] at (5,2) {NO ACCESS};
+
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{The Wall of Scope}
+Attempting to access a local variable from another function results in a compiler error.
+
+\begin{minted}[fontsize=\small]{cpp}
+void display() {
+    // ERROR: 'a' lives in main, not here.
+    cout << a << endl; 
+}
+
 int main() {
-    int a = 10;      // Local to main
-    display();       // Error: Can't access 'a'
+    int a = 10; // Local to main
+    display();
     return 0;
 }
-void display() {
-    cout << a;       // Error: 'a' not in scope
-}
-\end{lstlisting}
+\end{minted}
+\end{frame}
 
-\subsection{Key Points}
+% ==========================================
+% SECTION 2: PASS BY VALUE
+% ==========================================
+
+\begin{frame}
+\frametitle{Pass by Value (The Copy)}
 \begin{itemize}
-    \item Each function has its own separate scope
-    \item Variables declared in one function are invisible to others
-    \item Local variables are destroyed when the function ends
+    \item By default, C++ passes variables by \textbf{value}.
+    \pause
+    \item This means the function receives a \textbf{copy} of the data.
+    \pause
+    \item Changes to the parameter inside the function \textbf{do not} affect the original variable.
 \end{itemize}
 
-\section{Lesson 2: Pass by Value}
+\pause
+\begin{block}{Analogy}
+If you email a spreadsheet to a friend, and they change the numbers, your original file on your computer does not change. They only have a copy.
+\end{block}
+\end{frame}
 
-\begin{conceptbox}
-When passing variables by value, a copy is made, and modifications to the copy do not affect the original variable.
-\end{conceptbox}
-
-\subsection{Example Code}
-\begin{lstlisting}
-void addOne(int a) {  // 'a' is a copy
-    a++;              // Modifies copy only
-}
-int main() {
-    int a = 10;
-    addOne(a);        // Original 'a' unchanged
-    cout << a;        // Still prints 10
-}
-\end{lstlisting}
-
-\subsection{Memory Diagram}
+\begin{frame}
+\frametitle{Visualizing Pass by Value}
+% Diagram showing variable copying
 \begin{center}
 \begin{tikzpicture}
-    \draw (0,0) rectangle (2,1);
-    \draw (4,0) rectangle (6,1);
-    \node at (1,0.5) {a = 10};
-    \node at (5,0.5) {copy = 11};
-    \node[above] at (1,1) {main()};
-    \node[above] at (5,1) {addOne()};
-    \draw[->] (2.2,0.5) -- (3.8,0.5) node[midway,above] {copy};
+    % Main Scope
+    \draw[fill=blue!10] (0,0) rectangle (3,3);
+    \node at (1.5,2.5) {main()};
+    \node[draw, fill=white] (orig) at (1.5,1.5) {a = 10};
+
+    % Function Scope
+    \draw[fill=green!10] (6,0) rectangle (9,3);
+    \node at (7.5,2.5) {addOne(int x)};
+    \node[draw, fill=white] (copy) at (7.5,1.5) {x = 11};
+
+    % Arrow
+    \draw[->, ultra thick, blue] (orig) -- (copy) node[midway, above] {COPY sent};
+    
+    \node[align=center] at (4.5, -1) {Modifying \texttt{x} leaves \texttt{a} alone.};
 \end{tikzpicture}
 \end{center}
+\end{frame}
 
-\section{Lesson 3: Global Variables}
+\begin{frame}[fragile]
+\frametitle{Exercise 1: Independence (Pass by Value)}
+\textbf{Exercise File:} \texttt{scope\_01.cpp}
 
-\begin{warningbox}
-Global variables are accessible throughout the program but should be used sparingly as they can make code harder to maintain and debug.
-\end{warningbox}
+\pause
+\textbf{Objective:} Observe that modifying a parameter does not change the argument in main.
 
-\subsection{Example Code}
-\begin{lstlisting}
-int a = 10;          // Global variable
-void addOne() {
-    a++;             // Modifies global 'a'
-}
+\pause
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+// TODO 1: Create a function 'addOne' that accepts an integer
+// TODO 2: Inside the function, increment the integer and print it
+
 int main() {
-    cout << a;       // Accesses global 'a'
-    addOne();
-    cout << a;       // Shows modified value
-}
-\end{lstlisting}
+    int a = 10;
+    cout << "Before: " << a << endl;
 
-\subsection{Problems with Global Variables}
-\begin{itemize}[label=$\times$]
-    \item Make code harder to understand
-    \item Create hidden dependencies
-    \item Make testing difficult
-    \item Can cause naming conflicts
+    // TODO 3: Call addOne(a);
+
+    // TODO 4: Print 'a' again. Did it change?
+    cout << "After: " << a << endl;
+
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+% ==========================================
+% SECTION 3: GLOBAL VARIABLES
+% ==========================================
+
+\begin{frame}
+\frametitle{Global Variables}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{itemize}
+    \item Declared \textbf{outside} of any function (usually at the top).
+    \pause
+    \item Accessible by \textbf{every} function in the file.
+    \pause
+    \item \alert{\textbf{Warning:}} Generally considered bad practice!
+    \pause
+    \begin{itemize}
+        \item Hard to debug (who changed it?).
+        \pause
+        \item Creates hidden dependencies.
+    \end{itemize}
 \end{itemize}
 
-\section{Lesson 4: Pass by Reference}
+\column{0.4\textwidth}
+\pause
+\alert{[Imagine: A public whiteboard in a hallway. Anyone can write on it or erase it, leading to chaos.]}
+\end{columns}
+\end{frame}
 
-\begin{conceptbox}
-Pass by reference allows functions to modify original variables by passing their memory address rather than making a copy.
-\end{conceptbox}
+\begin{frame}[fragile]
+\frametitle{Exercise 2: Global Chaos}
+\textbf{Exercise File:} \texttt{scope\_03.cpp}
 
-\subsection{Example Code}
-\begin{lstlisting}
-void addOne(int& a) { // Reference parameter
-    a++;              // Modifies original
+\pause
+\textbf{Objective:} Demonstrate side effects of global variables.
+
+\pause
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+// TODO 1: Declare a global integer 'g' initialized to 10
+
+void messyFunction() {
+    // TODO 2: Increment global 'g' inside this function
 }
+
 int main() {
-    int a = 10;
-    addOne(a);        // 'a' will be modified
-    cout << a;        // Prints 11
-}
-\end{lstlisting}
+    cout << "Start: " << g << endl;
 
-\subsection{Memory Diagram}
+    messyFunction();
+
+    // TODO 3: Verify 'g' changed without being passed as a parameter
+    cout << "End: " << g << endl;
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+% ==========================================
+% SECTION 4: PASS BY REFERENCE
+% ==========================================
+
+\begin{frame}
+\frametitle{Pass by Reference}
+Sometimes we \textbf{want} to modify the original variable.
+\pause
+\begin{itemize}
+    \item We use the ampersand operator: \texttt{\&}
+    \pause
+    \item \texttt{void functionName(int \&param)}
+    \pause
+    \item This passes the \textbf{address} (reference) of the variable, not a copy.
+    \pause
+    \item The parameter becomes an \textbf{alias} for the original variable.
+\end{itemize}
+
+\pause
+\begin{block}{Analogy}
+Giving someone the Key to your P.O. Box. They are accessing the \textbf{same} box you access.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualizing Pass by Reference}
+% Diagram showing shared memory access
 \begin{center}
 \begin{tikzpicture}
-    \draw (0,0) rectangle (2,1);
-    \draw[dashed] (4,0) rectangle (6,1);
-    \node at (1,0.5) {a = 11};
-    \node at (5,0.5) {reference};
-    \node[above] at (1,1) {main()};
-    \node[above] at (5,1) {addOne()};
-    \draw[->] (4.2,0.5) -- (2,0.5) node[midway,above] {refers to};
+    % Main Scope
+    \draw[fill=blue!10] (0,0) rectangle (3,3);
+    \node at (1.5,2.5) {main()};
+    \node (labelMain) at (1.5,1) {var 'a'};
+
+    % Function Scope
+    \draw[fill=green!10] (6,0) rectangle (9,3);
+    \node at (7.5,2.5) {addOne(int \&ref)};
+    \node (labelFunc) at (7.5,1) {param 'ref'};
+
+    % Shared Memory
+    \node[draw, fill=yellow, circle, minimum size=1.5cm, align=center] (mem) at (4.5, -1.5) {Memory\\Address\\0x4F};
+    
+    % Arrows
+    \draw[->, thick] (labelMain) -- (mem);
+    \draw[->, thick] (labelFunc) -- (mem);
+    
+    \node[align=center, font=\small] at (4.5, -3) {Two names for the SAME memory location.};
 \end{tikzpicture}
 \end{center}
+\end{frame}
 
-\section{Lesson 5: Variable Shadowing}
+\begin{frame}[fragile]
+\frametitle{Exercise 3: True Modification}
+\textbf{Exercise File:} \texttt{scope\_04.cpp}
 
-\begin{warningbox}
-Variable shadowing occurs when a variable in an inner scope has the same name as a variable in an outer scope, hiding the outer variable.
-\end{warningbox}
+\pause
+\textbf{Objective:} Use pass-by-reference to modify the original variable.
 
-\subsection{Example Code}
-\begin{lstlisting}
-int a = 1;           // Global a
+\pause
+\begin{minted}[fontsize=\scriptsize, frame=lines, linenos]{cpp}
+#include <iostream>
+using namespace std;
+
+// TODO 1: Change parameter to use '&' (int &val)
+void trueModifier(int val) {
+    val = val + 100;
+    cout << "Inside: " << val << endl;
+}
+
 int main() {
-    int a = 2;       // Shadows global a
-    if(true) {
-        int a = 3;   // Shadows main's a
+    int x = 50;
+    cout << "Before: " << x << endl;
+
+    trueModifier(x);
+
+    // TODO 2: Confirm x is now 150, not 50
+    cout << "After: " << x << endl;
+    return 0;
+}
+\end{minted}
+\end{frame}
+
+% ==========================================
+% SECTION 5: SHADOWING
+% ==========================================
+
+\begin{frame}
+\frametitle{Variable Shadowing}
+\textbf{Shadowing} occurs when a variable in an inner scope has the same name as a variable in an outer scope.
+
+\pause
+\vspace{1em}
+\begin{itemize}
+    \item The \textbf{innermost} definition wins.
+    \pause
+    \item The outer variable is temporarily ``hidden'' or shadowed.
+    \pause
+    \item This creates confusion and should be avoided in production code.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Shadowing Puzzle}
+\textbf{Predict the output:}
+
+\pause
+\begin{minted}[fontsize=\small]{cpp}
+int x = 100; // Global
+
+int main() {
+    int x = 50; // Shadows Global
+
+    if (x > 0) {
+        int x = 10; // Shadows main's x
+        cout << x << endl; // Prints 10
     }
-    cout << a;       // Prints 2
+
+    cout << x << endl; // Prints 50
+    return 0;
 }
-\end{lstlisting}
+\end{minted}
+\end{frame}
 
-\subsection{Scope Hierarchy}
-\begin{center}
-\begin{tikzpicture}[
-    level distance=1.5cm,
-    level 1/.style={sibling distance=4cm},
-    level 2/.style={sibling distance=2cm}
-]
-    \node {Global Scope (a=1)}
-        child {node {Function Scope (a=2)}
-            child {node {Block Scope (a=3)}}
-            child {node {Block Scope (a=4)}}
-        };
-\end{tikzpicture}
-\end{center}
+% ==========================================
+% SUMMARY
+% ==========================================
 
-\section{Best Practices}
-
+\begin{frame}
+\frametitle{Lesson Summary}
 \begin{itemize}
-    \item Use meaningful variable names
-    \item Keep variables in the smallest needed scope
-    \item Avoid global variables when possible
-    \item Use pass by reference for large objects
-    \item Avoid variable shadowing
-    \item Document scope decisions in complex scenarios
+    \item \textbf{Scope}: Where a variable lives.
+    \pause
+    \item \textbf{Local Variables}: Only exist inside their specific function (Safe).
+    \pause
+    \item \textbf{Global Variables}: Accessible everywhere (Unsafe/Messy).
+    \pause
+    \item \textbf{Pass by Value}: Functions get a \textbf{copy}. Original is safe. (Default for primitives).
+    \pause
+    \item \textbf{Pass by Reference}: Functions get an \textbf{alias} via \texttt{\&}. Original changes.
 \end{itemize}
 
-\section{Practice Exercises}
-
-\begin{enumerate}
-    \item Identify scope issues in given code samples
-    \item Convert pass by value to pass by reference
-    \item Refactor code to eliminate global variables
-    \item Debug scope-related problems
-    \item Write functions with proper variable scope
-\end{enumerate}
-
-\begin{tcolorbox}[title=Summary]
-Understanding variable scope is crucial for writing maintainable and bug-free C++ code. Remember:
-\begin{itemize}
-    \item Local variables are only accessible in their function
-    \item Pass by value creates copies
-    \item Global variables should be used sparingly
-    \item Pass by reference allows modification of original variables
-    \item Avoid variable shadowing
-\end{itemize}
-\end{tcolorbox}
+\pause
+\vspace{1em}
+\textbf{Rule of Thumb:} Always prefer local variables and pass them as parameters. Use references only when you intend to modify the data.
+\end{frame}
 
 \end{document}
