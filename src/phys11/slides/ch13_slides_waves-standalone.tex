@@ -1,0 +1,694 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../../latex-beamer/shared/templates/ds9_theme}
+
+% Title page configuration
+\title[Waves and Properties]{PHYS12 CH:13.1-13.3}
+\subtitle{Waves and Their Properties}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Dec 2025]{December 2025}
+
+\begin{document}
+\frame{\titlepage}
+
+% Outline
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction to Waves}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+By the end of this lesson, you will be able to:
+\begin{itemize}
+\item Distinguish transverse from longitudinal waves \pause
+\item Identify mechanical vs electromagnetic waves \pause
+\item Calculate wave speed using $v = f\lambda$ \pause
+\item Relate period and frequency: $T = 1/f$ \pause
+\item Explain the superposition principle \pause
+\item Differentiate constructive and destructive interference \pause
+\item Describe how standing waves form
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Physics 11 to Physics 12 Progression}
+\textbf{Physics 11 Foundation:}
+\begin{itemize}
+\item Basic wave terminology (crest, trough, wavelength)
+\item Simple harmonic motion concepts
+\item Qualitative wave descriptions
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Physics 12 Extension:}
+\begin{itemize}
+\item Mathematical relationships between wave properties
+\item Quantitative problem solving with $v = f\lambda$
+\item Interference patterns and standing waves
+\item Applications: earthquakes, acoustics, optics
+\end{itemize}
+\end{frame}
+
+\section{Types of Waves}
+
+\begin{frame}
+\frametitle{What is a Wave?}
+\textbf{Key Insight:} Waves transfer \textbf{energy} without transferring \textbf{matter}.
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Example:} Water waves
+\begin{itemize}
+\item A seagull bobs up and down as waves pass
+\item The bird does NOT move horizontally with the wave
+\item Only energy travels across the water surface
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+A \textbf{disturbance} is an oscillation produced by energy that creates a wave.
+\end{frame}
+
+\begin{frame}
+\frametitle{Mechanical vs Electromagnetic Waves}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Mechanical Waves}
+\begin{itemize}
+\item Require a medium (solid, liquid, gas)
+\item Examples: sound, water waves, seismic waves
+\item Cannot travel through vacuum
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Electromagnetic Waves}
+\begin{itemize}
+\item Do NOT require a medium
+\item Examples: light, radio, X-rays
+\item Can travel through vacuum (space)
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.5cm}
+
+\alert{Why can light travel through space but sound cannot?}\\
+Sound is mechanical; light is electromagnetic.
+\end{frame}
+
+\begin{frame}
+\frametitle{Transverse Waves}
+\textbf{Definition:} Particle motion is \textbf{perpendicular} to wave direction.
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{[Diagram: Transverse Wave]}
+Show a wave moving horizontally (right) with particles oscillating vertically (up/down).
+\begin{itemize}
+\item Arrow showing wave propagation direction $\rightarrow$
+\item Arrows showing particle motion $\uparrow \downarrow$
+\item Label: crest (highest point), trough (lowest point)
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Examples:}
+\begin{itemize}
+\item Light waves (E and B fields oscillate perpendicular to travel)
+\item S-waves (seismic shear waves)
+\item Waves on a string
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Longitudinal Waves}
+\textbf{Definition:} Particle motion is \textbf{parallel} to wave direction.
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{[Diagram: Longitudinal Wave]}
+Show a spring or air column with:
+\begin{itemize}
+\item Compressions: regions where particles are close together
+\item Rarefactions: regions where particles are spread apart
+\item Wave direction arrow parallel to particle oscillation
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Examples:}
+\begin{itemize}
+\item Sound waves in air (density variations)
+\item P-waves (seismic pressure waves)
+\item Compression waves in a slinky
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Seismic Waves: A Special Case}
+Earthquakes produce both types of waves:
+
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{P-waves (Primary)}
+\begin{itemize}
+\item Longitudinal (compression)
+\item Travel through solids AND liquids
+\item Faster: arrive first
+\item Typically 6 km/s
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{S-waves (Secondary)}
+\begin{itemize}
+\item Transverse (shear)
+\item Travel through solids ONLY
+\item Slower: arrive second
+\item Typically 2 km/s
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.5cm}
+
+\alert{Fun Fact:} S-waves cannot travel through Earth's liquid outer core. This is how scientists discovered the core is liquid!
+\end{frame}
+
+\section{Wave Properties}
+
+\begin{frame}
+\frametitle{Wave Anatomy}
+\begin{alertblock}{[Diagram: Labeled Wave]}
+A sinusoidal wave with labels:
+\begin{itemize}
+\item Crest: highest point
+\item Trough: lowest point
+\item Amplitude (A): equilibrium to crest distance
+\item Wavelength ($\lambda$): crest-to-crest distance
+\item Equilibrium position: horizontal center line
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Important:} Wave height = $2A$ (trough to crest)
+
+If amplitude = 1 m, wave height = 2 m.
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Wave Properties}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Wavelength} ($\lambda$)
+\begin{itemize}
+\item Distance for one complete cycle
+\item Measured: crest to crest
+\item Units: meters (m)
+\end{itemize}
+
+\pause
+\textbf{Amplitude} (A)
+\begin{itemize}
+\item Maximum displacement from equilibrium
+\item Related to energy
+\item Units: meters (m)
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Frequency} ($f$)
+\begin{itemize}
+\item Cycles per second
+\item Units: Hertz (Hz = 1/s)
+\end{itemize}
+
+\pause
+\textbf{Period} ($T$)
+\begin{itemize}
+\item Time for one complete cycle
+\item Units: seconds (s)
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.5cm}
+
+\boxed{T = \frac{1}{f} \quad \text{or} \quad f = \frac{1}{T}}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Wave Equation}
+The speed of a wave relates wavelength and frequency:
+
+\pause
+\vspace{0.3cm}
+
+\begin{center}
+\Huge
+$\boxed{v = f\lambda}$
+\end{center}
+
+\pause
+\vspace{0.3cm}
+
+Also written as: $v = \frac{\lambda}{T}$
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Key Points:}
+\begin{itemize}
+\item Wave speed depends on the \textbf{medium properties} (stiffness, density)
+\item Amplitude does NOT affect wave speed
+\item For a fixed medium: if $f$ increases, $\lambda$ must decrease
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Speaker Design: Woofers and Tweeters}
+Why do quality speakers have multiple drivers?
+
+\pause
+\vspace{0.3cm}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Woofer} (large)
+\begin{itemize}
+\item Low frequency sounds
+\item Long wavelengths
+\item Bass notes
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Tweeter} (small)
+\begin{itemize}
+\item High frequency sounds
+\item Short wavelengths
+\item Treble notes
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.5cm}
+
+The driver size matches the wavelength it reproduces best.
+
+Human hearing: 20 Hz to 20,000 Hz
+\end{frame}
+
+\section{Wave Interactions}
+
+\begin{frame}
+\frametitle{The Superposition Principle}
+When two waves meet, their \textbf{displacements add algebraically}.
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{[Diagram: Superposition]}
+Show two waves approaching, overlapping, and passing through each other.
+\begin{itemize}
+\item Before: two separate pulses
+\item During: combined amplitude
+\item After: original pulses continue unchanged
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+The waves pass through each other unchanged after interaction.
+
+Only the \textbf{amplitude} is affected during overlap.
+\end{frame}
+
+\begin{frame}
+\frametitle{Constructive Interference}
+Occurs when waves are \textbf{in phase} (crests align with crests).
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{[Diagram: Constructive Interference]}
+Two identical waves in phase:
+\begin{itemize}
+\item Wave 1: amplitude = A
+\item Wave 2: amplitude = A
+\item Resultant: amplitude = 2A
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Result:} Larger amplitude (louder sound, brighter light)
+
+\textbf{Example:} Sound is louder in certain spots in a room.
+\end{frame}
+
+\begin{frame}
+\frametitle{Destructive Interference}
+Occurs when waves are \textbf{out of phase} (crests align with troughs).
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{[Diagram: Destructive Interference]}
+Two identical waves, 180° out of phase:
+\begin{itemize}
+\item Wave 1: amplitude = +A
+\item Wave 2: amplitude = -A
+\item Resultant: amplitude = 0
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Result:} Smaller or zero amplitude (quiet zones)
+
+\textbf{Application:} Noise-canceling headphones produce waves 180° out of phase with ambient noise!
+\end{frame}
+
+\begin{frame}
+\frametitle{Standing Waves}
+Form when identical waves travel in \textbf{opposite directions}.
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{[Diagram: Standing Wave on String]}
+Show a vibrating string with:
+\begin{itemize}
+\item Nodes: points of zero displacement (no motion)
+\item Antinodes: points of maximum displacement
+\item Fixed ends of string
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Examples:}
+\begin{itemize}
+\item Guitar strings
+\item Organ pipes
+\item Resonance in bridges
+\end{itemize}
+
+Standing wave frequency depends on wave speed and string length.
+\end{frame}
+
+\begin{frame}
+\frametitle{Refraction}
+Waves change direction when entering a medium of different density.
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Why it happens:}
+\begin{itemize}
+\item Wave speed changes with medium density
+\item Part of wave slows down before the rest
+\item This causes the wave to bend
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Examples:}
+\begin{itemize}
+\item Light bending through glass/water (distorted objects)
+\item Water waves at shallow/deep boundary
+\item Fiber optic cables use internal refraction
+\end{itemize}
+
+Waves travel faster in less dense media (if stiffness is same).
+\end{frame}
+
+\section{Practice Problems}
+
+\begin{frame}
+\frametitle{I Do: Seagull Bobbing Problem}
+\textbf{Problem (Ch. 13, Q25):}\\
+A seagull sitting in water bobs up and down once every 2 s. The distance between two crests is 3 m. What is the wave velocity?
+
+\pause
+\vspace{0.5cm}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item $T = 2$ s (period: bobs once every 2 s)
+\item $\lambda = 3$ m (crest-to-crest distance)
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $v = ?$ (wave velocity)
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Equation Selection}
+\textbf{E - Equation}
+
+\pause
+\vspace{0.3cm}
+
+We need to relate velocity, period, and wavelength.
+
+\pause
+\vspace{0.3cm}
+
+Start with: $v = f\lambda$
+
+\pause
+\vspace{0.3cm}
+
+Since $f = \frac{1}{T}$, substitute:
+
+\pause
+\vspace{0.3cm}
+
+$$v = \frac{\lambda}{T}$$
+
+\pause
+\vspace{0.3cm}
+
+No rearrangement needed; $v$ is already isolated.
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Substitute and Solve}
+\textbf{S - Substitute}
+\begin{itemize}
+\item $v = \frac{\lambda}{T} = \frac{3 \text{ m}}{2 \text{ s}}$
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $v = 1.5$ m/s
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+$$\boxed{v = 1.5 \text{ m/s}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Check:} Units work out (m/s). Reasonable speed for water waves.
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Boat in Waves}
+\textbf{Problem (Ch. 13, Q26):}\\
+A boat in the trough of a wave takes 3 s to reach the highest point. The wave velocity is 5 m/s. What is the wavelength?
+
+\pause
+\vspace{0.5cm}
+
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{G - Givens}
+\begin{itemize}
+\item Time trough to crest = 3 s
+\item $v = 5$ m/s
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{U - Unknown}
+\begin{itemize}
+\item $\lambda = ?$
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.5cm}
+
+\alert{Hint:} Trough to crest is only HALF a cycle. What is the full period?
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Equation and Setup}
+\textbf{E - Equation}
+
+\pause
+\vspace{0.3cm}
+
+First, find period: $T = 2 \times 3 \text{ s} = 6 \text{ s}$
+
+\pause
+\vspace{0.3cm}
+
+Then find frequency: $f = \frac{1}{T} = \frac{1}{6}$ Hz
+
+\pause
+\vspace{0.3cm}
+
+Use wave equation: $v = f\lambda$
+
+\pause
+\vspace{0.3cm}
+
+Rearrange for $\lambda$: 
+$$\lambda = \frac{v}{f}$$
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Substitute and Solve}
+\textbf{S - Substitute}
+\begin{itemize}
+\item $\lambda = \frac{v}{f} = \frac{5 \text{ m/s}}{(1/6) \text{ Hz}}$
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{S - Solve}
+\begin{itemize}
+\item $\lambda = 5 \times 6 = 30$ m
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+$$\boxed{\lambda = 30 \text{ m}}$$
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Earthquake Distance}
+\textbf{Problem (Ch. 13, Q68):}\\
+The time difference between a 2 km/s S-wave and a 6 km/s P-wave recorded at a certain point is 10 s. How far is the epicenter from that point?
+
+\vspace{0.5cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item S-wave speed: $v_S = 2$ km/s
+\item P-wave speed: $v_P = 6$ km/s
+\item Time difference: $\Delta t = 10$ s
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Find:} Distance $D$ to epicenter
+
+\vspace{0.5cm}
+
+\textbf{Hint:} Both waves travel the same distance. Set up equations for the time each takes, then use the time difference.
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{Reading Assignment}
+\textbf{For next class, read and review:}
+\begin{itemize}
+\item Detailed seismic wave analysis (Earth structure mapping)
+\item Fiber optic cable applications (total internal reflection)
+\item Performance Task: Wave tank experiments (Q27)
+\item Extended response questions 63-72
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Practice Problems:}
+\begin{itemize}
+\item Complete "You Do" earthquake problem
+\item Problems 25-26, 32-42 from Chapter Review
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Chapter 13 Summary}
+\textbf{Key Takeaways:}
+
+\pause
+\begin{enumerate}
+\item Waves transfer \textbf{energy}, not matter \pause
+\item Mechanical waves need a medium; EM waves do not \pause
+\item Transverse: motion $\perp$ to propagation\\
+      Longitudinal: motion $\parallel$ to propagation \pause
+\item Wave equation: $v = f\lambda = \frac{\lambda}{T}$ \pause
+\item Wave speed depends on \textbf{medium}, not amplitude \pause
+\item Superposition: displacements add algebraically \pause
+\item Constructive = in phase; Destructive = out of phase \pause
+\item Standing waves: opposite-traveling waves create nodes and antinodes
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Inquiry Questions}
+\textbf{Think about these for discussion:}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item What factors affect wave behaviors? \pause
+\item How would you investigate relationships between wave properties and medium properties? \pause
+\item How can you determine which harmonics are audible in different musical instruments?
+\end{itemize}
+
+\vspace{0.5cm}
+
+\pause
+\textbf{Real-world connections:}
+\begin{itemize}
+\item Why can damage be worse far from an earthquake epicenter?
+\item How do noise-canceling headphones work?
+\item Why do objects look bent in water?
+\end{itemize}
+\end{frame}
+
+\end{document}

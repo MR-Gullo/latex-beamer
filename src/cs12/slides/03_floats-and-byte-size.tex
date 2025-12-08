@@ -42,6 +42,29 @@
 \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{The Float Literal Suffix: \texttt{f}}
+\begin{itemize}
+    \item By default, decimal numbers like \texttt{3.14} are treated as \texttt{double} (8 bytes), not \texttt{float} (4 bytes).
+    \item To explicitly create a \texttt{float} literal, append the \texttt{f} suffix.
+\end{itemize}
+\begin{block}{Syntax Examples}
+\begin{minted}[fontsize=\small, frame=lines]{cpp}
+float pi = 3.14159f;    // Explicitly a float literal
+float price = 2.0f;     // 2.0f is a float, 2.0 would be a double
+double bigPi = 3.14159; // No suffix = double by default
+\end{minted}
+\end{block}
+\pause
+\begin{alertblock}{Why Does This Matter?}
+\begin{itemize}
+    \item Avoids implicit type conversion from \texttt{double} to \texttt{float}.
+    \item Some compilers warn about precision loss without the \texttt{f} suffix.
+    \item Good habit for writing clear, intentional code.
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
 \begin{frame}
 \frametitle{Essential Equations: Integer vs. Float Division}
 The data type of your numbers dictates the type of division C++ performs.
