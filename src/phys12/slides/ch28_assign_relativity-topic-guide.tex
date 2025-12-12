@@ -1,0 +1,881 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Special Relativity Topics}
+\lhead{Physics 12}
+\cfoot{\thepage}
+
+\title{\textbf{Special Relativity Song Project\\Topic Guide \& Calculations}}
+\author{Physics 12}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Universal Formulas}
+
+All topics will use these fundamental formulas from special relativity. Include these in your write-up as needed.
+
+\subsection{Lorentz Factor}
+\begin{equation}
+\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+
+The Lorentz factor quantifies relativistic effects. When $v \ll c$, $\gamma \approx 1$ (classical physics). As $v \to c$, $\gamma \to \infty$.
+
+\subsection{Time Dilation}
+\begin{equation}
+\Delta t = \gamma \Delta t_0
+\end{equation}
+where:
+\begin{itemize}[noitemsep]
+    \item $\Delta t_0$ = proper time (time measured in rest frame of the clock)
+    \item $\Delta t$ = time measured by observer moving relative to the clock
+\end{itemize}
+
+\textbf{Key concept:} Moving clocks run slow. The observer moving with the clock measures the shortest time interval (proper time).
+
+\subsection{Length Contraction}
+\begin{equation}
+L = \frac{L_0}{\gamma}
+\end{equation}
+where:
+\begin{itemize}[noitemsep]
+    \item $L_0$ = proper length (length measured in rest frame of object)
+    \item $L$ = length measured by observer moving relative to object
+\end{itemize}
+
+\textbf{Key concept:} Moving objects are contracted along the direction of motion. An observer at rest with the object measures the longest length (proper length).
+
+\subsection{Relativistic Velocity Addition}
+\begin{equation}
+u = \frac{v + u'}{1 + \frac{vu'}{c^2}}
+\end{equation}
+where:
+\begin{itemize}[noitemsep]
+    \item $v$ = velocity of object A relative to observer
+    \item $u'$ = velocity of object B relative to object A
+    \item $u$ = velocity of object B relative to observer
+\end{itemize}
+
+\textbf{Key concept:} Velocities don't add simply at relativistic speeds. This formula ensures no combination of velocities can exceed $c$.
+
+\subsection{Relativity of Simultaneity}
+\begin{equation}
+\Delta t' = \frac{\gamma v \Delta x}{c^2}
+\end{equation}
+where:
+\begin{itemize}[noitemsep]
+    \item $\Delta x$ = spatial separation between two events (in the frame where they're simultaneous)
+    \item $\Delta t'$ = time difference between the same events in a frame moving with velocity $v$
+\end{itemize}
+
+\textbf{Key concept:} Events simultaneous in one frame are not simultaneous in another frame moving relative to it.
+
+\subsection{Constants}
+\begin{itemize}[noitemsep]
+    \item Speed of light: $c = 3.00 \times 10^8$ m/s
+    \item 1 light-year (ly) = $9.46 \times 10^{15}$ m
+    \item Earth's orbital velocity $\approx 30$ km/s = $3.0 \times 10^4$ m/s
+\end{itemize}
+
+\newpage
+
+\section{Topic 1: The Twin Paradox}
+
+\subsection{The Scenario}
+
+\textbf{Characters for your song:} Twin A (stays on Earth) and Twin B (travels to Alpha Centauri and back)
+
+Twin B boards a spaceship and travels to Alpha Centauri, 4.3 light-years away, at a speed of $v = 0.90c$. Upon reaching Alpha Centauri, Twin B immediately turns around and returns to Earth at the same speed.
+
+\subsection{The Apparent Paradox}
+
+\begin{itemize}[noitemsep]
+    \item Twin A's perspective: ``Twin B is moving relative to me at $0.90c$. Time dilation means Twin B's clock runs slow. When Twin B returns, Twin B will be younger than me.''
+    \item Twin B's perspective: ``I'm at rest in my spaceship. Twin A and Earth are moving away from me at $0.90c$. Time dilation means Twin A's clock runs slow. When I return, Twin A should be younger than me.''
+    \item The paradox: Both twins can't be younger than each other! Who is actually younger when they reunite?
+\end{itemize}
+
+\subsection{The Resolution}
+
+The situation is \textbf{not symmetric}. Twin A remains in an inertial (non-accelerating) reference frame the entire time. Twin B must accelerate to turn around at Alpha Centauri, breaking the symmetry. During the acceleration, Twin B switches reference frames, which is what breaks the apparent paradox.
+
+The resolution: \textbf{Twin B is actually younger} when they reunite. Time dilation is real, and the traveling twin experiences less proper time.
+
+\subsection{Key Physics Concepts}
+\begin{itemize}[noitemsep]
+    \item Proper time vs. coordinate time
+    \item Time dilation effects
+    \item The role of acceleration in breaking symmetry
+    \item Inertial vs. non-inertial reference frames
+\end{itemize}
+
+\subsection{Required Calculations}
+
+You must show these calculations in your video and explain them in your write-up:
+
+\subsubsection{Calculation 1: Lorentz Factor}
+\begin{align}
+\gamma &= \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-\frac{(0.90c)^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-0.81}} \\
+&= \frac{1}{\sqrt{0.19}} \\
+&= \frac{1}{0.436} \\
+\gamma &= 2.29
+\end{align}
+
+\subsubsection{Calculation 2: Earth Time for One-Way Journey}
+\begin{align}
+\Delta t &= \frac{d}{v} \\
+&= \frac{4.3 \text{ ly}}{0.90c} \\
+&= \frac{4.3 \text{ ly}}{0.90c} \times \frac{1 \text{ year}}{1 \text{ ly}/c} \\
+\Delta t &= 4.78 \text{ years}
+\end{align}
+
+\subsubsection{Calculation 3: Total Earth Time (Round Trip)}
+\begin{equation}
+\Delta t_{\text{total}} = 2 \times 4.78 \text{ years} = 9.56 \text{ years}
+\end{equation}
+
+\subsubsection{Calculation 4: Twin B's Proper Time (One Way)}
+\begin{align}
+\Delta t_0 &= \frac{\Delta t}{\gamma} \\
+&= \frac{4.78 \text{ years}}{2.29} \\
+\Delta t_0 &= 2.09 \text{ years}
+\end{align}
+
+\subsubsection{Calculation 5: Twin B's Total Proper Time}
+\begin{equation}
+\Delta t_{0,\text{total}} = 2 \times 2.09 \text{ years} = 4.18 \text{ years}
+\end{equation}
+
+\subsubsection{Calculation 6: Age Difference}
+\begin{align}
+\Delta(\text{age}) &= \Delta t_{\text{total}} - \Delta t_{0,\text{total}} \\
+&= 9.56 \text{ years} - 4.18 \text{ years} \\
+\Delta(\text{age}) &= 5.38 \text{ years}
+\end{align}
+
+\textbf{Result:} Twin B is 5.38 years younger than Twin A when they reunite.
+
+\subsection{Real-World Applications}
+\begin{itemize}[noitemsep]
+    \item GPS satellites experience time dilation (though at much lower speeds)
+    \item Atomic clocks on airplanes run at different rates than ground clocks
+    \item Particle accelerators: unstable particles live longer when moving at high speeds
+    \item Proposed interstellar travel: astronauts would age less than people on Earth
+\end{itemize}
+
+\subsection{Song Ideas}
+\begin{itemize}[noitemsep]
+    \item Emotional ballad from perspective of twin left behind
+    \item Upbeat travel song from perspective of traveling twin
+    \item Duet showing both perspectives
+    \item Narrative song telling the whole story with a twist ending (who's younger?)
+\end{itemize}
+
+\newpage
+
+\section{Topic 2: The Michelson-Morley Experiment}
+
+\subsection{The Scenario}
+
+\textbf{Characters for your song:} Pre-1905 physicist (believes in the luminiferous ether) and Post-1905 physicist (accepts Einstein's relativity)
+
+In the late 1800s, physicists believed light waves must travel through a medium called the ``luminiferous ether.'' The Michelson-Morley experiment was designed to detect Earth's motion through this ether by measuring the speed of light in different directions. The shocking result: no difference was detected.
+
+\subsection{The Apparent Paradox}
+
+\begin{itemize}[noitemsep]
+    \item Expectation: Earth moves through space at $\sim$30 km/s (orbital velocity). Light traveling parallel to Earth's motion should travel at different speeds ($c+v$ and $c-v$) compared to light traveling perpendicular to Earth's motion.
+    \item Prediction: An interferometer with perpendicular arms should detect a fringe shift due to this difference.
+    \item Observation: \textbf{No fringe shift detected!} Light traveled at the same speed in all directions.
+    \item The paradox: How can light travel at the same speed in all directions if Earth is moving through the ether?
+\end{itemize}
+
+\subsection{The Resolution}
+
+Einstein's second postulate: \textbf{The speed of light is constant in all inertial reference frames.} There is no ether. Instead:
+\begin{itemize}[noitemsep]
+    \item Time dilation causes clocks to run at different rates
+    \item Length contraction causes distances to contract along the direction of motion
+    \item These effects exactly cancel out so that all observers measure the same speed of light
+\end{itemize}
+
+\subsection{Key Physics Concepts}
+\begin{itemize}[noitemsep]
+    \item The ether theory and why it was believed
+    \item How interferometers work
+    \item Einstein's postulates of special relativity
+    \item Experimental basis for relativity theory
+    \item The principle that light speed is independent of source/observer motion
+\end{itemize}
+
+\subsection{Required Calculations}
+
+\subsubsection{Calculation 1: Classical Prediction -- Time Parallel to Motion}
+
+Light travels forward (against ether wind):
+\begin{equation}
+t_{\text{forward}} = \frac{L}{c-v}
+\end{equation}
+
+Light travels backward (with ether wind):
+\begin{equation}
+t_{\text{backward}} = \frac{L}{c+v}
+\end{equation}
+
+Total time parallel:
+\begin{align}
+t_{\parallel} &= t_{\text{forward}} + t_{\text{backward}} \\
+&= \frac{L}{c-v} + \frac{L}{c+v} \\
+&= L\left(\frac{c+v+c-v}{(c-v)(c+v)}\right) \\
+&= L\left(\frac{2c}{c^2-v^2}\right) \\
+t_{\parallel} &= \frac{2Lc}{c^2-v^2}
+\end{align}
+
+\subsubsection{Calculation 2: Classical Prediction -- Time Perpendicular to Motion}
+
+Light must travel diagonally (like a swimmer crossing a river). Using Pythagorean theorem:
+
+In time $t_{\perp}/2$, light travels distance $c(t_{\perp}/2)$ while Earth moves $v(t_{\perp}/2)$:
+\begin{align}
+\left[c\frac{t_{\perp}}{2}\right]^2 &= L^2 + \left[v\frac{t_{\perp}}{2}\right]^2 \\
+\frac{c^2 t_{\perp}^2}{4} &= L^2 + \frac{v^2 t_{\perp}^2}{4} \\
+\frac{t_{\perp}^2}{4}(c^2 - v^2) &= L^2 \\
+t_{\perp} &= \frac{2L}{\sqrt{c^2-v^2}}
+\end{align}
+
+\subsubsection{Calculation 3: Expected Time Difference}
+\begin{align}
+\Delta t &= t_{\parallel} - t_{\perp} \\
+&= \frac{2Lc}{c^2-v^2} - \frac{2L}{\sqrt{c^2-v^2}}
+\end{align}
+
+For $v \ll c$, using binomial approximation:
+\begin{equation}
+\Delta t \approx \frac{Lv^2}{c^3}
+\end{equation}
+
+\subsubsection{Calculation 4: Numerical Evaluation}
+
+Given:
+\begin{itemize}[noitemsep]
+    \item $L = 11$ m (Michelson-Morley arm length)
+    \item $v = 3.0 \times 10^4$ m/s (Earth's orbital speed)
+    \item $c = 3.0 \times 10^8$ m/s
+\end{itemize}
+
+\begin{align}
+\Delta t &\approx \frac{(11 \text{ m})(3.0 \times 10^4 \text{ m/s})^2}{(3.0 \times 10^8 \text{ m/s})^3} \\
+&= \frac{(11)(9.0 \times 10^8)}{2.7 \times 10^{25}} \text{ s} \\
+\Delta t &\approx 3.7 \times 10^{-16} \text{ s}
+\end{align}
+
+This corresponds to a measurable fringe shift! But \textbf{none was observed}.
+
+\subsubsection{Calculation 5: With Constant Speed of Light}
+
+If $c$ is constant in all directions:
+\begin{equation}
+t_{\parallel} = t_{\perp} = \frac{2L}{c}
+\end{equation}
+
+Therefore:
+\begin{equation}
+\Delta t = 0
+\end{equation}
+
+\textbf{This matches the experimental result!}
+
+\subsection{Real-World Applications}
+\begin{itemize}[noitemsep]
+    \item Modern interferometers (LIGO gravitational wave detector uses this principle)
+    \item GPS satellites must account for constant speed of light
+    \item Particle physics: particle velocities measured same by all observers
+    \item Fiber optic communications rely on light speed being constant
+\end{itemize}
+
+\subsection{Song Ideas}
+\begin{itemize}[noitemsep]
+    \item Debate/argument song between ether believer and Einstein supporter
+    \item Narrative about the experimental setup and shocking result
+    \item Historical ballad about paradigm shift in physics
+    \item Upbeat song celebrating the death of the ether theory
+\end{itemize}
+
+\newpage
+
+\section{Topic 3: Relativity of Simultaneity}
+
+\subsection{The Scenario}
+
+\textbf{Characters for your song:} Observer A (standing on train platform) and Observer B (riding on a moving train)
+
+A train moves at $v = 0.60c$ past a platform. The train car is 30 meters long (proper length). Lightning strikes both ends of the train car. Observer A stands on the platform, positioned exactly midway between where the strikes occur. Observer B sits in the middle of the train car.
+
+\subsection{The Apparent Paradox}
+
+\begin{itemize}[noitemsep]
+    \item Observer A sees the light from both strikes arrive simultaneously and concludes: ``The lightning strikes were simultaneous.''
+    \item Observer B sees the light from the front strike arrive first, then the rear strike, and concludes: ``The front strike happened first.''
+    \item Both observers are at the midpoint of the relevant distances
+    \item Both are using the fact that light travels at speed $c$
+    \item The paradox: How can both observers be correct? Either the strikes happened at the same time or they didn't!
+\end{itemize}
+
+\subsection{The Resolution}
+
+\textbf{Simultaneity is relative.} There is no absolute ``same time.'' Events that are simultaneous in one reference frame are not simultaneous in another reference frame moving relative to the first. Both observers are correct in their own reference frames.
+
+The key insight: Observer B is moving toward the front light signal and away from the rear light signal. Even though both signals travel at speed $c$, Observer B encounters the front signal first.
+
+\subsection{Key Physics Concepts}
+\begin{itemize}[noitemsep]
+    \item Simultaneity depends on reference frame
+    \item Length contraction affects distances between events
+    \item Light always travels at $c$ in all frames
+    \item Spacetime events (position + time) are what matter
+    \item The relativity of simultaneity is required by constant light speed
+\end{itemize}
+
+\subsection{Required Calculations}
+
+\subsubsection{Calculation 1: Lorentz Factor}
+\begin{align}
+\gamma &= \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-\frac{(0.60c)^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-0.36}} \\
+&= \frac{1}{\sqrt{0.64}} \\
+&= \frac{1}{0.80} \\
+\gamma &= 1.25
+\end{align}
+
+\subsubsection{Calculation 2: Contracted Train Length (Platform Frame)}
+\begin{align}
+L &= \frac{L_0}{\gamma} \\
+&= \frac{30 \text{ m}}{1.25} \\
+L &= 24 \text{ m}
+\end{align}
+
+In Observer A's frame, the train is only 24 m long.
+
+\subsubsection{Calculation 3: Time for Light to Reach Observer A}
+
+Observer A is 12 m from each strike point:
+\begin{align}
+t_A &= \frac{L/2}{c} \\
+&= \frac{12 \text{ m}}{3.0 \times 10^8 \text{ m/s}} \\
+t_A &= 4.0 \times 10^{-8} \text{ s}
+\end{align}
+
+Since both signals arrive simultaneously, Observer A concludes the strikes were simultaneous.
+
+\subsubsection{Calculation 4: Time Difference in Observer B's Frame}
+
+Using the relativity of simultaneity formula:
+\begin{align}
+\Delta t' &= \frac{\gamma v \Delta x}{c^2}
+\end{align}
+
+\textbf{Note:} $\Delta x$ is the distance between the events in the frame where they are simultaneous (the Platform Frame). In the Platform Frame, the train is length-contracted to 24 m, so $\Delta x = 24$ m.
+
+\begin{align}
+\Delta t' &= \frac{(1.25)(0.60c)(24 \text{ m})}{c^2} \\
+&= \frac{(1.25)(0.60)(24 \text{ m})}{c} \\
+&= \frac{18 \text{ m}}{3.0 \times 10^8 \text{ m/s}} \\
+\Delta t' &= 6.0 \times 10^{-8} \text{ s}
+\end{align}
+
+In Observer B's frame, the front strike happened $6.0 \times 10^{-8}$ s before the rear strike.
+
+\subsubsection{Calculation 5: Alternative Explanation -- Light Arrival Times}
+
+Why does Observer B calculate different times? Because Observer B moves relative to the light signals. From the perspective of the Platform (where the strikes were simultaneous):
+\begin{itemize}[noitemsep]
+    \item Distance from center to ends is 12 m
+    \item Observer B moves \textbf{toward} the front light signal at $v$
+    \item Observer B moves \textbf{away} from the rear light signal at $v$
+\end{itemize}
+
+Time for front light to intercept Observer B:
+\begin{align}
+t_{\text{front}} &= \frac{12 \text{ m}}{c + 0.60c} \\
+&= \frac{12 \text{ m}}{1.60 \times 3.0 \times 10^8 \text{ m/s}} \\
+&= \frac{12 \text{ m}}{4.8 \times 10^8 \text{ m/s}} \\
+t_{\text{front}} &= 2.5 \times 10^{-8} \text{ s}
+\end{align}
+
+Time for rear light to catch Observer B:
+\begin{align}
+t_{\text{rear}} &= \frac{12 \text{ m}}{c - 0.60c} \\
+&= \frac{12 \text{ m}}{0.40 \times 3.0 \times 10^8 \text{ m/s}} \\
+&= \frac{12 \text{ m}}{1.2 \times 10^8 \text{ m/s}} \\
+t_{\text{rear}} &= 10.0 \times 10^{-8} \text{ s}
+\end{align}
+
+Since Observer B sees the front light arrive first ($2.5 \times 10^{-8}$ s) rather than later ($10.0 \times 10^{-8}$ s), Observer B correctly concludes that in their frame, the front strike must have happened first.
+
+\subsection{Real-World Applications}
+\begin{itemize}[noitemsep]
+    \item GPS satellite timing requires accounting for relativity of simultaneity
+    \item Particle collider experiments: events must be carefully synchronized
+    \item Astronomy: measuring distances to moving stars requires relativity corrections
+    \item Fundamental to understanding causality in relativity
+\end{itemize}
+
+\subsection{Song Ideas}
+\begin{itemize}[noitemsep]
+    \item Confusion/argument song between the two observers
+    \item Lightning-themed rock song
+    \item Split perspective duet showing both views
+    \item Narrative about how reality depends on your reference frame
+\end{itemize}
+
+\newpage
+
+\section{Topic 4: Cosmic Ray Muons}
+
+\subsection{The Scenario}
+
+\textbf{Characters for your song:} A muon (traveling from upper atmosphere) and an Earth-bound observer
+
+Cosmic rays strike Earth's upper atmosphere at altitudes around 15 km, creating unstable particles called muons. These muons have a half-life of only $\tau_0 = 2.2$ $\mu$s when at rest. They travel downward at $v = 0.998c$. Classical physics predicts they should decay long before reaching sea level, yet thousands are detected at ground level every second.
+
+\subsection{The Apparent Paradox}
+
+\begin{itemize}[noitemsep]
+    \item Classical calculation: At $v = 0.998c$, a muon travels only about 660 m in 2.2 $\mu$s. It should decay long before traveling 15 km to the ground.
+    \item Earth observer says: ``The muon's clock runs slow due to time dilation. Its half-life is extended, so it lives long enough to reach the ground.''
+    \item Muon says: ``I'm at rest in my own frame. My clock shows my proper half-life of 2.2 $\mu$s. How can I possibly travel 15 km in such a short time?''
+    \item The paradox: Both observers must agree on whether the muon reaches the ground. How can both explanations be correct?
+\end{itemize}
+
+\subsection{The Resolution}
+
+Both perspectives are correct! This is one of the most beautiful examples showing that time dilation and length contraction are two ways of viewing the same phenomenon:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Earth frame:} Time dilation extends the muon's lifetime, allowing it to travel 15 km
+    \item \textbf{Muon frame:} Length contraction shrinks the atmosphere to a short distance that can be traveled in 2.2 $\mu$s
+\end{itemize}
+
+Both frames agree on the physical outcome: muons reach the ground.
+
+\subsection{Key Physics Concepts}
+\begin{itemize}[noitemsep]
+    \item Time dilation in the Earth frame
+    \item Length contraction in the muon frame
+    \item These are complementary views of the same phenomenon
+    \item Proper time and proper length
+    \item Experimental verification of special relativity
+\end{itemize}
+
+\subsection{Required Calculations}
+
+\subsubsection{Calculation 1: Lorentz Factor}
+\begin{align}
+\gamma &= \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-\frac{(0.998c)^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-0.996004}} \\
+&= \frac{1}{\sqrt{0.003996}} \\
+&= \frac{1}{0.0632} \\
+\gamma &= 15.8
+\end{align}
+
+This is a huge relativistic effect!
+
+\subsubsection{Calculation 2: Classical Distance Before Decay}
+\begin{align}
+d_{\text{classical}} &= v\tau_0 \\
+&= (0.998)(3.0 \times 10^8 \text{ m/s})(2.2 \times 10^{-6} \text{ s}) \\
+&= (2.994 \times 10^8 \text{ m/s})(2.2 \times 10^{-6} \text{ s}) \\
+d_{\text{classical}} &= 659 \text{ m}
+\end{align}
+
+Classically, the muon only travels about 660 m before decaying—nowhere near the 15,000 m needed!
+
+\subsubsection{Calculation 3: Dilated Half-Life (Earth Frame)}
+\begin{align}
+\tau &= \gamma \tau_0 \\
+&= (15.8)(2.2 \times 10^{-6} \text{ s}) \\
+\tau &= 3.48 \times 10^{-5} \text{ s} = 34.8 \text{ } \mu\text{s}
+\end{align}
+
+From Earth's perspective, the muon's half-life is extended by a factor of 15.8.
+
+\subsubsection{Calculation 4: Distance Traveled (Earth Frame)}
+\begin{align}
+d &= v\tau \\
+&= v(\gamma \tau_0) \\
+&= (0.998)(3.0 \times 10^8 \text{ m/s})(3.48 \times 10^{-5} \text{ s}) \\
+d &= 10{,}400 \text{ m} = 10.4 \text{ km}
+\end{align}
+
+The muon can travel over 10 km before decaying—easily reaching the ground from 15 km altitude! (Note: This is for one half-life; many muons will travel even further.)
+
+\subsubsection{Calculation 5: Contracted Atmosphere Height (Muon Frame)}
+\begin{align}
+h &= \frac{h_0}{\gamma} \\
+&= \frac{15{,}000 \text{ m}}{15.8} \\
+h &= 949 \text{ m}
+\end{align}
+
+From the muon's perspective, the atmosphere is contracted to less than 1 km!
+
+\subsubsection{Calculation 6: Time to Reach Ground (Muon Frame)}
+\begin{align}
+t &= \frac{h}{v} \\
+&= \frac{949 \text{ m}}{0.998 \times 3.0 \times 10^8 \text{ m/s}} \\
+&= \frac{949 \text{ m}}{2.994 \times 10^8 \text{ m/s}} \\
+t &= 3.17 \times 10^{-6} \text{ s} = 3.17 \text{ } \mu\text{s}
+\end{align}
+
+This is only slightly longer than the muon's proper half-life of 2.2 $\mu$s, so many muons survive the journey!
+
+\textbf{Key insight:} Both perspectives give the same physical result. Earth observer sees time dilation; muon sees length contraction. Both agree muons reach the ground.
+
+\subsection{Real-World Applications}
+\begin{itemize}[noitemsep]
+    \item Direct experimental verification of special relativity (measured daily!)
+    \item Particle physics: all unstable particles show time dilation in accelerators
+    \item Cosmic ray detection networks
+    \item Fundamental test of relativity accessible even to undergraduate experiments
+\end{itemize}
+
+\subsection{Song Ideas}
+\begin{itemize}[noitemsep]
+    \item Journey song from muon's perspective
+    \item Upbeat science song about cosmic rays
+    \item Duet between muon and Earth observer
+    \item Fast-paced song matching the muon's incredible speed
+\end{itemize}
+
+\newpage
+
+\section{Topic 5: Relativistic Velocity Addition}
+
+\subsection{The Scenario}
+
+\textbf{Characters for your song:} Engineer (proposes exceeding light speed) and Physicist (explains why it's impossible)
+
+A spaceship travels at $v = 0.90c$ relative to Earth. The spaceship fires a missile forward at $u' = 0.90c$ relative to the spaceship. An engineer claims: ``$0.90c + 0.90c = 1.80c$! The missile exceeds the speed of light!'' A physicist explains why this classical addition is wrong and what Earth observers actually measure.
+
+\subsection{The Apparent Paradox}
+
+\begin{itemize}[noitemsep]
+    \item Intuition: Velocities should add simply (classical velocity addition)
+    \item Naive calculation: $0.90c + 0.90c = 1.80c > c$
+    \item Einstein's second postulate: Nothing can exceed the speed of light
+    \item The paradox: How do we reconcile everyday intuition about adding velocities with the speed limit of the universe?
+\end{itemize}
+
+\subsection{The Resolution}
+
+Velocities don't add simply at relativistic speeds. The correct formula is:
+\begin{equation}
+u = \frac{v + u'}{1 + \frac{vu'}{c^2}}
+\end{equation}
+
+The denominator becomes significant at high speeds, ensuring the result is always less than $c$. This formula has the remarkable property that if either velocity is $c$, the result is exactly $c$—meaning light always travels at speed $c$ regardless of the motion of the source or observer.
+
+\subsection{Key Physics Concepts}
+\begin{itemize}[noitemsep]
+    \item Classical velocity addition fails at high speeds
+    \item Relativistic velocity addition formula
+    \item No combination of velocities can exceed $c$
+    \item Adding any velocity to $c$ gives $c$
+    \item Why energy increases without bound as $v \to c$
+\end{itemize}
+
+\subsection{Required Calculations}
+
+\subsubsection{Calculation 1: Classical Addition (Wrong!)}
+\begin{align}
+u_{\text{classical}} &= v + u' \\
+&= 0.90c + 0.90c \\
+u_{\text{classical}} &= 1.80c
+\end{align}
+
+This violates the second postulate! It's the wrong answer but useful for comparison.
+
+\subsubsection{Calculation 2: Relativistic Velocity Addition}
+\begin{align}
+u &= \frac{v + u'}{1 + \frac{vu'}{c^2}} \\
+&= \frac{0.90c + 0.90c}{1 + \frac{(0.90c)(0.90c)}{c^2}} \\
+&= \frac{1.80c}{1 + \frac{0.81c^2}{c^2}} \\
+&= \frac{1.80c}{1 + 0.81} \\
+&= \frac{1.80c}{1.81} \\
+u &= 0.9945c
+\end{align}
+
+The missile travels at 99.45\% the speed of light—fast, but still less than $c$!
+
+\subsubsection{Calculation 3: Even More Extreme Case}
+
+Try $v = 0.99c$ and $u' = 0.99c$:
+\begin{align}
+u &= \frac{0.99c + 0.99c}{1 + \frac{(0.99c)(0.99c)}{c^2}} \\
+&= \frac{1.98c}{1 + 0.9801} \\
+&= \frac{1.98c}{1.9801} \\
+u &= 0.99995c
+\end{align}
+
+Even combining two velocities of 0.99c gives a result less than $c$!
+
+\subsubsection{Calculation 4: Special Case—Adding to Light Speed}
+
+What if the spaceship fires a laser? Let $u' = c$:
+\begin{align}
+u &= \frac{v + c}{1 + \frac{v \cdot c}{c^2}} \\
+&= \frac{v + c}{1 + \frac{v}{c}} \\
+&= \frac{v + c}{\frac{c + v}{c}} \\
+&= \frac{(v + c) \cdot c}{c + v} \\
+u &= c
+\end{align}
+
+No matter what $v$ is, if $u' = c$, then $u = c$. Light always travels at speed $c$!
+
+\subsubsection{Calculation 5: Lorentz Factors (Energy Comparison)}
+
+For the spaceship at $v = 0.90c$:
+\begin{align}
+\gamma_v &= \frac{1}{\sqrt{1-(0.90)^2}} \\
+&= \frac{1}{\sqrt{0.19}} \\
+\gamma_v &= 2.29
+\end{align}
+
+For the missile at $u = 0.9945c$:
+\begin{align}
+\gamma_u &= \frac{1}{\sqrt{1-(0.9945)^2}} \\
+&= \frac{1}{\sqrt{1-0.989}} \\
+&= \frac{1}{\sqrt{0.011}} \\
+\gamma_u &= 9.53
+\end{align}
+
+The missile's Lorentz factor is over 4 times larger! This shows why reaching higher speeds requires enormous energy—$\gamma$ grows very rapidly as $v \to c$.
+
+\subsubsection{Calculation 6: Classical Limit}
+
+For low speeds, the relativistic formula reduces to classical addition. Try $v = 10$ m/s and $u' = 20$ m/s:
+\begin{align}
+u &= \frac{10 + 20}{1 + \frac{(10)(20)}{(3 \times 10^8)^2}} \\
+&= \frac{30}{1 + \frac{200}{9 \times 10^{16}}} \\
+&= \frac{30}{1 + 2.2 \times 10^{-15}} \\
+u &\approx 30 \text{ m/s}
+\end{align}
+
+At everyday speeds, the denominator is essentially 1, and we get classical addition.
+
+\subsection{Real-World Applications}
+\begin{itemize}[noitemsep]
+    \item Particle accelerators: must account for relativistic velocity addition
+    \item Astrophysics: jets from black holes and active galactic nuclei
+    \item GPS satellites: signals from moving satellites require relativistic corrections
+    \item Fundamental limit preventing faster-than-light communication
+\end{itemize}
+
+\subsection{Song Ideas}
+\begin{itemize}[noitemsep]
+    \item Debate song between engineer and physicist
+    \item High-energy song about going faster and faster
+    \item Educational song listing different velocity combinations
+    \item Dramatic song about the ultimate speed limit of the universe
+\end{itemize}
+
+\newpage
+
+\section{Topic 6: The Ladder Paradox}
+
+\subsection{The Scenario}
+
+\textbf{Characters for your song:} Runner (carrying a ladder) and Observer (with a garage)
+
+A runner carries a 10-meter ladder horizontally at $v = 0.866c$ toward a 5-meter garage. The observer standing at the garage says: ``The ladder is length-contracted to 5 meters—it fits perfectly in my garage! I can close both doors simultaneously.'' The runner says: ``My ladder is 10 meters long. Your garage is length-contracted to 2.5 meters. The ladder can never fit!''
+
+\subsection{The Apparent Paradox}
+
+\begin{itemize}[noitemsep]
+    \item Observer's view: Ladder contracts to 5 m, garage is 5 m. Both doors can close simultaneously with the ladder inside.
+    \item Runner's view: Ladder is 10 m, garage contracts to 2.5 m. The ladder is much longer than the garage!
+    \item Physical reality must be the same for both observers
+    \item The paradox: Does the ladder fit in the garage or not? Can both doors close at once or not?
+\end{itemize}
+
+\subsection{The Resolution}
+
+The key is \textbf{relativity of simultaneity}. ``Both doors close simultaneously'' means different things in different frames:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Observer's frame:} Both doors close at the same time. The contracted ladder is momentarily inside.
+    \item \textbf{Runner's frame:} The doors do NOT close simultaneously! The front door closes first (while the front of the ladder is already through), then opens, then the ladder passes through, then the back door closes. The ladder is never completely inside with both doors closed.
+\end{itemize}
+
+Both observers agree on the physical outcome: the ladder passes through undamaged. The difference is in the time ordering of events.
+
+\subsection{Key Physics Concepts}
+\begin{itemize}[noitemsep]
+    \item Length contraction in both reference frames
+    \item Relativity of simultaneity resolves the paradox
+    \item Spacetime diagrams show both perspectives
+    \item Events vs. measurements
+    \item Physical outcomes are frame-independent
+\end{itemize}
+
+\subsection{Required Calculations}
+
+\subsubsection{Calculation 1: Lorentz Factor}
+\begin{align}
+\gamma &= \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-\frac{(0.866c)^2}{c^2}}} \\
+&= \frac{1}{\sqrt{1-0.750}} \\
+&= \frac{1}{\sqrt{0.250}} \\
+&= \frac{1}{0.500} \\
+\gamma &= 2.00
+\end{align}
+
+Note: The velocity was specifically chosen so $\gamma = 2$ exactly!
+
+\subsubsection{Calculation 2: Contracted Ladder Length (Observer's Frame)}
+\begin{align}
+L_{\text{ladder}} &= \frac{L_{0,\text{ladder}}}{\gamma} \\
+&= \frac{10 \text{ m}}{2.00} \\
+L_{\text{ladder}} &= 5.0 \text{ m}
+\end{align}
+
+From the observer's perspective, the ladder is exactly 5 m long—it fits perfectly in the 5 m garage!
+
+\subsubsection{Calculation 3: Contracted Garage Length (Runner's Frame)}
+\begin{align}
+L_{\text{garage}} &= \frac{L_{0,\text{garage}}}{\gamma} \\
+&= \frac{5 \text{ m}}{2.00} \\
+L_{\text{garage}} &= 2.5 \text{ m}
+\end{align}
+
+From the runner's perspective, the garage is only 2.5 m long—much shorter than the 10 m ladder!
+
+\subsubsection{Calculation 4: Time Difference Between Door Closings (Runner's Frame)}
+
+Using the relativity of simultaneity formula:
+\begin{align}
+\Delta t' &= \frac{\gamma v \Delta x}{c^2}
+\end{align}
+
+where $\Delta x = L_{0,\text{garage}} = 5$ m (the separation between the doors in the observer's frame where they close simultaneously):
+
+\begin{align}
+\Delta t' &= \frac{(2.00)(0.866c)(5 \text{ m})}{c^2} \\
+&= \frac{(2.00)(0.866)(5 \text{ m})}{c} \\
+&= \frac{8.66 \text{ m}}{c} \\
+&= \frac{8.66 \text{ m}}{3.0 \times 10^8 \text{ m/s}} \\
+\Delta t' &= 2.89 \times 10^{-8} \text{ s} = 28.9 \text{ ns}
+\end{align}
+
+In the runner's frame, the front door closes 28.9 nanoseconds before the back door!
+
+\subsubsection{Calculation 5: Sequence of Events (Runner's Frame)}
+
+In the runner's frame:
+\begin{enumerate}
+    \item Front of ladder reaches front door (at position $x = 0$, time $t = 0$)
+    \item Front door closes momentarily (at $t = 0$)
+    \item Front of ladder is at position $x = 7.5$ m when back of ladder reaches back door
+    \item This happens at time: $t = \frac{7.5 \text{ m}}{0.866c} = \frac{7.5}{2.6 \times 10^8} = 2.88 \times 10^{-8}$ s
+    \item Back door closes at $t = 2.89 \times 10^{-8}$ s (essentially same time)
+\end{enumerate}
+
+The doors close at different times! The ladder is never entirely enclosed.
+
+\subsection{Spacetime Diagram Insight}
+
+A spacetime diagram (which you might want to draw for your video) shows:
+\begin{itemize}[noitemsep]
+    \item Lines of simultaneity are tilted differently in the two frames
+    \item Events simultaneous in one frame lie on a tilted line in the other
+    \item Both observers agree on which events are causally connected
+    \item The physical outcome (ladder passes through) is frame-independent
+\end{itemize}
+
+\subsection{Real-World Applications}
+\begin{itemize}[noitemsep]
+    \item Particle collisions: timing of when particles enter detectors
+    \item Cosmology: simultaneity surfaces in expanding universe
+    \item GPS timing: satellites and ground stations don't agree on simultaneity
+    \item Fundamental to understanding causality in relativity
+\end{itemize}
+
+\subsection{Song Ideas}
+\begin{itemize}[noitemsep]
+    \item Comedy song about the absurd-sounding scenario
+    \item Fast-paced song matching the high-speed runner
+    \item Argument song between runner and observer
+    \item Narrative song with a twist ending (who's right?)
+\end{itemize}
+
+\newpage
+
+\section{Tips for Using This Guide}
+
+\subsection{Planning Your Video}
+\begin{enumerate}
+    \item Read through your entire topic carefully
+    \item Identify the 4--6 required calculations
+    \item Plan where in your song each calculation will appear
+    \item Think about visual ways to show both reference frames
+    \item Sketch a storyboard before filming
+\end{enumerate}
+
+\subsection{Showing Calculations in Video}
+\begin{itemize}[noitemsep]
+    \item Write large and clear—will it be readable on a phone?
+    \item Use multiple colors to highlight different steps
+    \item Point to each step as you explain it
+    \item Leave calculations on screen long enough to read (at least 5 seconds per line)
+    \item Show algebra first, then plug in numbers—this is non-negotiable!
+\end{itemize}
+
+\subsection{Visual Demonstrations}
+\begin{itemize}[noitemsep]
+    \item Use everyday objects to represent relativistic scenarios
+    \item Show both perspectives: split screen, side-by-side, or sequential
+    \item Make diagrams: draw spacetime diagrams, worldlines, reference frames
+    \item Use motion: move objects, use stop-motion, create animations
+    \item Be creative: props, costumes, locations all add interest
+\end{itemize}
+
+\subsection{Writing Your Mathematical Explanation}
+\begin{itemize}[noitemsep]
+    \item Watch your own video and note timestamps
+    \item Expand on calculations that went by quickly in the video
+    \item Explain the physics, not just the math
+    \item Connect to real-world applications
+    \item Proofread for units and sig figs
+\end{itemize}
+
+\section{Final Reminders}
+
+\begin{itemize}[noitemsep]
+    \item All calculations must show algebraic steps first
+    \item All group members must appear on camera
+    \item Video must be 4--6 minutes long
+    \item Submit all files with correct naming convention
+    \item Check that your physics is accurate—this is 90\% of your grade!
+    \item Have fun! This is a chance to be creative while learning physics
+\end{itemize}
+
+\end{document}
