@@ -1,9 +1,11 @@
 \documentclass{beamer}
 % Use DS9 global theme
-\usepackage{../../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/ds9_theme}
 
 % Additional packages for code
+\usepackage[T1]{fontenc}
 \usepackage{listings}
+\usepackage{tikz} % Ensure tikz is loaded
 
 % Title page configuration
 \title[Intro to Arrays]{Introduction to Arrays in C++}
@@ -15,9 +17,9 @@
 \lstset{
     language=C++,
     basicstyle=\ttfamily\small,
-    keywordstyle=\color{ds9blue},
-    stringstyle=\color{ds9gold},
-    commentstyle=\color{ds9grey},
+    keywordstyle=\color{blue!80!black}, % Changed slightly for standard compatibility if theme missing
+    stringstyle=\color{green!60!black},
+    commentstyle=\color{gray},
     numbers=left,
     numberstyle=\tiny,
     numbersep=5pt,
@@ -45,27 +47,39 @@
     \end{block}
 \end{frame}
 
-% Memory Layout
+% Memory Layout - FIXED VISUALS
 \begin{frame}{Array Memory Layout}
     \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.45\textwidth}
             \begin{itemize}
                 \item Contiguous memory allocation
                 \item Each element occupies fixed space
                 \item Direct access via index
             \end{itemize}
         \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{tikzpicture}[scale=0.7]
-                % Memory blocks
+        \begin{column}{0.55\textwidth}
+            \centering
+            % Fixed TikZ Diagram
+            \begin{tikzpicture}[scale=0.8, transform shape]
+                % Define width of one memory block to allow text to fit
+                \def\w{1.3} 
+                
                 \foreach \x in {0,1,2,3,4} {
-                    \draw (\x,0) rectangle (\x+1,1);
-                    \node at (\x+0.5,0.5) {value};
-                    \node[below] at (\x+0.5,0) {\small\x};
-                    \node[above] at (\x+0.5,1) {\small 0x\x F4};
+                    % Draw Box with light fill
+                    \draw[fill=gray!10] (\x*\w, 0) rectangle ++(\w, 1);
+                    
+                    % Value (Center)
+                    \node at (\x*\w + \w/2, 0.5) {\footnotesize value};
+                    
+                    % Index (Bottom) - Added brackets for code style
+                    \node[below] at (\x*\w + \w/2, 0) {\small \texttt{[\x]}};
+                    
+                    % Address (Top) - Rotated to prevent overlap
+                    \node[above, rotate=45, anchor=south west] at (\x*\w + \w/2, 1) {\tiny \texttt{0x\x F4}};
                 }
-                % Memory address arrow
-                \draw[->] (-0.5,0.5) -- (0,0.5) node[left] {base};
+                
+                % Base pointer arrow pointing to the start
+                \draw[<-, thick, >=stealth] (0, 0.5) -- ++(-0.8, 0) node[left] {\small base};
             \end{tikzpicture}
         \end{column}
     \end{columns}
