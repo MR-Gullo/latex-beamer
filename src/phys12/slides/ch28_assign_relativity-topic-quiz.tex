@@ -1,0 +1,516 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+% Page Setup
+\geometry{a4paper, margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+% ==========================================
+% UNIVERSAL FORMULA SHEET
+% ==========================================
+\section*{Universal Formula Sheet}
+\textit{(Allowed material for the Part 3 Assessment)}
+
+\subsection*{Constants}
+\begin{itemize}
+    \item Speed of light: $c = 3.00 \times 10^8$ m/s
+    \item 1 light-year (ly) $= 9.46 \times 10^{15}$ m
+    \item Earth's orbital velocity: $v \approx 30 \text{ km/s} = 3.0 \times 10^4$ m/s
+\end{itemize}
+
+\subsection*{Formulas}
+
+\textbf{1. Lorentz Factor:}
+\[ \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \]
+
+\textbf{2. Time Dilation:}
+\[ \Delta t = \gamma \Delta t_0 \]
+\textit{($\Delta t_0$ is proper time)}
+
+\textbf{3. Length Contraction:}
+\[ L = \frac{L_0}{\gamma} \]
+\textit{($L_0$ is proper length)}
+
+\textbf{4. Relativistic Velocity Addition:}
+\[ u = \frac{v + u'}{1 + \frac{vu'}{c^2}} \]
+
+\textbf{5. Relativity of Simultaneity (Time Difference):}
+\[ \Delta t' = \frac{\gamma v \Delta x}{c^2} \]
+
+\newpage
+
+% ==========================================
+% TOPIC 1: TWIN PARADOX (STUDENT)
+% ==========================================
+\lhead{Physics 12: Special Relativity Project}
+\rhead{Part 3: Individual Analysis}
+
+\section*{Topic 1: The Twin Paradox}
+
+\textbf{Name:} \underline{\hspace{6cm}} \hfill \textbf{Date:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+
+\textbf{The Scenario:} 
+Twin B travels to Alpha Centauri ($d = 4.3$ ly) at $v = 0.90c$ relative to Earth, then immediately turns around and returns at the same speed. Twin A stays on Earth.
+
+\section*{Part A: Calculations}
+\textit{Show your algebraic derivation first, then plug in numbers.}
+
+\begin{enumerate}
+    \item \textbf{Calculate the Lorentz Factor ($\gamma$).}
+    \vspace{4cm}
+
+    \item \textbf{Calculate Total Earth Time ($\Delta t_{total}$)} for the round trip.
+    \vspace{4cm}
+
+    \item \textbf{Calculate Twin B’s Total Proper Time ($\Delta t_{0, total}$)} for the round trip.
+    \vspace{4cm}
+
+    \item \textbf{Calculate the final Age Difference.}
+    \vspace{3cm}
+\end{enumerate}
+
+\section*{Part B: Conceptual Analysis}
+\begin{enumerate}
+    \item \textbf{Explain the Paradox \& Resolution:} Why did it seem like \textit{both} twins should be younger? Who is actually younger and why? (Reference your calculations).
+    \vspace{4cm}
+    
+    \item \textbf{Spacetime Diagram:} Sketch the scenario showing the path of both twins.
+    \vspace{5cm}
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 1: TWIN PARADOX (TEACHER KEY)
+% ==========================================
+\lhead{TEACHER KEY}
+\rhead{Topic 1: Twin Paradox}
+
+\section*{SOLUTION KEY: The Twin Paradox}
+
+\textbf{Part A: Calculations}
+
+\begin{enumerate}
+    \item \textbf{Lorentz Factor:}
+    \[ \gamma = \frac{1}{\sqrt{1 - 0.90^2}} = \frac{1}{\sqrt{0.19}} = \frac{1}{0.436} = \mathbf{2.29} \]
+
+    \item \textbf{Total Earth Time:}
+    \[ \Delta t = \frac{d}{v} = \frac{4.3 \text{ ly}}{0.90c} = 4.78 \text{ years (one way)} \]
+    \[ \Delta t_{total} = 2 \times 4.78 = \mathbf{9.56 \text{ years}} \]
+
+    \item \textbf{Twin B’s Proper Time:}
+    \[ \Delta t_0 = \frac{\Delta t}{\gamma} = \frac{9.56}{2.29} = \mathbf{4.18 \text{ years}} \]
+
+    \item \textbf{Age Difference:}
+    \[ \Delta \text{age} = 9.56 - 4.18 = \mathbf{5.38 \text{ years}} \]
+    \textit{(Twin B is younger)}
+\end{enumerate}
+
+\textbf{Part B: Conceptual}
+
+\begin{enumerate}
+    \item \textbf{Resolution:} The situation is not symmetric because Twin B accelerates (turns around), shifting reference frames. Twin A remains in an inertial frame the entire time. Therefore, the time dilation is real and Twin B is physically younger.
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 2: MICHELSON-MORLEY (STUDENT)
+% ==========================================
+\lhead{Physics 12: Special Relativity Project}
+\rhead{Part 3: Individual Analysis}
+
+\section*{Topic 2: The Michelson-Morley Experiment}
+
+\textbf{Name:} \underline{\hspace{6cm}} \hfill \textbf{Date:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+
+\textbf{The Scenario:} 
+An interferometer with arm length $L = 11$ m moves with Earth through the "ether" at $v = 3.0 \times 10^4$ m/s.
+
+\section*{Part A: Calculations}
+\textit{Show your algebraic derivation first, then plug in numbers.}
+
+\begin{enumerate}
+    \item \textbf{Derive the Classical Time Parallel ($t_{\parallel}$)} for light to go back and forth against the ether wind.
+    \vspace{4cm}
+
+    \item \textbf{Derive the Classical Time Perpendicular ($t_{\perp}$)} for light to go across the ether wind (Pythagorean setup).
+    \vspace{4cm}
+
+    \item \textbf{Calculate the Classical Expected Time Difference ($\Delta t$).} \\
+    (Use the approximation $\Delta t \approx \frac{Lv^2}{c^3}$).
+    \vspace{3cm}
+
+    \item \textbf{State the Actual Result} found in the experiment and what $\Delta t$ actually equals according to Special Relativity.
+    \vspace{2cm}
+\end{enumerate}
+
+\section*{Part B: Conceptual Analysis}
+\begin{enumerate}
+    \item \textbf{Explain the Paradox \& Resolution:} Why did physicists expect a fringe shift? Why was there none?
+    \vspace{4cm}
+    
+    \item \textbf{Diagram:} Draw the interferometer setup and the path of light rays.
+    \vspace{5cm}
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 2: MICHELSON-MORLEY (TEACHER KEY)
+% ==========================================
+\lhead{TEACHER KEY}
+\rhead{Topic 2: Michelson-Morley}
+
+\section*{SOLUTION KEY: The Michelson-Morley Experiment}
+
+\textbf{Part A: Calculations}
+
+\begin{enumerate}
+    \item \textbf{Time Parallel:}
+    \[ t_{\parallel} = \frac{L}{c-v} + \frac{L}{c+v} = \frac{2Lc}{c^2 - v^2} \]
+
+    \item \textbf{Time Perpendicular:}
+    \[ t_{\perp} = \frac{2L}{\sqrt{c^2 - v^2}} \]
+
+    \item \textbf{Expected Time Difference:}
+    \[ \Delta t \approx \frac{Lv^2}{c^3} = \frac{(11)(3.0 \times 10^4)^2}{(3.0 \times 10^8)^3} \]
+    \[ = \frac{9.9 \times 10^9}{2.7 \times 10^{25}} \approx \mathbf{3.7 \times 10^{-16} \text{ s}} \]
+
+    \item \textbf{Actual Result:}
+    \[ \Delta t = \mathbf{0} \]
+    The speed of light is constant in all frames; there is no ether.
+\end{enumerate}
+
+\textbf{Part B: Conceptual}
+
+\begin{enumerate}
+    \item \textbf{Resolution:} Classical physics assumed light traveled through a medium (ether). The null result implies $c$ is constant. Lorentz contraction and time dilation conspire to make the speed of light measure as $c$ in all directions.
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 3: SIMULTANEITY (STUDENT)
+% ==========================================
+\lhead{Physics 12: Special Relativity Project}
+\rhead{Part 3: Individual Analysis}
+
+\section*{Topic 3: Relativity of Simultaneity}
+
+\textbf{Name:} \underline{\hspace{6cm}} \hfill \textbf{Date:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+
+\textbf{The Scenario:} 
+A train ($L_0 = 30$ m) moves at $v = 0.60c$ past a platform. Lightning strikes both ends. Observer A (Platform) sees the strikes as simultaneous. Observer B is on the train.
+
+\section*{Part A: Calculations}
+\textit{Show your algebraic derivation first, then plug in numbers.}
+
+\begin{enumerate}
+    \item \textbf{Calculate the Lorentz Factor ($\gamma$).}
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Contracted Length ($L$)} of the train seen by the Platform observer.
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Time Difference ($\Delta t'$)} between the strikes as measured by Observer B (on the train).
+    \vspace{4cm}
+
+    \item \textbf{Determine which strike happened first} for Observer B. (Show calculation for light arrival times or explain logically).
+    \vspace{3cm}
+\end{enumerate}
+
+\section*{Part B: Conceptual Analysis}
+\begin{enumerate}
+    \item \textbf{Explain the Paradox \& Resolution:} How can the strikes be simultaneous for one person but not the other?
+    \vspace{4cm}
+    
+    \item \textbf{Spacetime Diagram:} Sketch the scenario showing the worldlines of the train ends.
+    \vspace{5cm}
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 3: SIMULTANEITY (TEACHER KEY)
+% ==========================================
+\lhead{TEACHER KEY}
+\rhead{Topic 3: Simultaneity}
+
+\section*{SOLUTION KEY: Relativity of Simultaneity}
+
+\textbf{Part A: Calculations}
+
+\begin{enumerate}
+    \item \textbf{Lorentz Factor:}
+    \[ \gamma = \frac{1}{\sqrt{1 - 0.60^2}} = \frac{1}{0.80} = \mathbf{1.25} \]
+
+    \item \textbf{Contracted Length (Platform):}
+    \[ L = \frac{30}{1.25} = \mathbf{24 \text{ m}} \]
+
+    \item \textbf{Time Difference (Observer B):}
+    Using $\Delta x = 24 \text{ m}$ (distance in frame where events are simultaneous):
+    \[ \Delta t' = \frac{\gamma v \Delta x}{c^2} = \frac{(1.25)(0.60c)(24)}{c^2} = \frac{18}{c} \]
+    \[ \Delta t' = \frac{18}{3 \times 10^8} = \mathbf{6.0 \times 10^{-8} \text{ s}} \]
+
+    \item \textbf{Order of Events:}
+    Observer B is moving \textit{toward} the front signal. The \textbf{Front Strike} happens first.
+\end{enumerate}
+
+\textbf{Part B: Conceptual}
+
+\begin{enumerate}
+    \item \textbf{Resolution:} Simultaneity is relative. Because $c$ is constant, and Observer B is moving toward the light from the front, that light must have had a "head start" (the event happened earlier) for the speed to remain $c$ relative to the train.
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 4: MUONS (STUDENT)
+% ==========================================
+\lhead{Physics 12: Special Relativity Project}
+\rhead{Part 3: Individual Analysis}
+
+\section*{Topic 4: Cosmic Ray Muons}
+
+\textbf{Name:} \underline{\hspace{6cm}} \hfill \textbf{Date:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+
+\textbf{The Scenario:} 
+A muon created at 15 km altitude travels down at $v = 0.998c$. Its rest half-life is $\tau_0 = 2.2 \mu\text{s}$.
+
+\section*{Part A: Calculations}
+\textit{Show your algebraic derivation first, then plug in numbers.}
+
+\begin{enumerate}
+    \item \textbf{Calculate the Lorentz Factor ($\gamma$).}
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Classical Distance ($d_{classical}$)} the muon would travel before decaying (without relativity).
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Dilated Half-Life ($\tau$)} seen by the Earth observer.
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Contracted Atmosphere Height ($h$)} seen by the Muon.
+    \vspace{3cm}
+\end{enumerate}
+
+\section*{Part B: Conceptual Analysis}
+\begin{enumerate}
+    \item \textbf{Explain the Paradox \& Resolution:} How does the muon reach the ground? Explain from BOTH the Earth frame and the Muon frame.
+    \vspace{4cm}
+    
+    \item \textbf{Diagram:} Sketch the atmosphere height in both reference frames.
+    \vspace{5cm}
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 4: MUONS (TEACHER KEY)
+% ==========================================
+\lhead{TEACHER KEY}
+\rhead{Topic 4: Muons}
+
+\section*{SOLUTION KEY: Cosmic Ray Muons}
+
+\textbf{Part A: Calculations}
+
+\begin{enumerate}
+    \item \textbf{Lorentz Factor:}
+    \[ \gamma = \frac{1}{\sqrt{1 - 0.998^2}} = \frac{1}{\sqrt{0.003996}} \approx \mathbf{15.8} \]
+
+    \item \textbf{Classical Distance:}
+    \[ d = v\tau_0 = (0.998c)(2.2 \times 10^{-6}) \approx \mathbf{659 \text{ m}} \]
+    \textit{(Fails to reach ground)}
+
+    \item \textbf{Dilated Half-Life (Earth Frame):}
+    \[ \tau = \gamma \tau_0 = 15.8 \times 2.2 \mu\text{s} = \mathbf{34.8 \mu\text{s}} \]
+    \textit{(Distance traveled: $v \times \tau \approx 10.4$ km. Reaches ground)}
+
+    \item \textbf{Contracted Atmosphere (Muon Frame):}
+    \[ h = \frac{h_0}{\gamma} = \frac{15000}{15.8} = \mathbf{949 \text{ m}} \]
+\end{enumerate}
+
+\textbf{Part B: Conceptual}
+
+\begin{enumerate}
+    \item \textbf{Resolution:}
+    \begin{itemize}
+        \item \textbf{Earth Frame:} Time Dilation. The muon's clock runs slow, so it lives long enough to cover the distance.
+        \item \textbf{Muon Frame:} Length Contraction. The atmosphere is squashed to $<1$ km, so it can traverse it within its short lifespan.
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 5: VELOCITY ADDITION (STUDENT)
+% ==========================================
+\lhead{Physics 12: Special Relativity Project}
+\rhead{Part 3: Individual Analysis}
+
+\section*{Topic 5: Relativistic Velocity Addition}
+
+\textbf{Name:} \underline{\hspace{6cm}} \hfill \textbf{Date:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+
+\textbf{The Scenario:} 
+A spaceship travels at $v = 0.90c$ relative to Earth. It fires a missile forward at $u' = 0.90c$ relative to the ship.
+
+\section*{Part A: Calculations}
+\textit{Show your algebraic derivation first, then plug in numbers.}
+
+\begin{enumerate}
+    \item \textbf{Calculate the Classical Velocity ($u_{classical}$)} (The "wrong" answer).
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Actual Relativistic Velocity ($u$)} relative to Earth.
+    \vspace{4cm}
+
+    \item \textbf{Special Case:} If the ship fired a laser beam ($u' = c$) instead of a missile, calculate the velocity of the beam relative to Earth.
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Lorentz Factor ($\gamma_u$)} for the missile using the relativistic velocity from Q2.
+    \vspace{3cm}
+\end{enumerate}
+
+\section*{Part B: Conceptual Analysis}
+\begin{enumerate}
+    \item \textbf{Explain the Paradox \& Resolution:} Why doesn't $0.9c + 0.9c = 1.8c$? Explain the speed limit of the universe.
+    \vspace{4cm}
+    
+    \item \textbf{Diagram:} Sketch the vectors for the ship and missile relative to the Earth observer.
+    \vspace{5cm}
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 5: VELOCITY ADDITION (TEACHER KEY)
+% ==========================================
+\lhead{TEACHER KEY}
+\rhead{Topic 5: Velocity Addition}
+
+\section*{SOLUTION KEY: Relativistic Velocity Addition}
+
+\textbf{Part A: Calculations}
+
+\begin{enumerate}
+    \item \textbf{Classical (Wrong):}
+    \[ u = 0.90c + 0.90c = \mathbf{1.80c} \]
+
+    \item \textbf{Relativistic (Correct):}
+    \[ u = \frac{0.90c + 0.90c}{1 + (0.90)(0.90)} = \frac{1.80c}{1 + 0.81} = \frac{1.80c}{1.81} = \mathbf{0.9945c} \]
+
+    \item \textbf{Laser Beam Case:}
+    \[ u = \frac{0.90c + c}{1 + 0.90} = \frac{1.90c}{1.90} = \mathbf{c} \]
+
+    \item \textbf{Lorentz Factor (Missile):}
+    \[ \gamma = \frac{1}{\sqrt{1 - 0.9945^2}} \approx \mathbf{9.53} \]
+\end{enumerate}
+
+\textbf{Part B: Conceptual}
+
+\begin{enumerate}
+    \item \textbf{Resolution:} Velocities do not add linearly near $c$. The addition formula ensures that the denominator increases fast enough to keep the total $u < c$. This protects causality and the universal speed limit.
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 6: LADDER PARADOX (STUDENT)
+% ==========================================
+\lhead{Physics 12: Special Relativity Project}
+\rhead{Part 3: Individual Analysis}
+
+\section*{Topic 6: The Ladder Paradox}
+
+\textbf{Name:} \underline{\hspace{6cm}} \hfill \textbf{Date:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+
+\textbf{The Scenario:} 
+A runner carries a 10 m ladder at $v = 0.866c$ towards a 5 m garage.
+
+\section*{Part A: Calculations}
+\textit{Show your algebraic derivation first, then plug in numbers.}
+
+\begin{enumerate}
+    \item \textbf{Calculate the Lorentz Factor ($\gamma$).}
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Contracted Ladder Length ($L_{ladder}$)} seen by the Observer (Garage frame). Does it fit?
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Contracted Garage Length ($L_{garage}$)} seen by the Runner. Does the ladder fit?
+    \vspace{3cm}
+
+    \item \textbf{Calculate the Time Difference ($\Delta t'$)} between the front and back doors closing, as measured by the Runner.
+    \vspace{4cm}
+\end{enumerate}
+
+\section*{Part B: Conceptual Analysis}
+\begin{enumerate}
+    \item \textbf{Explain the Paradox \& Resolution:} The observer says the ladder fits; the runner says it doesn't. Who is correct? How do the doors close?
+    \vspace{4cm}
+    
+    \item \textbf{Spacetime Diagram:} Sketch the garage worldlines and the ladder strip.
+    \vspace{5cm}
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TOPIC 6: LADDER PARADOX (TEACHER KEY)
+% ==========================================
+\lhead{TEACHER KEY}
+\rhead{Topic 6: Ladder Paradox}
+
+\section*{SOLUTION KEY: The Ladder Paradox}
+
+\textbf{Part A: Calculations}
+
+\begin{enumerate}
+    \item \textbf{Lorentz Factor:}
+    \[ \gamma = \frac{1}{\sqrt{1 - 0.866^2}} = \frac{1}{\sqrt{0.25}} = \frac{1}{0.5} = \mathbf{2.00} \]
+
+    \item \textbf{Contracted Ladder (Garage Frame):}
+    \[ L = \frac{10}{2.00} = \mathbf{5.0 \text{ m}} \]
+    \textit{(It fits exactly)}
+
+    \item \textbf{Contracted Garage (Runner Frame):}
+    \[ L = \frac{5}{2.00} = \mathbf{2.5 \text{ m}} \]
+    \textit{(Ladder is 4x longer than garage!)}
+
+    \item \textbf{Time Difference (Runner Frame):}
+    Using $\Delta x = 5 \text{ m}$ (garage length):
+    \[ \Delta t' = \frac{\gamma v \Delta x}{c^2} = \frac{(2)(0.866c)(5)}{c^2} = \frac{8.66}{c} \]
+    \[ = \mathbf{2.89 \times 10^{-8} \text{ s}} \text{ (or 28.9 ns)} \]
+\end{enumerate}
+
+\textbf{Part B: Conceptual}
+
+\begin{enumerate}
+    \item \textbf{Resolution:} Relativity of Simultaneity. In the Garage frame, the doors close simultaneously while the ladder is inside. In the Runner's frame, the \textbf{front door closes (and opens) first}, the ladder passes through, and then the \textbf{back door closes later}. The ladder is never trapped inside in the Runner's frame.
+\end{enumerate}
+
+\end{document}

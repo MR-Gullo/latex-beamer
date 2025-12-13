@@ -42,10 +42,10 @@ escapeinside={(@}{@)}
 \begin{frame}
 \frametitle{Learning Objectives}
 \begin{itemize}
-\item \textbf{Define} an array as a contiguous memory structure for storing multiple values of the same type.
-\item \textbf{Declare and Initialize} arrays using explicit sizing and initializer lists.
-\item \textbf{Access and Modify} array elements using zero-based indexing.
-\item \textbf{Implement} standard array algorithms including traversal, search, and aggregation (min/max).
+\item \textbf{Define} an array as a contiguous memory structure for storing multiple values of the same type.\pause
+\item \textbf{Declare and Initialize} arrays using explicit sizing and initializer lists.\pause
+\item \textbf{Access and Modify} array elements using zero-based indexing.\pause
+\item \textbf{Implement} standard array algorithms including traversal, search, and aggregation (min/max).\pause
 \item \textbf{Identify} common pitfalls such as out-of-bounds access and off-by-one errors.
 \end{itemize}
 \end{frame}
@@ -61,12 +61,12 @@ An \textbf{array} is a collection of variables of the \textit{same type} that ar
 
 \vspace{0.5cm}
 
-\textbf{Core Characteristics:}
+\textbf{Core Characteristics:}\pause
 \begin{itemize}
-\item \textbf{Homogeneous}: All elements must be of the same data type (e.g., all \texttt{int} or all \texttt{float}).
-\item \textbf{Contiguous}: Elements are stored in consecutive memory locations.
-\item \textbf{Fixed Size}: In standard C++, the size of a stack-allocated array must be known at compile time and cannot change.
-\item \textbf{Zero-Indexed}: The first element is always at index 
+\item \textbf{Homogeneous}: All elements must be of the same data type (e.g., all \texttt{int} or all \texttt{float}).\pause
+\item \textbf{Contiguous}: Elements are stored in consecutive memory locations.\pause
+\item \textbf{Fixed Size}: In standard C++, the size of a stack-allocated array must be known at compile time and cannot change.\pause
+\item \textbf{Zero-Indexed}: The first element is always at index
 0
 0
 .
@@ -84,17 +84,19 @@ An \textbf{array} is a collection of variables of the \textit{same type} that ar
 \texttt{int numbers[5] = {10, 20, 30, 40, 50};}
 \end{block}
 
+\pause
 \begin{block}{Element Access}
 \texttt{variable = arrayName[index];}\
-\textit{Valid indices range from 
+\textit{Valid indices range from
 0
 0
- to 
+ to
 size−1
 size−1
 .}
 \end{block}
 
+\pause
 \begin{block}{Memory Address Formula}
 \texttt{Address of A[i] = BaseAddress + (i × sizeof(T))}
 
@@ -126,8 +128,8 @@ Unlike individual variables which may be scattered in memory, arrays claim a sin
 \vspace{0.5cm}
 
 \begin{itemize}
-\item The \textbf{Array Name} represents the starting address (Base Pointer).
-\item The \textbf{Index} represents the "offset" or distance from the start.
+\item The \textbf{Array Name} represents the starting address (Base Pointer).\pause
+\item The \textbf{Index} represents the "offset" or distance from the start.\pause
 \item Because the size of each element is known (e.g., 4 bytes for an integer), the computer can instantly calculate the location of any element.
 \end{itemize}
 
@@ -209,12 +211,12 @@ Notice: Addresses increase by 4 bytes per index.\\
 \textbf{File:} \texttt{arrayIntro\_01.cpp}
 
 \vspace{0.3cm}
-\textbf{Operations demonstrated:}
+\textbf{Operations demonstrated:}\pause
 \begin{enumerate}
-    \item \textbf{Declaration \& Initialization} --- Create array with initializer list; compiler auto-determines size
-    \item \textbf{Length Tracking} --- Use \texttt{const int length} to avoid magic numbers
-    \item \textbf{Element Access} --- First element: \texttt{arr[0]}, Last element: \texttt{arr[length-1]}
-    \item \textbf{Traversal} --- Loop through all elements using \texttt{for(int i = 0; i < length; i++)}
+    \item \textbf{Declaration \& Initialization} --- Create array with initializer list; compiler auto-determines size\pause
+    \item \textbf{Length Tracking} --- Use \texttt{const int length} to avoid magic numbers\pause
+    \item \textbf{Element Access} --- First element: \texttt{arr[0]}, Last element: \texttt{arr[length-1]}\pause
+    \item \textbf{Traversal} --- Loop through all elements using \texttt{for(int i = 0; i < length; i++)}\pause
     \item \textbf{In-place Modification} --- Transform values directly: \texttt{arr[i] = arr[i] * arr[i]}
 \end{enumerate}
 \end{frame}
@@ -227,12 +229,12 @@ Notice: Addresses increase by 4 bytes per index.\\
 \textbf{File:} \texttt{arrayIntro\_02.cpp}
 
 \vspace{0.3cm}
-\textbf{Operations demonstrated:}
+\textbf{Operations demonstrated:}\pause
 \begin{enumerate}
-    \item \textbf{Calculate Array Length} --- \texttt{sizeof(arr)/sizeof(arr[0])} returns number of elements
-    \item \textbf{Declare Empty Array} --- \texttt{int arr[SIZE];} creates array of fixed size (uninitialized)
-    \item \textbf{Fill with Computed Values} --- Use loop to populate: \texttt{arr[i] = 2*i}
-    \item \textbf{Pass Array to Function} --- Arrays passed by reference automatically (no copy made)
+    \item \textbf{Calculate Array Length} --- \texttt{sizeof(arr)/sizeof(arr[0])} returns number of elements\pause
+    \item \textbf{Declare Empty Array} --- \texttt{int arr[SIZE];} creates array of fixed size (uninitialized)\pause
+    \item \textbf{Fill with Computed Values} --- Use loop to populate: \texttt{arr[i] = 2*i}\pause
+    \item \textbf{Pass Array to Function} --- Arrays passed by reference automatically (no copy made)\pause
     \item \textbf{Print Function} --- Helper function to display array contents with range parameters
 \end{enumerate}
 \end{frame}
@@ -243,9 +245,9 @@ Notice: Addresses increase by 4 bytes per index.\\
 % -------------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Warning: The Bounds Trap}
-\textbf{File:} \texttt{arrayIntro_weird.cpp}
+\textbf{File:} \texttt{arrayIntro_weird.cpp}\pause
 
-C++ does \textbf{not} check if you stay inside the array boundaries. Accessing \texttt{arr[10]} of a size-5 array is technically allowed by the compiler but causes \textbf{Undefined Behavior}.
+C++ does \textbf{not} check if you stay inside the array boundaries.\pause{} Accessing \texttt{arr[10]} of a size-5 array is technically allowed by the compiler but causes \textbf{Undefined Behavior}.\pause
 
 \begin{lstlisting}
 int aArr[] = {0, 1, 2, 3, 4}; // Size is 5
@@ -274,11 +276,11 @@ cout << aArr[i] << " ";
 
 \vspace{0.5cm}
 
-You will complete the function bodies for:
+You will complete the function bodies for:\pause
 \begin{enumerate}
-\item \texttt{initializeArray}: Filling an array with values.
-\item \texttt{randomArray}: Generating random data.
-\item \texttt{arrayMaximum}: Finding the largest value.
+\item \texttt{initializeArray}: Filling an array with values.\pause
+\item \texttt{randomArray}: Generating random data.\pause
+\item \texttt{arrayMaximum}: Finding the largest value.\pause
 \item \texttt{reverseArray}: Modifying the order of elements.
 \end{enumerate}
 
@@ -293,13 +295,13 @@ You will complete the function bodies for:
 \begin{frame}
 \frametitle{Summary}
 \begin{itemize}
-\item \textbf{Arrays} allow efficient storage of lists of data using contiguous memory.
-\item \textbf{Indexing} starts at 0. The last valid index is always 
+\item \textbf{Arrays} allow efficient storage of lists of data using contiguous memory.\pause
+\item \textbf{Indexing} starts at 0. The last valid index is always
 size−1
 size−1
-.
-\item \textbf{Memory}: Arrays are just pointers to the start of a memory block.
-\item \textbf{Safety}: You must manually ensure you do not read or write past the end of the array.
+.\pause
+\item \textbf{Memory}: Arrays are just pointers to the start of a memory block.\pause
+\item \textbf{Safety}: You must manually ensure you do not read or write past the end of the array.\pause
 \item \textbf{Practice}: Mastering loops (for/while) is essential for effective array manipulation.
 \end{itemize}
 \end{frame}
