@@ -66,10 +66,7 @@ An \textbf{array} is a collection of variables of the \textit{same type} that ar
 \item \textbf{Homogeneous}: All elements must be of the same data type (e.g., all \texttt{int} or all \texttt{float}).\pause
 \item \textbf{Contiguous}: Elements are stored in consecutive memory locations.\pause
 \item \textbf{Fixed Size}: In standard C++, the size of a stack-allocated array must be known at compile time and cannot change.\pause
-\item \textbf{Zero-Indexed}: The first element is always at index
-0
-0
-.
+\item \textbf{Zero-Indexed}: The first element is always at index 0.
 \end{itemize}
 \end{frame}
 
@@ -79,32 +76,26 @@ An \textbf{array} is a collection of variables of the \textit{same type} that ar
 \begin{frame}
 \frametitle{Essential Syntax and Logic}
 
-\begin{block}{Declaration & Initialization}
-\texttt{type name[size];}\
-\texttt{int numbers[5] = {10, 20, 30, 40, 50};}
+\begin{block}{Declaration \& Initialization}
+\texttt{type name[size];}\pause\\
+\texttt{int numbers[5] = \{10, 20, 30, 40, 50\};}
 \end{block}
 
 \pause
 \begin{block}{Element Access}
-\texttt{variable = arrayName[index];}\
-\textit{Valid indices range from
-0
-0
- to
-size−1
-size−1
-.}
+\texttt{variable = arrayName[index];}\pause\\
+\textit{Valid indices range from 0 to size-1.}
 \end{block}
 
 \pause
 \begin{block}{Memory Address Formula}
-\texttt{Address of A[i] = BaseAddress + (i × sizeof(T))}
+\texttt{Address of A[i] = BaseAddress + (i × sizeof(T))}\pause
 
 \vspace{0.3cm}
-\textbf{Example:} \texttt{int scores[5];} starts at address \texttt{0x1000}
+\textbf{Example:} \texttt{int scores[5];} starts at address \texttt{0x1000}\pause
 \begin{itemize}
-    \item \texttt{scores[0]} → \texttt{0x1000 + (0 × 4)} = \texttt{0x1000}
-    \item \texttt{scores[1]} → \texttt{0x1000 + (1 × 4)} = \texttt{0x1004}
+    \item \texttt{scores[0]} → \texttt{0x1000 + (0 × 4)} = \texttt{0x1000}\pause
+    \item \texttt{scores[1]} → \texttt{0x1000 + (1 × 4)} = \texttt{0x1004}\pause
     \item \texttt{scores[2]} → \texttt{0x1000 + (2 × 4)} = \texttt{0x1008}
 \end{itemize}
 
@@ -123,14 +114,14 @@ size−1
 
 \vspace{0.5cm}
 
-Unlike individual variables which may be scattered in memory, arrays claim a single, solid block of space.
+Unlike individual variables which may be scattered in memory, arrays claim a single, solid block of space.\pause
 
 \vspace{0.5cm}
 
 \begin{itemize}
 \item The \textbf{Array Name} represents the starting address (Base Pointer).\pause
 \item The \textbf{Index} represents the "offset" or distance from the start.\pause
-\item Because the size of each element is known (e.g., 4 bytes for an integer), the computer can instantly calculate the location of any element.
+\item Because the size of each element is known (e.g., 4 bytes for an integer), the computer can instantly calculate the location of any element.\pause
 \end{itemize}
 
 \vspace{0.5cm}
@@ -247,7 +238,9 @@ Notice: Addresses increase by 4 bytes per index.\\
 \frametitle{Warning: The Bounds Trap}
 \textbf{File:} \texttt{arrayIntro_weird.cpp}\pause
 
-C++ does \textbf{not} check if you stay inside the array boundaries.\pause{} Accessing \texttt{arr[10]} of a size-5 array is technically allowed by the compiler but causes \textbf{Undefined Behavior}.\pause
+C++ does \textbf{not} check if you stay inside the array boundaries.\pause
+
+Accessing \texttt{arr[10]} of a size-5 array is technically allowed by the compiler but causes \textbf{Undefined Behavior}.\pause
 
 \begin{lstlisting}
 int aArr[] = {0, 1, 2, 3, 4}; // Size is 5
@@ -259,6 +252,7 @@ for(int i = 0; i < 12; i++) {
 cout << aArr[i] << " ";
 }
 \end{lstlisting}
+\pause
 
 \alert{[Imagine reading past the end of the array into "unknown" memory territory]}
 \end{frame}
@@ -268,20 +262,20 @@ cout << aArr[i] << " ";
 % -------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Student Exercises}
-\textbf{Goal:} Implement standard array utility functions.
+\textbf{Goal:} Implement standard array utility functions.\pause
 
 \vspace{0.5cm}
 
-\textbf{Exercise File:} \texttt{array_introduction_exercise.cpp}
+\textbf{Exercise File:} \texttt{array_introduction_exercise.cpp}\pause
 
 \vspace{0.5cm}
 
-You will complete the function bodies for:\pause
+You will complete the function bodies for:
 \begin{enumerate}
 \item \texttt{initializeArray}: Filling an array with values.\pause
 \item \texttt{randomArray}: Generating random data.\pause
 \item \texttt{arrayMaximum}: Finding the largest value.\pause
-\item \texttt{reverseArray}: Modifying the order of elements.
+\item \texttt{reverseArray}: Modifying the order of elements.\pause
 \end{enumerate}
 
 \vspace{0.2cm}
@@ -296,10 +290,7 @@ You will complete the function bodies for:\pause
 \frametitle{Summary}
 \begin{itemize}
 \item \textbf{Arrays} allow efficient storage of lists of data using contiguous memory.\pause
-\item \textbf{Indexing} starts at 0. The last valid index is always
-size−1
-size−1
-.\pause
+\item \textbf{Indexing} starts at 0. The last valid index is always size-1.\pause
 \item \textbf{Memory}: Arrays are just pointers to the start of a memory block.\pause
 \item \textbf{Safety}: You must manually ensure you do not read or write past the end of the array.\pause
 \item \textbf{Practice}: Mastering loops (for/while) is essential for effective array manipulation.
