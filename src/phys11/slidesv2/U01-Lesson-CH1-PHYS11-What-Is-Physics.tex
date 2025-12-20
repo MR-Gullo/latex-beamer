@@ -1,0 +1,2382 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\graphicspath{{../images/}{../../shared/images/}}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{1 \textbar{} What Is Physics?}\label{what-is-physics}
+
+The Instructor Answer Guide for Physics contains the worked-out answers
+to questions that appear at the~\textbf{end of each~chapter}.~ Grasp
+Check Questions, which occur in the body text of sections, and Practice
+Problems and Check Your Understanding exercises, which occur at the end
+of sections, are not included in the Instructor Answer Guide for this
+book.
+
+\subsection{Chapter Review}\label{chapter-review}
+
+\subsubsection{Concept Items}\label{concept-items}
+
+\paragraph{1.1 Physics: Definitions and
+Applications}\label{physics-definitions-and-applications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Which statement best compares and contrasts the aims and topics of
+  natural philosophy versus physics?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Natural philosophy included all aspects of nature including physics.
+\item
+  Natural philosophy included all aspects of nature excluding physics.
+\item
+  Natural philosophy and physics are different.
+\item
+  Natural philosophy and physics are essentially the same thing.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Natural philosophy included
+all aspects of nature by lumping physics in with other fields of
+science, such as chemistry and biology. Now, physics mainly describes
+the most fundamental aspects of our universe, such as motion, energy,
+matter, and space.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Which statement is NOT an underlying assumption essential to
+  scientific understandings?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Characteristics of the physical universe can be perceived and
+  objectively measured by human beings.
+\item
+  Explanations of natural phenomena can be established with absolute
+  certainty.
+\item
+  Fundamental physical processes dictate how characteristics of the
+  physical universe evolve.
+\item
+  The fundamental processes of nature operate the same way everywhere
+  and at all times.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Scientific explanations may
+be supported by all available evidence at a particular point in time,
+but science never precludes the possibility that some future observation
+could contradict the explanation, requiring a modification to the
+existing explanation or an entirely new explanation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Which question regarding a strain of genetically modified rice is NOT
+  one that science can answer?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  How does the yield of the genetically modified rice compare with that
+  of existing rice?
+\item
+  Is the genetically modified rice more resistant to infestation than
+  existing rice?
+\item
+  How does the nutritional value of the genetically modified rice
+  compare to that of existing rice?
+\item
+  Should the genetically modified rice be grown commercially and sold in
+  the marketplace?
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). Administrators need to make
+a judgment call based on scientific evidence regarding the safety and
+commercial viability of the genetically modified rice.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  What conditions imply that we can use classical physics without
+  considering special relativity or quantum mechanics?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  1. Matter is moving at speeds of less than roughly 1 percent the speed
+  of light.
+\end{enumerate}
+
+\begin{quote}
+2. Objects are large enough to be seen with the naked eye.
+
+3. There is the involvement of a strong gravitational field.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\setcounter{enumi}{1}
+\item
+  1. Matter is moving at speeds greater than roughly 1 percent the speed
+  of light.
+\end{enumerate}
+
+\begin{quote}
+2. Objects are large enough to be seen with the naked eye.
+
+3. There is the involvement of a strong gravitational field.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\setcounter{enumi}{2}
+\item
+  1. Matter is moving at speeds of less than roughly 1 percent the speed
+  of light.
+\end{enumerate}
+
+\begin{quote}
+2. Objects are too small to be seen with the naked eye.
+
+3. There is the involvement of only a weak gravitational field.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\setcounter{enumi}{3}
+\item
+  1. Matter is moving at speeds of less than roughly 1 percent the speed
+  of light.
+\end{enumerate}
+
+\begin{quote}
+2. Objects are large enough to be seen with the naked eye.
+
+3. There is the involvement of a weak gravitational field.
+\end{quote}
+
+\textbf{Solution} The correct answer is (D). The conditions that must be
+met include: (1) matter must be moving at speeds less than about 1
+percent of the speed of light; (2) microscopic (not subatomic) particles
+as well as those visible with the naked eye; (3) only weak gravitational
+fields, such as the field generated by Earth, can be involved.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  How could physics be useful in weather prediction?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Physics helps predict how burning fossil fuel releases pollutants.
+\item
+  Physics helps predict dynamics and movement of weather phenomena.
+\item
+  Physics helps predict the motion of tectonic plates.
+\item
+  Physics helps predict how the flowing water affects Earth's surface.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Physics is useful in
+weather prediction because the physical laws of motion and energy govern
+the movement of air masses and energy in our atmosphere, which is what
+generates weather.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  How do physical therapists use physics while on the job? Explain.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Physical therapists do not require knowledge of physics because their
+  job is mainly therapy and not physics.
+\item
+  Physical therapists do not require knowledge of physics because their
+  job is more social in nature and unscientific.
+\item
+  Physical therapists require knowledge of physics to know about muscle
+  contraction and release of energy.
+\item
+  Physical therapists require knowledge of physics to know about
+  chemical reactions inside the body and make decisions accordingly.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). Physical therapists must
+understand how muscles generate forces that allow the body to move and
+bend. Physics allows us to understand this.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  What is meant when a physical law is said to be universal?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The law can explain everything in the universe.
+\item
+  The law is applicable to all physical phenomena.
+\item
+  The law applies everywhere in the universe.
+\item
+  The law is the most basic one and all laws are derived from it.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). A universal law is one that
+explains a specific physics phenomenon, such as how the force of gravity
+is based on the mass of an object and that object's distance from
+another object. To be universal, this law should apply everywhere in the
+universe.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+  What subfield of physics could describe small objects traveling at
+  high speeds or experiencing a strong gravitational field?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  General theory of relativity
+\item
+  Classical physics
+\item
+  Quantum relativity
+\item
+  Special theory of relativity
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). Quantum relativity
+describes small objects traveling at high speeds or experiencing a
+strong gravitational field.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\item
+  Why is Einstein's theory of relativity considered part of modern
+  physics, as opposed to classical physics?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Because it is considered less outstanding than the classics of
+  physics, such as classical mechanics
+\item
+  Because popular physics is enjoyed by average people today, instead of
+  physics studied by the elite
+\item
+  Because the theory deals with very slow-moving objects and weak
+  gravitational fields
+\item
+  Because it was among the new 19th-century discoveries that changed
+  physics
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). Einstein's theory of
+relativity is considered part of modern physics because it was developed
+alongside other far-reaching scientific advances in the 19th century.
+These advances radically changed ideas in physics from those accepted in
+the previous (classical) period dominated by Newton and Galileo.
+
+\paragraph{1.2 The Scientific Methods}\label{the-scientific-methods}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\item
+  What is the difference between an observation and a hypothesis?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  An observation is seeing what happens; a hypothesis is a testable,
+  educated guess.
+\item
+  An observation is a hypothesis that has been confirmed.
+\item
+  Hypotheses and observations are independent of each other.
+\item
+  Hypotheses are conclusions based on some observations.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). An observation is a pattern
+or trend that a person sees in nature while a hypothesis is an educated
+guess that attempts to explain something about the observation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\item
+  How is modeling useful in studying the structure of the atom?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Modeling replaces the real system with something similar but easier to
+  examine.
+\item
+  Modeling replaces the real system with something more interesting to
+  examine.
+\item
+  Modeling replaces the real system with something with more realistic
+  properties.
+\item
+  Modeling includes more details than are present in the real system.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Modeling is useful in
+studying the structure of the atom because models replace the real atom
+with something simpler that has similar features and similar expected
+behavior.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\item
+  How strongly is a hypothesis supported by evidence compared to a
+  theory?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  A theory is supported by little evidence, if any, at first. A
+  hypothesis is supported by a large amount of available evidence.
+\item
+  A hypothesis is supported by little evidence, if any, at first. A
+  theory is supported by a large amount of available evidence.
+\item
+  A hypothesis is supported by little evidence, if any, at first. A
+  theory does not need any experiments for support.
+\item
+  A theory is supported by little evidence, if any, at first. A
+  hypothesis does not need any experiments for support.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). A hypothesis is an
+experimental test and doesn't necessarily need much evidence to prove
+the case. A theory, however, has been proven and needs to be supported
+so that any retrial shows that same theory holds true.
+
+\paragraph{1.3 The Language of Physics: Physical Quantities and
+Units}\label{the-language-of-physics-physical-quantities-and-units}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\item
+  Which option does NOT contribute to uncertainty?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The limitations of the measuring device
+\item
+  The skill of the person making the measurement
+\item
+  The regularities in the object being measured
+\item
+  Other factors that affect the outcome (depending on the situation)
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The object itself is what
+it is made of and does not take a skill in measurements like the rest of
+the choices.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\item
+  How does the independent variable in a graph differ from the dependent
+  variable?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The dependent variable varies linearly with the independent variable.
+\item
+  The dependent variable depends on the scale of the axis chosen, while
+  the independent variable does not.
+\item
+  The independent variable is directly manipulated or controlled by the
+  person doing the experiment, while dependent variable is the one that
+  changes as a result.
+\item
+  The dependent and independent variables are fixed by convention;
+  hence, they are the same.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The independent variable
+does not change as a result of changes in the dependent variable. The
+dependent variable, on the other hand, does change as a result of
+changes in the independent variable.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\item
+  What could you conclude about these two lines?
+\end{enumerate}
+
+\begin{quote}
+Line A has a slope of
+\includegraphics[width=0.34236in,height=0.15764in]{media/image1.png}.
+
+Line B has a slope of 12.0.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Line A is decreasing while line B is increasing, with line A being
+  much steeper than line~B.
+\item
+  Line A is decreasing while line B is increasing, with line B being
+  much steeper than line~A.
+\item
+  Line B is decreasing while line A is increasing, with line A being
+  much steeper than line~B.
+\item
+  Line B is decreasing while line A is increasing, with line B being
+  much steeper than line~A.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). You could conclude that
+line A is decreasing while line~B is increasing, with line B being much
+steeper than line A.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{15}
+\item
+  Velocity, or speed, is measured using the formula
+\end{enumerate}
+
+\begin{quote}
+\includegraphics[width=0.40764in,height=0.44444in]{media/image2.png},
+
+where \emph{v} is velocity, \emph{d} is the distance traveled, and
+\emph{t} is the time the object took to travel the distance.
+
+If the velocity-time data are plotted on a graph, which variable will be
+on which\\
+axis? Why?
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Time would be on the \emph{x}-axis and velocity on the \emph{y}-axis,
+  because time is an independent variable and velocity is a dependent
+  variable.
+\item
+  Velocity would be on the \emph{x}-axis and time on the \emph{y}-axis,
+  because time is the independent variable and velocity is the dependent
+  variable.
+\item
+  Time would be on the \emph{x}-axis and velocity on the \emph{y}-axis,
+  because time is a dependent variable and velocity is an independent
+  variable.
+\item
+  Velocity would be on the \emph{x}-axis and time on the \emph{y}-axis,
+  because time is a dependent variable and velocity is an independent
+  variable.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Time would be on the
+\emph{x}-axis and distance would be on the \emph{y}-axis, because time
+passes independently of how far the car travels. Therefore, time is the
+independent variable while distance is the dependent variable.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{16}
+\item
+  A good-quality measuring tape can be off by 0.50 cm over a distance of
+  20 m. What is its percent uncertainty in scientific notation?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=0.77778in,height=0.22222in]{media/image3.png}
+\item
+  \includegraphics[width=0.71319in,height=0.22222in]{media/image4.png}
+\item
+  \includegraphics[width=0.71319in,height=0.22222in]{media/image5.png}
+\item
+  \includegraphics[width=0.71319in,height=0.22222in]{media/image6.png}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A).
+
+\includegraphics[width=2.85208in,height=0.44444in]{media/image7.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\item
+  What is the definition of uncertainty?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Uncertainty is the number of assumptions made prior to the measurement
+  of a physical quantity.
+\item
+  Uncertainty is a measure of error in a measurement due to the use of a
+  noncalibrated instrument.
+\item
+  Uncertainty is a measure of deviation of the measured value from the
+  standard value.
+\item
+  Uncertainty is a measure of error in measurement due to external
+  factors like air friction and temperature.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). Uncertainty is a
+quantitative measure of how much your measured values deviate from a
+standard or expected value.
+
+\subsubsection{Critical Thinking Items}\label{critical-thinking-items}
+
+\paragraph{1.1 Physics: Definitions and
+Applications}\label{physics-definitions-and-applications-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{18}
+\item
+  In what sense does Einstein's theory of relativity illustrate that
+  physics describes fundamental aspects of our universe?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  It describes how speed affects different observers' measurements of
+  time and space.
+\item
+  It describes how different parts of the universe are far apart and do
+  not affect each other.
+\item
+  It describes how people think of other people's views from their own
+  frame of reference.
+\item
+  It describes how a frame of reference is necessary to describe
+  position or motion.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). According to
+Einstein\textquotesingle s theory of relativity, gravity or the speed of
+the observer can affect what they observe as measured time intervals and
+measured distances, as occurs with length contraction or time dilation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{19}
+\item
+  Yes or no---Can classical physics be used to accurately describe a
+  satellite moving at a speed of
+  \includegraphics[width=0.73125in,height=0.21319in]{media/image8.png}?
+  Explain why or why not.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  No, because the satellite is moving at a speed much slower than the
+  speed of the light and is not in a strong gravitational field
+\item
+  No, because the satellite is moving at a speed much slower than the
+  speed of the light and is in a strong gravitational field
+\item
+  Yes, because the satellite is moving at a speed much slower than the
+  speed of the light and it is not in a strong gravitational field
+\item
+  Yes, because the satellite is moving at a speed much slower than the
+  speed of the light and is in a strong gravitational field
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). Yes, classical physics
+could describe the motion of a satellite, because it is moving at a
+speed much slower than the speed of light, because it is not in a strong
+gravitational field, and because it involves an object that is visible
+to the naked eye.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{20}
+\item
+  What would be some ways in which physics was involved in building the
+  features of the room you are in right now?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Physics is involved in the structural strength and dimensions of the
+  room.
+\item
+  Physics is involved in the air composition inside the room.
+\item
+  Physics is involved in the desk arrangement inside the room.
+\item
+  Physics is involved in the behavior of living beings inside the room.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). The physics of gravity,
+weight, and forces was used to design the walls, ceilings, and floors in
+the room so they could hold up people and furniture. Knowledge of
+physics involving electricity went into developing lighting, fans,
+electrical outlets, and other electrical devices in the room.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{21}
+\item
+  What theory of modern physics describes the interrelationships between
+  space, time, speed, and gravity?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Atomic theory
+\item
+  Nuclear physics
+\item
+  Quantum mechanics
+\item
+  General relativity
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). Einstein came up with
+general relativity to explain how gravity is a result of bending of
+space and time.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{22}
+\item
+  According to Einstein's theory of relativity, how could you
+  effectively travel many years into Earth's future, but not age very
+  much yourself?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  By traveling at a speed equal to the speed of light
+\item
+  By traveling at a speed faster than the speed of light
+\item
+  By traveling at a speed much slower than the speed of light
+\item
+  By traveling at a speed slightly slower than the speed of light
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). You could do this by
+traveling away from Earth at near the speed of light, because measured
+time intervals are shorter in the frame of reference of the spaceship,
+in which you are at rest, than measured from Earth, where you are seen
+as moving.
+
+\paragraph{1.2 The Scientific Methods}\label{the-scientific-methods-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{23}
+\item
+  You notice that the water level flowing in a stream near your house
+  increases when it rains and the water turns brown. Which hypothesis
+  best explains why the water turns brown? Assume you have all of the
+  means to test the contents of the stream water.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The water in the stream turns brown because molecular forces between
+  water molecules are stronger than mud molecules.
+\item
+  The water in the stream turns brown because of the breakage of a weak
+  chemical bond with the hydrogen atom in the water molecule.
+\item
+  The water in the stream turns brown because it picks up dirt from the
+  bank as the water level increases when it rains.
+\item
+  The water in the stream turns brown because the density of the water
+  increases with increase in water level.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The brown color of water
+comes from the dirt that is picked up from the edges of the banks of the
+water.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{24}
+\item
+  Light travels as waves at an approximate speed of 300,000,000 m/s
+  (186,000 mi/s). Designers of devices that use mirrors and lenses model
+  the traveling light by straight lines, or light rays. Why would it be
+  useful to model the light as rays of light instead of describing them
+  accurately as electromagnetic waves?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  A model can be constructed in such a way that the speed of light
+  decreases.
+\item
+  Studying a model makes it easier to analyze the path that the light
+  follows.
+\item
+  Studying a model will help us visualize why light travels at such
+  great speed.
+\item
+  Modeling cannot be used to study traveling light because our eyes
+  cannot track the motion of light.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). It simplifies describing
+how light travels through space, and how lenses affect its path.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{25}
+\item
+  A friend says that he doesn't trust scientific explanations because
+  they are just theories, which are basically educated guesses. What
+  could you say to convince him that scientific theories are different
+  from the everyday use of the word theory?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  A theory is a scientific explanation that has been repeatedly tested
+  and supported by many experiments.
+\item
+  A theory is a hypothesis that has been tested and supported by some
+  experiments.
+\item
+  A theory is a set of educated guesses, but at least one of the guesses
+  remains true in each experiment.
+\item
+  A theory is a set of scientific explanations that has at least one
+  experiment in support of it.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). You could tell your friend
+that the word theory has a different meaning when used in science versus
+everyday speech. In science, a theory is a scientific explanation that
+has been repeatedly tested and supported by many experiments.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{26}
+\item
+  Which hypothesis cannot be tested experimentally?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The structure of any part of the broccoli is similar to the whole
+  structure of the broccoli.
+\item
+  Ghosts are the souls of people who have died.
+\item
+  The average speed of air molecules increases with temperature.
+\item
+  A vegetarian is less likely to be affected by night blindness.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Ghosts represent the souls
+of people who have died. This is a hypothesis that involves testing the
+metaphysical.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{27}
+\item
+  Would it be possible to scientifically prove that a supreme being
+  exists or not? Briefly explain your answer.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  It can be proved scientifically because it is a testable hypothesis.
+\item
+  It cannot be proved scientifically because it is not a testable
+  hypothesis.
+\item
+  It can be proved scientifically because it is not a testable
+  hypothesis.
+\item
+  It cannot be proved scientifically because it is a testable
+  hypothesis.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). It would not be possible to
+test for or against the existence of a supreme being because there is no
+way to generate a testable hypothesis along these lines. This is because
+data could never be collected, as no one knows what characteristics we
+could look for or measure that would indicate the presence of such a
+being.
+
+\paragraph{\texorpdfstring{1.3 The Language of Physics: Physical
+Quantities and Units
+}{1.3 The Language of Physics: Physical Quantities and Units }}\label{the-language-of-physics-physical-quantities-and-units-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{28}
+\item
+  A marathon runner completes a 42.188-km course in 2 h, 30 min, and 12
+  s. There is an uncertainty of 25 m in the distance traveled and an
+  uncertainty of 1 s in the elapsed time.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Calculate the percent uncertainty in the distance.
+\item
+  Calculate the uncertainty in the elapsed time.
+\item
+  What is the average speed in meters per second?
+\item
+  What is the uncertainty in the average speed?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  0.059\%, 0.01\%, 0.468 m/s, 0.0003 m/s
+\item
+  0.059\%, 0.01\%, 0.468 m/s, 0.07 m/s
+\item
+  0.59\%, 8.33\%, 4.681 m/s, 0.003 m/s
+\item
+  0.059\%, 0.01\%, 4.681 m/s, 0.003 m/s
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D).
+
+\includegraphics[width=3.68542in,height=2.37014in]{media/image9.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{29}
+\item
+  A car engine moves a piston with a circular cross section of
+  \includegraphics[width=1.19444in,height=0.19444in]{media/image10.png}
+  diameter a distance of
+  \includegraphics[width=1.19444in,height=0.19444in]{media/image11.png}
+  to compress the gas in the cylinder. By what amount did the gas
+  decrease in volume in cubic centimeters? Find the uncertainty in this
+  volume.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=1.25in,height=0.22222in]{media/image12.png}
+\item
+  \includegraphics[width=1.25in,height=0.22222in]{media/image13.png}
+\item
+  \includegraphics[width=1.25in,height=0.22222in]{media/image14.png}
+\item
+  \includegraphics[width=1.07431in,height=0.22222in]{media/image15.png}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D).
+
+\includegraphics[width=5.66667in,height=0.73125in]{media/image16.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{30}
+\item
+  What would be the slope for a line passing through these two points?
+\end{enumerate}
+
+\begin{quote}
+Point 1: (1, 0.1)
+
+Point 2: (7, 26.8)
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  2.4
+\item
+  4.5
+\item
+  6.2
+\item
+  6.8
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B).
+
+\includegraphics[width=1.94444in,height=0.43542in]{media/image17.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{31}
+\item
+  The sides of a small rectangular box are measured 1.80~cm and 2.05~cm
+  long and 3.1~cm high. What is its volume and uncertainty in cubic
+  centimeters? Assume the measuring device is accurate to
+  \includegraphics[width=0.75in,height=0.19444in]{media/image18.png}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=0.99097in,height=0.22222in]{media/image19.png}
+\item
+  \includegraphics[width=0.99097in,height=0.22222in]{media/image20.png}
+\item
+  \includegraphics[width=0.99097in,height=0.22222in]{media/image21.png}
+\item
+  \includegraphics[width=1.07431in,height=0.22222in]{media/image22.png}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The volume and uncertainty
+in volume is calculated as follows:
+
+\includegraphics[width=4.05556in,height=1.29653in]{media/image23.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{32}
+\item
+  What is the approximate number of atoms in a bacterium? Assume that
+  the average mass of an atom in the bacterium is 10 times the mass of a
+  hydrogen atom. (Hint---The mass of a hydrogen atom is approximately
+  \includegraphics[width=0.58333in,height=0.26875in]{media/image24.png}
+  and the mass of a bacterium is approximately
+  \includegraphics[width=0.66667in,height=0.26875in]{media/image25.png}
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=0.30556in,height=0.22222in]{media/image26.png}
+  atoms
+\item
+  \includegraphics[width=0.30556in,height=0.22222in]{media/image27.png}
+  atoms
+\item
+  \includegraphics[width=0.30556in,height=0.22222in]{media/image28.png}
+  atoms
+\item
+  \includegraphics[width=0.30556in,height=0.22222in]{media/image29.png}
+  atoms
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Assume the ratio of atoms
+to mass is the same in both hydrogen and bacterium. Therefore,
+
+\includegraphics[width=2.52778in,height=1.49097in]{media/image30.png}
+
+\subsubsection{\texorpdfstring{Problems }{Problems }}\label{problems}
+
+\paragraph{1.3 The Language of Physics: Physical Quantities and
+Units}\label{the-language-of-physics-physical-quantities-and-units-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{33}
+\item
+  A commemorative coin that sells for \$40 is advertised to be plated
+  with 15 mg gold. Suppose gold is worth about \$1,300 per ounce. Which
+  option best represents the value of the gold in the coin?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \$0.33
+\item
+  \$0.69
+\item
+  \$3.30
+\item
+  \$6.90
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B).
+
+\includegraphics[width=2.27778in,height=0.46319in]{media/image31.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{34}
+\item
+  If a marathon runner ran 9.5 mi in one direction, 8.89 mi in another
+  direction, and 2.333 mi in a third direction, how much distance did
+  the runner run? Be sure to report your answer using the proper number
+  of significant figures.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  20 mi
+\item
+  20.7 mi
+\item
+  20.72 mi
+\item
+  20.732 mi
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B).
+
+\includegraphics[width=1.86111in,height=0.19444in]{media/image32.png}
+
+We can only report two significant figures because, when adding, the
+answer should have the same number of places as the least-precise
+starting value, which in this case is the tenths place in 9.5.
+Therefore, the final answer is 20.7 mi.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{35}
+\item
+  The speed limit on some interstate highways is roughly 80 km/h. What
+  is this in meters per second? How many miles per hour is this?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  62 m/s, 27.8 mph
+\item
+  22.2 m/s, 49.7 mph
+\item
+  62 m/s, 2.78 mph
+\item
+  2.78 m/s, 62 mph
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B).
+
+\includegraphics[width=2.63889in,height=0.86111in]{media/image33.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{36}
+\item
+  The length and width of a rectangular room are measured to be
+  \includegraphics[width=1.19444in,height=0.19444in]{media/image34.png}
+  by \includegraphics[width=1.25in,height=0.19444in]{media/image35.png}
+  What is the area of the room and its uncertainty in square meters?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=1.08333in,height=0.22222in]{media/image36.png}
+\item
+  \includegraphics[width=1.08333in,height=0.22222in]{media/image37.png}
+\item
+  \includegraphics[width=1.08333in,height=0.22222in]{media/image38.png}
+\item
+  \includegraphics[width=1.08333in,height=0.22222in]{media/image39.png}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D).
+
+\includegraphics[width=2.77778in,height=0.75in]{media/image40.png}
+
+\subsubsection{\texorpdfstring{Performance Task
+}{Performance Task }}\label{performance-task}
+
+\paragraph{1.3 The Language of Physics: Physical Quantities and
+Units}\label{the-language-of-physics-physical-quantities-and-units-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{37}
+\item
+  Part A. Create a new system of units to describe something that
+  interests you. Your unit should be described using at least two
+  subunits. For example, you can decide to measure the quality of songs
+  using a new unit called \emph{song awesomeness}. Song awesomeness is
+  measured by the number of songs downloaded and the number of times the
+  song was used in movies.
+\end{enumerate}
+
+\begin{quote}
+Part B. Create an equation that shows how to calculate your unit. Then,
+using your equation, create a sample data set that you could graph. Are
+your two subunits related linearly, quadratically, or inversely?
+\end{quote}
+
+\textbf{Solution} Answers will vary. Sample answer:
+
+Part A. Someone could create a system where 1 week is 10 days, like the
+French decimal time that was proposed.
+
+Part B. If we assume one day is the same in both the French system and
+our current system of time, we can create a ratio of 1 standard week/1
+French week = 7~standard days/10 French days or
+\includegraphics[width=0.62986in,height=0.21319in]{media/image41.png}
+where \emph{x} is the number of French weeks and \emph{y} is the number
+of standard weeks. These two different measurements of weeks are
+linearly related.
+
+\subsection{Test Prep}\label{test-prep}
+
+\subsubsection{Multiple Choice}\label{multiple-choice}
+
+\paragraph{1.1 Physics: Definitions and
+Applications}\label{physics-definitions-and-applications-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{38}
+\item
+  Modern physics could best be described as the combination of which
+  theories?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Quantum mechanics and Einstein's theory of relativity
+\item
+  Quantum mechanics and classical physics
+\item
+  Newton's laws of motion and classical physics
+\item
+  Newton's laws of motion and Einstein's theory of relativity
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Classical physics and
+Newton's laws of motion were studied much earlier and are not considered
+in the modern physics field.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{39}
+\item
+  Which topic could be studied accurately using classical physics?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The strength of gravity within a black hole
+\item
+  The motion of a plane through the sky
+\item
+  The collisions of subatomic particles
+\item
+  The effect of gravity on the passage of time
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Studying gravity requires
+general relativity and subatomic particles requires quantum mechanics.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{40}
+\item
+  Which statement best describes why knowledge of physics is necessary
+  to understand all other sciences?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Physics explains how energy passes from one object to another.
+\item
+  Physics explains how gravity works.
+\item
+  Physics explains the motion of objects that can be seen with the naked
+  eye.
+\item
+  Physics explains the fundamental aspects of the universe.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). Physics explains the
+fundamental aspects of the universe that are the basis for other
+sciences, such as chemistry and biology.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{41}
+\item
+  What does radiation therapy, used to treat cancer patients, have to do
+  with physics?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Understanding how cells reproduce is mainly about physics.
+\item
+  Predictions of the side effects from the radiation therapy are based
+  on physics.
+\item
+  The devices used for generating some kinds of radiation are based on
+  principles of physics.
+\item
+  Predictions of the life expectancy of patients receiving radiation
+  therapy are based on physics.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). Physics provides an
+understanding of radiation works, and how to construct a device that
+emits it.
+
+\paragraph{1.2 The Scientific Methods}\label{the-scientific-methods-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{42}
+\item
+  The free-electron model of metals explains some of the important
+  behaviors of metals by assuming the metal's electrons move freely
+  through the metal without repelling one another. In what sense is the
+  free-electron theory based on a model?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Its use requires constructing replicas of the metal wire in the lab.
+\item
+  It involves analyzing an imaginary system simpler than the real wire
+  it resembles.
+\item
+  It examines a model, or ideal, behavior that other metals should
+  imitate.
+\item
+  It attempts to examine the metal in a very realistic, or model, way.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). It involves analyzing an
+imaginary system simpler than the real wire it resembles. Creating a
+model like this helps us get predicable results without having to do
+complicated calculations.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{43}
+\item
+  A scientist wishes to study the motion of about 1,000 molecules of gas
+  in a container by modeling them as tiny billiard balls bouncing
+  randomly off one another. What is needed to calculate and store data
+  on the balls' detailed motion?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  A group of hypotheses that cannot be practically tested in real life
+\item
+  A computer that can store and perform calculations on large data sets
+\item
+  A large amount of experimental results on the molecules and their
+  motion
+\item
+  A collection of hypotheses that have not yet been tested regarding the
+  molecules
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Without a computer, it
+would be impossible to track each ball's motion and interactions
+associated with it.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{44}
+\item
+  When a large body of experimental evidence supports a hypothesis, what
+  may the hypothesis eventually be considered?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Observation
+\item
+  Insight
+\item
+  Conclusion
+\item
+  Law
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). A scientific law is
+supported by a large body of experimental evidence.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{45}
+\item
+  While watching some ants outside of your home, you notice that the
+  worker ants gather in a specific area on your lawn. Which statement is
+  a testable hypothesis that attempts to explain why the ants gather in
+  that specific area on the lawn?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The worker ants thought it was a nice location.
+\item
+  The worker ants may have to find a spot for the queen to lay eggs.
+\item
+  There may be some food particles lying there.
+\item
+  The worker ants are supposed to group together at a place.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The ants gather in that
+spot of the yard because there is a large supply of food particles on
+the ground. This hypothesis is testable.
+
+\paragraph{1.3 The Language of Physics: Physical Quantities and
+Units}\label{the-language-of-physics-physical-quantities-and-units-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{46}
+\item
+  Which option describes a length that is
+  \includegraphics[width=0.65764in,height=0.22222in]{media/image42.png}
+  of a meter?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  2.0 kilometers
+\item
+  2.0 megameters
+\item
+  2.0 millimeters
+\item
+  2.0 micrometers
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The prefix notation for
+\includegraphics[width=0.33333in,height=0.25in]{media/image43.png} is
+\emph{milli--}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{47}
+\item
+  Suppose that a bathroom scale reads a person's mass as 65 kg with a
+  3~percent uncertainty. What is the uncertainty in that person's mass
+  in kilograms?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  2 kg
+\item
+  98 kg
+\item
+  5 kg
+\item
+  0 kg
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). The scale has an
+uncertainty of 2 kg. If you multiply 65~kg by 3 percent, the result is 2
+kg.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{48}
+\item
+  Which option best describes a variable?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  A trend that shows an exponential relationship
+\item
+  Something whose value can change over multiple measurements
+\item
+  A measure of how much a plot line changes along the \emph{y}-axis
+\item
+  Something that remains constant over multiple measurements
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Variables depend on the
+interactions and trends that result from them.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{49}
+\item
+  A high school track coach has just purchased a new stopwatch that has
+  an uncertainty of
+  \includegraphics[width=0.59236in,height=0.19444in]{media/image44.png}.
+  Runners on the team regularly complete 100-m sprints in 12.49~s to
+  15.01~s. At the school's last track meet, the first-place sprinter
+  finished in 12.04~s and the second-place sprinter finished in 12.07~s.
+\end{enumerate}
+
+\begin{quote}
+Yes or no---Will the coach's new stopwatch be helpful in timing the
+sprint team? Why or why not?
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  No, the uncertainty in the stopwatch is too large to effectively
+  differentiate between the sprint times.
+\item
+  No, the uncertainty in the stopwatch is too small to effectively
+  differentiate between the sprint times.
+\item
+  Yes, the uncertainty in the stopwatch is too large to effectively
+  differentiate between the sprint times.
+\item
+  Yes, the uncertainty in the stopwatch is too small to effectively
+  differentiate between the sprint times.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). No, the uncertainty in the
+stopwatch is too great to effectively differentiate between the sprint
+times. The difference between the second set of times is 0.03 s, which
+is greater than the uncertainty given, 0.05 s.
+
+\subsubsection{\texorpdfstring{Short Answer
+}{Short Answer }}\label{short-answer}
+
+\paragraph{1.1 Physics: Definitions and
+Applications}\label{physics-definitions-and-applications-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{50}
+\item
+  What are the aims of physics?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Physics aims to explain the fundamental aspects of our universe and
+  how these aspects interact with one another.
+\item
+  Physics aims to explain the biological aspects of our universe and how
+  these aspects interact with one another.
+\item
+  Physics aims to explain the composition, structure, and changes in
+  matter occurring in the universe.
+\item
+  Physics aims to explain the social behavior of living beings in the
+  universe.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Physics aims to describe
+the fundamental aspects of our universe, namely energy, matter, space,
+motion and time. It also describes how these aspects of our universe
+interact with one another.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{51}
+\item
+  What are the fields of magnetism and electricity? State how are they
+  are related.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Magnetism describes the attractive force between a magnetized object
+  and a metal like iron. Electricity involves the study of electric
+  charges and their movements. Magnetism is not related to electricity.
+\item
+  Magnetism describes the attractive force between a magnetized object
+  and a metal like iron. Electricity involves the study of electric
+  charges and their movements. Magnetism is produced by a flow
+  electrical charges.
+\item
+  Magnetism involves the study of electric charges and their movements.
+  Electricity describes the attractive force between a magnetized object
+  and a metal. Magnetism is not related to electricity.
+\item
+  Magnetism involves the study of electric charges and their movements.
+  Electricity describes the attractive force between a magnetized object
+  and a metal. Magnetism is produced by the flow electrical charges.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Magnetism describes the
+attractive force between a magnetized object and a metal like iron.
+Electricity involves the study of electric charges and their movements.
+One way in which magnetism is produced is by a flow of electrical
+charges. Although these two areas, magnetism and electricity, seem
+different, in fact they are related to each other as we will find out
+later on.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{52}
+\item
+  Which two topics are physicists trying to unify with relativistic
+  quantum mechanics? How will this unification create a greater
+  understanding of our universe?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Relativistic quantum mechanics unifies quantum mechanics with
+  Einstein's theory of relativity. The unified theory creates a greater
+  understanding of our universe because it can explain objects of all
+  sizes and masses.
+\item
+  Relativistic quantum mechanics unifies classical mechanics with
+  Einstein's theory of relativity. The unified theory creates a greater
+  understanding of our universe because it can explain objects of all
+  sizes and masses.
+\item
+  Relativistic quantum mechanics unifies quantum mechanics with
+  Einstein's theory of relativity. The unified theory creates a greater
+  understanding of our universe because it is unable to explain objects
+  of all sizes and masses.
+\item
+  Relativistic quantum mechanics unifies classical mechanics with the
+  Einstein's theory of relativity. The unified theory creates a greater
+  understanding of our universe because it is unable to explain objects
+  of all sizes and masses.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Relativistic quantum
+mechanics unifies quantum mechanics with Einstein's theory of
+relativity. Unifying these theories would create a greater understanding
+of our universe by explaining how large-scale processes, such as time,
+space, and gravity, relate to very small-scale objects, such as the
+subatomic particles studied in quantum mechanics.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{53}
+\item
+  The findings of studies in quantum mechanics have been described as
+  strange or weird compared to those of classical physics. Why is this
+  so?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Because the phenomena it explains are outside the normal range of
+  human experience which deals with much larger objects
+\item
+  Because the phenomena it explains can be perceived easily, namely,
+  ordinary-sized objects
+\item
+  Because the phenomena it explains are outside the normal range of
+  human experience, namely, very large and very fast objects
+\item
+  Because the phenomena it explains can be perceived easily, namely,
+  very large and very fast objects
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Findings in quantum
+mechanics may be described as weird or strange because they involve
+phenomena that are outside the normal range of human experience, which
+deals with much larger objects.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{54}
+\item
+  How could knowledge of physics help you find a faster way to drive
+  from your house to your school?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Physics can explain the traffic on a particular street and help us
+  know about the traffic in advance.
+\item
+  Physics can explain the ongoing construction of roads on a particular
+  street and help us know about delays in the traffic in advance.
+\item
+  Physics can explain distances and speed limits on a particular street,
+  and help us calculate faster routes.
+\item
+  Physics can explain the closing of a particular street and help us
+  calculate faster routes.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). By studying the distances
+of certain streets, as well as their speed limits or the car's average
+velocity, it would be possible to calculate how long certain routes take
+and which are the shortest.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{55}
+\item
+  How could knowledge of physics help you build a sound and
+  energy-efficient house?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  An understanding of force, pressure, heat, and electricity, which all
+  involve physics, will help me design a sound and energy-efficient
+  house.
+\item
+  An understanding of the air composition and chemical composition of
+  matter, which involves physics, will help me design a sound and
+  energy-efficient house.
+\item
+  An understanding of material cost and economic factors involving
+  physics will help me design a sound and energy-efficient house.
+\item
+  An understanding of geographical location and social environment,
+  which involves physics, will help me design a sound and
+  energy-efficient house.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). An understanding of force,
+weight, and pressure will help you design a structurally sound house,
+while a knowledge of heat and electricity would help you build an
+energy-efficient house. Although external considerations of location and
+materials may be important to an individual, the concept of forces and
+pressure make sure your house is stable under any stressful condition
+while heat and electricity are important for energy efficiency.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{56}
+\item
+  What aspects of physics would a chemist likely study in trying to
+  discover a new chemical reaction?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Physics is involved in understanding whether the reactants and
+  products dissolve in water.
+\item
+  Physics is involved in understanding the amount of energy released or
+  required in a chemical reaction.
+\item
+  Physics is involved in what the products of the reaction will be.
+\item
+  Physics is involved in understanding the types of ions produced in a
+  chemical reaction.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). A chemist would likely need
+knowledge of the atoms involved in the chemical reaction, as well as the
+amount of energy needed or given off by the reaction.
+
+\paragraph{1.2 The Scientific Methods}\label{the-scientific-methods-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{57}
+\item
+  You notice that it takes more force to get a large box to start
+  sliding across the floor than it takes to get the box sliding faster
+  once it is already moving. Which option is a testable hypothesis that
+  attempts to explain this observation?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The floor has greater distortions of space-time for moving the sliding
+  box faster than for the box at rest.
+\item
+  The floor has greater distortions of space-time for the box at rest
+  than for the sliding box.
+\item
+  The resistance between the floor and the box is less when the box is
+  sliding than when the box is at rest.
+\item
+  The floor dislikes having objects move across it and therefore holds
+  the box rigidly in place until it cannot resist the force.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The box is harder to move
+from rest because there is greater resistance.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{58}
+\item
+  Which experiment tests the hypothesis?
+\end{enumerate}
+
+\begin{quote}
+Driving on a gravel road causes greater damage to a car than driving on
+a dirt road.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  To test the hypothesis, compare the damage to the car by driving it on
+  a smooth road and a gravel road.
+\item
+  To test the hypothesis, compare the damage to the car by driving it on
+  a smooth road and a dirt road.
+\item
+  To test the hypothesis, compare the damage to the car by driving it on
+  a gravel road and the dirt road.
+\item
+  This hypothesis is not testable.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). To test the hypothesis,
+compare the damage to the car by driving it on a gravel road and the
+dirt road.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{59}
+\item
+  How is a physical model, such as a spherical mass held in place by
+  springs, used to represent an atom vibrating in a solid, similar to a
+  computer-based model, such as one predicting how gravity affects the
+  orbits of the planets?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Both a physical model and a computer-based model should be built
+  around a hypothesis and could be able to test the hypothesis.
+\item
+  Both a physical model and a computer-based model should be built
+  around a hypothesis, but they cannot be used to test the hypothesis.
+\item
+  Both a physical model and a computer-based model should be built
+  around the\\
+  results of scientific studies and could be used to make predictions
+  about the system under study.
+\item
+  Both a physical model and a computer-based model should be built
+  around the\\
+  results of scientific studies but cannot be used to make predictions
+  about the system under study.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). Both a physical model and a
+computer-based model should be built around the results of scientific
+studies, and could be used to make predictions about the system under
+study. After forming this model, it should be tested under any possible
+condition to make sure predictable results occur.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{60}
+\item
+  What are the advantages and disadvantages of using a model to predict
+  a life-or-death situation, such as whether an asteroid will strike
+  Earth?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  The advantage of using a model is that it provides predictions
+  quickly, but the disadvantage of using a model is that it could make
+  erroneous predictions.
+\item
+  The advantage of using a model is that it provides accurate
+  predictions, but the disadvantage of using a model is that it takes a
+  long time to make predictions.
+\item
+  The advantage of using a model is that it provides predictions quickly
+  without any error. There are no disadvantages of using a scientific
+  model.
+\item
+  The disadvantage of using models is that it takes longer to make
+  predictions and the predictions are inaccurate. There are no
+  advantages to using a scientific model.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). A model involves
+simplification and approximation of the real system and can give
+inaccurate results. The advantages of using a model for a life-or-death
+situation is that it could provide predictions quickly, once it is
+constructed, and would not involve sending people into dangerous
+situations. The disadvantage, however, would be the fact that most
+models cannot incorporate every variable in a system. Therefore, the
+model may make erroneous predictions.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{61}
+\item
+  A friend tells you that a scientific law cannot be changed. Is your
+  friend correct? Briefly explain your answer.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Correct, because laws are theories that have been proven true
+\item
+  Correct, because theories are laws that have been proven true
+\item
+  Incorrect, because a law is changed if new evidence contradicts it
+\item
+  Incorrect, because a law is changed when a theory contradicts it
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). The friend is incorrect
+because scientific laws and theories are continually tested, especially
+in light of new scientific discoveries. Therefore, even a long-supported
+scientific law can be proven incorrect by new discoveries.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{62}
+\item
+  How does a scientific law compare to a local law, such as that
+  governing parking at your school, in terms of whether laws can be
+  changed, and how universal a law is?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  A local law applies only in a specific area, but a scientific law is
+  applicable throughout the universe. Both the local law and the
+  scientific law can change.
+\item
+  A local law applies only in a specific area, but a scientific law is
+  applicable throughout the universe. A local law can change, but a
+  scientific law cannot be changed.
+\item
+  A local law applies throughout the universe but a scientific law is
+  applicable only in a specific area. Both the local and the scientific
+  law can change.
+\item
+  A local law applies throughout the universe, but a scientific law is
+  applicable only in a specific area. A local law can change, but a
+  scientific law cannot be changed.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). Both scientific and local
+laws can be changed, but they differ in their universality. A local law
+applies only in a specific area, such as in a city or a single school.
+Scientific laws apply throughout the universe.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{63}
+\item
+  Can the validity of a model be limited or must it be universally
+  valid? How does this compare to the required validity of a theory or a
+  law?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Models, theories, and laws must be universally valid.
+\item
+  Models, theories, and laws have only limited validity.
+\item
+  Models have limited validity, while theories and laws are universally
+  valid.
+\item
+  Models and theories have limited validity, while laws are universally
+  valid.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). Models often have limited
+validity because it is very hard to fully model a complicated system.
+However, models can still be very useful despite not being 100 percent
+valid. Theories also do not have to be universally valid and can explain
+either very broad or very narrow observations. Laws, however, should be
+universally valid.
+
+\paragraph{1.3 The Language of Physics: Physical Quantities and
+Units}\label{the-language-of-physics-physical-quantities-and-units-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{64}
+\item
+  The speed of sound is measured at 342 m/s on a certain day. What is
+  this in kilometers per hour? Report your answer in scientific
+  notation.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=1.11111in,height=0.25in]{media/image45.png}
+\item
+  \includegraphics[width=1.08333in,height=0.25in]{media/image46.png}
+\item
+  \includegraphics[width=1in,height=0.25in]{media/image47.png}
+\item
+  \includegraphics[width=1.14792in,height=0.25in]{media/image48.png}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B).
+
+\includegraphics[width=3.13889in,height=0.44444in]{media/image49.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{65}
+\item
+  What is the main difference between the metric system and the U.S.
+  customary system?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  In the metric system, unit changes are based on powers of 10, while in
+  the U.S. customary system, each unit conversion has unrelated
+  conversion factors.
+\item
+  In the metric system, each unit conversion has unrelated conversion
+  factors, while in the U.S. customary system, unit changes are based on
+  powers of 10.
+\item
+  In the metric system, unit changes are based on powers of 2, while in
+  the U.S. customary system, each unit conversion has unrelated
+  conversion factors.
+\item
+  In the metric system, each unit conversion has unrelated conversion
+  factors, while in the U.S. customary system, unit changes are based on
+  powers of 2.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). The metric system and the
+U.S. customary system differ in how the units appropriate for different
+size ranges convert from one to another. In the metric system, the units
+in different size ranges are related by powers of 10 (for example
+\includegraphics[width=1.07431in,height=0.21319in]{media/image50.png}).
+In the customary system, the units change by unique amounts for each
+range and each kind of measurement, such as how there are 8 ounces in a
+cup but then 2 cups in a pint.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{66}
+\item
+  An infant's pulse rate is measured to be
+  \includegraphics[width=1.28681in,height=0.22222in]{media/image51.png}
+  What is the percent uncertainty in this measurement?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  2\%
+\item
+  3\%
+\item
+  4\%
+\item
+  5\%
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C).
+
+\includegraphics[width=3.53681in,height=0.44444in]{media/image52.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{67}
+\item
+  How does the uncertainty of a measurement relate to the accuracy and
+  precision of the measuring device? Include the definitions of accuracy
+  and precision in your answer.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  A decrease in the precision of a measurement increases the uncertainty
+  of the measurement, while a decrease in accuracy does not.
+\item
+  A decrease in either the precision or accuracy of a measurement
+  increases the uncertainty of the measurement.
+\item
+  An increase in either the precision or accuracy of a measurement will
+  increase the uncertainty of that measurement.
+\item
+  An increase in the accuracy of a measurement will increase the
+  uncertainty of that measurement, while an increase in precision will
+  not.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Decreases in either the
+precision or accuracy of a measurement will increase the uncertainty of
+that measurement. In the case of precision, if the measuring device
+cannot reliably give the same measurement, it will increase the
+uncertainty of the measurement. Likewise, if the measuring device is not
+accurate, it will not produce measurements that represent reality, also
+increasing the uncertainty of the measurement.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{68}
+\item
+  What are all of the characteristics that can be determined about a
+  straight line with a slope of
+  \includegraphics[width=0.22222in,height=0.19444in]{media/image53.png}
+  and a \emph{y}-intercept of 50 on a graph?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Based on the information, the line has a negative slope. Because its
+  \emph{y}-intercept is 50 and its slope is negative, this line
+  gradually rises on the graph as the \emph{x}-value increases.
+\item
+  Based on the information, the line has a negative slope. Because its
+  \emph{y}-intercept is 50 and its slope is negative, this line
+  gradually moves downward on the graph as the \emph{x}-value increases.
+\item
+  Based on the information, the line has a positive slope. Because its
+  \emph{y}-intercept is 50 and its slope is positive, this line
+  gradually rises on the graph as the \emph{x}-value increases.
+\item
+  Based on the information, the line has a positive slope. Because its
+  \emph{y}-intercept is 50 and its slope is positive, this line
+  gradually moves downward on the graph as the \emph{x}-value increases.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Based on this information,
+one could tell that the line drops, as it has a negative slope. In
+addition, because the \emph{y}-intercept is 50 and the slope is
+\includegraphics[width=0.26875in,height=0.20347in]{media/image54.png}
+this line makes a very gradual drop as the \emph{x}-values increase.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{69}
+\item
+  The graph shows the temperature change over time of a heated cup of
+  water.
+\end{enumerate}
+
+\begin{quote}
+\includegraphics[width=3.14075in,height=3.03111in,alt={A graph titled Temperature Change of Water Over Time. The x-axis plots time in minutes, from 0 to 10, in increments of 1. The y-axis plots temperature in degrees Celsius, from 0 to 100, in increments of 10. A line begins at 0 on the x-axis and 20 on the y-axis, slopes steeply upward to six on the x-axis and 100 on the y-axis, then continues horizontally to 10 on the x-axis.}]{media/image55.png}
+
+What is the slope of the graph between the time period 2 min and 5 min?
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=0.82431in,height=0.21319in]{media/image56.png}
+\item
+  \includegraphics[width=0.94444in,height=0.21319in]{media/image57.png}
+\item
+  \includegraphics[width=0.86111in,height=0.21319in]{media/image58.png}
+\item
+  \includegraphics[width=0.72222in,height=0.21319in]{media/image59.png}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (D). The slope of the line
+between 2 min and 5 min is
+\includegraphics[width=0.73125in,height=0.22222in]{media/image60.png}
+
+\includegraphics[width=2.77778in,height=0.43542in]{media/image61.png}
+
+\subsubsection{\texorpdfstring{Extended Response
+}{Extended Response }}\label{extended-response}
+
+\paragraph{1.2 The Scientific Methods}\label{the-scientific-methods-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{70}
+\item
+  You wish to perform an experiment on the stopping distance of your new
+  car. Which specific experiment measures the distance? Be sure to
+  specifically state how you will set up and take data during your
+  experiment.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Drive the car at exactly 50 mph and then press harder on the
+  accelerator pedal until the velocity reaches 60 mph and record the
+  distance this takes.
+\item
+  Drive the car at exactly 50 mph and then apply the brakes until it
+  stops and record the distance this takes.
+\item
+  Drive the car at exactly 50 mph and then apply the brakes until it
+  stops and record the time it takes.
+\item
+  Drive the car at exactly 50 mph and then apply the accelerator until
+  it reaches 60~mph and record the time it takes.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). Drive the car at exactly 50
+mph and then apply the brakes until it stops and record the distance
+this takes. For example:
+
+Hypothesis: I hypothesize that the car will come to a complete stop in 3
+seconds when going 50 mph.
+
+Experiment: Drive the car exactly at 30 mph and then time from when the
+brake is depressed to when you feel the lurching back of the car that
+indicates it has stopped.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{71}
+\item
+  You wish to make a model showing how traffic flows around your city or
+  local area. What are some hypotheses that your model could test, and
+  what are the model's limitations in terms of what could NOT be tested?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  1. Testable hypotheses: The gravitational pull on each vehicle while
+  in motion and the average speed of vehicles is 40 mph\\
+  2. Nontestable hypotheses: The average number of vehicles passing is
+  935 per day and carbon emission from each moving vehicle
+\item
+  1. Testable hypotheses: The average number of vehicles passing is 935
+  per day and the average speed of vehicles is 40 mph\\
+  2. Nontestable hypotheses: The gravitational pull on each vehicle
+  while in motion and the carbon emission from each of the moving
+  vehicle
+\item
+  1. Testable hypotheses: The average number of vehicles passing is 935
+  per day and the carbon emission from each of the moving vehicle\\
+  2. Nontestable hypotheses: The gravitational pull on each vehicle
+  while in motion and the average speed of the vehicles is 40 mph
+\item
+  1. Testable hypothesis: The average number of vehicles passing is 935
+  per day and the gravitational pull on each vehicle while in motion\\
+  2. Nontestable hypothesis: The average speed of vehicles is 40 mph and
+  the carbon emission from each moving vehicle
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (B). The model could be
+constructed by first taking data on the major streets by counting how
+many cars pass within a certain timeframe. If only one timeframe is used
+in constructing the data (i.e., 5--7 p.m.), and then you could use the
+model to predict which route would be the quickest to travel to reach
+home. However, the model could not predict which route is the quickest
+outside of the sampled timeframe.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{72}
+\item
+  What would play the most important role in an experiment in the
+  scientific world becoming a scientific law?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  Further testing would need to show it is a universally followed rule.
+\item
+  The observation would have to be described in a published scientific
+  article.
+\item
+  The experiment would have to be repeated once or twice.
+\item
+  The observer would need to be a well-known scientist whose authority
+  was accepted.
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A). It would be necessary to
+find sound scientific evidence, in the form of experiment and possibly
+other observation---that it is a general rule followed universally in
+nature.
+
+\paragraph{1.3 The Language of Physics: Physical Quantities and
+Units}\label{the-language-of-physics-physical-quantities-and-units-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{73}
+\item
+  Tectonic plates are large segments of Earth's crust that move slowly.
+  Suppose that one such plate has an average speed of 4.0 cm/year. What
+  distance does it move in 1.0~s at this speed? What is its speed in
+  kilometers per million years? Report your answers using scientific
+  notation.
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \includegraphics[width=2.67569in,height=0.26875in]{media/image62.png}
+\item
+  \includegraphics[width=2.67569in,height=0.26875in]{media/image63.png}
+\item
+  \includegraphics[width=2.77778in,height=0.26875in]{media/image64.png}
+\item
+  \includegraphics[width=2.77778in,height=0.26875in]{media/image65.png}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (A).
+
+\includegraphics[width=5.12986in,height=0.92569in]{media/image66.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{74}
+\item
+  At
+  \includegraphics[width=0.37986in,height=0.19444in]{media/image67.png},
+  a function
+  \includegraphics[width=0.37986in,height=0.26875in]{media/image68.png}
+  has a positive value, with a positive slope that is decreasing in
+  magnitude with increasing \emph{x}. Which option could correspond to
+  \includegraphics[width=0.37986in,height=0.26875in]{media/image68.png}?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\Alph{enumi}.}
+\item
+  \pandocbounded{\includegraphics[keepaspectratio]{media/image69.wmf}}
+\item
+  \pandocbounded{\includegraphics[keepaspectratio]{media/image70.wmf}}
+\item
+  \pandocbounded{\includegraphics[keepaspectratio]{media/image71.wmf}}
+\item
+  \pandocbounded{\includegraphics[keepaspectratio]{media/image72.wmf}}
+\end{enumerate}
+
+\textbf{Solution} The correct answer is (C). All four options have
+positive values at
+\includegraphics[width=0.37986in,height=0.19444in]{media/image67.png},
+but only the first three options have positive slopes at that
+\emph{x}-value. In option (A) the slope is constant, while the slope
+increases with \emph{x} in option (B). Only the function in Option (C)
+features a slope that decreases in magnitude with \emph{x}, while
+satisfying the other conditions.
+
+\end{document}

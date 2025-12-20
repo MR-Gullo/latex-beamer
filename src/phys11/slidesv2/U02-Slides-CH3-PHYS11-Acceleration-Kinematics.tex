@@ -1,0 +1,341 @@
+\documentclass{beamer}
+% Use DS9 global theme (includes pgfplots for visualization)
+\usepackage{../../../shared/templates/ds9_theme}
+
+
+% Title page configuration
+\title[Acceleration and Kinematics]{PHYS11 CH:3.1 and 3.2}
+\subtitle{Understanding Acceleration and the Kinematic Equations}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Sept 2025]{September 12, 2025}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+By the end of this lesson, you will be able to:
+\pause
+\begin{itemize}
+    \item Explain acceleration and determine its direction and magnitude in one dimension.
+    \pause
+    \item Analyze motion in one dimension using kinematic equations.
+    \pause
+    \item Explain the kinematic equations related to acceleration and illustrate them with graphs.
+    \pause
+    \item Apply kinematic equations and related graphs to solve problems involving acceleration.
+\end{itemize}
+\end{frame}
+
+\section{Defining Acceleration}
+
+\begin{frame}
+\frametitle{Key Concepts: What is Acceleration?}
+\begin{block}{Definition}
+    Acceleration is the rate of change of \textbf{velocity}. It is a measure of how quickly velocity changes.
+\end{block}
+\pause
+\begin{itemize}
+    \item \textbf{Vector Quantity:} Acceleration has both magnitude (a size) and direction.
+    \pause
+    \item \textbf{Units:} The SI unit for acceleration is meters per second squared ($\text{m/s}^2$).
+    \pause
+    \item \textbf{Average Acceleration Formula:}
+    \[ \bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_0}{t_f - t_0} \]
+    Where $v_f$ is the final velocity and $v_0$ is the initial velocity.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Concepts: Direction of Acceleration}
+The direction of acceleration determines if an object is speeding up or slowing down.
+\pause
+\begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{alertblock}{Speeding Up}
+        The acceleration vector points in the \textbf{same direction} as the velocity vector.
+    \end{alertblock}
+
+    \column{0.48\textwidth}
+    \begin{alertblock}{Slowing Down}
+        The acceleration vector points in the \textbf{opposite direction} of the velocity vector. This is often called \textit{deceleration}.
+    \end{alertblock}
+\end{columns}
+\pause
+\begin{block}{Important Note}
+    Negative acceleration does \textit{not} automatically mean slowing down.
+    \begin{itemize}
+        \item If velocity is negative and acceleration is negative, the object is \textbf{speeding up} in the negative direction!
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Context: Visualizing Acceleration Vectors}
+To better understand how acceleration affects motion, we can visualize the velocity ($\vec{v}$) and acceleration ($\vec{a}$) vectors for a moving object.
+\pause
+\begin{itemize}
+    \item When a car speeds up, its velocity increases. The acceleration vector points in the same direction as the velocity.
+    \pause
+    \item When the car slows down, its velocity decreases. The acceleration vector points opposite to the velocity.
+\end{itemize}
+\pause
+The next slide shows a diagram of this concept.
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Acceleration Vectors}
+\begin{alertblock}{[Diagram based on Figure 3.2]}
+A diagram showing a car in two scenarios:
+\begin{itemize}
+    \item \textbf{(a) Speeding Up:} A velocity vector $\vec{v}$ points to the right. A smaller acceleration vector $\vec{a}$ also points to the right, in the same direction.
+    \pause
+    \item \textbf{(b) Slowing Down:} A velocity vector $\vec{v}$ points to the right. A smaller acceleration vector $\vec{a}$ points to the left, in the opposite direction.
+\end{itemize}
+This visual shows that the relative direction of acceleration and velocity determines the change in speed.
+\end{alertblock}
+\end{frame}
+
+\section{Kinematic Equations for Constant Acceleration}
+
+\begin{frame}
+\frametitle{Essential Equations: The Kinematics}
+These five equations describe motion for an object moving with \textbf{constant acceleration}. They are the main tools for solving motion problems.
+\pause
+\begin{enumerate}
+    \item $d = d_0 + \bar{v}t$ \quad (when acceleration is zero)
+    \pause
+    \item $\bar{v} = \frac{v_0 + v_f}{2}$
+    \pause
+    \item $v_f = v_0 + at$
+    \pause
+    \item $d = d_0 + v_0 t + \frac{1}{2}at^2$
+    \pause
+    \item $v_f^2 = v_0^2 + 2a(d - d_0)$
+\end{enumerate}
+\pause
+\begin{block}{Variables}
+\begin{tabular}{ll}
+    $d$ & final position (m) \\
+    $d_0$ & initial position (m) \\
+    $v_f$ & final velocity (m/s) \\
+\end{tabular}
+\quad
+\begin{tabular}{ll}
+    $v_0$ & initial velocity (m/s) \\
+    $a$ & constant acceleration (m/s$^2$) \\
+    $t$ & time (s) \\
+\end{tabular}
+\end{block}
+\end{frame}
+
+\section{Graphical Analysis of Motion}
+
+\begin{frame}
+\frametitle{Context: Graphs of Motion Under Gravity}
+Let's consider an object thrown straight up, which then falls back down. Its motion is governed by the constant acceleration of gravity, $g = -9.80 \, \text{m/s}^2$.
+\pause
+\begin{itemize}
+    \item How will its \textbf{position} change over time?
+    \pause
+    \item How will its \textbf{velocity} change over time?
+    \pause
+    \item What will its \textbf{acceleration} look like over time?
+\end{itemize}
+\pause
+The next slide shows the three graphs that describe this motion.
+\end{frame}
+
+\begin{frame}
+\frametitle{Concept Visualization: Motion Under Gravity}
+\begin{alertblock}{[Graphs based on Figure 3.13]}
+Three graphs showing the motion of a rock thrown upward:
+\begin{itemize}
+    \item \textbf{Position vs. Time:} An inverted parabola. The rock goes up, reaches a peak, and comes back down.
+    \pause
+    \item \textbf{Velocity vs. Time:} A straight line with a negative slope. The velocity starts positive, decreases to zero at the peak, and becomes negative as it falls. The slope of this line is the acceleration due to gravity.
+    \pause
+    \item \textbf{Acceleration vs. Time:} A horizontal line at $-9.80 \, \text{m/s}^2$. This shows that the acceleration is constant throughout the motion.
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\section{Problem Solving with GUESS}
+
+\begin{frame}
+\frametitle{I Do: Accelerating Subway Train - Problem Setup}
+\framesubtitle{Problem based on Ch. 3, page 6}
+\begin{block}{Problem}
+A subway train accelerates from rest to 30.0 km/h in 20.0 s. What is its average acceleration during that time interval?
+\end{block}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{G - Givens}
+\begin{itemize}
+    \item $v_0 = 0 \, \text{m/s}$ (from rest)
+    \item $v_f = 30.0 \, \text{km/h}$
+    \item $\Delta t = 20.0 \, \text{s}$
+\end{itemize}
+\end{block}
+\pause
+\column{0.48\textwidth}
+\begin{block}{U - Unknown}
+\begin{itemize}
+    \item $\bar{a} = ?$ (in m/s$^2$)
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Accelerating Subway Train - Equation}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{G - Givens}
+\begin{itemize}
+    \item $v_0 = 0 \, \text{m/s}$
+    \item $v_f = 30.0 \, \text{km/h}$
+    \item $\Delta t = 20.0 \, \text{s}$
+\end{itemize}
+\end{block}
+\pause
+\column{0.48\textwidth}
+\begin{block}{U - Unknown}
+\begin{itemize}
+    \item $\bar{a} = ?$ (in m/s$^2$)
+\end{itemize}
+\end{block}
+\end{columns}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{E - Equation}
+\begin{itemize}
+    \item Select: $\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_0}{\Delta t}$
+    \item No rearrangement needed.
+    \item \alert{First, must convert units!}
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{I Do: Accelerating Subway Train - Solution}
+\begin{block}{S - Substitute (with unit conversion)}
+\begin{itemize}
+    \item Convert km/h to m/s:
+    \[ v_f = 30.0 \, \frac{\text{km}}{\text{h}} \times \frac{1000 \, \text{m}}{1 \, \text{km}} \times \frac{1 \, \text{h}}{3600 \, \text{s}} = 8.333 \, \text{m/s} \]
+    \pause
+    \item Plug values into the equation:
+    \[ \bar{a} = \frac{8.333 \, \text{m/s} - 0 \, \text{m/s}}{20.0 \, \text{s}} \]
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{S - Solve}
+\begin{itemize}
+    \item Calculate the final answer:
+    \[ \bar{a} = \frac{8.333 \, \text{m/s}}{20.0 \, \text{s}} = 0.41665 \, \text{m/s}^2 \]
+    \pause
+    \item Apply sig figs (3 sig figs from givens):
+    \item \boxed{\bar{a} = 0.417 \, \text{m/s}^2}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Acceleration of a Dragster}
+\framesubtitle{Problem based on Ch. 3, page 22}
+\begin{block}{Problem}
+A dragster accelerates from rest at a constant $26.0 \, \text{m/s}^2$ for a quarter mile (402 m). What is the final velocity of the dragster?
+\end{block}
+\pause
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{G - Givens}
+\begin{itemize}
+    \item $v_0 = 0 \, \text{m/s}$ (from rest)
+    \item $a = 26.0 \, \text{m/s}^2$
+    \item $\Delta d = 402 \, \text{m}$
+\end{itemize}
+\end{block}
+\pause
+\column{0.48\textwidth}
+\begin{block}{U - Unknown}
+\begin{itemize}
+    \item $v_f = ?$
+\end{itemize}
+\end{block}
+\end{columns}
+\pause
+\begin{alertblock}{Question: Which kinematic equation should we use? (Hint: We don't know time)}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{We Do: Acceleration of a Dragster - Solution}
+\begin{block}{E - Equation}
+The best equation is the one without time ($t$):
+\[ v_f^2 = v_0^2 + 2a\Delta d \]
+\pause
+This equation is almost ready. How do we isolate $v_f$?
+\begin{itemize}
+    \item \alert{Take the square root of both sides!}
+    \[ v_f = \sqrt{v_0^2 + 2a\Delta d} \]
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{S - Substitute}
+Let's plug in the values:
+\[ v_f = \sqrt{(0 \, \text{m/s})^2 + 2(26.0 \, \text{m/s}^2)(402 \, \text{m})} \]
+\end{block}
+\pause
+\begin{block}{S - Solve}
+What is the final velocity?
+\[ v_f = \sqrt{20904 \, \text{m}^2/\text{s}^2} = \ ? \]
+\pause
+\boxed{v_f \approx 145 \, \text{m/s}}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Olympic Sprinter}
+\framesubtitle{Problem based on Ch. 3, Problem 7, page 24}
+\begin{block}{Problem}
+An Olympic-class sprinter starts a race with an acceleration of $4.50 \, \text{m/s}^2$. Assuming she can maintain that acceleration, what is her speed 2.40 s later?
+\end{block}
+\vfill
+\begin{alertblock}{Your Turn}
+Use the GUESS method to solve this problem on your own.
+\begin{itemize}
+    \item What are the Givens? (Note: "starts a race" implies $v_0 = 0$)
+    \item What is the Unknown?
+    \item Which Equation will you use?
+    \item Substitute and Solve for the final answer.
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reading Homework}
+To ensure you have a strong foundation for the concepts we discussed today, please review the sections from Chapter 3.
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+    \item \textbf{Acceleration} is the rate of change of velocity ($\vec{a} = \Delta\vec{v} / \Delta t$) and is a vector.
+    \pause
+    \item The direction of acceleration relative to velocity determines if an object \textbf{speeds up} (same direction) or \textbf{slows down} (opposite directions).
+    \pause
+    \item For motion with \textbf{constant acceleration}, we use the kinematic equations to solve for unknown quantities like displacement, velocity, or time.
+    \pause
+    \item \textbf{Motion graphs} provide a powerful visual tool:
+    \begin{itemize}
+        \item The slope of a velocity-time graph is \alert{acceleration}.
+        \item The area under a velocity-time graph is \alert{displacement}.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}

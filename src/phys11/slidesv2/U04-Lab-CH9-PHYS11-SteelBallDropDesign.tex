@@ -1,0 +1,351 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Lab Design Assignment: Work-Energy Investigation with Steel
+Ball
+Drop}\label{lab-design-assignment-work-energy-investigation-with-steel-ball-drop}
+
+\subsection{Overview}\label{overview}
+
+This experimental investigation has been structured to fit an 80-minute
+lab period, with an additional 40-minute design period the week before.
+Students will use a timer-controlled dropping mechanism and photo-gate
+to study concepts from Chapter 9 on work, energy, and conservation
+principles.
+
+\subsection{Schedule}\label{schedule}
+
+Week 1: Design Period (40 minutes)
+
+Week 2: Lab Implementation (80 minutes)
+
+\subsection{Required Equipment}\label{required-equipment}
+
+\begin{itemize}
+\item
+  Timer-controlled dropping mechanism
+\item
+  Steel ball
+\item
+  Photo-gate timing system
+\item
+  Electronic balance
+\item
+  Calculator
+\item
+  Laptop with spreadsheet software (optional)
+\item
+  Lab notebook
+\end{itemize}
+
+\subsection{Pre-Lab Design Requirements (Week
+1)}\label{pre-lab-design-requirements-week-1}
+
+During the 40-minute design period, students should:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Review textbook sections 9.1 and 9.2 to identify relevant equations
+\item
+  Design a systematic approach for data collection
+\item
+  Create a data table template
+\item
+  Develop a hypothesis about the relationship between drop height and
+  ball velocity
+\item
+  Prepare prediction calculations for at least three different drop
+  heights
+\item
+  Identify potential sources of experimental error
+\end{enumerate}
+
+\subsection{Experimental Procedure (Week
+2)}\label{experimental-procedure-week-2}
+
+\subsubsection{Setup Phase (15 minutes)}\label{setup-phase-15-minutes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Measure and record the mass of the steel ball
+\item
+  Mount the dropping mechanism securely above the photo-gate
+\item
+  Test the timing system and dropping mechanism
+\item
+  Establish a consistent method for measuring drop heights
+\end{enumerate}
+
+\subsubsection{Data Collection Phase (30
+minutes)}\label{data-collection-phase-30-minutes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Select 5 different drop heights between 0.2m and 1.0m
+\item
+  For each height:
+
+  \begin{itemize}
+  \item
+    Record the height measurement precisely
+  \item
+    Calculate the theoretical gravitational potential energy
+  \item
+    Predict the velocity at the photo-gate using conservation of energy
+  \item
+    Perform 3 trial drops, recording the photo-gate time measurements
+  \item
+    Calculate the actual velocity from the photo-gate data
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{Analysis Phase (20
+minutes)}\label{analysis-phase-20-minutes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Calculate for each trial:
+
+  \begin{itemize}
+  \item
+    Initial gravitational potential energy (mgh)
+  \item
+    Theoretical final kinetic energy (½mv²) based on energy conservation
+  \item
+    Actual final kinetic energy based on measured velocity
+  \item
+    Percentage of energy conserved
+  \item
+    Work done by gravity
+  \item
+    Average power during the fall (work/time)
+  \end{itemize}
+\item
+  Create a graph of potential energy vs. measured kinetic energy
+\item
+  Determine the slope of the best-fit line and its physical meaning
+\end{enumerate}
+
+\subsubsection{Discussion Phase (10
+minutes)}\label{discussion-phase-10-minutes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Compare theoretical predictions to experimental results
+\item
+  Analyze discrepancies and potential energy losses
+\item
+  Discuss experimental uncertainties and their impact
+\item
+  Relate findings to the work-energy theorem and conservation principles
+\end{enumerate}
+
+\subsection{Submit:}\label{submit}
+
+\textbf{By end of design period (Week 1):}
+
+\begin{itemize}
+\item
+  Completed experimental design
+\item
+  Prediction calculations for at least three heights
+\end{itemize}
+
+\textbf{By end of lab period (Week 2):}
+
+\begin{itemize}
+\item
+  Completed data tables
+\item
+  Preliminary graphs
+\item
+  Initial analysis of results
+\end{itemize}
+
+\textbf{Final report (due one week after lab):}
+
+\begin{itemize}
+\item
+  Introduction with hypothesis
+\item
+  Methods section with detailed procedure
+\item
+  Results with data tables and graphs
+\item
+  Analysis connecting to work-energy theorem and conservation principles
+\item
+  Discussion of error sources
+\item
+  Conclusion evaluating the hypothesis
+\end{itemize}
+
+\subsection{Safety Considerations}\label{safety-considerations}
+
+\begin{itemize}
+\item
+  Secure all equipment properly to prevent falling objects
+\item
+  Ensure clear space around the drop zone
+\item
+  Handle equipment with care to prevent damage
+\end{itemize}
+
+\section{Physics Laboratory Skills Proficiency
+Rubric}\label{physics-laboratory-skills-proficiency-rubric}
+
+\subsection{Emerging}\label{emerging}
+
+Description: Students at this level require significant guidance to
+complete laboratory tasks. They demonstrate basic understanding of
+physics concepts but struggle to connect theory with experimental
+practice. Work is primarily procedural and follows step-by-step
+instructions with minimal independent thinking.
+
+Skills and Abilities:
+
+\begin{itemize}
+\item
+  Sets up basic laboratory equipment with teacher assistance and follows
+  preset procedures
+\item
+  Records data with limited attention to precision or measurement
+  techniques
+\item
+  Performs simple calculations using provided formulas without deep
+  understanding of their significance
+\item
+  Identifies obvious sources of error but struggles to analyze their
+  impact on results
+\end{itemize}
+
+\subsection{Developing}\label{developing}
+
+Description: Students at this level can perform laboratory tasks with
+some independence. They show a growing understanding of physics concepts
+and can apply basic theory to experiments. They require occasional
+guidance but can follow procedures and record data systematically.
+
+Skills and Abilities:
+
+\begin{itemize}
+\item
+  Sets up laboratory equipment correctly with minimal assistance and can
+  calibrate basic instruments
+\item
+  Records data systematically with appropriate units and reasonable
+  precision
+\item
+  Performs calculations correctly and begins to recognize the
+  relationship between variables
+\item
+  Identifies several sources of experimental error and attempts basic
+  quantitative error analysis
+\end{itemize}
+
+\subsection{Proficient}\label{proficient}
+
+Description: Students at this level work independently in the laboratory
+setting. They demonstrate solid understanding of physics concepts and
+can apply theoretical principles to design and implement experiments.
+They work methodically, maintain accuracy in their measurements, and can
+analyze results in relation to physical laws.
+
+Skills and Abilities:
+
+\begin{itemize}
+\item
+  Sets up complex experimental apparatus independently and troubleshoots
+  equipment issues
+\item
+  Collects data with appropriate precision, recognizing the limitations
+  of measuring instruments
+\item
+  Performs comprehensive data analysis, including appropriate graphs and
+  trend identification
+\item
+  Conducts thorough error analysis and can distinguish between
+  systematic and random errors
+\end{itemize}
+
+\subsection{Extending}\label{extending}
+
+Description: Students at this level demonstrate exceptional laboratory
+skills and conceptual understanding. They work with complete
+independence, often extending investigations beyond requirements. They
+show sophisticated understanding of physical principles and can design
+novel experimental approaches to test hypotheses or explore
+relationships between variables.
+
+Skills and Abilities:
+
+\begin{itemize}
+\item
+  Designs and implements original experimental procedures to investigate
+  physics concepts
+\item
+  Develops innovative data collection strategies to maximize precision
+  and minimize uncertainty
+\item
+  Performs advanced analysis connecting multiple physics concepts to
+  explain experimental results
+\item
+  Applies critical thinking to evaluate experimental design and proposes
+  refinements based on theoretical principles
+\end{itemize}
+
+\end{document}

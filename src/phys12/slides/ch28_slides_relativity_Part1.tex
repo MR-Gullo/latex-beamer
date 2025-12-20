@@ -1,6 +1,7 @@
 \documentclass{beamer}
 % Use DS9 global theme (includes pgfplots for visualization)
 \usepackage{../../../../latex-beamer/shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
 
 % Title page configuration
 \title[Relativity Part 1]{PHYS12 CH:28.1-28.3}
@@ -9,7 +10,11 @@
 \date[Nov 21 2025]{November 21, 2025}
 
 \begin{document}
-\frame{\titlepage}
+\frame{\titlepage
+\note{- Special relativity changed space/time understanding\\\\
+- Time and space not fixed - relative to observer motion\\\\
+- One of physics most fascinating topics}
+}
 
 \begin{frame}
 \frametitle{Learning Objectives}
@@ -17,11 +22,19 @@ By the end of this lesson, you will be able to:
 \pause
 \begin{itemize}
     \item State Einstein's two postulates of special relativity.
+    \pause
     \item Explain why simultaneity is relative to the observer.
+    \pause
     \item Calculate time dilation effects for moving objects using the Lorentz factor.
+    \pause
     \item Calculate length contraction for objects moving at relativistic speeds.
+    \pause
     \item Distinguish between proper time/length and relativistic time/length.
 \end{itemize}
+\note{- Two postulates lead to mind-bending consequences\\\\
+- Simultaneity relative, time dilates, lengths contract\\\\
+- Key: proper vs relativistic measurements\\\\
+- Always ask: who measures what, from which frame?}
 \end{frame}
 
 \section{28.1 Einstein's Postulates}
@@ -34,9 +47,16 @@ The laws of physics are the same in all \textbf{inertial frames of reference}.
 \pause
 \begin{itemize}
     \item An inertial frame is one that is not accelerating (constant velocity).
+    \pause
     \item There is no "preferred" or "absolute" frame of reference.
+    \pause
     \item You cannot perform an experiment inside a smooth-moving train to determine if you are moving or standing still.
 \end{itemize}
+\note{- Extension of Galilean relativity Newton used\\\\
+- No experiment inside sealed box can detect constant velocity\\\\
+- Smooth airplane: pour coffee, bounce ball - works normally\\\\
+- Only acceleration detectable\\\\
+- Physics same whether moving or not (constant v)}
 \end{frame}
 
 \begin{frame}
@@ -47,8 +67,15 @@ The speed of light in a vacuum ($c$) has the same value ($c = 3.00 \times 10^8$ 
 \pause
 \begin{itemize}
     \item This contradicts our everyday experience with relative velocities (like throwing a ball from a moving car).
+    \pause
     \item $c$ is the cosmic speed limit.
 \end{itemize}
+\note{- Revolutionary postulate\\\\
+- Ball on train: 50+20=70 mph - normal velocity addition\\\\
+- Light doesnt add! Shine flashlight on train: still c, not c+50\\\\
+- Everyone measures same c regardless of motion\\\\
+- Verified experimentally many times\\\\
+- Resolving this paradox leads to all of special relativity}
 \end{frame}
 
 \section{28.2 Simultaneity and Time Dilation}
@@ -63,8 +90,14 @@ Two events that are simultaneous in one frame of reference are \textbf{not neces
 \pause
 \begin{itemize}
     \item This is not an optical illusion; it is a fundamental property of time.
+    \pause
     \item If observers cannot agree on "when" things happen, time itself must be relative.
 \end{itemize}
+\note{- Things get weird here\\\\
+- We assume simultaneous for me = simultaneous for everyone\\\\
+- Einstein: wrong!\\\\
+- Not about delays in seeing - fundamental property of spacetime\\\\
+- Accept constant c means simultaneity relative is unavoidable}
 \end{frame}
 
 \begin{frame}
@@ -76,10 +109,17 @@ Two events that are simultaneous in one frame of reference are \textbf{not neces
 A thought experiment with a train car:
 \begin{itemize}
     \item A light source is in the center of a moving train car.
+    \pause
     \item \textbf{Observer on train}: Sees light hit front and back walls simultaneously.
+    \pause
     \item \textbf{Observer on ground}: Sees light hit the back wall first (moving towards it) and front wall later (moving away from it).
 \end{itemize}
-\end{alertblock}
+\note{- Light flashes in center of moving train\\\\
+- Train observer: equal distances so simultaneous\\\\
+- Ground observer: back wall rushes toward light, front away\\\\
+- Light speed constant (not c +/- train speed) so back wall hit first\\\\
+- Same events, different timing\\\\
+- Neither wrong - both correct in own frame}
 \end{frame}
 
 \begin{frame}
@@ -88,9 +128,16 @@ A thought experiment with a train car:
 \pause
 \begin{itemize}
     \item $\Delta t$: Time interval measured by stationary observer (dilated time).
+    \pause
     \item $\Delta t_0$: \textbf{Proper time} (measured by observer moving with the event).
+    \pause
     \item $\gamma$: Lorentz factor (always $\ge 1$).
 \end{itemize}
+\note{- First calculable consequence\\\\
+- t0 (proper time): observer moving with clock, events same location\\\\
+- t (dilated): observer sees clock moving past\\\\
+- gamma >= 1 always\\\\
+- Moving clocks always run slow}
 \end{frame}
 
 \begin{frame}
@@ -107,10 +154,17 @@ $$ \Delta t = \frac{\Delta t_0}{\sqrt{1 - \frac{v^2}{c^2}}} $$
 \pause
 \begin{itemize}
     \item $\Delta t > \Delta t_0$ (Moving clocks run slow).
+    \pause
     \item $v$: Relative velocity (m/s).
+    \pause
     \item $c$: Speed of light ($3.00 \times 10^8$ m/s).
 \end{itemize}
 \end{columns}
+\note{- t = gamma * t0, so t >= t0 always\\\\
+- v small: fraction near 0, gamma near 1, no dilation\\\\
+- v approaches c: denominator approaches 0, gamma approaches infinity\\\\
+- c = cosmic speed limit\\\\
+- Infinite dilation at c means nothing with mass reaches c}
 \end{frame}
 
 \begin{frame}
@@ -119,9 +173,16 @@ $$ \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} $$
 \pause
 \begin{itemize}
     \item As $v \to 0$, $\gamma \to 1$ (Newtonian mechanics).
+    \pause
     \item As $v \to c$, $\gamma \to \infty$ (Relativistic effects dominate).
+    \pause
     \item Calculating $\gamma$ first often simplifies problems.
 \end{itemize}
+\note{- gamma = best friend in relativity. Calculate first!\\\\
+- Everyday speeds: gamma near 1 (car, ISS - negligible)\\\\
+- 0.1c: gamma=1.005. 0.5c: gamma=1.15. 0.9c: gamma=2.3\\\\
+- 0.99c: gamma=7.1. 0.999c: gamma=22.4\\\\
+- Effect grows dramatically near c}
 \end{frame}
 
 \section{28.3 Length Contraction}
@@ -132,8 +193,14 @@ $$ \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} $$
 \pause
 \begin{itemize}
     \item $L$: Length measured by stationary observer (contracted length).
+    \pause
     \item $L_0$: \textbf{Proper length} (measured by observer at rest relative to the object).
 \end{itemize}
+\note{- Spatial counterpart to time dilation\\\\
+- L0 (proper length): at rest relative to object (pilot measures own ship)\\\\
+- L (contracted): outside observer sees ship fly past\\\\
+- Contraction ONLY in direction of motion\\\\
+- Ship shorter, not thinner}
 \end{frame}
 
 \begin{frame}
@@ -150,15 +217,25 @@ $$ L = L_0 \sqrt{1 - \frac{v^2}{c^2}} $$
 \pause
 \begin{itemize}
     \item $L < L_0$ (Moving objects shrink).
+    \pause
     \item Contraction happens \textbf{only} in the direction of motion.
+    \pause
     \item Width and height (perpendicular to motion) remain unchanged.
 \end{itemize}
 \end{columns}
+\note{- L = L0/gamma, so L <= L0 always (moving objects shorter)\\\\
+- Symmetry: time x gamma, length / gamma\\\\
+- Space and time interconnected\\\\
+- Object not physically compressed - spacetime transformation}
 \end{frame}
 
 \begin{frame}
 \frametitle{Example: I Do - Time Dilation}
 \textbf{Problem}: A spaceship travels at $0.95c$ relative to Earth. An astronaut on board measures a trip to take 2.0 years. How long does the trip take according to Mission Control on Earth?
+\note{- Astronaut measures 2 yrs = proper time (moving with clock)\\\\
+- Want: Earth observer time = dilated time\\\\
+- v = 0.95c means definitely relativistic\\\\
+- Use GUESS method}
 \end{frame}
 
 % GUESS Frame 1: G and U
@@ -180,6 +257,11 @@ $$ L = L_0 \sqrt{1 - \frac{v^2}{c^2}} $$
     \item $\Delta t = ?$ (Dilated time on Earth)
 \end{itemize}
 \end{columns}
+\note{- v = 0.95c, t0 = 2.0 yrs\\\\
+- Astronaut = proper time (at rest relative to own clock)\\\\
+- Events same location for astronaut (inside ship)\\\\
+- Unknown: t (Earth)\\\\
+- Always specify reference frame - critical!}
 \end{frame}
 
 % GUESS Frame 2: E
@@ -193,6 +275,11 @@ $$ L = L_0 \sqrt{1 - \frac{v^2}{c^2}} $$
     \item Then use time dilation:
     $$ \Delta t = \gamma \Delta t_0 $$
 \end{itemize}
+\note{- Two equations needed\\\\
+- First: calculate gamma\\\\
+- Then: t = gamma * t0\\\\
+- Always calculate gamma first - cleaner, catches errors\\\\
+- Often need gamma for multiple calculations}
 \end{frame}
 
 % GUESS Frame 3: S and S
@@ -211,6 +298,11 @@ $$ L = L_0 \sqrt{1 - \frac{v^2}{c^2}} $$
     \item \boxed{\Delta t = 6.4 \text{ years}}
     \item \textit{Earth observers wait longer than the astronaut ages.}
 \end{itemize}
+\note{- gamma = 1/sqrt(1-0.95^2) = 1/sqrt(0.0975) = 3.20\\\\
+- t = 3.20 x 2.0 = 6.4 yrs\\\\
+- Astronaut ages 2 yrs, Earth ages 6.4 yrs\\\\
+- Twin paradox: twin on Earth 4.4 yrs older!\\\\
+- Real! Verified with atomic clocks on planes}
 \end{frame}
 
 \begin{frame}
@@ -221,9 +313,17 @@ $$ L = L_0 \sqrt{1 - \frac{v^2}{c^2}} $$
 \textbf{Class Discussion}:
 \begin{enumerate}
     \item Who measures $L_0$? (The pilot or the station observer?)
+    \pause
     \item Who measures $L$?
+    \pause
     \item Will the answer be less than or greater than 100 m?
 \end{enumerate}
+\note{- 30 sec: think about discussion questions\\\\
+- L0: pilot (at rest relative to ship)\\\\
+- L: station observer (sees ship moving)\\\\
+- Answer less than 100m (moving objects contract)\\\\
+- gamma = 1.67, L = 100/1.67 = 60m\\\\
+- Ship appears only 60m to station!}
 \end{frame}
 
 \begin{frame}
@@ -232,9 +332,17 @@ $$ L = L_0 \sqrt{1 - \frac{v^2}{c^2}} $$
 \pause
 \begin{enumerate}
     \item Calculate the Lorentz factor $\gamma$.
+    \pause
     \item How long does the muon live as measured by a scientist in the lab?
+    \pause
     \item Hint: Expect a longer time ($\Delta t > \Delta t_0$).
 \end{enumerate}
+\note{- Real phenomenon! Muons from cosmic rays in upper atmosphere\\\\
+- Should decay before reaching ground - but we detect them!\\\\
+- Time dilation: muon clock runs slow from our perspective\\\\
+- 5 min to work\\\\
+- Answers: gamma about 7.1, dilated lifetime about 15.6 microseconds\\\\
+- First experimental verification of time dilation}
 \end{frame}
 
 \begin{frame}
@@ -245,6 +353,11 @@ Before the next lecture on Part 2, please read:
     \item Section 28.5: Relativistic Momentum
     \item Section 28.6: Relativistic Energy
 \end{itemize}
+\note{- Read for next class\\\\
+- Velocity addition: doesnt just add like Newton!\\\\
+- Relativistic momentum changes at high speed\\\\
+- E = mc^2 derivation\\\\
+- Come prepared with questions}
 \end{frame}
 
 \begin{frame}
@@ -252,12 +365,24 @@ Before the next lecture on Part 2, please read:
 \pause
 \begin{itemize}
     \item \textbf{Postulate 1}: Laws of physics are invariant in inertial frames.
+    \pause
     \item \textbf{Postulate 2}: Speed of light $c$ is constant for all observers.
+    \pause
     \item \textbf{Simultaneity}: Relative to the observer's motion.
+    \pause
     \item \textbf{Time Dilation}: Moving clocks run slow ($\Delta t = \gamma \Delta t_0$).
+    \pause
     \item \textbf{Length Contraction}: Moving objects shorten ($L = L_0 / \gamma$).
+    \pause
     \item $\gamma$ becomes significant only as $v \to c$.
 \end{itemize}
+\note{- Two postulates lead to profound consequences\\\\
+- Simultaneity relative: observers disagree on when\\\\
+- Time dilation: moving clocks slow (x gamma)\\\\
+- Length contraction: moving objects shorter (/ gamma)\\\\
+- gamma significant only near c; Newton works at everyday speeds\\\\
+- Questions?\\\\
+- HW: practice problems 28.1-28.3}
 \end{frame}
 
 \end{document}
