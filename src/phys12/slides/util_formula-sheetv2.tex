@@ -1,0 +1,934 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,graphicx,float}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+
+% Set image search paths
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title{\textbf{Physics 12 Formulas}\\\large Fundamental Constants and Equations}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Physics Formulas}
+
+\subsection{CH1,2,3: Kinematics}
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    \vec{v} = \vec{v}_0 + \vec{a}t & \bar{v} = \frac{\vec{v} + \vec{v}_0}{2} & v^2 = v_0^2 + 2\vec{a} \cdot \vec{d} \\[1em]
+    \vec{d} = \vec{v}_0t + \frac{1}{2}\vec{a}t^2 & d = \left(\frac{v_f + v_i}{2}\right)t & v_x = v \cos \theta \\[1em]
+    v_y = v \sin \theta & v = \sqrt{v_x^2 + v_y^2} & \theta = \tan^{-1}\left(v_y / v_x\right) \\[1em]
+    h = \frac{v_{0y}^2}{2g} & R = \frac{v_0^2 \sin 2\theta_0}{g} & \text{(max when }\theta_0 = 45^\circ\text{)}
+  \end{array}
+\end{align*}
+
+\subsection{CH4,5,9: Dynamics}
+\begin{align*}
+\begin{array}{l@{\hspace{1cm}}l@{\hspace{1cm}}l}
+\vec{F}_\text{net} = m\vec{a} & \vec{F}_\text{net} = \vec{F}_\text{applied} - \vec{F}_\text{against} & \vec{F}_g = m\vec{g} 
+\\[1em]
+\vec{F}_\text{fr} = \mu \vec{F}_N & T=\frac{F_{\perp}}{2 \sin (\theta)} & \Delta L=\frac{1}{Y} \frac{F}{A} L_0 \\[1em]
+w_{\|}=w \sin (\theta)=m g \sin (\theta) & w_{\perp}=w \cos (\theta)=m g \cos (\theta) & F_{\mathrm{D}}=\frac{1}{2} \mathrm{C} \rho A v^2 \\[1em]
+\mathrm{MA}=\frac{F_{\mathrm{o}}}{F_{\mathrm{i}}}=\frac{l_{\mathrm{i}}}{l_{\mathrm{o}}} & \tau=r F \sin \theta & 
+\end{array}
+\end{align*}
+
+\subsection{CH6: Circular Motion and Gravity}
+\begin{align*}
+\begin{array}{l@{\hspace{2cm}}l}
+\Delta \theta=\frac{\Delta s}{r} & v=r \omega \text{ or } \omega=\frac{v}{r} \\[1em]
+a_{\mathrm{c}}=\frac{v^2}{r} = r \omega^2 & F_{\mathrm{c}}=m a_{\mathrm{c}}=m \frac{v^2}{r}=m r \omega^2 \\[1em]
+F=G \frac{m M}{r^2} & \frac{T_1^2}{T_2^2}=\frac{r_1^3}{r_2^3}, \: T^2=\frac{4 \pi^2}{G M} r^3
+\end{array}
+\end{align*}
+
+\subsection{CH7: Work, Energy, and Power}
+
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    W = \vec{F} \cdot \vec{d} & E_p = mgh & E_k = \frac{1}{2}mv^2 \\[1em]
+    P = \frac{W}{t} & \Delta E = E_f - E_i &
+  \end{array}
+\end{align*}
+
+\subsection{CH8: Momentum}
+
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    \vec{p} = m\vec{v} & \Delta \vec{p} = \vec{F}\Delta t & m_T \vec{V}_T = m_1 \vec{v}_1 + m_2 \vec{v}_2 \\
+    a=\frac{v_{\mathrm{e}}}{m} \frac{\Delta m}{\Delta t}-g & v=v_{\mathrm{e}} \ln \frac{m_0}{m_{\mathrm{r}}} &
+  \end{array}
+\end{align*}
+
+\subsection{CH18: Electrostatics - Electric Forces and Fields}
+\begin{align*}
+\begin{array}{l@{\hspace{2cm}}l}
+\vec{F}_E = k\frac{|q_1 q_2|}{r^2}\hat{r} & \vec{E} = \frac{\vec{F}}{q} = k\frac{|Q|}{r^2}\hat{r} \\[1em]
+\end{array}
+\end{align*}
+
+\subsection{CH19: Electric Potential and Capacitance}
+\begin{align*}
+\begin{array}{l@{\hspace{1.5cm}}l}
+E_p = \frac{kq_1 q_2}{r}, \quad \Delta PE = q\Delta V & V = \frac{kQ}{r}, \quad V_{AB} = Ed \text{ (uniform field)} \\[1em]
+\vec{E} = -\frac{\Delta V}{\Delta s}\hat{r} & C = \frac{Q}{V}\quad = \varepsilon_0\frac{A}{d} \text{ (parallel)}\quad = \kappa\varepsilon_0\frac{A}{d} \text{ (dielectric)} \\[1em]
+\frac{1}{C_s} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots, \quad C_p = C_1 + C_2 + \cdots & E_{cap} = \frac{QV}{2} = \frac{CV^2}{2} = \frac{Q^2}{2C}
+\end{array}
+\end{align*}
+
+
+\subsection{CH20: Current and Resistance}
+\begin{align*}
+\begin{array}{l@{\hspace{1.5cm}}l}
+I = \frac{\Delta Q}{\Delta t}, = nqAv_d & \text{Ohm's Law: } I = \frac{V}{R}, \quad V = IR \\[1em]
+R = \frac{\rho L}{A}, \quad \rho = \rho_0(1+\alpha \Delta T), \quad R = R_0(1+\alpha \Delta T) & P = IV = I^2R = \frac{V^2}{R}, \quad E = Pt \\[1em]
+\text{AC: } V = V_0\sin 2\pi ft, \quad I = I_0\sin 2\pi ft & V_{\text{rms}} = \frac{V_0}{\sqrt{2}}, \quad I_{\text{rms}} = \frac{I_0}{\sqrt{2}}, \quad P_{\text{ave}} = I_{\text{rms}}V_{\text{rms}}
+\end{array}
+\end{align*}
+
+\subsection{CH21: Circuits}
+\begin{align*}
+\begin{array}{l@{\hspace{1.5cm}}l}
+\text{Series: } R_s = R_1 + R_2 + \cdots, \quad I_1 = I_2 = \cdots & \text{Parallel: } \frac{1}{R_p} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots, \quad V_1 = V_2 = \cdots \\[1em]
+\text{Terminal voltage: } V = \text{emf} - Ir & \text{Kirchhoff's Rules: } \sum I_{\text{in}} = \sum I_{\text{out}}, \quad \sum \Delta V = 0 \\[1em]
+ V = \text{emf}(1-e^{-t/\tau}) \text{ (chrg)}, = V_0 e^{-t/\tau} \text{ (dischrg)} & \text{RC Circuits: } \tau = RC 
+\end{array}
+\end{align*}
+
+\subsection{CH22: Magnetism}
+\begin{align*}
+  \begin{array}{l@{\hspace{1.5cm}}l}
+    \vec{F} = Q\vec{v} \times \vec{B} = I\vec{L} \times \vec{B} & F = qvB\sin\theta \\[1em]
+    \vec{B} = \frac{\mu_0 I}{2\pi r}\hat{\phi} & B_{\text{loop}} = \frac{\mu_0 I}{2r} \\[1em]
+    B_{\text{solenoid}} = \mu_0 nI & r = \frac{mv}{qB} \\[1em]
+    \tau = NIAB\sin\theta & \varepsilon_{\text{Hall}} = Blv \\[1em]
+    \mu_0 = 4\pi \times 10^{-7} \text{ T}\cdot\text{m/A} & \\
+  \end{array}
+\end{align*}
+
+\subsection{CH23: Electromagnetic Induction}
+\begin{align*}
+  \begin{array}{l@{\hspace{1.5cm}}l}
+    \Phi = \vec{B} \cdot \vec{A} = BA\cos\theta & \mathcal{E} = -N\frac{d\Phi}{dt} \\[1em]
+    \vec{\mathcal{E}} = \vec{v} \times \vec{B} & \text{emf} = Bl\nu \\[1em]
+    \text{emf}_0 = NAB\omega & V_{\text{back}} = \mathcal{E} - Ir \\[1em]
+    \frac{V_s}{V_p} = \frac{N_s}{N_p} = \frac{I_p}{I_s} & \\
+  \end{array}
+\end{align*}
+
+\iffalse
+
+\subsection{CH20,21: Electric Circuits}
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    I = \frac{Q}{\Delta t} & V = IR & V_\text{terminal} = \mathcal{E} \pm Ir \\[1em]
+    P = VI & &
+  \end{array}
+\end{align*}
+
+
+
+\subsection{CH28: Relativity}
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    t = \frac{t_0}{\sqrt{1-\frac{v^2}{c^2}}} & L = L_0\sqrt{1-\frac{v^2}{c^2}} & m = \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}} \\[1em]
+    u = \frac{v+u'}{1+\frac{vu'}{c^2}} & E = mc^2 & E_k = \frac{1}{2}mv^2
+  \end{array}
+\end{align*}
+
+
+\fi
+
+
+\newpage
+\section{Mathematical Formulas}
+
+\subsection{Right-angled Triangles}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{phys12-formulas-relativity-thermodynamics.png}
+    \caption{Right-angled triangle}
+    \label{fig:Right-angled triangle}
+\end{figure}
+
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    a^2 + b^2 = c^2 & \sin \theta = \frac{b}{c} & \cos \theta = \frac{a}{c} \\[1em]
+    \tan \theta = \frac{b}{a} & \text{area} = \frac{1}{2}ab &
+  \end{array}
+\end{align*}
+
+\subsection{All Triangles}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{phys12-formulas-newton-relativity-thermodynamics.png}
+    \caption{Non-Right-angled triangle}
+    \label{fig:Non-Right-angled triangle}
+\end{figure}
+
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    \text{area} = \frac{1}{2} \text{base} \times \text{height} & \text{Sine Law:} \quad \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c} & \\[1em]
+    \text{Cosine Law:} \quad c^2 = a^2 + b^2 - 2ab \cos C & &
+  \end{array}
+\end{align*}
+
+\subsection{Circle and Sphere}
+\begin{align*}
+  \begin{array}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    \text{Circle circumference:} \quad 2\pi r & \text{Circle area:} \quad \pi r^2 & \text{Sphere surface area:} \quad 4\pi r^2 \\[1em]
+    \text{Sphere volume:} \quad \frac{4}{3}\pi r^3 & &
+  \end{array}
+\end{align*}
+
+\subsection{Quadratic Equation}
+For $ax^2 + bx + c = 0$: 
+\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+
+\section{Metric Prefixes and Cardinal Directions}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{phys12-navigation-compass-directions.png}
+    \caption{Cardinal directions: North, South, East, and West}
+    \label{fig:Cardinal directions}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}llcc@{}}
+\toprule
+Prefix & Symbol & Numerical & Exponential \\
+\midrule
+mega & M & 1000000 & $10^6$ \\
+kilo & k & 1000 & $10^3$ \\
+hecto & h & 100 & $10^2$ \\
+deca & da & 10 & $10^1$ \\
+ &  & 1 & $10^0$ \\
+deci & d & 0.1 & $10^{-1}$ \\
+centi & c & 0.01 & $10^{-2}$ \\
+milli & m & 0.001 & $10^{-3}$ \\
+micro & $\mu$ & 0.000001 & $10^{-6}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Fundamental Constants and Physical Data}
+
+\begin{align*}
+  \begin{array}{l@{\hspace{1cm}}r}
+    \text{Gravitational constant:} & G=6.67 \times 10^{-11} \mathrm{Nm}^2/\mathrm{kg}^2 \\[1em]
+    \text{Coulomb's Law constant:} & k=8.99 \times 10^9 \mathrm{Nm}^2/\mathrm{C}^2 \\[1em]
+    \text{Elementary charge:} & e=1.60 \times 10^{-19} \mathrm{C} \\[1em]
+    \text{Electron mass:} & m_e=9.11 \times 10^{-31} \mathrm{kg} \\[1em]
+    \text{Proton mass:} & m_p=1.67 \times 10^{-27} \mathrm{kg} \\[1em]
+    \text{Avogadro's Number:} & N_A=6.022 \times 10^{23} \mathrm{kg} \\[1em]
+    \text{Permeability of free space:} & \mu_0=4\pi \times 10^{-7} \mathrm{Tm}/\mathrm{A} \\[1em]
+    \text{Permittivity of free space:} & \varepsilon_0 = 8.85 \times 10^{-12} \mathrm{F}/\mathrm{m} \\[1em]
+    \text{Speed of light:} & c=3.00 \times 10^8 \mathrm{m}/\mathrm{s} \\[1em]
+    \text{Density of air:} & \rho=1.21 \mathrm{~kg} / \mathrm{m}^3 \\[1em]
+    \text{Boltzmann constant:} & k_B=1.38 \times 10^{-23} \mathrm{J}/\mathrm{K}
+  \end{array}
+\end{align*}
+
+\subsection{Earth}
+\begin{align*}
+  \begin{array}{l@{\hspace{1cm}}r@{\hspace{1cm}}l@{\hspace{1cm}}r}
+    \text{Radius:} & 6.38 \times 10^6 \mathrm{m} & \text{Mass:} & 5.98 \times 10^{24} \mathrm{kg} \\[1em]
+    \text{Surface gravity:} & g=9.81 \mathrm{m}/\mathrm{s}^2 & \text{Rotation period:} & 8.61 \times 10^4 \mathrm{s} \\[1em]
+    \text{Orbit radius (Sun):} & 1.50 \times 10^{11} \mathrm{m} & \text{Orbit period (Sun):} & 3.16 \times 10^7 \mathrm{s}
+  \end{array}
+\end{align*}
+
+\subsection{Moon}
+\begin{align*}
+  \begin{array}{l@{\hspace{1cm}}r@{\hspace{1cm}}l@{\hspace{1cm}}r}
+    \text{Radius:} & 1.74 \times 10^6 \mathrm{m} & \text{Mass:} & 7.35 \times 10^{22} \mathrm{kg} \\[1em]
+    \text{Rotation period:} & 2.36 \times 10^6 \mathrm{s} & \text{Orbit radius (Earth):} & 3.84 \times 10^8 \mathrm{m} \\[1em]
+    \text{Orbit period (Earth):} & 2.36 \times 10^6 \mathrm{s} & &
+  \end{array}
+\end{align*}
+
+\subsection{Sun}
+Mass: $1.98 \times 10^{30} \mathrm{kg}$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDIX C - USEFUL INFORMATION (from OpenStax)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\appendix
+\section{Useful Information}
+
+\subsection{Important Constants (Table C1)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Symbol & Meaning & Approximate Value \\
+\midrule
+$c$ & Speed of light in vacuum & $3.00 \times 10^8$ m/s \\
+$G$ & Gravitational constant & $6.67 \times 10^{-11}$ N$\cdot$m$^2$/kg$^2$ \\
+$N_A$ & Avogadro's number & $6.02 \times 10^{23}$ \\
+$k_B$ & Boltzmann's constant & $1.38 \times 10^{-23}$ J/K \\
+$R$ & Gas constant & $8.31$ J/(mol$\cdot$K) \\
+$\sigma$ & Stefan-Boltzmann constant & $5.67 \times 10^{-8}$ W/(m$^2\cdot$K$^4$) \\
+$k$ & Coulomb force constant & $8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$ \\
+$e$ & Charge on electron & $1.60 \times 10^{-19}$ C \\
+$\varepsilon_0$ & Permittivity of free space & $8.85 \times 10^{-12}$ F/m \\
+$\mu_0$ & Permeability of free space & $4\pi \times 10^{-7}$ T$\cdot$m/A \\
+$h$ & Planck's constant & $6.63 \times 10^{-34}$ J$\cdot$s \\
+\bottomrule
+\end{tabular}
+\caption{Important Constants}
+\end{table}
+
+\subsection{Submicroscopic Masses (Table C2)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}llr@{}}
+\toprule
+Symbol & Meaning & Best Value \\
+\midrule
+$m_e$ & Electron mass & $9.109 \times 10^{-31}$ kg \\
+$m_p$ & Proton mass & $1.673 \times 10^{-27}$ kg \\
+$m_n$ & Neutron mass & $1.675 \times 10^{-27}$ kg \\
+$u$ & Atomic mass unit & $1.661 \times 10^{-27}$ kg \\
+\bottomrule
+\end{tabular}
+\caption{Submicroscopic Masses}
+\end{table}
+
+\subsection{Solar System Data (Table C3)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Property & Value \\
+\midrule
+\multicolumn{2}{c}{\textbf{Sun}} \\
+Mass & $1.99 \times 10^{30}$ kg \\
+Average radius & $6.96 \times 10^{8}$ m \\
+\midrule
+\multicolumn{2}{c}{\textbf{Earth}} \\
+Mass & $5.97 \times 10^{24}$ kg \\
+Average radius & $6.38 \times 10^{6}$ m \\
+Orbital period & $3.16 \times 10^{7}$ s \\
+Earth-Sun distance (average) & $1.50 \times 10^{11}$ m \\
+\midrule
+\multicolumn{2}{c}{\textbf{Moon}} \\
+Mass & $7.35 \times 10^{22}$ kg \\
+Average radius & $1.74 \times 10^{6}$ m \\
+Orbital period (average) & $2.36 \times 10^{6}$ s \\
+Earth-Moon distance (average) & $3.84 \times 10^{8}$ m \\
+\bottomrule
+\end{tabular}
+\caption{Solar System Data}
+\end{table}
+
+\subsection{Extended Metric Prefixes (Table C4)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}llc||llc@{}}
+\toprule
+Prefix & Symbol & Value & Prefix & Symbol & Value \\
+\midrule
+tera & T & $10^{12}$ & deci & d & $10^{-1}$ \\
+giga & G & $10^{9}$ & centi & c & $10^{-2}$ \\
+mega & M & $10^{6}$ & milli & m & $10^{-3}$ \\
+kilo & k & $10^{3}$ & micro & $\mu$ & $10^{-6}$ \\
+hecto & h & $10^{2}$ & nano & n & $10^{-9}$ \\
+deka & da & $10^{1}$ & pico & p & $10^{-12}$ \\
+-- & -- & $10^{0}$ & femto & f & $10^{-15}$ \\
+\bottomrule
+\end{tabular}
+\caption{Metric Prefixes for Powers of Ten}
+\end{table}
+
+\subsection{The Greek Alphabet (Table C5)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll||ll@{}}
+\toprule
+Letter & Name & Letter & Name \\
+\midrule
+A, $\alpha$ & Alpha & N, $\nu$ & Nu \\
+B, $\beta$ & Beta & $\Xi$, $\xi$ & Xi \\
+$\Gamma$, $\gamma$ & Gamma & O, $o$ & Omicron \\
+$\Delta$, $\delta$ & Delta & $\Pi$, $\pi$ & Pi \\
+E, $\epsilon$ & Epsilon & P, $\rho$ & Rho \\
+Z, $\zeta$ & Zeta & $\Sigma$, $\sigma$ & Sigma \\
+H, $\eta$ & Eta & T, $\tau$ & Tau \\
+$\Theta$, $\theta$ & Theta & $\Upsilon$, $\upsilon$ & Upsilon \\
+I, $\iota$ & Iota & $\Phi$, $\phi$ & Phi \\
+K, $\kappa$ & Kappa & X, $\chi$ & Chi \\
+$\Lambda$, $\lambda$ & Lambda & $\Psi$, $\psi$ & Psi \\
+M, $\mu$ & Mu & $\Omega$, $\omega$ & Omega \\
+\bottomrule
+\end{tabular}
+\caption{The Greek Alphabet}
+\end{table}
+
+\subsection{SI Units (Table C6)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Entity & Abbreviation & Name \\
+\midrule
+\multicolumn{3}{c}{\textbf{Fundamental Units}} \\
+Length & m & meter \\
+Mass & kg & kilogram \\
+Time & s & second \\
+Current & A & ampere \\
+\midrule
+\multicolumn{3}{c}{\textbf{Supplementary Unit}} \\
+Angle & rad & radian \\
+\midrule
+\multicolumn{3}{c}{\textbf{Derived Units}} \\
+Force & N & newton \\
+Energy & J & joule \\
+Power & W & watt \\
+Pressure & Pa & pascal \\
+Frequency & Hz & hertz \\
+Electric potential & V & volt \\
+Capacitance & F & farad \\
+Charge & C & coulomb \\
+Resistance & $\Omega$ & ohm \\
+Magnetic field & T & tesla \\
+Nuclear decay rate & Bq & becquerel \\
+\bottomrule
+\end{tabular}
+\caption{SI Units}
+\end{table}
+
+\subsection{Selected British Units (Table C7)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Quantity & Conversion \\
+\midrule
+Length & 1 inch = 2.54 cm, 1 foot = 0.3048 m, 1 mile = 1.609 km \\
+Force & 1 pound = 4.448 N \\
+Energy & 1 British thermal unit (Btu) = 1055 J \\
+Power & 1 horsepower = 746 W \\
+Pressure & 1 lb/in$^2$ = 6.895 kPa \\
+\bottomrule
+\end{tabular}
+\caption{Selected British Units}
+\end{table}
+
+\subsection{Other Units (Table C8)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Quantity & Conversion \\
+\midrule
+Length & 1 \AA{} = $10^{-10}$ m, 1 fermi = $10^{-15}$ m, 1 light-year = $9.46 \times 10^{15}$ m \\
+Area & 1 hectare = $10^4$ m$^2$, 1 barn = $10^{-28}$ m$^2$ \\
+Volume & 1 liter = $10^{-3}$ m$^3$ \\
+Mass & 1 atomic mass unit = $1.661 \times 10^{-27}$ kg \\
+Time & 1 year = $3.16 \times 10^7$ s, 1 day = $8.64 \times 10^4$ s \\
+Speed & 1 km/h = 0.278 m/s, 1 mi/h = 0.447 m/s \\
+Angle & 1$^\circ$ = 0.01745 rad, 1 rad = 57.30$^\circ$ \\
+Energy & 1 eV = $1.602 \times 10^{-19}$ J, 1 cal = 4.186 J \\
+Pressure & 1 atm = $1.013 \times 10^5$ Pa, 1 bar = $10^5$ Pa \\
+Nuclear decay rate & 1 curie = $3.70 \times 10^{10}$ Bq \\
+\bottomrule
+\end{tabular}
+\caption{Other Units}
+\end{table}
+
+\subsection{Useful Formulae (Table C9)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Formula & Expression \\
+\midrule
+Circumference of a circle (radius $r$ or diameter $d$) & $C = 2\pi r = \pi d$ \\
+Area of a circle (radius $r$ or diameter $d$) & $A = \pi r^2 = \frac{\pi d^2}{4}$ \\
+Area of a sphere (radius $r$) & $A = 4\pi r^2$ \\
+Volume of a sphere (radius $r$) & $V = \frac{4}{3}\pi r^3$ \\
+\bottomrule
+\end{tabular}
+\caption{Useful Formulae}
+\end{table}
+
+\newpage
+\subsection{Approximate Values of Length, Mass, and Time (Table 1.3)}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Length (m) & Phenomenon Measured \\
+\midrule
+$10^{-18}$ & Present experimental limit to smallest observable detail \\
+$10^{-15}$ & Diameter of a proton \\
+$10^{-14}$ & Diameter of a uranium nucleus \\
+$10^{-10}$ & Diameter of a hydrogen atom \\
+$10^{-8}$ & Thickness of membranes in cell of living organism \\
+$10^{-6}$ & Wavelength of visible light \\
+$10^{-3}$ & Size of a grain of sand \\
+$1$ & Height of a 4-year-old child \\
+$10^{2}$ & Length of a football field \\
+$10^{4}$ & Greatest ocean depth \\
+$10^{7}$ & Diameter of Earth \\
+$10^{11}$ & Distance from Earth to the Sun \\
+$10^{16}$ & Distance traveled by light in 1 year (a light year) \\
+$10^{21}$ & Diameter of the Milky Way Galaxy \\
+$10^{22}$ & Distance from Earth to the nearest large galaxy (Andromeda) \\
+$10^{26}$ & Distance from Earth to the edges of the known universe \\
+\bottomrule
+\end{tabular}
+\caption{Approximate Values of Length}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Mass (kg) & Phenomenon Measured \\
+\midrule
+$10^{-30}$ & Mass of an electron ($9.11 \times 10^{-31}$ kg) \\
+$10^{-27}$ & Mass of a hydrogen atom ($1.67 \times 10^{-27}$ kg) \\
+$10^{-15}$ & Mass of a bacterium \\
+$10^{-5}$ & Mass of a mosquito \\
+$10^{-2}$ & Mass of a hummingbird \\
+$1$ & Mass of a liter of water (about a quart) \\
+$10^{2}$ & Mass of a person \\
+$10^{3}$ & Mass of a car \\
+$10^{8}$ & Mass of a large ship \\
+$10^{12}$ & Mass of a large iceberg \\
+$10^{15}$ & Mass of the nucleus of a comet \\
+$10^{23}$ & Mass of the Moon ($7.35 \times 10^{22}$ kg) \\
+$10^{25}$ & Mass of Earth ($5.97 \times 10^{24}$ kg) \\
+$10^{30}$ & Mass of the Sun ($1.99 \times 10^{30}$ kg) \\
+$10^{42}$ & Mass of the Milky Way galaxy (current upper limit) \\
+$10^{53}$ & Mass of the known universe (current upper limit) \\
+\bottomrule
+\end{tabular}
+\caption{Approximate Values of Mass}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Time (s) & Phenomenon Measured \\
+\midrule
+$10^{-23}$ & Time for light to cross a proton \\
+$10^{-22}$ & Mean life of an extremely unstable nucleus \\
+$10^{-15}$ & Time for one oscillation of visible light \\
+$10^{-13}$ & Time for one vibration of an atom in a solid \\
+$10^{-8}$ & Time for one oscillation of an FM radio wave \\
+$10^{-3}$ & Duration of a nerve impulse \\
+$1$ & Time for one heartbeat \\
+$10^{5}$ & One day ($8.64 \times 10^{4}$ s) \\
+$10^{7}$ & One year ($3.16 \times 10^{7}$ s) \\
+$10^{9}$ & About half the life expectancy of a human \\
+$10^{11}$ & Recorded history \\
+$10^{17}$ & Age of Earth \\
+$10^{18}$ & Age of the universe \\
+\bottomrule
+\end{tabular}
+\caption{Approximate Values of Time}
+\end{table}
+
+\newpage
+\subsection{Coefficients of Static and Kinetic Friction (Table 5.1)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+System & Static friction $\mu_s$ & Kinetic friction $\mu_k$ \\
+\midrule
+Rubber on dry concrete & 1.0 & 0.7 \\
+Rubber on wet concrete & 0.7 & 0.5 \\
+Wood on wood & 0.5 & 0.3 \\
+Waxed wood on wet snow & 0.14 & 0.1 \\
+Metal on wood & 0.5 & 0.3 \\
+Steel on steel (dry) & 0.6 & 0.3 \\
+Steel on steel (oiled) & 0.05 & 0.03 \\
+Teflon on steel & 0.04 & 0.04 \\
+Bone lubricated by synovial fluid & 0.016 & 0.015 \\
+Shoes on wood & 0.9 & 0.7 \\
+Shoes on ice & 0.1 & 0.05 \\
+Ice on ice & 0.1 & 0.03 \\
+Steel on ice & 0.04 & 0.02 \\
+\bottomrule
+\end{tabular}
+\caption{Coefficients of Static and Kinetic Friction}
+\end{table}
+
+\subsection{Drag Coefficient Values (Table 5.2)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lc@{}}
+\toprule
+Object & $C$ \\
+\midrule
+Airfoil & 0.05 \\
+Toyota Camry & 0.28 \\
+Ford Focus & 0.32 \\
+Honda Civic & 0.36 \\
+Ferrari Testarossa & 0.37 \\
+Dodge Ram pickup & 0.43 \\
+Sphere & 0.45 \\
+Hummer H2 SUV & 0.64 \\
+Skydiver (feet first) & 0.70 \\
+Bicycle & 0.90 \\
+Skydiver (horizontal) & 1.0 \\
+Circular flat plate & 1.12 \\
+\bottomrule
+\end{tabular}
+\caption{Typical values of drag coefficient $C$}
+\end{table}
+
+\newpage
+\subsection{Elastic Moduli (Table 5.3)}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Material & Young's modulus $Y$ & Shear modulus $S$ & Bulk modulus $B$ \\
+ & ($10^9$ N/m$^2$) & ($10^9$ N/m$^2$) & ($10^9$ N/m$^2$) \\
+\midrule
+Aluminum & 70 & 25 & 75 \\
+Bone -- tension & 16 & 80 & 8 \\
+Bone -- compression & 9 & -- & -- \\
+Brass & 90 & 35 & 75 \\
+Brick & 15 & -- & -- \\
+Concrete & 20 & -- & -- \\
+Glass & 70 & 20 & 30 \\
+Granite & 45 & 20 & 45 \\
+Hair (human) & 10 & -- & -- \\
+Hardwood & 15 & 10 & -- \\
+Iron, cast & 100 & 40 & 90 \\
+Lead & 16 & 5 & 50 \\
+Marble & 60 & 20 & 70 \\
+Nylon & 5 & -- & -- \\
+Polystyrene & 3 & -- & -- \\
+Silk & 6 & -- & -- \\
+Spider thread & 3 & -- & -- \\
+Steel & 210 & 80 & 130 \\
+Tendon & 1 & -- & -- \\
+Acetone & -- & -- & 0.7 \\
+Ethanol & -- & -- & 0.9 \\
+Glycerin & -- & -- & 4.5 \\
+Mercury & -- & -- & 25 \\
+Water & -- & -- & 2.2 \\
+\bottomrule
+\end{tabular}
+\caption{Elastic Moduli}
+\end{table}
+
+\newpage
+\subsection{Energy of Various Objects and Phenomena (Table 7.1)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lr@{}}
+\toprule
+Object/phenomenon & Energy in joules \\
+\midrule
+Big Bang & $10^{68}$ \\
+Energy released in a supernova & $10^{44}$ \\
+Fusion of all the hydrogen in Earth's oceans & $10^{34}$ \\
+Annual world energy use & $4 \times 10^{20}$ \\
+Large fusion bomb (9 megaton) & $3.8 \times 10^{16}$ \\
+1 kg hydrogen (fusion to helium) & $6.4 \times 10^{14}$ \\
+1 kg uranium (nuclear fission) & $8.0 \times 10^{13}$ \\
+Hiroshima-size fission bomb (10 kiloton) & $4.2 \times 10^{13}$ \\
+90,000-metric ton aircraft carrier at 30 knots & $1.1 \times 10^{10}$ \\
+1 barrel crude oil & $5.9 \times 10^{9}$ \\
+1 ton TNT & $4.2 \times 10^{9}$ \\
+1 gallon of gasoline & $1.2 \times 10^{8}$ \\
+Daily home electricity use (developed countries) & $7 \times 10^{7}$ \\
+Daily adult food intake (recommended) & $1.2 \times 10^{7}$ \\
+1000-kg car at 90 km/h & $3.1 \times 10^{5}$ \\
+1 g fat (9.3 kcal) & $3.9 \times 10^{4}$ \\
+ATP hydrolysis reaction & $3.2 \times 10^{4}$ \\
+1 g carbohydrate (4.1 kcal) & $1.7 \times 10^{4}$ \\
+1 g protein (4.1 kcal) & $1.7 \times 10^{4}$ \\
+Tennis ball at 100 km/h & $22$ \\
+Mosquito ($10^{-2}$ g at 0.5 m/s) & $1.3 \times 10^{-6}$ \\
+Single electron in a TV tube beam & $4.0 \times 10^{-15}$ \\
+Energy to break one DNA strand & $10^{-19}$ \\
+\bottomrule
+\end{tabular}
+\caption{Energy of Various Objects and Phenomena}
+\end{table}
+
+\newpage
+\subsection{Efficiency of the Human Body and Mechanical Devices (Table 7.2)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lc@{}}
+\toprule
+Activity/device & Efficiency (\%) \\
+\midrule
+Cycling and climbing & 20 \\
+Swimming, surface & 2 \\
+Swimming, submerged & 4 \\
+Shoveling & 3 \\
+Weightlifting & 9 \\
+Steam engine & 17 \\
+Gasoline engine & 30 \\
+Diesel engine & 35 \\
+Nuclear power plant & 35 \\
+Coal power plant & 42 \\
+Electric motor & 98 \\
+Compact fluorescent light & 20 \\
+Gas heater (residential) & 90 \\
+Solar cell & 10 \\
+\bottomrule
+\end{tabular}
+\caption{Efficiency of the Human Body and Mechanical Devices}
+\end{table}
+
+\subsection{Power Output or Consumption (Table 7.3)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lr@{}}
+\toprule
+Object or Phenomenon & Power in Watts \\
+\midrule
+Supernova (at peak) & $5 \times 10^{37}$ \\
+Milky Way galaxy & $10^{37}$ \\
+Crab Nebula pulsar & $10^{28}$ \\
+The Sun & $4 \times 10^{26}$ \\
+Volcanic eruption (maximum) & $4 \times 10^{15}$ \\
+Lightning bolt & $2 \times 10^{12}$ \\
+Nuclear power plant (total electric and heat transfer) & $3 \times 10^{9}$ \\
+Aircraft carrier (total useful and heat transfer) & $10^{8}$ \\
+Dragster (total useful and heat transfer) & $2 \times 10^{6}$ \\
+Car (total useful and heat transfer) & $8 \times 10^{4}$ \\
+Football player (total useful and heat transfer) & $5 \times 10^{3}$ \\
+Clothes dryer & $4 \times 10^{3}$ \\
+Person at rest (all heat transfer) & $100$ \\
+Typical incandescent light bulb (total useful and heat transfer) & $60$ \\
+Heart, person at rest (total useful and heat transfer) & $8$ \\
+Electric clock & $3$ \\
+Pocket calculator & $10^{-3}$ \\
+\bottomrule
+\end{tabular}
+\caption{Power Output or Consumption}
+\end{table}
+
+\newpage
+\subsection{Basal Metabolic Rates (BMR) (Table 7.4)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Organ & Power consumed at rest (W) & Oxygen consumption (mL/min) & Percent of BMR \\
+\midrule
+Liver \& spleen & 23 & 67 & 27 \\
+Brain & 16 & 47 & 19 \\
+Skeletal muscle & 15 & 45 & 18 \\
+Kidney & 9 & 26 & 10 \\
+Heart & 6 & 17 & 7 \\
+Other & 16 & 48 & 19 \\
+\midrule
+\textbf{Totals} & 85 W & 250 mL/min & 100\% \\
+\bottomrule
+\end{tabular}
+\caption{Basal Metabolic Rates (BMR)}
+\end{table}
+
+\subsection{Energy and Oxygen Consumption Rates (Table 7.5)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Activity & Energy consumption (W) & Oxygen consumption (L O$_2$/min) \\
+\midrule
+Sleeping & 83 & 0.24 \\
+Sitting at rest & 120 & 0.34 \\
+Standing relaxed & 125 & 0.36 \\
+Sitting in class & 210 & 0.60 \\
+Walking (5 km/h) & 280 & 0.80 \\
+Cycling (13--18 km/h) & 400 & 1.14 \\
+Shivering & 425 & 1.21 \\
+Playing tennis & 440 & 1.26 \\
+Swimming breaststroke & 475 & 1.36 \\
+Ice skating (14.5 km/h) & 545 & 1.56 \\
+Climbing stairs (116/min) & 685 & 1.96 \\
+Cycling (21 km/h) & 700 & 2.00 \\
+Running cross-country & 740 & 2.12 \\
+Playing basketball & 800 & 2.28 \\
+Cycling, professional racer & 1855 & 5.30 \\
+Sprinting & 2415 & 6.90 \\
+\bottomrule
+\end{tabular}
+\caption{Energy and Oxygen Consumption Rates (Power)}
+\end{table}
+
+\newpage
+\subsection{Orbital Data and Kepler's Third Law (Table 6.2)}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}llccc@{}}
+\toprule
+Parent & Satellite & Avg. orbital radius $r$ (km) & Period $T$ (y) & $r^3/T^2$ (km$^3$/y$^2$) \\
+\midrule
+Earth & Moon & $3.84 \times 10^{5}$ & 0.07481 & $1.01 \times 10^{19}$ \\
+\midrule
+Sun & Mercury & $5.79 \times 10^{7}$ & 0.2409 & $3.34 \times 10^{24}$ \\
+ & Venus & $1.082 \times 10^{8}$ & 0.6150 & $3.35 \times 10^{24}$ \\
+ & Earth & $1.496 \times 10^{8}$ & 1.000 & $3.35 \times 10^{24}$ \\
+ & Mars & $2.279 \times 10^{8}$ & 1.881 & $3.35 \times 10^{24}$ \\
+ & Jupiter & $7.783 \times 10^{8}$ & 11.86 & $3.35 \times 10^{24}$ \\
+ & Saturn & $1.427 \times 10^{9}$ & 29.46 & $3.35 \times 10^{24}$ \\
+ & Neptune & $4.497 \times 10^{9}$ & 164.8 & $3.35 \times 10^{24}$ \\
+ & Pluto & $5.90 \times 10^{9}$ & 248.3 & $3.33 \times 10^{24}$ \\
+\midrule
+Jupiter & Io & $4.22 \times 10^{5}$ & 0.00485 (1.77 d) & $3.19 \times 10^{21}$ \\
+ & Europa & $6.71 \times 10^{5}$ & 0.00972 (3.55 d) & $3.20 \times 10^{21}$ \\
+ & Ganymede & $1.07 \times 10^{6}$ & 0.0196 (7.16 d) & $3.19 \times 10^{21}$ \\
+ & Callisto & $1.88 \times 10^{6}$ & 0.0457 (16.19 d) & $3.20 \times 10^{21}$ \\
+\bottomrule
+\end{tabular}
+\caption{Orbital Data and Kepler's Third Law}
+\end{table}
+
+\subsection{Dielectric Constants and Dielectric Strengths (Table 19.1)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Material & Dielectric constant $\kappa$ & Dielectric strength (V/m) \\
+\midrule
+Vacuum & 1.00000 & -- \\
+Air & 1.00059 & $3 \times 10^{6}$ \\
+Bakelite & 4.9 & $24 \times 10^{6}$ \\
+Fused quartz & 3.78 & $8 \times 10^{6}$ \\
+Neoprene rubber & 6.7 & $12 \times 10^{6}$ \\
+Nylon & 3.4 & $14 \times 10^{6}$ \\
+Paper & 3.7 & $16 \times 10^{6}$ \\
+Polystyrene & 2.56 & $24 \times 10^{6}$ \\
+Pyrex glass & 5.6 & $14 \times 10^{6}$ \\
+Silicon oil & 2.5 & $15 \times 10^{6}$ \\
+Strontium titanate & 233 & $8 \times 10^{6}$ \\
+Teflon & 2.1 & $60 \times 10^{6}$ \\
+Water & 80 & -- \\
+\bottomrule
+\end{tabular}
+\caption{Dielectric Constants and Dielectric Strengths for Various Materials at 20$^\circ$C}
+\end{table}
+
+\newpage
+\subsection{Resistivities of Various Materials at 20$^\circ$C (Table 20.1)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lr@{}}
+\toprule
+Material & Resistivity $\rho$ ($\Omega \cdot$m) \\
+\midrule
+\multicolumn{2}{c}{\textbf{Conductors}} \\
+Silver & $1.59 \times 10^{-8}$ \\
+Copper & $1.72 \times 10^{-8}$ \\
+Gold & $2.44 \times 10^{-8}$ \\
+Aluminum & $2.65 \times 10^{-8}$ \\
+Tungsten & $5.6 \times 10^{-8}$ \\
+Iron & $9.71 \times 10^{-8}$ \\
+Platinum & $10.6 \times 10^{-8}$ \\
+Steel & $20 \times 10^{-8}$ \\
+Lead & $22 \times 10^{-8}$ \\
+Manganin (Cu, Mn, Ni alloy) & $44 \times 10^{-8}$ \\
+Constantan (Cu, Ni alloy) & $49 \times 10^{-8}$ \\
+Mercury & $96 \times 10^{-8}$ \\
+Nichrome (Ni, Fe, Cr alloy) & $100 \times 10^{-8}$ \\
+\midrule
+\multicolumn{2}{c}{\textbf{Semiconductors}} \\
+Carbon (pure) & $3.5 \times 10^{-5}$ \\
+Carbon & $(3.5 - 60) \times 10^{-5}$ \\
+Germanium (pure) & $600 \times 10^{-3}$ \\
+Germanium & $(1 - 600) \times 10^{-3}$ \\
+Silicon (pure) & 2300 \\
+Silicon & 0.1--2300 \\
+\midrule
+\multicolumn{2}{c}{\textbf{Insulators}} \\
+Amber & $5 \times 10^{14}$ \\
+Glass & $10^{9} - 10^{14}$ \\
+Lucite & $>10^{13}$ \\
+Mica & $10^{11} - 10^{15}$ \\
+Quartz (fused) & $75 \times 10^{16}$ \\
+Rubber (hard) & $10^{13} - 10^{16}$ \\
+Sulfur & $10^{15}$ \\
+Teflon & $>10^{13}$ \\
+Wood & $10^{8} - 10^{11}$ \\
+\bottomrule
+\end{tabular}
+\caption{Resistivities $\rho$ of Various Materials at 20$^\circ$C}
+\end{table}
+
+\newpage
+\subsection{Temperature Coefficients of Resistivity (Table 20.2)}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lr@{}}
+\toprule
+Material & Coefficient $\alpha$ (1/$^\circ$C) \\
+\midrule
+\multicolumn{2}{c}{\textbf{Conductors}} \\
+Silver & $3.8 \times 10^{-3}$ \\
+Copper & $3.9 \times 10^{-3}$ \\
+Gold & $3.4 \times 10^{-3}$ \\
+Aluminum & $3.9 \times 10^{-3}$ \\
+Tungsten & $4.5 \times 10^{-3}$ \\
+Iron & $5.0 \times 10^{-3}$ \\
+Platinum & $3.93 \times 10^{-3}$ \\
+Lead & $3.9 \times 10^{-3}$ \\
+Manganin (Cu, Mn, Ni alloy) & $0.000 \times 10^{-3}$ \\
+Constantan (Cu, Ni alloy) & $0.002 \times 10^{-3}$ \\
+Mercury & $0.89 \times 10^{-3}$ \\
+Nichrome (Ni, Fe, Cr alloy) & $0.4 \times 10^{-3}$ \\
+\midrule
+\multicolumn{2}{c}{\textbf{Semiconductors}} \\
+Carbon (pure) & $-0.5 \times 10^{-3}$ \\
+Germanium (pure) & $-50 \times 10^{-3}$ \\
+Silicon (pure) & $-70 \times 10^{-3}$ \\
+\bottomrule
+\end{tabular}
+\caption{Temperature Coefficients of Resistivity $\alpha$}
+\end{table}
+
+\subsection{Effects of Electrical Shock as a Function of Current (Table 20.3)}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}cp{10cm}@{}}
+\toprule
+Current (mA) & Effect \\
+\midrule
+1 & Threshold of sensation \\
+5 & Maximum harmless current \\
+10--20 & Onset of sustained muscular contraction; cannot let go for duration of shock; contraction of chest muscles may stop breathing during shock \\
+50 & Onset of pain \\
+100--300+ & Ventricular fibrillation possible; often fatal \\
+300 & Onset of burns depending on concentration of current \\
+6000 (6 A) & Onset of sustained ventricular contraction and respiratory paralysis; both cease when shock ends; heartbeat may return to normal; used to defibrillate the heart \\
+\bottomrule
+\end{tabular}
+\caption{Effects of Electrical Shock as a Function of Current}
+\end{table}
+
+\end{document}
