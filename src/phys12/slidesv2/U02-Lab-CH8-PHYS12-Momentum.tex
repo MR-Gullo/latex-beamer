@@ -1,0 +1,253 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{physics}
+
+% Custom environments and commands
+\newcommand{\conceptbox}[2]{
+    \begin{tcolorbox}[colback=blue!5,colframe=blue!40,title={\textbf{#1}}]
+        #2
+    \end{tcolorbox}
+}
+
+\newcommand{\note}[1]{
+    \begin{mdframed}[linecolor=gray!50]
+        \textit{Note:} #1
+    \end{mdframed}
+}
+
+\pagestyle{fancy}
+\fancyhead[L]{Physics Laboratory Manual}
+\fancyhead[R]{Conservation of Momentum}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+\title{\textbf{Laboratory Investigation:\\ Conservation of Linear Momentum}}
+\author{Physics Department}
+\date{}
+\maketitle
+
+\section*{Introduction}
+The conservation of linear momentum stands as one of physics' most profound and fundamental principles. This laboratory investigation guides students through a systematic exploration of momentum conservation in both elastic and inelastic collisions, providing hands-on experience with a principle that underlies much of classical mechanics.
+
+\conceptbox{Core Learning Objectives}{
+\begin{itemize}
+    \item Verify the conservation of linear momentum experimentally
+    \item Distinguish between elastic and inelastic collisions
+    \item Develop precision measurement techniques
+    \item Apply error analysis to real physical systems
+\end{itemize}
+}
+
+\section{Theoretical Framework}
+
+\subsection{Conservation of Linear Momentum}
+In an isolated system, the total linear momentum remains constant regardless of the interactions between its components. Mathematically:
+
+\begin{equation}
+    \sum \vec{p}_{\text{initial}} = \sum \vec{p}_{\text{final}}
+\end{equation}
+
+For a two-body collision, this principle takes the specific form:
+\begin{equation}
+    m_1v_{1i} + m_2v_{2i} = m_1v_{1f} + m_2v_{2f}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $m_1, m_2$ represent the masses of the colliding objects
+    \item $v_{1i}, v_{2i}$ denote initial velocities
+    \item $v_{1f}, v_{2f}$ represent final velocities
+\end{itemize}
+
+\subsection{Types of Collisions}
+This investigation examines two fundamental types of collisions:
+
+\conceptbox{Elastic Collisions}{
+\begin{itemize}
+    \item Both momentum and kinetic energy are conserved
+    \item Objects separate after collision
+    \item Implemented using magnetic bumpers
+    \item Ideal case: perfect elasticity
+\end{itemize}
+}
+
+\conceptbox{Inelastic Collisions}{
+\begin{itemize}
+    \item Only momentum is conserved
+    \item Objects stick together after collision
+    \item Implemented using nylon buttons
+    \item Kinetic energy transforms to other forms
+\end{itemize}
+}
+
+\section{Experimental Apparatus}
+
+\subsection{Required Equipment}
+\begin{itemize}
+    \item llongwill\textsuperscript{\textregistered} photogate sensors (2)
+    \item Multi-purpose mechanical track system
+    \item Collision carts (2)
+    \item Light blocking flags (width = 0.020 m)
+    \item Digital balance (precision 0.1 g)
+    \item Interchangeable bumpers (magnetic and nylon)
+    \item Data acquisition system
+\end{itemize}
+
+\subsection{Measurement Technique}
+Velocity measurements utilize photogate timing according to:
+\begin{equation}
+    v = \frac{\text{flag width}}{\text{gate time}} = \frac{0.020 \text{ m}}{t}
+\end{equation}
+
+\note{Proper alignment of photogates is crucial for accurate measurements. Ensure flags pass through gates perpendicularly.}
+
+\section{Experimental Procedure}
+
+\subsection{Part A: Elastic Collisions}
+\begin{enumerate}
+    \item Mount magnetic bumpers securely on both carts
+    \item Measure and record masses: $m_1$ and $m_2$ (±0.1 g)
+    \item Position photogates ensuring proper flag height alignment
+    \item Place carts at opposite track ends
+    \item Initialize data collection system
+    \item Gently push carts toward collision point
+    \item Record timing data for both pre- and post-collision passages
+    \item Repeat measurement minimum three times
+\end{enumerate}
+
+\subsection{Part B: Inelastic Collisions}
+\begin{enumerate}
+    \item Replace magnetic bumpers with nylon buttons
+    \item Position one cart between photogates
+    \item Release second cart to achieve collision
+    \item Record timing data for combined mass post-collision
+    \item Repeat measurement minimum three times
+\end{enumerate}
+
+\section{Data Analysis}
+
+\subsection{Required Calculations}
+For each collision event, calculate:
+
+\begin{enumerate}
+    \item Initial momenta:
+        \begin{equation}
+            p_{1i} = m_1v_{1i}, \quad p_{2i} = m_2v_{2i}
+        \end{equation}
+    
+    \item Final momenta:
+        \begin{equation}
+            p_{1f} = m_1v_{1f}, \quad p_{2f} = m_2v_{2f}
+        \end{equation}
+    
+    \item Total momentum:
+        \begin{equation}
+            p_{\text{total}} = p_1 + p_2
+        \end{equation}
+    
+    \item Relative error:
+        \begin{equation}
+            \eta = \frac{p_{\text{before}} - p_{\text{after}}}{p_{\text{before}}}
+        \end{equation}
+\end{enumerate}
+
+\subsection{Error Analysis}
+Consider and quantify these sources of uncertainty:
+\begin{itemize}
+    \item Mass measurements (±0.1 g)
+    \item Timing precision (±0.001 s)
+    \item Track friction effects
+    \item Air resistance
+    \item Alignment errors
+\end{itemize}
+
+\section{Expected Results}
+
+\conceptbox{Anticipated Outcomes}{
+\begin{itemize}
+    \item Elastic collisions: momentum conservation within 3\% error
+    \item Inelastic collisions: momentum conservation with combined mass
+    \item Systematic variations due to friction and air resistance
+    \item Greater uncertainty in elastic collision measurements
+\end{itemize}
+}
+
+\section{Discussion Questions}
+\begin{enumerate}
+    \item How does the choice of bumper type affect energy conservation?
+    \item What role does friction play in momentum conservation?
+    \item Explain any systematic deviations from theoretical predictions
+    \item Propose improvements to reduce experimental uncertainty
+    \item How might results differ in a frictionless environment?
+\end{enumerate}
+
+\section{Laboratory Report Requirements}
+
+Your report should include:
+
+\begin{enumerate}
+    \item Abstract summarizing methods and findings
+    \item Complete data tables with all measurements
+    \item Sample calculations showing analysis method
+    \item Error analysis with uncertainty propagation
+    \item Discussion of systematic errors
+    \item Comparison of elastic and inelastic results
+    \item Suggestions for experimental improvements
+\end{enumerate}
+
+\note{Include clear diagrams and graphs where appropriate. All figures should have captions and be referenced in the text.}
+\newpage
+\section*{Proficiency Levels}
+
+\subsection*{Emerging}
+\textbf{Description:} Beginning to grasp fundamental concepts of momentum conservation and basic experimental methods, requiring significant guidance.
+
+\noindent\textbf{Skills and Abilities:}
+\begin{itemize}[leftmargin=*]
+    \item Demonstrates basic laboratory safety and equipment identification while requiring supervision for setup and operation
+    \item Records raw timing data and performs simple momentum calculations ($\vec{p} = m\vec{v}$) with assistance
+    \item Recognizes the conceptual difference between elastic and inelastic collisions
+\end{itemize}
+
+\subsection*{Developing}
+\textbf{Description:} Shows growing understanding of momentum conservation principles and basic lab techniques, but needs support in application and analysis.
+
+\noindent\textbf{Skills and Abilities:}
+\begin{itemize}[leftmargin=*]
+    \item Conducts experimental procedures with minimal guidance, including basic photogate alignment and data collection
+    \item Calculates velocities and momenta from raw data, though may struggle with uncertainty analysis
+    \item Interprets collision data qualitatively while beginning to apply quantitative analysis techniques
+\end{itemize}
+
+\subsection*{Proficient}
+\textbf{Description:} Demonstrates solid comprehension of momentum conservation concepts and experimental methods, working independently with minimal support.
+
+\noindent\textbf{Skills and Abilities:}
+\begin{itemize}[leftmargin=*]
+    \item Executes experimental procedures independently with proper technique and uncertainty analysis
+    \item Analyzes collision data quantitatively, including momentum conservation calculations and error propagation
+    \item Evaluates experimental validity through systematic error analysis and theoretical comparisons
+\end{itemize}
+
+\subsection*{Extending}
+\textbf{Description:} Shows advanced understanding and analytical capability, exploring momentum conservation concepts beyond basic requirements.
+
+\noindent\textbf{Skills and Abilities:}
+\begin{itemize}[leftmargin=*]
+    \item Synthesizes experimental results with advanced physics concepts, including energy conservation and non-ideal effects
+    \item Proposes and implements methodological improvements to enhance experimental precision
+    \item Extends analysis beyond basic requirements through creative data visualization and theoretical connections
+\end{itemize}
+
+
+\end{document}

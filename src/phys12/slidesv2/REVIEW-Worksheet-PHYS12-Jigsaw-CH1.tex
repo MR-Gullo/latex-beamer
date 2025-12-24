@@ -1,0 +1,189 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[]{article}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{docx-images/}{../images/}{../../shared/images/}}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+Jigsaw Reading and Problem Solving Activity
+
+\textbf{Overview}
+
+This Jigsaw Reading and Problem-Solving activity is designed to
+encourage students to work collaboratively in small groups. Each group
+is assigned a section of the chapter to read, understand, and then teach
+to their peers. This approach promotes both individual responsibility
+and teamwork as students rely on one another to learn the entire content
+of the chapter.
+
+\textbf{Learning Objectives}
+
+- Encourage collaborative learning by dividing tasks and
+responsibilities.
+
+- Foster critical reading and comprehension of the assigned material.
+
+- Enhance communication skills through peer teaching.
+
+- Develop problem-solving skills through group discussions and analysis.
+
+- Promote a deeper understanding of the subject matter through active
+engagement.
+
+\textbf{Instructions for Students}
+
+1. Group Formation
+
+- The class will be divided into small groups of 3--5 students.
+
+- Each group will be assigned a section from the chapter to focus on.
+
+2. Individual Study
+
+- Each student in the group will read their assigned section silently.
+
+- While reading, students should take notes on the key concepts,
+definitions, and examples provided in their section.
+
+3. Group Discussion
+
+- Once everyone has finished reading, the group will discuss their
+section to ensure that all members fully understand the material.
+
+- Collaborate to clarify difficult concepts, using textbooks, additional
+resources, or asking the teacher for help if necessary.
+
+4. Teaching Preparation
+
+- Each group will prepare a short presentation (5-10 minutes) to teach
+the main points of their section to the rest of the class.
+
+- Decide how to divide the presentation among group members. Make sure
+everyone participates.
+
+- Use visual aids, such as diagrams or written key points, to make the
+explanation clear.
+
+5. Class Presentation
+
+- Each group will present their section to the class.
+
+- As the group teaches, the rest of the class will take notes. Ask
+questions if anything is unclear.
+
+6. Problem Solving
+
+- After the presentation, the group can pose a problem or question
+related to their section for the class to solve. This could be a
+calculation, an application of a concept, or a discussion question from
+the textbook.
+
+- Engage the class in solving the problem together.
+
+\textbf{Assessment}
+
+- Participation in both the group discussion and presentation will be
+considered.
+
+- Clarity and completeness of the group\textquotesingle s explanation
+will be assessed.
+
+- Peer feedback will be encouraged to help refine understanding and
+communication skills.
+
+\textbf{Tips for Success}
+
+- Stay focused during group discussions---everyone\textquotesingle s
+understanding is important.
+
+- Communicate clearly when teaching your section. Imagine explaining the
+topic to someone who has never heard of it.
+
+- Ask questions if you don't understand something during another group's
+presentation. It's a chance for everyone to learn.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1877}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8123}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Level & Description \\
+Excellent & Exceptional collaboration and presentation skills.
+Demonstrates comprehensive understanding of all sections. Effectively
+uses visual aids. Poses challenging problems and shows excellent
+critical thinking. \\
+Good & Good collaboration and clear presentation. Shows solid
+understanding of most sections. Uses visual aids well. Poses relevant
+problems and demonstrates good critical thinking. \\
+Satisfactory & Adequate participation and presentation. Basic
+understanding of assigned section. Limited use of visual aids. Poses
+somewhat relevant problems with some critical thinking. \\
+Needs Improvement & Minimal participation and unclear presentation.
+Limited understanding of material. Rarely uses visual aids. Struggles to
+pose relevant problems or demonstrate critical thinking. \\
+\end{longtable}
+}
+
+\end{document}

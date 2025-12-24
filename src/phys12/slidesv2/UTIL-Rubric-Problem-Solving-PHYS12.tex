@@ -1,0 +1,211 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[]{article}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{docx-images/}{../images/}{../../shared/images/}}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+Problem-Solving Rubric
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1118}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2508}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2120}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2125}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2129}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Criteria & Extending & Proficient & Developing & Emerging \\
+Problem Setup & Creates comprehensive, precise sketches with detailed
+labels and annotations. Systematically identifies all relevant
+quantities and relationships. Shows insight in defining system
+boundaries. & Creates clear, appropriate sketches with necessary labels.
+Correctly identifies known and unknown quantities. Appropriately defines
+system of interest. & Creates basic sketches with some labels.
+Identifies some relevant quantities. Shows partial understanding of
+system boundaries. & Creates minimal or unclear sketches. Shows limited
+recognition of relevant quantities. Unclear understanding of system
+boundaries. \\
+Free-Body Diagram & Constructs precise diagrams with exemplary detail.
+Shows sophisticated understanding through accurate vector
+representation. Demonstrates thorough understanding of vector component
+resolution. & Constructs accurate free-body diagrams. Represents forces
+correctly as vectors. Resolves vectors into components appropriately. &
+Constructs basic diagrams with some errors. Shows inconsistent
+understanding of force representation. Attempts vector resolution with
+partial success. & Attempts basic diagrams with significant errors.
+Shows beginning understanding of force representation. Limited
+understanding of vector components. \\
+Mathematical Analysis & Applies Newton\textquotesingle s Second Law with
+precision in all directions. Shows deep understanding of force
+relationships. Demonstrates elegant and efficient solution strategies. &
+Applies Newton\textquotesingle s Second Law correctly. Sets up equations
+properly. Follows logical solution process. & Shows developing
+understanding of Newton\textquotesingle s Second Law. Sets up equations
+with some errors. Solution process shows gaps in understanding. & Shows
+emerging understanding of Newton\textquotesingle s Second Law. Equation
+setup needs significant support. Solution process needs substantial
+guidance. \\
+Solution Verification & Provides insightful analysis of answer
+reasonableness. Shows meticulous attention to units and significant
+figures. Connects solution to broader physics principles. & Verifies
+reasonableness of solution. Maintains correct units throughout. Uses
+appropriate significant figures. & Attempts to verify solutions with
+limited success. Shows inconsistent use of units. Limited attention to
+significant figures. & Limited awareness of solution verification.
+Inconsistent use of units. Minimal attention to significant figures. \\
+\end{longtable}
+}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1292}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.5310}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3280}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0054}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0063}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Criteria & Extending & Proficient & & \\
+Problem Setup & Creates comprehensive, precise sketches with detailed
+labels and annotations.
+
+Systematically identifies all relevant quantities and relationships.
+Shows insight in defining system boundaries. & Creates clear,
+appropriate sketches with necessary labels.
+
+Correctly identifies known and unknown quantities. Appropriately defines
+system of interest. & & \\
+Free-Body Diagram & Constructs precise diagrams with exemplary detail.
+
+Shows sophisticated understanding through accurate vector
+representation.
+
+Demonstrates thorough understanding of vector component resolution. &
+Constructs accurate free-body diagrams.
+
+Represents forces correctly as vectors.
+
+Resolves vectors into components appropriately. & & \\
+Mathematical Analysis & Applies Newton\textquotesingle s Second Law with
+precision in all directions. Shows deep understanding of force
+relationships. Demonstrates elegant and efficient solution strategies. &
+Applies Newton\textquotesingle s Second Law correctly.
+
+Sets up equations properly.
+
+Follows logical solution process. & & \\
+Solution Verification & Provides insightful analysis of answer
+reasonableness.
+
+Shows meticulous attention to units and significant figures. Connects
+solution to broader physics principles. & Verifies reasonableness of
+solution.
+
+Maintains correct units throughout.
+
+Uses appropriate significant figures. & & \\
+\end{longtable}
+}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1212}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8788}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Criteria & Extending \\
+Problem Setup & Creates comprehensive, precise sketches with detailed
+labels and annotations.
+
+Systematically identifies all relevant quantities and relationships.
+
+Shows insight in defining system boundaries. \\
+Free-Body Diagram & Constructs precise diagrams with exemplary detail.
+
+Shows sophisticated understanding through accurate vector
+representation.
+
+Demonstrates thorough understanding of vector component resolution. \\
+Mathematical Analysis & Applies Newton\textquotesingle s Second Law with
+precision in all directions.
+
+Shows deep understanding of force relationships.
+
+Demonstrates elegant and efficient solution strategies. \\
+Solution Verification & Provides insightful analysis of answer
+reasonableness.
+
+Shows meticulous attention to units and significant figures.
+
+Connects solution to broader physics principles. \\
+\end{longtable}
+}
+
+\end{document}

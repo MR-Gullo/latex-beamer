@@ -1,0 +1,651 @@
+\documentclass{beamer}
+% Use DS9 global theme
+\usepackage{../../../shared/templates/ds9_theme}
+
+% Title page configuration
+\title[PHYS12 CH7]{Work and Energy}
+\subtitle{Chapter 7.1-7.6: Conservative and Nonconservative Forces}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[Nov 2024]{November 2024}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% NEW: Progression Context Frames
+\begin{frame}
+\frametitle{Unit 3: Work, Energy and Power}
+\begin{block}{Unit Overview}
+This unit reframes the conservation of energy principle with a more sophisticated understanding of nonconservative forces.
+\end{block}
+\pause
+
+\begin{block}{What You Already Know (Physics 11)}
+\begin{itemize}
+    \item Definition of Work: $W = Fd\cos\theta$
+    \item Kinetic Energy: $KE = \frac{1}{2}mv^2$
+    \item Work-Energy Theorem: $W_{net} = \Delta KE$
+    \item Gravitational Potential Energy: $PE_g = mgh$
+    \item Conservation of Mechanical Energy (no friction): $KE_i + PE_i = KE_f + PE_f$
+    \item Power: $P = W/t = Fv$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{What's New in Physics 12}
+\begin{block}{New Concepts}
+\begin{itemize}
+    \item Formal classification of forces as \textbf{Conservative} (gravity, elastic) and \textbf{Nonconservative} (friction, drag)
+    \pause
+    \item \textbf{Generalized Conservation of Energy} principle accounting for work done by nonconservative forces:
+    \[W_{nc} = \Delta KE + \Delta PE\]
+\end{itemize}
+\end{block}
+\pause
+
+\begin{block}{Application Focus}
+Solving energy conservation problems where mechanical energy is NOT conserved. Calculate work done by friction (or other nonconservative forces) and account for it as loss of mechanical energy from the system, typically dissipated as heat.
+\end{block}
+\end{frame}
+
+\section{Review: Work and Energy Fundamentals}
+
+\begin{frame}
+\frametitle{Work: Quick Review}
+\begin{itemize}
+    \item Work is transfer of energy by a force acting on an object as it is displaced
+    \item Mathematical definition: $W = F d \cos\theta$
+    \pause
+    \item Where:
+    \begin{itemize}
+        \item $W$ is work (joules, J)
+        \item $F$ is force (newtons, N)
+        \item $d$ is displacement (meters, m)
+        \item $\theta$ is angle between force and displacement
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{When is Work Positive, Negative, or Zero?}
+\begin{itemize}
+    \item Work is \textbf{zero} when:
+    \begin{itemize}
+        \item Force and displacement are perpendicular ($\theta = 90$)
+        \item There is no displacement ($d = 0$)
+    \end{itemize}
+    \pause
+    \item Work is \textbf{positive} when:
+    \begin{itemize}
+        \item Force and displacement are in same direction ($\theta < 90$)
+    \end{itemize}
+    \pause
+    \item Work is \textbf{negative} when:
+    \begin{itemize}
+        \item Force and displacement are in opposite directions ($90 < \theta \leq 180$)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kinetic Energy Review}
+\begin{itemize}
+    \item Kinetic energy is energy of motion
+    \item Formula: $KE = \frac{1}{2}mv^2$
+    \pause
+    \item Where:
+    \begin{itemize}
+        \item $m$ is mass (kg)
+        \item $v$ is velocity (m/s)
+    \end{itemize}
+    \pause
+    \item Work-Energy Theorem: $W_{net} = \Delta KE$
+    \item Net work equals change in kinetic energy
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Gravitational Potential Energy Review}
+\begin{itemize}
+    \item Energy due to position in a gravitational field
+    \item Formula: $PE_g = mgh$
+    \pause
+    \item Where:
+    \begin{itemize}
+        \item $m$ is mass (kg)
+        \item $g$ is acceleration due to gravity (9.8 m/s²)
+        \item $h$ is height (m)
+    \end{itemize}
+    \pause
+    \item Depends only on vertical height change
+    \item Reference level can be chosen arbitrarily
+\end{itemize}
+\end{frame}
+
+\section{Example: Review Problems}
+
+\begin{frame}
+\frametitle{Example 7.1: Calculating Work You Do to Push a Lawn Mower}
+A person pushing a lawn mower exerts a constant force of 75.0 N at an angle 35 below the horizontal.
+\pause
+The lawn mower is pushed 25.0 m on level ground.
+\pause
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../images/mower-energy.jpg}
+\end{figure}
+\vspace{0.5cm}
+\end{frame}
+
+\begin{frame}
+\textbf{Solution:}
+\begin{align}
+    W &= Fd\cos\theta \nonumber \\
+    W &= (75.0\text{ N})(25.0\text{ m})\cos(35.0) \nonumber \\
+    W &= 1536\text{ J} = 1.54 \times 10^3\text{ J} \nonumber \\
+    \text{Convert to kcal:} &= 0.367\text{ kcal} \nonumber \\
+    \text{Ratio to daily intake:} &= 1.53 \times 10^{-4} \nonumber
+\end{align}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example 7.2: Calculating the Kinetic Energy of a Package}
+A 30.0-kg package on a roller belt conveyor system moves at 0.500 m/s. Calculate the Kinetic Energy of the Package.
+\pause
+\vspace{0.5cm}
+\begin{center}
+		\includegraphics[width=0.7\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-07-23-40.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+\textbf{Solution Steps:}
+\begin{enumerate}
+    \item KE = $\frac{1}{2}mv^2$ 
+    \pause
+    \item KE = $0.5(30.0\text{ kg})(0.500\text{ m/s})^2$
+    \pause
+    \item KE = $3.75\text{ kg}\cdot\text{m}^2/\text{s}^2 = 3.75\text{ J}$
+\end{enumerate}
+\end{frame}
+
+\section{7.4 Conservative Forces and Potential Energy}
+
+\begin{frame}
+\frametitle{Conservative Forces:}
+\begin{block}{Definition}
+A force is \textbf{conservative} if the work done by it on a particle is independent of the path taken.
+\end{block}
+\pause
+
+\begin{itemize}
+    \item Work depends ONLY on initial and final positions
+    \pause
+    \item Energy can be stored and fully recovered
+    \pause
+    \item Path doesn't matter, only endpoints
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Examples of Conservative Forces}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\textbf{Conservative Forces:}
+\begin{itemize}
+    \item Gravitational force
+    \pause
+    \item Elastic force (springs)
+    \pause
+    \item Electrostatic force
+\end{itemize}
+\pause
+
+\end{column}
+
+\pause
+
+\begin{column}{0.5\textwidth}
+\textbf{Key Properties:}
+\begin{itemize}
+    \item Work can be recovered
+    \pause
+    \item Path-independent
+    \pause
+    \item Associated with potential energy
+    \pause
+    \item Closed loop: $W_{total} = 0$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Visualizing Conservative Forces: Path Independence}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../images/path-indep.png}
+\end{figure}
+\pause
+
+\begin{block}{Key Insight}
+For conservative forces, ALL paths between points A and B require the same work. Only the vertical height change matters for gravity.
+\end{block}
+
+\pause
+\textbf{VIDEO:} Pendulum showing continuous KE $\leftrightarrow$ PE conversion (30-60 sec)
+\end{frame}
+
+\begin{frame}
+\frametitle{Potential Energy and Conservative Forces}
+\begin{itemize}
+    \item Potential energy: energy stored due to position or configuration
+    \pause
+    \item For conservative forces:
+    \[\Delta PE = -W_{\text{cons}}\]
+    \pause
+    \item Where:
+    \begin{itemize}
+        \item $\Delta PE$ is change in potential energy
+        \item $W_{\text{cons}}$ is work done by conservative force
+        \item Negative sign: force does positive work, PE decreases
+    \end{itemize}
+    \pause
+    \item Types we'll use:
+    \begin{itemize}
+        \item Gravitational potential energy: $PE_g = mgh$
+        \item Elastic potential energy: $PE_s = \frac{1}{2}kx^2$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{7.5 Conservation of Mechanical Energy}
+
+\begin{frame}
+\frametitle{Conservation of Mechanical Energy}
+\begin{block}{When Only Conservative Forces Act}
+Total mechanical energy remains constant:
+\[E_{\text{total}} = KE + PE = \text{constant}\]
+\end{block}
+\pause
+
+\begin{block}{Mathematical Expression}
+\[KE_i + PE_i = KE_f + PE_f\]
+\pause
+Or equivalently:
+\[\frac{1}{2}mv_i^2 + mgh_i = \frac{1}{2}mv_f^2 + mgh_f\]
+\end{block}
+\pause
+
+\begin{alertblock}{Critical Condition}
+This ONLY works when no nonconservative forces (like friction) do work on the system.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Energy Transformation Diagram}
+\begin{center}
+\begin{center}
+		\includegraphics[width=0.5\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-07-29-45.png}
+	\end{center}
+\pause
+
+\begin{itemize}
+    \item Energy transforms between KE and PE
+    \pause
+    \item Total mechanical energy constant
+    \pause
+    \item At maximum height: all PE, no KE
+\end{itemize}
+\end{center}
+\end{frame}
+
+\section{7.6 Nonconservative Forces}
+
+\begin{frame}
+\frametitle{Nonconservative Forces:}
+\begin{block}{Definition}
+A force is \textbf{nonconservative} if the work done depends on the path taken.
+\end{block}
+\pause
+
+\begin{itemize}
+    \item Work depends on path, not just endpoints
+    \pause
+    \item Energy cannot be fully recovered
+    \pause
+    \item Mechanical energy is NOT conserved
+    \pause
+    \item Energy typically converted to heat, sound, or other forms
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Examples of Nonconservative Forces}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\textbf{Nonconservative Forces:}
+\begin{itemize}
+    \item Friction (kinetic)
+    \pause
+    \item Air resistance/drag
+    \pause
+    \item Tension (in most cases)
+    \pause
+    \item Applied forces from people/motors
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+\begin{center}
+		\includegraphics[width=0.6\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-07-48-38.png}
+	\end{center}
+\end{column}
+
+\pause
+
+\begin{column}{0.5\textwidth}
+\textbf{Key Properties:}
+\begin{itemize}
+    \item Work cannot be recovered
+    \pause
+    \item Path-dependent
+    \pause
+    \item NOT associated with PE
+    \pause
+    \item Closed loop: $W_{total} \neq 0$
+    \pause
+    \item Dissipate mechanical energy
+\end{itemize}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Visual Comparison: Conservative vs Nonconservative}
+\begin{center}
+\begin{center}
+		\includegraphics[width=0.6\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-12-22-12.png}
+	\end{center}
+\end{center}
+\pause
+
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\textbf{Conservative:}
+\begin{itemize}
+    \item Energy conserved
+    \item Reversible motion
+    \item Path independent
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\textbf{Nonconservative:}
+\begin{itemize}
+    \item Energy lost from system
+    \item Irreversible
+    \item Path dependent
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Generalized Conservation of Energy}
+\begin{block}{With Nonconservative Forces}
+Change in mechanical energy equals work done by nonconservative forces:
+\[\Delta E = W_{nc}\]
+\pause
+Or:
+\[W_{nc} = \Delta KE + \Delta PE\]
+\pause
+Expanded form:
+\[W_{nc} = (KE_f - KE_i) + (PE_f - PE_i)\]
+\end{block}
+\pause
+
+\begin{alertblock}{Key Insight}
+$W_{nc}$ is typically negative (friction removes energy from system). Mechanical energy decreases, converted to heat.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Energy Flow with Friction}
+\begin{center}
+\begin{center}
+		\includegraphics[width=0.6\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-12-25-24.png}
+	\end{center}
+\end{center}
+\pause
+
+\begin{block}{What Happens to "Lost" Energy?}
+\begin{itemize}
+    \item Converted to thermal energy (heat)
+    \pause
+    \item Sound energy
+    \pause
+    \item Deformation of materials
+    \pause
+    \item NOT destroyed (total energy still conserved)
+    \pause
+    \item Just no longer useful mechanical energy
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{Example Problems}
+
+\begin{frame}
+\frametitle{Guided Example: Spring and Projectile Motion}
+A 2 kg mass is attached to a spring (k = 100 N/m) and compressed 0.3 m. What height will it reach when released?
+\pause
+
+\begin{figure}
+\centering
+\begin{center}
+		\includegraphics[width=0.4\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-12-26-59.png}
+	\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution: Spring Problem}
+\textbf{Step 1:} Initial energy (compressed spring)
+\pause
+\[\frac{1}{2}kx^2 = \frac{1}{2}(100)(0.3)^2 = 4.5 \text{ J}\]
+\pause
+
+\textbf{Step 2:} At maximum height (all gravitational PE)
+\pause
+\[PE_g = mgh = 4.5 \text{ J}\]
+\pause
+
+\textbf{Step 3:} Solve for h
+\pause
+\[h = \frac{4.5}{(2)(9.8)} = 0.23 \text{ m}\]
+\pause
+
+\textbf{Key:} Elastic PE converted entirely to gravitational PE (conservative forces only).
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Practice Problem}
+\begin{block}{Problem}
+A 0.5 kg ball is thrown upward with initial velocity 15 m/s. Calculate:
+\begin{enumerate}
+    \item Maximum height reached
+    \item Velocity when it returns to half the maximum height
+\end{enumerate}
+Use conservation of energy principles!
+\end{block}
+\pause
+
+\begin{block}{Hints}
+\begin{itemize}
+    \item Start with: $\frac{1}{2}mv_i^2 = mgh_{\max}$
+    \item For part 2: $\frac{1}{2}mv_i^2 = \frac{1}{2}mv_f^2 + mg(h_{\max}/2)$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{You Do: Solution}
+\textbf{Part 1: Maximum height}
+\pause
+\[h_{\max} = 11.5 \text{ m}\]
+\pause
+
+\textbf{Part 2: Velocity at half max height}
+\pause
+\[v_f = 10.6 \text{ m/s}\]
+\end{frame}
+\begin{comment}
+\begin{frame}
+\frametitle{Example with Friction: Block Sliding Down Ramp}
+\begin{block}{Problem Setup}
+A 5 kg block slides down a 30 ramp from height 4 m. Coefficient of kinetic friction $\mu_k = 0.2$. Find final velocity at bottom.
+\end{block}
+\pause
+
+\begin{center}
+\begin{center}
+		\includegraphics[width=0.6\linewidth]{pasted-images/ch07-1_slides_energy-part1-2-12-28-17.png}
+	\end{center}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution: Block with Friction}
+\textbf{Step 1:} Without friction (conservative only)
+\pause
+\[v = \sqrt{2gh} = \sqrt{2(9.8)(4)} = 8.85 \text{ m/s}\]
+\pause
+
+\textbf{Step 2:} Calculate work by friction
+\pause
+\begin{itemize}
+    \item Normal force: $N = mg\cos(30) = 5(9.8)(0.866) = 42.4$ N
+    \pause
+    \item Friction force: $f = \mu_k N = 0.2(42.4) = 8.48$ N
+    \pause
+    \item Distance along ramp: $d = h/\sin(30) = 4/0.5 = 8$ m
+    \pause
+    \item Work by friction: $W_f = -fd = -8.48(8) = -67.8$ J
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution: Block with Friction (continued)}
+\textbf{Step 3:} Apply generalized energy conservation
+\pause
+\[W_{nc} = \Delta KE + \Delta PE\]
+\pause
+\[-67.8 = \frac{1}{2}(5)v_f^2 - 0 + 0 - 5(9.8)(4)\]
+\pause
+\[-67.8 = 2.5v_f^2 - 196\]
+\pause
+\[2.5v_f^2 = 128.2\]
+\pause
+\[v_f = 7.16 \text{ m/s}\]
+\pause
+
+\textbf{Compare:} Without friction: 8.85 m/s. With friction: 7.16 m/s. Energy lost to heat: 67.8 J.
+\end{frame}
+\end{comment}
+\section{Common Misconceptions}
+
+\begin{frame}
+\frametitle{Common Mistakes: Conservative vs Nonconservative Forces}
+\begin{alertblock}{Misconception 1}
+"Tension is always a conservative force"
+\end{alertblock}
+\pause
+\textbf{Reality:} Tension is typically nonconservative. It does path-dependent work.
+\pause
+
+\begin{alertblock}{Misconception 2}
+"If energy is lost, conservation of energy is violated"
+\end{alertblock}
+\pause
+\textbf{Reality:} Mechanical energy may not be conserved, but TOTAL energy (including heat, sound) is always conserved. Energy transforms, never disappears.
+\end{frame}
+
+\begin{frame}
+\frametitle{Common Mistakes: Applying Energy Conservation}
+\begin{alertblock}{Misconception 3}
+"I can use $KE_i + PE_i = KE_f + PE_f$ for any problem"
+\end{alertblock}
+\pause
+\textbf{Reality:} This ONLY works when no nonconservative forces do work. Must check for friction, air resistance first.
+\pause
+
+\begin{alertblock}{Misconception 4}
+"Work by friction is always $W = \mu_k mg d$"
+\end{alertblock}
+\pause
+\textbf{Reality:} This only works on horizontal surfaces. On ramps: $W = \mu_k N d$ where $N = mg\cos\theta$, not $mg$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Common Mistakes: Sign Errors}
+\begin{alertblock}{Misconception 5}
+"Work by friction should be positive since it's a force"
+\end{alertblock}
+\pause
+\textbf{Reality:} Work by friction is negative because friction opposes motion ($\theta = 180$, so $\cos\theta = -1$).
+\pause
+
+\begin{alertblock}{Misconception 6}
+"The negative sign in $\Delta PE = -W_{\text{cons}}$ means PE always decreases"
+\end{alertblock}
+\pause
+\textbf{Reality:} Sign depends on direction. If conservative force does positive work (object moves in direction of force), PE decreases. If you do work against the force, PE increases.
+\end{frame}
+
+\begin{frame}
+\frametitle{Common Mistakes: Problem Solving}
+\begin{alertblock}{Misconception 7}
+"Path matters for all forces"
+\end{alertblock}
+\pause
+\textbf{Reality:} Path only matters for nonconservative forces. For conservative forces, only initial and final positions matter.
+\pause
+
+\begin{alertblock}{Misconception 8}
+"Energy lost to friction just vanishes"
+\end{alertblock}
+\pause
+\textbf{Reality:} Energy lost from mechanical energy system is converted to thermal energy (heat). It's still energy, just not useful for doing mechanical work. You can sometimes feel surfaces warm up after friction.
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Takeaways}
+\begin{itemize}
+    \item \textbf{Conservative forces:}
+    \begin{itemize}
+        \item Path-independent work
+        \item Enable potential energy definition
+        \item Mechanical energy conserved
+    \end{itemize}
+    \pause
+    \item \textbf{Nonconservative forces:}
+    \begin{itemize}
+        \item Path-dependent work
+        \item Convert mechanical energy to other forms
+        \item Must account for in energy calculations
+    \end{itemize}
+    \pause
+    \item \textbf{Problem-solving strategy:}
+    \begin{itemize}
+        \item Identify all forces (conservative vs nonconservative)
+        \item If only conservative: use $KE_i + PE_i = KE_f + PE_f$
+        \item If nonconservative present: use $W_{nc} = \Delta KE + \Delta PE$
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}

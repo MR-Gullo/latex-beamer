@@ -1,0 +1,196 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[]{article}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{docx-images/}{../images/}{../../shared/images/}}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\textbf{Physics Lab: Graphs and Motion Analysis}
+
+Objective
+
+To develop an intuitive understanding of the relationships between
+position, velocity, and acceleration graphs for one-dimensional motion
+using the Graphs and Tracks simulator.
+
+Materials
+
+- Computer with internet access
+
+- Graphs and Tracks simulator (https://graphsandtracks.com)
+
+Introduction
+
+In this lab, you will use the Graphs and Tracks simulator to explore how
+changes in a ball\textquotesingle s motion are represented in position,
+velocity, and acceleration graphs. You will complete a series of
+challenges that require you to match given motion graphs by adjusting
+the initial conditions and track setup.
+
+Procedure
+
+Part 1: Tutorial and Familiarization
+
+1. Open the Graphs and Tracks simulator.
+
+2. Complete the built-in tutorial, paying close attention to:
+
+- How to read and interpret position, velocity, and acceleration graphs
+
+- How to adjust the initial position and velocity of the ball
+
+- How to modify the track setup by changing post heights
+
+Part 2: Challenges
+
+3. Navigate to the Challenges section of the simulator.
+
+4. Complete all 15 challenges in order, from Easy to Hard difficulty.
+For each challenge:
+
+- Analyze the given graphs (dashed lines) for position, velocity, and
+acceleration.
+
+- Adjust the initial position and velocity of the ball.
+
+- Modify the track setup to match the given graphs.
+
+- Use the "Roll Ball" button to test your setup and compare your graphs
+(solid lines) to the challenge graphs.
+
+- Continue refining your setup until all three graphs match the
+challenge graphs.
+
+5. For each challenge, \textbf{record in a .docx file}:
+
+- The challenge number and difficulty level
+
+- The initial position and velocity you used
+
+- A sketch/screenshot or description of your final track setup
+
+- The number of attempts it took to solve the challenge
+
+- Any key insights or strategies you developed
+
+Part 3: Analysis and Reflection
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  After completing all 15 challenges, answer the following questions:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  How does the slope of a position-time graph relate to velocity?
+\item
+  What does a horizontal line on a velocity-time graph represent?
+\item
+  How can you determine if acceleration is positive, negative, or zero
+  from a velocity-time graph?
+\item
+  Describe the relationship between the shape of a track segment and the
+  corresponding acceleration graph.
+\item
+  Explain how you can use the area under a velocity-time graph to
+  determine displacement.
+\item
+  What was the most challenging aspect of matching the graphs, and how
+  did you overcome it?
+\end{enumerate}
+
+Extension (Optional)
+
+Create your own challenge using the simulator\textquotesingle s editor
+mode. Design a set of graphs that represent an interesting motion
+scenario, and challenge a classmate to solve it. Explain the physical
+situation your graphs represent.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1943}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1972}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1980}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2076}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2029}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Criteria & Excellent (4) & Good (3) & Satisfactory (2) & Needs
+Improvment(1) \\
+Completion, Documentation, and Analysis & All 15 challenges completed
+with detailed records. Well-organized documentation. Thoughtful,
+detailed answers to all reflection questions. & 12-14 challenges
+completed with adequate records. Mostly organized documentation. Good
+answers to most reflection questions with some depth. & 9-11 challenges
+completed with some records. Somewhat disorganized documentation. Basic
+answers to reflection questions with limited depth. & Less than 9
+challenges completed. Poorly organized documentation. Incomplete or
+superficial answers to reflection questions. \\
+\end{longtable}
+}
+
+\end{document}

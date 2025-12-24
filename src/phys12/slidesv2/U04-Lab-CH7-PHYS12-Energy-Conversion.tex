@@ -1,0 +1,249 @@
+% U04-Lab-CH7-PHYS12-Energy-Conversion.tex
+% Consolidated from Energy Conversion and Friction Lab + Student Template
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\graphicspath{{docx-images/}{../images/}{../../shared/images/}}
+\setcounter{secnumdepth}{-\maxdimen}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp}
+\else
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{%
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath}
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{%
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{%
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{\KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none}
+\usepackage{calc}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{%
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{}
+\urlstyle{same}
+\hypersetup{hidelinks,pdfcreator={LaTeX via pandoc}}
+
+\title{Energy Conversion and Friction\\A Two-Part Investigation Using Bouncy Balls}
+\author{Physics 12}
+\date{}
+
+\begin{document}
+\maketitle
+
+In this two-part activity, you will first study gravitational potential
+energy converting to kinetic energy, then investigate how friction
+converts kinetic energy to thermal energy.
+
+\section{PART 1: Converting Potential to Kinetic Energy}
+
+\subsection{Materials Needed}
+\begin{itemize}
+\item One ruler with groove OR open book with groove
+\item One book for incline
+\item One rubber bouncy ball
+\item One steel ball bearing
+\item One timer
+\item One smooth, level surface
+\item Meter stick or measuring tape
+\end{itemize}
+
+\subsection{Procedure}
+\begin{enumerate}
+\item Set up an incline using the ruler/book groove and book on a smooth, level surface.
+\item Place a rubber bouncy ball at the 10-cm position and let it roll down.
+\item When the ball hits the level surface, measure the time it takes to roll one meter.
+\item Repeat with the ball at the 20-cm and 30-cm positions.
+\item Calculate the velocity of the ball for all three positions.
+\item Plot velocity squared versus the distance traveled by the ball.
+\item Describe the shape of the plot. If linear, it shows the ball's kinetic energy at the bottom is proportional to its potential energy at the release point.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{energy-conv-image1.png}
+\end{center}
+
+\section{PART 2: Determining Friction from the Stopping Distance}
+
+\subsection{Materials Needed}
+\begin{itemize}
+\item Same incline setup from Part 1
+\item Rubber bouncy ball from Part 1
+\item Steel ball bearing from Part 1
+\item Foam cup with a small hole in the side
+\item Meter stick or measuring tape
+\item Scale (to measure masses of balls and cup)
+\end{itemize}
+
+\subsection{Procedure}
+\begin{enumerate}
+\item Position the foam cup at the bottom of the incline so the ball will roll into it through the small hole.
+\item Place the rubber bouncy ball at the 10-cm position and let it roll down into the cup.
+\item Measure the distance the cup moves before stopping.
+\item Repeat at the 20-cm and 30-cm positions.
+\item Plot stopping distance versus initial ball position. Is the relationship linear?
+\item Repeat steps 2-5 using the steel ball bearing.
+\item Using the masses of the balls and cup, calculate the coefficient of kinetic friction of the cup on the table.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{energy-conv-image2.png}
+\end{center}
+
+\textbf{Note:} The force of friction on the cup is $f_k = \mu_k N$, where the
+normal force is the weight of the cup plus the ball. The work done by
+friction is $W = f_k \times d$.
+
+\newpage
+%% ===== STUDENT SUBMISSION TEMPLATE =====
+
+\section*{Student Submission Template}
+
+Name: \rule{5cm}{0.4pt} \hfill Partner(s): \rule{5cm}{0.4pt}
+
+Date: \rule{5cm}{0.4pt} \hfill Class/Period: \rule{3cm}{0.4pt}
+
+\subsection*{Pre-Lab Checklist (Complete before starting)}
+\begin{itemize}
+\item[$\square$] Ruler with groove OR open book with groove obtained
+\item[$\square$] Book for incline selected
+\item[$\square$] Rubber bouncy ball and steel ball bearing obtained
+\item[$\square$] Timer available
+\item[$\square$] Foam cup with small hole prepared
+\item[$\square$] Scale to measure masses obtained
+\item[$\square$] Smooth, level surface identified
+\item[$\square$] Meter stick or measuring tape available
+\item[$\square$] Camera/phone available for photos
+\item[$\square$] Graph paper or digital graphing tool ready
+\end{itemize}
+
+\subsection*{Mass Measurements (Required for Part 2)}
+Mass of rubber bouncy ball: \rule{3cm}{0.4pt} kg\\
+Mass of steel ball bearing: \rule{3cm}{0.4pt} kg\\
+Mass of foam cup: \rule{3cm}{0.4pt} kg
+
+\subsection*{Part 1 Data: Rubber Bouncy Ball}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Release Position} & \textbf{Trial} & \textbf{Time for 1 m (s)} & \textbf{Velocity (m/s)} & \textbf{Velocity$^2$ (m$^2$/s$^2$)} \\
+\hline
+10 cm (0.10 m) & 1 & & & \\
+& 2 & & & \\
+& 3 & & & \\
+& Avg & & & \\
+\hline
+20 cm (0.20 m) & 1 & & & \\
+& 2 & & & \\
+& 3 & & & \\
+& Avg & & & \\
+\hline
+30 cm (0.30 m) & 1 & & & \\
+& 2 & & & \\
+& 3 & & & \\
+& Avg & & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Sample Calculation: Part 1}
+Show your complete work for calculating velocity and velocity squared for one trial:\\[2ex]
+Given: Time to roll 1.0 m = \rule{2cm}{0.4pt} s \quad Release position = \rule{2cm}{0.4pt} m\\[1ex]
+Velocity ($v$) = distance/time = 1.0 m / \rule{2cm}{0.4pt} s = \rule{2cm}{0.4pt} m/s\\[1ex]
+Velocity squared ($v^2$) = (\rule{2cm}{0.4pt} m/s)$^2$ = \rule{2cm}{0.4pt} m$^2$/s$^2$
+
+\subsection*{Part 2 Data: Cup Stopping Distance}
+
+\textbf{Rubber Bouncy Ball:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Release Position} & \textbf{Trial} & \textbf{Stopping Distance (m)} & \textbf{Avg Distance (m)} \\
+\hline
+10 cm & 1, 2, 3 & & \\
+\hline
+20 cm & 1, 2, 3 & & \\
+\hline
+30 cm & 1, 2, 3 & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Steel Ball Bearing:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Release Position} & \textbf{Trial} & \textbf{Stopping Distance (m)} & \textbf{Avg Distance (m)} \\
+\hline
+10 cm & 1, 2, 3 & & \\
+\hline
+20 cm & 1, 2, 3 & & \\
+\hline
+30 cm & 1, 2, 3 & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Sample Calculation: Part 2 (Coefficient of Friction)}
+Release position = \rule{2cm}{0.4pt} m \quad Average stopping distance ($d$) = \rule{2cm}{0.4pt} m\\
+Mass of ball = \rule{2cm}{0.4pt} kg \quad Mass of cup = \rule{2cm}{0.4pt} kg \quad $g$ = 9.8 m/s$^2$\\[1ex]
+Normal force ($N$) = (mass of cup + mass of ball) $\times g$ = \rule{3cm}{0.4pt} N\\
+Work done by friction = $\Delta KE$ = \rule{3cm}{0.4pt} J\\
+Coefficient of friction $\mu_k$ = Work / ($N \times d$) = \rule{3cm}{0.4pt}
+
+\subsection*{Analysis Questions}
+\begin{enumerate}
+\item What is the shape of your velocity squared versus distance plot? What does this indicate about the relationship between potential energy at release and kinetic energy at the bottom?
+\vspace{2cm}
+\item Is the relationship between stopping distance and initial ball position linear? Explain what this means for the energy conversion process.
+\vspace{2cm}
+\item For the steel ball bearing: Is the velocity at the bottom the same as the rubber bouncy ball? Is the stopping distance proportional to the ball mass? Support with data.
+\vspace{2cm}
+\item What factors might affect the accuracy of your friction coefficient calculation?
+\vspace{2cm}
+\end{enumerate}
+
+\textbf{Submission:} Submit this completed template along with both graphs and all photos as a single document (FirstName\_LastName.pdf).
+
+\end{document}
