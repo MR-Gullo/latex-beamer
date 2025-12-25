@@ -1,0 +1,885 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+
+\title{12.1 Zeroth Law of Thermodynamics: Thermal Equilibrium }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\captionsetup{singlelinecheck=false}
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-01}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.1 A steam engine uses energy transfer by heat to do work. (Modification of work by Gerald Friedrich, Pixabay)}
+\end{center}
+\end{figure}
+
+\section*{Chapter Outline}
+12.1 Zeroth Law of Thermodynamics: Thermal Equilibrium\\
+12.2 First law of Thermodynamics: Thermal Energy and Work\\
+12.3 Second Law of Thermodynamics: Entropy\\
+12.4 Applications of Thermodynamics: Heat Engines, Heat Pumps, and Refrigerators
+
+\section*{Introduction}
+\section*{Teacher Support}
+Teacher Support [BL][OL][AL] Ask students if they know how a steam engine works. What are the energy conversions that takes place? Before the start of the chapter, review the concepts of heat, heat transfer, and internal energy of a system.\\[0pt]
+[BL] Ask students what they think the word efficiency means. Ask them what it means for them to be efficient when performing classwork. Ask whether there are some days when they are more or less efficient than others, and have them give examples.\\[0pt]
+[OL][AL] Ask students why when they touch a machine, such as a computer or auto engine, it feels warm (or very hot!) to the touch. Then explain that,\\
+in physics, efficiency is defined as the amount of useful output energy (usually work) for a given input energy. In any engine, including humans, some energy is used to make the engine run, while the rest is lost in the form of unused heat. This is why any device or machine might feel hot while under operation. Point out that if an engine gives more output (say, the energy to travel a certain number of miles) for a given input (the chemical potential energy of the fuel), it is said to be more efficient. People constantly strive to design machines that give more and more efficiency. However, it is impossible for an engine to be 100 percent efficient. Some energy will always be lost in the form of heat.
+
+Energy can be transferred to or from a system, either through a temperature difference between it and another system (i.e., by heat) or by exerting a force through a distance (work). In these ways, energy can be converted into other forms of energy in other systems. For example, a car engine burns fuel for heat transfer into a gas. Work is done by the gas as it exerts a force through a distance by pushing a piston outward. This work converts the energy into a variety of other forms - into an increase in the car's kinetic or gravitational potential energy; into electrical energy to run the spark plugs, radio, and lights; and back into stored energy in the car's battery. But most of the thermal energy transferred by heat from the fuel burning in the engine does not do work on the gas. Instead, much of this energy is released into the surroundings at lower temperature (i.e., lost through heat), which is quite inefficient. Car engines are only about 25 to 30 percent efficient. This inefficiency leads to increased fuel costs, so there is great interest in improving fuel efficiency. However, it is common knowledge that modern gasoline engines cannot be made much more efficient. The same is true about the conversion to electrical energy in large power stations, whether they are coal, oil, natural gas, or nuclear powered. Why is this the case?
+
+The answer lies in the nature of heat. Basic physical laws govern how heat transfer for doing work takes place and limit the maximum possible efficiency of the process. This chapter will explore these laws as well their applications to everyday machines. These topics are part of thermodynamics - the study of heat and its relationship to doing work.
+
+\section*{Teacher Support}
+Teacher Support Before the start of this chapter, it is useful to review the following concept:
+
+\begin{itemize}
+  \item Conservation of energy, work, and heat
+\end{itemize}
+
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Explain the zeroth law of thermodynamics
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (6) Science concepts. The student knows that changes occur within a physical system and applies the laws of conservation of energy and momentum. The student is expected to:
+  \item (G) analyze and explain everyday examples that illustrate the laws of thermodynamics, including the law of conservation of energy and the law of entropy.
+\end{itemize}
+
+\section*{Section Key Terms}
+\section*{Teacher Support}
+Teacher Support [BL][OL] Review the concept of heat as the transfer of energy due to a temperature difference.\\[0pt]
+[OL] Ask students what the direction of heat flow would be if an ice cube were melting in a glass of soda or if a glass of hot water were placed in a room. Give a few more examples. Ask students how long the heat transfer would take place. What causes the heat transfer to occur?
+
+We learned in the previous chapter that when two objects (or systems) are in contact with one another, heat will transfer thermal energy from the object at higher temperature to the one at lower temperature until they both reach the same temperature. The objects are then in thermal equilibrium, and no further temperature changes will occur if they are isolated from other systems. The systems interact and change because their temperatures are different, and the changes stop once their temperatures are the same. Thermal equilibrium is established when two bodies are in thermal contact with each other-meaning heat transfer (i.e., the transfer of energy by heat) can occur between them. If two systems cannot freely exchange energy, they will not reach thermal equilibrium. (It is fortunate that empty space stands between Earth and the sun, because a state of thermal equilibrium with the sun would be too toasty for life on this planet!)
+
+If two systems, A and B , are in thermal equilibrium with each another, and B is in thermal equilibrium with a third system, C , then A is also in thermal equilibrium with C . This statement may seem obvious, because all three have the same temperature, but it is basic to thermodynamics. It is called the zeroth law of thermodynamics.
+
+\section*{Teacher Support}
+Teacher Support [AL] Ask students how we receive the energy of the sun, and yet the sun and Earth never reach thermal equilibrium.
+
+\section*{Tips For Success}
+The zeroth law of thermodynamics is very similar to the transitive property of equality in mathematics: If \(\mathrm{a}=\mathrm{b}\) and \(\mathrm{b}=\mathrm{c}\), then \(\mathrm{a}=\mathrm{c}\).
+
+You may be wondering at this point, why the wacky name? Shouldn't this be called the first law of thermodynamics rather than the zeroth? The explanation is that this law was discovered after the first and second laws of thermodynamics but is so fundamental that scientists decided it should logically come first.
+
+As an example of the zeroth law in action, consider newborn babies in neonatal intensive-care units in hospitals. Prematurely born or sick newborns are placed in special incubators. These babies have very little covering while in the incubators, so to an observer, they look as though they may not be warm enough. However, inside the incubator, the temperature of the air, the cot, and the baby are all the same - that is, they are in thermal equilibrium. The ambient temperature is just high enough to keep the baby safe and comfortable.
+
+\section*{Teacher Support}
+Teacher Support [OL][AL] Ask students to come up with more everyday examples of heat transfer that demonstrate the zeroth law of thermodynamics.
+
+\section*{Work In Physics}
+Thermodynamics Engineer Thermodynamics engineers apply the principles of thermodynamics to mechanical systems so as to create or test products that rely on the interactions between heat, work, pressure, temperature, and volume. This type of work typically takes place in the aerospace industry, chemical manufacturing companies, industrial manufacturing plants, power plants (Figure 12.2), engine manufacturers, or electronics companies.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-05}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.2 An engineer makes a site visit to the Baghdad South power plant.}
+\end{center}
+\end{figure}
+
+The need for energy creates quite a bit of demand for thermodynamics engineers, because both traditional energy companies and alternative (green) energy startups rely on interactions between heat and work and so require the expertise of thermodynamics engineers. Traditional energy companies use mainly nuclear energy and energy from burning fossil fuels, such as coal. Alternative energy is finding new ways to harness renewable and, often, more readily available energy sources, such as solar, water, wind, and bio-energy.
+
+A thermodynamics engineer in the energy industry can find the most efficient way to turn the burning of a biofuel or fossil fuel into energy, store that energy for times when it's needed most, or figure out how to best deliver that energy from where it's produced to where it's used: in homes, factories, and businesses. Additionally, he or she might also design pollution-control equipment to remove harmful pollutants from the smoke produced as a by-product of burning fuel. For example, a thermodynamics engineer may develop a way to remove mercury from burning coal in a coal-fired power plant.
+
+Thermodynamics engineering is an expanding field, where employment opportunities are expected to grow by as much as 27 percent between 2012 and 2022, according to the U.S. Bureau of Labor Statistics. To become a thermodynamics engineer, you must have a college degree in chemical engineering, mechanical engineering, environmental engineering, aerospace engineering, civil engineering, or biological engineering (depending on which type of career you wish to pursue), with coursework in physics and physical chemistry that focuses on thermodynamics.
+
+\section*{Grasp Check}
+What would be an example of something a thermodynamics engineer would do in the aeronautics industry?\\
+a. Test the fuel efficiency of a jet engine\\
+b. Test the functioning of landing gear\\
+c. Test the functioning of a lift control device\\
+d. Test the autopilot functions
+
+\section*{Check Your Understanding}
+\section*{Teacher Support}
+Teacher Support Use these questions to assess student achievement of the section's Learning Objectives. If students are struggling with a specific objective, these questions will help identify which and direct students to the relevant content.\\
+1.
+
+What is thermal equilibrium?\\
+a. When two objects in contact with each other are at the same pressure, they are said to be in thermal equilibrium.\\
+b. When two objects in contact with each other are at different temperatures, they are said to be in thermal equilibrium.\\
+c. When two objects in contact with each other are at the same temperature, they are said to be in thermal equilibrium.\\
+d. When two objects not in contact with each other are at the same pressure, they are said to be in thermal equilibrium.\\
+2.
+
+What is the zeroth law of thermodynamics?\\
+a. Energy can neither be created nor destroyed in a chemical reaction.\\
+b. If two systems, A and B , are in thermal equilibrium with each another, and B is in thermal equilibrium with a third system, C , then A is also in thermal equilibrium with C .\\
+c. Entropy of any isolated system not in thermal equilibrium always increases.\\
+d. Entropy of a system approaches a constant value as temperature approaches absolute zero.
+
+\subsection*{12.2 First law of Thermodynamics: Thermal Energy and Work}
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Describe how pressure, volume, and temperature relate to one another and to work, based on the ideal gas law
+  \item Describe pressure-volume work
+  \item Describe the first law of thermodynamics verbally and mathematically
+  \item Solve problems involving the first law of thermodynamics
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (6) Science concepts. The student knows that changes occur within a physical system and applies the laws of conservation of energy and momentum. The student is expected to:
+  \item (G) analyze and explain everyday examples that illustrate the laws of thermodynamics, including the law of conservation of energy and the law of entropy.
+\end{itemize}
+
+\section*{Section Key Terms}
+\section*{Pressure, Volume, Temperature, and the Ideal Gas Law}
+\section*{Teacher Support}
+Teacher Support [BL][OL][AL] Review the concept of force.\\[0pt]
+[OL] Ask students how much force it would take to hammer a nail into a wall. Would they achieve the same result if the nail were blunt instead of pointed? Why or why not?
+
+Before covering the first law of thermodynamics, it is first important to understand the relationship between pressure, volume, and temperature. Pressure, \(P\), is defined as\\
+\(P=\frac{F}{A}\),\\
+12.1\\
+where \(F\) is a force applied to an area, \(A\), that is perpendicular to the force.
+
+Depending on the area over which it is exerted, a given force can have a significantly different effect, as shown in Figure 12.3.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-08}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.3 (a) Although the person being poked with the finger might be irritated, the force has little lasting effect. (b) In contrast, the same force applied to an area the size of the sharp end of a needle is great enough to break the skin.}
+\end{center}
+\end{figure}
+
+The SI unit for pressure is the pascal, where \(1 \mathrm{~Pa}=1 \mathrm{~N} / \mathrm{m}^{2}\).\\
+Pressure is defined for all states of matter but is particularly important when discussing fluids (such as air). You have probably heard the word pressure being used in relation to blood (high or low blood pressure) and in relation to the weather (high- and low-pressure weather systems). These are only two of many examples of pressures in fluids.
+
+The relationship between the pressure, volume, and temperature for an ideal gas is given by the ideal gas law. A gas is considered ideal at low pressure and fairly high temperature, and forces between its component particles can be ignored. The ideal gas law states that\\
+\(P V=N k T\).\\
+12.2\\
+where \(P\) is the pressure of a gas, \(V\) is the volume it occupies, \(N\) is the number of particles (atoms or molecules) in the gas, and \(T\) is its absolute temperature. The constant \(k\) is called the Boltzmann constant and has the value \(k=1.38 \times 10^{-23} \mathrm{~J} / \mathrm{K}\), For the purposes of this chapter, we will not go into calculations using the ideal gas law. Instead, it is important for us to notice from the equation that the following are true for a given mass of gas:
+
+\begin{itemize}
+  \item When volume is constant, pressure is directly proportional to temperature.
+  \item When temperature is constant, pressure is inversely proportional to volume.
+  \item When pressure is constant, volume is directly proportional to temperature.
+\end{itemize}
+
+This last point describes thermal expansion-the change in size or volume of a given mass with temperature. What is the underlying cause of thermal ex-\\
+pansion? An increase in temperature means that there's an increase in the kinetic energy of the individual atoms. Gases are especially affected by thermal expansion, although liquids expand to a lesser extent with similar increases in temperature, and even solids have minor expansions at higher temperatures. This is why railroad tracks and bridges have expansion joints that allow them to freely expand and contract with temperature changes.
+
+\section*{Teacher Support}
+Teacher Support [BL][OL][AL]Inform students that the ideal gas law is only strictly true for gases that are ideal. Real gases differ from these in certain ways. For instance, it is assumed that in an ideal gas, there are no intermolecular forces, all collisions between molecules are perfectly elastic, and so on. However, the ideal gas law is useful in calculations, because under standard conditions of temperature and pressure, many real gases, such as oxygen, nitrogen, hydrogen, and noble gases exhibit qualitative behavior that is very close to the behavior of an ideal gas.
+
+To get some idea of how pressure, temperature, and volume of a gas are related to one another, consider what happens when you pump air into a deflated tire. The tire's volume first increases in direct proportion to the amount of air injected, without much increase in the tire pressure. Once the tire has expanded to nearly its full size, the walls limit volume expansion. If you continue to pump air into tire (which now has a nearly constant volume), the pressure increases with increasing temperature (see Figure 12.4).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-09}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.4 (a) When air is pumped into a deflated tire, its volume first increases without much increase in pressure. (b) When the tire is filled to a certain point, the tire walls resist further expansion, and the pressure increases as more air is added. (c) Once the tire is inflated fully, its pressure increases with temperature.}
+\end{center}
+\end{figure}
+
+\section*{Pressure-Volume Work}
+Pressure volume work is the work that is done by the compression or expansion of a fluid. Whenever there is a change in volume and external pressure remains constant, pressure-volume work is taking place. During a compression, a decrease in volume increases the internal pressure of a system as work is done on\\
+the system. During an expansion (Figure 12.5), an increase in volume decreases the internal pressure of a system as the system does work.\\
+\includegraphics[max width=\textwidth, center]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-10}
+
+\[
+W_{\text {out }}=F d=P A d=P \Delta V
+\]
+
+Figure 12.5 An expansion of a gas requires energy transfer to keep the pressure constant. Because pressure is constant, the work done is \(P \Delta V\).
+
+Recall that the formula for work is \(W=F d\). We can rearrange the definition of pressure, \(P=\frac{F}{A}\), to get an expression for force in terms of pressure.\\
+\(F=P A\)
+
+\section*{12.3}
+Substituting this expression for force into the definition of work, we get\\
+\(W=P A d\).
+
+\section*{12.4}
+Because area multiplied by displacement is the change in volume, \(W=P \Delta V\), the mathematical expression for pressure-volume work is\\
+\(W=P \Delta V\).
+
+\section*{12.5}
+Just as we say that work is force acting over a distance, for fluids, we can say that work is the pressure acting through the change in volume. For pressurevolume work, pressure is analogous to force, and volume is analogous to distance in the traditional definition of work.
+
+\section*{Watch Physics}
+Work from Expansion This video describes work from expansion (or pressure-volume work). Sal combines the equations \(W=P \Delta V\) and \(\Delta U=Q-W\) to get \(\Delta U=Q-P \Delta V\).
+
+Click to view content
+
+\section*{Grasp Check}
+If the volume of a system increases while pressure remains constant, is the value of work done by the system \(\boldsymbol{W}\) positive or negative? Will this increase or decrease the internal energy of the system?\\
+a. Positive; internal energy will decrease\\
+b. Positive; internal energy will increase\\
+c. Negative; internal energy will decrease\\
+d. Negative; internal energy will increase
+
+\section*{The First Law of Thermodynamics}
+\section*{Teacher Support}
+Teacher Support [BL] Review heat transfer. When and how does heat transfer energy between two bodies? What happens when energy is transferred into or out of a system by heat?
+
+Heat \((Q)\) and work \((W)\) are the two ways to add or remove energy from a system. The processes are very different. Heat is driven by temperature differences, while work involves a force exerted through a distance. Nevertheless, heat and work can produce identical results. For example, both can cause a temperature increase. Heat transfers energy into a system, such as when the sun warms the air in a bicycle tire and increases the air's temperature. Similarly, work can be done on the system, as when the bicyclist pumps air into the tire. Once the temperature increase has occurred, it is impossible to tell whether it was caused by heat or work. Heat and work are both energy in transit-neither is stored as such in a system. However, both can change the internal energy, \(U\), of a system.
+
+Internal energy is the sum of the kinetic and potential energies of a system's atoms and molecules. It can be divided into many subcategories, such as thermal and chemical energy, and depends only on the state of a system (that is, \(P, V\), and \(T\) ), not on how the energy enters or leaves the system.
+
+In order to understand the relationship between heat, work, and internal energy, we use the first law of thermodynamics. The first law of thermodynamics applies the conservation of energy principle to systems where heat and work are the methods of transferring energy into and out of the systems. It can also be used to describe how energy transferred by heat is converted and transferred again by work.
+
+\section*{Teacher Support}
+Teacher Support [OL][AL] Ask students to give examples of processes where energy is converted from one form into another. Analyze whether energy transfer by heat occurs in each case.
+
+\section*{Tips For Success}
+Recall that the principle of conservation of energy states that energy cannot be created or destroyed, but it can be altered from one form to another.
+
+The first law of thermodynamics states that the change in internal energy of a closed system equals the net heat transfer into the system minus the net work done by the system. In equation form, the first law of thermodynamics is\\
+\(\Delta U=Q-W\).\\
+12.6
+
+Here, \(\Delta U\) is the change in internal energy, \(U\), of the system. As shown in Figure 12.6, \(Q\) is the net heat transferred into the system-that is, \(Q\) is the sum of all heat transfers into and out of the system. \(W\) is the net work done by the system - that is, \(W\) is the sum of all work done on or by the system. By convention, if \(Q\) is positive, then there is a net heat transfer into the system; if \(W\) is positive, then there is net work done by the system. So positive \(Q\) adds energy to the system by heat, and positive \(W\) takes energy from the system by work. Note that if heat transfers more energy into the system than that which is done by work, the difference is stored as internal energy.\\
+\includegraphics[max width=\textwidth, center]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-12}
+
+Figure 12.6 The first law of thermodynamics is the conservation of energy principle stated for a system, where heat and work are the methods of transferring energy to and from a system. \(Q\) represents the net heat transfer-it is the sum of all transfers of energy by heat into and out of the system. \(Q\) is positive for net heat transfer into the system. \(W_{\text {out }}\) is the work done by the system, and \(W_{\text {in }}\) is the work done on the system. \(W\) is the total work done on or by the system. \(W\) is positive when more work is done by the system than on it. The change in the internal energy of the system, \(\Delta U\), is related to heat and work by the first law of thermodynamics: \(\Delta U=Q-W\).
+
+It follows also that negative \(Q\) indicates that energy is transferred away from the system by heat and so decreases the system's internal energy, whereas negative\\
+\(W\) is work done on the system, which increases the internal energy.
+
+\section*{Watch Physics}
+First Law of Thermodynamics/Internal Energy This video explains the first law of thermodynamics, conservation of energy, and internal energy. It goes over an example of energy transforming between kinetic energy, potential energy, and heat transfer due to air resistance.
+
+Click to view content\\
+Watch Physics: First Law of Thermodynamics / Internal Energy. This video introduces and explains the first law of thermodynamics and the concept of internal energy.
+
+Click to view content\\
+Consider the example of tossing a ball when there's air resistance. As air resistance increases, what would you expect to happen to the final velocity and final kinetic energy of the ball? Why?\\
+a. Both will decrease. Energy is transferred to the air by heat due to air resistance.\\
+b. Both will increase. Energy is transferred from the air to the ball due to air resistance.\\
+c. Final velocity will increase, but final kinetic energy will decrease. Energy is transferred by heat to the air from the ball through air resistance.\\
+d. Final velocity will decrease, but final kinetic energy will increase. Energy is transferred by heat from the air to the ball through air resistance.
+
+\section*{Teacher Support}
+Teacher Support [BL][OL] Demonstrate that the equation may be rearranged as \(Q=\Delta U+W\). This shows that any energy added by heat to a system is either converted into work or stored as internal energy.
+
+\section*{Watch Physics}
+More on Internal Energy This video goes into further detail, explaining internal energy and how to use the equation \(\Delta U=Q-W\). Note that Sal uses the equation \(\Delta U=Q+W\), where \(W\) is the work done on the system, whereas we use \(W\) to represent work done by the system.
+
+Click to view content\\
+If \(5 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\) are taken away by heat from the system, and the system does \(5 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\) of work, what is the change in internal energy of the system?\\
+a. \(\{-10\} \backslash, \mid \operatorname{text}\{\mathrm{J}\}\)\\
+b. \(0 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\)\\
+c. \(10 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\)\\
+d. \(25 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\)
+
+\section*{Links To Physics}
+Biology: Biological Thermodynamics We often think about thermodynamics as being useful for inventing or testing machinery, such as engines or steam turbines. However, thermodynamics also applies to living systems, such as our own bodies. This forms the basis of the biological thermodynamics (Figure 12.7).\\
+\(\Delta U=Q-W+\) food energy \(\quad \Delta U=\) stored food energy
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-14}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.7 (a) The first law of thermodynamics applies to metabolism. Heat transferred out of the body (Q) and work done by the body (W) remove internal energy, whereas food intake replaces it. (Food intake may be considered work done on the body.) (b) Plants convert part of the radiant energy in sunlight into stored chemical energy, a process called photosynthesis.}
+\end{center}
+\end{figure}
+
+Life itself depends on the biological transfer of energy. Through photosynthesis, plants absorb solar energy from the sun and use this energy to convert carbon dioxide and water into glucose and oxygen. Photosynthesis takes in one form of energy - light - and converts it into another form - chemical potential energy (glucose and other carbohydrates).
+
+Human metabolism is the conversion of food into energy given off by heat, work done by the body's cells, and stored fat. Metabolism is an interesting example of the first law of thermodynamics in action. Eating increases the internal energy of the body by adding chemical potential energy; this is an unromantic view of a good burrito.
+
+The body metabolizes all the food we consume. Basically, metabolism is an\\
+oxidation process in which the chemical potential energy of food is released. This implies that food input is in the form of work. Exercise helps you lose weight, because it provides energy transfer from your body by both heat and work and raises your metabolic rate even when you are at rest.
+
+Biological thermodynamics also involves the study of transductions between cells and living organisms. Transduction is a process where genetic material-DNA-is transferred from one cell to another. This often occurs during a viral infection (e.g., influenza) and is how the virus spreads, namely, by transferring its genetic material to an increasing number of previously healthy cells. Once enough cells become infected, you begin to feel the effects of the virus (flu symptoms-muscle weakness, coughing, and congestion).
+
+Energy is transferred along with the genetic material and so obeys the first law of thermodynamics. Energy is transferred - not created or destroyed - in the process. When work is done on a cell or heat transfers energy to a cell, the cell's internal energy increases. When a cell does work or loses heat, its internal energy decreases. If the amount of work done by a cell is the same as the amount of energy transferred in by heat, or the amount of work performed on a cell matches the amount of energy transferred out by heat, there will be no net change in internal energy.
+
+\section*{Grasp Check}
+Based on what you know about heat transfer and the first law of thermodynamics, do you need to eat more or less to maintain a constant weight in colder weather? Explain why.\\
+a. more; as more energy is lost by the body in colder weather, the need to eat increases so as to maintain a constant weight\\
+b. more; eating more food means accumulating more fat, which will insulate the body from colder weather and will reduce the energy loss\\
+c. less; as less energy is lost by the body in colder weather, the need to eat decreases so as to maintain a constant weight\\
+d. less; eating less food means accumulating less fat, so less energy will be required to burn the fat, and, as a result, weight will remain constant
+
+\section*{Solving Problems Involving the First Law of Thermodynamics}
+\section*{Worked Example}
+Calculating Change in Internal Energy Suppose 40.00 J of energy is transferred by heat to a system, while the system does 10.00 J of work. Later, heat transfers 25.00 J out of the system, while 4.00 J is done by work on the system. What is the net change in the system's internal energy?
+
+\section*{Strategy}
+You must first calculate the net heat and net work. Then, using the first law of thermodynamics, \(\Delta U=Q-W\), find the change in internal energy.
+
+Solution\\
+The net heat is the transfer into the system by heat minus the transfer out of the system by heat, or\\
+\(Q=40.00 \mathrm{~J}-25.00 \mathrm{~J}=15.00 \mathrm{~J}\).\\
+12.7
+
+The total work is the work done by the system minus the work done on the system, or\\
+\(W=10.00 \mathrm{~J}-4.00 \mathrm{~J}=6.00 \mathrm{~J}\).\\
+12.8
+
+The change in internal energy is given by the first law of thermodynamics.\\
+\(\Delta U=Q-W=15.00 \mathrm{~J}-6.00 \mathrm{~J}=9.00 \mathrm{~J}\)\\
+12.9
+
+Discussion\\
+A different way to solve this problem is to find the change in internal energy for each of the two steps separately and then add the two changes to get the total change in internal energy. This approach would look as follows:
+
+For 40.00 J of heat in and 10.00 J of work out, the change in internal energy is\\
+\(\Delta U_{1}=Q_{1}-W_{1}=40.00 \mathrm{~J}-10.00 \mathrm{~J}=30.00 \mathrm{~J}\).\\
+12.10
+
+For 25.00 J of heat out and 4.00 J of work in, the change in internal energy is\\
+\(\Delta U_{2}=Q_{2}-W_{2}=-25.00 \mathrm{~J}-(-4.00 \mathrm{~J})=-21.00 \mathrm{~J}\).\\
+12.11
+
+The total change is\\
+\(\Delta U=\Delta U_{1}+\Delta U_{2}=30.00 \mathrm{~J}+(-21.00 \mathrm{~J})=9.00 \mathrm{~J}\).\\
+12.12
+
+No matter whether you look at the overall process or break it into steps, the change in internal energy is the same.
+
+\section*{Teacher Support}
+Teacher Support [BL] Make sure students are clear on the use of negative signs for heat transfer and work. Work done by an isolated system means an increase in volume, so \(W\) is positive and \(\Delta U\) decreases or is negative.
+
+\section*{Worked Example}
+Calculating Change in Internal Energy: The Same Change in \(U\) is Produced by Two Different Processes What is the change in the internal energy of a system when a total of 150.00 J is transferred by heat from the system and 159.00 J is done by work on the system?
+
+\section*{Strategy}
+The net heat and work are already given, so simply use these values in the equation \(\Delta U=Q-W\).
+
+Solution\\
+Here, the net heat and total work are given directly as \(Q=-150.00 \mathrm{~J}\) and \(W=\) -159.00 J , so that\\
+\(\Delta U=Q-W=-150.00 \mathrm{~J}-(-159.00 \mathrm{~J})=9.00 \mathrm{~J}\).\\
+12.13
+
+Discussion
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-18}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.8 Two different processes produce the same change in a system. (a) A total of 15.00 J of heat transfer occurs into the system, while work takes out a total of 6.00 J . The change in internal energy is \(\Delta \mathrm{U}=\mathrm{Q}-\mathrm{W}=9.00 \mathrm{~J}\). (b) Heat transfer removes 150.00 J from the system while work puts 159.00 J into it, producing an increase of 9.00 J in internal energy. If the system starts out in the same state in (a) and (b), it will end up in the same final state in either case - its final state is related to internal energy, not how that energy was acquired.}
+\end{center}
+\end{figure}
+
+A very different process in this second worked example produces the same 9.00 J change in internal energy as in the first worked example. Note that the change in the system in both parts is related to \(\Delta U\) and not to the individual \(Q\) 's or \(W\) 's involved. The system ends up in the same state in both problems. Note that, as usual, in Figure 12.8 above, \(W_{\text {out }}\) is work done by the system, and \(W_{\text {in }}\) is work done on the system.
+
+\section*{Practice Problems}
+3.
+
+How much work is done by a gas under 20 Pa of pressure increasing in volume by \(3.0 \mathrm{~m}^{3}\) ?\\
+a. -0.15 J\\
+b. 6.7 J\\
+c. -23 J\\
+d. 60 J\\
+4.
+
+What is the net heat out of the system when \(25 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\) is transferred by heat into the system and \(45 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\) is transferred out of it?\\
+a. \(\{-70\} \backslash, \backslash \operatorname{text}\{\mathrm{J}\}\)\\
+b. \(\{-20\} \backslash, \backslash \operatorname{text}\{\mathrm{J}\}\)\\
+c. \(20 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\)\\
+d. \(70 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\)
+
+\section*{Check Your Understanding}
+\section*{Teacher Support}
+Teacher Support Use these questions to assess student achievement of the section's learning objectives. If students are struggling with a specific objective, these questions will help identify which and direct students to the relevant content.\\
+5.
+
+What is pressure?\\
+a. Pressure is force divided by length.\\
+b. Pressure is force divided by area.\\
+c. Pressure is force divided by volume.\\
+d. Pressure is force divided by mass.\\
+6.
+
+What is the SI unit for pressure?\\
+a. pascal, or \(\mathrm{N} / \mathrm{m}^{3}\)\\
+b. coulomb\\
+c. newton\\
+d. pascal, or \(\mathrm{N} / \mathrm{m}^{2}\)\\
+7.
+
+What is pressure-volume work?\\
+a. It is the work that is done by the compression or expansion of a fluid.\\
+b. It is the work that is done by a force on an object to produce a certain displacement.\\
+c. It is the work that is done by the surface molecules of a fluid.\\
+d. It is the work that is done by the high-energy molecules of a fluid.\\
+8.
+
+When is pressure-volume work said to be done ON a system?\\
+a. When there is an increase in both volume and internal pressure.\\
+b. When there is a decrease in both volume and internal pressure.\\
+c. When there is a decrease in volume and an increase in internal pressure.\\
+d. When there is an increase in volume and a decrease in internal pressure.\\
+9.
+
+What are the ways to add energy to or remove energy from a system?\\
+a. Transferring energy by heat is the only way to add energy to or remove energy from a system.\\
+b. Doing compression work is the only way to add energy to or remove energy from a system.\\
+c. Doing expansion work is the only way to add energy to or remove energy from a system.\\
+d. Transferring energy by heat or by doing work are the ways to add energy to or remove energy from a system.\\
+10.
+
+What is internal energy?\\
+a. It is the sum of the kinetic energies of a system's atoms and molecules.\\
+b. It is the sum of the potential energies of a system's atoms and molecules.\\
+c. It is the sum of the kinetic and potential energies of a system's atoms and molecules.\\
+d. It is the difference between the magnitudes of the kinetic and potential energies of a system's atoms and molecules.
+
+\subsection*{12.3 Second Law of Thermodynamics: Entropy}
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Describe entropy
+  \item Describe the second law of thermodynamics
+  \item Solve problems involving the second law of thermodynamics
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (6) Science concepts. The student knows that changes occur within a physical system and applies the laws of conservation of energy and momentum.\\
+The student is expected to:
+  \item (G) analyze and explain everyday examples that illustrate the laws of thermodynamics, including the law of conservation of energy and the law of entropy
+\end{itemize}
+
+\section*{Section Key Terms}
+\section*{Entropy}
+\section*{Teacher Support}
+Teacher Support [BL][OL][AL] Review heat and absolute temperature. Recall earlier discussions on engine efficiency. Assess students' understanding of efficiency.
+
+Recall from the chapter introduction that it is not even theoretically possible for engines to be 100 percent efficient. This phenomenon is explained by the second law of thermodynamics, which relies on a concept known as entropy. Entropy is a measure of the disorder of a system. Entropy also describes how much energy is not available to do work. The more disordered a system and higher the entropy, the less of a system's energy is available to do work.
+
+\section*{Teacher Support}
+Teacher Support The meaning of entropy is difficult to grasp, as it may seem like an abstract concept. However, we see examples of entropy in our everyday lives. For instance, if a car tire is punctured, air disperses in all directions. When water in a dish is set on a counter, it eventually evaporates,\\
+the individual molecules spreading out in the surrounding air. When a hot object is placed in the room, it quickly spreads heat energy in all directions. Entropy can be thought of as a measure of the dispersal of energy. It measures how much energy has been dispersed in a process. The flow of any energy is always from high to low. Hence, entropy always tends to increase.
+
+Although all forms of energy can be used to do work, it is not possible to use the entire available energy for work. Consequently, not all energy transferred by heat can be converted into work, and some of it is lost in the form of waste heat-that is, heat that does not go toward doing work. The unavailability of energy is important in thermodynamics; in fact, the field originated from efforts to convert heat to work, as is done by engines.
+
+The equation for the change in entropy, \(\Delta S\), is\\
+\(\Delta S=\frac{Q}{T}\),\\
+where \(Q\) is the heat that transfers energy during a process, and \(T\) is the absolute temperature at which the process takes place.\\
+\(Q\) is positive for energy transferred into the system by heat and negative for energy transferred out of the system by heat. In SI, entropy is expressed in units of joules per kelvin ( \(\mathrm{J} / \mathrm{K}\) ). If temperature changes during the process, then it is usually a good approximation (for small changes in temperature) to take \(T\) to be the average temperature in order to avoid trickier math (calculus).
+
+\section*{Tips For Success}
+Absolute temperature is the temperature measured in Kelvins. The Kelvin scale is an absolute temperature scale that is measured in terms of the number of degrees above absolute zero. All temperatures are therefore positive. Using temperatures from another, nonabsolute scale, such as Fahrenheit or Celsius, will give the wrong answer.
+
+\section*{Second Law of Thermodynamics}
+Have you ever played the card game 52 pickup? If so, you have been on the receiving end of a practical joke and, in the process, learned a valuable lesson about the nature of the universe as described by the second law of thermodynamics. In the game of 52 pickup, the prankster tosses an entire deck of playing cards onto the floor, and you get to pick them up. In the process of picking up the cards, you may have noticed that the amount of work required to restore the cards to an orderly state in the deck is much greater than the amount of work required to toss the cards and create the disorder.
+
+The second law of thermodynamics states that the total entropy of a system either increases or remains constant in any spontaneous process; it never decreases. An important implication of this law is that heat transfers energy spontaneously\\
+from higher- to lower-temperature objects, but never spontaneously in the reverse direction. This is because entropy increases for heat transfer of energy from hot to cold (Figure 12.9). Because the change in entropy is \(Q / T\), there is a larger change in \(\Delta S\) at lower temperatures (smaller \(T\) ). The decrease in entropy of the hot (larger \(T\) ) object is therefore less than the increase in entropy of the cold (smaller \(T\) ) object, producing an overall increase in entropy for the system.\\
+\includegraphics[max width=\textwidth, center]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-24}
+
+Figure 12.9 The ice in this drink is slowly melting. Eventually, the components of the liquid will reach thermal equilibrium, as predicted by the second law of thermodynamics - that is, after heat transfers energy from the warmer liquid to the colder ice. (Jon Sullivan, \href{http://PDPhoto.org}{PDPhoto.org})
+
+Another way of thinking about this is that it is impossible for any process to have, as its sole result, heat transferring energy from a cooler to a hotter object. Heat cannot transfer energy spontaneously from colder to hotter, because the entropy of the overall system would decrease.
+
+Suppose we mix equal masses of water that are originally at two different temperatures, say \(20.0^{\circ} \mathrm{C}\) and \(40.0^{\circ} \mathrm{C}\). The result will be water at an intermediate temperature of \(30.0^{\circ} \mathrm{C}\). Three outcomes have resulted: entropy has increased, some energy has become unavailable to do work, and the system has become less orderly. Let us think about each of these results.
+
+First, why has entropy increased? Mixing the two bodies of water has the same effect as the heat transfer of energy from the higher-temperature substance to the lower-temperature substance. The mixing decreases the entropy of the hotter water but increases the entropy of the colder water by a greater amount, producing an overall increase in entropy.
+
+Second, once the two masses of water are mixed, there is no more temperature difference left to drive energy transfer by heat and therefore to do work. The energy is still in the water, but it is now unavailable to do work.
+
+Third, the mixture is less orderly, or to use another term, less structured. Rather than having two masses at different temperatures and with different distributions of molecular speeds, we now have a single mass with a broad distribution of molecular speeds, the average of which yields an intermediate temperature.
+
+These three results-entropy, unavailability of energy, and disorder-not only are related but are, in fact, essentially equivalent. Heat transfer of energy from hot to cold is related to the tendency in nature for systems to become disordered and for less energy to be available for use as work.
+
+Based on this law, what cannot happen? A cold object in contact with a hot one never spontaneously transfers energy by heat to the hot object, getting colder while the hot object gets hotter. Nor does a hot, stationary automobile ever spontaneously cool off and start moving.
+
+Another example is the expansion of a puff of gas introduced into one corner of a vacuum chamber. The gas expands to fill the chamber, but it never regroups on its own in the corner. The random motion of the gas molecules could take them all back to the corner, but this is never observed to happen (Figure 12.10).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-26}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.10 Examples of one-way processes in nature. (a) Heat transfer occurs spontaneously from hot to cold, but not from cold to hot. (b) The brakes of this car convert its kinetic energy to increase their internal energy (temperature), and heat transfers this energy to the environment. The reverse process is impossible. (c) The burst of gas released into this vacuum chamber quickly expands to uniformly fill every part of the chamber. The random motions of the gas molecules will prevent them from returning altogether to the corner.}
+\end{center}
+\end{figure}
+
+We've explained that heat never transfers energy spontaneously from a colder to a hotter object. The key word here is spontaneously. If we do work on a system, it is possible to transfer energy by heat from a colder to hotter object. We'll learn more about this in the next section, covering refrigerators as one of the applications of the laws of thermodynamics.
+
+Sometimes people misunderstand the second law of thermodynamics, thinking that based on this law, it is impossible for entropy to decrease at any particular\\
+location. But, it actually is possible for the entropy of one part of the universe to decrease, as long as the total change in entropy of the universe increases. In equation form, we can write this as\\
+\(\Delta S_{\text {tot }}=\Delta S_{\text {syst }}+\Delta S_{\text {envir }}>0\).\\
+Based on this equation, we see that \(\Delta S_{\text {syst }}\) can be negative as long as \(\Delta S_{\text {envir }}\) is positive and greater in magnitude.
+
+How is it possible for the entropy of a system to decrease? Energy transfer is necessary. If you pick up marbles that are scattered about the room and put them into a cup, your work has decreased the entropy of that system. If you gather iron ore from the ground and convert it into steel and build a bridge, your work has decreased the entropy of that system. Energy coming from the sun can decrease the entropy of local systems on Earth-that is, \(\Delta S_{\text {syst }}\) is negative. But the overall entropy of the rest of the universe increases by a greater amountthat is, \(\Delta S_{\text {envir }}\) is positive and greater in magnitude. In the case of the iron ore, although you made the system of the bridge and steel more structured, you did so at the expense of the universe. Altogether, the entropy of the universe is increased by the disorder created by digging up the ore and converting it to steel. Therefore,\\
+\(\Delta S_{\mathrm{tot}}=\Delta S_{\mathrm{syst}}+\Delta S_{\mathrm{envir}}>0\),\\
+12.14\\
+and the second law of thermodynamics is not violated.\\
+Every time a plant stores some solar energy in the form of chemical potential energy, or an updraft of warm air lifts a soaring bird, Earth experiences local decreases in entropy as it uses part of the energy transfer from the sun into deep space to do work. There is a large total increase in entropy resulting from this massive energy transfer. A small part of this energy transfer by heat is stored in structured systems on Earth, resulting in much smaller, local decreases in entropy.
+
+\section*{Teacher Support}
+Teacher Support [AL] Ask students what would happen if the second law of thermodynamics were not true. What if the direction of flow of energy were not predictable? Would life on Earth be able to function?
+
+\section*{Solving Problems Involving the Second Law of Thermodynamics}
+Entropy is related not only to the unavailability of energy to do work; it is also a measure of disorder. For example, in the case of a melting block of ice, a highly structured and orderly system of water molecules changes into a disorderly liquid, in which molecules have no fixed positions (Figure 12.11). There is a large increase in entropy for this process, as we'll see in the following worked example.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-28}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.11 These ice floes melt during the Arctic summer. Some of them refreeze in the winter, but the second law of thermodynamics predicts that it would be extremely unlikely for the water molecules contained in these particular floes to reform in the distinctive alligator-like shape they possessed when this picture was taken in the summer of 2009. (Patrick Kelley, U.S. Coast Guard, U.S. Geological Survey)}
+\end{center}
+\end{figure}
+
+\section*{Worked Example}
+Entropy Associated with Disorder Find the increase in entropy of 1.00 kg of ice that is originally at \(0^{\circ} \mathrm{C}\) and melts to form water at \(0^{\circ} \mathrm{C}\).
+
+\section*{Strategy}
+The change in entropy can be calculated from the definition of \(\Delta S\) once we find the energy, \(Q\), needed to melt the ice.
+
+Solution\\
+The change in entropy is defined as\\
+\(\Delta S=\frac{Q}{T}\).\\
+12.15
+
+Here, \(Q\) is the heat necessary to melt 1.00 kg of ice and is given by\\
+\(Q=m L_{f}\),\\
+12.16\\
+where \(m\) is the mass and \(L_{f}\) is the latent heat of fusion. \(L_{f}=334 \mathrm{~kJ} / \mathrm{kg}\) for water, so\\
+\(Q=(1.00 \mathrm{~kg})(334 \mathrm{~kJ} / \mathrm{kg})=3.34 \times 10^{5} \mathrm{~J}\).\\
+12.17
+
+Because \(Q\) is the amount of energy heat adds to the ice, its value is positive, and \(T\) is the melting temperature of ice, \(T=273 \mathrm{~K}\) So the change in entropy is\\
+\(\Delta S=\frac{Q}{T}=\frac{3.34 \times 10^{5} \mathrm{~J}}{273 \mathrm{~K}}=1.22 \times 10^{3} \mathrm{~J} / \mathrm{K}\).\\
+12.18
+
+Discussion\\
+\includegraphics[max width=\textwidth, center]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-29}
+
+Figure 12.12 When ice melts, it becomes more disordered and less structured. The systematic arrangement of molecules in a crystal structure is replaced by a more random and less orderly movement of molecules without fixed locations or orientations. Its entropy increases because heat transfer occurs into it. Entropy is a measure of disorder.
+
+The change in entropy is positive, because heat transfers energy into the ice to cause the phase change. This is a significant increase in entropy, because it takes place at a relatively low temperature. It is accompanied by an increase in the disorder of the water molecules.
+
+\section*{Practice Problems}
+11.
+
+If \(30.0 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\) are added by heat to water at \(12^{\wedge} \backslash \operatorname{circ} \backslash \operatorname{text}\{\mathrm{C}\}\), what is the change in entropy?\\
+a. \(0.105 \backslash, \backslash \operatorname{text}\{\mathrm{~J} / \mathrm{K}\}\)\\
+b. \(2.5 \backslash, \backslash \operatorname{text}\{\mathrm{~J} / \mathrm{K}\} 9.50 \backslash, \backslash \operatorname{text}\{\mathrm{~J} / \mathrm{K}\}\)\\
+c. \(0.45 \backslash, \backslash \operatorname{text}\{\mathrm{~J} / \mathrm{K}\}\)\\
+d. \(9.50 \backslash, \backslash \operatorname{text}\{\mathrm{~J} / \mathrm{K}\}\)\\
+12.
+
+What is the increase in entropy when \(3.00 \backslash, \backslash \operatorname{text}\{\mathrm{~kg}\}\) of ice at \(0^{\wedge} \backslash \operatorname{circ} \backslash \operatorname{text}\{\mathrm{C}\}\) melt to form water at \(0^{\wedge} \backslash\) circ \(\backslash \operatorname{text}\{\mathrm{C}\}\) ?\\
+a. \(1.84 \backslash\) times \(10^{\wedge}\{3\} \backslash, \backslash \operatorname{text}\{\mathrm{J} / \mathrm{K}\}\)\\
+b. \(3.67 \backslash\) times \(10^{\wedge}\{3\} \backslash, \backslash \operatorname{text}\{\mathrm{J} / \mathrm{K}\}\)\\
+c. \(1.84 \backslash\) times \(10^{\wedge}\{8\} \backslash, \backslash \operatorname{text}\{\mathrm{J} / \mathrm{K}\}\)\\
+d. \(3.67 \backslash\) times \(10^{\wedge}\{8\} \backslash, \backslash \operatorname{text}\{\mathrm{J} / \mathrm{K}\}\)
+
+\section*{Check Your Understanding}
+\section*{Teacher Support}
+Teacher Support Use these questions to assess student achievement of the section's learning objectives. If students are struggling with a specific objective, these questions will help identify which and direct students to the relevant content.\\
+13.
+
+What is entropy?\\
+a. Entropy is a measure of the potential energy of a system.\\
+b. Entropy is a measure of the net work done by a system.\\
+c. Entropy is a measure of the disorder of a system.\\
+d. Entropy is a measure of the heat transfer of energy into a system.\\
+14.
+
+Which forms of energy can be used to do work?\\
+a. Only work is able to do work.\\
+b. Only heat is able to do work.\\
+c. Only internal energy is able to do work.\\
+d. Heat, work, and internal energy are all able to do work.\\
+15.
+
+What is the statement for the second law of thermodynamics?\\
+a. All the spontaneous processes result in decreased total entropy of a system.\\
+b. All the spontaneous processes result in increased total entropy of a system.\\
+c. All the spontaneous processes result in decreased or constant total entropy of a system.\\
+d. All the spontaneous processes result in increased or constant total entropy of a system.\\
+16.
+
+For heat transferring energy from a high to a low temperature, what usually happens to the entropy of the whole system?\\
+a. It decreases.\\
+b. It must remain constant.\\
+c. The entropy of the system cannot be predicted without specific values for the temperatures.\\
+d. It increases.
+
+\subsection*{12.4 Applications of Thermodynamics: Heat Engines, Heat Pumps, and Refrigerators}
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Explain how heat engines, heat pumps, and refrigerators work in terms of the laws of thermodynamics
+  \item Describe thermal efficiency
+  \item Solve problems involving thermal efficiency
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (6) Science concepts. The student knows that changes occur within a physical system and applies the laws of conservation of energy and momentum. The student is expected to:
+  \item (G) analyze and explain everyday examples that illustrate the laws of thermodynamics, including the law of conservation of energy and the law of entropy.
+\end{itemize}
+
+\section*{Section Key Terms}
+\section*{Teacher Support}
+Teacher Support [BL][OL][AL] Return again to the discussion of efficiency that was begun at the start of the module. Review the ideal gas law, laws of thermodynamics, and entropy.\\[0pt]
+[OL] Ask students whether they can explain the limits on efficiency in terms of what they have now learned.
+
+\section*{Heat Engines, Heat Pumps, and Refrigerators}
+In this section, we'll explore how heat engines, heat pumps, and refrigerators operate in terms of the laws of thermodynamics.
+
+One of the most important things we can do with heat is to use it to do work for us. A heat engine does exactly this-it makes use of the properties of thermodynamics to transform heat into work. Gasoline and diesel engines, jet\\
+engines, and steam turbines that generate electricity are all examples of heat engines.
+
+Figure 12.13 illustrates one of the ways in which heat transfers energy to do work. Fuel combustion releases chemical energy that heat transfers throughout the gas in a cylinder. This increases the gas temperature, which in turn increases the pressure of the gas and, therefore, the force it exerts on a movable piston. The gas does work on the outside world, as this force moves the piston through some distance. Thus, heat transfer of energy to the gas in the cylinder results in work being done.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-33}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.13 (a) Heat transfer to the gas in a cylinder increases the internal energy of the gas, creating higher pressure and temperature. (b) The force exerted on the movable cylinder does work as the gas expands. Gas pressure and temperature decrease during expansion, indicating that the gas's internal energy has decreased as it does work. (c) Heat transfer of energy to the environment}
+\end{center}
+\end{figure}
+
+further reduces pressure in the gas, so that the piston can more easily return to its starting position.
+
+To repeat this process, the piston needs to be returned to its starting point. Heat now transfers energy from the gas to the surroundings, so that the gas's pressure decreases, and a force is exerted by the surroundings to push the piston back through some distance.
+
+A cyclical process brings a system, such as the gas in a cylinder, back to its original state at the end of every cycle. All heat engines use cyclical processes.
+
+Heat engines do work by using part of the energy transferred by heat from some source. As shown in Figure 12.14, heat transfers energy, \(Q_{\mathrm{h}}\), from the hightemperature object (or hot reservoir), whereas heat transfers unused energy, \(Q_{\mathrm{c}}\), into the low-temperature object (or cold reservoir), and the work done by the engine is \(W\). In physics, a reservoir is defined as an infinitely large mass that can take in or put out an unlimited amount of heat, depending upon the needs of the system. The temperature of the hot reservoir is \(T_{\mathrm{h}}\), and the temperature of the cold reservoir is \(T_{\mathrm{c}}\).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-34}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.14 (a) Heat transfers energy spontaneously from a hot object to a cold one, as is consistent with the second law of thermodynamics. (b) A heat engine, represented here by a circle, uses part of the energy transferred by heat to do work. The hot and cold objects are called the hot and cold reservoirs. \(Q_{\mathrm{h}}\) is the heat out of the hot reservoir, \(W\) is the work output, and \(Q_{\mathrm{c}}\) is the unused heat into the cold reservoir.}
+\end{center}
+\end{figure}
+
+As noted, a cyclical process brings the system back to its original condition at the end of every cycle. Such a system's internal energy, \(U\), is the same at the beginning and end of every cycle - that is, \(\Delta U=0\). The first law of thermodynamics states that \(\Delta U=Q-W\), where \(Q\) is the net heat transfer\\
+during the cycle, and \(W\) is the net work done by the system. The net heat transfer is the energy transferred in by heat from the hot reservoir minus the amount that is transferred out to the cold reservoir ( \(Q=Q_{\mathrm{h}}-Q_{\mathrm{c}}\) ). Because there is no change in internal energy for a complete cycle ( \(\Delta U=0\) ), we have\\
+\(0=Q-W\),\\
+12.19\\
+so that\\
+\(W=Q\).\\
+12.20
+
+Therefore, the net work done by the system equals the net heat into the system, or\\
+\(W=Q_{\mathrm{h}}-Q_{\mathrm{c}}\)\\
+12.21\\
+for a cyclical process.\\
+Because the hot reservoir is heated externally, which is an energy-intensive process, it is important that the work be done as efficiently as possible. In fact, we want \(W\) to equal \(Q_{\mathrm{h}}\), and for there to be no heat to the environment (that is, \(Q_{\mathrm{c}}=0\) ). Unfortunately, this is impossible. According to the second law of thermodynamics, heat engines cannot have perfect conversion of heat into work. Recall that entropy is a measure of the disorder of a system, which is also how much energy is unavailable to do work. The second law of thermodynamics requires that the total entropy of a system either increases or remains constant in any process. Therefore, there is a minimum amount of \(Q_{\mathrm{h}}\) that cannot be used for work. The amount of heat rejected to the cold reservoir, \(Q_{\mathrm{c}}\), depends upon the efficiency of the heat engine. The smaller the increase in entropy, \(\Delta S\) , the smaller the value of \(Q_{\mathrm{c}}\), and the more heat energy is available to do work.
+
+Heat pumps, air conditioners, and refrigerators utilize heat transfer of energy from low to high temperatures, which is the opposite of what heat engines do. Heat transfers energy \(Q_{\mathrm{c}}\) from a cold reservoir and delivers energy \(Q_{\mathrm{h}}\) into a hot one. This requires work input, \(W\), which produces a transfer of energy by heat. Therefore, the total heat transfer to the hot reservoir is\\
+\(Q_{\mathrm{h}}=Q_{\mathrm{c}}+W\).\\
+12.22
+
+The purpose of a heat pump is to transfer energy by heat to a warm environment, such as a home in the winter. The great advantage of using a heat pump to keep your home warm rather than just burning fuel in a fireplace or furnace is that a heat pump supplies \(Q_{\mathrm{h}}=Q_{\mathrm{c}}+W\). Heat \(Q_{\mathrm{c}}\) comes from the outside air, even at a temperature below freezing, to the indoor space. You only pay for \(W\), and you get an additional heat transfer of \(Q_{\mathrm{c}}\) from the outside at no cost. In\\
+many cases, at least twice as much energy is transferred to the heated space as is used to run the heat pump. When you burn fuel to keep warm, you pay for all of it. The disadvantage to a heat pump is that the work input (required by the second law of thermodynamics) is sometimes more expensive than simply burning fuel, especially if the work is provided by electrical energy.
+
+The basic components of a heat pump are shown in Figure 12.15. A working fluid, such as a refrigerant, is used. In the outdoor coils (the evaporator), heat \(Q_{\mathrm{c}}\) enters the working fluid from the cold outdoor air, turning it into a gas.\\
+\includegraphics[max width=\textwidth, center]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-36}
+
+Figure 12.15 A simple heat pump has four basic components: (1) an evaporator, (2) a compressor, (3) a condenser, and (4) an expansion valve. In the heating mode, heat transfers \(Q_{\mathrm{c}}\) to the working fluid in the evaporator (1) from the colder, outdoor air, turning it into a gas. The electrically driven compressor (2) increases the temperature and pressure of the gas and forces it into the condenser coils (3) inside the heated space. Because the temperature of the gas is higher than the temperature in the room, heat transfers energy from the gas to the room as the gas condenses into a liquid. The working fluid is then cooled as it flows back through an expansion valve (4) to the outdoor evaporator coils.
+
+The electrically driven compressor (work input \(W\) ) raises the temperature and pressure of the gas and forces it into the condenser coils that are inside the heated space. Because the temperature of the gas is higher than the temperature inside the room, heat transfers energy to the room, and the gas condenses into a liquid. The liquid then flows back through an expansion (pressure-reducing) valve. The liquid, having been cooled through expansion, returns to the outdoor evaporator coils to resume the cycle.
+
+The quality of a heat pump is judged by how much energy is transferred by heat into the warm space ( \(Q_{\mathrm{h}}\) ) compared with how much input work ( \(W\) ) is required.
+
+\section*{Teacher Support}
+\section*{Teacher Support}
+\section*{Misconception Alert}
+Remember that refrigerators and air conditioners do not create cold. They merely transfer heat from the inside to the outside.
+
+Revisit the ideal gas law, laws of thermodynamics, and entropy. Use these to understand the workings of air conditioners and refrigerators. This will also give you the opportunity to assess your understanding of these concepts. Both refrigerators and air conditioners use chemicals that can easily change phase from liquid to gas and back. The chemical is present in a closed circuit of tubing. Initially, it is in a gaseous state. The compressor works to squeeze the gas particles of the chemical closer together, creating high pressure. Following the ideal gas law, as pressure increases, so does temperature. This hot, dense gas spreads out in the small pipes or fins of the condenser, which is located on the outside part of the air conditioner (and backside of a refrigerator). The fins come in contact with outside air, which is cooler than the compressed chemical, and hence, as entropy indicates, heat transfers energy from the hot condenser to the relatively cooler air. The result is that the gas cools and condenses into a liquid. This liquid is then allowed to go to an evaporator through a tiny, narrow hole. On the other side of the hole, the gas spreads out (entropy increases), and its pressure drops. Consequently, obeying the ideal gas law, its temperature decreases as well. A fan blows air over this now-cool evaporator and into the room or refrigerator (Figure 12.16).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{88bd9fb4-f67e-4150-aa24-ddea9da5ef74-37}
+\captionsetup{labelformat=empty}
+\caption{Figure 12.16 Heat pumps, air conditioners, and refrigerators are heat engines operated backward. Almost every home contains a refrigerator. Most people don't realize that they are also sharing their homes with a heat pump.}
+\end{center}
+\end{figure}
+
+Air conditioners and refrigerators are designed to cool substances by transferring energy by heat \(Q_{\mathrm{c}}\) out of a cool environment to a warmer one, where heat \(Q_{\mathrm{h}}\) is given up. In the case of a refrigerator, heat is moved out of the inside of the fridge into the surrounding room. For an air conditioner, heat is transferred outdoors from inside a home. Heat pumps are also often used in a reverse setting to cool rooms in the summer.
+
+As with heat pumps, work input is required for heat transfer of energy from cold to hot. The quality of air conditioners and refrigerators is judged by how much energy is removed by heat \(Q_{\mathrm{c}}\) from a cold environment, compared with how much work, \(W\), is required. So, what is considered the energy benefit in a heat pump, is considered waste heat in a refrigerator.
+
+\section*{Thermal Efficiency}
+In the conversion of energy into work, we are always faced with the problem of getting less out than we put in. The problem is that, in all processes, there is some heat \(Q_{\mathrm{c}}\) that transfers energy to the environment - and usually a very significant amount at that. A way to quantify how efficiently a machine runs is through a quantity called thermal efficiency.
+
+We define thermal efficiency, Eff, to be the ratio of useful energy output to the energy input (or, in other words, the ratio of what we get to what we spend). The efficiency of a heat engine is the output of net work, \(W\), divided by heattransferred energy, \(Q_{\mathrm{h}}\), into the engine; that is\\
+\(E f f=\frac{W}{Q_{\mathrm{h}}}\).\\
+An efficiency of 1 , or 100 percent, would be possible only if there were no heat to the environment ( \(Q_{\mathrm{c}}=0\) ).
+
+\section*{Tips For Success}
+All values of heat ( \(Q_{\mathrm{h}}\) and \(Q_{\mathrm{c}}\) ) are positive; there is no such thing as negative heat. The direction of heat is indicated by a plus or minus sign. For example, \(Q_{\mathrm{c}}\) is out of the system, so it is preceded by a minus sign in the equation for net heat.\\
+\(Q=Q_{\mathrm{h}}-Q_{\mathrm{c}}\)\\
+12.23
+
+\section*{Solving Thermal Efficiency Problems}
+\section*{Worked Example}
+Daily Work Done by a Coal-Fired Power Station and Its Efficiency A coal-fired power station is a huge heat engine. It uses heat to transfer energy from burning coal to do work to turn turbines, which are used then to generate electricity. In a single day, a large coal power station transfers \(2.50 \times 10^{14} \mathrm{~J}\) by\\
+heat from burning coal and transfers \(1.48 \times 10^{14} \mathrm{~J}\) by heat into the environment. (a) What is the work done by the power station? (b) What is the efficiency of the power station?
+
+\section*{Strategy}
+We can use \(W=Q_{\mathrm{h}}-Q_{\mathrm{c}}\) to find the work output, \(W\), assuming a cyclical process is used in the power station. In this process, water is boiled under pressure to form high-temperature steam, which is used to run steam turbine-generators and then condensed back to water to start the cycle again.
+
+Solution\\
+Work output is given by\\
+\(W=Q_{\mathrm{h}}-Q_{\mathrm{c}}\).\\
+12.24
+
+Substituting the given values,\\
+\(W=2.50 \times 10^{14} \mathrm{~J}-1.48 \times 10^{14} \mathrm{~J}=1.02 \times 10^{14} \mathrm{~J}\).\\
+12.25
+
+\section*{Strategy}
+The efficiency can be calculated with \(E f f=\frac{W}{Q_{\mathrm{h}}}\), because \(Q_{\mathrm{h}}\) is given, and work, \(W\), was calculated in the first part of this example.
+
+Solution\\
+Efficiency is given by\\
+\(E f f=\frac{W}{Q_{\mathrm{h}}}\).\\
+12.26
+
+The work, \(W\), is found to be \(1.02 \times 10^{14} \mathrm{~J}\), and \(Q_{\mathrm{h}}\) is given ( \(2.50 \times 10^{14} \mathrm{~J}\) ), so the efficiency is\\
+\(E f f=\frac{1.02 \times 10^{14} \mathrm{~J}}{2.50 \times 10^{14} \mathrm{~J}}=0.408\), or \(40.8 \%\).\\
+12.27
+
+Discussion\\
+The efficiency found is close to the usual value of 42 percent for coal-burning power stations. It means that fully 59.2 percent of the energy is transferred by heat to the environment, which usually results in warming lakes, rivers, or the ocean near the power station and is implicated in a warming planet generally. While the laws of thermodynamics limit the efficiency of such plants-including plants fired by nuclear fuel, oil, and natural gas-the energy transferred by heat\\
+to the environment could be, and sometimes is, used for heating homes or for industrial processes.
+
+\section*{Practice Problems}
+17.
+
+A heat engine is given \(120 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\) by heat and releases \(20 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\) by heat to the environment. What is the amount of work done by the system?\\
+a. \(\{-100\} \backslash, \backslash \operatorname{text}\{\mathrm{J}\}\)\\
+b. \(\{-60\} \backslash, \backslash \operatorname{text}\{\mathrm{J}\}\)\\
+c. \(60 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\)\\
+d. \(100 \backslash, \backslash \operatorname{text}\{\mathrm{~J}\}\)\\
+18.
+
+A heat engine takes in 6.0 kJ from heat and produces waste heat of 4.8 kJ . What is its efficiency?\\
+a. 25 percent\\
+b. 2.50 percent\\
+c. 2.00 percent\\
+d. 20 percent
+
+\section*{Check Your Understanding}
+\section*{Teacher Support}
+Teacher Support Use these questions to assess student achievement of the section's learning objectives. If students are struggling with a specific objective, these questions will help identify which and direct students to the relevant content.\\
+19.
+
+What is a heat engine?\\
+a. A heat engine converts mechanical energy into thermal energy.\\
+b. A heat engine converts thermal energy into mechanical energy.\\
+c. A heat engine converts thermal energy into electrical energy.\\
+d. A heat engine converts electrical energy into thermal energy.\\
+20.
+
+Give an example of a heat engine.\\
+a. A generator\\
+b. A battery\\
+c. A water pump\\
+d. A car engine\\
+21.
+
+What is thermal efficiency?\\
+a. Thermal efficiency is the ratio of work input to the energy input.\\
+b. Thermal efficiency is the ratio of work output to the energy input.\\
+c. Thermal efficiency is the ratio of work input to the energy output.\\
+d. Thermal efficiency is the ratio of work output to the energy output.\\
+22.
+
+What is the mathematical expression for thermal efficiency?\\
+a. Eff \(=\backslash\) frac \(\left\{\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{h}\}\}\right\}\left\{\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{h}\}\}-\mathrm{Q} \_\mathrm{c}\right\}\)\\
+b. Eff \(=\backslash\) frac \(\left\{\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{h}\}\}\right\}\left\{\mathrm{Q} \_\mathrm{c}\right\}\)\\
+c. \(\mathrm{Eff}=\backslash \operatorname{frac}\left\{\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{c}\}\}\right\}\left\{\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{h}\}\}\right\}\)\\
+d. Eff \(=\backslash \operatorname{frac}\left\{\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{h}\}\}-\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{c}\}\}\right\}\left\{\mathrm{Q} \_\{\backslash \operatorname{text}\{\mathrm{h}\}\}\right\}\)
+
+\section*{Key Terms}
+Boltzmann constant constant with the value \(k=1.38 \times 10^{-23} \mathrm{~J} / \mathrm{K}\), which is used in the ideal gas law\\
+cyclical process process in which a system is brought back to its original state at the end of every cycle\\
+entropy measurement of a system's disorder and how much energy is not available to do work in a system\\
+first law of thermodynamics states that the change in internal energy of a system equals the net energy transfer by heat into the system minus the net work done by the system\\
+heat engine machine that uses energy transfer by heat to do work\\
+heat pump machine that generates the heat transfer of energy from cold to hot\\
+ideal gas law physical law that relates the pressure and volume of a gas to the number of gas molecules or atoms, or number of moles of gas, and the absolute temperature of the gas\\
+internal energy sum of the kinetic and potential energies of a system's constituent particles (atoms or molecules)\\
+pressure force per unit area perpendicular to the force, over which the force acts\\
+second law of thermodynamics states that the total entropy of a system either increases or remains constant in any spontaneous process; it never decreases\\
+thermal efficiency ratio of useful energy output to the energy input\\
+thermal equilibrium condition in which heat no longer transfers energy between two objects that are in contact; the two objects have the same temperature\\
+zeroth law of thermodynamics states that if two objects are in thermal equilibrium, and a third object is in thermal equilibrium with one of those objects, it is also in thermal equilibrium with the other object
+
+\section*{Key Equations}
+12.2 First law of Thermodynamics: Thermal Energy and Work\\
+12.3 Second Law of Thermodynamics: Entropy\\
+12.4 Applications of Thermodynamics: Heat Engines, Heat Pumps, and Refrigerators
+
+\section*{Section Summary}
+\subsection*{12.1 Zeroth Law of Thermodynamics: Thermal Equilibrium}
+\begin{itemize}
+  \item Systems are in thermal equilibrium when they have the same temperature.
+  \item Thermal equilibrium occurs when two bodies are in contact with each other and can freely exchange energy.
+  \item The zeroth law of thermodynamics states that when two systems, A and B , are in thermal equilibrium with each other, and B is in thermal equilibrium with a third system, C , then A is also in thermal equilibrium with C .
+\end{itemize}
+
+\subsection*{12.2 First law of Thermodynamics: Thermal Energy and Work}
+\begin{itemize}
+  \item Pressure is the force per unit area over which the force is applied perpendicular to the area.
+  \item Thermal expansion is the increase, or decrease, of the size (length, area, or volume) of a body due to a change in temperature.
+  \item The ideal gas law relates the pressure and volume of a gas to the number of gas particles (atoms or molecules) and the absolute temperature of the gas.
+  \item Heat and work are the two distinct methods of energy transfer.
+  \item Heat is energy transferred solely due to a temperature difference.
+  \item The first law of thermodynamics is given as \(\Delta U=Q-W\), where \(\Delta U\) is the change in internal energy of a system, \(Q\) is the net energy transfer into the system by heat (the sum of all transfers by heat into and out of the system), and \(W\) is the net work done by the system (the sum of all energy transfers by work out of or into the system).
+  \item Both \(Q\) and \(W\) represent energy in transit; only \(\Delta U\) represents an independent quantity of energy capable of being stored.
+  \item The internal energy \(U\) of a system depends only on the state of the system, and not how it reached that state.
+\end{itemize}
+
+\subsection*{12.3 Second Law of Thermodynamics: Entropy}
+\begin{itemize}
+  \item Entropy is a measure of a system's disorder: the greater the disorder, the larger the entropy.
+  \item Entropy is also the reduced availability of energy to do work.
+  \item The second law of thermodynamics states that, for any spontaneous process, the total entropy of a system either increases or remains constant; it never decreases.
+  \item Heat transfers energy spontaneously from higher- to lower-temperature bodies, but never spontaneously in the reverse direction.
+\end{itemize}
+
+\subsection*{12.4 Applications of Thermodynamics: Heat Engines, Heat Pumps, and Refrigerators}
+\begin{itemize}
+  \item Heat engines use the heat transfer of energy to do work.
+  \item Cyclical processes are processes that return to their original state at the end of every cycle.
+  \item The thermal efficiency of a heat engine is the ratio of work output divided by the amount of energy input.
+  \item The amount of work a heat engine can do is determined by the net heat transfer of energy during a cycle; more waste heat leads to less work output.
+  \item Heat pumps draw energy by heat from cold outside air and use it to heat an interior room.
+  \item A refrigerator is a type of heat pump; it takes energy from the warm air from the inside compartment and transfers it to warmer exterior air.
+\end{itemize}
+
+\end{document}

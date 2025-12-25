@@ -1,0 +1,1332 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\DeclareUnicodeCharacter{27F6}{\ifmmode\longrightarrow\else{$\longrightarrow$}\fi}
+
+\begin{document}
+\captionsetup{singlelinecheck=false}
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-01}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.1 Electric energy in massive quantities is transmitted from this hydroelectric facility, the Srisailam power station located along the Krishna River in India, by the movement of charge - that is, by electric current. (credit: Chintohere, Wikimedia Commons)}
+\end{center}
+\end{figure}
+
+\section*{Chapter Outline}
+19.1 Ohm's law\\
+19.2 Series Circuits\\
+19.3 Parallel Circuits\\
+19.4 Electric Power
+
+\section*{Introduction}
+\section*{Teacher Support}
+Teacher Support Ask students if they know what sort of facility is shown in the opening photograph and what purpose it serves. The answer is it generates electric power. Discuss how the power provided by water is used to push and pull electrons inside conductors and that this force can be harnessed at the other end of the conductor by using the electrons to push and pull on other devices, such as electrical appliances, or to make light or heat.
+
+The flicker of numbers on a handheld calculator, nerve impulses carrying signals\\
+of vision to the brain, an ultrasound device sending a signal to a computer screen, the brain sending a message for a baby to twitch its toes, an electric train pulling into a station, a hydroelectric plant sending energy to metropolitan and rural users - these and many other examples of electricity involve electric current, which is the movement of charge. Humanity has harnessed electricity, the basis of this technology, to improve our quality of life. Whereas the previous chapter concentrated on static electricity and the fundamental force underlying its behavior, the next two chapters will be devoted to electric and magnetic phenomena involving current. In addition to exploring applications of electricity, we shall gain new insights into the workings of nature.
+
+\subsection*{19.1 Ohm's law}
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Describe how current is related to charge and time, and distinguish between direct current and alternating current
+  \item Define resistance and verbally describe Ohm's law
+  \item Calculate current and solve problems involving Ohm's law
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (5) Science concepts. The student knows the nature of forces in the physical world. The student is expected to:
+  \item (F) design, construct, and calculate in terms of current through, potential difference across, resistance of, and power used by electric circuit elements connected in both series and parallel combinations.
+\end{itemize}
+
+In addition, the High School Physics Laboratory Manual addresses content in this section in the lab titled Ohm's law, as well as the following standards:
+
+\begin{itemize}
+  \item (5) The student knows the nature of forces in the physical world. The student is expected to:
+  \item (F) design, construct, and calculate in terms of current through, potential difference across, resistance of, and power used by electric circuit elements connected in both series and parallel combinations.
+\end{itemize}
+
+\section*{Section Key Terms}
+\section*{Direct and Alternating Current}
+Just as water flows from high to low elevation, electrons that are free to move will travel from a place with low potential to a place with high potential. A battery has two terminals that are at different potentials. If the terminals are connected by a conducting wire, an electric current (charges) will flow, as shown in Figure 19.2. Electrons will then move from the low-potential terminal of the battery (the negative end) through the wire and enter the high-potential terminal of the battery (the positive end).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-04}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.2 A battery has a wire connecting the positive and negative terminals, which allows electrons to move from the negative terminal to the positive terminal.}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+Teacher Support Stress that electrons move from the negative terminal to the positive terminal because they carry negative charge, so they are repelled by the Coulomb force from the negative terminal.
+
+Electric current is the rate at which electric charge moves. A large current, such as that used to start a truck engine, moves a large amount very quickly, whereas a small current, such as that used to operate a hand-held calculator, moves a small amount of charge more slowly. In equation form, electric current \(I\) is defined as\\
+\(I=\frac{\Delta Q}{\Delta t}\)\\
+where \(\Delta Q\) is the amount of charge that flows past a given area and \(\Delta t\) is the time it takes for the charge to move past the area. The SI unit for electric current is the ampere (A), which is named in honor of the French physicist André-Marie Ampère (1775-1836). One ampere is one coulomb per second, or\\
+\(1 \mathrm{~A}=1 \mathrm{C} / \mathrm{s}\).\\
+Electric current moving through a wire is in many ways similar to water current moving through a pipe. To define the flow of water through a pipe, we can count the water molecules that flow past a given section of the pipe. As shown in Figure 19.3, electric current is very similar. We count the number of electrical charges that flow past a section of a conductor; in this case, a wire.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-05}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.3 The electric current moving through this wire is the charge that moves past the cross-section A divided by the time it takes for this charge to move past the section \(A\).}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+Teacher Support Point out that the charge carriers in this sketch are positive, so they move in the same direction as the electric current.
+
+Assume each particle \(q\) in Figure 19.3 carries a charge \(q=1 \mathrm{nC}\), in which case the total charge shown would be \(\Delta Q=5 q=5 \mathrm{nC}\). If these charges move past the area \(A\) in a time \(\Delta t=1 \mathrm{~ns}\), then the current would be\\
+\(I=\frac{\Delta Q}{\Delta t}=\frac{5 \mathrm{nC}}{1 \mathrm{~ns}}=5 \mathrm{~A}\).\\
+19.1
+
+Note that we assigned a positive charge to the charges in Figure 19.3. Normally, negative charges - electrons - are the mobile charge in wires, as indicated in Figure 19.2. Positive charges are normally stuck in place in solids and cannot move freely. However, because a positive current moving to the right is the same as a negative current of equal magnitude moving to the left, as shown in Figure 19.4, we define conventional current to flow in the direction that a positive charge would flow if it could move. Thus, unless otherwise specified, an electric current is assumed to be composed of positive charges.
+
+Also note that one Coulomb is a significant amount of electric charge, so 5 A is a very large current. Most often you will see current on the order of milliamperes \((\mathrm{mA})\).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-06}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.4 (a) The electric field points to the right, the current moves to the right, and positive charges move to the right. (b) The equivalent situation but with negative charges moving to the left. The electric field and the current are still to the right.}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+Teacher Support Point out that the electric field is the same in both cases, and that the current is in the direction of the electric field.
+
+\section*{Misconception Alert}
+Make sure that students understand that current is defined as the direction in which positive charge would flow, even if electrons are most often the mobile charge carriers. Mathematically, the result is the same whether we assume positive charge flowing one way or negative charge flowing the opposite way. Physically, however, the situation is quite different (although the difference is reduced once holes are defined).
+
+\section*{Snap Lab}
+Vegetable Current This lab helps students understand how current works. Given that particles confined in a pipe cannot occupy the same space, pushing more particles into one end of the pipe will force the same number of particles out of the opposite end. This creates a current of particles.
+
+Find a straw and dried peas that can move freely in the straw. Place the straw flat on a table and fill the straw with peas. When you push one pea in at one end, a different pea should come out of the other end. This demonstration is a model for an electric current. Identify the part of the model that represents electrons and the part of the model that represents the supply of electrical energy. For a period of 30 s , count the number of peas you can push through the straw. When finished, calculate the pea current by dividing the number of peas by the time in seconds.
+
+Note that the flow of peas is based on the peas physically bumping into each other; electrons push each other along due to mutually repulsive electrostatic forces.
+
+Suppose you have a reservoir of peas, each charged to 1 nC . If you pass the peas through a straw at a rate of four peas per second, how would you calculate the electrical current carried by your charged peas?\\
+a. Measure the length of the straw, then divide by the rate of pea flow and multiply by charge per pea.\\
+b. Multiply the rate of pea flow by the charge per pea.\\
+c. Measure the length of the straw, then multiply by the rate of pea flow and divide by charge per pea.\\
+d. Divide the rate of pea flow by the charge per pea.
+
+The direction of conventional current is the direction that positive charge would flow. Depending on the situation, positive charges, negative charges, or both may move. In metal wires, as we have seen, current is carried by electrons, so the negative charges move. In ionic solutions, such as salt water, both positively charged and negatively charged ions move. This is also true in nerve cells. Pure positive currents are relatively rare but do occur. History credits American politician and scientist Benjamin Franklin with describing current as the direction that positive charges flow through a wire. He named the type of charge associated with electrons negative long before they were known to carry current in so many situations.
+
+As electrons move through a metal wire, they encounter obstacles such as other electrons, atoms, impurities, etc. The electrons scatter from these obstacles, as depicted in Figure 19.5. Normally, the electrons lose energy with each interaction. 1 To keep the electrons moving thus requires a force, which is supplied by an electric field. The electric field in a wire points from the end of the wire at the higher potential to the end of the wire at the lower potential. Electrons, carrying a negative charge, move on average (or drift) in the direction opposite the electric field, as shown in Figure 19.5.
+
+1\\
+This energy is transferred to the wire and becomes thermal energy, which is what makes wires hot when they carry a lot of current.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-08}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.5 Free electrons moving in a conductor make many collisions with other electrons and atoms. The path of one electron is shown. The average velocity of free electrons is in the direction opposite to the electric field. The collisions normally transfer energy to the conductor, so a constant supply of energy is required to maintain a steady current.}
+\end{center}
+\end{figure}
+
+So far, we have discussed current that moves constantly in a single direction. This is called direct current, because the electric charge flows in only one direction. Direct current is often called \(D C\) current.
+
+Many sources of electrical power, such as the hydroelectric dam shown at the beginning of this chapter, produce alternating current, in which the current direction alternates back and forth. Alternating current is often called \(A C\) current. Alternating current moves back and forth at regular time intervals, as shown in Figure 19.6. The alternating current that comes from a normal wall socket does not suddenly switch directions. Rather, it increases smoothly up to a maximum current and then smoothly decreases back to zero. It then grows again, but in the opposite direction until it has reached the same maximum value. After that, it decreases smoothly back to zero, and the cycle starts over again.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-09}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.6 With alternating current, the direction of the current reverses at regular time intervals. The graph on the top shows the current versus time. The negative maxima correspond to the current moving to the left. The positive maxima correspond to current moving to the right. The current alternates regularly and smoothly between these two maxima.}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+Teacher Support Help students interpret the graph, emphasizing that the current does not change direction instantaneously but instead smoothly transitions from one maximum to the opposite maximum and back. Explain that the four images at the bottom show the current at the respective maxima. Note that, to simplify the interpretation, the mobile carriers in the image are taken to be positive.
+
+Devices that use AC include vacuum cleaners, fans, power tools, hair dryers, and countless others. These devices obtain the power they require when you plug them into a wall socket. The wall socket is connected to the power grid that provides an alternating potential (AC potential). When your device is plugged in, the AC potential pushes charges back and forth in the circuit of the device, creating an alternating current.
+
+Many devices, however, use DC, such as computers, cell phones, flashlights, and cars. One source of DC is a battery, which provides a constant potential (DC potential) between its terminals. With your device connected to a battery, the DC potential pushes charge in one direction through the circuit of your device, creating a DC current. Another way to produce DC current is by using a transformer, which converts AC potential to DC potential. Small transformers that you can plug into a wall socket are used to charge up your laptop, cell phone, or other electronic device. People generally call this a charger or a battery, but\\
+it is a transformer that transforms AC voltage into DC voltage. The next time someone asks to borrow your laptop charger, tell them that you don't have a laptop charger, but that they may borrow your converter.
+
+\section*{Worked Example}
+Current in a Lightning Strike A lightning strike can transfer as many as \(10^{20}\) electrons from the cloud to the ground. If the strike lasts 2 ms , what is the average electric current in the lightning?
+
+\section*{Strategy}
+Use the definition of current, \(I=\frac{\Delta Q}{\Delta t}\). The charge \(\Delta Q\) from \(10^{20}\) electrons is \(\Delta Q=n e\), where \(n=10^{20}\) is the number of electrons and \(e=-1.60 \times 10^{-19} \mathrm{C}\) is the charge on the electron. This gives\\
+\(\Delta Q=10^{20} \times\left(-1.60 \times 10^{-19} \mathrm{C}\right)=-16.0 \mathrm{C}\).\\
+19.2
+
+The time \(\Delta t=2 \times 10^{-3} \mathrm{~s}\) is the duration of the lightning strike.\\
+Solution\\
+The current in the lightning strike is
+
+\[
+\begin{aligned}
+I & =\frac{\Delta Q}{\Delta t} \\
+& =\frac{-16.0 \mathrm{C}}{2 \times 10^{-3} \mathrm{~s}} \\
+& =-8 \mathrm{kA}
+\end{aligned}
+\]
+
+19.3
+
+\section*{Discussion}
+The negative sign reflects the fact that electrons carry the negative charge. Thus, although the electrons flow from the cloud to the ground, the positive current is defined to flow from the ground to the cloud.
+
+\section*{Worked Example}
+Average Current to Charge a Capacitor In a circuit containing a capacitor and a resistor, it takes 1 min to charge a 16 F capacitor by using a \(9-\mathrm{V}\) battery. What is the average current during this time?
+
+\section*{Strategy}
+We can determine the charge on the capacitor by using the definition of capacitance: \(C=\frac{Q}{V}\). When the capacitor is charged by a \(9-\mathrm{V}\) battery, the voltage\\
+across the capacitor will be \(V=9 \mathrm{~V}\). This gives a charge of\\
+\(C=\frac{Q}{V}\)\\
+\(Q=C V\).\\
+19.4
+
+By inserting this expression for charge into the equation for current, \(I=\frac{\Delta Q}{\Delta t}\), we can find the average current.
+
+Solution\\
+The average current is
+
+\[
+\begin{aligned}
+I & =\frac{\Delta Q}{\Delta t} \\
+& =\frac{C V}{\Delta t} \\
+& =\frac{\left(16 \times 10^{-6} \mathrm{~F}\right)(9 \mathrm{~V})}{60 \mathrm{~s}} \\
+& =2.4 \times 10^{-6} \mathrm{~A} \\
+& =2.4 \mu \mathrm{~A}
+\end{aligned}
+\]
+
+19.5
+
+\section*{Discussion}
+This small current is typical of the current encountered in circuits such as this.
+
+\section*{Practice Problems}
+1.
+
+10 nC of charge flows through a circuit in \(3.0 \times 10^{-6} \mathrm{~s}\). What is the current during this time?\\
+a. The current passes through the circuit is \(3.3 \times 10^{-3} \mathrm{~A}\).\\
+b. The current passes through the circuit is 30 A .\\
+c. The current passes through the circuit is 33 A .\\
+d. The current passes through the circuit is 0.3 A .\\
+2.
+
+How long would it take a \(10 \backslash \operatorname{text}\{-\mathrm{mA}\}\) current to charge a capacitor with \(5.0 \backslash, \backslash \operatorname{text}\{\mathrm{mC}\}\) ?\\
+a. \(0.50 \backslash, \backslash \operatorname{text}\{\mathrm{~s}\}\)\\
+b. \(5 \backslash, \backslash \operatorname{text}\{\mathrm{~ns}\}\)\\
+c. \(0.50 \backslash, \backslash \operatorname{text}\{\mathrm{~ns}\}\)\\
+d. \(50 \backslash, \backslash \mathrm{mu} \backslash \operatorname{text}\{\mathrm{s}\}\)
+
+\section*{Resistance and Ohm's Law}
+As mentioned previously, electrical current in a wire is in many ways similar to water flowing through a pipe. The water current that can flow through a pipe is affected by obstacles in the pipe, such as clogs and narrow sections in the pipe. These obstacles slow down the flow of current through the pipe. Similarly, electrical current in a wire can be slowed down by many factors, including impurities in the metal of the wire or collisions between the charges in the material. These factors create a resistance to the electrical current. Resistance is a description of how much a wire or other electrical component opposes the flow of charge through it. In the 19th century, the German physicist Georg Simon Ohm (1787-1854) found experimentally that current through a conductor is proportional to the voltage drop across a current-carrying conductor.\\
+\(I \propto V\)\\
+The constant of proportionality is the resistance \(R\) of the material, which leads to\\
+\(V=I R(1.3)\).\\
+This relationship is called Ohm's law. It can be viewed as a cause-and-effect relationship, with voltage being the cause and the current being the effect. Ohm's law is an empirical law like that for friction, which means that it is an experimentally observed phenomenon. The units of resistance are volts per ampere, or \(\mathrm{V} / \mathrm{A}\). We call a V/A an ohm, which is represented by the uppercase Greek letter omega ( \(\Omega\) ). Thus,\\
+\(1 \Omega=1 \mathrm{~V} / \mathrm{A}(1.4)\).\\
+Ohm's law holds for most materials and at common temperatures. At very low temperatures, resistance may drop to zero (superconductivity). At very high temperatures, the thermal motion of atoms in the material inhibits the flow of electrons, increasing the resistance. The many substances for which Ohm's law holds are called ohmic. Ohmic materials include good conductors like copper, aluminum, and silver, and some poor conductors under certain circumstances. The resistance of ohmic materials remains essentially the same for a wide range of voltage and current.
+
+\section*{Watch Physics}
+Introduction to Electricity, Circuits, Current, and Resistance This video presents Ohm's law and shows a simple electrical circuit. The speaker uses the analogy of pressure to describe how electric potential makes charge move. He refers to electric potential as electric pressure. Another way of thinking about electric potential is to imagine that lots of particles of the same sign are crowded in a small, confined space. Because these charges have the same sign (they are all positive or all negative), each charge repels the others around it. This means that lots of charges are constantly being pushed towards the outside\\
+of the space. A complete electric circuit is like opening a door in the small space: Whichever particles are pushed towards the door now have a way to escape. The higher the electric potential, the harder each particle pushes against the others.
+
+If, instead of a single resistor \(R\), two resistors each with resistance \(R\) are drawn in the circuit diagram shown in the video, what can you say about the current through the circuit?\\
+a. The amount of current through the circuit must decrease by half.\\
+b. The amount of current through the circuit must increase by half.\\
+c. The current must remain the same through the circuit.\\
+d. The amount of current through the circuit would be doubled.
+
+\section*{Virtual Physics}
+Ohm's Law Click to view content\\
+This simulation mimics a simple circuit with batteries providing the voltage source and a resistor connected across the batteries. See how the current is affected by modifying the resistance and/or the voltage. Note that the resistance is modeled as an element containing small scattering centers. These represent impurities or other obstacles that impede the passage of the current.
+
+PhET Explorations: Ohm's Law. See how the equation form of Ohm's law relates to a simple circuit. Adjust the voltage and resistance, and see the current change according to Ohm's law. The sizes of the symbols in the equation change to match the circuit diagram.
+
+Click to view content\\
+In a circuit, if the resistance is left constant and the voltage is doubled (for example, from \(3 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\) to \(6 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\) ), how does the current change? Does this conform to Ohm's law?\\
+a. The current will get doubled. This conforms to Ohm's law as the current is proportional to the voltage.\\
+b. The current will double. This does not conform to Ohm's law as the current is proportional to the voltage.\\
+c. The current will increase by half. This conforms to Ohm's law as the current is proportional to the voltage.\\
+d. The current will decrease by half. This does not conform to Ohm's law as the current is proportional to the voltage.
+
+\section*{Worked Example}
+Resistance of a Headlight What is the resistance of an automobile headlight through which 2.50 A flows when 12.0 V is applied to it?\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-14}
+
+\section*{Strategy}
+Ohm's law tells us \(V_{\text {headlight }}=I R_{\text {headlight }}\). The voltage drop in going through the headlight is just the voltage rise supplied by the battery, \(V_{\text {headlight }}=V_{\text {battery }}\) . We can use this equation and rearrange Ohm's law to find the resistance \(R_{\text {headlight }}\) of the headlight.
+
+\section*{Solution}
+Solving Ohm's law for the resistance of the headlight gives
+
+\[
+\begin{aligned}
+V_{\text {headlight }} & =I R_{\text {headlight }} \\
+V_{\text {battery }} & =I R_{\text {headlight }} \\
+R_{\text {headlight }} & =\frac{V_{\text {battery }}}{I}=\frac{12 \mathrm{~V}}{2.5 \mathrm{~A}}=4.8 \Omega
+\end{aligned}
+\]
+
+\section*{Discussion}
+This is a relatively small resistance. As we will see below, resistances in circuits are commonly measured in kW or MW .
+
+\section*{Worked Example}
+Determine Resistance from Current-Voltage Graph Suppose you apply several different voltages across a circuit and measure the current that runs through the circuit. A plot of your results is shown in Figure 19.7. What is the resistance of the circuit?
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-15}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.7 The line shows the current as a function of voltage. Notice that the current is given in milliamperes. For example, at 3 V , the current is 0.003 A , or 3 mA .}
+\end{center}
+\end{figure}
+
+\section*{Strategy}
+The plot shows that current is proportional to voltage, which is Ohm's law. In Ohm's law ( \(V=I R\) ), the constant of proportionality is the resistance \(R\). Because the graph shows current as a function of voltage, we have to rearrange Ohm's law in that form: \(I=\frac{V}{R}=\frac{1}{R} \times V\). This shows that the slope of the line of \(I\) versus \(V\) is \(\frac{1}{R}\). Thus, if we find the slope of the line in Figure 19.7, we can calculate the resistance \(R\).
+
+\section*{Solution}
+The slope of the line is the rise divided by the run. Looking at the lower-left square of the grid, we see that the line rises by \(1 \mathrm{~mA}(0.001 \mathrm{~A})\) and runs over a voltage of 1 V . Thus, the slope of the line is
+
+\[
+\text { slope }=\frac{0.001 \mathrm{~A}}{1 \mathrm{~V} .}
+\]
+
+19.7
+
+Equating the slope with \(\frac{1}{R}\) and solving for \(R\) gives\\
+\(\frac{1}{R}=\frac{0.001 \mathrm{~A}}{1}\)\\
+\(R=\frac{1 \mathrm{~V}}{0.001 \mathrm{~A}}=1,000 \Omega\)\\
+19.8\\
+or 1 k -ohm.
+
+\section*{Discussion}
+This resistance is greater than what we found in the previous example. Resistances such as this are common in electric circuits, as we will discover in the next\\
+section. Note that if the line in Figure 19.7 were not straight, then the material would not be ohmic and we would not be able to use Ohm's law. Materials that do not follow Ohm's law are called nonohmic.
+
+\section*{Practice Problems}
+3.
+
+If you double the voltage across an ohmic resistor, how does the current through the resistor change?\\
+a. The current will double.\\
+b. The current will increase by half.\\
+c. The current will decrease by half.\\
+d. The current will decrease by a factor of two.\\
+4.
+
+The current through a resistor is \(0.025 \backslash, \backslash \operatorname{text}\{\mathrm{~A}\}\). What is the voltage drop across the resistor?\\
+a. \(2.5 \backslash, \backslash \operatorname{text}\{\mathrm{mV}\}\)\\
+b. \(0.25 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\)\\
+c. \(2.5 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\)\\
+d. \(0.25 \backslash, \backslash \operatorname{text}\{\mathrm{mV}\}\)
+
+\section*{Check Your Understanding}
+5.
+
+What is electric current?\\
+a. Electric current is the electric charge that is at rest.\\
+b. Electric current is the electric charge that is moving.\\
+c. Electric current is the electric charge that moves only from the positive terminal of a battery to the negative terminal.\\
+d. Electric current is the electric charge that moves only from a region of lower potential to higher potential.\\
+6.
+
+What is an ohmic material?\\
+a. An ohmic material is a material that obeys Ohm's law.\\
+b. An ohmic material is a material that does not obey Ohm's law.\\
+c. An ohmic material is a material that has high resistance.\\
+d. An ohmic material is a material that has low resistance.\\
+7.
+
+What is the difference between direct current and alternating current?\\
+a. Direct current flows continuously in every direction whereas alternating current flows in one direction.\\
+b. Direct current flows continuously in one direction whereas alternating current reverses its direction at regular time intervals.\\
+c. Both direct and alternating current flow in one direction; the magnitude of direct current is fixed whereas the magnitude of alternating current changes at regular intervals of time.\\
+d. Both direct and alternating current change their direction of flow; the magnitude of direct current is fixed whereas the magnitude of alternating current changes at regular intervals of time.
+
+\subsection*{19.2 Series Circuits}
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Interpret circuit diagrams and diagram basic circuit elements
+  \item Calculate equivalent resistance of resistors in series and apply Ohm's law to resistors in series and apply Ohm's law to resistors in series
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (5) Science concepts. The student knows the nature of forces in the physical world. The student is expected to:
+  \item (F) design. construct, and calculate in terms of current through, potential difference across, resistance of, and power used by electric circuit elements connected in both series and parallel combinations.
+\end{itemize}
+
+In addition, the High School Physics Laboratory Manual addresses content in this section in the lab titled: Circuits, as well as the following standards
+
+\begin{itemize}
+  \item (5) Science concepts. The student knows the nature of forces in the physical world. The student is expected to:
+  \item (F) design, construct, and calculate in terms of current through, potential difference across, resistance of, and power used by electric circuit elements connected in both series and parallel combinations.
+\end{itemize}
+
+\section*{Section Key Terms}
+\section*{Electric Circuits and Resistors}
+Now that we understand the concept of electric current, let's see what we can do with it. As you are no doubt aware, the modern lifestyle relies heavily on electrical devices. These devices contain ingenious electric circuits, which are complete, closed pathways through which electric current flows. Returning to our water analogy, an electric circuit is to electric charge like a network of pipes is to water: The electric circuit guides electric charge from one point to the next, running the charge through various devices along the way to extract work or information.
+
+Electric circuits are made from many materials and cover a huge range of sizes, as shown in Figure 19.8. Computers and cell phones contain electric circuits whose features can be as small as roughly a billionth of a meter (a nanometer, or \(10^{-9} \mathrm{~m}\) ). The pathways that guide the current in these devices are made by ultraprecise chemical treatments of silicon or other semiconductors. Large power systems, on the other hand, contain electric circuits whose features are on the scale of meters. These systems carry such large electric currents that their physical dimensions must be relatively large.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-19}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.8 The photo on the left shows a chip that contains complex integrated electric circuitry. Chips such as this are at the heart of devices such as computers and cell phones. The photograph on the right shows some typical electric circuitry required for high-power electric power transmission.}
+\end{center}
+\end{figure}
+
+The pathways that form electric circuits are made from a conducting material, normally a metal in macroscopic circuits. For example, copper wires inside your school building form the electrical circuits that power lighting, projectors, screens, speakers, etc. To represent an electric circuit, we draw circuit diagrams. We use lines and symbols to represent the elements in the circuit. A simple electric circuit diagram is shown on the left side of Figure 19.9. On the right side is an analogous water circuit, which we discuss below.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-20}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.9 On the left is a circuit diagram showing a battery (in red), a resistor (black zigzag element), and the current \(I\). On the right is the analogous water circuit. The pump is like the battery, the sand filter is like the resistor, the water current is like the electrical current, and the reservoir is like the ground.}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+Teacher Support Review the analogy between water flow and electric current to ensure that students understand it. To explain the analogy between pressure and voltage, compare water molecules compressed together under high pressure with electric charges compressed together under high voltage. Explain that the water pump increases the water pressure and that the battery increases the voltage. Other comparisons to discuss include the resistor versus the sand filter, and the ground versus the reservoir.
+
+There are many different symbols that scientists and engineers use in circuit diagrams, but we will focus on four main symbols: the wire, the battery or voltage source, resistors, and the ground. The thin black lines in the electric circuit diagram represent the pathway that the electric charge must follow. These pathways are assumed to be perfect conductors, so electric charge can move along these pathways without losing any energy. In reality, the wires in circuits are not perfect, but they come close enough for our purposes.
+
+The zigzag element labeled \(R\) is a resistor, which is a circuit element that provides a known resistance. Macroscopic resistors are often color coded to indicate their resistance, as shown in Figure 19.10.
+
+The red element in Figure 19.9 is a battery, with its positive and negative terminals indicated; the longer line represents the positive terminal of the battery, and the shorter line represents the negative terminal. Note that the battery icon is not always colored red; this is done in Figure 19.9 just to make it easy to identify.
+
+Finally, the element labeled ground on the lower left of the circuit indicates that the circuit is connected to Earth, which is a large, essentially neutral object containing an infinite amount of charge. Among other things, the ground determines the potential of the negative terminal of the battery. Normally, the potential of the ground is defined to be zero: \(V_{\text {ground }} \equiv 0\). This means that the entire lower wire in Figure 19.10 is at a voltage of zero volts.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-21}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.10 Some typical resistors. The color bands indicate the value of the resistance of each resistor.}
+\end{center}
+\end{figure}
+
+The electric current in Figure 19.9 is indicted by the blue line labeled \(I\). The arrow indicates the direction in which positive charge would flow in this circuit. Recall that, in metals, electrons are mobile charge carriers, so negative charges actually flow in the opposite direction around this circuit (i.e., counterclockwise). However, we draw the current to show the direction in which positive charge would move.
+
+On the right side of Figure 19.9 is an analogous water circuit. Water at a higher pressure leaves the top of the pump, which is like charges leaving the positive terminal of the battery. The water travels through the pipe, like the\\
+charges traveling through the wire. Next, the water goes through a sand filter, which heats up as the water squeezes through. This step is like the charges going through the resistor. When charges flow through a resistor, they do work to heat up the resistor. After flowing through the sand filter, the water has converted its potential energy into heat, so it is at a lower pressure. Likewise, the charges exiting the resistor have converted their potential energy into heat, so they are at a lower voltage. Recall that voltage is just potential energy per charge. Thus, water pressure is analogous to electric potential energy (i.e., voltage). Coming back to the water circuit again, we see that the water returns to the bottom of the pump, which is like the charge returning to the negative terminal of the battery. The water pump uses a source of energy to pump the water back up to a high pressure again, giving it the pressure required to go through the circuit once more. The water pump is like the battery, which uses chemical energy to increase the voltage of the charge up to the level of the positive terminal.
+
+The potential energy per charge at the positive terminal of the battery is the voltage rating of the battery. This voltage is like water pressure in the upper pipe. Just like a higher pressure forces water to move toward a lower pressure, a higher voltage forces electric charge to flow toward a lower voltage. The pump takes water at low pressure and does work on it, ejecting water at a higher pressure. Likewise, a battery takes charge at a low voltage, does work on it, and ejects charge at a higher voltage.
+
+Note that the current in the water circuit of Figure 19.9 is the same throughout the circuit. In other words, if we measured the number of water molecules passing a cross-section of the pipe per unit time at any point in the circuit, we would get the same answer no matter where in the circuit we measured. The same is true of the electrical circuit in the same figure. The electric current is the same at all points in this circuit, including inside the battery and in the resistor. The electric current neither speeds up in the wires nor slows down in the resistor. This would create points where too much or too little charge would be bunched up. Thus, the current is the same at all points in the circuit shown in Figure 19.9.
+
+Although the current is the same everywhere in both the electric and water circuits, the voltage or water pressure changes as you move through the circuits. In the water circuit, the water pressure at the pump outlet stays the same until the water goes through the sand filter, assuming no energy loss in the pipe. Likewise, the voltage in the electrical circuit is the same at all points in a given wire, because we have assumed that the wires are perfect conductors. Thus, as indicated by the constant red color of the upper wire in Figure 19.11, the voltage throughout this wire is constant at \(V=V_{\text {battery }}\). The voltage then drops as you go through the resistor, but once you reach the blue wire, the voltage stays at its new level of \(V=0\) all the way to the negative terminal of the battery (i.e., the blue terminal of the battery).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-23}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.11 The voltage in the red wire is constant at \(V=V_{\text {battery }}\) from the positive terminal of the battery to the top of the resistor. The voltage in the blue wire is constant at \(V=V_{\text {ground }}=0\) from the bottom of the resistor to the negative terminal of the battery.}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+Teacher Support Explain that, as you descend through the resistor, the voltage decreases linearly from the battery voltage to zero.
+
+If we go from the blue wire through the battery to the red wire, the voltage increases from \(V=0\) to \(V=V_{\text {battery }}\). Likewise, if we go from the blue wire up through the resistor to the red wire, the voltage also goes from \(V=0\) to \(V=V_{\text {battery }}\). Thus, using Ohm's law, we can write\\
+\(V_{\text {resistor }}=V_{\text {battery }}=I R\).\\
+Note that \(V_{\text {resistor }}\) is measured from the bottom of the resistor to the top, meaning that the top of the resistor is at a higher voltage than the bottom of the resistor. Thus, current flows from the top of the resistor or higher voltage to the bottom of the resistor or lower voltage.
+
+\section*{Virtual Physics}
+Battery-Resistor Circuit Click to view content\\
+Use this simulation to better understand how resistance, voltage, and current are related. The simulation shows a battery with a resistor connected between the terminals of the battery, as in the previous figure. You can modify the battery voltage and the resistance. The simulation shows how electrons react to these changes. It also shows the atomic cores in the resistor and how they are excited and heat up as more current goes through the resistor.
+
+Draw the circuit diagram for the circuit, being sure to draw an arrow indicating the direction of the current. Now pick three spots along the wire. Without changing the settings, allow the simulation to run for 20 s while you count the number of electrons passing through that spot. Record the number on the\\
+circuit diagram. Now do the same thing at each of the other two spots in the circuit. What do you notice about the number of charges passing through each spot in 20 s ? Remember that that current is defined as the rate that charges flow through the circuit. What does this mean about the current through the entire circuit?
+
+With the voltage slider, give the battery a positive voltage. Notice that the electrons are spaced farther apart in the left wire than they are in the right wire. How does this reflect the voltage in the two wires?\\
+a. The voltage between static charges is directly proportional to the distance between them.\\
+b. The voltage between static charges is directly proportional to square of the distance between them.\\
+c. The voltage between static charges is inversely proportional to the distance between them.\\
+d. The voltage between static charges is inversely proportional to square of the distance between them.
+
+Other possible circuit elements include capacitors and switches. These are drawn as shown on the left side of Figure 19.12. A switch is a device that opens and closes the circuit, like a light switch. It is analogous to a valve in a water circuit, as shown on the right side of Figure 19.12. With the switch open, no current passes through the circuit. With the switch closed, it becomes part of the wire, so the current passes through it with no loss of voltage.
+
+The capacitor is labeled C on the left of Figure 19.12. A capacitor in an electrical circuit is analogous to a flexible membrane in a water circuit. When the switch is closed in the circuit of Figure 19.12, the battery forces electrical current to flow toward the capacitor, charging the upper capacitor plate with positive charge. As this happens, the voltage across the capacitor plates increases. This is like the membrane in the water circuit: When the valve is opened, the pump forces water to flow toward the membrane, making it stretch to store the excess water. As this happens, the pressure behind the membrane increases.
+
+Now if we open the switch, the capacitor holds the voltage between its plates because the charges have nowhere to go. Likewise, if we close the valve, the water has nowhere to go and the membrane maintains the water pressure in the pipe between itself and the valve.
+
+If the switch is closed for a long time in the electric circuit or if the valve is open for a long time in the water circuit, the current will eventually stop flowing because the capacitor or the membrane will have become completely charged. Each circuit is now in the steady state, which means that its characteristics do not change over time. In this case, the steady state is characterized by zero current, and this does not change as long as the switch or valve remains in the same position. In the steady state, no electrical current passes through the capacitor, and no water current passes through the membrane. The voltage difference between the capacitor plates will be the same as the battery voltage.
+
+In the water circuit, the pressure behind the membrane will be the same as the pressure created by the pump.
+
+Although the circuit in Figure 19.12 may seem a bit pointless because all that happens when the switch is closed is that the capacitor charges up, it does show the capacitor's ability to store charge. Thus, the capacitor serves as a reservoir for charge. This property of capacitors is used in circuits in many ways. For example, capacitors are used to power circuits while batteries are being charged. In addition, capacitors can serve as filters. To understand this, let's go back to the water analogy. Suppose you have a water hose and are watering your garden. Your friend thinks he's funny, and kinks the hose. While the hose is kinked, you experience no water flow. When he lets go, the water starts flowing again. If he does this really fast, you experience water-no water-water-no water, and that's really no way to water your garden. Now imagine that the hose is filling up a big bucket, and you are watering from the bottom of the bucket. As long as you had water in your bucket to begin with and your friend doesn't kink the water hose for too long, you would be able to water your garden without the interruptions. Your friend kinking the water hose is filtered by the big bucket's supply of water, so it does not impact your ability to water the garden. We can think of the interruptions in the current (be it water or electrical current) as noise. Capacitors act in an analogous way as the water bucket to help filter out the noise. Capacitors have so many uses that it is very rare to find an electronic circuit that does not include some capacitors.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-25}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.12 On the left is an electrical circuit containing a battery, a switch, and a capacitor. On the left is the analogous water circuit with a pump, a valve, and a stretchable membrane. The pump is like the battery, the valve is like the switch, and the stretchable membrane is like the capacitor. When the switch is}
+\end{center}
+\end{figure}
+
+closed, electrical current flows as the capacitor charges and its voltage increases. Likewise in the water circuit, when the valve is open, water current flows as the stretchable membrane stretches and the water pressure behind it increases.
+
+\section*{Teacher Support}
+Teacher Support Point out that, when the switch is open, no current flows, which differs from the water valve that allows current to flow when it is open. Explain that the pressure difference in the water capacitor is supported by the membrane, which supplies a pressure to hold back the high-pressure water. Likewise, the capacitor provides a voltage to hold back the high-voltage charges.
+
+\section*{Work In Physics}
+What It Takes to be an Electrical Engineer Physics is used in a wide variety of fields. One field that requires a very thorough knowledge of physics is electrical engineering. An electrical engineer can work on anything from the large-scale power systems that provide power to big cities to the nanoscale electronic circuits that are found in computers and cell phones (Figure 19.13).
+
+In working with power companies, you can be responsible for maintaining the power grid that supplies electrical power to large areas. Although much of this work is done from an office, it is common to be called in for overtime duty after storms or other natural events. Many electrical engineers enjoy this part of the job, which requires them to race around the countryside repairing high-voltage transformers and other equipment. However, one of the more unpleasant aspects of this work is to remove the carcasses of unfortunate squirrels or other animals that have wandered into the transformers.
+
+Other careers in electrical engineering can involve designing circuits for cell phones, which requires cramming some 10 billion transistors into an electronic chip the size of your thumbnail. These jobs can involve much work with computer simulations and can also involve fields other than electronics. For example, the \(1-\mathrm{m}\)-diameter lenses that are used to make these circuits (as of 2015) are so precise that they are shipped from the manufacture to the chip fabrication plant in temperature-controlled trucks to ensure that they are held within a certain temperature range. If they heat up or cool down too much, they deform ever so slightly, rendering them useless for the ultrahigh precision photolithography required to manufacture these chips.
+
+In addition to a solid knowledge of physics, electrical engineers must above all be practical. Consider, for example, how one corporation managed to launch some anti-ballistic missiles at the White Sands Missile Test Range in New Mexico in the 1960s. Before launch, the skin of the missile had to be at the same voltage as the rail from which it was launched. The rail was connected to the ground by a large copper wire connected to a stake driven into the sandy earth. The missile,\\
+however, was connected by an umbilical cord to the equipment in the control shed a few meters away, which was grounded via a different grounding circuit. Before launching the missile, the voltage difference between the missile skin and the rail had to be less than 2.5 V . After an especially dry spell of weather, the missile could not be launched because the voltage difference stood at 5 V . A group of electrical engineers, including the father of your author, stood around pondering how to reduce the voltage difference. The situation was resolved when one of the engineers realized that urine contains electrolytes and conducts electricity quite well. With that, the four engineers quickly resolved the problem by urinating on the rail spike. The voltage difference immediately dropped to below 2.5 V and the missile was launched on schedule.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-27}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.13 The systems that electrical engineers work on range from microprocessor circuits (left)] to missile systems (right).}
+\end{center}
+\end{figure}
+
+\section*{Virtual Physics}
+Click to view content\\
+Amuse yourself by building circuits of all different shapes and sizes. This simulation provides you with various standard circuit elements, such as batteries, AC voltage sources, resistors, capacitors, light bulbs, switches, etc. You can connect these in any configuration you like and then see the result.
+
+Build a circuit that starts with a resistor connected to a capacitor. Connect the free side of the resistor to the positive terminal of a battery and the free side of the capacitor to the negative terminal of the battery. Click the reset dynamics button to see how the current flows starting with no charge on the capacitor. Now right click on the resistor to change its value. When you increase the resistance, does the circuit reach the steady state more rapidly or more slowly?
+
+PhET Explorations: Circuit Construction Kit (DC only). An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.
+
+Click to view content
+
+When the circuit has reached the steady state, how does the voltage across the capacitor compare to the voltage of the battery? What is the voltage across the resistor?\\
+a. The voltage across the capacitor is greater than the voltage of the battery. In the steady state, no current flows through this circuit, so the voltage across the resistor is zero.\\
+b. The voltage across the capacitor is smaller than the voltage of the battery. In the steady state, finite current flows through this circuit, so the voltage across the resistor is finite.\\
+c. The voltage across the capacitor is the same as the voltage of the battery. In the steady state, no current flows through this circuit, so the voltage across the resistor is zero.\\
+d. The voltage across the capacitor is the same as the voltage of the battery. In the steady state, finite current flows through this circuit, so the voltage across the resistor is finite.
+
+\section*{Resistors in Series and Equivalent Resistance}
+Now that we have a basic idea of how electrical circuits work, let's see what happens in circuits with more than one circuit element. In this section, we look at resistors in series. Components connected in series are connected one after the other in the same branch of a circuit, such as the resistors connected in series on the left side of Figure 19.14.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-28}
+
+Figure 19.14 On the left is an electric circuit with three resistors \(R_{1}, R_{2}\), and \(R_{3}\) connected in series. On the right is an electric circuit with one resistor \(R_{\text {equiv }}\) that is equivalent to the combination of the three resistors \(R_{1}, R_{2}\), and \(R_{3}\).
+
+We will now try to find a single resistance that is equivalent to the three resistors in series on the left side of Figure 19.14. An equivalent resistor is a resistor that has the same resistance as the combined resistance of a set of other resistors. In other words, the same current will flow through the left and right circuits in Figure 19.14 if we use the equivalent resistor in the right circuit.
+
+According to Ohm's law, the voltage drop \(V\) across a resistor when a current flows through it is \(V=I R\) where \(I\) is the current in amperes (A) and \(R\) is the resistance in ohms ( \(\Omega\) ). Another way to think of this is that \(V\) is the voltage\\
+necessary to make a current \(I\) flow through a resistance \(R\). Applying Ohm's law to each resistor on the left circuit of Figure 19.14, we find that the voltage drop across \(R_{1}\) is \(V_{1}=I R_{1}\), that across \(R_{2}\) is \(V_{2}=I R_{2}\), and that across \(R_{3}\) is \(V_{3}=I R_{3}\). The sum of these voltages equals the voltage output of the battery, that is\\
+\(V_{\text {battery }}=V_{1}+V_{2}+V_{3}\).\\
+19.9
+
+You may wonder why voltages must add up like this. One way to understand this is to go once around the circuit and add up the successive changes in voltage. If you do this around a loop and get back to the starting point, the total change in voltage should be zero, because you end up at the same place that you started. To better understand this, consider the analogy of going for a stroll through some hilly countryside. If you leave your car and walk around, then come back to your car, the total height you gained in your stroll must be the same as the total height you lost, because you end up at the same place as you started. Thus, the gravitational potential energy you gain must be the same as the gravitational potential energy you lose. The same reasoning holds for voltage in going around an electric circuit. Let's apply this reasoning to the left circuit in Figure 19.14. We start just below the battery and move up through the battery, which contributes a voltage gain of \(V_{\text {battery }}\). Next, we got through the resistors. The voltage drops by \(V_{1}\) in going through resistor \(R_{1}\), by \(V_{2}\) in going through resistor \(R_{2}\), and by \(V_{3}\) in going through resistor \(R_{3}\). After going through resistor \(R_{3}\), we arrive back at the starting point, so we add up these four changes in voltage and set the sum equal to zero. This gives\\
+\(0=V_{\text {battery }}-V_{1}-V_{2}-V_{3}\).\\
+19.10\\
+which is the same as the previous equation. Note that the minus signs in front of \(V_{1}, V_{2}\), and \(V_{3}\) are because these are voltage drops, whereas \(V_{\text {battery }}\) is a voltage rise.
+
+Ohm's law tells us that \(V_{1}=I R_{1}, V_{2}=I R_{2}\), and \(V_{3}=I R_{3}\). Inserting these values into equation \(V_{\text {battery }}=V_{1}+V_{2}+V_{3}\) gives
+
+\[
+\begin{aligned}
+V_{\text {battery }} & =I R_{1}+I R_{2}+I R_{3} \\
+& =I\left(R_{1}+R_{2}+R_{3}\right) .
+\end{aligned}
+\]
+
+19.11
+
+Applying this same logic to the right circuit in Figure 19.14 gives\\
+\(V_{\text {battery }}=I R_{\text {equiv }}\).\\
+19.12
+
+Dividing the equation \(V_{\text {battery }}=I\left(R_{1}+R_{2}+R_{3}\right)\) by \(V_{\text {battery }}=I R_{\text {equiv }}\), we get\\
+\(\frac{V_{\text {battery }}}{V_{\text {battery }}}=\frac{I\left(R_{1}+R_{2}+R_{3}\right)}{I R_{\text {equiv }}}\)\\
+\(R_{\text {equiv }}=R_{1}+R_{2}+R_{3}\).\\
+19.13
+
+This shows that the equivalent resistance for a series of resistors is simply the sum of the resistances of each resistor. In general, \(N\) resistors connected in series can be replaced by an equivalent resistor with a resistance of\\
+\(R_{\text {equiv }}=R_{1}+R_{2}+\cdots+R_{N}\).
+
+\section*{Watch Physics}
+Resistors in Series This video discusses the basic concepts behind interpreting circuit diagrams and then shows how to calculate the equivalent resistance for resistors in series.
+
+Click to view content
+
+\section*{Grasp Check}
+True or false-In a circuit diagram, we can assume that the voltage is the same at every point in a given wire.\\
+a. false\\
+b. true
+
+\section*{Worked Example}
+Calculation of Equivalent Resistance In the left circuit of the previous figure, suppose the voltage rating of the battery is 12 V , and the resistances are \(R_{1}=1.0 \Omega, R_{2}=6.0 \Omega\), and \(R_{3}=13 \Omega\). (a) What is the equivalent resistance? (b) What is the current through the circuit?
+
+\section*{Strategy FOR (A)}
+Use the equation for the equivalent resistance of resistors connected in series. Because the circuit has three resistances, we only need to keep three terms, so it takes the form\\
+\(R_{\text {equiv }}=R_{1}+R_{2}+R_{3}\).\\
+19.14
+
+Solution for (a)\\
+Inserting the given resistances into the equation above gives
+
+\[
+\begin{aligned}
+R_{\text {equiv }} & =R_{1}+R_{2}+R_{3} \\
+& =1.0 \Omega+6.0 \Omega+13 \Omega \\
+& =20 \Omega .
+\end{aligned}
+\]
+
+19.15
+
+Discussion for (a)\\
+We can thus replace the three resistors \(R_{1}, R_{2}\), and \(R_{3}\) with a single 20 - \(\Omega\) resistor.
+
+\section*{Strategy FOR (B)}
+Apply Ohm's law to the circuit on the right side of the previous figure with the equivalent resistor of \(20 \Omega\).
+
+Solution for (b)\\
+The voltage drop across the equivalent resistor must be the same as the voltage rise in the battery. Thus, Ohm's law gives
+
+\[
+\begin{aligned}
+V_{\text {battery }} & =I R_{\text {equiv }} \\
+I & =\frac{V_{\text {battery }}}{R_{\text {equiv }}} \\
+& =\frac{12 \mathrm{~V}}{20 \Omega} \\
+& =0.60 \mathrm{~A} .
+\end{aligned}
+\]
+
+19.16
+
+Discussion for (b)\\
+To check that this result is reasonable, we calculate the voltage drop across each resistor and verify that they add up to the voltage rating of the battery. The voltage drop across each resistor is\\
+\(V_{1}=I R_{1}=(0.60 \mathrm{~A})(1.0 \Omega)=0.60 \mathrm{~V}\)\\
+\(V_{2}=I R_{2}=(0.60 \mathrm{~A})(6.0 \Omega)=3.6 \mathrm{~V}\)\\
+\(V_{3}=I R_{3}=(0.60 \mathrm{~A})(13 \Omega)=7.8 \mathrm{~V}\).\\
+19.17
+
+Adding these voltages together gives\\
+\(V_{1}+V_{2}+V_{3}=0.60 \mathrm{~V}+3.6 \mathrm{~V}+7.8 \mathrm{~V}=12 \mathrm{~V}\).\\
+19.18\\
+which is the voltage rating of the battery.
+
+\section*{Worked Example}
+Determine the Unknown Resistance The circuit shown in figure below contains three resistors of known value and a third element whose resistance \(R_{3}\) is unknown. Given that the equivalent resistance for the entire circuit is \(150 \Omega\), what is the resistance \(R_{3}\) ?\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-32}
+
+\section*{Strategy}
+The four resistances in this circuit are connected in series, so we know that they must add up to give the equivalent resistance. We can use this to find the unknown resistance \(R_{3}\).
+
+Solution\\
+For four resistances in series, the equation for the equivalent resistance of resistors in series takes the form\\
+\(R_{\text {equiv }}=R_{1}+R_{2}+R_{3}+R_{4}\).\\
+19.19
+
+Solving for \(R 3\) and inserting the known values gives
+
+\[
+\begin{aligned}
+R_{3} & =R_{\text {equiv }}-R_{1}-R_{2}-R_{4} \\
+& =150 \Omega-10 \Omega-25 \Omega-15 \Omega \\
+& =100 \Omega
+\end{aligned}
+\]
+
+19.20
+
+Discussion\\
+The equivalent resistance of a circuit can be measured with an ohmmeter. This is sometimes useful for determining the effective resistance of elements whose resistance is not marked on the element.
+
+\section*{Check your Understanding}
+8.
+
+⟶WL—\\
+Figure 19.15\\
+What circuit element is represented in the figure above?\\
+a. a battery\\
+b. a resistor\\
+c. a capacitor\\
+d. an inductor\\
+9.
+
+How would a diagram of two resistors connected in series appear?\\
+a.
+
+\subsection*{19.3 Parallel Circuits}
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Interpret circuit diagrams with parallel resistors
+  \item Calculate equivalent resistance of resistor combinations containing series and parallel resistors
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (5) Science concepts. The student knows the nature of forces in the physical world. The student is expected to:
+  \item (F) design. construct, and calculate in terms of current through, potential difference across, resistance of, and power used by electric circuit elements connected in both series and parallel combinations.
+\end{itemize}
+
+In addition, the High School Physics Laboratory Manual addresses content in this section in the lab titled: Circuits, as well as the following standards:
+
+\begin{itemize}
+  \item (5) The student knows the nature of forces in the physical world. The student is expected to:
+  \item (F) design, construct, and calculate in terms of current through, potential difference across, resistance of, and power used by electric circuit elements connected in both series and parallel combinations.
+\end{itemize}
+
+\section*{Section Key Terms}
+\section*{Resistors in Parallel}
+In the previous section, we learned that resistors in series are resistors that are connected one after the other. If we instead combine resistors by connecting them next to each other, as shown in Figure 19.16, then the resistors are said to be connected in parallel. Resistors are in parallel when both ends of each resistor are connected directly together.
+
+Note that the tops of the resistors are all connected to the same wire, so the voltage at the top of the each resistor is the same. Likewise, the bottoms of the resistors are all connected to the same wire, so the voltage at the bottom of each resistor is the same. This means that the voltage drop across each resistor is the same. In this case, the voltage drop is the voltage rating \(V\) of the battery,\\
+because the top and bottom wires connect to the positive and negative terminals of the battery, respectively.
+
+Although the voltage drop across each resistor is the same, we cannot say the same for the current running through each resistor. Thus, \(I_{1}, I_{2}\), and \(I_{3}\) are not necessarily the same, because the resistors \(R_{1}, R_{2}, \operatorname{and} R_{3}\) do not necessarily have the same resistance.
+
+Note that the three resistors in Figure 19.16 provide three different paths through which the current can flow. This means that the equivalent resistance for these three resistors must be less than the smallest of the three resistors. To understand this, imagine that the smallest resistor is the only path through which the current can flow. Now add on the alternate paths by connecting other resistors in parallel. Because the current has more paths to go through, the overall resistance (i.e., the equivalent resistance) will decrease. Therefore, the equivalent resistance must be less than the smallest resistance of the parallel resistors.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-35}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.16 The left circuit diagram shows three resistors in parallel. The voltage \(V\) of the battery is applied across all three resistors. The currents that flow through each branch are not necessarily equal. The right circuit diagram shows an equivalent resistance that replaces the three parallel resistors.}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+Teacher Support Emphasize that the voltage across each parallel resistor is the same, whereas the current may differ; it will be the same if a pair of resistors has the same resistance.
+
+To find the equivalent resistance \(R_{\text {equiv }}\) of the three resistors \(R_{1}, R_{2}, \operatorname{and} R_{3}\), we apply Ohm's law to each resistor. Because the voltage drop across each resistor is \(V\), we obtain\\
+\(V=I_{1} R_{1}, \quad V=I_{2} R_{2}, \quad V=I_{3} R_{3}\)\\
+19.21\\
+or\\
+\(I_{1}=\frac{V}{R_{1}}, \quad I_{2}=\frac{V}{R_{2}}, \quad I_{3}=\frac{V}{R_{3}}\).\\
+19.22
+
+We also know from conservation of charge that the three currents \(I_{1}, I_{2}, \operatorname{and} I_{3}\) must add up to give the current \(I\) that goes through the battery. If this were\\
+not true, current would have to be mysteriously created or destroyed somewhere in the circuit, which is physically impossible. Thus, we have\\
+\(I=I_{1}+I_{2}+I_{3}\).\\
+19.23
+
+Inserting the expressions for \(I_{1}, I_{2}, \operatorname{and} I_{3}\) into this equation gives\\
+\(I=\frac{V}{R_{1}}+\frac{V}{R_{2}}+\frac{V}{R_{3}}=V\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}+\frac{1}{R_{3}}\right)\)\\
+19.24\\
+or\\
+\(V=I\left(\frac{1}{1 / R_{1}+1 / R_{2}+1 / R_{3}}\right)\).\\
+19.25
+
+This formula is just Ohm's law, with the factor in parentheses being the equivalent resistance.\\
+\(V=I\left(\frac{1}{1 / R_{1}+1 / R_{2}+1 / R_{3}}\right)=I R_{\text {equiv }}\).\\
+19.26
+
+Thus, the equivalent resistance for three resistors in parallel is\\
+\(R_{\text {equiv }}=\frac{1}{1 / R_{1}+1 / R_{2}+1 / R_{3}}\).\\
+19.27
+
+The same logic works for any number of resistors in parallel, so the general form of the equation that gives the equivalent resistance of \(N\) resistors connected in parallel is\\
+\(R_{\text {equiv }}=\frac{1}{1 / R_{1}+1 / R_{2}+\cdots+1 / R_{N}}\).\\
+19.28
+
+\section*{Worked Example}
+Find the Current through Parallel Resistors The three circuits below are equivalent. If the voltage rating of the battery is \(V_{\text {battery }}=3 \mathrm{~V}\), what is the equivalent resistance of the circuit and what current runs through the circuit?\\
+\texttt{https://cdn.mathpix.com/cropped/2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-37.jpg?height=321&width=811&top_left_y=431&top_left_x=464}\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-37(1)}
+
+\section*{Strategy}
+The three resistors are connected in parallel and the voltage drop across them is \(V_{\text {battery }}\). Thus, we can apply the equation for the equivalent resistance of resistors in parallel, which takes the form\\
+\(R_{\text {equiv }}=\frac{1}{1 / R_{1}+1 / R_{2}+1 / R_{3}}\).\\
+19.29
+
+The circuit with the equivalent resistance is shown below. Once we know the equivalent resistance, we can use Ohm's law to find the current in the circuit.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-37}
+
+Solution\\
+Inserting the given values for the resistance into the equation for equivalent resistance gives
+
+\[
+\begin{aligned}
+R_{\text {equiv }} & =\frac{1}{1 / R_{1}+1 / R_{2}+1 / R_{3}} \\
+& =\frac{1}{1 / 10 \Omega+1 / 25 \Omega+1 / 15 \Omega} \\
+& =4.84 \Omega
+\end{aligned}
+\]
+
+The current through the circuit is thus
+
+\[
+\begin{aligned}
+V & =I R \\
+I & =\frac{V}{R} \\
+& =\frac{3 \mathrm{~V}}{4.84 \Omega} \\
+& =0.62 \mathrm{~A} .
+\end{aligned}
+\]
+
+19.31
+
+Discussion\\
+Although 0.62 A flows through the entire circuit, note that this current does not flow through each resistor. However, because electric charge must be conserved in a circuit, the sum of the currents going through each branch of the circuit must add up to the current going through the battery. In other words, we cannot magically create charge somewhere in the circuit and add this new charge to the current. Let's check this reasoning by using Ohm's law to find the current through each resistor.\\
+\(I_{1}=\frac{V}{R_{1}}=\frac{3 \mathrm{~V}}{10 \Omega}=0.30 \mathrm{~A}\)\\
+\(I_{2}=\frac{V}{R_{2}}=\frac{3 \mathrm{~V}}{25 \Omega}=0.12 \mathrm{~A}\)\\
+\(I_{3}=\frac{V}{R_{3}}=\frac{3 \mathrm{~V}}{15 \Omega}=0.20 \mathrm{~A}\)\\
+19.32
+
+As expected, these currents add up to give 0.62 A , which is the total current found going through the equivalent resistor. Also, note that the smallest resistor has the largest current flowing through it, and vice versa.
+
+\section*{Worked Example}
+Reasoning with Parallel Resistors Without doing any calculation, what is the equivalent resistance of three identical resistors \(R\) in parallel?
+
+\section*{Strategy}
+Three identical resistors \(R\) in parallel make three identical paths through which the current can flow. Thus, it is three times easier for the current to flow through these resistors than to flow through a single one of them.
+
+Solution
+
+If it is three times easier to flow through three identical resistors \(R\) than to flow through a single one of them, the equivalent resistance must be three times less: \(R / 3\).
+
+Discussion\\
+Let's check our reasoning by calculating the equivalent resistance of three identical resistors \(R\) in parallel. The equation for the equivalent resistance of resistors in parallel gives
+
+\[
+\begin{aligned}
+R_{\text {equiv }} & =\frac{1}{1 / R+1 / R+1 / R} \\
+& =\frac{1}{3 / R} \\
+& =\frac{R}{3}
+\end{aligned}
+\]
+
+19.33
+
+Thus, our reasoning was correct. In general, when more paths are available through which the current can flow, the equivalent resistance decreases. For example, if we have identical resistors \(R\) in parallel, the equivalent resistance would be \(R / 10\).
+
+\section*{Practice Problems}
+10.
+
+Three resistors, 10, 20, and \(30 \Omega\), are connected in parallel. What is the equivalent resistance?\\
+a. The equivalent resistance is \(5.5 \Omega\)\\
+b. The equivalent resistance is \(60 \Omega\)\\
+c. The equivalent resistance is \(6 \times 103 \Omega\)\\
+d. The equivalent resistance is \(6 \times 104 \Omega\)\\
+11.
+
+Watch Physics: Resistors in Parallel. This video introduces and explains how resistors work when parallel.
+
+Click to view content\\
+If a \(5 \backslash \operatorname{text}\{-\mathrm{V}\}\) drop occurs across \(\mathrm{R} \_1\), and \(\mathrm{R} \_1\) is connected in parallel to \(R \_2\), what is the voltage drop across \(R \_2\) ?\\
+a. Voltage drop across is \(0 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\).\\
+b. Voltage drop across is \(2.5 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\).\\
+c. Voltage drop across is \(5 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\).\\
+d. Voltage drop across is \(10 \backslash, \backslash \operatorname{text}\{\mathrm{~V}\}\).
+
+\section*{Resistors in Parallel and in Series}
+More complex connections of resistors are sometimes just combinations of series and parallel. Combinations of series and parallel resistors can be reduced to a single equivalent resistance by using the technique illustrated in Figure 19.17. Various parts are identified as either series or parallel, reduced to their equivalents, and further reduced until a single resistance is left. The process is more time consuming than difficult.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-41}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.17 This combination of seven resistors has both series and parallel parts. Each is identified and reduced to an equivalent resistance, and these are further reduced until a single equivalent resistance is reached.}
+\end{center}
+\end{figure}
+
+\section*{Teacher Support}
+\section*{Teacher Support}
+\section*{Misconception Alert}
+Students may be tempted to immediately add \(R_{1}\) and \(R_{7}\) together because they appear to be in series. Point out that \(R_{1}\) is in series with the parallel combination of \(R_{7}\) and all the resistors to the right of \(R_{7}\). Thus, the equivalent resistance of this parallel combination must be found before it can be added to \(R_{1}\).
+
+\section*{Teacher Support}
+Teacher Support Work through this example with students to ensure that they understand the reduction that occurs at each step.
+
+Let's work through the four steps in Figure 19.17 to reduce the seven resistors to a single equivalent resistor. To avoid distracting algebra, we'll assume each resistor is \(10 \Omega\). In step 1, we reduce the two sets of parallel resistors circled by the blue dashed loop. The upper set has three resistors in parallel and will be reduced to a single equivalent resistor \(R_{\mathrm{P} 1}\). The lower set has two resistors in parallel and will be reduced to a single equivalent resistor \(R_{\mathrm{P} 2}\). Using the equation for the equivalent resistance of resistors in parallel, we obtain\\
+\(R_{\mathrm{P} 1}=\frac{1}{1 / R_{2}+1 / R_{3}+1 / R_{4}}=\frac{1}{1 / 10 \Omega+1 / 10 \Omega+1 / 10 \Omega}=\frac{10}{3} \Omega\)\\
+\(R_{\mathrm{P} 2}=\frac{1}{1 / R_{5}+1 / R_{6}}=\frac{1}{1 / 10 \Omega+1 / 10 \Omega}=5 \Omega\).\\
+19.34
+
+These two equivalent resistances are encircled by the red dashed loop following step 1. They are in series, so we can use the equation for the equivalent resistance of resistors in series to reduce them to a single equivalent resistance \(R_{\mathrm{S} 1}\). This is done in step 2, with the result being\\
+\(R_{\mathrm{S} 1}=R_{\mathrm{P} 1}+R_{\mathrm{P} 2}=\frac{10}{3} \Omega+5 \Omega=\frac{25}{3} \Omega\).\\
+19.35
+
+The equivalent resistor \(R_{\mathrm{S} 1}\) appears in the green dashed loop following step 2. This resistor is in parallel with resistor \(R_{7}\), so the pair can be replaced by the equivalent resistor \(R_{\mathrm{P} 3}\), which is given by\\
+\(R_{\mathrm{P} 3}=\frac{1}{1 / R_{\mathrm{S} 1}+1 / R_{7}}=\frac{1}{3 / 25 \Omega+1 / 10 \Omega}=\frac{50}{11} \Omega\).\\
+19.36
+
+This is done in step 3. The resistor \(R_{\mathrm{P} 3}\) is in series with the resistor \(R_{1}\), as shown in the purple dashed loop following step 3. These two resistors are combined in the final step to form the final equivalent resistor \(R_{\text {equiv }}\), which is\\
+\(R_{\text {equiv }}=R_{1}+R_{\mathrm{P} 3}=10 \Omega+\frac{50}{11} \Omega=\frac{160}{11} \Omega\).\\
+19.37
+
+Thus, the entire combination of seven resistors may be replaced by a single resistor with a resistance of about \(14.5 \Omega\).
+
+That was a lot of work, and you might be asking why we do it. It's important for us to know the equivalent resistance of the entire circuit so that we can calculate the current flowing through the circuit. Ohm's law tells us that the current flowing through a circuit depends on the resistance of the circuit and the voltage across the circuit. But to know the current, we must first know the equivalent resistance.
+
+Here is a general approach to find the equivalent resistor for any arbitrary combination of resistors:
+
+\begin{enumerate}
+  \item Identify a group of resistors that are only in parallel or only in series.
+  \item For resistors in series, use the equation for the equivalent resistance of resistors in series to reduce them to a single equivalent resistance. For resistors in parallel, use the equation for the equivalent resistance of resistors in parallel to reduce them to a single equivalent resistance.
+  \item Draw a new circuit diagram with the resistors from step 1 replaced by their equivalent resistor.
+  \item If more than one resistor remains in the circuit, return to step 1 and repeat. Otherwise, you are finished.
+\end{enumerate}
+
+\section*{Fun In Physics}
+Robot Robots have captured our collective imagination for over a century. Now, this dream of creating clever machines to do our dirty work, or sometimes just to keep us company, is becoming a reality. Robotics has become a huge field of research and development, with some technology already being commercialized. Think of the small autonomous vacuum cleaners, for example.
+
+Figure 19.18 shows just a few of the multitude of different forms robots can take. The most advanced humanoid robots can walk, pour drinks, even dance (albeit not very gracefully). Other robots are bio-inspired, such as the dogbot shown in the middle photograph of Figure 19.18. This robot can carry hundreds of pounds of load over rough terrain. The photograph on the right in Figure 19.18 shows the inner workings of an M-block, developed by the Massachusetts Institute of Technology. These simple-looking blocks contain inertial wheels and electromagnets that allow them to spin and flip into the air and snap together in a variety of shapes. By communicating wirelessly between themselves, they\\
+self-assemble into a variety of shapes, such as desks, chairs, and someday maybe even buildings.
+
+All robots involve an immense amount of physics and engineering. The simple act of pouring a drink has only recently been mastered by robots, after over 30 years of research and development! The balance and timing that we humans take for granted is in fact a very tricky act to follow, requiring excellent balance, dexterity, and feedback. To master this requires sensors to detect balance, computing power to analyze the data and communicate the appropriate compensating actions, and joints and actuators to implement the required actions.
+
+In addition to sensing gravity or acceleration, robots can contain multiple different sensors to detect light, sound, temperature, smell, taste, etc. These devices are all based on the physical principles that you are studying in this text. For example, the optics used for robotic vision are similar to those used in your digital cameras: pixelated semiconducting detectors in which light is converted into electrical signals. To detect temperature, simple thermistors may be used, which are resistors whose resistance changes depending on temperature.
+
+Building a robot today is much less arduous than it was a few years ago. Numerous companies now offer kits for building robots. These range in complexity something suitable for elementary school children to something that would challenge the best professional engineers. If interested, you may find these easily on the Internet and start making your own robot today.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-45}
+
+Figure 19.18 Robots come in many shapes and sizes, from the classic humanoid type to dogbots to small cubes that self-assemble to perform a variety of tasks.
+
+\section*{Watch Physics}
+Resistors in Parallel This video shows a lecturer discussing a simple circuit with a battery and a pair of resistors in parallel. He emphasizes that electrons flow in the direction opposite to that of the positive current and also makes use of the fact that the voltage is the same at all points on an ideal wire. The derivation is quite similar to what is done in this text, but the lecturer goes through it well, explaining each step.
+
+Click to view content
+
+\section*{Grasp Check}
+True or false-In a circuit diagram, we can assume that the voltage is the same at every point in a given wire.\\
+a. false\\
+b. true
+
+\section*{Watch Physics}
+Resistors in Series and in Parallel This video shows how to calculate the equivalent resistance of a circuit containing resistors in parallel and in series. The lecturer uses the same approach as outlined above for finding the equivalent resistance.
+
+Click to view content
+
+\section*{Grasp Check}
+Imagine connected \(N\) identical resistors in parallel. Each resistor has a resistance of \(R\). What is the equivalent resistance for this group of parallel resistors?\\
+a. The equivalent resistance is \((R)^{N}\).\\
+b. The equivalent resistance is NR.\\
+c. The equivalent resistance is \(\frac{R}{N}\).\\
+d. The equivalent resistance is \(\frac{N}{R}\).
+
+\section*{Worked Example}
+Find the Current through a Complex Resistor Circuit The battery in the circuit below has a voltage rating of 10 V . What current flows through the circuit and in what direction?\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-47(1)}
+
+\section*{Strategy}
+Apply the Strategy for finding equivalent resistance to replace all the resistors with a single equivalent resistance, then use Ohm's law to find the current through the equivalent resistor.
+
+Solution\\
+The resistor combination \(R_{4}\) and \(R_{5}\) can be reduced to an equivalent resistance of\\
+\(R_{\mathrm{P} 1}=\frac{1}{1 / R_{4}+1 / R_{5}}=\frac{1}{1 / 45 \Omega+1 / 60 \Omega}=25.71 \Omega \mathrm{R}\).\\
+19.38
+
+Replacing \(R_{4}\) and \(R_{5}\) with this equivalent resistance gives the circuit below.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-47}
+
+We now replace the two upper resistors \(R_{2}\) and \(R_{3}\) by the equivalent resistor \(R_{\mathrm{S} 1}\) and the two lower resistors \(R_{\mathrm{P} 1}\) and \(R_{6}\) by their equivalent resistor \(R_{\mathrm{S} 2}\)
+
+\begin{itemize}
+  \item These resistors are in series, so we add them together to find the equivalent resistance.\\
+\(R_{\mathrm{S} 1}=R_{2}+R_{3}=50 \Omega+30 \Omega=80 \Omega\)\\
+\(R_{\mathrm{S} 2}=R_{\mathrm{P} 1}+R_{6}=25.71 \Omega+20 \Omega=45.71 \Omega\)\\
+19.39
+\end{itemize}
+
+Replacing the relevant resistors with their equivalent resistor gives the circuit below.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-48(1)}
+
+Now replace the two resistors \(R_{\mathrm{S} 1}\) and \(R_{\mathrm{S} 2}\), which are in parallel, with their equivalent resistor \(R_{\mathrm{P} 2}\). The resistance of \(R_{\mathrm{P} 2}\) is\\
+\(R_{\mathrm{P} 2}=\frac{1}{1 / R_{\mathrm{S} 1}+1 / R_{\mathrm{S} 2}}=\frac{1}{1 / 80 \Omega+1 / 45.71 \Omega}=29.09 \Omega\).\\
+19.40
+
+Updating the circuit diagram by replacing \(R_{\mathrm{S} 1}\) and \(R_{\mathrm{S} 2}\) with this equivalent resistance gives the circuit below.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-48}
+
+Finally, we combine resistors \(R_{1}\) and \(R_{\mathrm{P} 2}\), which are in series. The equivalent resistance is \(R_{\mathrm{S} 3}=R_{1}+R_{\mathrm{P} 2}=75 \Omega+29.09 \Omega=104.09 \Omega\). The final circuit is shown below.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-49}
+
+We now use Ohm's law to find the current through the circuit.
+
+\[
+\begin{aligned}
+V & =I R_{\mathrm{S} 3} \\
+I & =\frac{V}{R_{\mathrm{S} 3}}=\frac{10 \mathrm{~V}}{104.09 \Omega}=0.096 \mathrm{~A}
+\end{aligned}
+\]
+
+19.41
+
+The current goes from the positive terminal of the battery to the negative terminal of the battery, so it flows clockwise in this circuit.
+
+\section*{Discussion}
+This calculation may seem rather long, but with a little practice, you can combine some steps. Note also that extra significant digits were carried through the calculation. Only at the end was the final result rounded to two significant digits.
+
+\section*{Worked Example}
+Strange-Looking Circuit Diagrams Occasionally, you may encounter circuit diagrams that are not drawn very neatly, such as the diagram shown below. This circuit diagram looks more like how a real circuit might appear on the lab bench. What is the equivalent resistance for the resistors in this diagram, assuming each resistor is \(10 \Omega\) and the voltage rating of the battery is 12 V .\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-49(1)}
+
+\section*{Strategy}
+Let's redraw this circuit diagram to make it clearer. Then we'll apply the Strategy outlined above to calculate the equivalent resistance.
+
+\section*{Solution}
+To redraw the diagram, consider the figure below. In the upper circuit, the blue resistors constitute a path from the positive terminal of the battery to the negative terminal. In parallel with this circuit are the red resistors, which constitute another path from the positive to negative terminal of the battery. The blue and red paths are shown more cleanly drawn in the lower circuit diagram. Note that, in both the upper and lower circuit diagrams, the blue and red paths connect the positive terminal of the battery to the negative terminal of the battery.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-50(1)}\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-50}
+
+Now it is easier to see that \(R_{1}\) and \(R_{2}\) are in parallel, and the parallel combination is in series with \(R_{4}\). This combination in turn is in parallel with the series combination of \(R_{3}\) and \(R_{5}\). First, we calculate the blue branch, which contains \(R_{1}, R_{2}\), and \(R_{4}\). The equivalent resistance is\\
+\(R_{\text {blue }}=\frac{1}{1 / R_{1}+1 / R_{2}}+R_{4}=\frac{1}{1 / 10 \Omega+1 / 10 \Omega}+10 \Omega=15 \Omega\).\\
+19.42\\
+where we show the contribution from the parallel combination of resistors and from the series combination of resistors. We now calculate the equivalent resistance of the red branch, which is\\
+\(R_{\text {red }}=R_{3}+R_{5}=10 \Omega+10 \Omega=20 \Omega\).\\
+19.43
+
+Inserting these equivalent resistors into the circuit gives the circuit below.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-51}
+
+These two resistors are in parallel, so they can be replaced by a single equivalent resistor with a resistance of\\
+\(R_{\text {equiv }}=\frac{1}{1 / R_{\text {blue }}+1 / R_{\text {red }}}=\frac{1}{1 / 15 \Omega+1 / 20 \Omega}=8.6 \Omega\).\\
+19.44
+
+The final equivalent circuit is show below.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-51(1)}
+
+Discussion\\
+Finding the equivalent resistance was easier with a clear circuit diagram. This is why we try to make clear circuit diagrams, where the resistors in parallel are lined up parallel to each other and at the same horizontal position on the diagram.
+
+We can now use Ohm's law to find the current going through each branch to this circuit. Consider the circuit diagram with \(R_{\text {blue }}\) and \(R_{\text {red }}\). The voltage across each of these branches is 12 V (i.e., the voltage rating of the battery). The current in the blue branch is\\
+\(I_{\text {blue }}=\frac{V}{R_{\text {blue }}}=\frac{12 \mathrm{~V}}{15 \Omega}=0.80 \mathrm{~A}\).\\
+19.45
+
+The current across the red branch is\\
+\(I_{\text {red }}=\frac{V}{R_{\text {red }}}=\frac{12 \mathrm{~V}}{20 \Omega}=0.60 \mathrm{~A}\).\\
+19.46
+
+The current going through the battery must be the sum of these two currents (can you see why?), or 1.4 A .
+
+\section*{Practice Problems}
+12.
+
+What is the formula for the equivalent resistance of two parallel resistors with resistance \(R_{1}\) and \(R_{2}\) ?\\
+a. Equivalent resistance of two parallel resistors \(R_{\text {eqv }}=R_{1}+R_{2}\)\\
+b. Equivalent resistance of two parallel resistors \(R_{\text {eqv }}=R_{1} \times R_{2}\)\\
+c. Equivalent resistance of two parallel resistors \(R_{\text {eqv }}=R_{1}-R_{2}\)\\
+d. Equivalent resistance of two parallel resistors \(R_{\text {eqv }}=\frac{1}{1 / R_{1}+1 / R_{2}}\)\\
+13.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-52}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.19}
+\end{center}
+\end{figure}
+
+What is the equivalent resistance for the two resistors shown?\\
+a. The equivalent resistance is \(20 \Omega\)\\
+b. The equivalent resistance is \(21 \Omega\)\\
+c. The equivalent resistance is \(90 \Omega\)\\
+d. The equivalent resistance is \(1,925 \Omega\)
+
+\section*{Check Your Understanding}
+14.
+
+The voltage drop across parallel resistors is \(\_\_\_\_\) .\\
+a. the same for all resistors\\
+b. greater for the larger resistors\\
+c. less for the larger resistors\\
+d. greater for the smaller resistors\\
+15.
+
+Consider a circuit of parallel resistors. The smallest resistor is 25 . What is the upper limit of the equivalent resistance?\\
+a. The upper limit of the equivalent resistance is \(2.5 \Omega\).\\
+b. The upper limit of the equivalent resistance is \(25 \Omega\).\\
+c. The upper limit of the equivalent resistance is \(100 \Omega\).\\
+d. There is no upper limit.
+
+\subsection*{19.4 Electric Power}
+\section*{Section Learning Objectives}
+By the end of this section, you will be able to do the following:
+
+\begin{itemize}
+  \item Define electric power and describe the electric power equation
+  \item Calculate electric power in circuits of resistors in series, parallel, and complex arrangements
+\end{itemize}
+
+\section*{Teacher Support}
+Teacher Support The learning objectives in this section will help your students master the following standards:
+
+\begin{itemize}
+  \item (5) Science concepts. The student knows the nature of forces in the physical world. The student is expected to:
+  \item (F) design, construct, and calculate in terms of current through, potential difference across, resistance of, and power used by electric circuit elements connected in both series and parallel combinations.
+\end{itemize}
+
+In addition, the High School Physics Laboratory Manual addresses content in this section in the lab titled: Work, Energy and Power in Circuits, as well as the following standards:
+
+\begin{itemize}
+  \item (6) Science concepts. The student knows that changes occur within a physical system and applies the laws of conservation of energy and momentum. The student is expected to:
+  \item (C) calculate the mechanical energy of, power generated within, impulse applied to, and momentum of a physical system.
+\end{itemize}
+
+\section*{Section Key Terms}
+Power is associated by many people with electricity. Every day, we use electric power to run our modern appliances. Electric power transmission lines are visible examples of electricity providing power. We also use electric power to start our cars, to run our computers, or to light our homes. Power is the rate at which energy of any type is transferred; electric power is the rate at which electric energy is transferred in a circuit. In this section, we'll learn not only what this means, but also what factors determine electric power.
+
+To get started, let's think of light bulbs, which are often characterized in terms of their power ratings in watts. Let us compare a \(25-\mathrm{W}\) bulb with a \(60-\mathrm{W}\) bulb (see Figure 19.20). Although both operate at the same voltage, the \(60-\mathrm{W}\) bulb\\
+emits more light intensity than the \(25-\mathrm{W}\) bulb. This tells us that something other than voltage determines the power output of an electric circuit.
+
+Incandescent light bulbs, such as the two shown in Figure 19.20, are essentially resistors that heat up when current flows through them and they get so hot that they emit visible and invisible light. Thus the two light bulbs in the photo can be considered as two different resistors. In a simple circuit such as a light bulb with a voltage applied to it, the resistance determines the current by Ohm's law, so we can see that current as well as voltage must determine the power.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-55}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.20 On the left is a \(25-\mathrm{W}\) light bulb, and on the right is a \(60-\mathrm{W}\) light bulb. Why are their power outputs different despite their operating on the same voltage?}
+\end{center}
+\end{figure}
+
+The formula for power may be found by dimensional analysis. Consider the units of power. In the SI system, power is given in watts ( W ), which is energy per unit time, or J/s\\
+\(\mathrm{W}=\frac{\mathrm{J}}{\mathrm{s}}\).
+
+Recall now that a voltage is the potential energy per unit charge, which means that voltage has units of J/C\\
+\(\mathrm{V}=\frac{\mathrm{J}}{\mathrm{C}}\).\\
+19.48
+
+We can rewrite this equation as \(\mathrm{J}=\mathrm{V} \times \mathrm{C}\) and substitute this into the equation for watts to get\\
+\(\mathrm{W}=\frac{\mathrm{J}}{\mathrm{s}}=\frac{\mathrm{V} \times \mathrm{C}}{\mathrm{s}}=\mathrm{V} \times \frac{\mathrm{C}}{\mathrm{s}}\).\\
+But a Coulomb per second ( \(\mathrm{C} / \mathrm{s}\) ) is an electric current, which we can see from the definition of electric current, \(I=\frac{\Delta Q}{\Delta t}\), where \(\Delta Q\) is the charge in coulombs and \(\Delta t\) is time in seconds. Thus, equation above tells us that electric power is voltage times current, or\\
+\(P=I V\).\\
+This equation gives the electric power consumed by a circuit with a voltage drop of \(V\) and a current of \(I\).
+
+For example, consider the circuit in Figure 19.21. From Ohm's law, the current running through the circuit is\\
+\(I=\frac{V}{R}=\frac{12 \mathrm{~V}}{100 \Omega}=0.12 \mathrm{~A}\).\\
+19.49
+
+Thus, the power consumed by the circuit is\\
+\(P=V I=(12 \mathrm{~V})(0.12 \mathrm{~A})=1.4 \mathrm{~W}\).\\
+19.50
+
+Where does this power go? In this circuit, the power goes primarily into heating the resistor in this circuit.\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-56}
+
+Figure 19.21 A simple circuit that consumes electric power.\\
+In calculating the power in the circuit of Figure 19.21, we used the resistance and Ohm's law to find the current. Ohm's law gives the current: \(I=V / R\), which we can insert into the equation for electric power to obtain\\
+\(P=I V=\left(\frac{V}{R}\right) V=\frac{V^{2}}{R}\).\\
+This gives the power in terms of only the voltage and the resistance.
+
+We can also use Ohm's law to eliminate the voltage in the equation for electric power and obtain an expression for power in terms of just the current and the resistance. If we write Ohm's law as \(V=I R\) and use this to eliminate \(V\) in the equation \(P=I V\), we obtain\\
+\(P=I V=I(I R)=I^{2} R\).\\
+This gives the power in terms of only the current and the resistance.\\
+Thus, by combining Ohm's law with the equation \(P=I V\) for electric power, we obtain two more expressions for power: one in terms of voltage and resistance and one in terms of current and resistance. Note that only resistance (not capacitance or anything else), current, and voltage enter into the expressions for electric power. This means that the physical characteristic of a circuit that determines how much power it dissipates is its resistance. Any capacitors in the circuit do not dissipate electric power-on the contrary, capacitors either store electric energy or release electric energy back to the circuit.
+
+To clarify how voltage, resistance, current, and power are all related, consider Figure 19.22, which shows the formula wheel. The quantities in the center quarter circle are equal to the quantities in the corresponding outer quarter circle. For example, to express a potential V in terms of power and current, we see from the formula wheel that \(V=P / I\).
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[max width=\textwidth]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-57}
+\captionsetup{labelformat=empty}
+\caption{Figure 19.22 The formula wheel shows how volts, resistance, current, and power are related. The quantities in the inner quarter circles equal the quantities in the corresponding outer quarter circles.}
+\end{center}
+\end{figure}
+
+\section*{Worked Example}
+Find the Resistance of a Lightbulb A typical older incandescent lightbulb was 60 W . Assuming that 120 V is applied across the lightbulb, what is the current through the lightbulb?
+
+\section*{Strategy}
+We are given the voltage and the power output of a simple circuit containing a lightbulb, so we can use the equation \(P=I V\) to find the current \(I\) that flows through the lightbulb.
+
+Solution\\
+Solving \(P=I V\) for the current and inserting the given values for voltage and power gives
+
+\[
+\begin{aligned}
+P & =I V \\
+I & =\frac{P}{V}=\frac{60 \mathrm{~W}}{120 \mathrm{~V}}=0.50 \mathrm{~A}
+\end{aligned}
+\]
+
+19.51
+
+Thus, a half ampere flows through the lightbulb when 120 V is applied across it.
+
+Discussion\\
+This is a significant current. Recall that household power is AC and not DC, so the 120 V supplied by household sockets is an alternating power, not a constant power. The 120 V is actually the time-averaged power provided by such sockets. Thus, the average current going through the light bulb over a period of time longer than a few seconds is 0.50 A .
+
+\section*{Worked Example}
+Boot Warmers To warm your boots on cold days, you decide to sew a circuit with some resistors into the insole of your boots. You want 10 W of heat output from the resistors in each insole, and you want to run them from two \(9-\mathrm{V}\) batteries (connected in series). What total resistance should you put in each insole?
+
+\section*{Strategy}
+We know the desired power and the voltage ( 18 V , because we have two \(9-\mathrm{V}\) batteries connected in series), so we can use the equation \(P=V^{2} / R\) to find the requisite resistance.
+
+Solution
+
+Solving \(P=V^{2} / R\) for the resistance and inserting the given voltage and power, we obtain\\
+\(P=\frac{V^{2}}{R}\)\\
+\(R=\frac{V^{2}}{P}=\frac{(18 \mathrm{~V})^{2}}{10 \mathrm{~W}}=32 \Omega\).\\
+19.52
+
+Thus, the total resistance in each insole should be \(32 \Omega\).\\
+Discussion\\
+Let's see how much current would run through this circuit. We have 18 V applied across a resistance of \(32 \Omega\), so Ohm's law gives\\
+\(I=\frac{V}{R}=\frac{18 \mathrm{~V}}{32 \Omega}=0.56 \mathrm{~A}\).\\
+19.53
+
+All batteries have labels that say how much charge they can deliver (in terms of a current multiplied by a time). A typical \(9-\mathrm{V}\) alkaline battery can deliver a charge of \(565 \mathrm{~mA} \cdot \mathrm{~h}\) (so two 9 V batteries deliver \(1,130 \mathrm{~mA} \cdot \mathrm{~h}\) ), so this heating system would function for a time of\\
+\(t=\frac{1130 \times 10^{-3} \mathrm{~A} \cdot \mathrm{~h}}{0.56 \mathrm{~A}}=2.0 \mathrm{~h}\).\\
+19.54
+
+\section*{Worked Example}
+Power through a Branch of a Circuit Each resistor in the circuit below is \(30 \Omega\). What power is dissipated by the middle branch of the circuit?\\
+\includegraphics[max width=\textwidth, center]{2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-59}
+
+\section*{Strategy}
+The middle branch of the circuit contains resistors \(R_{3}\) and \(R_{5}\) in series. The voltage across this branch is 12 V . We will first find the equivalent resistance in this branch, and then use \(P=V^{2} / R\) to find the power dissipated in the branch.
+
+Solution\\
+The equivalent resistance is \(R_{\text {middle }}=R_{3}+R_{5}=30 \Omega+30 \Omega=60 \Omega\). The power dissipated by the middle branch of the circuit is\\
+\(P_{\text {middle }}=\frac{V^{2}}{R_{\text {middle }}}=\frac{(12 \mathrm{~V})^{2}}{60 \Omega}=2.4 \mathrm{~W}\).\\
+19.55
+
+Discussion\\
+Let's see if energy is conserved in this circuit by comparing the power dissipated in the circuit to the power supplied by the battery. First, the equivalent resistance of the left branch is\\
+\(R_{\text {left }}=\frac{1}{1 / R_{1}+1 / R_{2}}+R_{4}=\frac{1}{1 / 30 \Omega+1 / 30 \Omega}+30 \Omega=45 \Omega\).\\
+19.56
+
+The power through the left branch is\\
+\(P_{\text {left }}=\frac{V^{2}}{R_{\text {left }}}=\frac{(12 \mathrm{~V})^{2}}{45 \Omega}=3.2 \mathrm{~W}\).\\
+19.57
+
+The right branch contains only \(R_{6}\), so the equivalent resistance is \(R_{\text {right }}=R_{6}= 30 \Omega\). The power through the right branch is\\
+\(P_{\text {right }}=\frac{V^{2}}{R_{\text {right }}}=\frac{(12 \mathrm{~V})^{2}}{30 \Omega}=4.8 \mathrm{~W}\).\\
+19.58
+
+The total power dissipated by the circuit is the sum of the powers dissipated in each branch.\\
+\(P=P_{\text {left }}+P_{\text {middle }}+P_{\text {right }}=2.4 \mathrm{~W}+3.2 \mathrm{~W}+4.8 \mathrm{~W}=10.4 \mathrm{~W}\)\\
+19.59
+
+The power provided by the battery is\\
+\(P=I V\).\\
+19.60\\
+where \(I\) is the total current flowing through the battery. We must therefore add up the currents going through each branch to obtain \(I\). The branches contributes currents of
+
+\[
+\begin{aligned}
+I_{\text {left }} & =\frac{V}{R_{\text {left }}}=\frac{12 \mathrm{~V}}{45 \Omega}=0.2667 \mathrm{~A} \\
+\mathrm{I}_{\text {middle }} & =\frac{V}{R_{\text {middle }}}=\frac{12 \mathrm{~V}}{60 \Omega}=0.20 \mathrm{~A} \\
+\mathrm{I}_{\text {right }} & =\frac{V}{R_{\text {right }}}=\frac{12 \mathrm{~V}}{30 \Omega}=0.40 \mathrm{~A} .
+\end{aligned}
+\]
+
+19.61
+
+The total current is\\
+\(I=I_{\text {left }}+I_{\text {middle }}+I_{\text {right }}=0.2667 \mathrm{~A}+0.20 \mathrm{~A}+0.40 \mathrm{~A}=0.87 \mathrm{~A}\).\\
+19.62\\
+and the power provided by the battery is\\
+\(P=I V=(0.87 \mathrm{~A})(12 \mathrm{~V})=10.4 \mathrm{~W}\).\\
+19.63
+
+This is the same power as is dissipated in the resistors of the circuit, which shows that energy is conserved in this circuit.
+
+\section*{Practice Problems}
+16.
+
+What is the formula for the power dissipated in a resistor?\\
+a. The formula for the power dissipated in a resistor is \(P=\frac{I}{V}\).\\
+b. The formula for the power dissipated in a resistor is \(P=\frac{V}{I}\).\\
+c. The formula for the power dissipated in a resistor is \(P=I V\).\\
+d. The formula for the power dissipated in a resistor is \(P=I^{2} V\).\\
+17.
+
+What is the formula for power dissipated by a resistor given its resistance and the voltage across it?\\
+a. The formula for the power dissipated in a resistor is \(P=\frac{R}{V^{2}}\)\\
+b. The formula for the power dissipated in a resistor is \(P=V^{2} R\)\\
+c. The formula for the power dissipated in a resistor is \(P=\frac{V^{2}}{R}\)\\
+d. The formula for the power dissipated in a resistor is \(P=I^{2} R\)
+
+\section*{Check your Understanding}
+18.
+
+Which circuit elements dissipate power?\\
+a. capacitors\\
+b. inductors\\
+c. ideal switches\\
+d. resistors\\
+19.
+
+Explain in words the equation for power dissipated by a given resistance.\\
+a. Electric power is proportional to the current through the resistor multiplied by the square of the voltage across the resistor.\\
+b. Electric power is proportional to the square of current through the resistor multiplied by the voltage across the resistor.\\
+c. Electric power is proportional to the current through the resistor divided by the voltage across the resistor.\\
+d. Electric power is proportional to the current through the resistor multiplied by the voltage across the resistor.
+
+\section*{Ke Terms}
+alternating current electric current whose direction alternates back and forth at regular intervals\\
+ampere unit for electric current; one ampere is one coulomb per second ( \(1 \mathrm{~A}=1 \mathrm{C} / \mathrm{s}\) )\\
+circuit diagram schematic drawing of an electrical circuit including all circuit elements, such as resistors, capacitors, batteries, and so on\\
+conventional current flows in the direction that a positive charge would flow if it could move\\
+direct current electric current that flows in a single direction\\
+electric circuit physical network of paths through which electric current can flow\\
+electric current electric charge that is moving\\
+electric power rate at which electric energy is transferred in a circuit\\
+equivalent resistor resistance of a single resistor that is the same as the combined resistance of a group of resistors\\
+in parallel when a group of resistors are connected side by side, with the top ends of the resistors connected together by a wire and the bottom ends connected together by a different wire\\
+in series when elements in a circuit are connected one after the other in the same branch of the circuit\\
+nonohmic material that does not follow Ohm's law\\
+Ohm's law electric current is proportional to the voltage applied across a circuit or other path\\
+ohmic material that obeys Ohm's law\\
+resistance how much a circuit element opposes the passage of electric current; it appears as the constant of proportionality in Ohm's law\\
+resistor circuit element that provides a known resistance\\
+steady state when the characteristics of a system do not change over time
+
+Ke Equations\\
+19.1 Ohm's law
+
+\subsection*{19.2 Series Circuits}
+\subsection*{19.3 Parallel Circuits}
+19.4 Electric Power
+
+\section*{Section Summar}
+\subsection*{19.1 Ohm's law}
+\begin{itemize}
+  \item Direct current is constant over time; alternating current alternates smoothly back and forth over time.
+  \item Electrical resistance causes materials to extract work from the current that flows through them.
+  \item In ohmic materials, voltage drop along a path is proportional to the current that runs through the path.
+\end{itemize}
+
+\subsection*{19.2 Series Circuits}
+\begin{itemize}
+  \item Circuit diagrams are schematic representations of electric circuits.
+  \item Resistors in series are resistors that are connected head to tail.
+  \item The same current runs through all resistors in series; however, the voltage drop across each resistor can be different.
+  \item The voltage is the same at every point in a given wire.
+\end{itemize}
+
+\subsection*{19.3 Parallel Circuits}
+\begin{itemize}
+  \item The equivalent resistance of a group of \(N\) identical resistors \(R\) connected in parallel is \(R / N\).
+  \item Connecting resistors in parallel provides more paths for the current to go through, so the equivalent resistance is always less than the smallest resistance of the parallel resistors.
+  \item The same voltage drop occurs across all resistors in parallel; however, the current through each resistor can differ.
+\end{itemize}
+
+\subsection*{19.4 Electric Power}
+\begin{itemize}
+  \item Electric power is dissipated in the resistances of a circuit. Capacitors do not dissipate electric power.
+  \item Electric power is proportional to the voltage and the current in a circuit.
+  \item Ohm's law provides two extra expressions for electric power: one that does not involve current and one that does not involve voltage.
+\end{itemize}
+
+\end{document}
