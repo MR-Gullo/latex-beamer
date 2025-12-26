@@ -1,0 +1,1056 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Electrostatics]{PHYS12 CH18: The Invisible Forces Between Charges}
+\subtitle{Coulomb's Law, Fields, Potential, and Capacitors}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we discover the invisible forces that run your phone, lightning, and your heart.\\\\
+- From static shocks to touchscreens to defibrillators\\\\
+- Four revelations: forces between charges, invisible fields, electrical pressure, energy storage\\\\
+[THE WONDER] This is the force that holds atoms together and powers civilization.}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery of the Invisible}
+\begin{center}
+\Large What if forces could act\\
+\textit{without touching?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+From lightning bolts to the neurons in your brain...
+
+\pause
+\vspace{0.3cm}
+\alert{Electric forces shape reality.}
+\note{[P0] "What if forces could act without touching?"\\\\
+[P1] "From lightning bolts to the neurons in your brain..."\\\\
+[P2] [THE WONDER] "Electric forces shape reality. Every thought is electrical signals. Every heartbeat is triggered by electric pulses."\\\\
+[THE CONNECTION - Digital Archetype] Your phone's touchscreen works because of electric forces}
+\end{frame}
+
+\section{Coulomb's Law}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{18.2:} Describe Coulomb's law verbally and mathematically \pause
+\item \textbf{18.2:} Solve problems involving Coulomb's law
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for Coulomb's law"\\\\
+[P1] "First: understand the mathematical relationship. Second: solve real problems"\\\\
+- This is Newton's law for electric forces\\\\
+- Assessment: problems on next assessment}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.2 The Force Between Charges}
+\begin{exampleblock}{The Mental Model}
+Like gravity pulls masses together, electric force acts between charges. But there's a twist: charges can attract OR repel.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Two types of charge:}
+\begin{itemize}
+\item Positive (+) and Negative (-) \pause
+\item Like charges repel \pause
+\item Unlike charges attract
+\end{itemize}
+\note{[P0] "Like gravity pulls masses, electric force acts between charges - but with a twist"\\\\
+[P1] "Two types: positive and negative"\\\\
+[P2] "Like charges repel - two positives push apart"\\\\
+[P3] "Unlike charges attract - positive and negative pull together"\\\\
+[THE CONNECTION - Kinetic Archetype] Like magnets - same poles repel, opposite attract}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.2 Coulomb's Discovery}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-electrostatics-fig01.jpg}
+\end{figure}
+
+\pause
+Charles-Augustin de Coulomb (1780s) used a torsion balance to measure forces between charged spheres.
+\note{[P0] "Coulomb's torsion balance - ingenious device"\\\\
+[P1] "Measured tiny forces by twisting a wire. Brought spheres closer together and measured how much twist increased"\\\\
+- Discovered inverse-square law\\\\
+- Same pattern as Newton's gravity}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.2 The Source Code of Electric Force}
+\begin{block}{Universal Law: Coulomb's Law}
+\begin{center}
+\Large $\boxed{F = \frac{kq_1q_2}{r^2}}$
+\end{center}
+Force between charges equals Coulomb's constant times the product of charges divided by distance squared.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Where: $k = 8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$
+\note{[P0] [THE REVELATION] "F equals k q-1 q-2 over r-squared"\\\\
+- Force proportional to each charge\\\\
+- Force inversely proportional to distance squared\\\\
+[P1] "k is Coulomb's constant: 8.99 times 10 to the 9"\\\\
+[THE WONDER] Same pattern as gravity, but k is HUGE compared to G - electric forces are incredibly strong}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.2 Reading the Signs}
+\begin{alertblock}{The Paradox}
+If both charges are positive OR both negative: $F > 0$ (repulsive)\\
+If charges have opposite signs: $F < 0$ (attractive)
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.4\textheight,keepaspectratio]{phys12-electrostatics-fig02.jpg}
+\end{figure}
+\note{[P0] "The math tells you the direction"\\\\
+- Positive result means repulsive\\\\
+- Negative result means attractive\\\\
+[P1] "Diagram shows both cases"\\\\
+[THE CONFLICT] Math gives you sign, but you have to interpret it\\\\
+- Always state whether attractive or repulsive in your answer}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.2 Inverse-Square Law}
+\textbf{What happens when you change the distance?}
+
+\pause
+\begin{itemize}
+\item Double the distance $(r \to 2r)$: Force becomes $\frac{1}{4}$ as strong \pause
+\item Triple the distance $(r \to 3r)$: Force becomes $\frac{1}{9}$ as strong \pause
+\item Halve the distance $(r \to \frac{r}{2})$: Force becomes $4$ times stronger
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Bring charges twice as close: force quadruples. Move them twice as far: force drops to one-fourth.
+\end{exampleblock}
+\note{[P0] "What happens when you change the distance?"\\\\
+[P1] "Double distance: force becomes one-fourth"\\\\
+[P2] "Triple distance: force becomes one-ninth"\\\\
+[P3] "Halve distance: force becomes 4 times stronger"\\\\
+[P4] [THE CONNECTION - Kinetic Archetype] "Like sound getting quieter as you move away - but squared"\\\\
+[THE WONDER] This is why atoms are so tightly bound - forces get huge at tiny distances}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.2 Coulomb vs Gravity}
+\textbf{Similarities:}
+\begin{itemize}
+\item Both are inverse-square laws \pause
+\item Both act at a distance
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Differences:}
+\begin{itemize}
+\item $k$ is MUCH larger than $G$ (electric forces are stronger) \pause
+\item Gravity only attracts; electric forces attract OR repel
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Civilian vs Reality}
+\textbf{Civilian:} "Gravity holds everything together."\\
+\textbf{Physicist:} "Electric forces hold atoms and molecules together. Gravity holds planets and galaxies."
+\end{alertblock}
+\note{[P0] "Compare to Newton's gravity"\\\\
+[P1] "Both inverse-square - same mathematical pattern"\\\\
+[P2] "Both act at distance - no contact needed"\\\\
+[P3] "k is much larger than G - electric forces dominate at small scales"\\\\
+[P4] "Gravity only attracts. Electric can attract or repel"\\\\
+[P5] [THE CONFLICT] "Civilians think gravity holds everything. Reality: electric forces hold you together, gravity holds you to Earth"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Decoding Electric Force}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Two charges $q_1 = +3 \times 10^{-9}$ C and $q_2 = -4 \times 10^{-9}$ C are separated by 3.0 cm.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $q_1 = +3 \times 10^{-9}$ C
+\item $q_2 = -4 \times 10^{-9}$ C
+\item $r = 3.0$ cm $= 0.030$ m
+\end{itemize}
+
+\textbf{Find:} Magnitude and direction of force
+
+\vspace{0.3cm}
+
+\textit{Can you calculate the force? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they use Coulomb's law?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who converts units, who forgets absolute value\\\\
+[WATCH FOR] Students confused by negative sign\\\\
+[DON'T HELP] Let them struggle with units and signs}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Force Calculation}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What did you substitute for $q_1$ and $q_2$?
+\item Did you convert cm to m?
+\item Is the force attractive or repulsive? How do you know?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for common approaches\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Plug in values, convert cm to m, calculate, then determine direction from signs\\\\
+[COMMON ERROR] Forgetting to convert cm to m, confused about attractive vs repulsive}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Electric Interaction}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} $F = \frac{kq_1q_2}{r^2}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2:} $F = \frac{(8.99 \times 10^9)(3 \times 10^{-9})(-4 \times 10^{-9})}{(0.030)^2}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 3:} $F = -1.2 \times 10^{-4}$ N
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{|F| = 1.2 \times 10^{-4} \text{ N, attractive}}$$
+
+\pause
+\textbf{Check:} Opposite charges attract. Negative force confirms this!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "F equals k q-1 q-2 over r-squared"\\\\
+[P2] "Substitute values - note r must be in meters"\\\\
+[P3] "Result is negative 1.2 times 10 to the negative 4 N"\\\\
+[P4] [ANSWER] "Magnitude is 1.2 times 10 to the negative 4 N, attractive"\\\\
+[THE WONDER] Tiny charges, huge force - electric forces dominate at atomic scales}
+\end{frame}
+
+\section{Electric Field}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{18.3:} Calculate the strength of an electric field \pause
+\item \textbf{18.3:} Create and interpret drawings of electric fields
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for electric fields"\\\\
+[P1] "First: calculate field strength. Second: visualize fields with diagrams"\\\\
+- Fields are how physicists think about forces at a distance\\\\
+- Essential for understanding circuits and electronics}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.3 Force Fields in Physics}
+\begin{center}
+\Large What if space itself could push on charges?
+\end{center}
+
+\pause
+\vspace{0.5cm}
+
+\begin{exampleblock}{The Mental Model}
+An electric field is an invisible map showing which way a positive charge would be pushed at every point in space.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+Not science fiction - this is how physicists think about forces at a distance.
+\note{[P0] "What if space itself could push on charges?"\\\\
+[P1] "Field is a map - shows force direction everywhere"\\\\
+[P2] "Not sci-fi - real physics concept"\\\\
+[THE CONNECTION - Digital Archetype] "Like a game engine's collision map - defines forces at every coordinate"\\\\
+[THE REVELATION] Fields are real - they carry energy and momentum}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.3 The Source Code of Fields}
+\begin{block}{Universal Law: Electric Field}
+\begin{center}
+\Large $\boxed{\vec{E} = \frac{\vec{F}}{q_{\text{test}}}}$
+\end{center}
+Electric field equals force per unit charge.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+For a point charge $Q$:
+$$E = \frac{k|Q|}{r^2}$$
+
+\pause
+Units: N/C (newtons per coulomb)
+\note{[P0] [THE REVELATION] "E equals F over q-test"\\\\
+- Force per unit charge\\\\
+- Vector field - has magnitude and direction\\\\
+[P1] "For point charge: E equals k Q over r-squared"\\\\
+[P2] "Units: newtons per coulomb"\\\\
+[THE WONDER] Field exists even without test charge - space is modified by charges}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.3 Visualizing the Invisible}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.55\textheight,keepaspectratio]{phys12-electrostatics-fig03.jpg}
+\end{figure}
+
+\pause
+\textbf{Field lines show:}
+\begin{itemize}
+\item Direction of force on positive charge
+\item Strength (closer lines = stronger field)
+\end{itemize}
+\note{[P0] "Field lines from positive charge radiate outward"\\\\
+- Lines point away from positive charges\\\\
+- Lines point toward negative charges\\\\
+[P1] "Direction shows force on positive test charge. Density shows strength"\\\\
+[THE CONNECTION - Harmonic Archetype] "Like ripples from a pebble in water - spreading from source"}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.3 Field Line Rules}
+\begin{enumerate}
+\item Lines point \textbf{away} from positive charges \pause
+\item Lines point \textbf{toward} negative charges \pause
+\item Lines NEVER cross each other \pause
+\item Denser lines = stronger field
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Paradox}
+\textbf{Misconception:} "Field lines are paths charges follow."\\
+\textbf{Reality:} Field lines show force direction, but moving charges have inertia - they curve gradually.
+\end{alertblock}
+\note{[P0] "Four rules for field lines"\\\\
+[P1] "Lines away from positive"\\\\
+[P2] "Lines toward negative"\\\\
+[P3] "Never cross - only one field direction at each point"\\\\
+[P4] "Denser lines mean stronger field"\\\\
+[P5] [THE CONFLICT] "Students think charges follow field lines. Reality: inertia makes them curve"\\\\
+- Like throwing a ball - doesn't fall straight down}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.3 Field Patterns}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-electrostatics-fig04.jpg}
+
+\small Positive and negative
+\end{center}
+
+\pause
+\column{0.48\textwidth}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-electrostatics-fig05.jpg}
+
+\small Two negatives
+\end{center}
+\end{columns}
+
+\vspace{0.3cm}
+
+Field lines connect opposite charges, repel from like charges.
+\note{[P0] "Left: opposite charges - lines connect them"\\\\
+[P1] "Right: like charges - lines repel each other"\\\\
+- Far away, field looks like single charge\\\\
+- Close in, you see individual contributions\\\\
+[THE WONDER] Superposition - fields add like vectors}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Reading Field Maps}
+\begin{exampleblock}{The Challenge (2 min, silent)}
+Look at this field map. Three charges create these field lines.
+
+\vspace{0.3cm}
+
+\textbf{Questions:}
+\begin{enumerate}
+\item Which charges are positive? Which are negative?
+\item Which charge has the largest magnitude?
+\item Where is the field strongest?
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textit{Use field line density and direction to decode the charges.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they interpret field diagrams?\\\\
+[SAY] "Use what you know about field lines"\\\\
+[TIMING] 2 min individual analysis\\\\
+[CIRCULATE] See who counts lines, who looks at density\\\\
+[WATCH FOR] Confusion about field strength vs charge magnitude}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Field Interpretation}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you identify positive vs negative charges?
+\item How did you compare charge magnitudes?
+\item Where is the field strongest, and how do you know?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your reasoning.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for reasoning strategies\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Lines out = positive, lines in = negative. Count lines for magnitude. Density for strength\\\\
+[COMMON ERROR] Confusing field strength with charge size}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Decoding the Field}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Signs:}
+\begin{itemize}
+\item Lines OUT = positive charge
+\item Lines IN = negative charge
+\end{itemize}
+
+\pause
+
+\textbf{Magnitude:}
+\begin{itemize}
+\item More lines = larger charge
+\item Count field lines touching each charge
+\end{itemize}
+
+\pause
+
+\textbf{Field Strength:}
+\begin{itemize}
+\item Closest lines = strongest field
+\item Usually near charges
+\end{itemize}
+\note{[P0] "Signs from direction"\\\\
+[P1] "Magnitude from counting lines - proportional to charge"\\\\
+[P2] "Strength from line density - closer together means stronger"\\\\
+[THE WONDER] "One diagram encodes force information for EVERY point in space"}
+\end{frame}
+
+\section{Electric Potential}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{18.4:} Explain similarities and differences between electric and gravitational potential energy \pause
+\item \textbf{18.4:} Calculate electric potential difference
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for electric potential"\\\\
+[P1] "First: connect to gravity analogy. Second: calculate voltage"\\\\
+- Voltage is just another word for potential difference\\\\
+- This connects force to energy}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.4 The Universe's Pressure Gauge}
+\begin{exampleblock}{The Mental Model}
+Gravitational potential: height in a gravitational field\\
+Electric potential: "height" in an electric field
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys12-electrostatics-fig06.jpg}
+\end{figure}
+
+\pause
+Both store energy that can be released to do work.
+\note{[P0] "Analogy: gravity and electric potential"\\\\
+[P1] "Left: ball high in gravity has potential. Right: positive charge far from negative has potential"\\\\
+[P2] "Both can do work when released"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like lifting a weight - you store energy that can be released"\\\\
+[THE REVELATION] Potential energy is position in a field}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.4 Potential Energy of Two Charges}
+\begin{block}{Universal Law: Electric Potential Energy}
+\begin{center}
+\Large $\boxed{U_E = \frac{kq_1q_2}{r}}$
+\end{center}
+Energy stored in configuration of two charges.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Sign tells the story:}
+\begin{itemize}
+\item $U_E > 0$: like charges (they want to fly apart) \pause
+\item $U_E < 0$: opposite charges (they want to come together)
+\end{itemize}
+\note{[P0] [THE REVELATION] "U-E equals k q-1 q-2 over r"\\\\
+- Similar to Coulomb's law but NO r-squared\\\\
+- Energy, not force\\\\
+[P1] "Sign matters"\\\\
+[P2] "Positive: like charges - repel, can do work by separating. Negative: opposite charges - attract, can do work by approaching"\\\\
+[THE WONDER] This energy holds molecules together}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.4 Electric Potential (Voltage)}
+\begin{block}{Universal Law: Electric Potential}
+\begin{center}
+\Large $\boxed{V = \frac{U_E}{q} = \frac{kq}{r}}$
+\end{center}
+Potential energy per unit charge. Units: volts (V)
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Civilian vs Reality}
+\textbf{Civilian:} "Voltage is electricity flowing."\\
+\textbf{Physicist:} "Voltage is electric pressure - potential energy per charge."
+\end{alertblock}
+\note{[P0] [THE REVELATION] "V equals U-E over q, which equals k q over r"\\\\
+- Potential per unit charge\\\\
+- Units: joules per coulomb = volts\\\\
+[P1] [THE CONFLICT] "Civilians confuse voltage with current. Voltage is pressure, current is flow"\\\\
+- Like water: pressure vs flow rate\\\\
+[THE CONNECTION - Harmonic Archetype] "Voltage is like air pressure in instrument - drives the flow"}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.4 Potential Difference}
+\textbf{What really matters: difference in potential}
+
+\pause
+\vspace{0.3cm}
+
+In uniform field $E$:
+$$\Delta V = -E(x_f - x_i)$$
+
+\pause
+
+\textbf{Rearranged:}
+$$E = \frac{\Delta V}{d}$$
+
+\pause
+Electric field units: V/m (volts per meter)
+\note{[P0] "Usually we care about potential DIFFERENCE"\\\\
+[P1] "In uniform field: delta-V equals negative E times distance"\\\\
+[P2] "Rearranged: E equals delta-V over d"\\\\
+[P3] "This gives alternate units for field: volts per meter"\\\\
+[THE WONDER] Divide voltage by distance, get field strength - incredibly useful}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.4 The 9V Battery}
+\begin{exampleblock}{Real-World: Battery Voltage}
+A 9V battery creates 9V potential difference between terminals.
+
+\vspace{0.3cm}
+
+This means: moving 1 coulomb from - to + terminal requires 9 joules of work.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+Battery converts chemical energy to electric potential energy.
+\note{[P0] "9V battery example"\\\\
+- 9 volts means 9 joules per coulomb\\\\
+- Battery does work separating charges\\\\
+[P1] "Chemical reactions push charges against electric field"\\\\
+[THE CONNECTION - Digital Archetype] "Like charging a capacitor in your phone - storing energy in electric field"\\\\
+[THE WONDER] All batteries are charge pumps}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Calculating Voltage}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A point charge $Q = +5 \times 10^{-9}$ C creates an electric potential.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $Q = +5 \times 10^{-9}$ C
+\item $r = 0.10$ m
+\end{itemize}
+
+\textbf{Find:} Electric potential at distance $r = 0.10$ m
+
+\vspace{0.3cm}
+
+\textit{Can you calculate the voltage? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they use voltage formula?\\\\
+[SAY] "Use the formula for potential from a point charge"\\\\
+[TIMING] 3 min individual work\\\\
+[CIRCULATE] Watch for correct formula choice\\\\
+[WATCH FOR] Confusion between potential and potential energy}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Voltage Calculation}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What formula did you use?
+\item What did you substitute for each variable?
+\item What are the units of your answer?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for formula choice\\\\
+[CHECK] Name wheel\\\\
+[EXPECTED APPROACH] V equals k Q over r, plug in values\\\\
+[COMMON ERROR] Using potential energy formula instead of potential}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Electric Pressure}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Formula:} $V = \frac{kQ}{r}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $V = \frac{(8.99 \times 10^9)(5 \times 10^{-9})}{0.10}$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{V = 450 \text{ V}}$$
+
+\pause
+\textbf{Check:} 450 volts - much higher than a battery, but safe at this tiny charge!
+\note{[P0] "V equals k Q over r"\\\\
+[P1] [ALGEBRA] "Substitute: 8.99 times 10 to the 9, times 5 times 10 to the negative 9, divided by 0.10"\\\\
+[P2] [ANSWER] "450 volts"\\\\
+[P3] "High voltage but tiny charge means low energy - won't hurt you"\\\\
+[THE WONDER] Static shocks are thousands of volts but harmless - it's current that's dangerous}
+\end{frame}
+
+\section{Capacitors}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{18.5:} Calculate energy stored in a capacitor and capacitance \pause
+\item \textbf{18.5:} Explain properties of capacitors and dielectrics
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for capacitors"\\\\
+[P1] "First: calculate capacitance and energy. Second: understand how they work"\\\\
+- Capacitors are in EVERY electronic device\\\\
+- Essential for circuits, power supplies, touchscreens}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.5 Energy Storage Devices}
+\begin{center}
+\Large What if you could bottle electric fields?
+\end{center}
+
+\pause
+\vspace{0.5cm}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys12-electrostatics-fig07.jpg}
+\end{figure}
+
+\pause
+Capacitors store energy in electric fields between charged plates.
+\note{[P0] "What if you could bottle electric fields?"\\\\
+[P1] "Capacitors - various types shown"\\\\
+[P2] "Store energy in field between plates"\\\\
+[THE CONNECTION - Digital Archetype] "Like RAM in computer - temporary energy storage"\\\\
+[THE REVELATION] Field carries energy - it's physical, not abstract}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.5 The Parallel-Plate Capacitor}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys12-electrostatics-fig08.jpg}
+\end{figure}
+
+\pause
+\textbf{Design:}
+\begin{itemize}
+\item Two metal plates separated by small distance
+\item One plate charged +, other charged -
+\item Electric field between plates is uniform
+\end{itemize}
+\note{[P0] "Parallel-plate capacitor - simplest design"\\\\
+[P1] "Two plates: positive and negative. Field between is uniform - straight lines"\\\\
+- Battery pumps charge onto plates\\\\
+- Field stores energy\\\\
+[THE WONDER] Energy literally exists in empty space between plates}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.5 The Source Code of Capacitance}
+\begin{block}{Universal Law: Capacitance}
+\begin{center}
+\Large $\boxed{C = \frac{Q}{V}}$
+\end{center}
+Capacitance equals charge stored per volt applied. Units: farads (F)
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+For parallel plates:
+$$C_0 = \varepsilon_0 \frac{A}{d}$$
+
+where $\varepsilon_0 = 8.85 \times 10^{-12}$ F/m
+\note{[P0] [THE REVELATION] "C equals Q over V"\\\\
+- Charge per volt\\\\
+- Units: farads (extremely large unit)\\\\
+[P1] "For parallel plates: C equals epsilon-zero A over d"\\\\
+- Bigger area = more capacitance\\\\
+- Smaller separation = more capacitance\\\\
+[THE WONDER] Capacitance depends only on geometry, not on charge or voltage}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.5 Energy Storage}
+\begin{block}{Universal Law: Energy in Capacitor}
+\begin{center}
+\Large $\boxed{U_E = \frac{1}{2}CV^2}$
+\end{center}
+Energy stored equals half capacitance times voltage squared.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Like kinetic energy $K = \frac{1}{2}mv^2$, but for electric fields instead of motion.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "U-E equals one-half C V-squared"\\\\
+- Energy proportional to voltage squared\\\\
+- Doubling voltage quadruples stored energy\\\\
+[P1] "Similar form to kinetic energy formula"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like compressing a spring - energy stored that can be released"\\\\
+[THE WONDER] Defibrillators use capacitors - release stored energy in milliseconds}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.5 Capacitance Factors}
+\textbf{What determines capacitance?}
+
+\pause
+$$C_0 = \varepsilon_0 \frac{A}{d}$$
+
+\pause
+\begin{itemize}
+\item Increase plate area $A$: capacitance increases \pause
+\item Increase separation $d$: capacitance decreases \pause
+\item Geometry only - not charge or voltage!
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Paradox}
+\textbf{Misconception:} "More charge means more capacitance."\\
+\textbf{Reality:} Capacitance is constant for given geometry. More charge just means higher voltage.
+\end{alertblock}
+\note{[P0] "What determines capacitance?"\\\\
+[P1] "Formula: epsilon-zero A over d"\\\\
+[P2] "Larger plates store more charge at same voltage"\\\\
+[P3] "Closer plates create stronger field"\\\\
+[P4] "Geometry only - intrinsic property"\\\\
+[P5] [THE CONFLICT] "Students think more charge increases capacitance. Reality: C is constant, Q and V vary together"\\\\
+- Like a bucket - size doesn't change when you fill it}
+\end{frame}
+
+\begin{frame}
+\frametitle{18.5 Dielectrics}
+\begin{exampleblock}{Real-World Enhancement}
+Insert insulating material (dielectric) between plates:
+\begin{itemize}
+\item Capacitance increases
+\item Can store more energy
+\item Prevents electrical breakdown
+\end{itemize}
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Common dielectrics:}
+\begin{itemize}
+\item Paper, plastic, ceramic, air
+\end{itemize}
+\note{[P0] "Dielectrics increase capacitance"\\\\
+- Insulating material between plates\\\\
+- Polarizes in electric field\\\\
+- Reduces field strength, allows more charge storage\\\\
+[P1] "Common materials: paper, plastic, ceramic"\\\\
+[THE CONNECTION - Digital Archetype] "Phone capacitors use thin ceramic dielectrics - maximizes capacitance in tiny space"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Capacitor Design}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Design a parallel-plate capacitor with capacitance $C = 1.0 \times 10^{-9}$ F.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $C = 1.0 \times 10^{-9}$ F (1.0 nF)
+\item Plate area $A = 0.010$ m$^2$
+\item $\varepsilon_0 = 8.85 \times 10^{-12}$ F/m
+\end{itemize}
+
+\textbf{Find:} Required plate separation $d$
+
+\vspace{0.3cm}
+
+\textit{Can you find the spacing? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they rearrange and solve?\\\\
+[SAY] "Design problem - find what separation you need"\\\\
+[TIMING] 3 min individual work\\\\
+[CIRCULATE] Watch for algebra errors\\\\
+[WATCH FOR] Unit confusion, rearrangement mistakes}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Design Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What formula did you start with?
+\item How did you rearrange to solve for $d$?
+\item What units did you get for $d$?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for rearrangement strategies\\\\
+[CHECK] Name wheel\\\\
+[EXPECTED APPROACH] Start with C equals epsilon-zero A over d, rearrange to d equals epsilon-zero A over C\\\\
+[COMMON ERROR] Inverting wrong terms, unit errors}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Design Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Formula:} $C_0 = \varepsilon_0 \frac{A}{d}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Rearrange:} $d = \varepsilon_0 \frac{A}{C}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $d = (8.85 \times 10^{-12}) \frac{0.010}{1.0 \times 10^{-9}}$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{d = 8.85 \times 10^{-5} \text{ m} = 0.089 \text{ mm}}$$
+
+\pause
+\textbf{Check:} Less than a tenth of a millimeter - capacitors need very small spacing!
+\note{[P0] "Start with capacitance formula"\\\\
+[P1] [ALGEBRA] "Rearrange: d equals epsilon-zero A over C"\\\\
+[P2] "Substitute values"\\\\
+[P3] [ANSWER] "0.089 mm - less than thickness of paper"\\\\
+[P4] "This is why capacitors are fragile - tiny spacing"\\\\
+[THE WONDER] Modern capacitors have nanometer spacing - that's atomic-scale engineering}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{The Four Revelations}
+\begin{block}{What You Now Know}
+\begin{enumerate}
+\item Coulomb's Law: $F = \frac{kq_1q_2}{r^2}$ - forces between charges \pause
+\item Electric Field: $E = \frac{F}{q}$ - force per unit charge \pause
+\item Electric Potential: $V = \frac{kq}{r}$ - energy per unit charge \pause
+\item Capacitance: $C = \frac{Q}{V}$ - charge storage capacity
+\end{enumerate}
+\end{block}
+\note{[P0] "Four revelations today"\\\\
+[P1] "Coulomb's law: force between charges"\\\\
+[P2] "Electric field: map of forces in space"\\\\
+[P3] "Potential: electric pressure, voltage"\\\\
+[P4] "Capacitance: ability to store charge and energy"\\\\
+[THE WONDER] These four concepts explain everything from atoms to lightning to your phone}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+F &= \frac{kq_1q_2}{r^2} \quad \text{(Coulomb's law)}\\
+E &= \frac{k|Q|}{r^2} \quad \text{(Electric field from point charge)}\\
+\vec{E} &= \frac{\vec{F}}{q} \quad \text{(Field definition)}\\
+U_E &= \frac{kq_1q_2}{r} \quad \text{(Electric potential energy)}\\
+V &= \frac{kq}{r} \quad \text{(Electric potential from point charge)}\\
+C &= \frac{Q}{V} \quad \text{(Capacitance)}\\
+C_0 &= \varepsilon_0 \frac{A}{d} \quad \text{(Parallel-plate capacitor)}\\
+U_E &= \frac{1}{2}CV^2 \quad \text{(Energy in capacitor)}
+\end{align}
+\note{- Eight essential equations\\\\
+- First three: forces and fields\\\\
+- Next two: energy and potential\\\\
+- Last three: capacitors and energy storage\\\\
+- Memorize these - you'll use them constantly}
+\end{frame}
+
+\begin{frame}
+\frametitle{Constants to Remember}
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Constant} & \textbf{Value} \\ \hline
+Coulomb's constant $k$ & $8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$ \\
+Elementary charge $e$ & $1.602 \times 10^{-19}$ C \\
+Permittivity $\varepsilon_0$ & $8.85 \times 10^{-12}$ F/m
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+These appear in every calculation!
+\note{- Three fundamental constants\\\\
+- k for Coulomb's law and fields\\\\
+- e for elementary charge\\\\
+- epsilon-zero for capacitance\\\\
+- Keep these on formula sheet}
+\end{frame}
+
+\begin{frame}
+\frametitle{From Theory to Reality}
+\textbf{You now understand:}
+\begin{itemize}
+\item Why static shocks happen (charge transfer) \pause
+\item How touchscreens work (capacitance sensing) \pause
+\item Why lightning forms (electric field breakdown) \pause
+\item How defibrillators work (capacitor discharge) \pause
+\item Why atoms bond (electric forces) \pause
+\item How computer memory works (capacitor charge storage)
+\end{itemize}
+\note{[P0] "Real-world applications"\\\\
+[P1] "Static shocks: charge buildup and discharge"\\\\
+[P2] "Touchscreens: finger changes capacitance"\\\\
+[P3] "Lightning: field becomes too strong, air conducts"\\\\
+[P4] "Defibrillators: rapid capacitor discharge through heart"\\\\
+[P5] "Atoms: electric forces hold electrons to nucleus"\\\\
+[P6] "Computer memory: billions of tiny capacitors store bits"\\\\
+[THE WONDER] Electric forces shape everything from atoms to civilization}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+- Practice Coulomb's law, fields, potential, and capacitors\\\\
+[TRANSITION] Next: Electric Current and Circuits}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,1148 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Wave Behavior of Light]{PHYS11 CH:17 When Light Reveals Its Waves}
+\subtitle{Diffraction, Interference, and the Hidden Structure of Reality}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we discover light's secret identity.\\\\
+- Light doesn't just travel in straight lines - it bends, spreads, interferes\\\\
+- CD rainbows, laser patterns, telescope limits - all from wave behavior\\\\
+[THE WONDER] Same equations explain colors on soap bubbles and resolution of Hubble Space Telescope.\\\\
+- By end of class, you'll see light as both particle AND wave}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery of the Rainbow Disc}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-wave-optics-fig01-2.jpg}
+\caption{CD showing rainbow colors from white light}
+\end{figure}
+
+\pause
+\begin{center}
+\Large How does straw-colored plastic produce a rainbow?
+\end{center}
+\note{[P0] "Hold up a CD to light - you see rainbows"\\\\
+[P1] [THE HOOK] "How does straw-colored plastic produce a rainbow?"\\\\
+- Not pigments - the CD has no dye\\\\
+- Answer: wave behavior of light\\\\
+[THE WONDER] Direct evidence light is a wave}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Dual Identity}
+\textbf{Light behaves as both:}
+\begin{itemize}
+\item \textbf{Ray:} Travels in straight lines, reflects, refracts \pause
+\item \textbf{Wave:} Bends around corners, interferes, diffracts
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{What Your Eyes Miss}
+You see light's ray behavior every day. Its wave behavior is hidden - until objects become tiny.
+\end{alertblock}
+\note{[P0] "Light has dual identity"\\\\
+[P1] "Ray: straight lines, mirrors, lenses - we covered that last chapter"\\\\
+[P2] [THE CONFLICT] "Wave behavior hidden until objects become tiny"\\\\
+- When light interacts with objects about same size as wavelength\\\\
+- Then wave nature becomes visible\\\\
+[THE CONNECTION - Digital Archetype] "Like seeing source code vs compiled program"}
+\end{frame}
+
+\section{Understanding Diffraction and Interference}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{17.1:} Explain wave behavior of light, including diffraction and interference \pause
+\item \textbf{17.1:} Describe constructive and destructive interference in single-slit and double-slit experiments \pause
+\item \textbf{17.1:} Calculate wavelength of light using two-slit interference data
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for section 17.1"\\\\
+[P1] "First: understand diffraction and interference as wave behaviors"\\\\
+[P2] "Second: distinguish constructive from destructive interference"\\\\
+[P3] "Third: calculate wavelength from interference patterns"\\\\
+- Young's double-slit experiment proved light is a wave}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 The Source Code of Light}
+\begin{block}{Nature's Law for Light}
+\begin{center}
+\Large $\boxed{c = f\lambda}$
+\end{center}
+Speed equals frequency times wavelength
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{For visible light in vacuum:}
+\begin{itemize}
+\item Speed: $c = 3.00 \times 10^8$ m/s (constant) \pause
+\item Wavelength: $\lambda = 380$ to 750 nm \pause
+\item Frequency: $f = 4.0 \times 10^{14}$ to $7.9 \times 10^{14}$ Hz
+\end{itemize}
+\note{[P0] [THE REVELATION] "c equals f lambda - fundamental equation for electromagnetic waves"\\\\
+[P1] "Speed of light: 3 times 10 to the 8th meters per second"\\\\
+[P2] "Visible wavelengths: 380 to 750 nanometers"\\\\
+[P3] "Frequency stays constant even when light changes medium"\\\\
+[THE WONDER] Same equation governs radio waves, microwaves, X-rays\\\\
+[THE CONNECTION - Harmonic Archetype] "Frequency is like pitch - it defines the color"}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Light as Both Ray and Wave}
+\begin{figure}
+\centering
+\includegraphics[width=0.85\textwidth,height=0.65\textheight,keepaspectratio]{phys11-wave-optics-fig04-2.jpg}
+\caption{Laser beam as ray (straight line) and wave (interference pattern after slits)}
+\end{figure}
+\note{- Left: laser beam from observatory - perfect ray behavior\\\\
+- Right: same laser through narrow slits - wave behavior revealed\\\\
+- Horizontal spreading into bright and dark regions\\\\
+- Systematic constructive and destructive interference\\\\
+[THE REVELATION] Interference is signature of wave behavior}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Water Waves Show the Way}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.55\textheight,keepaspectratio]{phys11-wave-optics-fig05-2.jpg}
+\caption{Water waves passing through gaps in rocks}
+\end{figure}
+
+\pause
+\textbf{Key observation:} Gap width similar to wavelength causes interference pattern
+\note{[P0] "Water waves easier to see than light waves"\\\\
+[P1] [THE CONNECTION - Kinetic Archetype] "Gaps in rocks like slits in Young's experiment"\\\\
+- Cross-section shows crests and troughs\\\\
+- Same physics governs water, sound, and light\\\\
+[THE HUMILITY] Water helps us visualize what happens to light}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Light in Different Media}
+\textbf{When light enters a medium:}
+\begin{itemize}
+\item Speed changes: $v = \frac{c}{n}$ \pause
+\item Wavelength changes: $\lambda_n = \frac{\lambda}{n}$ \pause
+\item Frequency stays constant \pause
+\item Color stays constant (color linked to frequency)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{Real-World: Light in Water}
+Water has $n = 1.333$, so visible wavelengths compress to 285-570 nm
+\end{exampleblock}
+\note{[P0] "When light enters medium like water"\\\\
+[P1] "Speed decreases by factor n"\\\\
+[P2] "Wavelength also decreases by factor n"\\\\
+[P3] "Frequency stays constant"\\\\
+[P4] "Color stays constant because color determined by frequency"\\\\
+[P5] "In water: wavelengths shrink but colors don't change"\\\\
+[THE WONDER] Light slows down but never stops}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Huygens's Principle}
+\begin{block}{Nature's Rule for Wave Propagation}
+Every point on a wavefront is a source of wavelets that spread forward at wave speed. New wavefront is tangent to all wavelets.
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys11-wave-optics-fig06-2.jpg}
+\caption{Wavefront emitting semicircular wavelets}
+\end{figure}
+\note{[P0] [THE REVELATION] "Huygens's principle - 17th century Dutch scientist"\\\\
+[P1] "Every point on wavefront creates new semicircular wavelet"\\\\
+- Draw tangent to wavelets - that's new wavefront position\\\\
+- Works for all waves: water, sound, light\\\\
+[THE WONDER] Simple geometric principle explains complex wave behavior}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 The Bending of Light}
+\begin{exampleblock}{The Mental Model}
+Sound bends around doorways. Light seems to travel straight. Why?
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Answer:} Wavelength compared to opening size
+\begin{itemize}
+\item Sound wavelength: $\sim$1 m (comparable to door width) \pause
+\item Visible light wavelength: $\sim$500 nm (much smaller than door)
+\end{itemize}
+
+\pause
+\begin{alertblock}{The Paradox}
+Light DOES bend - but only around objects comparable to its wavelength
+\end{alertblock}
+\note{[P0] "Sound bends around corners - you hear it everywhere"\\\\
+[P1] [THE CONFLICT] "Light seems to go straight - sharp shadows"\\\\
+[P2] "Sound wavelength about 1 meter - comparable to door"\\\\
+[P3] "Light wavelength 500 nanometers - 2 million times smaller"\\\\
+[P4] "Light bends too, just need tiny openings to see it"\\\\
+[THE REVELATION] Wavelength determines what counts as obstacle}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Diffraction Revealed}
+\begin{block}{Nature's Definition}
+\textbf{Diffraction:} Bending of wave around edges of opening or obstacle
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-wave-optics-fig07-4.jpg}
+\caption{Huygens's principle applied to slit - edges bend}
+\end{figure}
+\note{[P0] [THE REVELATION] "Diffraction: wave characteristic that occurs for all waves"\\\\
+[P1] "Apply Huygens's principle to opening"\\\\
+- Edges of wavefront bend after passing through\\\\
+- Smaller opening, more extreme bending\\\\
+[THE WONDER] If diffraction observed, phenomenon is produced by waves}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Ocean Waves Through Reef}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.65\textheight,keepaspectratio]{phys11-wave-optics-fig07-5.jpg}
+\caption{Ocean waves diffracting through opening - visible interference pattern}
+\end{figure}
+\note{- Incoming waves at top pass through gaps\\\\
+- Foreground shows interference pattern\\\\
+- Opening similar in width to wavelength\\\\
+- Same principle as light through slits\\\\
+[THE CONNECTION - Kinetic Archetype] "Surfers know waves bend around jetties"}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Young's Revolutionary Experiment}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-wave-optics-fig08-2.jpg}
+\caption{Double-slit experiment setup (1801)}
+\end{figure}
+
+\pause
+\textbf{Result:} Vertical light and dark lines spread horizontally
+\note{[P0] "Thomas Young, 1801 - proved light is wave"\\\\
+[P1] "Single-wavelength light through two narrow slits"\\\\
+- Without diffraction: would see two bright lines\\\\
+- With diffraction: see many bright and dark bands\\\\
+- This pattern can ONLY be explained if light is wave\\\\
+[THE HUMILITY] People resisted because it contradicted Newton}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 The Interference Pattern}
+\begin{figure}
+\centering
+\includegraphics[width=0.85\textwidth,height=0.6\textheight,keepaspectratio]{phys11-wave-optics-fig09-2.jpg}
+\caption{Double-slit interference: light diffracts from each slit, waves overlap and interfere}
+\end{figure}
+
+\pause
+\begin{itemize}
+\item \textbf{Constructive interference:} Crest meets crest $\rightarrow$ bright
+\item \textbf{Destructive interference:} Crest meets trough $\rightarrow$ dark
+\end{itemize}
+\note{[P0] "Light spreads out from each slit"\\\\
+[P1] "Waves overlap and interfere"\\\\
+- Constructive: crest meets crest - bright regions\\\\
+- Destructive: crest meets trough - dark regions\\\\
+- Pattern depends on wavelength and slit separation\\\\
+[THE WONDER] Light interfering with itself - wave signature}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 The Math of Double-Slit Interference}
+\begin{block}{Universal Law: Constructive Interference}
+\begin{center}
+\Large $\boxed{d \sin \theta = m\lambda}$
+\end{center}
+For $m = 0, \pm 1, \pm 2, \pm 3, \ldots$ (order of maximum)
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{Universal Law: Destructive Interference}
+\begin{center}
+\Large $\boxed{d \sin \theta = \left(m + \frac{1}{2}\right)\lambda}$
+\end{center}
+For $m = 0, \pm 1, \pm 2, \ldots$ (order of minimum)
+\end{block}
+\note{[P0] [THE REVELATION] "d is distance between slits, theta is angle to bright/dark band"\\\\
+[P1] "Constructive: path difference equals whole wavelengths"\\\\
+- m equals 0: central maximum\\\\
+- m equals 1: first-order maximum\\\\
+[P2] "Destructive: path difference equals half-wavelengths"\\\\
+[THE WONDER] Geometry of interference encoded in sine function}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Path Difference Geometry}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.55\textheight,keepaspectratio]{phys11-wave-optics-fig11-5.jpg}
+\caption{Path difference $\Delta L = d \sin \theta$}
+\end{figure}
+
+\pause
+\textbf{Key insight:} Waves start in phase, end in or out of phase depending on path difference
+\note{[P0] "Two waves travel from slits to screen"\\\\
+[P1] "Different path lengths"\\\\
+- If paths differ by whole wavelength: constructive\\\\
+- If paths differ by half wavelength: destructive\\\\
+- Trigonometry gives delta-L equals d sine theta\\\\
+[THE CONNECTION - Digital Archetype] "Like packets arriving at router - timing matters"}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Intensity Pattern}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.55\textheight,keepaspectratio]{phys11-wave-optics-fig11-4.jpg}
+\caption{Intensity decreases with angle from center}
+\end{figure}
+
+\pause
+\textbf{Observation:} Central maximum brightest, intensity falls off to sides
+\note{[P0] "Graph shows intensity vs angle"\\\\
+[P1] "Central maximum brightest"\\\\
+- Higher-order maxima dimmer\\\\
+- Intensity falls with increasing angle\\\\
+- Photo shows actual pattern: bright and dark fringes\\\\
+[THE WONDER] Beautiful mathematical regularity in nature}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Single-Slit Diffraction}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-wave-optics-fig12-2.jpg}
+\caption{Single slit produces wider central maximum with dimmer side maxima}
+\end{figure}
+
+\pause
+\textbf{Key difference:} Central maximum is 6 times wider than side maxima
+\note{[P0] "Single slit different from double slit"\\\\
+[P1] "Central maximum much wider and brighter"\\\\
+- Intensity decreases rapidly on sides\\\\
+- Minima occur at D sine theta equals m lambda\\\\
+- D is slit width, not separation\\\\
+[THE CONFLICT] Single slit still produces pattern - diffraction at edges}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.1 Single-Slit Geometry}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-wave-optics-fig13-2.jpg}
+\caption{Ray diagram showing destructive interference for single slit}
+\end{figure}
+
+\pause
+\begin{block}{Universal Law: Single-Slit Minima}
+\begin{center}
+$\boxed{D \sin \theta = m\lambda}$ \quad or \quad $\boxed{\frac{Dy}{L} = m\lambda}$
+\end{center}
+For $m = \pm 1, \pm 2, \pm 3, \ldots$ (not zero)
+\end{block}
+\note{[P0] "Ray from center travels lambda over 2 farther than ray from top"\\\\
+[P1] "Arrive out of phase - destructive interference"\\\\
+- Every ray from top half paired with ray from bottom half\\\\
+- Cancel in pairs at minima\\\\
+- D is slit width, y is distance on screen, L is screen distance\\\\
+[THE REVELATION] Width of slit determines diffraction pattern}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Decoding the Double Slit}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Light from a He-Ne laser passes through two slits separated by 0.0100 mm. The third bright line forms at angle $10.95^\circ$ relative to incident beam.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $d = 0.0100$ mm $= 1.00 \times 10^{-5}$ m
+\item $\theta = 10.95^\circ$
+\item $m = 3$ (third bright line)
+\end{itemize}
+
+\textbf{Find:} Wavelength $\lambda$ in nm
+
+\vspace{0.3cm}
+
+\textit{Can you decode the wavelength? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they extract wavelength from interference pattern?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who finishes early, who struggles with unit conversion\\\\
+[WATCH FOR] Using wrong equation, forgetting to convert mm to m\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Double-Slit Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equation did you choose for constructive interference?
+\item How did you rearrange it to solve for $\lambda$?
+\item What units did you get for wavelength?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for common approaches\\\\
+[CHECK] Name wheel: call a pair to share approach\\\\
+[EXPECTED APPROACH] Use d sine theta equals m lambda, solve for lambda\\\\
+[COMMON ERROR] Forgetting to convert mm to meters, using destructive formula}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Wavelength of Light}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $d \sin \theta = m\lambda$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Rearrange:} $\lambda = \frac{d \sin \theta}{m}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $\lambda = \frac{(1.00 \times 10^{-5} \text{ m})(\sin 10.95^\circ)}{3}$
+
+\pause
+\vspace{0.2cm}
+
+$$\lambda = \frac{(1.00 \times 10^{-5})(0.190)}{3} = 6.33 \times 10^{-7} \text{ m}$$
+
+\pause
+$$\boxed{\lambda = 633 \text{ nm}}$$
+
+\pause
+\textbf{Check:} 633 nm is red light - wavelength of He-Ne laser. Perfect!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Start with d sine theta equals m lambda"\\\\
+[P2] "Solve for lambda: divide both sides by m"\\\\
+[P3] "Substitute: d equals 1 times 10 to negative 5, sine 10.95 equals 0.190"\\\\
+[P4] "Calculate: 6.33 times 10 to negative 7 meters"\\\\
+[P5] [ANSWER] "633 nanometers - red light from He-Ne laser"\\\\
+[P6] "Not coincidence - interference patterns measure wavelength"\\\\
+[THE WONDER] Young used this to measure visible wavelengths - analytical technique still used today}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Single-Slit Width}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Visible light of wavelength 550 nm falls on single slit and produces second diffraction minimum at angle $45.0^\circ$.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $\lambda = 550$ nm $= 550 \times 10^{-9}$ m
+\item $\theta = 45.0^\circ$
+\item $m = 2$ (second minimum)
+\end{itemize}
+
+\textbf{Find:} Slit width $D$ in micrometers
+
+\vspace{0.3cm}
+
+\textit{Can you decode the slit width? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they reverse-engineer slit width?\\\\
+[SAY] "Single slit this time - different equation"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who uses double-slit equation by mistake\\\\
+[WATCH FOR] Using constructive instead of destructive formula\\\\
+[DON'T HELP] Productive struggle builds understanding}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Single-Slit Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What's the difference between single-slit and double-slit equations?
+\item How did you solve for $D$?
+\item What units did you get?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for understanding of single vs double slit\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Use D sine theta equals m lambda, solve for D\\\\
+[COMMON ERROR] Using d instead of D, using constructive interference formula}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Narrow Slit}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $D \sin \theta = m\lambda$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Rearrange:} $D = \frac{m\lambda}{\sin \theta}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $D = \frac{2(550 \times 10^{-9} \text{ m})}{\sin 45.0^\circ}$
+
+\pause
+\vspace{0.2cm}
+
+$$D = \frac{1100 \times 10^{-9}}{0.707} = 1.56 \times 10^{-6} \text{ m}$$
+
+\pause
+$$\boxed{D = 1.56 \text{ }\mu\text{m}}$$
+
+\pause
+\textbf{Check:} Only few times wavelength - consistent with significant wave effects!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "D sine theta equals m lambda"\\\\
+[P2] "Solve for D: divide by sine theta"\\\\
+[P3] "Substitute: m equals 2, lambda equals 550 nanometers, sine 45 equals 0.707"\\\\
+[P4] "Calculate: 1.56 times 10 to negative 6 meters"\\\\
+[P5] [ANSWER] "1.56 micrometers - incredibly narrow"\\\\
+[P6] "Slit only few times wavelength - that's why wave effects visible"\\\\
+[THE WONDER] Light must interact with objects comparable to wavelength to show wave nature}
+\end{frame}
+
+\section{Applications of Diffraction, Interference, and Coherence}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{17.2:} Explain wave behaviors including diffraction, interference, and coherence \pause
+\item \textbf{17.2:} Describe applications based on wave properties of light \pause
+\item \textbf{17.2:} Perform calculations for diffraction gratings and resolution limits
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for section 17.2"\\\\
+[P1] "First: understand coherence - in-phase light"\\\\
+[P2] "Second: see real-world applications - lasers, spectroscopes"\\\\
+[P3] "Third: calculate diffraction grating patterns and resolution"\\\\
+- Applications connect theory to technology}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 The Birth of the Laser}
+\textbf{Einstein's idea (1917):}
+\begin{itemize}
+\item Photon hits excited atom \pause
+\item Atom emits second photon with same energy \pause
+\item Two photons in phase = \textbf{coherent light} \pause
+\item Chain reaction: stream of in-phase photons
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{The Acronym}
+\textbf{L}ight \textbf{A}mplification by \textbf{S}timulated \textbf{E}mission of \textbf{R}adiation
+\end{block}
+\note{[P0] "1917: Einstein thinking about photons and excited atoms"\\\\
+[P1] "Photon with right energy hits excited atom"\\\\
+[P2] "Atom emits matching photon - same energy, same phase"\\\\
+[P3] "Two photons go on to hit more atoms - chain reaction"\\\\
+[P4] "Result: coherent light - all waves in sync"\\\\
+[P5] "Took 40 years to build first laser in 1960"\\\\
+[THE WONDER] Einstein predicted lasers before technology existed to build them}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 Laser Properties and Uses}
+\textbf{Properties:}
+\begin{itemize}
+\item Directional (doesn't spread much) \pause
+\item Very intense \pause
+\item Narrow (about 0.5 mm diameter) \pause
+\item Monochromatic (one wavelength)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Applications:}
+\begin{itemize}
+\item Read CDs and DVDs \pause
+\item Cut steel in industry \pause
+\item Eye surgery (minimal bleeding) \pause
+\item Measure Earth-Moon distance \pause
+\item Create holograms
+\end{itemize}
+\note{[P0] "Laser beams directional - stay narrow over long distances"\\\\
+[P1] "Very intense - concentrated energy"\\\\
+[P2] "Narrow - about half millimeter"\\\\
+[P3] "Monochromatic - one pure color"\\\\
+[P4] "Applications countless"\\\\
+[P5] "CDs: interpret reflections from surface pits"\\\\
+[P6] "Industry: cut through steel"\\\\
+[P7] "Surgery: cauterizes as it cuts - little bleeding"\\\\
+[P8] "Moon: bounce off reflectors astronauts left"\\\\
+[P9] "Holograms: 3D images from interference"\\\\
+[THE CONNECTION - Digital Archetype] "Your phone has multiple lasers"}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 Diffraction Gratings}
+\begin{block}{Nature's Definition}
+\textbf{Diffraction grating:} Large number of evenly-spaced parallel slits
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth,height=0.5\textheight,keepaspectratio]{phys11-wave-optics-fig20-5.jpg}
+\caption{Light through grating produces sharper pattern than double slit}
+\end{figure}
+\note{[P0] [THE REVELATION] "Diffraction grating: many slits instead of two"\\\\
+[P1] "Pattern similar to double slit but sharper"\\\\
+- Bright regions narrower and brighter\\\\
+- Dark regions darker\\\\
+- White light dispersed into rainbow\\\\
+- Central maximum white, higher orders show spectrum\\\\
+[THE WONDER] CDs, DVDs, butterfly wings, opals all act as gratings}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 Natural Diffraction Gratings}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.65\textheight,keepaspectratio]{phys11-wave-optics-fig20-4.jpg}
+\caption{Australian opal and butterfly wings - natural reflection gratings}
+\end{figure}
+\note{- Opal: rows of reflectors act like grating\\\\
+- Butterfly: fingerlike structures in regular patterns\\\\
+- Produce iridescence - colors from interference, not pigments\\\\
+- Same physics as CD rainbows\\\\
+[THE WONDER] Nature invented diffraction gratings long before humans}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 Grating vs Double Slit}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-wave-optics-fig21-2.jpg}
+\caption{Intensity comparison: double slit (a) vs grating (b)}
+\end{figure}
+
+\pause
+\textbf{Key difference:} More slits = narrower, brighter maxima
+\note{[P0] "Compare intensity graphs"\\\\
+[P1] "Grating produces much sharper pattern"\\\\
+- Maxima at same angles\\\\
+- But grating maxima narrower and brighter\\\\
+- Darker regions between\\\\
+- More slits, better definition\\\\
+[THE REVELATION] Sharpness makes gratings useful for spectroscopy}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 The CD as Diffraction Grating}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys11-wave-optics-fig22-2.jpg}
+\caption{CD holds data in spiral groove with 1,600 grooves per mm}
+\end{figure}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{How it works:}
+\begin{itemize}
+\item Grooves act as reflection grating \pause
+\item Laser tracks along spiral \pause
+\item Pits encode binary data (0s and 1s) \pause
+\item Reflected beam goes to photodiode detector
+\end{itemize}
+\note{[P0] "CD grooves 1,600 per millimeter - similar to visible wavelengths"\\\\
+[P1] "That's why you see rainbows on CDs"\\\\
+[P2] "One continuous spiral groove from center out"\\\\
+[P3] "Data in pits - binary code"\\\\
+[P4] "Laser tracks groove, reads pits"\\\\
+[P5] "Thin aluminum coating makes pits reflective"\\\\
+[THE CONNECTION - Digital Archetype] "Physics enables digital storage"}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 Spectroscopes}
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth,height=0.55\textheight,keepaspectratio]{phys11-wave-optics-fig25-2.jpg}
+\caption{Diffraction grating separates light into component wavelengths}
+\end{figure}
+
+\pause
+\textbf{Uses:}
+\begin{itemize}
+\item Identify chemical elements by spectrum
+\item Measure wavelengths of light from stars
+\item Analyze laser output
+\end{itemize}
+\note{[P0] "Spectroscope uses grating to separate wavelengths"\\\\
+[P1] "Applications numerous"\\\\
+- Each element emits unique spectrum when heated\\\\
+- Astronomers identify star composition from light\\\\
+- Chemists identify unknown substances\\\\
+- Works for wavelengths beyond visible\\\\
+[THE WONDER] Light carries information about what emitted it}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 The Resolution Limit}
+\begin{block}{Nature's Constraint}
+Diffraction limits detail we can observe in images
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys11-wave-optics-fig26-2.jpg}
+\caption{Light through circular aperture produces fuzzy spot with rings}
+\end{figure}
+
+\pause
+\begin{alertblock}{The Paradox}
+Even perfect lens produces fuzzy images due to wave nature of light
+\end{alertblock}
+\note{[P0] [THE REVELATION] "Diffraction unavoidable consequence of wave nature"\\\\
+[P1] "Light through small aperture spreads"\\\\
+[P2] [THE CONFLICT] "Perfect optics can't overcome wave physics"\\\\
+- Central bright spot with fuzzy edge\\\\
+- Surrounded by rings\\\\
+- Smaller aperture, more spreading\\\\
+[THE HUMILITY] Nature sets fundamental limits on vision}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 The Rayleigh Criterion}
+\begin{block}{Universal Law: Resolution Limit}
+Two images just resolvable when center of one diffraction pattern falls on first minimum of other
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.4\textheight,keepaspectratio]{phys11-wave-optics-fig29-2.jpg}
+\caption{Rayleigh criterion for just-resolvable point sources}
+\end{figure}
+
+\pause
+$$\boxed{\theta = 1.22 \frac{\lambda}{D}}$$
+where $\theta$ is minimum resolvable angle (in radians), $D$ is aperture diameter
+\note{[P0] [THE REVELATION] "Lord Rayleigh, 19th century - criterion for resolution"\\\\
+[P1] "Graph shows intensity of diffraction pattern"\\\\
+[P2] "Equation: theta equals 1.22 lambda over D"\\\\
+- Smaller wavelength: better resolution\\\\
+- Larger aperture: better resolution\\\\
+- Eye pupil about 3 mm diameter\\\\
+[THE WONDER] Limits vision of all optical instruments - telescopes, microscopes, eyes}
+\end{frame}
+
+\begin{frame}
+\frametitle{17.2 Real-World Limits}
+\textbf{Diffraction limits:}
+\begin{itemize}
+\item \textbf{Human eye:} Pupil diameter limits acuity \pause
+\item \textbf{Telescopes:} Mirror diameter limits detail \pause
+\item \textbf{Microscopes:} Wavelength limits smallest visible object \pause
+\item \textbf{Cameras:} Lens diameter affects sharpness
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Trade-off}
+Larger aperture = better resolution but heavier, more expensive
+\end{exampleblock}
+\note{[P0] "Every optical system limited by diffraction"\\\\
+[P1] "Eye: pupil about 3 mm - sets acuity limit"\\\\
+[P2] "Telescopes: why bigger mirrors see more detail"\\\\
+[P3] "Microscopes: can't see smaller than wavelength"\\\\
+[P4] "Cameras: why professional lenses so large"\\\\
+[P5] "Engineers must balance resolution, size, cost"\\\\
+[THE CONNECTION - Digital Archetype] "Like pixel limits on display"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Wavelength in Water}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A monochromatic laser beam of green light with wavelength 550 nm in air enters water. Refractive index of water is 1.33.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $\lambda = 550$ nm (in vacuum/air)
+\item $n = 1.33$ (water)
+\end{itemize}
+
+\textbf{Find:} Wavelength $\lambda_n$ in water
+
+\vspace{0.3cm}
+
+\textit{Can you predict the wavelength shift? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they calculate wavelength change in medium?\\\\
+[SAY] "What happens to light entering water?"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who remembers wavelength changes but frequency doesn't\\\\
+[WATCH FOR] Multiplying by n instead of dividing\\\\
+[DON'T HELP] Simple equation but easy to invert}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Medium Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What happens to speed, wavelength, and frequency when light enters water?
+\item Which equation relates wavelength in medium to wavelength in vacuum?
+\item Does wavelength increase or decrease in water?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your reasoning.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for understanding of medium effects\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Use lambda-n equals lambda over n\\\\
+[COMMON ERROR] Using lambda-n equals n lambda (backwards)}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Light Slows and Compresses}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $\lambda_n = \frac{\lambda}{n}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $\lambda_n = \frac{550 \text{ nm}}{1.33}$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{\lambda_n = 414 \text{ nm}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Check:} Wavelength decreased (550 $\rightarrow$ 414 nm). Color stays green because frequency constant!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Lambda-n equals lambda over n"\\\\
+[P2] "Substitute: 550 divided by 1.33"\\\\
+[P3] [ANSWER] "414 nanometers"\\\\
+[P4] "Wavelength compressed by factor 1.33"\\\\
+- Speed also decreased by same factor\\\\
+- Frequency unchanged\\\\
+- Color unchanged because color determined by frequency\\\\
+[THE WONDER] Light slows down but never stops - even in diamond}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Diffraction Grating Angle}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A diffraction grating has 2,000 lines per centimeter. Green light with wavelength 520 nm passes through.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item 2,000 lines/cm $\rightarrow$ $d = \frac{1 \text{ cm}}{2000} = 5.00 \times 10^{-4}$ cm
+\item $\lambda = 520$ nm $= 520 \times 10^{-9}$ m
+\item $m = 1$ (first-order maximum)
+\end{itemize}
+
+\textbf{Find:} Angle $\theta$ for first-order maximum
+
+\vspace{0.3cm}
+
+\textit{Can you decode the angle? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they find angle from grating spacing?\\\\
+[SAY] "Grating problem - first calculate d"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who struggles with unit conversions\\\\
+[WATCH FOR] Forgetting to convert cm to m, using wrong m value\\\\
+[DON'T HELP] Multi-step problem builds confidence}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Grating Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you calculate $d$ from lines per cm?
+\item Which equation relates $d$, $\theta$, and $\lambda$ for grating?
+\item How did you solve for $\theta$?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for calculation of d\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] d equals 1 over 2000 cm, convert to m, use d sine theta equals m lambda\\\\
+[COMMON ERROR] Unit mismatch, forgetting arcsine}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Grating Disperses Light}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Find d:} $d = \frac{1 \text{ cm}}{2000} = 5.00 \times 10^{-4}$ cm $= 5.00 \times 10^{-6}$ m
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Equation:} $d \sin \theta = m\lambda$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Rearrange:} $\theta = \sin^{-1}\left(\frac{m\lambda}{d}\right)$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $\theta = \sin^{-1}\left(\frac{(1)(520 \times 10^{-9})}{5.00 \times 10^{-6}}\right) = \sin^{-1}(0.104)$
+
+\pause
+$$\boxed{\theta = 5.97^\circ}$$
+
+\pause
+\textbf{Check:} Small angle - reasonable for first maximum!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] "First find d: 1 over 2000 equals 5 times 10 to negative 6 meters"\\\\
+[P2] [ALGEBRA] "d sine theta equals m lambda"\\\\
+[P3] "Solve for theta: take arcsine of m lambda over d"\\\\
+[P4] "Substitute: m equals 1, lambda equals 520 nanometers"\\\\
+[P5] [ANSWER] "5.97 degrees"\\\\
+[P6] "Small angle for first maximum - makes sense"\\\\
+[THE WONDER] Gratings precisely control where each wavelength goes}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Laser Beam Spread}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A He-Ne laser beam (633 nm wavelength) is originally 1.00 mm in diameter.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $\lambda = 633$ nm $= 633 \times 10^{-9}$ m
+\item $D = 1.00$ mm $= 1.00 \times 10^{-3}$ m
+\end{itemize}
+
+\textbf{Find:} Minimum angular spread $\theta$ in radians and degrees
+
+\vspace{0.3cm}
+
+\textit{Can you predict the spreading? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they calculate diffraction spreading?\\\\
+[SAY] "Even laser beams spread due to diffraction"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who uses Rayleigh criterion\\\\
+[WATCH FOR] Forgetting factor 1.22, unit errors\\\\
+[DON'T HELP] Resolution equation applies to all apertures}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Beam Spread Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equation gives minimum angular spread?
+\item What does the diameter $D$ represent?
+\item How did you convert radians to degrees?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for Rayleigh criterion understanding\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Use theta equals 1.22 lambda over D\\\\
+[COMMON ERROR] Forgetting 1.22 factor, wrong units}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Even Lasers Spread}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $\theta = \frac{1.22\lambda}{D}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $\theta = \frac{(1.22)(633 \times 10^{-9} \text{ m})}{1.00 \times 10^{-3} \text{ m}}$
+
+\pause
+\vspace{0.2cm}
+
+$$\theta = 7.72 \times 10^{-4} \text{ rad}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Convert:} $\theta = (7.72 \times 10^{-4})(57.3^\circ/\text{rad}) = \boxed{0.0442^\circ}$
+
+\pause
+\textbf{Check:} Tiny spread - barely noticeable over short distances!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Theta equals 1.22 lambda over D"\\\\
+[P2] "Substitute: 1.22 times 633 nanometers over 1 millimeter"\\\\
+[P3] [ANSWER] "7.72 times 10 to negative 4 radians"\\\\
+[P4] "Convert: multiply by 57.3 degrees per radian"\\\\
+[P5] "0.0442 degrees - very small spread"\\\\
+[THE WONDER] Even laser beams obey diffraction - wave nature inescapable}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}[squeeze]
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Light exhibits wave behavior: diffraction and interference \pause
+\item Huygens's principle: every point on wavefront creates wavelets \pause
+\item Double-slit interference proves wave nature: $d \sin \theta = m\lambda$ \pause
+\item Single slit produces diffraction pattern: $D \sin \theta = m\lambda$ \pause
+\item Lasers produce coherent light via stimulated emission \pause
+\item Diffraction gratings separate wavelengths sharply \pause
+\item Resolution fundamentally limited by wave nature: $\theta = 1.22\lambda/D$ \pause
+\item Wavelength changes in media: $\lambda_n = \lambda/n$, but frequency constant
+\end{enumerate}
+\end{block}
+\note{[P0] "Eight revelations today"\\\\
+[P1] "Light exhibits wave behavior"\\\\
+[P2] "Huygens's principle explains wave propagation"\\\\
+[P3] "Double-slit: d sine theta equals m lambda"\\\\
+[P4] "Single-slit: D sine theta equals m lambda"\\\\
+[P5] "Lasers: coherent, directional, intense"\\\\
+[P6] "Gratings: sharp spectral separation"\\\\
+[P7] "Resolution: theta equals 1.22 lambda over D"\\\\
+[P8] "Wavelength changes in media, frequency doesn't"\\\\
+[THE WONDER] Wave nature hidden in everyday life, revealed in careful experiments\\\\
+- Name wheel: which revelation most surprising?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Equations}
+\begin{align}
+c &= f\lambda \quad \text{(light in vacuum)} \\
+\lambda_n &= \frac{\lambda}{n} \quad \text{(wavelength in medium)} \\
+d \sin \theta &= m\lambda \quad \text{(double-slit constructive)} \\
+d \sin \theta &= \left(m + \frac{1}{2}\right)\lambda \quad \text{(double-slit destructive)} \\
+D \sin \theta &= m\lambda \quad \text{(single-slit minima)} \\
+\theta &= 1.22\frac{\lambda}{D} \quad \text{(Rayleigh criterion)}
+\end{align}
+\note{- Six fundamental equations\\\\
+- c equals f lambda: speed-frequency-wavelength relationship\\\\
+- lambda-n: wavelength in medium\\\\
+- d sine theta: double-slit interference\\\\
+- D sine theta: single-slit diffraction\\\\
+- Rayleigh criterion: resolution limit\\\\
+- Know when to use each equation\\\\
+- Questions before we end?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next unit: Modern Physics\\\\
+- Today you joined 200-year journey understanding light\\\\
+- Young proved wave nature in 1801\\\\
+- Einstein explained lasers in 1917\\\\
+- You now understand both}
+\end{frame}
+
+\end{document}

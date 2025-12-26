@@ -1,0 +1,1199 @@
+% CH14 Sound - PHYS11 Unit 06
+\documentclass[aspectratio=169]{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Sound Waves]{PHYS11 CH14: Sound}
+\subtitle{Speed, Intensity, Doppler Effect, and Resonance}
+\author[Mr. Gullo]{Mr. Gullo}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[SAY] "Today we're covering Chapter 14: Sound"\\\\
+[OVERVIEW] 4 sections: speed of sound, intensity, Doppler, resonance\\\\
+[CONNECT] Builds on CH13 Waves - now we apply wave concepts to sound\\\\
+[EMPHASIZE] Key equations: v equals f lambda, decibel formula, Doppler\\\\
+[TRANSITION] Let's start with learning objectives...}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+%=============================================================================
+\section{Introduction}
+%=============================================================================
+
+\begin{frame}
+\frametitle{Learning Objectives}
+By the end of this chapter, you will be able to:
+\begin{itemize}
+\item Relate wave characteristics to sound waves \pause
+\item Describe speed of sound in various media \pause
+\item Calculate using $v = f\lambda$ \pause
+\item Relate amplitude to loudness and energy \pause
+\item Use the decibel scale \pause
+\item Explain the Doppler effect and sonic booms \pause
+\item Describe resonance, beats, and harmonics
+\end{itemize}
+\note{[QUICK] 7 objectives - don't dwell on each one\\\\
+[SAY] "By end of chapter, you'll master v equals f lambda"\\\\
+[EMPHASIZE] Most important: wave equation and decibel formula\\\\
+[PREVIEW] Quiz next class on wave equation problems\\\\
+[TRANSITION] Let's see what sound actually IS...}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Nature of Sound}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig01.jpg}
+\end{figure}
+
+\pause
+\textbf{Key Question:} If a tree falls in a forest and no one is there to hear it, does it make a sound?
+
+\pause
+\vspace{0.3cm}
+\textbf{Physics answer:} Sound is a disturbance of matter transmitted from its source outward as \alert{longitudinal waves}.
+\note{[SAY] "Classic philosophy question - what do you think?"\\\\
+[PAUSE] Let students ponder for a moment\\\\
+[EMPHASIZE] Physics answer: YES, sound waves exist whether we hear them or not\\\\
+[KEY POINT] Sound needs a MEDIUM to travel - no sound in vacuum\\\\
+[CHECK] Thumbs up/down: can sound travel through space?\\\\
+ANSWER: No - no medium (air, water, solid) to vibrate\\\\
+[TRANSITION] So how does sound travel through air?}
+\end{frame}
+
+%=============================================================================
+\section{14.1 Speed of Sound, Frequency, and Wavelength}
+%=============================================================================
+
+\begin{frame}
+\frametitle{Sound as a Longitudinal Wave}
+\begin{columns}[T]
+\column{0.55\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{phys11-sound-fig04.jpg}
+\end{figure}
+
+\pause
+\column{0.45\textwidth}
+\textbf{Sound waves consist of:}
+\begin{itemize}
+\item \textbf{Compressions} - high pressure regions \pause
+\item \textbf{Rarefactions} - low pressure regions
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+Analogous to crests and troughs in transverse waves.
+\end{columns}
+\note{[DEFINITION] Longitudinal: particles move PARALLEL to wave direction\\\\
+[COMPARE] Compression equals high pressure (like a crest)\\\\
+[COMPARE] Rarefaction equals low pressure (like a trough)\\\\
+[CHECK] Quick poll: what type of wave is light?\\\\
+ANSWER: Transverse - EM waves oscillate perpendicular to travel\\\\
+[TRANSITION] Let's see this in more detail...}
+\end{frame}
+
+\begin{frame}
+\frametitle{How Sound Travels}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig05.jpg}
+\end{figure}
+
+\pause
+\textbf{Pressure variation:} Sound creates alternating high and low pressure regions as it travels through a medium.
+\note{[SAY] "Watch the air molecules - they don't travel with the wave"\\\\
+[EMPHASIZE] Wave moves forward, molecules just oscillate in place\\\\
+[CHECK] Name wheel: do air molecules travel with the sound wave?\\\\
+ANSWER: No - they vibrate back and forth in place, wave energy moves\\\\
+[TRANSITION] Now let's look at speed in different materials...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Speed of Sound in Different Media}
+The speed of sound depends on:
+\begin{itemize}
+\item \textbf{Rigidity} (or compressibility) of the medium \pause
+\item \textbf{Density} of the medium
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Medium} & \textbf{Speed (m/s)} \\
+\hline
+Air (0°C) & 331 \\
+Air (20°C) & 343 \\
+Water (25°C) & 1493 \\
+Steel & 5960 \\
+\hline
+\end{tabular}
+\end{center}
+
+\pause
+\vspace{0.3cm}
+\alert{More rigid = faster; more dense = slower}
+\note{[KEY RULE] More rigid equals faster; more dense equals slower\\\\
+[EXAMPLE] Steel: very rigid, so very fast despite high density\\\\
+[CHECK] Name wheel: why is sound faster in water than air?\\\\
+ANSWER: Water is more rigid (harder to compress) - outweighs the higher density\\\\
+[TRANSITION] Now for the key equation...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Speed, Frequency, and Wavelength}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.45\textheight,keepaspectratio]{phys11-sound-fig09.jpg}
+\end{figure}
+
+\pause
+\begin{center}
+\Huge
+$\boxed{v = f\lambda}$
+\end{center}
+
+\pause
+\textbf{Where:}
+\begin{itemize}
+\item $v$ = speed of sound (m/s)
+\item $f$ = frequency (Hz)
+\item $\lambda$ = wavelength (m)
+\end{itemize}
+\note{[EMPHASIZE] This is THE key equation for this chapter!\\\\
+[SAY] "v equals f times lambda - velocity equals frequency times wavelength"\\\\
+[VARIABLES] v is speed in meters per second, f is frequency in Hertz, lambda is wavelength in meters\\\\
+[REARRANGEMENTS] f equals v over lambda, lambda equals v over f\\\\
+[CHECK] Name wheel: which form to find wavelength?\\\\
+ANSWER: Lambda equals v over f - divide both sides by f\\\\
+[TRANSITION] Key insight about this relationship...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Insight: Inverse Relationship}
+In a given medium at constant temperature:
+\begin{itemize}
+\item Speed $v$ is constant for all frequencies \pause
+\item Therefore: $f$ and $\lambda$ are \alert{inversely related}
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+\textbf{Higher frequency $\rightarrow$ shorter wavelength}
+
+\textbf{Lower frequency $\rightarrow$ longer wavelength}
+
+\pause
+\vspace{0.5cm}
+\textit{This is why music from all instruments arrives in cadence regardless of distance!}
+\note{[EMPHASIZE] Speed is fixed by medium - frequency doesn't change it!\\\\
+[KEY INSIGHT] If v is constant, double f means half lambda (inverse)\\\\
+[REAL EXAMPLE] Orchestra: high and low notes arrive together - same speed!\\\\
+[CHECK] Name wheel: if you double frequency, wavelength...?\\\\
+ANSWER: Halves - inverse relationship, like a seesaw\\\\
+[TRANSITION] Now let's put this equation to work...}
+\end{frame}
+
+%-----------------------------------------------------------------------------
+% Attempt → Compare → Practice: Wave Equation
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Attempt: Wave Equation Problem}
+\textbf{Try this on your own (3 min, silent):}
+
+\vspace{0.5cm}
+
+Calculate the wavelengths of sounds at the extremes of the audible range, 20 Hz and 20,000 Hz, when sound travels at 348.7 m/s.
+
+\vspace{1cm}
+
+\begin{center}
+\Large
+\textit{Work individually. It's okay to get stuck!}
+\end{center}
+\note{[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who finishes, who struggles, common errors\\\\
+[WATCH FOR] Students forgetting to rearrange, or dividing wrong way\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Discuss with Partner}
+\textbf{Turn to your neighbor (3 min):}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item What equation did you start with? \pause
+\item Where did you get stuck? \pause
+\item Did you start the same way?
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Name wheel:} Share your \alert{approach} (not your answer)
+\note{[SAY] "Compare with your neighbor. Where did you get stuck?"\\\\
+[TIMING] 3-4 min pair discussion\\\\
+[CHECK] Name wheel: call 1-2 pairs to share APPROACH, not answer\\\\
+[EXPECTED APPROACH] Start with v equals f lambda, rearrange for lambda\\\\
+[COMMON ERROR] Forgetting to rearrange, or unit conversion (kHz to Hz)}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Solution Step-by-Step}
+\textbf{Mark corrections in a different color!}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Equation:} $v = f\lambda$ \quad $\rightarrow$ \quad $\lambda = \frac{v}{f}$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{For low frequency (20 Hz):}
+$$\lambda_{max} = \frac{348.7}{20} = \boxed{17 \text{ m}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{For high frequency (20,000 Hz):}
+$$\lambda_{min} = \frac{348.7}{20000} = \boxed{0.017 \text{ m} = 1.7 \text{ cm}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Check:} Lower frequency $\rightarrow$ longer wavelength. Bass sounds are room-sized!
+\note{[ALGEBRA]\\\\
+- "Start with v equals f lambda"\\\\
+- "Divide both sides by f to isolate lambda"\\\\
+- "Lambda equals v over f"\\\\
+[ANSWER] Low freq: 17 m (room-sized), High freq: 1.7 cm (finger-sized)\\\\
+[REASONABLENESS] Bass sounds are BIG, treble sounds are TINY\\\\
+[IF CONFUSED] Draw the formula triangle: v on top, f and lambda on bottom\\\\
+[TRANSITION] Let's move on to sound intensity...}
+\end{frame}
+
+%=============================================================================
+\section{14.2 Sound Intensity and Sound Level}
+%=============================================================================
+
+\begin{frame}
+\frametitle{Sound Intensity}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.4\textheight,keepaspectratio]{phys11-sound-fig17.jpg}
+\end{figure}
+
+\pause
+\textbf{Intensity} is the power per unit area carried by a wave:
+
+\pause
+\begin{center}
+\Huge
+$\boxed{I = \frac{P}{A}}$
+\end{center}
+
+\pause
+\textbf{Units:} W/m$^2$
+\note{[DEFINITION] Intensity equals power divided by area\\\\
+[SAY] "I equals P over A - power spread over area"\\\\
+[REAL EXAMPLE] Why speakers sound quieter far away: same power, bigger area\\\\
+[CHECK] Quick - units of intensity?\\\\
+ANSWER: Watts per square meter (W/m²)\\\\
+[TRANSITION] Now the relationship to pressure...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Intensity and Pressure Amplitude}
+Sound intensity depends on pressure amplitude:
+
+\pause
+\begin{center}
+\Large
+$I = \frac{(\Delta p)^2}{2\rho v_w}$
+\end{center}
+
+\pause
+\vspace{0.3cm}
+\textbf{Where:}
+\begin{itemize}
+\item $\Delta p$ = pressure amplitude (Pa)
+\item $\rho$ = density of medium (kg/m$^3$)
+\item $v_w$ = speed of sound (m/s)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+\alert{Key:} Intensity is proportional to amplitude squared: $I \propto (\Delta p)^2$
+\note{[DEFINITION] Delta-p is pressure variation from normal atmospheric\\\\
+[VARIABLES] rho is density (kg per cubic meter), v-w is wave speed\\\\
+[EMPHASIZE] Intensity proportional to pressure SQUARED!\\\\
+[CHECK] Name wheel: if pressure doubles, intensity becomes...?\\\\
+ANSWER: 4 times larger - two squared equals four\\\\
+[TRANSITION] Let's see this relationship visually...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pressure vs. Intensity}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig19.jpg}
+\end{figure}
+
+\pause
+Greater amplitude $\rightarrow$ greater pressure variation $\rightarrow$ greater intensity (louder sound)
+\note{[SAY] "Point to the tall wave versus the short wave"\\\\
+[EMPHASIZE] Larger oscillations equals more energy equals louder sound\\\\
+[CHECK] Quick poll: which wave carries more energy?\\\\
+ANSWER: High amplitude - more energy per wave cycle\\\\
+[TRANSITION] Now we need a way to measure loudness...}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Decibel Scale}
+Human perception of loudness is \alert{logarithmic}, not linear.
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Sound Intensity Level:}
+\begin{center}
+\Huge
+$\boxed{\beta(\text{dB}) = 10 \log_{10}\left(\frac{I}{I_0}\right)}$
+\end{center}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Where:}
+\begin{itemize}
+\item $\beta$ = sound level in decibels (dB)
+\item $I$ = sound intensity (W/m$^2$)
+\item $I_0 = 10^{-12}$ W/m$^2$ (threshold of hearing)
+\end{itemize}
+\note{[EMPHASIZE] This is the second key equation!\\\\
+[SAY] "Beta equals 10 times log base 10 of I over I-naught"\\\\
+[DEFINITION] I-naught equals ten to the negative twelve - threshold of hearing\\\\
+[KEY INSIGHT] Log scale because ears respond to RATIOS, not differences\\\\
+[CHECK] Name wheel: why use log scale?\\\\
+ANSWER: Human ears respond to ratios - 10x louder feels like one step\\\\
+[TRANSITION] Let's see how this scale works...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Understanding Decibels}
+\textbf{Key relationships:}
+\begin{itemize}
+\item Threshold of hearing: $I_0 = 10^{-12}$ W/m$^2$ $\rightarrow$ 0 dB \pause
+\item Each factor of 10 in intensity $= +10$ dB \pause
+\item Doubling intensity $\approx +3$ dB
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Sound} & \textbf{Level (dB)} \\
+\hline
+Threshold of hearing & 0 \\
+Whisper & 20 \\
+Normal conversation & 60 \\
+Busy traffic & 80 \\
+Rock concert & 110 \\
+Pain threshold & 130 \\
+\hline
+\end{tabular}
+\end{center}
+\note{[KEY RULES]\\\\
+- 0 dB equals threshold of hearing (not silence!)\\\\
+- Every 10 dB equals 10x intensity\\\\
+- Every 3 dB equals 2x intensity (useful shortcut)\\\\
+[EMPHASIZE] 130 dB causes pain and hearing damage!\\\\
+[CHECK] Name wheel: 80 dB vs 60 dB - how many times more intense?\\\\
+ANSWER: 100 times - 20 dB difference equals 10 times 10\\\\
+[TRANSITION] Now let's try a calculation...}
+\end{frame}
+
+%-----------------------------------------------------------------------------
+% Attempt → Compare → Practice: Sound Intensity
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Attempt: Intensity Problem}
+\textbf{Try this on your own (3 min, silent):}
+
+\vspace{0.5cm}
+
+Calculate the intensity of a wave if the power transferred is 10 W and the area through which the wave is transferred is 5 square meters.
+
+\vspace{0.5cm}
+
+Then: What decibel level is this? ($I_0 = 10^{-12}$ W/m$^2$)
+
+\vspace{0.8cm}
+
+\begin{center}
+\Large
+\textit{Work individually. It's okay to get stuck!}
+\end{center}
+\note{[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Two-step problem: intensity THEN decibels\\\\
+[WATCH FOR] Students forgetting the log, or calculator errors\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Discuss with Partner}
+\textbf{Turn to your neighbor (3 min):}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item How did you find intensity? \pause
+\item Did you remember to use the decibel equation? \pause
+\item What value did you get for log?
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Name wheel:} Share your \alert{approach} (not your answer)
+\note{[SAY] "Compare with your neighbor. Where did you get stuck?"\\\\
+[TIMING] 2-3 min pair discussion\\\\
+[CHECK] Name wheel: call 1-2 pairs to share APPROACH\\\\
+[EXPECTED APPROACH] First I equals P over A, then beta equals 10 log I over I-naught\\\\
+[COMMON ERROR] Forgetting I-naught, or log calculator confusion}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Solution Step-by-Step}
+\textbf{Mark corrections in a different color!}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Step 1 - Intensity:}
+$$I = \frac{P}{A} = \frac{10 \text{ W}}{5 \text{ m}^2} = \boxed{2 \text{ W/m}^2}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Step 2 - Decibels:}
+$$\beta = 10 \log_{10}\left(\frac{2}{10^{-12}}\right) = 10 \log_{10}(2 \times 10^{12})$$
+
+\pause
+$$\beta = 10 \times 12.3 = \boxed{123 \text{ dB}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Check:} 123 dB is near pain threshold (130 dB). Extremely loud!
+\note{[ALGEBRA]\\\\
+- "First, I equals P over A equals 10 divided by 5"\\\\
+- "I equals 2 watts per square meter"\\\\
+- "Now beta equals 10 log of 2 over ten to the negative twelve"\\\\
+- "That's 10 log of 2 times ten to the twelfth"\\\\
+[ANSWER] I = 2 W/m², beta = 123 dB\\\\
+[REASONABLENESS] 123 dB is jet engine loud - causes hearing damage!\\\\
+[IF CONFUSED] Break into two steps: intensity first, THEN decibels}
+\end{frame}
+
+\begin{frame}
+\frametitle{Human Hearing}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig24.jpg}
+\end{figure}
+
+\pause
+\textbf{Hearing range:} 20 Hz to 20,000 Hz
+\begin{itemize}
+\item Below 20 Hz: \textbf{Infrasound}
+\item Above 20,000 Hz: \textbf{Ultrasound}
+\end{itemize}
+\note{[SAY] "Human hearing: 20 Hz to 20,000 Hz"\\\\
+[REAL EXAMPLES] Infrasound: elephants, earthquakes\\\\
+[REAL EXAMPLES] Ultrasound: medical imaging, dog whistles, bats\\\\
+[KEY FACT] Hearing degrades with age - lose high frequencies first\\\\
+[CHECK] Name wheel: why can dogs hear dog whistles but we can't?\\\\
+ANSWER: Dog whistles are ultrasound - above 20 kHz\\\\
+[TRANSITION] Now let's explore the Doppler effect...}
+\end{frame}
+
+%=============================================================================
+\section{14.3 Doppler Effect and Sonic Booms}
+%=============================================================================
+
+\begin{frame}
+\frametitle{The Doppler Effect}
+\textbf{Definition:} A change in the observed frequency of a sound due to relative motion between source and observer.
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Examples:}
+\begin{itemize}
+\item Ambulance siren pitch changes as it passes \pause
+\item Race car engine sound \pause
+\item Train whistle
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+\alert{Moving toward} $\rightarrow$ higher frequency (higher pitch)
+
+\alert{Moving away} $\rightarrow$ lower frequency (lower pitch)
+\note{[SAY] "Think of an ambulance siren as it passes you"\\\\
+[KEY INSIGHT] Approaching: waves bunch up in front (higher pitch)\\\\
+[KEY INSIGHT] Receding: waves stretch out behind (lower pitch)\\\\
+[CHECK] Volunteers: what happens to pitch as ambulance passes?\\\\
+ANSWER: Pitch drops suddenly from high to low\\\\
+[MNEMONIC] Toward equals Tall pitch, Away equals Awful pitch\\\\
+[TRANSITION] Let's see why this happens...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Stationary Source}
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig31-1.jpg}
+\end{figure}
+
+\pause
+When source and observer are stationary, wavelength and frequency are the same in all directions.
+\note{[SAY] "Look at the diagram - all circles are evenly spaced"\\\\
+[EMPHASIZE] Same wavelength in all directions when source is stationary\\\\
+[CHECK] Thumbs up/down: are the wave circles evenly spaced?\\\\
+ANSWER: Yes - source is not moving\\\\
+[TRANSITION] Now watch what happens when the source moves...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Moving Source}
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig31.jpg}
+\end{figure}
+
+\pause
+\begin{itemize}
+\item Waves compress in front (shorter $\lambda$, higher $f$) \pause
+\item Waves stretch behind (longer $\lambda$, lower $f$)
+\end{itemize}
+\note{[SAY] "Look - circles bunched up in front, spread out behind"\\\\
+[KEY INSIGHT] Source catches up to its own waves in front\\\\
+[EMPHASIZE] Shorter lambda means higher frequency (v equals f lambda)\\\\
+[CHECK] Name wheel: who hears higher pitch, front or back observer?\\\\
+ANSWER: Front observer - shorter wavelength equals higher frequency\\\\
+[TRANSITION] Let's see the equation for this...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Doppler Effect Equation - Moving Source}
+For a \textbf{stationary observer} and \textbf{moving source}:
+
+\pause
+\begin{center}
+\Huge
+$\boxed{f_{obs} = f_s\left(\frac{v_w}{v_w \pm v_s}\right)}$
+\end{center}
+
+\pause
+\vspace{0.2cm}
+\textbf{Variables:} $f_{obs}$ = observed, $f_s$ = source, $v_w$ = sound speed, $v_s$ = source speed
+
+\pause
+\vspace{0.2cm}
+\textbf{Sign:} \alert{Minus} = toward (higher pitch) \quad \alert{Plus} = away (lower pitch)
+\note{[EMPHASIZE] This is the Doppler equation for moving source!\\\\
+[SAY] "f-observed equals f-source times v-w over v-w plus or minus v-s"\\\\
+[SIGN TRICK] Toward uses MINUS (smaller denominator = higher f)\\\\
+[MNEMONIC] Minus for Moving toward - both start with M\\\\
+[CHECK] Name wheel: if source moves toward, denominator gets...?\\\\
+ANSWER: Smaller (v-w minus v-s), so f-observed gets BIGGER\\\\
+[TRANSITION] What about a moving observer?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Doppler Effect - Moving Observer}
+For a \textbf{moving observer} and \textbf{stationary source}:
+
+\pause
+\begin{center}
+\Large
+$f_{obs} = f_s\left(\frac{v_w \pm v_{obs}}{v_w}\right)$
+\end{center}
+
+\pause
+\vspace{0.3cm}
+\textbf{Sign convention:}
+\begin{itemize}
+\item \alert{Plus (+)}: observer moving \textbf{toward} source
+\item \alert{Minus (-)}: observer moving \textbf{away} from source
+\end{itemize}
+\note{[EMPHASIZE] v-obs is in the NUMERATOR this time!\\\\
+[KEY DIFFERENCE] Opposite signs from moving source equation\\\\
+[SAY] "Plus for toward - bigger numerator means higher frequency"\\\\
+[CHECK] Name wheel: why are signs opposite from moving source?\\\\
+ANSWER: Speed is in numerator, not denominator - math works opposite\\\\
+[TRANSITION] Let's practice with a Doppler problem...}
+\end{frame}
+
+%-----------------------------------------------------------------------------
+% Attempt → Compare → Practice: Doppler Effect
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Attempt: Doppler Problem}
+\textbf{Try this on your own (3 min, silent):}
+
+\vspace{0.5cm}
+
+A train with a 150 Hz horn moves at 35 m/s toward you. The speed of sound is 340 m/s.
+
+\vspace{0.3cm}
+
+What frequency do you hear?
+
+\vspace{0.8cm}
+
+\begin{center}
+\Large
+\textit{Work individually. It's okay to get stuck!}
+\end{center}
+\note{[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Key decision: plus or minus in denominator?\\\\
+[WATCH FOR] Students using wrong sign convention\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Discuss with Partner}
+\textbf{Turn to your neighbor (3 min):}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item Did you use plus or minus in the denominator? \pause
+\item Should the observed frequency be higher or lower? \pause
+\item Does your answer match that prediction?
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Name wheel:} Share your \alert{reasoning for the sign}
+\note{[SAY] "Compare with your neighbor. Did you use plus or minus?"\\\\
+[TIMING] 2-3 min pair discussion\\\\
+[KEY INSIGHT] Toward means MINUS - smaller denominator means higher frequency\\\\
+[CHECK] Name wheel: call pairs to explain their sign reasoning\\\\
+[COMMON ERROR] Using plus instead of minus for approaching source}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Solution Step-by-Step}
+\textbf{Mark corrections in a different color!}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Equation (moving source toward):}
+$$f_{obs} = f_s\left(\frac{v_w}{v_w - v_s}\right)$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Substitute:}
+$$f_{obs} = 150\left(\frac{340}{340 - 35}\right) = 150\left(\frac{340}{305}\right)$$
+
+\pause
+\vspace{0.3cm}
+
+$$\boxed{f_{obs} = 167 \text{ Hz}}$$
+
+\pause
+
+\textbf{Check:} Moving toward $\rightarrow$ higher pitch. 167 > 150. Correct!
+\note{[ALGEBRA]\\\\
+- "f-observed equals f-source times v-w over v-w MINUS v-s"\\\\
+- "MINUS because source is moving TOWARD us"\\\\
+- "That's 150 times 340 over 340 minus 35"\\\\
+- "150 times 340 over 305"\\\\
+[ANSWER] f-observed equals 167 Hz\\\\
+[REASONABLENESS] Moving toward means higher pitch - 167 is greater than 150, correct!\\\\
+[IF CONFUSED] Remember: Minus for Moving toward - both start with M\\\\
+[TRANSITION] What happens if source goes faster than sound?}
+\end{frame}
+
+%-----------------------------------------------------------------------------
+% Sonic Boom
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Sonic Booms}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.45\textheight,keepaspectratio]{phys11-sound-fig34.jpg}
+\end{figure}
+
+\pause
+\textbf{Sonic boom:} Constructive interference of sound created by an object moving \alert{faster than sound}.
+
+\pause
+\vspace{0.3cm}
+\begin{itemize}
+\item All sound waves pile up at once
+\item Creates intense pressure wave
+\item Aircraft creates two booms (nose and tail)
+\end{itemize}
+\note{[DEFINITION] Supersonic means faster than sound\\\\
+[KEY FACT] Mach 1 equals speed of sound - about 340 m/s or 1235 km/h\\\\
+[EMPHASIZE] All waves pile up in a cone - the Mach cone\\\\
+[REAL EXAMPLE] Thunder is a natural sonic boom - lightning is supersonic!\\\\
+[CHECK] Name wheel: why do jets create TWO booms?\\\\
+ANSWER: One from the nose, one from the tail\\\\
+[TRANSITION] Now let's explore resonance and standing waves...}
+\end{frame}
+
+%=============================================================================
+\section{14.4 Sound Interference and Resonance}
+%=============================================================================
+
+\begin{frame}
+\frametitle{Resonance}
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{phys11-sound-fig39.jpg}
+\end{figure}
+
+\pause
+\textbf{Resonance:} Driving a system at its \alert{natural frequency} causes maximum amplitude oscillations.
+
+\pause
+\vspace{0.3cm}
+\textbf{Examples:}
+\begin{itemize}
+\item Pushing a child on a swing at the right rhythm
+\item Piano strings vibrating in response to your voice
+\item Tuning a radio to a specific frequency
+\end{itemize}
+\note{[DEFINITION] Resonance: driving frequency matches natural frequency\\\\
+[SAY] "Small pushes at the right time build up to big oscillations"\\\\
+[REAL EXAMPLE] Tacoma Narrows Bridge collapse - wind matched natural frequency\\\\
+[CHECK] Name wheel: what happens if you push a swing at the WRONG time?\\\\
+ANSWER: You slow it down or cancel the motion - destructive interference\\\\
+[TRANSITION] Now let's see what happens with two similar frequencies...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Beats}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig41.jpg}
+\end{figure}
+
+\pause
+\textbf{Beats:} Produced by superposition of two waves with slightly different frequencies.
+\note{[SAY] "Point to diagram: two waves with SLIGHTLY different frequencies"\\\\
+[EMPHASIZE] Sometimes in phase (loud), sometimes out of phase (quiet)\\\\
+[REAL EXAMPLE] Creates wah-wah-wah sound you hear when tuning a guitar\\\\
+[CHECK] Name wheel: what happens when waves are in phase?\\\\
+ANSWER: Constructive interference - louder\\\\
+[TRANSITION] Here's the equation for beat frequency...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Beat Frequency}
+\begin{center}
+\Huge
+$\boxed{f_B = |f_1 - f_2|}$
+\end{center}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Applications:}
+\begin{itemize}
+\item Piano tuning - adjust until beats disappear
+\item Guitar tuning
+\item Musical instrument manufacturing
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+\textit{When two frequencies are similar, we hear the average frequency getting louder and softer at the beat frequency.}
+\note{[SAY] "f-B equals absolute value of f-1 minus f-2"\\\\
+[KEY APPLICATION] Piano tuning: adjust until beats disappear (means f1 equals f2)\\\\
+[EMPHASIZE] Beats per second equals the difference in Hz\\\\
+[CHECK] Name wheel: if f1 equals 440 Hz and f2 equals 442 Hz, beat frequency?\\\\
+ANSWER: 2 Hz - you hear 2 wah-wah's per second\\\\
+[TRANSITION] Now let's look at standing waves in tubes...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Standing Waves in Tubes}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig42.jpg}
+\end{figure}
+
+\pause
+Sound waves reflect off closed ends and interfere to create \textbf{standing waves}.
+\note{[SAY] "Sound reflects off closed end, interferes with incoming wave"\\\\
+[DEFINITION] Nodes: no motion; Antinodes: maximum motion\\\\
+[REAL APPLICATION] Musical instruments use this to produce specific notes\\\\
+[CHECK] Name wheel: what is a standing wave?\\\\
+ANSWER: Wave that appears stationary due to interference of two waves\\\\
+[TRANSITION] Let's compare closed and open pipes...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Closed-Pipe Resonator}
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig44.jpg}
+\end{figure}
+
+\pause
+\textbf{Resonant frequencies:}
+\begin{center}
+\Large
+$\boxed{f_n = n\frac{v}{4L}, \quad n = 1, 3, 5, ...}$
+\end{center}
+
+\pause
+\textbf{Only odd harmonics!} (Node at closed end, antinode at open end)
+\note{[KEY RULE] Closed end equals node (air can't move)\\\\
+[KEY RULE] Open end equals antinode (air moves freely)\\\\
+[SAY] "f-n equals n times v over 4L, where n is 1, 3, 5..."\\\\
+[EMPHASIZE] Only ODD harmonics for closed pipe!\\\\
+[CHECK] Name wheel: why only odd harmonics?\\\\
+ANSWER: Need one-quarter wavelength to fit node-to-antinode\\\\
+[TRANSITION] Now compare to open pipe...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Open-Pipe Resonator}
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth,height=0.5\textheight,keepaspectratio]{phys11-sound-fig45.jpg}
+\end{figure}
+
+\pause
+\textbf{Resonant frequencies:}
+\begin{center}
+\Large
+$\boxed{f_n = n\frac{v}{2L}, \quad n = 1, 2, 3, ...}$
+\end{center}
+
+\pause
+\textbf{All harmonics!} (Antinodes at both ends)
+\note{[KEY RULE] Both ends open means antinodes at both ends\\\\
+[SAY] "f-n equals n times v over 2L, where n is 1, 2, 3..."\\\\
+[EMPHASIZE] ALL harmonics for open pipe - richer sound!\\\\
+[REAL EXAMPLES] Flute is open pipe, clarinet is closed pipe\\\\
+[CHECK] Name wheel: fundamental wavelength for open pipe?\\\\
+ANSWER: Lambda equals 2L - half a wavelength fits in the pipe\\\\
+[TRANSITION] Let's compare the two types...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Comparing Resonators}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Closed Pipe}
+\begin{itemize}
+\item One end closed
+\item Only odd harmonics
+\item $f_n = n\frac{v}{4L}$
+\item $n = 1, 3, 5...$
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Open Pipe}
+\begin{itemize}
+\item Both ends open
+\item All harmonics
+\item $f_n = n\frac{v}{2L}$
+\item $n = 1, 2, 3...$
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.5cm}
+\textbf{Note:} An open pipe has twice the fundamental frequency of a closed pipe of the same length!
+\note{[KEY COMPARISON] Closed uses 4L, open uses 2L in denominator\\\\
+[EMPHASIZE] Same length pipe: open pipe is 2x frequency - one octave higher!\\\\
+[KEY INSIGHT] Closed has only odd harmonics - different timbre\\\\
+[CHECK] Name wheel: which pipe has richer sound?\\\\
+ANSWER: Open pipe - has ALL harmonics, not just odd ones\\\\
+[TRANSITION] Now let's practice with a closed pipe problem...}
+\end{frame}
+
+%-----------------------------------------------------------------------------
+% ACP: Closed Pipe Resonance
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Attempt: Closed Pipe Length}
+\textbf{Try this on your own (3 min, silent):}
+
+\vspace{0.3cm}
+
+If sound travels at 344 m/s, what should be the length of a tube closed at one end to have a fundamental frequency of 128 Hz?
+
+\vspace{0.5cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $f_1 = 128$ Hz (fundamental frequency)
+\item $v = 344$ m/s (speed of sound)
+\item Tube closed at one end
+\end{itemize}
+
+\textbf{Find:} Length $L$
+
+\vspace{0.3cm}
+
+\textit{Work individually. It's okay to get stuck.}
+\note{[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Key decision: which pipe equation to use?\\\\
+[WATCH FOR] Students not recognizing "closed at one end" means closed pipe\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Closed Pipe Length}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Share your approach with your partner
+\item Which equation did you choose? Why?
+\item How did you rearrange for $L$?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[SAY] "Turn to your partner. Which equation did you use?"\\\\
+[TIMING] 2-3 min pair discussion\\\\
+[CHECK] Name wheel: call a pair to share their approach\\\\
+[EXPECTED APPROACH] Identify closed pipe, use f-1 equals v over 4L, solve for L\\\\
+[COMMON ERROR] Using open pipe formula (2L) instead of closed pipe (4L)}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Closed Pipe Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{E - Equation:} Closed pipe: $f_1 = \frac{v}{4L}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Rearrange for L:}
+$$f_1 = \frac{v}{4L} \quad \rightarrow \quad 4Lf_1 = v \quad \rightarrow \quad L = \frac{v}{4f_1}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{S - Substitute:} $L = \frac{344 \text{ m/s}}{4(128 \text{ Hz})} = \frac{344}{512}$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{L = 0.672 \text{ m} \approx 67 \text{ cm}}$$
+
+\textbf{Check:} About 2 feet - reasonable for a musical tube.
+\note{[ALGEBRA]\\\\
+- "Start with f-1 equals v over 4L"\\\\
+- "Multiply both sides by 4L to get 4L times f-1 equals v"\\\\
+- "Divide both sides by 4 times f-1"\\\\
+- "L equals v over 4 times f-1"\\\\
+[ANSWER] L equals 0.672 m, about 67 cm (two feet)\\\\
+[REASONABLENESS] 128 Hz is middle C - this is about the length of a flute\\\\
+[IF CONFUSED] Remember: closed pipe uses 4L, open pipe uses 2L\\\\
+[TRANSITION] Now let's try a beat frequency problem...}
+\end{frame}
+
+%-----------------------------------------------------------------------------
+% ACP: Beat Frequency
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Attempt: Piano Tuning Problem}
+\textbf{Try this on your own (3 min, silent):}
+
+\vspace{0.3cm}
+
+A piano tuner hears 2 beats per second when comparing a piano note to a 256 Hz tuning fork. What are the possible frequencies of the piano?
+
+\vspace{0.5cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Beat frequency $f_B = 2$ Hz
+\item Tuning fork frequency $f_2 = 256$ Hz
+\end{itemize}
+
+\textbf{Find:} Piano frequency $f_1$
+
+\vspace{0.3cm}
+
+\textit{There may be more than one answer!}
+\note{[SAY] "Try this on your own. Hint: there may be more than one answer!"\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Key insight: absolute value means TWO possibilities\\\\
+[WATCH FOR] Students getting only one answer\\\\
+[DON'T HELP] Let them struggle - the two-answer insight is the learning}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Piano Tuning}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Share your approach with your partner
+\item Did you get one answer or two?
+\item How did the absolute value affect your solution?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair explain why there might be two answers.
+\note{[SAY] "Did you get one answer or two? Compare with your partner."\\\\
+[TIMING] 2-3 min pair discussion\\\\
+[CHECK] Name wheel: call a pair to explain why TWO answers\\\\
+[EXPECTED INSIGHT] Absolute value means f1 could be above OR below f2\\\\
+[KEY VOCABULARY] Piano could be "sharp" (above) or "flat" (below)}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Piano Tuning Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{E - Equation:} $f_B = |f_1 - f_2|$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Rearrange:} Since $|f_1 - f_2| = 2$, we have:
+$$f_1 - f_2 = +2 \quad \text{OR} \quad f_1 - f_2 = -2$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{S - Substitute:}
+$$f_1 = 256 + 2 = 258 \text{ Hz} \quad \text{(piano sharp)}$$
+$$f_1 = 256 - 2 = 254 \text{ Hz} \quad \text{(piano flat)}$$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{f_1 = 258 \text{ Hz or } 254 \text{ Hz}}$$
+\note{[ALGEBRA]\\\\
+- "f-B equals absolute value of f-1 minus f-2"\\\\
+- "2 equals absolute value of f-1 minus 256"\\\\
+- "So f-1 minus 256 equals positive 2 OR negative 2"\\\\
+[ANSWER] f-1 equals 258 Hz (sharp) OR 254 Hz (flat)\\\\
+[KEY INSIGHT] How does tuner know which? Tighten the string:\\\\
+- Beats slow down means piano was flat (now getting closer)\\\\
+- Beats speed up means piano was sharp (now getting further)\\\\
+[EMPHASIZE] When beat frequency equals zero, piano is in tune!}
+\end{frame}
+
+%=============================================================================
+\section{Summary}
+%=============================================================================
+
+\begin{frame}
+\frametitle{Chapter Summary}
+\textbf{Key Takeaways:}
+
+\pause
+\begin{enumerate}
+\item Sound is a longitudinal wave with compressions and rarefactions \pause
+\item Speed of sound depends on medium properties (rigidity and density) \pause
+\item Sound intensity is proportional to amplitude squared \pause
+\item Decibels measure sound intensity level logarithmically \pause
+\item Doppler effect: frequency changes with relative motion \pause
+\item Resonance occurs when driving frequency equals natural frequency \pause
+\item Standing waves in pipes produce harmonics
+\end{enumerate}
+\note{[QUICK] 7 key takeaways - review briefly\\\\
+[EMPHASIZE] Most important: v equals f lambda, and the decibel formula\\\\
+[REAL WORLD] Doppler for ambulances, resonance for musical instruments\\\\
+[CHECK] Turn and tell: which concept was most surprising?\\\\
+[TRANSITION] Let's see the key equations together...}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Equations}
+\begin{align}
+v &= f\lambda \quad \text{(wave equation)} \\
+I &= \frac{P}{A} \quad \text{(intensity)} \\
+\beta &= 10\log_{10}\left(\frac{I}{I_0}\right) \quad \text{(decibels)} \\
+f_{obs} &= f_s\left(\frac{v_w}{v_w \pm v_s}\right) \quad \text{(Doppler)} \\
+f_B &= |f_1 - f_2| \quad \text{(beats)} \\
+f_n &= n\frac{v}{4L} \quad \text{(closed pipe)} \\
+f_n &= n\frac{v}{2L} \quad \text{(open pipe)}
+\end{align}
+\note{[SAY] "These all go on your formula sheet"\\\\
+[QUICK] Run through each equation's use:\\\\
+- v equals f lambda: any wave problem\\\\
+- I equals P over A: intensity from power\\\\
+- Decibel formula: log scale conversion\\\\
+- Doppler: sign convention is key\\\\
+- Pipes: closed uses 4L (odd n), open uses 2L (all n)\\\\
+[CHECK] Name wheel: when would you use the Doppler equation?\\\\
+ANSWER: When source or observer is moving relative to the other\\\\
+[TRANSITION] Any final questions?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS\\[0.8cm]
+\pause
+\textbf{Questions?}
+\end{center}
+\note{[SAY] "Homework is posted on the LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Any questions before we end?\\\\
+[TRANSITION] Next class: Chapter 15 Light - electromagnetic waves}
+\end{frame}
+
+\end{document}

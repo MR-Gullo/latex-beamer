@@ -1,0 +1,907 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Electric Circuits]{PHYS11 CH:19 The Invisible River of Energy}
+\subtitle{How Charge Flows Through the World}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we harness the invisible river that powers civilization\\\\
+- Same physics in your phone charger AND the power grid\\\\
+- Four revelations: Ohm's law, series circuits, parallel circuits, electric power\\\\
+[THE WONDER] By end of class, you'll decode every circuit around you\\\\
+- This is how humanity tamed electricity}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery}
+\begin{center}
+\Large What if you could control\\
+\textit{an invisible river of charge?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+From nerve impulses in your brain to hydroelectric dams sending power across continents...
+
+\pause
+\vspace{0.3cm}
+\alert{Same laws guide the flow.}
+\note{[P0] "What if you could control an invisible river of charge?"\\\\
+[P1] "From nerve impulses in your brain to hydroelectric dams sending power across continents"\\\\
+[P2] [THE WONDER] "Same laws guide the flow - we call it electric current"\\\\
+[THE CONNECTION - Digital Archetype] Every device you own runs on these principles}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Invisible River}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-circuits-fig01.jpg}
+\end{figure}
+
+\pause
+\begin{exampleblock}{The Mental Model}
+Electric current is like water flowing through pipes - voltage is the pressure, resistance is the friction.
+\end{exampleblock}
+\note{[P0] "Hydroelectric facility - converts water pressure to electric current"\\\\
+[P1] [THE REVELATION] "Electric current is like water flowing through pipes"\\\\
+- Voltage is pressure pushing charges\\\\
+- Resistance slows the flow\\\\
+[THE WONDER] We've harnessed this to improve quality of life}
+\end{frame}
+
+\section{19.1 Ohm's Law}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{19.1:} Describe how current is related to charge and time \pause
+\item \textbf{19.1:} Distinguish between direct and alternating current \pause
+\item \textbf{19.1:} Define resistance and verbally describe Ohm's law \pause
+\item \textbf{19.1:} Calculate current and solve problems involving Ohm's law
+\end{itemize}
+\end{block}
+\note{[P0] "Four objectives for Ohm's law"\\\\
+[P1] "First: understand current as moving charge"\\\\
+[P2] "Second: DC vs AC current"\\\\
+[P3] "Third: define resistance and Ohm's law"\\\\
+[P4] "Fourth: solve circuit problems"\\\\
+- This is foundational for all circuits}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.1 The Flow of Charge}
+\begin{block}{The Definition}
+\begin{center}
+\Large $\boxed{I = \frac{\Delta Q}{\Delta t}}$
+\end{center}
+Current equals charge per unit time. Measured in amperes (A).
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+One ampere = one coulomb per second: $1 \text{ A} = 1 \text{ C/s}$
+
+\pause
+\begin{exampleblock}{The Mental Model}
+If 5 coulombs flow past a point in 1 second, the current is 5 A.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "Current I equals charge Q over time t - rate of charge flow"\\\\
+[P1] "One ampere equals one coulomb per second"\\\\
+[P2] "If 5 coulombs flow past a point in 1 second, current is 5 A"\\\\
+[THE CONNECTION - Harmonic Archetype] Like measuring water flow in liters per second}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.1 The Direction Paradox}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys11-circuits-fig02.jpg}
+\end{figure}
+
+\pause
+\begin{alertblock}{The Paradox}
+\textbf{Reality:} Electrons flow from negative to positive.\\
+\textbf{Convention:} Current flows from positive to negative.
+\end{alertblock}
+\note{[P0] "Battery with wire connecting terminals"\\\\
+[P1] [THE CONFLICT] "Electrons carry negative charge, so they flow from negative terminal to positive"\\\\
+- But we define conventional current as positive charge flow\\\\
+- Blame Benjamin Franklin - he guessed wrong in 1750s\\\\
+[THE HUMILITY] We're stuck with this backwards convention}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.1 Direct Current vs Alternating Current}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Direct Current (DC)}
+\begin{itemize}
+\item Flows one direction
+\item Constant over time
+\item Batteries provide DC
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Alternating Current (AC)}
+\begin{itemize}
+\item Direction alternates
+\item Smoothly reverses
+\item Wall sockets provide AC
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.3\textheight,keepaspectratio]{phys11-circuits-fig09.jpg}
+\end{figure}
+\note{[P0] "Two types of current"\\\\
+[P1] "DC flows one direction - batteries, flashlights, cars"\\\\
+[P2] "AC alternates back and forth - wall sockets, power grid"\\\\
+- AC graph shows current reversing smoothly\\\\
+- Most devices use transformers to convert AC to DC\\\\
+[THE CONNECTION - Digital Archetype] Your laptop charger is really an AC-to-DC converter}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.1 The Universal Law of Resistance}
+\begin{block}{Ohm's Law}
+\begin{center}
+\Large $\boxed{V = IR}$
+\end{center}
+Voltage equals current times resistance. The pushback equation.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Units:} Resistance measured in ohms ($\Omega$), where $1 \Omega = 1 \text{ V/A}$
+
+\pause
+\begin{exampleblock}{The Mental Model}
+Resistance is friction for electrons - it converts electrical energy to heat.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "V equals I R - discovered by Georg Ohm in 1827"\\\\
+[P1] "Resistance measured in ohms - Greek letter omega"\\\\
+[P2] "Resistance is friction for electrons - creates heat"\\\\
+[THE WONDER] This equation works for most materials at normal temperatures\\\\
+- Called ohmic materials}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Lightning Strike Current}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A lightning strike transfers $10^{20}$ electrons from cloud to ground in 2 ms.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $n = 10^{20}$ electrons
+\item $e = -1.60 \times 10^{-19}$ C
+\item $\Delta t = 2 \times 10^{-3}$ s
+\end{itemize}
+
+\textbf{Find:} Average current $I$
+
+\vspace{0.3cm}
+
+\textit{Can you calculate the current in a lightning bolt? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they calculate current in nature's most dramatic circuit?\\\\
+[SAY] "Try this on your own - it's okay to get stuck"\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who calculates total charge first, who's stuck\\\\
+[WATCH FOR] Students forgetting negative sign on electron charge\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Lightning Strike}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you find the total charge?
+\item What formula did you use for current?
+\item What sign did you get for your answer?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for common approaches\\\\
+[CHECK] Name wheel: call a pair to share approach\\\\
+[EXPECTED APPROACH] Total charge Q equals n times e, then I equals Q over t\\\\
+[COMMON ERROR] Forgetting that current is negative because electrons carry negative charge}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Power of Lightning}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Total charge: $\Delta Q = ne = (10^{20})(-1.60 \times 10^{-19} \text{ C}) = -16.0 \text{ C}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2:} Current: $I = \frac{\Delta Q}{\Delta t}$
+
+\pause
+\vspace{0.2cm}
+
+$$I = \frac{-16.0 \text{ C}}{2 \times 10^{-3} \text{ s}} = \boxed{-8 \text{ kA}}$$
+
+\pause
+\textbf{Check:} Negative sign means electrons flow down. Conventional current flows up!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "Total charge equals n times e - 10 to the 20 times negative 1.6 times 10 to the negative 19"\\\\
+[P2] "Current equals charge over time"\\\\
+[P3] [ANSWER] "Negative 8 kiloamps - 8000 amperes!"\\\\
+[P4] "Negative sign: electrons flow down, but positive current flows up"\\\\
+[THE WONDER] You just calculated the current in a lightning bolt - same equation NASA uses}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Headlight Resistance}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+An automobile headlight has 2.50 A flowing through it when 12.0 V is applied.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $I = 2.50$ A
+\item $V = 12.0$ V
+\end{itemize}
+
+\textbf{Find:} Resistance $R$ of the headlight
+
+\vspace{0.3cm}
+
+\textit{Can you find the resistance using Ohm's law?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they rearrange Ohm's law?\\\\
+[SAY] "Use V equals I R - solve for R"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who rearranges correctly\\\\
+[WATCH FOR] Students dividing instead of multiplying\\\\
+[DON'T HELP] Productive struggle}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Resistance}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation did you start with?
+\item How did you solve for R?
+\item What units did you get?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for algebra steps\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] V equals I R, so R equals V over I\\\\
+[COMMON ERROR] Multiplying instead of dividing}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Headlight Resistance}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Start with Ohm's law:} $V = IR$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Solve for R:} $R = \frac{V}{I}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $R = \frac{12.0 \text{ V}}{2.50 \text{ A}}$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{R = 4.8 \Omega}$$
+
+\pause
+\textbf{Check:} 4.8 ohms - relatively small resistance for a headlight.
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "Start with V equals I R"\\\\
+[P2] "Solve for R - divide both sides by I"\\\\
+[P3] "R equals 12 volts over 2.5 amperes"\\\\
+[P4] [ANSWER] "4.8 ohms - small resistance"\\\\
+[THE WONDER] Same law in your headlight as in power plants across the world}
+\end{frame}
+
+\section{19.2 Series Circuits}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{19.2:} Interpret circuit diagrams and diagram basic circuit elements \pause
+\item \textbf{19.2:} Calculate equivalent resistance of resistors in series
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for series circuits"\\\\
+[P1] "First: read and draw circuit diagrams"\\\\
+[P2] "Second: calculate equivalent resistance in series"\\\\
+- Foundation for analyzing real circuits}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.2 The Language of Circuits}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-circuits-fig20.jpg}
+\end{figure}
+
+\pause
+\textbf{Circuit symbols:}
+\begin{itemize}
+\item Battery: long line = positive, short line = negative
+\item Resistor: zigzag element
+\item Wire: perfect conductor (no resistance)
+\item Ground: reference point (voltage = 0)
+\end{itemize}
+\note{[P0] "Circuit diagram with battery and resistor"\\\\
+[P1] "Learn to read the schematic language"\\\\
+- Battery: longer line is positive terminal\\\\
+- Resistor: zigzag shows opposition to flow\\\\
+- Wires assumed perfect - no voltage drop\\\\
+[THE CONNECTION - Digital Archetype] Like learning to read code}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.2 Resistors in Series}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys11-circuits-fig28.jpg}
+\end{figure}
+
+\pause
+\begin{block}{The Rule for Series}
+\begin{center}
+\Large $\boxed{R_{\text{equiv}} = R_1 + R_2 + R_3}$
+\end{center}
+Series resistances add. One path, obstacles accumulate.
+\end{block}
+\note{[P0] "Three resistors connected head-to-tail"\\\\
+[P1] [THE REVELATION] "Series resistances add - R-equiv equals R-1 plus R-2 plus R-3"\\\\
+- Same current flows through all\\\\
+- Voltage drops across each resistor\\\\
+[THE CONNECTION - Kinetic Archetype] Like running through multiple obstacles in a row}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.2 The Voltage Loop}
+\textbf{Key insight:} Going around a complete loop, voltage changes sum to zero.
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Like hiking in hills - total elevation gained equals total elevation lost when you return to start.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+For series circuit: $V_{\text{battery}} = V_1 + V_2 + V_3$
+
+\pause
+\vspace{0.3cm}
+
+Using Ohm's law: $V = I(R_1 + R_2 + R_3)$
+\note{[P0] "Voltage loop rule - conservation of energy"\\\\
+[P1] "Like hiking - what goes up must come down"\\\\
+[P2] "Battery voltage equals sum of voltage drops"\\\\
+[P3] "Leads to series resistance formula"\\\\
+[THE WONDER] Same reasoning works for any circuit}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Series Circuit}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Three resistors in series: $R_1 = 1.0 \Omega$, $R_2 = 6.0 \Omega$, $R_3 = 13 \Omega$. Battery voltage is 12 V.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $R_1 = 1.0 \Omega$, $R_2 = 6.0 \Omega$, $R_3 = 13 \Omega$
+\item $V = 12$ V
+\end{itemize}
+
+\textbf{Find:} (a) Equivalent resistance, (b) Current through circuit
+
+\vspace{0.3cm}
+
+\textit{Can you reduce the circuit to a single resistance?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Two-part problem - resistance then current\\\\
+[SAY] "Find equivalent resistance first, then use Ohm's law"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who completes part a but gets stuck on part b\\\\
+[DON'T HELP] Let them work through both parts}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Series Resistance}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you find equivalent resistance?
+\item What equation did you use for current?
+\item Did you get the same values?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for strategy\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Add resistances, then I equals V over R-equiv\\\\
+[COMMON ERROR] Trying to find current before finding equivalent resistance}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Series Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Part (a):} $R_{\text{equiv}} = R_1 + R_2 + R_3$
+
+\pause
+$$R_{\text{equiv}} = 1.0 \Omega + 6.0 \Omega + 13 \Omega = \boxed{20 \Omega}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Part (b):} $I = \frac{V}{R_{\text{equiv}}}$
+
+\pause
+$$I = \frac{12 \text{ V}}{20 \Omega} = \boxed{0.60 \text{ A}}$$
+
+\pause
+\textbf{Check:} Voltage drops: $V_1 = 0.6$ V, $V_2 = 3.6$ V, $V_3 = 7.8$ V. Sum = 12 V!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "R-equiv equals 1 plus 6 plus 13"\\\\
+[P2] [ANSWER] "20 ohms"\\\\
+[P3] "Current equals 12 volts over 20 ohms"\\\\
+[P4] [ANSWER] "0.60 amperes"\\\\
+[P5] "Check: individual drops add to 12 V - energy conserved!"\\\\
+[THE WONDER] You just analyzed a circuit like an engineer}
+\end{frame}
+
+\section{19.3 Parallel Circuits}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{19.3:} Interpret circuit diagrams with parallel resistors \pause
+\item \textbf{19.3:} Calculate equivalent resistance of resistor combinations
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for parallel circuits"\\\\
+[P1] "First: understand parallel configuration"\\\\
+[P2] "Second: calculate equivalent resistance"\\\\
+- More complex than series}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.3 Resistors in Parallel}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys11-circuits-fig35.jpg}
+\end{figure}
+
+\pause
+\begin{block}{The Rule for Parallel}
+\begin{center}
+\Large $\boxed{R_{\text{equiv}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}}$
+\end{center}
+Parallel resistance is reciprocal of sum of reciprocals.
+\end{block}
+\note{[P0] "Three resistors connected side-by-side"\\\\
+[P1] [THE REVELATION] "Parallel resistance uses reciprocals - more complex formula"\\\\
+- Same voltage across all resistors\\\\
+- Current splits between paths\\\\
+- More paths means LESS total resistance\\\\
+[THE CONFLICT] Counterintuitive - adding resistors decreases total resistance!}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.3 The Parallel Paradox}
+\begin{alertblock}{What Your Brain Gets Wrong}
+\textbf{Intuition:} More resistors means more resistance.\\
+\textbf{Reality:} Parallel resistors provide MORE paths, so LESS resistance!
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insight:} $R_{\text{equiv}}$ is always LESS than smallest resistor in parallel.
+
+\pause
+\begin{exampleblock}{The Mental Model}
+Three identical resistors $R$ in parallel: $R_{\text{equiv}} = R/3$
+\end{exampleblock}
+\note{[P0] [THE CONFLICT] "More resistors, less resistance - seems backwards!"\\\\
+[P1] "Equivalent resistance always less than smallest resistor"\\\\
+[P2] "Three identical R in parallel gives R over 3"\\\\
+[THE HUMILITY] This confuses everyone at first\\\\
+[THE WONDER] Current takes all available paths - nature's efficiency}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.3 Current Conservation}
+\textbf{Key principle:} Current entering a junction equals current leaving.
+
+\pause
+\vspace{0.3cm}
+
+For parallel resistors: $I = I_1 + I_2 + I_3$
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Like a river splitting into three channels - total water flow is conserved.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+Using Ohm's law on each: $I = V(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3})$
+\note{[P0] "Charge cannot be created or destroyed"\\\\
+[P1] "Total current equals sum of branch currents"\\\\
+[P2] "Like river splitting into channels"\\\\
+[P3] "Leads to parallel resistance formula"\\\\
+[THE WONDER] Conservation laws guide everything}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Parallel Circuit}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Three resistors in parallel: $R_1 = 10 \Omega$, $R_2 = 25 \Omega$, $R_3 = 15 \Omega$. Battery voltage is 3 V.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $R_1 = 10 \Omega$, $R_2 = 25 \Omega$, $R_3 = 15 \Omega$
+\item $V = 3$ V
+\end{itemize}
+
+\textbf{Find:} (a) Equivalent resistance, (b) Total current
+
+\vspace{0.3cm}
+
+\textit{Can you use the reciprocal formula?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Parallel is trickier than series\\\\
+[SAY] "Use reciprocal formula - watch your algebra"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who struggles with reciprocals\\\\
+[WATCH FOR] Calculator errors\\\\
+[DON'T HELP] Productive struggle}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Parallel Resistance}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you handle the reciprocals?
+\item What calculator steps did you use?
+\item Is your answer less than 10 ohms?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for calculation strategy\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Calculate 1/R-1 plus 1/R-2 plus 1/R-3, then take reciprocal\\\\
+[COMMON ERROR] Forgetting final reciprocal step}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Parallel Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Part (a):} $R_{\text{equiv}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}$
+
+\pause
+$$R_{\text{equiv}} = \frac{1}{\frac{1}{10} + \frac{1}{25} + \frac{1}{15}} = \frac{1}{0.1 + 0.04 + 0.0667} = \boxed{4.84 \Omega}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Part (b):} $I = \frac{V}{R_{\text{equiv}}} = \frac{3 \text{ V}}{4.84 \Omega} = \boxed{0.62 \text{ A}}$
+
+\pause
+\textbf{Check:} 4.84 < 10 (smallest resistor). Current splits: $I_1=0.30$ A, $I_2=0.12$ A, $I_3=0.20$ A!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "One over open paren 1 over 10 plus 1 over 25 plus 1 over 15 close paren"\\\\
+[P2] [ANSWER] "4.84 ohms - less than 10!"\\\\
+[P3] "Current equals 3 volts over 4.84 ohms equals 0.62 amperes"\\\\
+[P4] "Check: branch currents add to 0.62 A - charge conserved!"\\\\
+[THE WONDER] You just solved a parallel circuit - same math in power grids}
+\end{frame}
+
+\section{19.4 Electric Power}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{19.4:} Define electric power and describe the power equation \pause
+\item \textbf{19.4:} Calculate power in circuits
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for electric power"\\\\
+[P1] "First: understand power as energy transfer rate"\\\\
+[P2] "Second: calculate power in circuits"\\\\
+- This determines your electric bill}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.4 The Energy Transfer Rate}
+\begin{block}{The Power Law}
+\begin{center}
+\Large $\boxed{P = IV}$
+\end{center}
+Power equals current times voltage. Energy per unit time.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Units:} Watts (W), where $1 \text{ W} = 1 \text{ J/s}$
+
+\pause
+\begin{exampleblock}{The Mental Model}
+A 60-W bulb transfers 60 joules per second from electrical energy to light and heat.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "P equals I V - power equals current times voltage"\\\\
+[P1] "Watts measure energy transfer rate - joules per second"\\\\
+[P2] "60-W bulb converts 60 joules per second"\\\\
+[THE CONNECTION - Digital Archetype] Your electric bill charges for power times time\\\\
+[THE WONDER] Same equation in LED bulbs and power plants}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.4 Three Forms of Power}
+Using Ohm's law $V = IR$, we can derive alternate forms:
+
+\pause
+\vspace{0.3cm}
+
+\begin{align}
+P &= IV \\
+P &= I^2R \quad \text{(using } V = IR \text{)} \\
+P &= \frac{V^2}{R} \quad \text{(using } I = \frac{V}{R} \text{)}
+\end{align}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Choose the form that matches your known quantities.}
+\note{[P0] "Three equivalent power formulas"\\\\
+[P1] "P equals I V - when you know current and voltage"\\\\
+[P2] "P equals I squared R - when you know current and resistance"\\\\
+"P equals V squared over R - when you know voltage and resistance"\\\\
+[THE HUMILITY] All three are Ohm's law in disguise}
+\end{frame}
+
+\begin{frame}
+\frametitle{19.4 The 25-W vs 60-W Mystery}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys11-circuits-fig55.jpg}
+\end{figure}
+
+\pause
+\textbf{Question:} Both run on 120 V. Why different brightness?
+
+\pause
+\begin{alertblock}{The Revelation}
+They have DIFFERENT resistances! Using $P = \frac{V^2}{R}$, higher power means LOWER resistance.
+\end{alertblock}
+\note{[P0] "Two light bulbs - different power ratings"\\\\
+[P1] "Both operate on 120 V - so why different brightness?"\\\\
+[P2] [THE REVELATION] "Different resistances! P equals V squared over R"\\\\
+- Higher power requires lower resistance at same voltage\\\\
+- 60-W bulb has lower resistance than 25-W bulb\\\\
+[THE WONDER] Brightness is about resistance, not just voltage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Lightbulb Current}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A 60-W incandescent bulb operates on 120 V.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $P = 60$ W
+\item $V = 120$ V
+\end{itemize}
+
+\textbf{Find:} Current through the bulb
+
+\vspace{0.3cm}
+
+\textit{Which power formula should you use?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Choose correct formula\\\\
+[SAY] "You know P and V - which formula?"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who chooses P equals I V\\\\
+[WATCH FOR] Students using wrong formula\\\\
+[DON'T HELP] Let them choose}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Power Formula}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which power formula did you use?
+\item How did you solve for current?
+\item What units did you get?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for formula choice\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] P equals I V, so I equals P over V\\\\
+[COMMON ERROR] Using P equals I squared R without knowing R}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Lightbulb Current}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Start with:} $P = IV$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Solve for I:} $I = \frac{P}{V}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $I = \frac{60 \text{ W}}{120 \text{ V}}$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{I = 0.50 \text{ A}}$$
+
+\pause
+\textbf{Check:} Half an ampere - significant current for a light bulb!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "P equals I V"\\\\
+[P2] "Solve for I - divide both sides by V"\\\\
+[P3] "I equals 60 watts over 120 volts"\\\\
+[P4] [ANSWER] "0.50 amperes - half an amp!"\\\\
+[THE WONDER] Every time you flip a light switch, you control a half-ampere current}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Current = charge per time: $I = \frac{\Delta Q}{\Delta t}$ \pause
+\item Ohm's law = the pushback equation: $V = IR$ \pause
+\item Series resistances add: $R_{\text{equiv}} = R_1 + R_2 + \cdots$ \pause
+\item Parallel uses reciprocals: $R_{\text{equiv}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \cdots}$ \pause
+\item Power = energy transfer rate: $P = IV = I^2R = \frac{V^2}{R}$
+\end{enumerate}
+\end{block}
+\note{[P0] "Five revelations today"\\\\
+[P1] "Current is charge flow rate"\\\\
+[P2] "Ohm's law relates voltage, current, resistance"\\\\
+[P3] "Series resistances add"\\\\
+[P4] "Parallel resistances use reciprocals"\\\\
+[P5] "Power has three forms"\\\\
+[THE WONDER] You now understand every circuit around you\\\\
+- Name wheel: which was most surprising?}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+I &= \frac{\Delta Q}{\Delta t} \quad \text{(current)} \\
+V &= IR \quad \text{(Ohm's law)} \\
+R_{\text{series}} &= R_1 + R_2 + \cdots + R_N \\
+R_{\text{parallel}} &= \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_N}} \\
+P &= IV \\
+P &= I^2R \\
+P &= \frac{V^2}{R}
+\end{align}
+\note{[SAY] "Seven essential equations"\\\\
+- Current definition\\\\
+- Ohm's law\\\\
+- Series and parallel rules\\\\
+- Three power formulas\\\\
+[THE WONDER] These seven equations describe electricity in the entire world}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next: magnetism - electricity's partner in crime}
+\end{frame}
+
+\end{document}

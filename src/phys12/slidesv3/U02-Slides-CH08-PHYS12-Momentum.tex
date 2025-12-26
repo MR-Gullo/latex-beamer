@@ -1,0 +1,799 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Momentum]{PHYS12 CH:8 The Physics of Collisions}
+\subtitle{Why Crashes Change Everything}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[January 2025]{January 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we decode the physics of crashes\\\\
+- Football tackles, car accidents, rocket launches\\\\
+- One concept explains them all: momentum\\\\
+[THE WONDER] By end of class, you'll predict what happens when things collide\\\\
+- This explains why airbags save lives}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery of Collisions}
+\begin{center}
+\Large What if you could predict\\
+exactly what happens when objects collide?
+\end{center}
+
+\pause
+\vspace{0.5cm}
+Football tackles. Car crashes. Rocket launches.
+
+\pause
+\vspace{0.3cm}
+\alert{The same law governs them all.}
+\note{[P0] "What if you could predict exactly what happens when objects collide?"\\\\
+[P1] "Football tackles, car crashes, rocket launches"\\\\
+[P2] [THE WONDER] "Same law governs them all. Today: the law of momentum conservation"\\\\
+[THE CONNECTION - Kinetic Archetype] Athletes use this instinctively}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Great Exchange}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys12-momentum-fig01.jpg}
+\caption{NFC defensive backs gang tackle AFC running back during 2006 Pro Bowl}
+\end{figure}
+\note{- Players collide with tremendous force\\\\
+- Momentum transfers from one to another\\\\
+- Mass and velocity both matter\\\\
+- This image shows the physics we'll decode today}
+\end{frame}
+
+\section{Linear Momentum and Impulse}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{8.1:} Describe momentum, impulse, and the impulse-momentum theorem \pause
+\item \textbf{8.1:} Express Newton's second law in terms of momentum \pause
+\item \textbf{8.1:} Solve problems using the impulse-momentum theorem
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for momentum and impulse"\\\\
+[P1] "First: what is momentum and how does it change"\\\\
+[P2] "Second: connect to Newton's second law"\\\\
+[P3] "Third: apply to real collisions"\\\\
+- This is foundational for everything else}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.1 Mass in Motion}
+\begin{block}{The Universal Law: Momentum}
+\begin{center}
+\Large $\boxed{\vec{p} = m\vec{v}}$
+\end{center}
+Momentum equals mass times velocity. The quantity of motion.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insights:}
+\begin{itemize}
+\item Directly proportional to mass and velocity \pause
+\item Vector - same direction as velocity \pause
+\item SI unit: $\text{kg}\cdot\text{m/s}$
+\end{itemize}
+\note{[P0] [THE REVELATION] "Momentum is mass in motion - p equals m v"\\\\
+[P1] "Greater mass or greater speed means greater momentum"\\\\
+[P2] "Vector quantity - direction matters"\\\\
+[P3] "Units: kilograms times meters per second"\\\\
+[THE WONDER] Newton called this the quantity of motion}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.1 The Civilian's Mistake}
+\begin{alertblock}{Civilian View vs. Reality}
+\textbf{Civilian:} "Speed is all that matters in a collision."\\
+\textbf{Physicist:} "Mass matters just as much as velocity."
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+A slow-moving truck can have more momentum than a fast-moving bicycle.\\
+Why? Mass wins.
+\end{exampleblock}
+\note{[P0] [THE CONFLICT] "Civilians think only speed matters"\\\\
+[P1] [THE CONNECTION - Kinetic Archetype] "Think about getting hit by a slow truck versus a fast tennis ball"\\\\
+- Truck wins every time\\\\
+- Both mass AND velocity matter\\\\
+[THE HUMILITY] Our intuition misleads us}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.1 Newton's Hidden Truth}
+\begin{block}{The Original Second Law}
+\begin{center}
+\Large $\boxed{\vec{F}_{\text{net}} = \frac{\Delta\vec{p}}{\Delta t}}$
+\end{center}
+Net force equals the rate of change of momentum.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+This is actually MORE fundamental than $F = ma$.
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Why?} This version works even when mass changes (like rockets burning fuel).
+\note{[P0] [THE REVELATION] "Newton actually wrote his second law in terms of momentum"\\\\
+[P1] "F equals m a is just a special case for constant mass"\\\\
+[P2] "This version works for rockets, which lose mass as they burn fuel"\\\\
+[THE WONDER] The universe speaks in momentum, not acceleration}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.1 The Force of Time}
+\begin{block}{The Universal Law: Impulse}
+\begin{center}
+\Large $\boxed{J = \vec{F}_{\text{net}}\Delta t = \Delta\vec{p}}$
+\end{center}
+Impulse equals force times time equals change in momentum.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insight:} A small force over long time $=$ Large force over short time
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{In the Real World}
+Airbags increase collision time $\rightarrow$ decrease force on your body.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "Impulse: J equals F times delta t equals change in momentum"\\\\
+[P1] "Same momentum change can happen with small force over long time or large force over short time"\\\\
+[P2] "Airbags work by increasing the collision time, which decreases the force"\\\\
+[THE CONNECTION - All students] This is why airbags save lives}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.1 Engineering Life-Savers}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-momentum-fig02.jpg}
+\caption{Airbags and seat belts installed in vehicles}
+\end{figure}
+
+\pause
+\textbf{Physics:} $\vec{F}_{\text{net}} = \frac{\Delta\vec{p}}{\Delta t}$
+
+Increase $\Delta t$ $\rightarrow$ Decrease $\vec{F}_{\text{net}}$
+\note{[P0] "Airbags and crumple zones: pure impulse-momentum theorem"\\\\
+[P1] "Momentum change is the same either way. But by increasing the time, we decrease the force"\\\\
+- Rearrange equation: F equals delta p over delta t\\\\
+- Bigger delta t means smaller F\\\\
+[THE WONDER] Physics saves thousands of lives every year}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.1 Why Bend Your Knees?}
+\begin{alertblock}{The Challenge}
+Your friend dares you to jump off a bench without bending your knees.\\
+Why is this foolish?
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Answer:} Bending knees increases $\Delta t$, which decreases $F$.
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Stiff legs: short collision time $\rightarrow$ HUGE force on bones.\\
+Bent knees: long collision time $\rightarrow$ smaller force, no injury.
+\end{exampleblock}
+\note{[P0] [THE CHALLENGE] "Why bend your knees when landing?"\\\\
+[P1] "Bending knees increases the time of impact"\\\\
+[P2] [THE CONNECTION - Kinetic Archetype] "Athletes know this instinctively - gymnasts, basketball players"\\\\
+- Same momentum change, but spread over longer time\\\\
+- Smaller force means no broken bones}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: The Football Player}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A 110 kg football player runs at $8$ m/s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m = 110$ kg
+\item $v = 8$ m/s
+\end{itemize}
+
+\textbf{Find:} Momentum $\vec{p}$
+
+\vspace{0.3cm}
+
+\textit{Can you calculate the quantity of motion? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you calculate momentum?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3 min SILENT individual work\\\\
+[CIRCULATE] Watch for unit errors\\\\
+[DON'T HELP] Let them struggle with the equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Momentum Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation did you use?
+\item Did you include units?
+\item Is momentum a scalar or vector?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for p equals m v\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] p equals m times v, plug in 110 and 8\\\\
+[COMMON ERROR] Forgetting units or direction}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Quantity of Motion}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $\vec{p} = m\vec{v}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $\vec{p} = (110 \text{ kg})(8 \text{ m/s})$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{\vec{p} = 880 \text{ kg}\cdot\text{m/s}}$$
+
+\pause
+\textbf{Check:} Large mass, moderate speed $\rightarrow$ large momentum. Reasonable!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "p equals m times v"\\\\
+[P2] "110 kilograms times 8 meters per second"\\\\
+[P3] [ANSWER] "880 kilogram meters per second - this is the player's momentum"\\\\
+[THE WONDER] This much momentum takes a lot of force to stop}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Venus Williams' Serve}
+\begin{exampleblock}{The Challenge (4 min, silent)}
+Venus Williams hits a 0.057 kg tennis ball. It accelerates from rest to $58$ m/s in $5$ ms.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m = 0.057$ kg
+\item $v_i = 0$ m/s, $v_f = 58$ m/s
+\item $\Delta t = 5 \times 10^{-3}$ s
+\end{itemize}
+
+\textbf{Find:} Average force on ball
+
+\textit{Can you decode the power of this serve?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you find the force from the racquet?\\\\
+[SAY] "This is harder. Use impulse-momentum theorem."\\\\
+[TIMING] 4 min SILENT work\\\\
+[CIRCULATE] Watch for delta p calculation first\\\\
+[WATCH FOR] Students trying to use F equals m a without finding a first}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Impulse Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Did you find $\Delta p$ first or jump straight to force?
+\item What's the relationship between impulse and momentum?
+\item How did you handle the milliseconds?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for two-step approach\\\\
+[EXPECTED APPROACH] First find delta p equals m times delta v, then F equals delta p over delta t\\\\
+[COMMON ERROR] Not converting milliseconds to seconds}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Power Serve}
+\textbf{Self-correct in a different color:}
+
+\textbf{Step 1 - Change in momentum:}
+$$\Delta\vec{p} = m(\vec{v}_f - \vec{v}_i) = (0.057)(58 - 0) = 3.3 \text{ kg}\cdot\text{m/s}$$
+
+\pause
+
+\textbf{Step 2 - Force from impulse:}
+$$\vec{F}_{\text{net}} = \frac{\Delta\vec{p}}{\Delta t} = \frac{3.3}{5 \times 10^{-3}}$$
+
+\pause
+
+$$\boxed{\vec{F}_{\text{net}} = 660 \text{ N}}$$
+
+\pause
+\textbf{Check:} About 150 pounds of force - that's a powerful serve!
+\note{[P0] "Two-step solution"\\\\
+[P1] [ALGEBRA] "Delta p equals m times delta v equals 3.3"\\\\
+[P2] "F equals delta p over delta t"\\\\
+[P3] [ANSWER] "660 Newtons - about 150 pounds of force"\\\\
+[THE WONDER] Professional athletes generate forces we can barely imagine}
+\end{frame}
+
+\section{Conservation of Momentum}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{8.2:} Describe the law of conservation of momentum
+\end{itemize}
+\end{block}
+\note{- One objective but it's the most important law in collisions\\\\
+- This law lets us predict what happens when things crash\\\\
+- Works for football, billiards, rocket launches\\\\
+- Foundation for next section on elastic and inelastic collisions}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.2 The Universe's Accounting System}
+\begin{block}{The Universal Law: Conservation of Momentum}
+For an isolated system:
+\begin{center}
+\Large $\boxed{\vec{p}_{\text{tot}} = \text{constant}}$
+\end{center}
+or
+\begin{center}
+\Large $\boxed{\vec{p}_{\text{before}} = \vec{p}_{\text{after}}}$
+\end{center}
+Total momentum is conserved.
+\end{block}
+
+\pause
+\textbf{Isolated system:} Net external force is zero.
+\note{[P0] [THE REVELATION] "Conservation of momentum: total momentum is constant"\\\\
+[P1] "Works only for isolated systems - no net external force"\\\\
+[THE WONDER] This is one of the deepest laws in physics\\\\
+- Momentum can transfer between objects\\\\
+- But the total never changes}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.2 Two Cars Colliding}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.5\textheight,keepaspectratio]{phys12-momentum-fig03.jpg}
+\caption{Car $m_1$ bumps into car $m_2$. Total momentum conserved.}
+\end{figure}
+
+\pause
+\textbf{Before:} $\vec{p}_1 + \vec{p}_2 = m_1\vec{v}_1 + m_2\vec{v}_2$
+
+\textbf{After:} $\vec{p}'_1 + \vec{p}'_2 = m_1\vec{v}'_1 + m_2\vec{v}'_2$
+
+\textbf{Conservation:} $m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{v}'_1 + m_2\vec{v}'_2$
+\note{- Car 1 slows down, loses momentum\\\\
+- Car 2 speeds up, gains momentum\\\\
+- Total momentum stays the same\\\\
+- This assumes friction is negligible\\\\
+- Works because forces are internal to the two-car system}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.2 Why Momentum Seems to Vanish}
+\begin{alertblock}{The Illusion}
+A football player runs into the goalpost and bounces backward.\\
+His momentum changed! Is momentum conserved?
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Answer:} Expand the system to include Earth.
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Earth recoils backward (imperceptibly) when you push the goalpost.\\
+Player's momentum transfers to the entire planet.
+\end{exampleblock}
+\note{[P0] [THE CONFLICT] "Momentum seems to disappear when player hits goalpost"\\\\
+[P1] "Include Earth in the system - momentum is conserved!"\\\\
+[P2] "Earth recoils backward, but it's so massive we don't notice"\\\\
+[THE HUMILITY] It's always possible to find a larger system where momentum is conserved}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.2 Figure Skating and Angular Momentum}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-momentum-fig04.jpg}
+\caption{Ice skater spinning faster by pulling arms in}
+\end{figure}
+
+\pause
+\textbf{Angular momentum:} $\vec{L} = I\vec{\omega}$
+
+\textbf{Conservation:} $I_1\omega_1 = I_2\omega_2$
+
+Decrease $I$ (pull arms in) $\rightarrow$ Increase $\omega$ (spin faster)
+\note{[P0] "Angular momentum is the rotational version of linear momentum"\\\\
+[P1] "L equals I omega - moment of inertia times angular velocity"\\\\
+- When skater pulls arms in, moment of inertia decreases\\\\
+- So angular velocity must increase to conserve L\\\\
+[THE WONDER] Same principle as linear momentum, just for rotation}
+\end{frame}
+
+\section{Elastic and Inelastic Collisions}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{8.3:} Distinguish between elastic and inelastic collisions \pause
+\item \textbf{8.3:} Solve collision problems using conservation of momentum
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for collisions"\\\\
+[P1] "First: understand the two types of collisions"\\\\
+[P2] "Second: use momentum conservation to solve collision problems"\\\\
+- This connects everything from this chapter}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.3 Two Types of Crashes}
+\begin{block}{Elastic Collision}
+Objects bounce off each other. Kinetic energy is conserved.
+\end{block}
+
+\pause
+
+\begin{block}{Inelastic Collision}
+Objects stick together. Kinetic energy is NOT conserved (converted to heat).
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Key Insight}
+Momentum is ALWAYS conserved (if isolated).\\
+Kinetic energy is conserved ONLY in elastic collisions.
+\end{alertblock}
+\note{[P0] "Elastic: objects bounce, KE conserved"\\\\
+[P1] "Inelastic: objects stick, KE lost as heat"\\\\
+[P2] [THE REVELATION] "Momentum is always conserved. Energy conservation depends on collision type"\\\\
+- Perfectly elastic collisions are rare\\\\
+- Most real collisions are somewhere in between}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.3 Elastic Collision}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.5\textheight,keepaspectratio]{phys12-momentum-fig05.jpg}
+\caption{One-dimensional elastic collision}
+\end{figure}
+
+\pause
+\textbf{Conservation of momentum:}
+$$m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{v}'_1 + m_2\vec{v}'_2$$
+
+\pause
+\textbf{Conservation of kinetic energy:}
+$$\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m_1v'^2_1 + \frac{1}{2}m_2v'^2_2$$
+\note{[P0] "Elastic collision diagram"\\\\
+[P1] "Momentum conserved: sum of momenta before equals sum after"\\\\
+[P2] "Kinetic energy also conserved in elastic collision"\\\\
+- Two equations, two unknowns\\\\
+- Can solve for final velocities}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.3 Inelastic Collision}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.5\textheight,keepaspectratio]{phys12-momentum-fig06.jpg}
+\caption{Perfectly inelastic collision - objects stick together}
+\end{figure}
+
+\pause
+\textbf{Conservation of momentum:}
+$$m_1\vec{v}_1 + m_2\vec{v}_2 = (m_1 + m_2)\vec{v}'$$
+
+\pause
+\textbf{Key:} Final velocity $\vec{v}'$ is the same for both objects.
+\note{[P0] "Inelastic collision: objects stick together"\\\\
+[P1] "Momentum still conserved"\\\\
+[P2] "Simplification: both objects move together with same final velocity"\\\\
+- Easier equation than elastic\\\\
+- Some KE converted to heat, sound, deformation}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.3 Memory Trick}
+\begin{exampleblock}{Remember This}
+\textbf{Elastic} materials are bouncy.\\
+$\rightarrow$ Elastic collisions: objects bounce off each other.
+
+\vspace{0.3cm}
+
+\textbf{Inelastic} materials are sticky.\\
+$\rightarrow$ Inelastic collisions: objects stick together.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Common Mistake}
+Don't assume kinetic energy is conserved! Only in elastic collisions.
+\end{alertblock}
+\note{- Memory trick helps with terminology\\\\
+- Elastic = bouncy = separate after collision\\\\
+- Inelastic = sticky = stick together\\\\
+- Always check: is this elastic or inelastic?\\\\
+- Determines which equations to use}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Hockey Goalie Catch}
+\begin{exampleblock}{The Challenge (4 min, silent)}
+A 70 kg goalie catches a 0.150 kg puck traveling at $35$ m/s. The goalie is initially at rest.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m_1 = 0.150$ kg, $v_1 = 35$ m/s
+\item $m_2 = 70$ kg, $v_2 = 0$ m/s
+\end{itemize}
+
+\textbf{Find:} Final velocity $v'$ of goalie-plus-puck
+
+\textit{Can you predict the recoil?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Inelastic collision - goalie catches puck\\\\
+[SAY] "This is an inelastic collision. What equation should you use?"\\\\
+[TIMING] 4 min SILENT work\\\\
+[CIRCULATE] Watch for correct equation choice\\\\
+[WATCH FOR] Students using elastic collision equations}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Collision Type}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Is this elastic or inelastic? How do you know?
+\item Which conservation equation did you use?
+\item What simplification happens because they stick together?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your reasoning.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for inelastic identification\\\\
+[EXPECTED APPROACH] Inelastic because they stick. Use m1 v1 plus m2 v2 equals (m1 plus m2) v-prime\\\\
+[KEY INSIGHT] Both move together after collision}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Recoil}
+\textbf{Self-correct in a different color:}
+
+\textbf{Conservation of momentum (inelastic):}
+$$m_1v_1 + m_2v_2 = (m_1 + m_2)v'$$
+
+\pause
+
+\textbf{Substitute ($v_2 = 0$):}
+$$v' = \frac{m_1v_1}{m_1 + m_2} = \frac{(0.150)(35)}{0.150 + 70}$$
+
+\pause
+
+$$\boxed{v' = 0.075 \text{ m/s}}$$
+
+\pause
+\textbf{Check:} Tiny recoil - goalie is much more massive than puck!
+\note{[P0] "Inelastic collision equation"\\\\
+[P1] [ALGEBRA] "v-prime equals m1 v1 over (m1 plus m2)"\\\\
+[P2] "Plug in values"\\\\
+[P3] [ANSWER] "0.075 meters per second - about 7 centimeters per second"\\\\
+[THE WONDER] Goalie barely moves because his mass is 460 times the puck's mass}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Elastic Cart Collision}
+\begin{exampleblock}{The Challenge (5 min, silent)}
+Cart 1 (0.350 kg) moving at $2$ m/s collides with cart 2 (0.500 kg) moving at $-0.5$ m/s. After collision, cart 1 recoils at $-4$ m/s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m_1 = 0.350$ kg, $v_1 = 2$ m/s, $v'_1 = -4$ m/s
+\item $m_2 = 0.500$ kg, $v_2 = -0.5$ m/s
+\end{itemize}
+
+\textbf{Find:} Final velocity $v'_2$ of cart 2
+\end{exampleblock}
+\note{[THE CHALLENGE] Elastic collision - solve for unknown final velocity\\\\
+[SAY] "Use conservation of momentum. This is the hardest one yet."\\\\
+[TIMING] 5 min SILENT work\\\\
+[CIRCULATE] Watch for sign errors with negative velocities}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Momentum Algebra}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you handle the negative velocities?
+\item Which momentum equation did you use?
+\item What did you solve for?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for correct handling of signs\\\\
+[EXPECTED APPROACH] m1 v1 plus m2 v2 equals m1 v1-prime plus m2 v2-prime, solve for v2-prime\\\\
+[COMMON ERROR] Sign mistakes with negative velocities}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Ricochet}
+\textbf{Self-correct in a different color:}
+
+\textbf{Conservation of momentum:}
+$$m_1v_1 + m_2v_2 = m_1v'_1 + m_2v'_2$$
+
+\pause
+
+\textbf{Solve for $v'_2$:}
+$$v'_2 = \frac{m_1v_1 + m_2v_2 - m_1v'_1}{m_2}$$
+
+\pause
+
+\textbf{Substitute:}
+$$v'_2 = \frac{(0.350)(2) + (0.500)(-0.5) - (0.350)(-4)}{0.500} = 3.7 \text{ m/s}$$
+
+\pause
+\textbf{Check:} Positive velocity means cart 2 moves to the right after collision.
+\note{[P0] "Standard momentum conservation"\\\\
+[P1] [ALGEBRA] "Rearrange to solve for v2-prime"\\\\
+[P2] "Careful with signs: negative 0.5 and negative 4"\\\\
+[P3] [ANSWER] "3.7 meters per second to the right"\\\\
+[THE WONDER] You just predicted the outcome of a collision using only algebra}
+\end{frame}
+
+\begin{frame}
+\frametitle{8.3 Two-Dimensional Collisions}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-momentum-fig07.jpg}
+\caption{2D collision with $m_2$ initially at rest}
+\end{figure}
+
+\pause
+\textbf{Strategy:} Break into components.
+
+\textbf{$x$-direction:} $m_1v_1 = m_1v'_1\cos\theta_1 + m_2v'_2\cos\theta_2$
+
+\textbf{$y$-direction:} $0 = m_1v'_1\sin\theta_1 + m_2v'_2\sin\theta_2$
+\note{[P0] "2D collisions are more complex"\\\\
+[P1] "Break momentum into x and y components"\\\\
+- Choose coordinate system wisely\\\\
+- Momentum conserved in both directions\\\\
+- Two equations, can solve for two unknowns}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}[shrink]
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Momentum $\vec{p} = m\vec{v}$ - mass in motion \pause
+\item Impulse $J = \vec{F}\Delta t = \Delta\vec{p}$ - force over time changes momentum \pause
+\item Newton's second law: $\vec{F} = \Delta\vec{p}/\Delta t$ - the original form \pause
+\item Conservation: $\vec{p}_{\text{tot}} = \text{constant}$ in isolated systems \pause
+\item Elastic collisions: objects bounce, KE conserved \pause
+\item Inelastic collisions: objects stick, KE lost \pause
+\item Momentum ALWAYS conserved (if isolated)
+\end{enumerate}
+\end{block}
+\note{[P0] "Seven revelations today"\\\\
+[P1] "Momentum is mass in motion"\\\\
+[P2] "Impulse connects force and momentum change"\\\\
+[P3] "Newton actually wrote F equals delta p over delta t"\\\\
+[P4] "Total momentum conserved in isolated systems"\\\\
+[P5] "Elastic: bounce and KE conserved"\\\\
+[P6] "Inelastic: stick and KE lost"\\\\
+[P7] [THE WONDER] "Momentum conservation is one of the deepest laws in physics - explains everything from billiards to rocket science"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Equations}
+\begin{align}
+\vec{p} &= m\vec{v} \\
+\vec{F}_{\text{net}} &= \frac{\Delta\vec{p}}{\Delta t} \\
+J &= \vec{F}_{\text{net}}\Delta t = \Delta\vec{p} \\
+\vec{p}_{\text{tot}} &= \text{constant (isolated system)} \\
+m_1v_1 + m_2v_2 &= m_1v'_1 + m_2v'_2 \text{ (elastic)} \\
+m_1v_1 + m_2v_2 &= (m_1 + m_2)v' \text{ (inelastic)}
+\end{align}
+\note{- Six equations to master\\\\
+- First three: momentum, force, impulse\\\\
+- Last three: conservation for different collision types\\\\
+- Know when to use each\\\\
+- Practice identifying elastic vs inelastic}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework is posted on the LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Chapter 9 Work and Energy}
+\end{frame}
+
+\end{document}

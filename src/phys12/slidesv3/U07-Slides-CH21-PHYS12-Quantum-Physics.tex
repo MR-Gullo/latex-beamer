@@ -1,0 +1,986 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[When Light Breaks the Rules]{PHYS12 CH:21 When Light Breaks the Rules}
+\subtitle{The Quantum Revolution}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today light stops being a wave.\\\\
+- For 200 years, we thought we understood light\\\\
+- Then Planck and Einstein discovered light breaks its own rules\\\\
+[THE WONDER] This discovery launched the electronics revolution - from transistors to solar panels\\\\
+- Everything in your phone depends on today's lesson}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Alice's Rabbit Hole}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-quantum-fig01.jpg}
+\end{figure}
+
+\pause
+\begin{center}
+\Large In Wonderland, nothing behaves as expected...\\
+\textit{but there's still an underlying logic.}
+\end{center}
+\note{[P0] "Alice follows a rabbit into a world where the rules change"\\\\
+[P1] [THE CONNECTION - Digital Archetype] "Like Alice, we're about to discover reality has hidden rules"\\\\
+- "Down the quantum rabbit hole, light acts like particles, particles act like waves"\\\\
+[THE HOOK] Quantum mechanics is the Wonderland of physics\\\\
+[THE WONDER] But there's still beautiful logic underneath - and it built your phone}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Illusion of Understanding}
+\begin{alertblock}{What Your Brain Gets Wrong}
+\textbf{You think:} Light is a wave. Waves are continuous.\\
+\textbf{Reality:} Light arrives in discrete chunks called photons.
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+This isn't intuition failing at extreme speeds or sizes.
+
+\pause
+\vspace{0.3cm}
+
+\alert{This is everyday light fooling us constantly.}
+\note{[P0] "You've been lied to about light"\\\\
+[P1] "Light is a wave - we've proven this with interference patterns"\\\\
+[P2] [THE CONFLICT] "But light also arrives in discrete packets like bullets"\\\\
+[THE HUMILITY] This confused the greatest minds for decades\\\\
+[THE WONDER] Today you'll learn how Planck and Einstein solved the mystery}
+\end{frame}
+
+\section{Planck and Quantization}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{21.1:} Describe blackbody radiation and the ultraviolet catastrophe \pause
+\item \textbf{21.1:} Define quantum states and calculate photon energies \pause
+\item \textbf{21.1:} Explain how photon energies vary across the EM spectrum
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for Planck and quantization"\\\\
+[P1] "First: what is a blackbody and why did it break classical physics"\\\\
+[P2] "Second: quantum states - energy comes in chunks"\\\\
+[P3] "Third: photon energy across the spectrum"\\\\
+- Assessment: problem set on LMS}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 The T-Shirt Mystery}
+\begin{exampleblock}{The Mental Model}
+Why is wearing a black T-shirt on a hot day unbearable,\\
+while a white shirt keeps you cool?
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+Black shirts absorb and re-emit more radiation.
+
+\pause
+\vspace{0.3cm}
+
+A perfect black object that absorbs ALL radiation is called a \textbf{blackbody}.
+\note{[P0] "You know this from experience"\\\\
+[P1] "Black absorbs heat, white reflects it"\\\\
+[P2] "A blackbody absorbs 100 percent of incident radiation"\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes know to wear white in summer games"\\\\
+[THE REVELATION] Studying blackbodies led to quantum mechanics}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 The Blackbody Spectrum}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys12-quantum-fig05.jpg}
+\end{figure}
+
+\pause
+\textbf{Key observations:}
+\begin{itemize}
+\item Hotter objects radiate MORE total energy (area under curve)
+\item Peak wavelength SHIFTS leftward as temperature increases
+\end{itemize}
+\note{[P0] "Three temperature curves - study them carefully"\\\\
+[P1] "At 3000 K: peaks in infrared around 1000 nm"\\\\
+- "At 6000 K: peaks in visible - white hot, like the Sun"\\\\
+- "Area under curve: total energy radiated increases with temperature"\\\\
+[THE WONDER] Same pattern for all objects - your body, the sun, distant stars\\\\
+- Turn and talk: what trends do you see?}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 The Ultraviolet Catastrophe}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-quantum-fig08.jpg}
+\end{figure}
+
+\pause
+\begin{alertblock}{The Classical Prediction}
+Theory predicted INFINITE energy at short wavelengths.\\
+Reality: energy drops back down. \textbf{Physics was broken.}
+\end{alertblock}
+\note{[P0] "Classical physics prediction: dashed line shooting to infinity"\\\\
+[P1] [THE CONFLICT] "Theory said infinite energy in UV - the ultraviolet catastrophe"\\\\
+- "But experiments showed energy drops at short wavelengths"\\\\
+- "Your coffee mug should kill you with UV radiation - but it doesn't"\\\\
+[THE HUMILITY] The best physicists couldn't explain this disconnect\\\\
+[THE REVELATION] Max Planck solved it with a radical idea}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 Planck's Revolution}
+\begin{block}{The Source Code: Quantized Energy}
+\begin{center}
+\Large $\boxed{E = nhf}$
+\end{center}
+Energy is not continuous. Energy exists only in discrete chunks.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{itemize}
+\item $n$ = integer (0, 1, 2, 3...)
+\item $h = 6.626 \times 10^{-34}$ J·s (Planck's constant)
+\item $f$ = frequency
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insight:} Energy comes in quantum packets, not continuous streams.
+\note{[P0] "Planck's radical idea: energy is quantized"\\\\
+[P1] [THE REVELATION] "E equals n h f - energy comes in discrete packets"\\\\
+[P2] "Like digital steps on a staircase, not a smooth ramp"\\\\
+[THE CONNECTION - Digital Archetype] "Digital clock jumps 11:14 to 11:15 - no 11:14.5"\\\\
+[THE WONDER] This equation won Planck the 1918 Nobel Prize}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 The Coin Analogy}
+\begin{exampleblock}{Imagine This...}
+Pour coins through a funnel.\\
+More pennies pass through than quarters.\\
+\textit{Why? Quarters have higher value AND larger size.}
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+Same with photons:
+\begin{itemize}
+\item High frequency = high energy = less probable at low temperatures
+\item Low frequency = low energy = more probable at low temperatures
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+This \textit{probability factor} explains why the blackbody curve drops at short wavelengths.
+\note{[P0] "Feynman simplicity - concrete anchor"\\\\
+[P1] "High frequency photons are like quarters - bigger energy packets"\\\\
+- "Low frequency photons are like pennies - smaller energy packets"\\\\
+[P2] "At fixed temperature, more low-energy photons can exist"\\\\
+[THE REVELATION] Probability factor prevents ultraviolet catastrophe\\\\
+[THE WONDER] Interplay between classical wave model and quantum probability creates the curve}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 Quantization Everywhere}
+\textbf{Quantum states exist in:}
+\begin{itemize}
+\item Standing waves on a string (harmonics) \pause
+\item Steps on a staircase (discrete heights) \pause
+\item Atoms (you can't have 0.5 atoms) \pause
+\item Electric charge (multiples of $e$)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Shock}
+But energy was thought to be \textit{continuous}.\\
+Planck proved otherwise.
+\end{alertblock}
+\note{[P0] "Quantization isn't new on macroscopic scale"\\\\
+[P1] "Guitar strings have discrete harmonics - first, second, third mode"\\\\
+[P2] "Stairs have discrete steps - you can't stand on step 2.5"\\\\
+[P3] "You can't have half an atom or 1.37 cents"\\\\
+[P4] "Charge comes in multiples of electron charge"\\\\
+[P5] [THE CONFLICT] "But energy? We thought it was smooth and continuous"\\\\
+[THE REVELATION] Planck showed energy is quantized at atomic scales too}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 Max Planck}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{phys12-quantum-fig11.jpg}
+\end{figure}
+
+\pause
+\begin{center}
+\textit{"I was ready to sacrifice any of my previous convictions about physics."}\\
+- Max Planck, on quantization
+\end{center}
+\note{[P0] "Max Planck revolutionized physics by questioning everything"\\\\
+[P1] "Born 1858, Germany - studied thermodynamics"\\\\
+- "Solved blackbody problem in 1900 - reluctantly accepted quantization"\\\\
+- "1918 Nobel Prize - father of quantum mechanics"\\\\
+[THE HUMILITY] "He was afraid of his own idea - it was too radical"\\\\
+[THE WONDER] He unlocked a door he was afraid to walk through - but the world followed}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 The Photon Energy Equation}
+\begin{block}{Nature's Rule for Light}
+\begin{center}
+\Large $\boxed{E = hf = \frac{hc}{\lambda}}$
+\end{center}
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insights:}
+\begin{itemize}
+\item Higher frequency $\rightarrow$ higher energy per photon
+\item Shorter wavelength $\rightarrow$ higher energy per photon
+\item Planck's constant $h$ links energy to frequency
+\end{itemize}
+\note{[P0] "Two forms of photon energy equation"\\\\
+[P1] "Higher frequency means higher energy per photon"\\\\
+- "Shorter wavelength means higher energy per photon"\\\\
+- "h is the conversion factor between frequency and energy"\\\\
+[THE WONDER] Same equation for radio waves and gamma rays\\\\
+- Universal law governing all electromagnetic radiation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Photon Energy of a Light Bulb}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A 100-W light bulb converts 10\% of its power to visible light with average wavelength 580 nm. Calculate the number of visible photons emitted per second.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Power in visible light: 10.0 J/s
+\item Wavelength: $\lambda = 580$ nm
+\item $h = 6.626 \times 10^{-34}$ J·s, $c = 3.00 \times 10^8$ m/s
+\end{itemize}
+
+\textbf{Find:} Photons per second
+
+\vspace{0.3cm}
+
+\textit{Work silently. It's okay to get stuck.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you count individual particles of light?\\\\
+[SAY] "Try this on your own. Choose your equation carefully."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who uses E equals h f vs E equals h c over lambda\\\\
+[WATCH FOR] Unit conversion errors with nanometers, strategy for finding photon count\\\\
+[DON'T HELP] Let them struggle with multi-step problem}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Light Bulb Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which form of photon energy equation did you use?
+\item How did you find energy per photon?
+\item What's your strategy for finding number of photons?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for E equals h c over lambda, then divide total power by E per photon\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Find E per photon using wavelength, then divide 10 J/s by E\\\\
+[COMMON ERROR] Forgetting to convert nm to m, or not recognizing this is a two-step problem}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Counting Photons}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1 - Energy per photon:}
+$$E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34})(3.00 \times 10^8)}{580 \times 10^{-9}} = 3.43 \times 10^{-19} \text{ J}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2 - Photons per second:}
+$$\frac{\text{photons}}{s} = \frac{10.0 \text{ J/s}}{3.43 \times 10^{-19} \text{ J/photon}} = \boxed{2.92 \times 10^{19} \text{ photons/s}}$$
+
+\pause
+\textbf{Check:} About 29 billion billion photons every second - no wonder light seems continuous!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "E equals h c over lambda - watch units cancel to get joules"\\\\
+[P2] [ALGEBRA] "Divide total power by energy per photon to get photon rate"\\\\
+[ANSWER] 2.92 times 10 to the 19 photons per second\\\\
+[THE WONDER] Individual photons are invisible to us - but your eye can detect single photons in darkness}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 Blue Fire vs Red Fire}
+\begin{exampleblock}{Real-World: Danger by Color}
+A blue flame is more dangerous than a red flame.\\
+\textit{Why?}
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+Blue light: shorter wavelength $\rightarrow$ higher frequency $\rightarrow$ \alert{higher energy per photon}
+
+\pause
+Red light: longer wavelength $\rightarrow$ lower frequency $\rightarrow$ lower energy per photon
+
+\pause
+\vspace{0.3cm}
+
+Each blue photon delivers more energy than each red photon.
+\note{[P0] "Turn and talk: why is blue flame more dangerous?"\\\\
+[P1] "Blue: wavelength around 450 nm, higher frequency"\\\\
+[P2] "Red: wavelength around 700 nm, lower frequency"\\\\
+[P3] [ANSWER] "Each blue photon carries MORE energy than each red photon"\\\\
+[THE CONNECTION - Kinetic Archetype] "Welders know blue sparks are hotter than red"\\\\
+[THE WONDER] Color directly reveals temperature and energy}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.1 Energy Across the Spectrum}
+\begin{center}
+\small
+\begin{tabular}{lll}
+\textbf{Radiation} & \textbf{Wavelength} & \textbf{Energy/photon} \\ \hline
+Radio & 1 m & $2 \times 10^{-25}$ J \\
+Infrared & 1000 nm & $2 \times 10^{-19}$ J \\
+Visible & 500 nm & $4 \times 10^{-19}$ J \\
+UV & 100 nm & $2 \times 10^{-18}$ J \\
+X-ray & 1 nm & $2 \times 10^{-16}$ J \\
+Gamma & 0.01 nm & $2 \times 10^{-14}$ J
+\end{tabular}
+\end{center}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{UV Hazard}
+UV photons carry enough energy to break DNA bonds ($\approx 1$ eV $= 1.6 \times 10^{-19}$ J).\\
+\textbf{That's why UV causes sunburn and cancer.}
+\end{alertblock}
+\note{[P0] "Photon energy increases dramatically from radio to gamma"\\\\
+[P1] [THE REVELATION] "UV and above: enough energy to damage molecules"\\\\
+- "DNA breaks with about 1 eV - UV photons exceed this threshold"\\\\
+- "Visible light photons are mostly harmless - below DNA damage threshold"\\\\
+[THE CONFLICT] Sunlight feels warm and bright but contains invisible UV danger\\\\
+[THE WONDER] Your skin knows the difference - sunburn is quantum mechanics in action}
+\end{frame}
+
+\section{Photoelectric Effect}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{21.2:} Describe the photoelectric effect and Einstein's explanation \pause
+\item \textbf{21.2:} Explain why classical physics couldn't explain the effect \pause
+\item \textbf{21.2:} Calculate photoelectron kinetic energy \pause
+\item \textbf{21.2:} Describe applications in solar cells and technology
+\end{itemize}
+\end{block}
+\note{[P0] "Four objectives for photoelectric effect"\\\\
+[P1] "First: what is the photoelectric effect and Einstein's photon explanation"\\\\
+[P2] "Second: why classical wave theory utterly failed"\\\\
+[P3] "Third: calculating electron energies using Einstein's equation"\\\\
+[P4] "Fourth: real-world applications - solar panels, sensors, cameras"\\\\
+[THE REVELATION] This section won Einstein his Nobel Prize - not relativity!}
+\end{frame}
+
+\begin{frame}
+\frametitle{Light as a Battering Ram}
+\begin{center}
+\Large Light can knock electrons out of metal.\\
+\textit{How does a wave punch like a particle?}
+\end{center}
+
+\pause
+\begin{alertblock}{The Paradox}
+Classical physics: Light is a wave - spread out, continuous energy.\\
+Reality: Light ejects electrons instantly, one photon at a time.
+\end{alertblock}
+\note{[P0] [THE HOOK] "Shine light on metal. Electrons fly out. This is the photoelectric effect."\\\\
+[P1] [THE CONFLICT] "Waves don't hit like hammers. Particles do."\\\\
+- "Classical theory predicts gradual energy accumulation"\\\\
+- "Reality shows instant ejection"\\\\
+[THE HUMILITY] This baffled the best minds of the early 1900s\\\\
+[THE WONDER] Einstein solved it in 1905 - his miracle year}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 The Photoelectric Setup}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-quantum-fig17.jpg}
+\end{figure}
+
+\pause
+\textbf{The experiment:}
+\begin{itemize}
+\item Light strikes metal surface
+\item Electrons ejected (photoelectrons)
+\item Current measured - proves electrons are moving
+\end{itemize}
+\note{[P0] "Classic apparatus - evacuated tube with metal plate"\\\\
+[P1] "Photons hit metal, kick out electrons"\\\\
+- "Collector wire measures current - more electrons means more current"\\\\
+[THE CONNECTION - Digital Archetype] "This is how digital cameras work - light hits sensor, electrons flow, image captured"\\\\
+[ANSWER] Photoelectric effect = light produces electricity}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 Five Mysteries}
+\textbf{Classical wave theory predictions:}
+\begin{enumerate}
+\item Any frequency should eject electrons (just wait long enough) \pause
+\item Brighter light should eject higher-energy electrons \pause
+\item Electrons should take time to accumulate energy
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Experimental Reality}
+\begin{enumerate}
+\item Threshold frequency exists - below it, NO electrons (ever!)
+\item Brighter light ejects MORE electrons, not faster ones
+\item Ejection is INSTANTANEOUS
+\end{enumerate}
+\end{alertblock}
+\note{[P0] "Classical predictions from wave theory"\\\\
+[P1] "Prediction 1: any frequency works if you wait - waves accumulate energy"\\\\
+[P2] "Prediction 2: brighter means more energy per electron"\\\\
+[P3] "Prediction 3: takes minutes to accumulate enough wave energy"\\\\
+[P4] [THE CONFLICT] "Reality violated ALL THREE predictions"\\\\
+- "Threshold frequency - some colors never work, no matter how long you wait"\\\\
+- "Brightness doesn't change electron speed, just number ejected"\\\\
+- "Instant ejection - no delay"\\\\
+[THE HUMILITY] This baffled physicists for years - wave theory was wrong\\\\
+[THE REVELATION] Einstein solved it with photons}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 Einstein's Photon Model}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-quantum-fig18.jpg}
+\end{figure}
+
+\pause
+\textbf{Key insight:} Light is not a continuous wave.\\
+Light is a stream of \textbf{photons} - discrete packets of energy.
+
+\pause
+\vspace{0.3cm}
+
+Each photon energy: $E = hf$
+\note{[P0] "Flashlight beam as stream of individual photons"\\\\
+[P1] [THE REVELATION] "Light arrives in discrete packets called photons"\\\\
+[P2] "Each photon carries energy E equals h f"\\\\
+- "Higher frequency photons carry more energy"\\\\
+[THE WONDER] This idea won Einstein the 1921 Nobel Prize - not for relativity!\\\\
+[THE CONNECTION - Digital Archetype] "Like data packets streaming through internet, not continuous flow"}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 One Photon, One Electron}
+\begin{exampleblock}{The Mental Model}
+Each photon interacts with ONE electron.\\
+If photon energy $< $ binding energy: electron stays bound.\\
+If photon energy $\geq $ binding energy: electron escapes!
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+This explains ALL five observations:
+\begin{itemize}
+\item \textbf{Threshold:} $hf_0 = BE$ (minimum energy to escape)
+\item \textbf{Instant:} one photon, one collision
+\item \textbf{Brightness:} more photons = more electrons (not faster electrons)
+\end{itemize}
+\note{[P0] "One-on-one collision: one photon, one electron"\\\\
+[P1] "Explains threshold: photon must have minimum energy h f zero equals BE"\\\\
+- "Explains instant ejection: single collision event, no accumulation needed"\\\\
+- "Explains brightness: more photons means more collisions, more electrons ejected"\\\\
+[THE REVELATION] Like pool balls colliding - discrete interactions\\\\
+[THE WONDER] Light acts like particles when it interacts with matter}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 The Photoelectric Equation}
+\begin{block}{The Law of Energy Exchange}
+\begin{center}
+\Large $\boxed{KE_e = hf - BE}$
+\end{center}
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{itemize}
+\item $KE_e$ = kinetic energy of ejected electron
+\item $hf$ = photon energy
+\item $BE$ = binding energy (work function)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Photon energy budget:}
+\begin{enumerate}
+\item Pay the escape cost (binding energy $BE$)
+\item Leftover becomes kinetic energy
+\end{enumerate}
+\note{[P0] "Energy conservation in photoelectric effect"\\\\
+[P1] "KE equals h f minus BE - Nobel Prize equation"\\\\
+- "KE: kinetic energy of freed electron"\\\\
+- "h f: incoming photon energy"\\\\
+- "BE: binding energy needed to break electron free from metal"\\\\
+[P2] "Think of it as an energy budget"\\\\
+- "Photon arrives with total energy h f"\\\\
+- "First expense: pay binding energy to escape metal"\\\\
+- "Remainder: kinetic energy of ejected electron"\\\\
+[THE REVELATION] Energy is conserved in quantum collisions}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 Kinetic Energy vs Frequency}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-quantum-fig21.jpg}
+\end{figure}
+
+\pause
+\textbf{Key features:}
+\begin{itemize}
+\item Below $f_0$: NO electrons ejected ($KE = 0$)
+\item Above $f_0$: $KE$ increases linearly with $f$
+\item Slope = $h$ (Planck's constant!)
+\end{itemize}
+\note{[P0] "Graph of electron kinetic energy vs incident light frequency"\\\\
+[P1] "Below threshold frequency f-zero: zero kinetic energy - no ejection"\\\\
+- "Above threshold: KE increases linearly with frequency"\\\\
+- "Slope of line is Planck's constant h"\\\\
+[THE REVELATION] This graph let scientists measure h experimentally\\\\
+- "Einstein predicted this graph in 1905"\\\\
+- "Millikan confirmed it experimentally in 1916"\\\\
+[THE WONDER] Quantum mechanics makes testable predictions}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Violet Light and Calcium}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Violet light with wavelength 420 nm strikes calcium metal.\\
+Binding energy of calcium: BE = 2.71 eV
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $\lambda = 420$ nm $= 4.20 \times 10^{-7}$ m
+\item $BE = 2.71$ eV
+\item $h = 6.626 \times 10^{-34}$ J·s, $c = 3.00 \times 10^8$ m/s
+\item Conversion: $1 \text{ eV} = 1.60 \times 10^{-19}$ J
+\end{itemize}
+
+\textbf{Find:} (a) Photon energy in eV\\
+\hspace{1.7cm} (b) Maximum kinetic energy of ejected electron in eV
+
+\vspace{0.3cm}
+
+\textit{Work silently. It's okay to get stuck.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you predict electron energy from light wavelength?\\\\
+[SAY] "Two-part problem. Start with photon energy, then apply Einstein's equation."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who converts J to eV correctly, who remembers two-step process\\\\
+[WATCH FOR] Unit consistency - mixing J and eV is common error\\\\
+[DON'T HELP] Let them work through conversion and energy budget}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Photoelectric Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you find photon energy from wavelength?
+\item How did you convert joules to electron volts?
+\item Which equation did you use for part (b)?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for E equals h c over lambda, then divide by 1.6 times 10 to the negative 19\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Calculate photon energy in J, convert to eV, then use KE equals h f minus BE\\\\
+[COMMON ERROR] Forgetting to convert J to eV before using Einstein's equation, or mixing units}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Photoelectric Calculation}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Part (a) - Photon energy:}
+$$E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34})(3.00 \times 10^8)}{4.20 \times 10^{-7}} = 4.74 \times 10^{-19} \text{ J}$$
+
+\pause
+Convert to eV: $E = \frac{4.74 \times 10^{-19}}{1.60 \times 10^{-19}} = \boxed{2.96 \text{ eV}}$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Part (b) - Electron kinetic energy:}
+$$KE_e = hf - BE = 2.96 \text{ eV} - 2.71 \text{ eV} = \boxed{0.25 \text{ eV}}$$
+
+\pause
+\textbf{Check:} Small KE - photon energy barely exceeds threshold!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "E equals h c over lambda - substitute and calculate"\\\\
+[P2] "Convert J to eV: divide by 1.6 times 10 to the negative 19"\\\\
+[ANSWER] "Photon energy is 2.96 eV"\\\\
+[P3] [ALGEBRA] "KE equals photon energy minus binding energy"\\\\
+[ANSWER] "Kinetic energy is 0.25 eV"\\\\
+[P4] "Small number - electron barely escapes - 420 nm is near threshold for calcium"\\\\
+[THE WONDER] This 0.25 eV is how solar cells work - one photon at a time creating current}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 Solar Cells: Photons to Power}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-quantum-fig26.jpg}
+\end{figure}
+
+\pause
+\textbf{How photovoltaic cells work:}
+\begin{itemize}
+\item Photons strike semiconductor (usually silicon)
+\item Electrons freed via photoelectric effect
+\item Electrons flow as electric current
+\item Current powers devices or charges batteries
+\end{itemize}
+\note{[P0] "Solar cell: photoelectric effect in action"\\\\
+[P1] "Sunlight photons hit silicon semiconductor"\\\\
+- "Photons with energy greater than silicon's bandgap free electrons"\\\\
+- "Freed electrons create electric current"\\\\
+- "Current powers devices directly or charges battery for later use"\\\\
+[THE CONNECTION - Digital Archetype] "Solar calculators, satellites, International Space Station - all powered by photoelectric effect"\\\\
+[THE WONDER] Earth receives enough sunlight each hour to power the globe for a year - quantum mechanics can help us capture it}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.2 Photoelectric Devices Everywhere}
+\textbf{Applications you use daily:}
+\begin{itemize}
+\item \textbf{Digital cameras:} Light hits sensor pixels, electrons counted as brightness \pause
+\item \textbf{Motion sensors:} Automatic doors, elevators - beam broken triggers response \pause
+\item \textbf{Light meters:} Camera exposure control adjusts aperture automatically \pause
+\item \textbf{Streetlights:} Photocell detects darkness, switches on at dusk
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+All rely on one quantum principle: \alert{photons create electric current}
+\note{[P0] "Photoelectric effect is everywhere in modern technology"\\\\
+[P1] "Digital cameras: each pixel is a tiny solar cell counting photons"\\\\
+[P2] "Automatic doors: photocell detects when beam is blocked by person"\\\\
+[P3] "Camera light meters: photoelectric current adjusts aperture for correct exposure"\\\\
+[P4] "Streetlights: photocell switches circuit when photon rate drops at sunset"\\\\
+[THE WONDER] Quantum mechanics runs your daily life without you noticing}
+\end{frame}
+
+\section{Dual Nature of Light}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{21.3:} Describe particle-wave duality \pause
+\item \textbf{21.3:} Calculate photon momentum using $p = h/\lambda$ \pause
+\item \textbf{21.3:} Explain Compton scattering as photon-electron collisions
+\end{itemize}
+\end{block}
+\note{[P0] "Final section: the ultimate quantum paradox"\\\\
+[P1] "Light is both wave AND particle - simultaneously, not sequentially"\\\\
+[P2] "Photons carry momentum despite having zero mass"\\\\
+[P3] "Compton scattering: photons collide like billiard balls"\\\\
+[THE WONDER] This duality isn't just light - electrons, atoms, even you have wavelike properties}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Great Contradiction}
+\begin{center}
+\Large Light is a wave.\\
+\textit{Light is a particle.}\\
+\vspace{0.3cm}
+Both statements are true.
+\end{center}
+
+\pause
+\begin{alertblock}{Civilian View vs Reality}
+\textbf{Civilian:} "Something is either a wave or a particle. Pick one."\\
+\textbf{Physicist:} "Light is both. It depends on how you look at it."
+\end{alertblock}
+\note{[P0] [THE HOOK] "Welcome to the deepest weirdness of quantum mechanics"\\\\
+- "Light diffracts and interferes - pure wave behavior"\\\\
+- "Light ejects electrons and carries momentum - pure particle behavior"\\\\
+[P1] [THE CONFLICT] "Our brains evolved in a macroscopic world where things are clearly wave or particle"\\\\
+- "Quantum reality refuses our categories"\\\\
+[THE HUMILITY] "Einstein himself struggled with this paradox his entire life"\\\\
+[THE WONDER] This isn't a flaw in our understanding - it's the actual nature of reality}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.3 Two Faces of Light}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Wave Evidence:}
+\begin{itemize}
+\item Diffraction through slits
+\item Interference patterns
+\item Polarization
+\item Wavelength and frequency
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Particle Evidence:}
+\begin{itemize}
+\item Photoelectric effect
+\item Discrete energy $E = hf$
+\item Photon momentum
+\item Compton scattering
+\end{itemize}
+\end{columns}
+
+\vspace{0.3cm}
+\pause
+\begin{block}{The Resolution}
+Light exhibits \textbf{wave-particle duality}. Which aspect you observe depends on your experiment.
+\end{block}
+\note{[P0] "Two columns - same phenomenon, two faces"\\\\
+- "Left side: 200 years of wave experiments - interference, diffraction"\\\\
+- "Right side: quantum experiments from 1900s - photons, discrete energy"\\\\
+[P1] [THE REVELATION] "Both are true. Light is neither pure wave nor pure particle"\\\\
+- "It's something deeper we don't have everyday language for"\\\\
+[ANSWER] Duality is fundamental - not our confusion, but nature's design\\\\
+[THE WONDER] Every electromagnetic wave from radio to gamma rays shows this duality}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.3 Massless Momentum}
+\begin{block}{The Source Code: Photon Momentum}
+\begin{center}
+\Large $\boxed{p = \frac{h}{\lambda}}$
+\end{center}
+Photons carry momentum despite having zero mass.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insights:}
+\begin{itemize}
+\item Shorter wavelength = higher momentum
+\item Blue photons push harder than red photons
+\item Light exerts radiation pressure
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Real effects:}
+\begin{itemize}
+\item Comet tails point away from Sun (photon pressure)
+\item Solar sails for spacecraft propulsion
+\item Optical tweezers manipulate cells using light
+\end{itemize}
+\note{[P0] [THE REVELATION] "Momentum without mass - this shatters classical physics"\\\\
+- "Classical: p equals m v. Photon has m equals zero, so p should be zero. Wrong."\\\\
+- "Quantum: p equals h over lambda. Inversely proportional to wavelength."\\\\
+[P1] "Shorter wavelength means higher momentum"\\\\
+- "UV photons push harder than infrared photons"\\\\
+[P2] "Real observable effects in everyday cosmos"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like wind in a sail, but the wind is light"\\\\
+[THE WONDER] Future spacecraft may sail on sunlight across the solar system}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.3 Photons as Billiard Balls}
+\textbf{Compton Effect (1923):} X-ray photons collide with electrons.
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Observations:}
+\begin{itemize}
+\item Photon scatters at angle (like billiard ball)
+\item Electron recoils with kinetic energy
+\item Scattered photon has \textit{longer wavelength} (lost energy to electron)
+\item Conservation of momentum and energy apply perfectly
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{The Significance}
+Photons behave like classical particles in collisions.\\
+Final proof of photon particle nature.
+\end{block}
+\note{[P0] "Arthur Compton, 1923 - fired X-rays at electrons"\\\\
+[P1] "Photon and electron collide like pool balls"\\\\
+- "Photon transfers some energy and momentum to electron"\\\\
+- "Photon wavelength increases - energy decreased"\\\\
+- "Electron flies off with gained energy"\\\\
+[P2] [THE REVELATION] "Perfect confirmation: photons have momentum and energy like particles"\\\\
+- "Conservation laws work in quantum collisions"\\\\
+[THE HUMILITY] "This won Compton the 1927 Nobel Prize"\\\\
+[THE WONDER] Same effect used in medical imaging - Compton scattering reveals your bones}
+\end{frame}
+
+\begin{frame}
+\frametitle{21.3 The Ultimate Twist}
+\begin{alertblock}{The Final Paradox}
+If light (a wave) can act like a particle...\\
+Can matter (a particle) act like a wave?
+\end{alertblock}
+
+\pause
+\textbf{Answer:} Yes. Louis de Broglie (1924) proposed:
+$$\boxed{\lambda = \frac{h}{p}}$$
+
+\pause
+\textbf{Consequence:} Electrons, atoms, molecules - \textit{everything} has a wavelength.
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Experimental proof:}
+\begin{itemize}
+\item Electron diffraction creates interference patterns (1927)
+\item Electron microscopes use electron waves to image atoms
+\item Matter-wave duality is universal
+\end{itemize}
+\note{[P0] [THE CONFLICT] "De Broglie asked the mirror-image question"\\\\
+- "Light has duality. Why not matter?"\\\\
+[P1] [THE REVELATION] "He proposed matter waves - earned 1929 Nobel Prize for the idea"\\\\
+[P2] "Everything in the universe has a wavelength - even you"\\\\
+[P3] "Electron diffraction experiments confirmed it in 1927"\\\\
+- "Electrons create interference patterns just like light"\\\\
+[THE HUMILITY] "Your wavelength is h over m v - unmeasurably tiny for macroscopic objects"\\\\
+[THE WONDER] Electron microscopes exploit matter waves to see atoms - wavelike electrons image particle-like atoms}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{The Quantum Revolution}
+\begin{block}{What You Now Know}
+\begin{enumerate}
+\item Energy is quantized: $E = nhf$ (Planck) \pause
+\item Photons are discrete packets: $E = hf$ (Planck/Einstein) \pause
+\item Photoelectric effect proves light is quantized: $KE_e = hf - BE$ (Einstein) \pause
+\item Photons carry momentum: $p = h/\lambda$ (Einstein/Compton) \pause
+\item Light exhibits wave-particle duality \pause
+\item All matter exhibits wave-particle duality (de Broglie) \pause
+\item Quantum mechanics governs the universe at atomic scales
+\end{enumerate}
+\end{block}
+\note{[P0] "Seven revelations today - each one revolutionary"\\\\
+[P1] "Planck: Energy is quantized - discrete packets, not continuous"\\\\
+[P2] "Photons are real particles with energy h f"\\\\
+[P3] "Einstein: Photoelectric effect proves light is quantized - Nobel Prize 1921"\\\\
+[P4] "Photons carry momentum despite zero mass"\\\\
+[P5] "Light is both wave and particle - depends on experiment"\\\\
+[P6] "de Broglie: Matter has wavelength too - universal duality"\\\\
+[P7] "Quantum mechanics is the operating system of reality at small scales"\\\\
+[THE WONDER] This revolution created transistors, lasers, computers, MRI, solar cells - your entire technological world}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Equations: Chapter 21}
+\begin{align}
+E &= nhf \quad \text{(quantized energy - Planck)} \\
+E &= hf = \frac{hc}{\lambda} \quad \text{(photon energy)} \\
+KE_e &= hf - BE \quad \text{(photoelectric equation - Einstein)} \\
+p &= \frac{h}{\lambda} \quad \text{(photon momentum)}
+\end{align}
+
+\vspace{0.3cm}
+
+\textbf{Key constant:}
+$$h = 6.626 \times 10^{-34} \text{ J·s (Planck's constant)}$$
+\note{- Four fundamental equations of quantum physics\\\\
+- Planck's constant h appears in all of them - the quantum of action\\\\
+- Know when to use each equation - wavelength given use h c over lambda, frequency given use h f\\\\
+- Photoelectric uses energy budget: incoming photon energy minus binding energy equals kinetic energy\\\\
+- Questions before we end?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS - Chapter 21 problems"\\\\
+[TIMING] Due date: check LMS\\\\
+- "Focus on photon energy calculations, photoelectric effect, and duality"\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Chapter 22 - we'll explore atomic structure and how quantum mechanics explains the periodic table\\\\
+[THE WONDER] You've just learned the physics that won FIVE Nobel Prizes - Planck, Einstein, Compton, de Broglie, Millikan}
+\end{frame}
+
+\end{document}

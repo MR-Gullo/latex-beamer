@@ -1,0 +1,1103 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Falling Forever]{PHYS12 CH:6 The Art of Falling Forever}
+\subtitle{Circular Motion and Rotation}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we decode the secret of satellites and race cars\\\\
+- Same force keeps Moon circling Earth and cars on curved roads\\\\
+- Three revelations: angles and spin, acceleration toward center, forces that turn\\\\
+[THE WONDER] By end of class, you'll understand why astronauts float - they're falling forever\\\\
+- This explains orbits, planets, and why you feel pushed outward on curves}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery}
+\begin{center}
+\Large How do you move forward\\
+\textit{while constantly turning?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+From Formula 1 cars screaming around curves to the Moon circling Earth...
+
+\pause
+\vspace{0.3cm}
+\alert{All require a force toward the center.}
+\note{[P0] "How do you move forward while constantly turning?"\\\\
+[P1] "From Formula 1 cars to the Moon circling Earth..."\\\\
+[P2] [THE WONDER] "All require a force toward the center. Newton's first law says objects go straight - so turning requires force"\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes: every time you run a curve, friction pulls you inward"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Falling Forever}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-circular-motion-fig01.jpg}
+\caption{Formula 1 car in circular motion}
+\end{figure}
+
+\pause
+\begin{exampleblock}{The Mental Model}
+A satellite in orbit is falling toward Earth but moving fast enough sideways to keep missing it.
+\end{exampleblock}
+\note{[P0] "Formula 1 cars - wheels spin, car curves"\\\\
+[P1] [THE REVELATION] "A satellite is falling toward Earth but moving sideways fast enough to keep missing"\\\\
+[THE CONNECTION - Digital Archetype] "Like a game character running around a circular track"\\\\
+[THE WONDER] Orbiting is controlled falling - you fall forever without hitting ground}
+\end{frame}
+
+\section{Angle of Rotation and Angular Velocity}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{6.1:} Describe the angle of rotation and relate it to its linear counterpart \pause
+\item \textbf{6.1:} Describe angular velocity and relate it to its linear counterpart \pause
+\item \textbf{6.1:} Solve problems involving angle of rotation and angular velocity
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for angles and rotation"\\\\
+[P1] "First: understand angles in radians, not just degrees"\\\\
+[P2] "Second: angular velocity - how fast something spins"\\\\
+[P3] "Third: connect spinning motion to linear motion"\\\\
+- We'll use these to understand everything from CDs to planets}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.1 Two Kinds of Rotation}
+\textbf{Circular motion:} Object moves in a circular path (race car on track)
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Spin:} Object rotates about its own axis (Earth spinning)
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{Real-World Examples}
+\begin{itemize}
+\item Earth spins on its axis (spin) AND orbits the Sun (circular motion)
+\item Your car tire spins (spin) while the car follows a curve (circular motion)
+\end{itemize}
+\end{exampleblock}
+\note{[P0] "Two kinds of rotation"\\\\
+[P1] "Circular motion: object moves in circular path like race car"\\\\
+[P2] "Spin: object rotates about own axis like Earth"\\\\
+[P3] [THE CONNECTION] "Earth does both - spins on axis AND orbits Sun"\\\\
+- Name wheel: give another example of both types}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.1 Angle of Rotation}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.55\textheight,keepaspectratio]{phys12-circular-motion-fig04.jpg}
+\caption{Arc length and radius}
+\end{figure}
+
+\pause
+\column{0.48\textwidth}
+\begin{block}{Universal Law: Angle of Rotation}
+$$\boxed{\Delta\theta = \frac{\Delta s}{r}}$$
+Angle equals arc length divided by radius
+\end{block}
+
+\pause
+\vspace{0.3cm}
+Measured in \textbf{radians} (rad)
+\end{columns}
+\note{[P0] "Points on a CD all rotate through same angle"\\\\
+[P1] [THE REVELATION] "Angle equals arc length divided by radius"\\\\
+[P2] "Measured in radians - ratio of two distances, so dimensionless"\\\\
+[THE CONNECTION - Harmonic Archetype] "Musicians: radians are like beat divisions - natural units for rotation"}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.1 Radians vs Degrees}
+\begin{block}{The Conversion}
+$$\boxed{1 \text{ revolution} = 2\pi \text{ rad} = 360^\circ}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Common conversions:}
+\begin{itemize}
+\item $\frac{\pi}{2}$ rad = 90$^\circ$ \pause
+\item $\pi$ rad = 180$^\circ$ \pause
+\item 1 rad $\approx$ 57.3$^\circ$
+\end{itemize}
+
+\pause
+
+\begin{alertblock}{Why Radians?}
+Radians simplify equations in physics. Degrees are arbitrary - radians are natural.
+\end{alertblock}
+\note{[P0] "One full circle is 2 pi radians or 360 degrees"\\\\
+[P1] "Pi over 2 radians equals 90 degrees"\\\\
+[P2] "Pi radians equals 180 degrees"\\\\
+[P3] "1 radian equals about 57 degrees"\\\\
+[P4] [THE CONFLICT] "Degrees are arbitrary - Babylonians chose 360. Radians are natural - based on circle itself"\\\\
+[THE WONDER] All physics equations work cleaner in radians}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.1 Angular Velocity}
+\begin{block}{Universal Law: Angular Velocity}
+\begin{center}
+\Large $\boxed{\omega = \frac{\Delta\theta}{\Delta t}}$
+\end{center}
+Angular velocity equals change in angle divided by change in time
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Units:} radians per second (rad/s)
+
+\pause
+
+\textbf{Direction:}
+\begin{itemize}
+\item Counterclockwise: positive (out of page toward you)
+\item Clockwise: negative (into page away from you)
+\end{itemize}
+\note{[P0] [THE REVELATION] "Omega equals delta theta over delta t - angular version of velocity"\\\\
+[P1] "Units are radians per second"\\\\
+[P2] "Direction: counterclockwise is positive, clockwise is negative"\\\\
+[THE CONNECTION - Digital Archetype] "Like frame rate in animation - how many radians per second"}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.1 Connecting Spinning to Moving}
+\begin{block}{The Bridge Equation}
+\begin{center}
+\Large $\boxed{v = r\omega}$
+\end{center}
+Tangential velocity equals radius times angular velocity
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Points farther from the center move faster linearly, but all points have the same angular velocity.
+\end{exampleblock}
+
+\pause
+
+\textbf{Example:} CD spinning - outer edge moves faster than inner part, but both complete one revolution in same time.
+\note{[P0] [THE REVELATION] "v equals r omega - connects linear and angular motion"\\\\
+[P1] "Points farther from center move faster linearly but same angular velocity"\\\\
+[P2] "CD example: outer edge travels farther in same time"\\\\
+[THE HUMILITY] This feels weird - same rotation, different speeds\\\\
+[THE WONDER] Same equation works for Earth's rotation, car tires, galaxies}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.1 Why Car Tires Matter}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-circular-motion-fig08.jpg}
+\caption{Car tire rolling}
+\end{figure}
+
+\pause
+
+Large $\omega$ means large $v$ because $v = r\omega$
+
+\pause
+
+Larger radius tire at same $\omega$ produces greater $v$
+\note{[P0] "Tire spinning - how does car move forward?"\\\\
+[P1] "Large omega means large v"\\\\
+[P2] "Larger radius tire produces greater linear velocity"\\\\
+[THE CONNECTION - Kinetic Archetype] "Cyclists: why bigger wheels go farther per pedal stroke"\\\\
+[THE WONDER] Your car speedometer measures tire rotation - if you change tire size, it reads wrong}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Clock Tower Angle}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A clock tower has a radius of 1.0 m. The hour hand moves from 12 p.m. to 3 p.m.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Radius $r = 1.0$ m
+\item Time: 12 to 3 (quarter rotation)
+\end{itemize}
+
+\textbf{Find:}
+\begin{enumerate}
+\item Angle of rotation in radians
+\item Arc length along outer edge
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textit{Can you decode this rotation? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they connect fractions of circle to radians?\\\\
+[SAY] "Try this on your own. 3 minutes silent work."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who knows full circle is 2 pi radians\\\\
+[WATCH FOR] Students using 90 degrees instead of converting to radians\\\\
+[DON'T HELP] Let them struggle - they learn more in Compare phase}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Clock Tower}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What fraction of a full rotation does the hour hand make from 12 to 3?
+\item How many radians in a full circle?
+\item What equation connects arc length to angle?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for common approaches\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Quarter circle equals pi over 2 radians, then use delta s equals r delta theta\\\\
+[COMMON ERROR] Using 90 degrees directly without converting to radians}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Geometry of Time}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Part (a):} From 12 to 3 is $\frac{1}{4}$ of full rotation
+
+\pause
+
+Full rotation = $2\pi$ rad, so angle = $\frac{1}{4} \times 2\pi = \boxed{\frac{\pi}{2} \text{ rad}}$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Part (b):} Use $\Delta s = r\Delta\theta$
+
+\pause
+
+$$\Delta s = (1.0 \text{ m})\left(\frac{\pi}{2} \text{ rad}\right) = \boxed{1.6 \text{ m}}$$
+
+\pause
+
+\textbf{Check:} Arc length is less than circumference ($2\pi r \approx 6.3$ m). Reasonable!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "From 12 to 3 is one-quarter rotation"\\\\
+[P2] "Quarter of 2 pi equals pi over 2 radians"\\\\
+[P3] [ALGEBRA] "Arc length equals r delta theta"\\\\
+[P4] [ANSWER] "1.6 meters - about 5 feet along outer edge"\\\\
+[THE WONDER] Same geometry works for planet orbits - angles and arcs connect everywhere}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Spinning Car Tire}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A car tire has radius 0.300 m and the car travels at 15.0 m/s (about 54 km/h).
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Radius $r = 0.300$ m
+\item Tangential velocity $v = 15.0$ m/s
+\end{itemize}
+
+\textbf{Find:} Angular velocity $\omega$ of the tire in rad/s
+
+\vspace{0.3cm}
+
+\textit{How fast is the tire spinning?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they rearrange the bridge equation?\\\\
+[SAY] "How fast does the tire spin to move the car at 15 m/s?"\\\\
+[TIMING] 3 min SILENT work\\\\
+[CIRCULATE] Watch for students using v equals r omega\\\\
+[WATCH FOR] Students multiplying instead of dividing\\\\
+[DON'T HELP] Productive struggle builds understanding}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Tire Speed}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation connects linear and angular velocity?
+\item How did you rearrange it to solve for $\omega$?
+\item What are the units of your answer?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your rearrangement strategy.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for equation choices\\\\
+[CHECK] Name wheel: call pair to explain rearrangement\\\\
+[EXPECTED APPROACH] v equals r omega, so omega equals v over r\\\\
+[COMMON ERROR] Forgetting to include rad in units}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Spinning Wheel}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $v = r\omega$, so $\omega = \frac{v}{r}$
+
+\pause
+
+\textbf{Substitute:}
+$$\omega = \frac{15.0 \text{ m/s}}{0.300 \text{ m}}$$
+
+\pause
+
+$$\boxed{\omega = 50.0 \text{ rad/s}}$$
+
+\pause
+
+\textbf{Check:} About 8 revolutions per second (since $2\pi$ rad = 1 rev). Fast but reasonable for highway speed!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "v equals r omega, so omega equals v over r"\\\\
+[P2] "15 divided by 0.3 equals 50"\\\\
+[P3] [ANSWER] "50 radians per second - about 8 revolutions per second"\\\\
+[THE WONDER] Larger tire would spin slower for same car speed - monster trucks have slow tire rotation}
+\end{frame}
+
+\section{Uniform Circular Motion}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{6.2:} Describe centripetal acceleration and relate it to linear acceleration \pause
+\item \textbf{6.2:} Describe centripetal force and relate it to linear force \pause
+\item \textbf{6.2:} Solve problems involving centripetal acceleration and centripetal force
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for circular motion"\\\\
+[P1] "First: acceleration toward center even at constant speed"\\\\
+[P2] "Second: force required to turn - centripetal force"\\\\
+[P3] "Third: calculate forces on curves and in orbits"\\\\
+- This explains why you feel pushed outward in turning car}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.2 The Paradox of Constant Speed}
+\textbf{Uniform circular motion:} Object travels circular path at constant speed
+
+\pause
+
+\begin{alertblock}{Civilian View vs. Reality}
+\textbf{Civilian:} "Constant speed means no acceleration."\\
+\textbf{Physicist:} "Velocity is changing direction, so there IS acceleration."
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+Acceleration is a change in velocity - magnitude OR direction!
+\note{[P0] "Uniform circular motion - constant speed on circular path"\\\\
+[P1] [THE CONFLICT] "Civilians think constant speed means no acceleration"\\\\
+[P2] "Physicists know velocity includes direction - changing direction IS acceleration"\\\\
+[THE HUMILITY] This confused scientists for centuries before Newton\\\\
+[THE WONDER] Moon accelerates toward Earth constantly but never gets closer}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.2 The Illusion of Being Flung}
+\begin{exampleblock}{The Mental Model}
+When you turn in a car, you feel pushed outward. But no force pushes you out - your body wants to go straight (Newton's first law) while the car turns.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Fictional Force}
+\textbf{Centrifugal force} is not real - it's the illusion created by your inertia resisting the turn.
+\end{alertblock}
+
+\pause
+
+The real force is \textbf{centripetal} - pulling you inward toward the center!
+\note{[P0] "When car turns, you feel pushed outward"\\\\
+[P1] [THE CONFLICT] "No force pushes you out - your body wants to go straight, car turns"\\\\
+[P2] "Centrifugal force is fictional - centripetal force is real and pulls inward"\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes: when you cut on basketball court, your shoes push inward"\\\\
+[THE WONDER] Astronauts in space station feel weightless not because there's no gravity but because they're in constant freefall}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.2 Centripetal Acceleration}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys12-circular-motion-fig18.jpg}
+\caption{Velocity changes direction, acceleration points toward center}
+\end{figure}
+
+\pause
+
+\begin{block}{Universal Law: Centripetal Acceleration}
+$$\boxed{a_c = \frac{v^2}{r}} \quad \text{or} \quad \boxed{a_c = r\omega^2}$$
+\end{block}
+\note{[P0] "Velocity arrows change direction - acceleration points inward"\\\\
+[P1] [THE REVELATION] "a-c equals v-squared over r - acceleration toward center"\\\\
+[THE HUMILITY] Proportional to speed squared surprises people\\\\
+- Doubling speed quadruples acceleration\\\\
+[THE WONDER] Tighter curves require more acceleration - why sharp turns feel intense}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.2 Why Speed Squared Matters}
+$$a_c = \frac{v^2}{r}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Proportional to $v^2$:} Doubling speed means 4 times the acceleration!
+
+\pause
+
+\textbf{Example:}
+\begin{itemize}
+\item Curve at 50 km/h: moderate acceleration
+\item Same curve at 100 km/h: \alert{4 times} the acceleration
+\end{itemize}
+
+\pause
+
+\begin{alertblock}{The Warning}
+This is why speed limits are lower on curves - small speed increase creates huge acceleration increase.
+\end{alertblock}
+\note{[P0] "Centripetal acceleration proportional to speed squared"\\\\
+[P1] "Doubling speed quadruples acceleration"\\\\
+[P2] "Curve at 50 versus 100 km/h - 4 times acceleration"\\\\
+[P3] [THE CONNECTION] "Why speed limits drop on curves - engineers calculated safe acceleration"\\\\
+[THE WONDER] Race car drivers feel multiple g-forces in tight turns at high speed}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.2 Centripetal Force}
+Newton's second law: $F_{\text{net}} = ma$
+
+\pause
+
+For circular motion: $F_{\text{net}} = ma_c$
+
+\pause
+
+\begin{block}{Universal Law: Centripetal Force}
+$$\boxed{F_c = m\frac{v^2}{r}} \quad \text{or} \quad \boxed{F_c = mr\omega^2}$$
+\end{block}
+
+\pause
+
+\textbf{Direction:} Always toward the center of rotation
+\note{[P0] "Newton's second law - net force equals mass times acceleration"\\\\
+[P1] "For circular motion - net force equals m times a-c"\\\\
+[P2] [THE REVELATION] "F-c equals m v-squared over r - centripetal force formula"\\\\
+[P3] "Direction always toward center"\\\\
+[THE WONDER] Without centripetal force, object flies off in straight line - Newton's first law}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.2 Sources of Centripetal Force}
+\textbf{Centripetal force can be provided by:}
+
+\begin{itemize}
+\item \textbf{Friction:} Car tires on road \pause
+\item \textbf{Tension:} String on tetherball \pause
+\item \textbf{Gravity:} Moon orbiting Earth \pause
+\item \textbf{Normal force:} Roller coaster on loop
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Centripetal force isn't a new kind of force - it's whatever force points toward the center and causes circular motion.
+\end{exampleblock}
+\note{[P0] "Centripetal force provided by different forces"\\\\
+[P1] "Friction: car tires gripping road in turn"\\\\
+[P2] "Tension: string holding tetherball in circle"\\\\
+[P3] "Gravity: Moon orbiting Earth"\\\\
+[P4] "Normal force: roller coaster on loop"\\\\
+[P5] [THE REVELATION] "Centripetal force is not new type - it's the role a force plays"\\\\
+- Name wheel: give another example}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Car on Curve}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A 900 kg car rounds a curve with radius 600 m at speed 25.0 m/s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Mass $m = 900$ kg
+\item Radius $r = 600$ m
+\item Speed $v = 25.0$ m/s
+\end{itemize}
+
+\textbf{Find:} Centripetal force required to keep car on curve
+
+\vspace{0.3cm}
+
+\textit{How much force do the tires provide?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they apply centripetal force formula?\\\\
+[SAY] "Calculate the force friction must provide. 3 minutes silent."\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who uses F-c equals m v-squared over r\\\\
+[WATCH FOR] Students forgetting to square the velocity\\\\
+[DON'T HELP] They'll catch errors in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Car Force}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation did you use for centripetal force?
+\item Did you remember to square the velocity?
+\item What force provides the centripetal force for a car?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your equation and reasoning.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for equation choices\\\\
+[CHECK] Name wheel: which equation did you use?\\\\
+[EXPECTED APPROACH] F-c equals m v-squared over r\\\\
+[COMMON ERROR] Using v instead of v-squared\\\\
+[INSIGHT] Friction between tires and road provides centripetal force}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Force That Turns}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $F_c = m\frac{v^2}{r}$
+
+\pause
+
+\textbf{Substitute:}
+$$F_c = \frac{(900 \text{ kg})(25.0 \text{ m/s})^2}{600 \text{ m}}$$
+
+\pause
+
+$$F_c = \frac{(900)(625)}{600} = \boxed{938 \text{ N}}$$
+
+\pause
+
+\textbf{Check:} About 940 N - this is the friction force between tires and road. Without it, car slides straight!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "F-c equals m v-squared over r"\\\\
+[P2] "900 times 625 divided by 600"\\\\
+[P3] [ANSWER] "938 Newtons - friction between tires and road"\\\\
+[THE WONDER] On ice, friction drops - car can't generate enough centripetal force, slides straight off curve}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Acceleration Comparison}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A car follows a curve of radius 500 m at speed 25.0 m/s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Radius $r = 500$ m
+\item Speed $v = 25.0$ m/s
+\item $g = 9.80$ m/s$^2$
+\end{itemize}
+
+\textbf{Find:}
+\begin{enumerate}
+\item Centripetal acceleration
+\item Express as fraction of $g$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textit{How does turning compare to falling?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they calculate and compare accelerations?\\\\
+[SAY] "Compare centripetal acceleration to gravity. 3 minutes."\\\\
+[TIMING] 3 min SILENT work\\\\
+[CIRCULATE] Watch for calculation then ratio\\\\
+[WATCH FOR] Students forgetting to take ratio with g\\\\
+[DON'T HELP] Comparison part is key insight}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Acceleration Scale}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation did you use for centripetal acceleration?
+\item How did you express it as a fraction of $g$?
+\item Is the acceleration large or small compared to gravity?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your comparison method.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for ratio calculation\\\\
+[CHECK] Name wheel: how did you compare to g?\\\\
+[EXPECTED APPROACH] Calculate a-c, then divide by g\\\\
+[INSIGHT] Highway curves designed for comfortable acceleration - fraction of g}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Comparing to Gravity}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Calculate $a_c$:}
+$$a_c = \frac{v^2}{r} = \frac{(25.0 \text{ m/s})^2}{500 \text{ m}}$$
+
+\pause
+
+$$a_c = \frac{625}{500} = \boxed{1.25 \text{ m/s}^2}$$
+
+\pause
+
+\textbf{Compare to $g$:}
+$$\frac{a_c}{g} = \frac{1.25}{9.80} = 0.128 \quad \Rightarrow \quad \boxed{a_c = 0.13g}$$
+
+\pause
+
+\textbf{Revelation:} Gentle highway curve at moderate speed produces about 1/10th the acceleration of gravity!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "a-c equals v-squared over r equals 625 over 500"\\\\
+[P2] [ANSWER] "1.25 meters per second squared"\\\\
+[P3] "Divide by 9.8 to get 0.13 - about one-tenth g"\\\\
+[THE WONDER] Race cars pull 3 to 4 g's in tight turns - fighter pilots can pull 9 g's before blacking out}
+\end{frame}
+
+\section{Rotational Motion}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{6.3:} Describe rotational kinematic variables and relate them to linear counterparts \pause
+\item \textbf{6.3:} Describe torque and lever arm \pause
+\item \textbf{6.3:} Solve problems involving torque and rotational kinematics
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for rotation"\\\\
+[P1] "First: angular acceleration - how spin changes"\\\\
+[P2] "Second: torque - the rotational version of force"\\\\
+[P3] "Third: predict how objects spin up and slow down"\\\\
+- This explains everything from figure skaters to fishing reels}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.3 When Spin Changes}
+So far: constant angular velocity
+
+\pause
+
+\textbf{But what if spin changes?}
+\begin{itemize}
+\item Figure skater pulls arms in - spins faster \pause
+\item Child pushes merry-go-round - starts rotating \pause
+\item CD player stops - disc slows to halt
+\end{itemize}
+
+\pause
+
+\begin{block}{Universal Law: Angular Acceleration}
+$$\boxed{\alpha = \frac{\Delta\omega}{\Delta t}}$$
+Rate of change of angular velocity
+\end{block}
+\note{[P0] "So far constant angular velocity"\\\\
+[P1] "But what if spin changes?"\\\\
+[P2] "Figure skater pulls arms in - spins faster"\\\\
+[P3] "Child pushes merry-go-round"\\\\
+[P4] "CD slows to stop"\\\\
+[P5] [THE REVELATION] "Alpha equals delta omega over delta t - angular acceleration"\\\\
+[THE WONDER] Same pattern - linear has a, rotational has alpha}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.3 Connecting Linear and Angular Acceleration}
+\begin{block}{The Bridge}
+$$\boxed{a = r\alpha} \quad \text{or} \quad \boxed{\alpha = \frac{a}{r}}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Tangential acceleration:} Linear acceleration along the circle's edge
+
+\pause
+
+\begin{exampleblock}{The Mental Model}
+Greater angular acceleration means greater tangential acceleration. Points farther from center have larger tangential acceleration for same $\alpha$.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "a equals r alpha - connects linear and angular acceleration"\\\\
+[P1] "Tangential acceleration - linear acceleration along circle's edge"\\\\
+[P2] "Greater alpha means greater a. Farther from center means larger a"\\\\
+[THE CONNECTION - Kinetic Archetype] "Dancers: spin with arms out, bring them in - you accelerate"\\\\
+[THE WONDER] Conservation of angular momentum - skaters use this to spin faster}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.3 Rotational Kinematics Equations}
+\begin{center}
+\small
+\begin{tabular}{ll}
+\textbf{Linear} & \textbf{Rotational} \\ \hline
+$v = v_0 + at$ & $\omega = \omega_0 + \alpha t$ \\
+$x = x_0 + v_0 t + \frac{1}{2}at^2$ & $\theta = \theta_0 + \omega_0 t + \frac{1}{2}\alpha t^2$ \\
+$v^2 = v_0^2 + 2a\Delta x$ & $\omega^2 = \omega_0^2 + 2\alpha\Delta\theta$
+\end{tabular}
+\end{center}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Pattern}
+Every linear kinematics equation has a rotational analog. Just swap $x \rightarrow \theta$, $v \rightarrow \omega$, $a \rightarrow \alpha$!
+\end{alertblock}
+\note{[P0] "Three rotational kinematics equations - exact analogs of linear"\\\\
+[P1] [THE REVELATION] "Swap x for theta, v for omega, a for alpha"\\\\
+[THE HUMILITY] Same math structure - physics has beautiful symmetry\\\\
+[THE WONDER] Universe reuses patterns - rotational motion mirrors linear motion}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.3 The Rotational Version of Force}
+\textbf{Force causes linear acceleration}
+
+What causes angular acceleration?
+
+\pause
+
+\begin{block}{Universal Law: Torque}
+$$\boxed{\tau = rF\sin\theta}$$
+Torque equals lever arm times force times sine of angle
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Units:} N$\cdot$m (Newton-meters)
+
+\textbf{Direction:} Same as the angular acceleration it produces
+\note{[P0] "Force causes linear acceleration - what causes angular?"\\\\
+[P1] [THE REVELATION] "Torque - tau equals r F sine theta"\\\\
+[P2] "Units are Newton-meters. Direction same as angular acceleration"\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes: opening a door - push far from hinge for easier opening"\\\\
+[THE WONDER] Torque explains why wrenches have long handles}
+\end{frame}
+
+\begin{frame}
+\frametitle{6.3 Maximizing Torque}
+$$\tau = rF\sin\theta$$
+
+\pause
+
+\textbf{To maximize torque:}
+\begin{itemize}
+\item Apply force far from pivot (large $r$) \pause
+\item Apply force perpendicular to lever arm ($\theta = 90^\circ$, so $\sin\theta = 1$) \pause
+\item Apply larger force (large $F$)
+\end{itemize}
+
+\pause
+
+\begin{exampleblock}{Real-World Applications}
+\begin{itemize}
+\item Door handle placed far from hinges
+\item Wrench with long handle
+\item Teeter-totter balanced by distance and weight
+\end{itemize}
+\end{exampleblock}
+\note{[P0] "Three ways to maximize torque"\\\\
+[P1] "Large r - apply force far from pivot"\\\\
+[P2] "Theta equals 90 degrees - perpendicular force"\\\\
+[P3] "Large F - stronger push"\\\\
+[P4] [THE CONNECTION] "Door handle far from hinge - long wrench loosens tight bolt"\\\\
+[THE WONDER] Archimedes: give me lever long enough and I'll move the world}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Fishing Reel}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A fishing reel spins at $\omega_0 = 220$ rad/s. Fisherman applies brake creating angular acceleration $\alpha = -300$ rad/s$^2$.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Initial $\omega_0 = 220$ rad/s
+\item Final $\omega = 0$ (stops)
+\item $\alpha = -300$ rad/s$^2$
+\end{itemize}
+
+\textbf{Find:} Time $t$ for reel to stop
+
+\vspace{0.3cm}
+
+\textit{How long does it take?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they use rotational kinematics?\\\\
+[SAY] "Big fish pulls line - how long to stop reel? 3 minutes."\\\\
+[TIMING] 3 min SILENT work\\\\
+[CIRCULATE] Watch for omega equals omega-zero plus alpha t\\\\
+[WATCH FOR] Sign errors with negative alpha\\\\
+[DON'T HELP] Let them wrestle with algebra}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Fishing Reel}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which rotational kinematics equation did you choose?
+\item How did you solve for time $t$?
+\item Why is $\alpha$ negative?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your equation choice and reasoning.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for equation selection\\\\
+[CHECK] Name wheel: which equation and why?\\\\
+[EXPECTED APPROACH] omega equals omega-zero plus alpha t, solve for t\\\\
+[COMMON ERROR] Sign confusion with negative alpha\\\\
+[INSIGHT] Alpha is negative because reel is slowing down}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Stopping the Spin}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $\omega = \omega_0 + \alpha t$
+
+\pause
+
+\textbf{Solve for $t$:}
+$$t = \frac{\omega - \omega_0}{\alpha}$$
+
+\pause
+
+\textbf{Substitute:}
+$$t = \frac{0 - 220 \text{ rad/s}}{-300 \text{ rad/s}^2} = \frac{-220}{-300}$$
+
+\pause
+
+$$\boxed{t = 0.733 \text{ s}}$$
+
+\pause
+
+\textbf{Insight:} Less than one second because the angular acceleration is quite large!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "omega equals omega-zero plus alpha t, solve for t"\\\\
+[P2] "t equals omega minus omega-zero over alpha"\\\\
+[P3] "Negative 220 divided by negative 300"\\\\
+[P4] [ANSWER] "0.733 seconds - less than one second"\\\\
+[THE WONDER] Fishermen let fish swim first - tired fish needs less force to stop, less likely to snap line}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Merry-Go-Round Torque}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A man pushes a merry-go-round with force 250 N at the edge, perpendicular to the radius of 1.50 m.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Force $F = 250$ N
+\item Lever arm $r = 1.50$ m
+\item Angle $\theta = 90^\circ$ (perpendicular)
+\end{itemize}
+
+\textbf{Find:} Torque $\tau$ produced
+
+\vspace{0.3cm}
+
+\textit{How effective is his push?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they calculate torque with perpendicular force?\\\\
+[SAY] "Calculate the torque. 3 minutes silent."\\\\
+[TIMING] 3 min SILENT work\\\\
+[CIRCULATE] Watch for tau equals r F sine theta\\\\
+[WATCH FOR] Students forgetting sine 90 equals 1\\\\
+[DON'T HELP] They'll recognize perpendicular simplifies in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Torque Calculation}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What is the value of $\sin 90^\circ$?
+\item How does this simplify the torque equation?
+\item Why did the man push at the edge and perpendicular?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair explain why perpendicular force maximizes torque.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for sine 90 equals 1\\\\
+[CHECK] Name wheel: why perpendicular?\\\\
+[EXPECTED APPROACH] tau equals r F, sine 90 equals 1\\\\
+[INSIGHT] Perpendicular and at edge both maximize torque}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Power of Position}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $\tau = rF\sin\theta$
+
+\pause
+
+\textbf{Substitute:} $\theta = 90^\circ$, so $\sin 90^\circ = 1$
+
+\pause
+
+$$\tau = (1.50 \text{ m})(250 \text{ N})(1)$$
+
+\pause
+
+$$\boxed{\tau = 375 \text{ N}\cdot\text{m}}$$
+
+\pause
+
+\textbf{Strategy:} Man maximized torque by pushing perpendicular at the outer edge!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "tau equals r F sine theta"\\\\
+[P2] "sine 90 degrees equals 1, so tau equals r F"\\\\
+[P3] "1.5 times 250 equals 375"\\\\
+[P4] [ANSWER] "375 Newton-meters"\\\\
+[THE WONDER] Same force near center would produce much less torque - position matters as much as strength}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Radians are natural units - angles from circle geometry \pause
+\item $v = r\omega$ connects spinning to moving \pause
+\item Circular motion requires acceleration toward center \pause
+\item Centripetal force $F_c = \frac{mv^2}{r}$ keeps objects turning \pause
+\item Rotational kinematics mirrors linear kinematics \pause
+\item Torque $\tau = rF\sin\theta$ is the rotational force
+\end{enumerate}
+\end{block}
+\note{[P0] "Six revelations today"\\\\
+[P1] "Radians are natural - based on circle itself"\\\\
+[P2] "v equals r omega connects spinning to moving"\\\\
+[P3] "Circular motion requires inward acceleration"\\\\
+[P4] "Centripetal force keeps objects turning"\\\\
+[P5] "Rotational kinematics mirrors linear"\\\\
+[P6] "Torque is rotational force"\\\\
+[THE WONDER] Same principles govern spinning galaxies, orbiting planets, turning cars\\\\
+- Name wheel: which was most surprising?}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\small
+\begin{align}
+\Delta\theta &= \frac{\Delta s}{r} \quad \text{(angle of rotation)} \\
+\omega &= \frac{\Delta\theta}{\Delta t} \quad \text{(angular velocity)} \\
+v &= r\omega \quad \text{(tangential velocity)} \\
+a_c &= \frac{v^2}{r} = r\omega^2 \quad \text{(centripetal acceleration)} \\
+F_c &= m\frac{v^2}{r} = mr\omega^2 \quad \text{(centripetal force)} \\
+\alpha &= \frac{\Delta\omega}{\Delta t} \quad \text{(angular acceleration)} \\
+a &= r\alpha \quad \text{(tangential acceleration)} \\
+\tau &= rF\sin\theta \quad \text{(torque)}
+\end{align}
+\note{- Eight fundamental equations for circular and rotational motion\\\\
+- First three: angles and spinning\\\\
+- Next two: acceleration and force toward center\\\\
+- Last three: changing rotation and torque\\\\
+- Know when to use each\\\\
+- Questions before homework?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Chapter 7 Newton's Law of Universal Gravitation\\\\
+- We'll use circular motion to understand planetary orbits}
+\end{frame}
+
+\end{document}

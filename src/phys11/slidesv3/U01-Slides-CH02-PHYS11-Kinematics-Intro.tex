@@ -1,0 +1,876 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Measuring Motion]{PHYS11 CH:2 How to Measure Motion}
+\subtitle{Distance, Displacement, Speed, and Velocity}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we learn the physicist's toolkit for measuring motion.\\\\
+- Two revelations: how to describe WHERE (distance vs displacement), how to describe HOW FAST (speed vs velocity)\\\\
+[THE WONDER] Same language astronomers use to track planets, engineers use for spacecraft\\\\
+- This is foundational for everything we'll do in kinematics}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery}
+\begin{center}
+\Large How do you know something is moving?
+\end{center}
+
+\pause
+\vspace{0.5cm}
+Everything is in motion. Your heart pumps blood. Atoms vibrate. Earth orbits the Sun.
+
+\pause
+\vspace{0.3cm}
+\alert{But motion is always relative to something.}
+\note{[P0] "How do you know something is moving?"\\\\
+[P1] "Everything is in motion - heart pumping, atoms vibrating, Earth orbiting"\\\\
+[P2] [THE REVELATION] "Motion is always relative to something. You cannot describe motion without a reference frame"\\\\
+[THE WONDER] This idea revolutionized physics 400 years ago}
+\end{frame}
+
+\begin{frame}
+\frametitle{What Is Kinematics?}
+\begin{block}{The Study of Motion}
+Kinematics is the study of motion without considering its causes.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+From Greek \textit{kinema} = motion
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{Real-World Examples}
+\begin{itemize}
+\item Tennis ball flying across court
+\item Spacecraft orbiting Mars
+\item Your walk to class
+\end{itemize}
+\end{exampleblock}
+\note{[P0] "Kinematics is the study of motion without considering its causes"\\\\
+[P1] "From Greek word kinema meaning motion - same root as cinema, movies"\\\\
+[P2] [THE CONNECTION - Kinetic Archetype] "Every sport is applied kinematics"\\\\
+- Tennis serves, basketball shots, track and field\\\\
+[THE HUMILITY] We start simple: straight-line motion only}
+\end{frame}
+
+\section{Relative Motion, Distance, and Displacement}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{2.1:} Describe motion in different reference frames \pause
+\item \textbf{2.1:} Define distance and displacement, and distinguish between the two \pause
+\item \textbf{2.1:} Solve problems involving distance and displacement
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for section 2.1"\\\\
+[P1] "First: understand reference frames - viewpoint matters"\\\\
+[P2] "Second: two ways to measure how far - distance and displacement"\\\\
+[P3] "Third: calculations with both quantities"\\\\
+- Assessment: practice problems and quiz}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 The Reference Frame Problem}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig01.jpg}
+\caption{Are clouds a useful reference frame for airplane passengers?}
+\end{figure}
+
+\pause
+\textbf{Reference frame:} The coordinate system from which positions are described.
+\note{[P0] "Are clouds a useful reference frame?"\\\\
+[P1] "No! Clouds move with the plane"\\\\
+[THE CONFLICT] Your intuition says motion is obvious. Physics says: compared to what?\\\\
+- Need a reference frame that is either stationary or has known motion\\\\
+- Earth is common reference frame, but not the only one}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 Galileo's Revelation}
+\begin{center}
+\includegraphics[width=0.5\textwidth,height=0.4\textheight,keepaspectratio]{phys11-kinematics-fig04.jpg}
+
+\small Galileo Galilei (1564-1642)
+\end{center}
+
+\pause
+\textbf{Thought experiment:} Person in windowless ship on calm sea.
+
+\pause
+Can they tell if the ship is moving?
+\note{[P0] "Galileo - one of the first to explore reference frames"\\\\
+[P1] "Thought experiment: windowless ship on calm sea"\\\\
+[P2] "Can person inside tell if ship is moving?"\\\\
+[ANSWER] No! Only by looking at shore can they compare\\\\
+[THE REVELATION] Motion is only meaningful when you specify a reference frame\\\\
+[THE WONDER] This insight led to Einstein's relativity 300 years later}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 Galileo's Conclusion}
+\begin{block}{Universal Truth}
+Only by comparing to each other can observers describe relative motion.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Person on ship: "Shore is moving past me."
+
+Person on shore: "Ship is moving past me."
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Paradox}
+Both are correct! Description depends on the reference frame.
+\end{alertblock}
+\note{[P0] "Galileo's conclusion: comparison is everything"\\\\
+[P1] "Person on ship sees shore moving"\\\\
+[P2] [THE CONFLICT] "Both observers are correct - no preferred reference frame"\\\\
+[THE HUMILITY] This confused philosophers for centuries\\\\
+- Name wheel: who is really moving?\\\\
+[ANSWER] Both, relative to each other}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 Two Ways to Measure Motion}
+\begin{block}{Distance}
+Total length of the path traveled. (Scalar)
+\end{block}
+
+\pause
+
+\begin{block}{Displacement}
+Straight-line change in position from start to finish. (Vector)
+\end{block}
+
+\pause
+
+\begin{alertblock}{Key Difference}
+\textbf{Civilian:} "I drove 100 km today."\\
+\textbf{Physicist:} "But your displacement was 0 - you ended where you started."
+\end{alertblock}
+\note{[P0] "Two ways to measure how far you've gone"\\\\
+[P1] "Distance: total length of path - like odometer reading"\\\\
+[P2] "Displacement: straight line start to finish - as crow flies"\\\\
+[P3] [THE CONFLICT] "Drive to store and back - distance 100 km, displacement zero"\\\\
+[THE CONNECTION - Kinetic Archetype] "Runners care about distance. GPS cares about displacement"\\\\
+[THE WONDER] Same journey, different numbers - physics needs both}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 Visualizing Distance vs. Displacement}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig10.jpg}
+\caption{Short line is displacement. Curved path is distance.}
+\end{figure}
+
+\pause
+Distance $\geq$ Displacement (always!)
+\note{[P0] "Visual representation of distance vs displacement"\\\\
+[P1] "Short straight arrow is displacement magnitude"\\\\
+- "Curved path length is distance"\\\\
+- Distance is always greater than or equal to displacement magnitude\\\\
+[THE CONNECTION - Digital Archetype] "Video games track both - map distance vs straight-line targeting"}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 The Round Trip}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig11.jpg}
+\caption{Drive to school (5 km) and back home (5 km)}
+\end{figure}
+
+\pause
+\textbf{Distance:} 10 km
+
+\pause
+\textbf{Displacement:} 0 km (start and end at same position)
+\note{[P0] "Classic example: drive to school and back"\\\\
+[P1] "Distance: 10 km total - odometer reading"\\\\
+[P2] "Displacement: zero - ended where you started"\\\\
+[THE REVELATION] Displacement cares about net change in position\\\\
+- If forward is positive, backward is negative\\\\
+- They cancel: +5 km + (-5 km) = 0}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 Scalars vs. Vectors}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{Scalar}
+Magnitude only
+\end{block}
+
+\pause
+\textbf{Examples:}
+\begin{itemize}
+\item Distance
+\item Speed
+\item Time
+\item Temperature
+\item Mass
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\begin{block}{Vector}
+Magnitude AND direction
+\end{block}
+
+\pause
+\textbf{Examples:}
+\begin{itemize}
+\item Displacement
+\item Velocity
+\item Force
+\item Acceleration
+\end{itemize}
+\end{columns}
+\note{[P0] "Two types of quantities in physics"\\\\
+[P1] "Scalars have magnitude only - just a number with units"\\\\
+[P2] "Vectors have magnitude and direction - size and where"\\\\
+[P3] "Examples: temperature is scalar, velocity is vector"\\\\
+- Vectors will be bold or have arrows above them\\\\
+[THE CONNECTION - Digital Archetype] "Game engines track position vectors constantly"}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 Displacement Equation}
+\begin{block}{Calculating Displacement}
+\begin{center}
+\Large $\boxed{\Delta \mathbf{d} = \mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0}}$
+\end{center}
+Change in position equals final position minus initial position.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Symbols:}
+\begin{itemize}
+\item $\Delta$ (delta) = change in
+\item $\mathbf{d}_{0}$ = initial position
+\item $\mathbf{d}_{\mathrm{f}}$ = final position
+\end{itemize}
+\note{[P0] [THE REVELATION] "The displacement equation - foundation of kinematics"\\\\
+- Delta means change in\\\\
+- d-naught is initial position, d-f is final position\\\\
+[P1] "Subtract where you started from where you ended"\\\\
+[ALGEBRA] "Delta d equals d-f minus d-naught"\\\\
+[THE WONDER] Same equation for ant crawling on desk or spacecraft going to Mars}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 Choosing Your Axis}
+\textbf{You must define:}
+\begin{enumerate}
+\item Origin (zero point) \pause
+\item Positive direction \pause
+\item Negative direction (opposite)
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{Smart Choices}
+Choose origin and direction to make calculations easiest.
+\begin{itemize}
+\item Often: starting position = 0
+\item Often: forward/right = positive
+\end{itemize}
+\end{exampleblock}
+\note{[P0] "Before calculating, set up your coordinate system"\\\\
+[P1] "Pick an origin - often your starting point"\\\\
+[P2] "Pick positive direction - often forward or right"\\\\
+[P3] "Negative is opposite direction"\\\\
+[P4] [THE CONNECTION] "Like setting spawn point in video game"\\\\
+- Make life easy: start at zero\\\\
+- Be consistent throughout problem}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: The Cyclist}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A cyclist rides 3 km west and then turns around and rides 2 km east.
+
+\vspace{0.3cm}
+
+\textbf{Find:}
+\begin{itemize}
+\item (a) Displacement
+\item (b) Distance traveled
+\item (c) Magnitude of displacement
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textit{Hint: Choose your positive direction first. Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you track motion in two directions?\\\\
+[SAY] "Try this on your own. Choose east or west as positive - your choice."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who chooses which direction as positive\\\\
+[WATCH FOR] Students forgetting about direction, adding distances instead\\\\
+[DON'T HELP] Let them struggle with vector concept}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: The Cyclist}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which direction did you choose as positive?
+\item What was your displacement value?
+\item Did you get a negative displacement? What does that mean?
+\item How is distance different from displacement?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for understanding of positive/negative\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Choose east positive, west negative (or vice versa), subtract positions\\\\
+[COMMON ERROR] Adding both distances, forgetting direction matters}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Cyclist Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Setup:} Choose east = positive, west = negative
+
+\pause
+
+\textbf{(a) Displacement:}
+$$\Delta \mathbf{d} = \mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0} = -1 \text{ km}$$
+(or 1 km west)
+
+\pause
+
+\textbf{(b) Distance traveled:}
+$$\text{Distance} = 3 \text{ km} + 2 \text{ km} = 5 \text{ km}$$
+
+\pause
+
+\textbf{(c) Magnitude of displacement:}
+$$|\Delta \mathbf{d}| = 1 \text{ km}$$
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "Displacement equals final minus initial: negative 1 km"\\\\
+- Negative because net motion is west (negative direction)\\\\
+[P2] "Distance: add path lengths - direction doesn't matter: 5 km"\\\\
+[P3] [ANSWER] "Magnitude is absolute value: 1 km"\\\\
+[THE WONDER] GPS uses displacement. Fitness tracker uses distance. Different tools for different jobs.}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.1 The Mars Probe Disaster}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys11-kinematics-fig18.jpg}
+\caption{Mars Climate Orbiter, 1998}
+\end{figure}
+
+\pause
+\textbf{Cost:} \$125 million
+
+\textbf{Mistake:} Calculations in English units, not SI units
+
+\textbf{Result:} Probe crashed into Mars atmosphere
+\note{[P0] "Real-world consequence of unit mistakes"\\\\
+[P1] "125 million dollar satellite destroyed"\\\\
+- American scientists forgot to convert feet to meters\\\\
+- Probe flew too close to Mars, disintegrated\\\\
+[THE HUMILITY] Even NASA makes mistakes\\\\
+[THE REVELATION] Always use SI units in physics: meters, kilograms, seconds}
+\end{frame}
+
+\section{Speed and Velocity}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{2.2:} Calculate the average speed of an object \pause
+\item \textbf{2.2:} Relate displacement and average velocity
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for section 2.2"\\\\
+[P1] "First: calculate average speed - how fast"\\\\
+[P2] "Second: average velocity - how fast AND which direction"\\\\
+- These build on distance and displacement\\\\
+- Assessment: practice problems}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 What Is Speed?}
+\begin{block}{The Rate of Motion}
+Speed is the rate at which an object changes its location. (Scalar)
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{SI unit:} meters per second (m/s)
+
+\textbf{Other units:} km/h, mph
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Speed is your odometer. It tells you how fast, but not where you're going.
+\end{exampleblock}
+\note{[P0] "Speed is the rate of motion - how fast position changes"\\\\
+[P1] "SI unit: meters per second"\\\\
+- Also use km/h for cars, mph in some countries\\\\
+[P2] [THE CONNECTION - Kinetic Archetype] "Speedometer shows instantaneous speed"\\\\
+[THE REVELATION] Speed is scalar - no direction, just how fast}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 Average Speed}
+\begin{block}{Universal Law: Rate of Motion}
+\begin{center}
+\Large $\boxed{v_{\text{avg}} = \frac{\text{distance}}{\text{time}}}$
+\end{center}
+Average speed equals total distance divided by total time.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Rearranged:}
+\begin{align*}
+\text{distance} &= v_{\text{avg}} \times \text{time}\\
+\text{time} &= \frac{\text{distance}}{v_{\text{avg}}}
+\end{align*}
+\note{[P0] [THE REVELATION] "The speed equation - first kinematics formula"\\\\
+[ALGEBRA] "v-average equals distance over time"\\\\
+- Can rearrange to solve for distance or time\\\\
+[P1] "Multiply both sides by time to get distance"\\\\
+- Divide both sides by v-avg to get time\\\\
+[THE WONDER] Same equation for walking to class or light traveling from stars}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 Average vs. Instantaneous Speed}
+\textbf{Average speed:} Total distance divided by total time
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Example:} Car travels 150 km in 3.2 hours
+$$v_{\text{avg}} = \frac{150 \text{ km}}{3.2 \text{ h}} = 47 \text{ km/h}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Instantaneous speed:} Speed at a specific instant
+
+\begin{exampleblock}{Real-World}
+Your car's speedometer shows instantaneous speed, not average.
+\end{exampleblock}
+\note{[P0] "Two types of speed"\\\\
+[P1] "Average: total distance over total time - 47 km/h for whole trip"\\\\
+- Car sped up and slowed down during journey\\\\
+[P2] "Instantaneous: speed at one moment"\\\\
+[P3] [THE CONNECTION] "Speedometer shows instantaneous speed right now"\\\\
+- Changes constantly as you drive}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 Round Trip Speed Problem}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig24.jpg}
+\caption{30-minute round trip, 6 km total}
+\end{figure}
+
+\pause
+\textbf{Average speed:} $\frac{6 \text{ km}}{0.5 \text{ h}} = 12 \text{ km/h}$
+
+\textbf{Displacement:} 0 km (round trip)
+\note{[P0] "Round trip example"\\\\
+[P1] "Total distance 6 km in half hour = 12 km/h average speed"\\\\
+- But displacement is zero - ended where started\\\\
+[THE CONFLICT] Speed and velocity will give different answers\\\\
+- Speed uses distance, velocity uses displacement}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: The Marble}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A marble rolls 5.2 m in 1.8 s.
+
+\vspace{0.3cm}
+
+\textbf{Find:} The marble's average speed
+
+\vspace{0.3cm}
+
+\textit{Work silently. Show your units.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you calculate rate of motion?\\\\
+[SAY] "Try this on your own. Use the speed equation."\\\\
+[TIMING] 3 min SILENT individual work\\\\
+[CIRCULATE] Note who forgets units\\\\
+[WATCH FOR] Division errors, unit mistakes\\\\
+[DON'T HELP] Let them apply formula themselves}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: The Marble}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What formula did you use?
+\item What did you divide?
+\item What units did you get?
+\item Does your answer make sense? How fast is it?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your answer and reasoning.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for correct formula use\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] v-avg = distance/time = 5.2/1.8\\\\
+[COMMON ERROR] Forgetting units, reversing division}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Marble Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Distance = 5.2 m
+\item Time = 1.8 s
+\end{itemize}
+
+\pause
+
+\textbf{Equation:}
+$$v_{\text{avg}} = \frac{\text{distance}}{\text{time}}$$
+
+\pause
+
+\textbf{Substitute:}
+$$v_{\text{avg}} = \frac{5.2 \text{ m}}{1.8 \text{ s}} = 2.9 \text{ m/s}$$
+
+\pause
+
+\textbf{Check:} About 3 m/s - speed of brisk walk. Reasonable!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "v-average equals distance over time"\\\\
+[P2] "Substitute: 5.2 meters divided by 1.8 seconds"\\\\
+[P3] [ANSWER] "2.9 meters per second"\\\\
+[P4] "Reality check: brisk walking speed - makes sense for rolling marble"\\\\
+[THE WONDER] You just described motion the way Galileo did 400 years ago}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 What Is Velocity?}
+\begin{block}{Speed Plus Direction}
+Velocity is the vector version of speed. It includes both magnitude (how fast) and direction (which way).
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Velocity is your speedometer with a compass attached.\\
+Speed tells you how fast. Velocity adds where.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Bold vs. italics:}
+\begin{itemize}
+\item $\mathbf{v}$ = velocity (vector, includes direction)
+\item $v$ = speed (scalar, magnitude only)
+\end{itemize}
+\note{[P0] "Velocity is vector version of speed"\\\\
+[P1] [THE CONNECTION] "Speedometer shows speed. GPS shows velocity - speed AND direction"\\\\
+[P2] "Notation: bold v is vector, italic v is scalar"\\\\
+- Vectors can have arrows above them too\\\\
+[THE REVELATION] Velocity is displacement over time, just like speed is distance over time}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 Average Velocity}
+\begin{block}{Universal Law: Rate of Displacement}
+\begin{center}
+\Large $\boxed{\mathbf{v}_{\text{avg}} = \frac{\Delta \mathbf{d}}{\Delta t} = \frac{\mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0}}{t_{\mathrm{f}} - t_{0}}}$
+\end{center}
+Average velocity equals displacement divided by time interval.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{SI unit:} m/s (same as speed, but includes direction)
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Paradox}
+Round trip: Speed = 12 km/h, but velocity = 0 km/h!\\
+(Displacement is zero)
+\end{alertblock}
+\note{[P0] [THE REVELATION] "The velocity equation"\\\\
+[ALGEBRA] "v-average equals delta d over delta t"\\\\
+- Displacement divided by time interval\\\\
+[P1] "Same units as speed: meters per second"\\\\
+[P2] [THE CONFLICT] "Round trip: speed is 12 km/h but velocity is zero"\\\\
+- Because displacement is zero\\\\
+[THE HUMILITY] This confuses everyone at first}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 Speed vs. Velocity}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{block}{Speed (Scalar)}
+\begin{itemize}
+\item Uses distance
+\item Magnitude only
+\item Always positive
+\item Example: 50 km/h
+\end{itemize}
+\end{block}
+
+\pause
+\column{0.48\textwidth}
+\begin{block}{Velocity (Vector)}
+\begin{itemize}
+\item Uses displacement
+\item Magnitude + direction
+\item Can be negative
+\item Example: 50 km/h north
+\end{itemize}
+\end{block}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Civilian View vs. Reality}
+\textbf{Civilian:} "Speed and velocity are the same thing."\\
+\textbf{Physicist:} "Speed is how fast. Velocity is how fast AND which way."
+\end{alertblock}
+\note{[P0] "Two sides of the same coin"\\\\
+[P1] "Speed: scalar, distance, always positive"\\\\
+[P2] "Velocity: vector, displacement, includes direction"\\\\
+[P3] [THE CONFLICT] "Everyday language: interchangeable. Physics: different concepts"\\\\
+[THE CONNECTION - Digital Archetype] "Game engines track velocity vectors for every object"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: The Student}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A student has a displacement of 304 m north in 180 s.
+
+\vspace{0.3cm}
+
+\textbf{Find:} The student's average velocity
+
+\vspace{0.3cm}
+
+\textit{Remember: velocity needs direction! Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you calculate velocity with direction?\\\\
+[SAY] "Try this on your own. Don't forget the direction in your answer."\\\\
+[TIMING] 3 min SILENT individual work\\\\
+[CIRCULATE] Note who forgets to include direction\\\\
+[WATCH FOR] Missing direction, wrong units\\\\
+[DON'T HELP] Let them practice vector thinking}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: The Student}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What formula did you use?
+\item Did you include direction in your answer?
+\item How many significant figures should the answer have?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your complete answer with direction.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for understanding of vectors\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] v-avg = displacement/time, include "north"\\\\
+[COMMON ERROR] Forgetting direction, wrong sig figs}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Student Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Displacement = 304 m north
+\item Time = 180 s
+\end{itemize}
+
+\pause
+
+\textbf{Equation:}
+$$\mathbf{v}_{\text{avg}} = \frac{\Delta \mathbf{d}}{\Delta t}$$
+
+\pause
+
+\textbf{Substitute:}
+$$\mathbf{v}_{\text{avg}} = \frac{304 \text{ m}}{180 \text{ s}} = 1.7 \text{ m/s north}$$
+
+\pause
+
+\textbf{Note:} 2 sig figs from time (180 s)
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "v-average equals delta d over delta t"\\\\
+[P2] "304 meters divided by 180 seconds"\\\\
+[P3] [ANSWER] "1.7 meters per second north - direction is essential"\\\\
+- Time has only 2 sig figs, so answer has 2 sig figs\\\\
+[THE WONDER] GPS satellites do this calculation millions of times per second to track your phone}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.2 Instantaneous Velocity}
+\textbf{Average velocity:} Over a time interval
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Instantaneous velocity:} At a specific instant in time
+
+\pause
+\vspace{0.3cm}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.4\textheight,keepaspectratio]{phys11-kinematics-fig26.jpg}
+\caption{Airplane passenger velocity at different segments}
+\end{figure}
+
+\pause
+If velocity is constant, instantaneous = average.
+\note{[P0] "Two types of velocity, like speed"\\\\
+[P1] "Average: over entire time interval"\\\\
+[P2] "Instantaneous: at one specific moment"\\\\
+- Diagram shows smaller time segments\\\\
+[P3] "Special case: constant velocity means instantaneous equals average throughout"\\\\
+[THE REVELATION] Calculus finds instantaneous velocity from infinitesimally small intervals}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Motion is relative - depends on reference frame \pause
+\item Distance (scalar) vs. displacement (vector) \pause
+\item Speed (scalar) vs. velocity (vector) \pause
+\item Displacement = final position - initial position \pause
+\item Average speed = distance / time \pause
+\item Average velocity = displacement / time
+\end{enumerate}
+\end{block}
+\note{[P0] "Six revelations today"\\\\
+[P1] "Motion is relative to reference frame"\\\\
+[P2] "Distance is path length, displacement is net change"\\\\
+[P3] "Speed is how fast, velocity is how fast plus direction"\\\\
+[P4] "Delta d equals d-f minus d-naught"\\\\
+[P5] "v-avg equals distance over time"\\\\
+[P6] "v-avg vector equals displacement over time"\\\\
+[THE WONDER] You now speak the language of kinematics\\\\
+- Name wheel: which concept was hardest?}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+\Delta \mathbf{d} &= \mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0} \\
+v_{\text{avg}} &= \frac{\text{distance}}{\text{time}} \\
+\mathbf{v}_{\text{avg}} &= \frac{\Delta \mathbf{d}}{\Delta t} = \frac{\mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0}}{t_{\mathrm{f}} - t_{0}}
+\end{align}
+
+\vspace{0.3cm}
+
+\textbf{Remember:}
+\begin{itemize}
+\item Bold = vector (includes direction)
+\item Italic = scalar (magnitude only)
+\end{itemize}
+\note{- Three foundational equations for kinematics\\\\
+- Displacement equation: change in position\\\\
+- Speed equation: distance over time\\\\
+- Velocity equation: displacement over time\\\\
+- Know when to use each\\\\
+- Questions before we end?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework is posted on the LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Section 2.3 Position vs Time Graphs\\\\
+- We'll visualize motion using graphs\\\\
+- Bring graph paper and ruler}
+\end{frame}
+
+\end{document}

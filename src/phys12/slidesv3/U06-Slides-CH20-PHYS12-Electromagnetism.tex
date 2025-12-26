@@ -1,0 +1,1069 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Forces That Shape Technology]{PHYS12 CH:20 The Invisible Force That Powers Your Life}
+\subtitle{From Aurora to Electric Motors}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Outline slide
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+    \frametitle{The Aurora's Secret}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys12-magnetism-fig01-1.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{exampleblock}{The Connection}
+    \textit{Same physics that creates northern lights powers your phone, lights your home, and makes your car move.}
+    \end{exampleblock}
+
+    \note{[P0] [THE HOOK] "Aurora Borealis - one of nature's most spectacular shows"\\\\
+    - "Charged particles from Sun spiral along Earth's magnetic field"\\\\
+    - "Light show hundreds of kilometers high"\\\\
+    [P1] [THE CONNECTION - Digital Archetype]\\\\
+    - "Every device you own uses electromagnetic induction"\\\\
+    - "Your laptop charger is a transformer"\\\\
+    - "Electric motors in hard drives, fans, vibration motors"\\\\
+    [THE WONDER] "We're about to learn how to transform energy with invisible fields"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Learning Objectives}
+
+    \begin{block}{By the end of this lesson, you will be able to:}
+        \begin{itemize}
+            \item \textbf{20.1:} Calculate magnetic force on moving charges and current-carrying wires \pause
+            \item \textbf{20.2:} Explain how electric motors, generators, and transformers work \pause
+            \item \textbf{20.2:} Describe how commercial electric power is produced and transmitted \pause
+            \item \textbf{20.3:} Explain how changing magnetic fields produce current \pause
+            \item \textbf{20.3:} Calculate induced electromotive force and current
+        \end{itemize}
+    \end{block}
+
+    \note{[P0] "Five big ideas today"\\\\
+    [P1] "First - magnetic force on moving charges"\\\\
+    [P2] "Second - motors turn electrical energy into motion"\\\\
+    [P3] "Third - power grid delivers energy to millions"\\\\
+    [P4] "Fourth - Faraday's discovery that changed everything"\\\\
+    [P5] "Fifth - actual calculations engineers use daily"\\\\
+    [THE CONNECTION - Kinetic] "Athletes: Your treadmill uses a motor. Gamers: Your console cooling fan too."}
+\end{frame}
+
+\section{20.1 Magnetic Fields and Force}
+
+\begin{frame}
+    \frametitle{20.1 Magnetic Poles}
+
+    \textbf{Every magnet has two poles:}
+    \begin{itemize}
+        \item North pole (points toward geographic North) \pause
+        \item South pole (points toward geographic South)
+    \end{itemize}
+
+    \pause
+    \vspace{0.3cm}
+
+    \begin{alertblock}{The Paradox}
+        \textbf{Civilian:} "Opposites attract, same poles repel."\\
+        \textbf{Physicist:} "True, but you can NEVER isolate a single pole."
+    \end{alertblock}
+
+    \note{[P0] "Every magnet has two poles"\\\\
+    [P1] "North and south - named for how they orient with Earth"\\\\
+    [P2] [THE CONFLICT] "Unlike electric charge, you cannot isolate a magnetic pole"\\\\
+    - "Cut a magnet in half, you get two smaller magnets with two poles each"\\\\
+    [THE HUMILITY] "Scientists searched for magnetic monopoles for centuries - never found one"\\\\
+    [THE WONDER] "Magnetism is fundamentally different from electricity"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.1 The Universal Law: Magnetic Force}
+
+    \begin{block}{Nature's Rule for Moving Charges}
+        \begin{center}
+            \Large $\boxed{F = qvB \sin \theta}$
+        \end{center}
+        Force on a charge moving through a magnetic field.
+    \end{block}
+
+    \pause
+    \vspace{0.3cm}
+
+    \textbf{Variables:}
+    \begin{itemize}
+        \item $F$ = force (N)
+        \item $q$ = charge (C)
+        \item $v$ = velocity (m/s)
+        \item $B$ = magnetic field strength (T, tesla)
+        \item $\theta$ = angle between $\vec{v}$ and $\vec{B}$
+    \end{itemize}
+
+    \note{[P0] [THE REVELATION] "F equals q v B sine theta - force on moving charge"\\\\
+    - "Four factors: charge, velocity, field strength, angle"\\\\
+    [P1] "Tesla is the unit of magnetic field - named after Nikola Tesla"\\\\
+    - "Earth's field is about 50 microtesla"\\\\
+    - "MRI machines use 1 to 3 tesla"\\\\
+    [THE CONNECTION - Kinetic Archetype] "Athletes: think of curve balls - spin creates force perpendicular to motion"\\\\
+    [THE WONDER] "This force is ALWAYS perpendicular to velocity - charges spiral in magnetic fields"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.1 Right-Hand Rule for Force}
+
+    \textbf{To find force direction on positive charge:}
+    \begin{enumerate}
+        \item Point fingers in direction of velocity $\vec{v}$ \pause
+        \item Curl fingers toward magnetic field $\vec{B}$ \pause
+        \item Thumb points in direction of force $\vec{F}$
+    \end{enumerate}
+
+    \pause
+    \vspace{0.3cm}
+
+    \begin{exampleblock}{Key Insight}
+        For negative charges, force is OPPOSITE the thumb direction.
+    \end{exampleblock}
+
+    \note{[P0] "Right-hand rule determines force direction"\\\\
+    [P1] "Point fingers along velocity"\\\\
+    [P2] "Curl toward magnetic field"\\\\
+    [P3] "Thumb shows force for positive charge"\\\\
+    - "Negative charge: force is opposite"\\\\
+    - "This is a tool you'll use constantly"\\\\
+    [THE CONNECTION - Kinetic] "Like steering - direction depends on how you turn the wheel"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.1 Maximum Force Condition}
+
+    \begin{alertblock}{When is Force Maximum?}
+        $\sin \theta$ is maximum when $\theta = 90°$
+    \end{alertblock}
+
+    \pause
+    \vspace{0.3cm}
+
+    \textbf{Maximum force:} $F_{\text{max}} = qvB$ (when $v \perp B$)
+
+    \pause
+    \vspace{0.3cm}
+
+    \textbf{Zero force:} $F = 0$ (when $v \parallel B$, $\theta = 0°$ or $180°$)
+
+    \pause
+    \vspace{0.3cm}
+
+    \begin{exampleblock}{The Mental Model}
+        Charge moving parallel to field lines feels no force. Moving perpendicular to field lines feels maximum force.
+    \end{exampleblock}
+
+    \note{[P0] "When is force maximum?"\\\\
+    [P1] "Maximum when velocity perpendicular to field - sine 90 equals 1"\\\\
+    [P2] "Zero when velocity parallel to field - sine 0 equals 0"\\\\
+    [P3] [THE CONNECTION - Digital Archetype] "Like game physics: collision force depends on angle of impact"\\\\
+    [THE WONDER] "Particles spiral along field lines because parallel motion feels no force"}
+\end{frame}
+
+\section{20.2 Motors, Generators, and Transformers}
+
+\begin{frame}
+    \frametitle{20.2 The Force on Current in Magnetic Field}
+
+    \begin{block}{Universal Law: Magnetic Force on Wire}
+        \begin{center}
+            \Large $\boxed{F = I \ell B \sin \theta}$
+        \end{center}
+        \vspace{0.2cm}
+        Current-carrying wire in magnetic field experiences force.
+    \end{block}
+
+    \pause
+
+    \begin{exampleblock}{The Mental Model}
+        Think of electricity as water flowing through a hose. Put that hose in a magnetic field, and the field \textit{pushes} the hose sideways.
+    \end{exampleblock}
+
+    \note{[P0] "Foundation for everything today"\\\\
+    [ALGEBRA] "F equals I times ell times B times sine theta"\\\\
+    - "Current I in amps, length ell in meters, field B in tesla"\\\\
+    - "Theta is angle between wire and field"\\\\
+    [P1] [THE CONNECTION - Harmonic]\\\\
+    - "Musicians: Speaker cone moves because current in coil feels magnetic force"\\\\
+    - "Same physics makes your headphones work"\\\\
+    [THE WONDER] "Every electric motor on Earth exploits this force"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Electric Motor: Converting Energy}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-magnetism-fig03-1.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{alertblock}{The Paradox}
+        \textbf{Civilian:} "Motors are complicated machines."\\
+        \textbf{Physicist:} "Just a current loop in a magnetic field."
+    \end{alertblock}
+
+    \note{[P0] "Schematic of simple DC motor"\\\\
+    - "Wire loop in horizontal magnetic field attached to vertical shaft"\\\\
+    - "Pass current through loop, magnetic field exerts torque"\\\\
+    - "Shaft rotates - electrical energy becomes mechanical"\\\\
+    [P1] [THE CONFLICT]\\\\
+    - "Looks complex but principle is elegantly simple"\\\\
+    - "Current perpendicular to field creates maximum force"\\\\
+    - "Force on opposite sides of loop creates rotation"\\\\
+    [THE CONNECTION - Kinetic] "Ceiling fan, power tools, electric cars - same design"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Motor Torque Analysis}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys12-magnetism-fig05-2.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{block}{Universal Law: Torque on Current Loop}
+        \begin{center}
+            \Large $\boxed{\tau = NIAB \sin \theta}$
+        \end{center}
+        Where $N$ = turns, $I$ = current, $A$ = loop area, $B$ = magnetic field
+    \end{block}
+
+    \note{[P0] "Top view shows forces on vertical wire segments"\\\\
+    - "Current flows into page on one side, out on other"\\\\
+    - "Magnetic field pushes both wires, creating torque"\\\\
+    - "Distance from pivot is w over 2"\\\\
+    [P1] [ALGEBRA] "Tau equals N I A B sine theta"\\\\
+    - "More loops N means more torque"\\\\
+    - "More current I means more torque"\\\\
+    - "Bigger area A means more torque"\\\\
+    [THE WONDER] "This equation designed every motor you've ever used"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Keeping the Motor Spinning}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys12-magnetism-fig05-3.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{alertblock}{The Problem}
+        Torque reverses every half turn. Without \textbf{brushes} to reverse current, motor oscillates instead of rotating.
+    \end{alertblock}
+
+    \note{[P0] "The torque problem"\\\\
+    - "At theta equals zero, torque is zero"\\\\
+    - "Maximum torque at theta equals 90 degrees"\\\\
+    - "After 180 degrees, torque reverses direction"\\\\
+    - "Loop would just rock back and forth"\\\\
+    [P1] [THE REVELATION]\\\\
+    - "Brushes are automatic switches"\\\\
+    - "Reverse current every half revolution"\\\\
+    - "Torque stays clockwise continuously"\\\\
+    [THE CONNECTION - Digital] "DC motors in drones use electronic switching instead"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Run Motor in Reverse: Generator}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\textwidth,height=0.45\textheight,keepaspectratio]{phys12-magnetism-fig06-1.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{exampleblock}{The Symmetry}
+        \textbf{Motor:} Electrical energy $\rightarrow$ Mechanical energy\\
+        \textbf{Generator:} Mechanical energy $\rightarrow$ Electrical energy
+    \end{exampleblock}
+
+    \note{[P0] "Motor physics reversed"\\\\
+    - "Attach handle to shaft, force coil to rotate"\\\\
+    - "Charges in wire moving through magnetic field"\\\\
+    - "Experience magnetic force parallel to wire"\\\\
+    - "Force pushes charges creating current"\\\\
+    [P1] [THE CONNECTION - Kinetic]\\\\
+    - "Bicycles: Your legs turn generator, powers headlight"\\\\
+    - "Regenerative braking: Wheels turn motor backwards, charges battery"\\\\
+    [THE WONDER] "Every power plant on Earth uses this principle"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Generator: The Math}
+
+    Velocity of wire makes angle $\theta$ with magnetic field:
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\textwidth,height=0.3\textheight,keepaspectratio]{phys12-magnetism-fig07-1.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{block}{Universal Law: Generator EMF}
+        \begin{center}
+            \Large $\boxed{\varepsilon = NAB\omega \sin \omega t}$
+        \end{center}
+        Peak emf: $\varepsilon_0 = NAB\omega$
+    \end{block}
+
+    \note{[P0] "Deriving generator output"\\\\
+    - "Velocity component perpendicular to B is v sine theta"\\\\
+    - "EMF on each wire is B ell v sine theta"\\\\
+    - "Two vertical wires contribute"\\\\
+    [P1] [ALGEBRA] "Epsilon equals N A B omega sine omega t"\\\\
+    - "N is number of turns in coil"\\\\
+    - "Omega is angular velocity in radians per second"\\\\
+    - "Output oscillates sinusoidally"\\\\
+    [THE WONDER] "This is alternating current - AC power in your walls"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 AC Power from Generator}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-magnetism-fig08-1.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{alertblock}{Civilian View vs. Reality}
+        \textbf{Civilian:} "Why don't lights flicker 120 times per second?"\\
+        \textbf{Physicist:} "Faster than eye refresh rate. We don't notice."
+    \end{alertblock}
+
+    \note{[P0] "Generator connected to light bulb"\\\\
+    - "Graph shows EMF versus time"\\\\
+    - "Oscillates from plus epsilon-zero to minus epsilon-zero"\\\\
+    - "Zero crossings mean zero current momentarily"\\\\
+    - "In US, 60 Hertz frequency means 120 zero crossings per second"\\\\
+    [P1] [THE HUMILITY]\\\\
+    - "Your eyes can't detect flicker above about 60 Hertz"\\\\
+    - "Plus light bulbs don't instantly turn off"\\\\
+    [THE CONNECTION - Harmonic] "Musicians: 60 Hz is between B-flat and B below middle C"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Real Generators: Steam Turbines}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth,height=0.55\textheight,keepaspectratio]{phys12-magnetism-fig09-1.jpg}
+    \end{figure}
+
+    \begin{exampleblock}{Energy Chain}
+        Coal/Nuclear/Gas $\rightarrow$ Heat $\rightarrow$ Steam $\rightarrow$ Turbine $\rightarrow$ Generator $\rightarrow$ Electricity
+    \end{exampleblock}
+
+    \note{[P0] "Cutaway of steam turbine generator"\\\\
+    - "Steam produced by burning coal or nuclear reactor"\\\\
+    - "High pressure steam impacts turbine blades"\\\\
+    - "Blades connected to shaft inside generator"\\\\
+    - "Rotating coil in magnetic field produces electricity"\\\\
+    [THE CONNECTION - All]\\\\
+    - "Hydroelectric: Falling water turns turbine"\\\\
+    - "Wind power: Wind turns turbine"\\\\
+    - "Same generator design, different energy source"\\\\
+    [THE WONDER] "Powers entire cities from rotating coils"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Transformers: Changing Voltage}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth,height=0.4\textheight,keepaspectratio]{phys12-magnetism-fig10-3.jpg}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \pause
+            \begin{block}{What Transformers Do}
+                Change AC voltage from one value to another\\
+                \vspace{0.2cm}
+                \textit{Phone chargers, laptop adapters, power tools}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \note{[P0] "Two types shown"\\\\
+    - "Left: Laminated core transformer - common in power transmission"\\\\
+    - "Right: Toroidal transformer - doughnut shaped"\\\\
+    - "Notice visible wire coils on both"\\\\
+    [P1] [THE CONNECTION - Digital]\\\\
+    - "Every device you plug in has a transformer"\\\\
+    - "Wall outlet 120V becomes 5V for USB, 19V for laptop"\\\\
+    - "Transform voltage to what device needs"\\\\
+    [THE WONDER] "Pure electromagnetic induction - no moving parts"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 How Transformers Work}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\textwidth,height=0.45\textheight,keepaspectratio]{phys12-magnetism-fig10-2.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{block}{The Principle}
+        \begin{enumerate}
+            \item AC current in primary coil creates changing magnetic field
+            \item Iron core traps and amplifies magnetic field
+            \item Changing field passes through secondary coil
+            \item Induces AC voltage in secondary coil
+        \end{enumerate}
+    \end{block}
+
+    \note{[P0] "Transformer construction"\\\\
+    - "Two wire coils wound on ferromagnetic iron core"\\\\
+    - "Primary coil receives input AC voltage"\\\\
+    - "Secondary coil produces output voltage"\\\\
+    - "Based on Faraday's law of induction"\\\\
+    [P1] "Why AC only?"\\\\
+    - "DC produces constant magnetic field"\\\\
+    - "No change means no induction"\\\\
+    - "AC constantly changing creates constantly changing field"\\\\
+    [THE WONDER] "Faraday discovered this in 1831 - still essential technology"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Transformer Equation}
+
+    \begin{block}{Universal Law: Voltage Transformation}
+        \begin{center}
+            \Large $\boxed{\frac{V_S}{V_P} = \frac{N_S}{N_P}}$
+        \end{center}
+        \vspace{0.2cm}
+        Secondary voltage / Primary voltage = Turns ratio
+    \end{block}
+
+    \pause
+
+    \begin{exampleblock}{Step-Up vs. Step-Down}
+        \textbf{Step-Up:} $N_S > N_P$ $\rightarrow$ Increases voltage (power transmission)\\
+        \textbf{Step-Down:} $N_S < N_P$ $\rightarrow$ Decreases voltage (home delivery)
+    \end{exampleblock}
+
+    \note{[P0] [ALGEBRA] "V-S over V-P equals N-S over N-P"\\\\
+    - "Ratio of output voltage to input voltage"\\\\
+    - "Equals ratio of coil turns"\\\\
+    - "More turns on secondary gives higher voltage"\\\\
+    [P1] "Two types"\\\\
+    - "Step-up: Power plant uses to boost voltage before transmission"\\\\
+    - "Step-down: Reduces voltage for safe home use"\\\\
+    [THE CONNECTION - Digital] "Your laptop brick is a step-down transformer: 120V to 19V"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 Power Transmission: Why High Voltage?}
+
+    \begin{block}{Power Transmitted}
+        $$P_{\text{transmitted}} = I_{\text{transmitted}} V_{\text{transmitted}}$$
+    \end{block}
+
+    \pause
+
+    \begin{alertblock}{The Problem: Joule Losses}
+        $$P_{\text{lost}} = I_{\text{transmitted}}^2 R_{\text{wire}}$$
+        Power lost as heat proportional to \textbf{current squared}
+    \end{alertblock}
+
+    \pause
+
+    \begin{exampleblock}{The Solution}
+        Increase voltage $\rightarrow$ Decrease current $\rightarrow$ Minimize losses
+    \end{exampleblock}
+
+    \note{[P0] [ALGEBRA] "P-transmitted equals I-transmitted times V-transmitted"\\\\
+    - "To transmit same power, can use high voltage and low current"\\\\
+    - "Or low voltage and high current"\\\\
+    [P1] [THE CONFLICT]\\\\
+    - "P-lost equals I-transmitted squared times R-wire"\\\\
+    - "Heating in transmission wires depends on current squared"\\\\
+    - "Double current means four times heat loss"\\\\
+    [P2] [THE REVELATION]\\\\
+    - "Step up voltage massively, current drops proportionally"\\\\
+    - "Same power delivered with far less loss"\\\\
+    [THE WONDER] "Transmission lines carry 120,000 to 700,000 volts"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.2 The Power Grid}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth,height=0.65\textheight,keepaspectratio]{phys12-magnetism-fig13-1.jpg}
+    \end{figure}
+
+    \note{[P0] "Journey of electricity from plant to home"\\\\
+    - "Generated at power station: greater than 10 kilovolts"\\\\
+    - "Step-up transformer: 120 to 700 kilovolts for transmission"\\\\
+    - "Long distance high-voltage lines minimize current and losses"\\\\
+    - "Substation step-down: 5 to 13 kilovolts for local distribution"\\\\
+    - "Final step-down at home: 120, 240, or 480 volts"\\\\
+    [THE CONNECTION - All]\\\\
+    - "Every transformer uses Faraday's law"\\\\
+    - "Without transformers, we'd need power plant every few kilometers"\\\\
+    [THE WONDER] "Queen Elizabeth asked Faraday what use was electricity - look at us now"}
+\end{frame}
+
+\section{20.3 Electromagnetic Induction}
+
+\begin{frame}
+    \frametitle{20.3 Nature's Symmetry}
+
+    \begin{block}{We Already Know}
+        Electric current creates magnetic field (electromagnet)
+    \end{block}
+
+    \pause
+
+    \begin{block}{Faraday's Question (1831)}
+        Can magnetic field create electric current?
+    \end{block}
+
+    \pause
+
+    \begin{exampleblock}{The Answer}
+        \textbf{Yes} - but only when magnetic field \textit{changes}
+    \end{exampleblock}
+
+    \note{[P0] "Physics seeks symmetry"\\\\
+    - "We know current makes magnetic field"\\\\
+    - "Faraday and Henry asked: Does field make current?"\\\\
+    [P1] [THE CONNECTION - All]\\\\
+    - "Took 12 years after electromagnet discovery"\\\\
+    - "1831: Both scientists independently found answer"\\\\
+    [P2] [THE REVELATION]\\\\
+    - "Not just any field - must be changing"\\\\
+    - "Static magnet near wire: nothing"\\\\
+    - "Moving magnet near wire: current flows"\\\\
+    [THE WONDER] "This discovery powers modern civilization"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.3 Faraday's Experiment}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.75\textwidth,height=0.6\textheight,keepaspectratio]{phys12-magnetism-fig16-1.jpg}
+    \end{figure}
+
+    \note{[P0] "Simple but revolutionary experiment"\\\\
+    - "Bar magnet moved through wire coil"\\\\
+    - "Galvanometer measures current in coil"\\\\
+    - "(a) Magnet stationary: Zero current"\\\\
+    - "(b) Magnet moving toward coil: Current flows one direction"\\\\
+    - "(c) Magnet moving away: Current flows opposite direction"\\\\
+    - "(d) Reverse magnet poles: Current reverses"\\\\
+    [THE HUMILITY]\\\\
+    - "Sometimes simplest experiments reveal deepest truths"\\\\
+    [THE WONDER] "Queen Victoria asked Faraday what good is electricity - he replied: What good is a baby?"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.3 What is EMF?}
+
+    \begin{alertblock}{Terrible Name}
+        \textbf{Electromotive Force} is NOT a force\\
+        It's a \textit{potential difference} (voltage)
+    \end{alertblock}
+
+    \pause
+
+    \begin{block}{Universal Law: EMF Definition}
+        \begin{center}
+            Energy added per unit charge by source\\
+            \vspace{0.2cm}
+            Symbol: $\varepsilon$ \quad Units: Volts (V)
+        \end{center}
+    \end{block}
+
+    \note{[P0] [THE CONFLICT]\\\\
+    - "Name stuck from 1800s - causes confusion"\\\\
+    - "Faraday thought it was a force pushing charges"\\\\
+    - "Actually, external source adds energy to charges"\\\\
+    - "Energy per charge has units of volts"\\\\
+    [P1] "Key distinction"\\\\
+    - "EMF is energy added by source per unit charge"\\\\
+    - "Voltage is energy released per unit charge flowing through circuit"\\\\
+    - "We use abbreviation EMF, symbol epsilon"\\\\
+    [THE CONNECTION - Digital] "Battery EMF is the voltage it provides to circuit"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.3 Understanding Magnetic Flux}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\textwidth,height=0.4\textheight,keepaspectratio]{phys12-magnetism-fig18-2.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{block}{Universal Law: Magnetic Flux}
+        \begin{center}
+            \Large $\boxed{\Phi = BA \cos \theta}$
+        \end{center}
+        \vspace{0.2cm}
+        Number of field lines perpendicular through area $A$\\
+        Unit: Weber (Wb) = T·m$^2$ = V·s
+    \end{block}
+
+    \note{[P0] "What creates EMF?"\\\\
+    - "Moving magnet changes number of field lines through loop"\\\\
+    - "Left: Seven field lines through loop"\\\\
+    - "Right: After time delta-t, only five lines"\\\\
+    - "Change in field lines induces EMF"\\\\
+    [P1] [ALGEBRA] "Phi equals B A cosine theta"\\\\
+    - "B is magnetic field strength in tesla"\\\\
+    - "A is area of loop"\\\\
+    - "Theta is angle between field and perpendicular to loop"\\\\
+    [THE CONNECTION - Harmonic] "Like sound intensity through window - depends on angle"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.3 Flux and Loop Orientation}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.75\textwidth,height=0.5\textheight,keepaspectratio]{phys12-magnetism-fig18-3.jpg}
+    \end{figure}
+
+    \pause
+
+    \begin{exampleblock}{The Sail Analogy}
+        \textbf{Loop = Sail, Magnetic Field = Wind}\\
+        Maximum flux when perpendicular ($\theta = 0°$)\\
+        Zero flux when parallel ($\theta = 90°$)
+    \end{exampleblock}
+
+    \note{[P0] "Angle matters"\\\\
+    - "Left loop: Field parallel to plane, perpendicular to area vector"\\\\
+    - "Theta equals 90 degrees, cosine is zero, no flux"\\\\
+    - "Right loop: Field perpendicular to plane, parallel to area vector"\\\\
+    - "Theta equals zero, cosine is one, maximum flux"\\\\
+    [P1] [THE CONNECTION - Kinetic]\\\\
+    - "Sailors: Sail perpendicular to wind catches maximum force"\\\\
+    - "Sail parallel to wind catches nothing"\\\\
+    - "Same with magnetic field through loop"\\\\
+    [THE WONDER] "Rotate loop from left to right, flux increases, EMF induced"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.3 Faraday's Law of Induction}
+
+    \begin{block}{Universal Law: Faraday's Law}
+        \begin{center}
+            \Large $\boxed{\varepsilon = -N \frac{\Delta \Phi}{\Delta t}}$
+        \end{center}
+        \vspace{0.2cm}
+        EMF induced equals rate of change of magnetic flux
+    \end{block}
+
+    \pause
+
+    \begin{exampleblock}{Three Ways to Induce EMF}
+        \begin{enumerate}
+            \item Change magnetic field strength $B$
+            \item Change loop area $A$
+            \item Change orientation angle $\theta$
+        \end{enumerate}
+    \end{exampleblock}
+
+    \note{[P0] [THE REVELATION]\\\\
+    [ALGEBRA] "Epsilon equals negative N times delta-Phi over delta-t"\\\\
+    - "N is number of loops in coil"\\\\
+    - "Delta-Phi over delta-t is rate of change of flux"\\\\
+    - "Minus sign explained by Lenz's law"\\\\
+    [P1] "Three mechanisms"\\\\
+    - "Stronger or weaker magnet changes B"\\\\
+    - "Expand or shrink loop changes A"\\\\
+    - "Rotate loop changes theta"\\\\
+    - "Any change in product B-A-cosine-theta induces EMF"\\\\
+    [THE WONDER] "This single equation designed every generator and transformer on Earth"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.3 Lenz's Law: The Minus Sign}
+
+    \begin{block}{Universal Law: Lenz's Law}
+        Induced current flows in direction that \textit{opposes} the change in flux
+    \end{block}
+
+    \pause
+
+    \begin{alertblock}{Nature Resists Change}
+        Flux increasing? $\rightarrow$ Induced field opposes increase\\
+        Flux decreasing? $\rightarrow$ Induced field opposes decrease
+    \end{alertblock}
+
+    \note{[P0] "Why the minus sign?"\\\\
+    - "Russian scientist Heinrich Lenz explained it"\\\\
+    - "Induced current creates magnetic field"\\\\
+    - "That field tries to keep flux constant"\\\\
+    - "Nature's way of resisting change"\\\\
+    [P1] [THE CONNECTION - All]\\\\
+    - "Like inertia for magnetism"\\\\
+    - "Objects resist change in motion (Newton's First Law)"\\\\
+    - "Circuits resist change in magnetic flux (Lenz's Law)"\\\\
+    [THE HUMILITY]\\\\
+    - "Took years to understand the direction"\\\\
+    - "Right-hand rule helps us predict current flow"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{20.3 Applying Lenz's Law}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth,height=0.65\textheight,keepaspectratio]{phys12-magnetism-fig21-1.jpg}
+    \end{figure}
+
+    \note{[P0] "Three scenarios with right-hand rule"\\\\
+    - "(a) North pole approaches: B-mag pointing right increases"\\\\
+    - "Induced B-coil points left to oppose increase"\\\\
+    - "Curl fingers counterclockwise, thumb points left"\\\\
+    - "(b) North pole retreats: B-mag pointing right decreases"\\\\
+    - "Induced B-coil points right to oppose decrease"\\\\
+    - "Curl fingers clockwise, thumb points right"\\\\
+    - "(c) South pole approaches: B-mag pointing left increases"\\\\
+    - "Induced B-coil points right to oppose increase"\\\\
+    [THE CONNECTION - Kinetic] "Like pushing someone on swing - they push back"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Attempt: EMF in Moving Coil}
+
+    \textbf{Try this on your own (3 min, silent):}
+
+    \vspace{0.3cm}
+
+    A magnetic field passes through a 16-turn coil with diameter 2.0 cm. The magnetic field decreases from 0.020 T to 0.010 T in 34 s. The coil has resistance 0.1 $\Omega$.
+
+    \vspace{0.3cm}
+
+    \textbf{Given:}
+    \begin{itemize}
+        \item $N = 16$ turns
+        \item $d = 0.020$ m
+        \item $\Delta B = -0.010$ T
+        \item $\Delta t = 34$ s
+        \item $R = 0.1$ $\Omega$
+    \end{itemize}
+
+    \textbf{Find:} Magnitude and direction of induced current
+
+    \vspace{0.2cm}
+
+    \textit{Work individually. It's okay to get stuck.}
+
+    \note{[THE CHALLENGE] "Can you find the induced current?"\\\\
+    [TIMING] 3-4 min SILENT work\\\\
+    [CIRCULATE] Note who uses Faraday's law correctly\\\\
+    - "Watch for area calculation using diameter"\\\\
+    - "Watch for Ohm's law application"\\\\
+    - "Don't help yet - productive struggle"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Compare: EMF in Moving Coil}
+
+    \textbf{Turn and talk (2 min):}
+
+    \begin{enumerate}
+        \item What equation did you use for EMF?
+        \item How did you calculate the magnetic flux?
+        \item How did you find current from EMF?
+        \item What direction does current flow?
+    \end{enumerate}
+
+    \pause
+    \vspace{0.3cm}
+    \alert{Name wheel:} One pair share your approach (not your answer).
+
+    \note{[TIMING] 2-3 min pair discussion\\\\
+    [CIRCULATE] Listen for approach\\\\
+    - "Should use Faraday's law for EMF"\\\\
+    - "Flux uses area equals pi d-squared over 4"\\\\
+    - "Ohm's law gives current from EMF"\\\\
+    - "Lenz's law determines direction"\\\\
+    [NAME WHEEL] Call a pair\\\\
+    - "Listen for equation choice"\\\\
+    [EXPECTED APPROACH] Use epsilon equals negative N delta-Phi over delta-t, then I equals epsilon over R}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reveal: Solution}
+
+    \textbf{Self-correct in a different color:}
+
+    \textbf{G - Given:} See problem
+
+    \pause
+
+    \textbf{U - Unknown:} $I = ?$
+
+    \pause
+
+    \textbf{E - Equations:}
+    \begin{align*}
+        \varepsilon &= -N \frac{\Delta \Phi}{\Delta t} = -N \frac{\Delta B \pi d^2}{4 \Delta t}\\
+        I &= \frac{\varepsilon}{R}
+    \end{align*}
+
+    \pause
+
+    \textbf{S - Substitute:}
+    $$I = -16 \frac{(-0.010\text{ T}) \pi (0.020\text{ m})^2}{4(0.10\, \Omega)(34\text{ s})} = 15\, \mu\text{A}$$
+
+    \pause
+
+    \textbf{S - Statement:} $\boxed{I = 15\, \mu\text{A}}$ to the right (opposes decrease in field)
+
+    \note{[ALGEBRA] Step by step\\\\
+    [P1] "Unknown: Current in microamps"\\\\
+    [P2] "Combine Faraday's law with flux equation"\\\\
+    - "Area of circle: pi d-squared over 4"\\\\
+    [P3] "Substitute numbers"\\\\
+    - "Note: Delta-B is negative 0.010 tesla"\\\\
+    - "Negatives cancel giving positive current"\\\\
+    [P4] [ANSWER] Current is 15 microamps flowing to right\\\\
+    - "Lenz says current opposes decrease, so produces field to right"\\\\
+    [THE WONDER] "You just calculated what powers every generator"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Attempt: Sliding Rod Circuit}
+
+    \textbf{Try this on your own (3 min, silent):}
+
+    \vspace{0.2cm}
+
+    A U-shaped wire with a 20 $\Omega$ resistor has a conducting rod sliding on it at 0.50 m/s. The circuit is in a constant 0.010 T magnetic field pointing into the page. The rod is 0.10 m long.
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\textwidth,height=0.25\textheight,keepaspectratio]{phys12-magnetism-fig25-1.jpg}
+    \end{figure}
+
+    \textbf{Given:} $B = 0.010$ T, $v = 0.50$ m/s, $\ell = 0.10$ m, $R = 20\, \Omega$
+
+    \textbf{Find:} Current magnitude and direction
+
+    \vspace{0.2cm}
+
+    \textit{Work individually. It's okay to get stuck.}
+
+    \note{[THE CHALLENGE] "Rod slides, area changes, flux changes, current flows"\\\\
+    [TIMING] 3-4 min SILENT work\\\\
+    [CIRCULATE] Watch for area change rate\\\\
+    - "Some will struggle with changing area instead of changing field"\\\\
+    - "That's good - different application of same law"\\\\
+    - "Don't help yet"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Compare: Sliding Rod Circuit}
+
+    \textbf{Turn and talk (2 min):}
+
+    \begin{enumerate}
+        \item What changes: $B$, $A$, or $\theta$?
+        \item How fast does area change?
+        \item What's the rate of flux change?
+        \item Direction of induced current?
+    \end{enumerate}
+
+    \pause
+    \vspace{0.3cm}
+    \alert{Name wheel:} One pair share your approach (not your answer).
+
+    \note{[TIMING] 2-3 min pair discussion\\\\
+    [CIRCULATE] Listen for recognition\\\\
+    - "Area changes, field constant"\\\\
+    - "Rate of area change is delta-A over delta-t equals v times ell"\\\\
+    - "Flux change rate is B times v times ell"\\\\
+    [NAME WHEEL] Call a pair\\\\
+    [EXPECTED APPROACH] Area increasing at rate v-ell, so flux increasing at rate B-v-ell}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reveal: Sliding Rod Solution}
+
+    \textbf{Self-correct in a different color:}
+
+    \textbf{E - Equation:}
+    $$\frac{\Delta \Phi}{\Delta t} = B \frac{\Delta A}{\Delta t} = B v \ell$$
+
+    \pause
+
+    $$\varepsilon = -B v \ell$$
+
+    \pause
+
+    \textbf{S - Substitute:}
+    $$I = \frac{\varepsilon}{R} = \frac{B v \ell}{R} = \frac{(0.010\text{ T})(0.50\text{ m/s})(0.10\text{ m})}{20\,\Omega}$$
+
+    \pause
+
+    $$\boxed{I = 25\,\mu\text{A}}$$ flowing \textbf{clockwise}
+
+    \pause
+
+    \textbf{Check:} Lenz's law - flux into page increasing, so induced field out of page (counterclockwise current would point out, but we have sign... current is clockwise)
+
+    \note{[P1] [ALGEBRA] "Rate of area change is v times ell"\\\\
+    - "EMF equals negative B v ell"\\\\
+    [P2] "Ohm's law"\\\\
+    [P3] "Substitute numbers"\\\\
+    - "0.010 times 0.50 times 0.10 over 20"\\\\
+    [P4] [ANSWER] Current is 25 microamps\\\\
+    - "Direction: Flux into page increasing"\\\\
+    - "Induced field must point out of page to oppose"\\\\
+    - "Right-hand rule: Clockwise current makes field out"\\\\
+    [P5] [THE WONDER] "External force pulling rod does work, circuit dissipates power - energy conserved"}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+    \frametitle{Key Equations Summary}
+
+    \begin{block}{Motors and Generators}
+        \begin{align*}
+            F &= I\ell B \sin\theta \quad \text{(Force on wire)}\\
+            \tau &= NIAB\sin\theta \quad \text{(Motor torque)}\\
+            \varepsilon &= NAB\omega\sin\omega t \quad \text{(Generator EMF)}
+        \end{align*}
+    \end{block}
+
+    \begin{block}{Transformers and Power}
+        \begin{align*}
+            \frac{V_S}{V_P} &= \frac{N_S}{N_P} \quad \text{(Transformer equation)}\\
+            P_{\text{lost}} &= I^2 R \quad \text{(Joule heating)}
+        \end{align*}
+    \end{block}
+
+    \note{[P0] "Five essential equations for motors, generators, transformers"\\\\
+    - "Force on current-carrying wire: F equals I ell B sine theta"\\\\
+    - "Torque on motor loop: tau equals N I A B sine theta"\\\\
+    - "Generator output: epsilon equals N A B omega sine omega t"\\\\
+    - "Transformer voltage ratio: V-S over V-P equals turns ratio"\\\\
+    - "Power loss in transmission: I-squared R - why we use high voltage"}
+\end{frame}
+
+\begin{frame}[shrink]
+    \frametitle{Key Equations Summary (continued)}
+
+    \begin{block}{Electromagnetic Induction}
+        \begin{align*}
+            \Phi &= BA\cos\theta \quad \text{(Magnetic flux)}\\
+            \varepsilon &= -N\frac{\Delta\Phi}{\Delta t} \quad \text{(Faraday's Law)}\\
+            \varepsilon &= B\ell v \quad \text{(Motional EMF)}
+        \end{align*}
+    \end{block}
+
+    \vspace{0.3cm}
+
+    \begin{exampleblock}{Lenz's Law (Direction)}
+        Induced current opposes the change in magnetic flux
+    \end{exampleblock}
+
+    \note{"Three more for electromagnetic induction"\\\\
+    - "Magnetic flux: Phi equals B A cosine theta"\\\\
+    - "Faraday's law: epsilon equals negative N delta-Phi over delta-t"\\\\
+    - "Motional EMF for moving wire: epsilon equals B ell v"\\\\
+    - "Lenz's law determines current direction"\\\\
+    [THE WONDER] "Eight equations that power modern civilization"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Big Picture}
+
+    \begin{exampleblock}{Symmetry of Electromagnetism}
+        \begin{center}
+            Electricity $\leftrightarrow$ Magnetism
+        \end{center}
+    \end{exampleblock}
+
+    \pause
+
+    \begin{itemize}
+        \item Electric current creates magnetic field (electromagnet)
+        \pause
+        \item Changing magnetic field creates electric current (induction)
+        \pause
+        \item Motors convert electrical $\rightarrow$ mechanical energy
+        \pause
+        \item Generators convert mechanical $\rightarrow$ electrical energy
+        \pause
+        \item Transformers change voltage using induction
+        \pause
+        \item Power grid uses transformers to transmit energy efficiently
+    \end{itemize}
+
+    \note{[P0] "Beautiful symmetry"\\\\
+    [P1] "We knew current makes field"\\\\
+    [P2] "Faraday showed field makes current"\\\\
+    [P3] "Motors: Electricity pushes wires in magnetic field"\\\\
+    [P4] "Generators: Motion creates changing flux, induces current"\\\\
+    [P5] "Transformers: Changing current in one coil induces voltage in another"\\\\
+    [P6] "Power grid: Step up, transmit, step down"\\\\
+    [THE WONDER] "From aurora to smartphone charger - all electromagnetic induction"}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Homework}
+
+    \begin{center}
+        \Large
+        Complete the assigned problems\\[0.3cm]
+        posted on the LMS
+    \end{center}
+
+    \note{Homework posted on LMS\\\\
+    Due date: check LMS\\\\
+    Questions before we end?\\\\
+    [THE CONNECTION - All]\\\\
+    - "Tonight when you plug in your phone, remember the transformer"\\\\
+    - "When you turn on a light, thank Faraday and his law"\\\\
+    [THE WONDER] "You now understand the physics that powers the world"}
+\end{frame}
+
+\end{document}

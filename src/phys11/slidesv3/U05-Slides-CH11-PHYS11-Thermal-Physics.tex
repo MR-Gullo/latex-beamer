@@ -1,0 +1,968 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Thermal Physics]{PHYS11 CH:11 The Hidden Energy}
+\subtitle{Temperature, Heat, and Phase Change}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we decode invisible energy.\\\\
+- Why metal feels colder than wood at same temp\\\\
+- Why ice cream melts, why sweat cools you\\\\
+- Three revelations: temperature vs thermal energy, heat transfer modes, phase change\\\\
+[THE WONDER] By end of class, you'll understand the energy that shapes everything from weather to cooking}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery of the Welder}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-thermal-fig01-2.jpg}
+\end{figure}
+
+\pause
+How does thermal energy travel from the arc to your skin meters away?
+\note{[P0] "Welder's arc - hot enough to melt metal"\\\\
+[P1] [THE HOOK] "You can feel the heat meters away. How does that energy reach you?"\\\\
+- No physical contact required\\\\
+- Energy transferred invisibly through space\\\\
+[THE WONDER] Same radiation warms Earth from Sun 150 million km away}
+\end{frame}
+
+\section{Temperature and Thermal Energy}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{11.1:} Explain that temperature is a measure of internal kinetic energy \pause
+\item \textbf{11.1:} Interconvert temperatures between Celsius, Kelvin, and Fahrenheit scales
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for temperature"\\\\
+[P1] "First: what temperature really measures at molecular level. Second: convert between scales"\\\\
+- This is foundational for all thermal physics\\\\
+- You'll use these conversions constantly}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.1 What Is Temperature?}
+\begin{alertblock}{The Illusion}
+\textbf{You think:} Temperature measures heat\\
+\textbf{Reality:} Temperature measures average kinetic energy of molecules
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{The Source Code}
+Temperature = what we measure on a thermometer\\
+Heat = transfer of energy due to temperature difference
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\alert{Heat and temperature are NOT the same thing.}
+\note{[P0] [THE CONFLICT] "Common confusion - temperature is NOT heat"\\\\
+[P1] "Temperature: average molecular kinetic energy"\\\\
+- Heat: energy transfer from hot to cold\\\\
+[P2] "You're sensitive to flow of energy, not temperature itself"\\\\
+[THE HUMILITY] This confuses everyone at first}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.1 Thermal Energy: The Invisible Motion}
+\begin{exampleblock}{The Mental Model}
+Atoms and molecules are constantly bouncing around in random directions.\\
+Faster motion = higher temperature.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Thermal energy} = average kinetic energy of particles in a substance
+
+\pause
+\vspace{0.3cm}
+
+\begin{center}
+\Large $KE = \frac{1}{2}mv^2$
+\end{center}
+
+\pause
+Higher speed $\rightarrow$ greater kinetic energy $\rightarrow$ higher temperature
+\note{[P0] "Atoms constantly moving, bouncing off each other"\\\\
+[P1] "Thermal energy: average kinetic energy of particles"\\\\
+[P2] "Kinetic energy equals half m v squared"\\\\
+[P3] [THE REVELATION] "Higher speed means higher temperature"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like a mosh pit - faster dancers, more energy in the room"}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.1 Temperature Scales}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermal-fig05-2.jpg}
+\caption{Fahrenheit, Celsius, and Kelvin scales compared}
+\end{figure}
+
+\pause
+\textbf{Three scales, same physics:}
+\begin{itemize}
+\item Celsius: water freezes at 0, boils at 100
+\item Fahrenheit: water freezes at 32, boils at 212
+\item Kelvin: absolute zero at 0, water freezes at 273.15
+\end{itemize}
+\note{[P0] "Three temperature scales - all measure same thing"\\\\
+[P1] "Celsius and Fahrenheit: relative scales with arbitrary zero. Kelvin: absolute scale"\\\\
+- Scientists prefer Kelvin - based on true zero\\\\
+- 100 Celsius degrees = 180 Fahrenheit degrees\\\\
+- One Celsius degree = 1.8 Fahrenheit degrees}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.1 Absolute Zero: The Coldest Possible}
+\begin{block}{The Ultimate Limit}
+\textbf{Absolute zero} = 0 K = -273.15 C\\
+The temperature at which all molecular motion ceases.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Can we reach it?}
+\begin{itemize}
+\item Theoretically possible \pause
+\item Never achieved in practice \pause
+\item Coldest lab temperature: $1.0 \times 10^{-10}$ K (Helsinki)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{At absolute zero, particles have minimum possible energy (quantum zero-point energy).}
+\note{[P0] "Absolute zero: theoretical lowest temperature"\\\\
+[P1] "All molecular motion stops - no thermal energy"\\\\
+[P2] "Theoretically possible"\\\\
+[P3] "Never reached - closest is 0.0000000001 K"\\\\
+[P4] [THE WONDER] "Even at absolute zero, quantum mechanics says particles still vibrate slightly"\\\\
+[THE HUMILITY] Nature always has secrets}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.1 Converting Temperature Scales}
+\begin{block}{Key Conversion Equations}
+\begin{align*}
+T_{\circ F} &= \frac{9}{5}T_{\circ C} + 32 \\
+T_{\circ C} &= \frac{5}{9}(T_{\circ F} - 32) \\
+T_{K} &= T_{\circ C} + 273.15 \\
+T_{\circ C} &= T_{K} - 273.15
+\end{align*}
+\end{block}
+
+\pause
+\begin{exampleblock}{Quick Check}
+Room temperature: 25 C = ? F = ? K
+\end{exampleblock}
+\note{[P0] "Four most common conversions"\\\\
+- Celsius to Fahrenheit: multiply by 9/5, add 32\\\\
+- Kelvin is just Celsius shifted by 273.15\\\\
+[P1] "Room temp: 25 C = 77 F = 298 K"\\\\
+[THE CONNECTION - Digital Archetype] "Like converting between units in a video game"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Temperature Conversion}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Your body temperature is normally 98.6 F.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $T_{\circ F} = 98.6$ F
+\end{itemize}
+
+\textbf{Find:} Body temperature in Celsius and Kelvin
+
+\vspace{0.3cm}
+
+\textit{Can you decode your body's thermal state? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they convert between scales?\\\\
+[SAY] "Try this on your own. Use the conversion equations."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who uses correct equation\\\\
+[WATCH FOR] Students forgetting to subtract 32 first\\\\
+[DON'T HELP] Let them struggle with order of operations}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Temperature Conversion}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equation did you use to convert F to C?
+\item Did you subtract 32 before or after multiplying by 5/9?
+\item How did you convert C to K?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for order of operations errors\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Subtract 32, multiply by 5/9 for Celsius, then add 273.15 for Kelvin\\\\
+[COMMON ERROR] Multiplying before subtracting 32}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Decoding Body Temperature}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Convert F to C using $T_{\circ C} = \frac{5}{9}(T_{\circ F} - 32)$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $T_{\circ C} = \frac{5}{9}(98.6 - 32) = \frac{5}{9}(66.6)$
+
+\pause
+\vspace{0.2cm}
+
+$$T_{\circ C} = \boxed{37.0\text{ C}}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2:} Convert C to K using $T_{K} = T_{\circ C} + 273.15$
+
+\pause
+\vspace{0.2cm}
+
+$$T_{K} = 37.0 + 273.15 = \boxed{310.2\text{ K}}$$
+
+\pause
+\textbf{Check:} 37 C is normal body temp. Makes sense!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Five-ninths times 98.6 minus 32"\\\\
+[P2] "37.0 degrees Celsius"\\\\
+[P3] "Now add 273.15 for Kelvin"\\\\
+[P4] [ANSWER] "310.2 Kelvin"\\\\
+[P5] "Check: 37 C is exactly normal body temp"\\\\
+[THE WONDER] Your body maintains 310 K within 1 degree to keep you alive}
+\end{frame}
+
+\section{Heat, Specific Heat, and Heat Transfer}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{11.2:} Explain heat, heat capacity, and specific heat \pause
+\item \textbf{11.2:} Distinguish between conduction, convection, and radiation \pause
+\item \textbf{11.2:} Solve problems involving specific heat and heat transfer
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for heat transfer"\\\\
+[P1] "First: what is specific heat and why materials heat differently"\\\\
+[P2] "Second: three modes of heat transfer"\\\\
+[P3] "Third: calculations with heat equation Q=mcΔT"\\\\
+- These explain everything from cooking to climate}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Heat: Energy on the Move}
+\begin{block}{The Universal Law}
+\textbf{Heat} = transfer of thermal energy from hot to cold
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insights:}
+\begin{itemize}
+\item Heat is NOT a substance - it's energy in transit \pause
+\item Heat always flows from high to low temperature \pause
+\item Heat stops flowing when temperatures equalize \pause
+\item Heat is measured in joules (J), like all energy
+\end{itemize}
+\note{[P0] [THE REVELATION] "Heat is energy transfer, not a thing"\\\\
+[P1] "It's NOT a substance you pour into something"\\\\
+[P2] "Always flows from hot to cold - never reversed naturally"\\\\
+[P3] "Stops when temperatures equal - thermal equilibrium"\\\\
+[P4] "Joules: same unit as kinetic energy, potential energy"\\\\
+[THE WONDER] Heat is just energy changing location}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 The Heat Equation}
+\begin{block}{Nature's Rule for Temperature Change}
+\begin{center}
+\Large $\boxed{Q = mc\Delta T}$
+\end{center}
+Heat transferred = mass × specific heat × temperature change
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{What each variable means:}
+\begin{itemize}
+\item $Q$ = heat transferred (J)
+\item $m$ = mass (kg)
+\item $c$ = specific heat (J/kg·C)
+\item $\Delta T$ = temperature change (C or K)
+\end{itemize}
+\note{[P0] [THE REVELATION] "Q equals m c delta T"\\\\
+- Q: heat transferred in joules\\\\
+- m: mass in kilograms\\\\
+- c: specific heat - how stubborn the material is about changing temp\\\\
+- Delta T: temperature change\\\\
+[P1] "Three factors affect heat needed: how much stuff, what it's made of, how much temp change"\\\\
+[THE CONNECTION - Digital Archetype] "Like damage calculation: amount times resistance times hit strength"}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Specific Heat: Material Stubbornness}
+\begin{exampleblock}{The Mental Model}
+Specific heat = how much energy needed to raise 1 kg of material by 1 C
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Common values:}
+\begin{itemize}
+\item Water: 4186 J/kg·C (very high!) \pause
+\item Aluminum: 900 J/kg·C \pause
+\item Iron: 450 J/kg·C \pause
+\item Copper: 387 J/kg·C
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{Water requires 5× more energy than iron to heat the same amount!}
+\note{[P0] "Specific heat: resistance to temperature change"\\\\
+[P1] "Water: 4186 - highest of common materials"\\\\
+[P2] "Aluminum: 900"\\\\
+[P3] "Iron: 450"\\\\
+[P4] "Copper: 387"\\\\
+[P5] [THE WONDER] "Water's high specific heat stabilizes Earth's climate"\\\\
+- Oceans store huge amounts of heat\\\\
+- Coastal cities have milder weather than inland}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Why Metal Feels Colder}
+\begin{alertblock}{The Paradox}
+Wood and metal at room temperature.\\
+\textbf{Why does metal feel colder when you touch it?}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{The answer:}
+\begin{itemize}
+\item Both are same temperature \pause
+\item Metal conducts heat faster than wood \pause
+\item Metal pulls heat from your hand rapidly \pause
+\item You sense rate of heat loss, not temperature!
+\end{itemize}
+\note{[P0] [THE CONFLICT] "Touch wood desk, then metal chair. Same temp, different feel. Why?"\\\\
+[P1] "Both at room temperature - thermometer would show same"\\\\
+[P2] "Metal is better conductor - moves heat faster"\\\\
+[P3] "Pulls thermal energy from your skin rapidly"\\\\
+[P4] [THE REVELATION] "You're sensitive to heat flow rate, not absolute temperature"\\\\
+[THE HUMILITY] Your senses evolved to detect danger, not measure temperature accurately}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Three Modes of Heat Transfer}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermal-fig15-2.jpg}
+\caption{Fireplace: all three modes at once}
+\end{figure}
+
+\pause
+\begin{itemize}
+\item \textbf{Conduction:} through physical contact
+\item \textbf{Convection:} by fluid movement
+\item \textbf{Radiation:} by electromagnetic waves
+\end{itemize}
+\note{[P0] "Fireplace demonstrates all three modes simultaneously"\\\\
+[P1] "Conduction: pan handle gets hot. Convection: hot air rises up chimney. Radiation: you feel warmth across room"\\\\
+- Most heat to room comes from radiation\\\\
+- Cold air enters around windows (convection)\\\\
+- Name wheel: give another example of each mode}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Conduction: Touch Transfer}
+\begin{exampleblock}{The Mental Model}
+Molecules vibrating faster bump into slower neighbors, sharing energy.\\
+Like dominoes falling in sequence.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys11-thermal-fig17-2.jpg}
+\caption{Energy transfers through collisions}
+\end{figure}
+
+\pause
+\textbf{Good conductors:} metals (copper, aluminum, gold)\\
+\textbf{Poor conductors:} wood, plastic, rubber (insulators)
+\note{[P0] "Conduction: direct physical contact"\\\\
+- Fast-moving particles collide with slow ones\\\\
+- Energy transferred through collisions\\\\
+[P1] "Hot side: high kinetic energy. Cold side: low kinetic energy"\\\\
+[P2] "Metals: free electrons carry energy quickly. Wood: tightly bound molecules, slow transfer"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like a crowd at concert - energy ripples through by contact"}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Convection: Fluid Flow}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys11-thermal-fig18-4.jpg}
+\caption{Heated air rises, cool air sinks}
+\end{figure}
+
+\pause
+\column{0.48\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys11-thermal-fig18-5.jpg}
+\caption{Water circulation in pot}
+\end{figure}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key idea:} Hot fluid expands, becomes less dense, rises
+\note{[P0] "Convection: heat transfer by moving fluid"\\\\
+[P1] "House: hot air rises from furnace, circulates room, cools at ceiling, sinks"\\\\
+[P2] "Pot: hot water rises, cool water sinks, creates circulation loop"\\\\
+[P3] "Buoyancy drives convection - hot less dense than cold"\\\\
+- Weather: giant convection currents\\\\
+- Ocean currents distribute heat globally}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Radiation: No Medium Needed}
+\begin{exampleblock}{The Mystery}
+How does Sun's energy reach Earth through vacuum of space?
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{The Source Code}
+\textbf{Radiation} = energy transfer by electromagnetic waves\\
+No physical medium required!
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Examples:}
+\begin{itemize}
+\item Feel warmth from fire without touching
+\item Microwave oven heating food
+\item Infrared heat lamps
+\item Sun warming Earth
+\end{itemize}
+\note{[P0] [THE HOOK] "Space is vacuum - no air, no particles. How does Sun's energy cross 150 million km?"\\\\
+[P1] [THE REVELATION] "Radiation: EM waves carry energy through empty space"\\\\
+- Light is EM wave you can see\\\\
+- Infrared is EM wave you feel as heat\\\\
+[P2] "Fire radiates IR to your skin. You feel it before touching"\\\\
+[THE WONDER] All objects above absolute zero radiate electromagnetic energy}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.2 Color and Radiation}
+\textbf{Color affects absorption and emission:}
+\begin{itemize}
+\item \textbf{Black:} best absorber AND radiator \pause
+\item \textbf{White:} worst absorber AND radiator \pause
+\item \textbf{Shiny:} reflects radiation like mirror
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Real-World Application}
+Hot climates: wear white to reflect heat\\
+Cold nights: black asphalt radiates heat faster than grass\\
+Space blankets: shiny surface reflects body heat back
+\end{alertblock}
+\note{[P0] "Color determines how objects interact with radiation"\\\\
+[P1] "Black absorbs all wavelengths - heats up fastest"\\\\
+[P2] "White reflects all wavelengths - stays cooler"\\\\
+[P3] [THE CONNECTION - Harmonic Archetype] "Black parking lot on summer day vs white roof"\\\\
+- Same sun, different temps\\\\
+- Black asphalt: 65 C. White concrete: 40 C\\\\
+[THE REVELATION] Why people in deserts wear white robes}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Heating Water}
+\begin{exampleblock}{The Challenge (4 min, silent)}
+You heat 2.0 kg of water from 20 C to 80 C.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m = 2.0$ kg
+\item $c_{water} = 4186$ J/kg·C
+\item $T_i = 20$ C, $T_f = 80$ C
+\end{itemize}
+
+\textbf{Find:} Heat energy required (Q)
+
+\vspace{0.3cm}
+
+\textit{Can you calculate energy needed? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they use Q=mcΔT correctly?\\\\
+[SAY] "Try this on your own. Calculate delta T first."\\\\
+[TIMING] 4 min SILENT individual work\\\\
+[CIRCULATE] Note who forgets to calculate ΔT first\\\\
+[WATCH FOR] Students using 80 instead of 60 for ΔT\\\\
+[DON'T HELP] Let them work through it}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Heat Calculation}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation did you use?
+\item How did you calculate $\Delta T$?
+\item What units did you get for Q?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for ΔT calculation errors\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Q=mcΔT, where ΔT = 80-20 = 60 C\\\\
+[COMMON ERROR] Using 80 C instead of 60 C for ΔT}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Energy to Heat Water}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Calculate temperature change
+$$\Delta T = T_f - T_i = 80 - 20 = 60\text{ C}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2:} Use $Q = mc\Delta T$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $Q = (2.0\text{ kg})(4186\text{ J/kg·C})(60\text{ C})$
+
+\pause
+\vspace{0.2cm}
+
+$$Q = 502,320\text{ J} = \boxed{502\text{ kJ}}$$
+
+\pause
+\textbf{Check:} About 500 kJ to heat 2 L water by 60 degrees. Reasonable!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Delta T equals 80 minus 20 equals 60 degrees"\\\\
+[P2] "Q equals m c delta T"\\\\
+[P3] "2.0 times 4186 times 60"\\\\
+[P4] [ANSWER] "502 kilojoules - about half a megajoule"\\\\
+[P5] "Check: heating 2 L by 60 C takes serious energy"\\\\
+[THE WONDER] Your electric kettle does this in 3 minutes - pulling 2700 watts}
+\end{frame}
+
+\section{Phase Change and Latent Heat}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{11.3:} Explain changes in heat during changes of state \pause
+\item \textbf{11.3:} Describe latent heats of fusion and vaporization \pause
+\item \textbf{11.3:} Solve problems involving phase changes
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for phase change"\\\\
+[P1] "First: what happens when substances change state"\\\\
+[P2] "Second: latent heat - hidden energy of phase change"\\\\
+[P3] "Third: calculations with Q=mL equations"\\\\
+- This explains ice melting, water boiling, dry ice}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.3 The Four Phases of Matter}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-thermal-fig27-2.jpg}
+\caption{Solid, liquid, gas, and plasma}
+\end{figure}
+
+\pause
+\textbf{Energy ranking:} Solid < Liquid < Gas < Plasma
+\note{[P0] "Four states of matter in order of energy"\\\\
+[P1] "Solid: particles locked in place. Liquid: particles slide past each other. Gas: particles free and far apart. Plasma: electrons ripped from atoms"\\\\
+- Most of universe is plasma - stars, lightning\\\\
+- We mostly deal with first three on Earth\\\\
+[THE WONDER] Water exists in all three states naturally on Earth}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.3 Phase Changes: Energy In/Out}
+\textbf{Adding energy (heating):}
+\begin{itemize}
+\item Melting: solid $\rightarrow$ liquid \pause
+\item Vaporization: liquid $\rightarrow$ gas \pause
+\item Sublimation: solid $\rightarrow$ gas (skips liquid!)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Removing energy (cooling):}
+\begin{itemize}
+\item Freezing: liquid $\rightarrow$ solid \pause
+\item Condensation: gas $\rightarrow$ liquid \pause
+\item Deposition: gas $\rightarrow$ solid
+\end{itemize}
+\note{[P0] "Six phase changes between three states"\\\\
+[P1] "Melting: ice to water"\\\\
+[P2] "Vaporization: water to steam"\\\\
+[P3] "Sublimation: dry ice directly to CO2 gas"\\\\
+[P4] "Freezing: water to ice"\\\\
+[P5] "Condensation: steam to water droplets"\\\\
+[P6] "Deposition: frost forms directly from water vapor"\\\\
+- Sublimation and deposition skip liquid phase entirely}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.3 Latent Heat: The Hidden Energy}
+\begin{alertblock}{The Paradox}
+You heat ice at 0 C. Temperature stays at 0 C even as you add energy.\\
+\textbf{Where does the energy go?}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{The Revelation}
+Energy breaks bonds between molecules, not increase speed.\\
+No temperature change during phase transition!
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Latent heat} = hidden energy used to change phase without changing temperature
+\note{[P0] [THE CONFLICT] "Add heat to ice at zero C. Temp doesn't rise. Where's the energy?"\\\\
+[P1] [THE REVELATION] "Energy breaks molecular bonds, doesn't increase kinetic energy"\\\\
+- Temperature = average kinetic energy\\\\
+- During phase change, energy goes to potential, not kinetic\\\\
+[P2] "Latent: Latin for hidden. Temp stays constant while phase changes"\\\\
+[THE HUMILITY] This confused scientists for centuries}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.3 Phase Diagram: Ice to Steam}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-thermal-fig31-2.jpg}
+\caption{Temperature vs energy for water}
+\end{figure}
+
+\pause
+\textbf{Flat regions} = phase changes (temp constant)\\
+\textbf{Sloped regions} = temperature increasing
+\note{[P0] "Graph shows heating ice at -20 C until it becomes steam"\\\\
+[P1] "Flat at 0 C: melting (334 kJ/kg). Flat at 100 C: boiling (2256 kJ/kg)"\\\\
+- Sloped regions: temperature rising\\\\
+- Flat regions: phase changing\\\\
+[THE REVELATION] Vaporization takes 7 times more energy than melting\\\\
+- Why steam burns are so severe}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.3 Latent Heat Equations}
+\begin{block}{Nature's Rules for Phase Change}
+\begin{align*}
+Q &= mL_f \quad \text{(melting/freezing)} \\
+Q &= mL_v \quad \text{(vaporization/condensation)}
+\end{align*}
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{For water:}
+\begin{itemize}
+\item $L_f = 334$ kJ/kg (latent heat of fusion)
+\item $L_v = 2256$ kJ/kg (latent heat of vaporization)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{Note: No $\Delta T$ in these equations - temperature doesn't change!}
+\note{[P0] "Two equations for phase change"\\\\
+- Q = m L-f for melting or freezing\\\\
+- Q = m L-v for boiling or condensing\\\\
+[P1] "Water's values: 334 kJ/kg to melt, 2256 kJ/kg to boil"\\\\
+[P2] [THE REVELATION] "No delta T - temperature is constant during phase change"\\\\
+[THE CONNECTION - Digital Archetype] "Like evolving Pokemon - specific energy requirement, no level change during evolution"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Melting Ice}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+How much energy is needed to melt 0.50 kg of ice at 0 C?
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m = 0.50$ kg
+\item $L_f = 334$ kJ/kg
+\item Ice already at 0 C (melting point)
+\end{itemize}
+
+\textbf{Find:} Heat energy Q required
+
+\vspace{0.3cm}
+
+\textit{Can you calculate the hidden energy? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they use Q=mL correctly?\\\\
+[SAY] "Try this on your own. Ice is already at melting point."\\\\
+[TIMING] 3 min SILENT individual work\\\\
+[CIRCULATE] Note who uses wrong L value\\\\
+[WATCH FOR] Students trying to use Q=mcΔT instead\\\\
+[DON'T HELP] Let them choose equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Latent Heat}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equation did you choose?
+\item Why didn't you use $Q = mc\Delta T$?
+\item What value did you use for latent heat?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your reasoning.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for equation confusion\\\\
+[CHECK] Name wheel: call a pair to explain choice\\\\
+[EXPECTED APPROACH] Q=mL-f because phase change, not temperature change\\\\
+[COMMON ERROR] Trying to use Q=mcΔT when ΔT=0}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Energy to Melt Ice}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Key insight:} Phase change, so use $Q = mL_f$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $Q = (0.50\text{ kg})(334\text{ kJ/kg})$
+
+\pause
+\vspace{0.2cm}
+
+$$Q = \boxed{167\text{ kJ}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Check:} That's enough energy to raise 1 kg of water by 40 C!\\
+\alert{Phase changes require enormous energy.}
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Q equals m L-f"\\\\
+[P2] "0.50 times 334 equals 167 kilojoules"\\\\
+[P3] [ANSWER] "167 kJ - that's huge!"\\\\
+[P4] "Compare: same energy would heat 1 kg water by 40 degrees"\\\\
+[THE WONDER] Breaking molecular bonds takes massive energy - that's why sweating cools you so effectively}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.3 Why Sweating Cools You}
+\begin{exampleblock}{Real-World Application}
+When sweat evaporates:
+\begin{enumerate}
+\item Water absorbs 2256 kJ/kg from your skin \pause
+\item Undergoes phase change: liquid $\rightarrow$ gas \pause
+\item Your skin temperature drops
+\end{enumerate}
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\alert{Evaporation is most effective cooling method for your body!}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{On humid days:} Less evaporation $\rightarrow$ less cooling $\rightarrow$ you feel hotter
+\note{[P0] "Why you sweat when hot"\\\\
+[P1] "Each gram of sweat absorbs 2256 J from skin when evaporating"\\\\
+[P2] "Liquid to gas transition pulls heat from body"\\\\
+[P3] "Skin temp drops significantly"\\\\
+[P4] "Much more effective than conduction or radiation"\\\\
+[P5] "Humidity prevents evaporation - sweat just sits on skin, doesn't cool"\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes know: dry heat bearable, humid heat brutal"}
+\end{frame}
+
+\begin{frame}
+\frametitle{11.3 Condensation Releases Heat}
+\begin{block}{The Reverse Process}
+Condensation releases same energy that vaporization absorbed.\\
+Gas $\rightarrow$ liquid releases 2256 kJ/kg for water.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Why hurricanes are so powerful:}
+\begin{itemize}
+\item Water vapor condenses in storm \pause
+\item Releases enormous latent heat \pause
+\item Heats surrounding air \pause
+\item Creates powerful updrafts and winds
+\end{itemize}
+\note{[P0] [THE REVELATION] "Condensation is vaporization in reverse - releases energy instead of absorbing"\\\\
+[P1] "Hurricanes powered by condensation"\\\\
+[P2] "Billions of kg of water vapor condense"\\\\
+[P3] "Each kg releases 2256 kJ into atmosphere"\\\\
+[P4] "Total energy: equivalent to hundreds of nuclear bombs"\\\\
+[THE WONDER] Phase changes don't just affect your drink - they power Earth's most violent storms}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{The Revelations of Thermal Physics}
+\begin{block}{What You Now Know}
+\begin{enumerate}
+\item Temperature = average molecular kinetic energy \pause
+\item Heat = energy transfer from hot to cold \pause
+\item $Q = mc\Delta T$ for temperature changes \pause
+\item Three transfer modes: conduction, convection, radiation \pause
+\item $Q = mL$ for phase changes (no temp change!) \pause
+\item Water's high specific heat stabilizes climate \pause
+\item Phase changes require enormous energy
+\end{enumerate}
+\end{block}
+\note{[P0] "Seven revelations today"\\\\
+[P1] "Temperature measures molecular motion"\\\\
+[P2] "Heat is energy in transit"\\\\
+[P3] "Q=mcΔT when temperature changes"\\\\
+[P4] "Contact, flow, and radiation"\\\\
+[P5] "Q=mL when phase changes - temp constant"\\\\
+[P6] "Water's high c moderates Earth's temperature"\\\\
+[P7] "Breaking bonds takes massive energy"\\\\
+[THE WONDER] You now understand the invisible energy that shapes weather, cooking, and life itself}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\textbf{Temperature Conversions:}
+\begin{align}
+T_{\circ F} &= \frac{9}{5}T_{\circ C} + 32 \\
+T_{\circ C} &= \frac{5}{9}(T_{\circ F} - 32) \\
+T_{K} &= T_{\circ C} + 273.15
+\end{align}
+
+\textbf{Heat Transfer:}
+\begin{align}
+Q &= mc\Delta T \quad \text{(temperature change)} \\
+Q &= mL_f \quad \text{(melting/freezing)} \\
+Q &= mL_v \quad \text{(vaporization/condensation)}
+\end{align}
+
+\textbf{Water Constants:}
+\begin{itemize}
+\item $c_{water} = 4186$ J/kg·C
+\item $L_f = 334$ kJ/kg
+\item $L_v = 2256$ kJ/kg
+\end{itemize}
+\note{- Six key equations plus three constants\\\\
+- Temp conversions: know order of operations\\\\
+- Q=mcΔT: when temp changes\\\\
+- Q=mL: when phase changes\\\\
+- Memorize water's values - most common\\\\
+- Questions before homework?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next: applying thermal physics to real systems}
+\end{frame}
+
+\end{document}

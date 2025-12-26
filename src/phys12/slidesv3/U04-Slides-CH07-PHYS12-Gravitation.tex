@@ -1,0 +1,792 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Gravitation]{PHYS12 CH:7 The Force That Shapes Galaxies}
+\subtitle{From Falling Apples to Orbiting Planets}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today: discover invisible force governing everything from falling apples to galaxies\\\\
+- Same force holds you to Earth AND guides planets around sun\\\\
+- Two revelations: Kepler's patterns, Newton's explanation\\\\
+[THE WONDER] By end of class, calculate orbital mechanics like NASA\\\\
+- Foundation of astrophysics}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery}
+\begin{center}
+\Large What do a falling apple and the moon\\
+\textit{have in common?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+The same invisible force governs both...
+
+\pause
+\vspace{0.3cm}
+\alert{Gravity shapes everything.}
+\note{[P0] "What do falling apple and moon have in common?"\\\\
+[P1] "Same invisible force governs both"\\\\
+[P2] [THE WONDER] "Gravity shapes everything - pencil hitting floor to galaxies colliding"\\\\
+[THE REVELATION] Newton connected terrestrial and celestial motion}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kepler and Newton}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys12-gravitation-fig01.jpg}
+\caption{Kepler found patterns. Newton found cause.}
+\end{figure}
+\note{- Kepler: German astronomer, 1571-1630\\\\
+- Crunched 20 years of data by hand\\\\
+- Newton: English physicist, 1643-1727\\\\
+- Found underlying force explaining Kepler's patterns\\\\
+[THE CONNECTION - Digital Archetype] "Finding source code behind patterns"}
+\end{frame}
+
+\section{Kepler's Laws of Planetary Motion}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{7.1:} Explain Kepler's three laws of planetary motion \pause
+\item \textbf{7.1:} Apply Kepler's laws to calculate characteristics of orbits
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for Kepler's laws"\\\\
+[P1] "First: understand three laws. Second: use them to solve orbit problems"\\\\
+- Laws describe ALL orbits: moons, planets, satellites\\\\
+- Assessment: homework problems on orbital calculations}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.1 The Rules of Orbits}
+\textbf{Kepler studied planetary motion for 20 years}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Three laws describing all orbits:}
+\begin{enumerate}
+\item Planets orbit in ellipses with sun at one focus \pause
+\item Equal areas in equal times \pause
+\item Period squared proportional to radius cubed
+\end{enumerate}
+
+\pause
+\begin{exampleblock}{The Mental Model}
+Kepler found patterns in mountains of data. Described WHAT happens, not WHY.
+\end{exampleblock}
+\note{[P0] "Kepler studied planetary motion 20 years - by hand!"\\\\
+[P1] "Three laws describe all orbits"\\\\
+[P2] "First: ellipses with sun at one focus"\\\\
+[P3] "Second: equal areas in equal times"\\\\
+[P4] "Third: period squared proportional to radius cubed"\\\\
+[P5] [THE HUMILITY] "Kepler found patterns but couldn't explain WHY. Took Newton."\\\\
+[THE CONNECTION - Digital Archetype] "Kepler found repeating pattern in nature's code"}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.1 Kepler's First Law}
+\begin{block}{The Law of Elliptical Orbits}
+Orbit of each planet is ellipse with sun at one focus.
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-gravitation-fig02.jpg}
+\end{figure}
+
+\pause
+\textbf{Perihelion:} Closest approach to sun\\
+\textbf{Aphelion:} Farthest distance from sun
+\note{[P0] "First law: orbits are ellipses, not circles"\\\\
+[P1] "Ellipse has two foci - sun at one focus"\\\\
+[P2] "Perihelion: closest. Aphelion: farthest"\\\\
+[THE CONFLICT] For centuries, everyone thought orbits were perfect circles\\\\
+[THE REVELATION] Kepler proved they're ellipses - slightly squashed circles\\\\
+- Earth's orbit nearly circular, comets highly elliptical}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.1 Anatomy of an Ellipse}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys12-gravitation-fig03.jpg}
+\end{figure}
+
+\pause
+\textbf{Key property:} Sum of distances from any point to both foci is constant.
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Drawing an ellipse:} Pins, string, pencil method!
+\note{[P0] "Ellipse has special property"\\\\
+[P1] "Sum of distances to both foci constant - that's definition"\\\\
+[P2] "Draw ellipse with pins, string, pencil"\\\\
+- Two pins are foci\\\\
+- String length stays constant\\\\
+- Pencil traces ellipse\\\\
+[THE CONNECTION - Kinetic Archetype] "Like tracing path planet must follow"}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.1 Ellipse Formulas}
+\textbf{If you know perihelion $r_p$ and aphelion $r_a$:}
+
+\pause
+\begin{align}
+\text{Semi-major axis: } a &= \frac{r_a + r_p}{2} \\
+\text{Semi-minor axis: } b &= \sqrt{r_a r_p}
+\end{align}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Eccentricity} (elongation measure):
+$$e = \frac{f}{a}$$
+
+\pause
+When $e = 0$, ellipse is circle!
+\note{[P0] "Formulas to calculate ellipse dimensions"\\\\
+[P1] "Semi-major axis: average of closest and farthest distances"\\\\
+[P2] "Semi-minor axis: geometric mean"\\\\
+[P3] "Eccentricity: zero means perfect circle, higher means more elongated"\\\\
+- Earth eccentricity: 0.017 (nearly circular)\\\\
+- Comet eccentricity: 0.9 or higher (very elongated)\\\\
+[THE CONNECTION - Digital Archetype] "Parameters defining orbit's shape"}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.1 Kepler's Second Law}
+\begin{block}{The Law of Equal Areas}
+Line from sun to planet sweeps equal areas in equal times.
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-gravitation-fig04.jpg}
+\end{figure}
+
+\pause
+\begin{alertblock}{The Paradox}
+\textbf{Result:} Planets move FASTER when closer to sun!
+\end{alertblock}
+\note{[P0] "Second law: equal areas in equal times"\\\\
+[P1] "Shaded regions equal area, planet takes same time traverse each"\\\\
+[P2] [THE CONFLICT] "Planet speeds up near sun, slows far away"\\\\
+- Why? To sweep equal areas in equal times\\\\
+- Distance shorter near sun, speed must increase\\\\
+[THE CONNECTION - Kinetic Archetype] "Like skater pulling arms in to spin faster"}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.1 Kepler's Third Law}
+\begin{block}{The Law of Periods}
+Ratio of periods squared equals ratio of orbital radii cubed.
+\end{block}
+
+\pause
+\begin{center}
+\Large
+$$\boxed{\frac{T_1^2}{T_2^2} = \frac{r_1^3}{r_2^3}}$$
+\end{center}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Where:}
+\begin{itemize}
+\item $T$ = period (time for one orbit)
+\item $r$ = average orbital radius
+\end{itemize}
+
+\pause
+\textbf{Critical:} Only works for satellites orbiting SAME parent body!
+\note{[P0] "Third law: period squared over radius cubed is constant"\\\\
+[P1] "Mathematical form: T-1 squared over T-2 squared equals r-1 cubed over r-2 cubed"\\\\
+[P2] "T is period in years or days, r orbital radius"\\\\
+[P3] "Only works comparing two objects orbiting same parent"\\\\
+[THE REVELATION] Purely descriptive - no explanation WHY\\\\
+[THE WONDER] Same ratio for Earth-Moon and satellites orbiting Earth}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.1 Ptolemy vs Copernicus}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Ptolemaic (Geocentric)}
+\begin{itemize}
+\item Earth at center
+\item Complex circular paths
+\item Different rule each planet
+\item Purely descriptive
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Copernican (Heliocentric)}
+\begin{itemize}
+\item Sun at center
+\item Simple elliptical paths
+\item Same laws for all
+\item Causal explanation
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Conflict}
+For 1400 years, everyone believed Earth center. Copernicus terrified to publish.
+\end{alertblock}
+\note{[P0] "Two competing solar system models"\\\\
+[P1] "Copernican model: sun at center, much simpler"\\\\
+[P2] [THE CONFLICT] "Copernicus waited 30 years publish - feared ridicule and persecution"\\\\
+- Galileo put under house arrest for supporting this\\\\
+- Took 300 years everyone accept\\\\
+[THE HUMILITY] Being right doesn't mean believed\\\\
+[THE WONDER] Truth won in end}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Moon and Satellite Orbits}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Moon orbits Earth every 27.3 days at average distance $3.84 \times 10^8$ m from Earth's center.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Moon: $T_1 = 27.3$ d, $r_1 = 3.84 \times 10^8$ m
+\item Satellite: altitude = 1500 km above surface
+\item Earth radius = 6380 km
+\end{itemize}
+
+\textbf{Find:} Period of satellite
+
+\vspace{0.3cm}
+
+\textit{Can you predict how long this orbit takes? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Calculate satellite orbit like NASA?\\\\
+[SAY] "Try on your own. Okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who converts altitude to orbital radius correctly\\\\
+[WATCH FOR] Forgetting add Earth's radius to altitude\\\\
+[DON'T HELP] Let struggle with unit conversions}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Orbital Calculations}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What is $r_2$ for satellite? Did you add Earth's radius?
+\item Which version Kepler's third law use?
+\item Did you solve for $T_2$ correctly?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share approach (not answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen common approaches\\\\
+[CHECK] Name wheel: call pair share approach\\\\
+[EXPECTED APPROACH] r-2 equals 1500 km plus 6380 km equals 7880 km, then use Kepler's third\\\\
+[COMMON ERROR] Using altitude instead orbital radius from center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Satellite Period}
+\textbf{Self-correct in different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Find orbital radius: $r_2 = 1500 \text{ km} + 6380 \text{ km} = 7880 \text{ km}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2:} Use Kepler's third law: $T_2 = T_1 \left(\frac{r_2}{r_1}\right)^{3/2}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 3:} Substitute and solve:
+$$T_2 = (27.3 \text{ d}) \left(\frac{24.0 \text{ h}}{\text{d}}\right) \left(\frac{7880 \text{ km}}{3.84 \times 10^5 \text{ km}}\right)^{3/2}$$
+
+\pause
+$$\boxed{T_2 = 1.93 \text{ h}}$$
+
+\pause
+\textbf{Check:} Closer orbit = shorter period. Makes sense!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "r-2 equals altitude plus Earth radius equals 7880 km"\\\\
+[P2] "T-2 equals T-1 times r-2 over r-1 to three-halves power"\\\\
+[P3] "Convert days to hours, then calculate"\\\\
+[P4] [ANSWER] "1.93 hours - about 2 hours per orbit"\\\\
+[THE WONDER] GPS satellites use exact math - just did orbital mechanics}
+\end{frame}
+
+\section{Newton's Law of Universal Gravitation}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{7.2:} Explain Newton's law of universal gravitation \pause
+\item \textbf{7.2:} Perform calculations using Newton's law \pause
+\item \textbf{7.2:} Compare Newton's theory to Einstein's general relativity
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives universal gravitation"\\\\
+[P1] "First: understand Newton's law"\\\\
+[P2] "Second: calculate gravitational forces"\\\\
+[P3] "Third: understand Einstein's improvement"\\\\
+- Newton explained WHY Kepler's patterns exist}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.2 The Apple and Moon}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys12-gravitation-fig07.jpg}
+\end{figure}
+
+\pause
+\begin{exampleblock}{Newton's Insight}
+Why do apples fall straight down? What if same force pulling apples also pulls moon?
+\end{exampleblock}
+
+\pause
+\textbf{Revolutionary idea:} Terrestrial and celestial motion have SAME cause!
+\note{[P0] "Legendary apple story has truth"\\\\
+[P1] [THE HOOK] "Newton asked: why apples fall straight down? What pulls them?"\\\\
+[P2] [THE REVELATION] "Same force pulls apples AND keeps moon in orbit"\\\\
+[THE WONDER] One force explains everything from weight to galaxies\\\\
+- Before Newton: people thought heavenly bodies followed different rules\\\\
+[THE CONNECTION - Digital Archetype] "One physics engine runs entire universe"}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.2 Newton's Law of Universal Gravitation}
+\begin{block}{The Universal Law}
+\begin{center}
+\Large
+$$\boxed{F = G\frac{mM}{r^2}}$$
+\end{center}
+Every mass attracts every other mass with force proportional to product of masses and inversely proportional to distance squared.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Where:}
+\begin{itemize}
+\item $F$ = gravitational force (N)
+\item $G = 6.67 \times 10^{-11}$ N·m²/kg² (universal constant)
+\item $m, M$ = masses (kg)
+\item $r$ = distance between centers (m)
+\end{itemize}
+\note{[P0] "Newton's law universal gravitation - source code"\\\\
+[P1] "F equals G times m M over r squared"\\\\
+- G gravitational constant - same everywhere universe\\\\
+- Force ALWAYS attractive (never repulsive)\\\\
+- Acts along line joining centers\\\\
+[THE REVELATION] One equation explains falling objects AND planetary orbits\\\\
+[THE WONDER] Universal means works everywhere - Earth, Mars, distant galaxies}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.2 The Gravitational Constant}
+\begin{center}
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys12-gravitation-fig09.jpg}
+
+\small Cavendish's torsion balance (1798)
+\end{center}
+
+\pause
+\textbf{Challenge:} Measuring tiny force between ordinary masses
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Result:} $G = 6.67 \times 10^{-11}$ N·m²/kg²
+
+\pause
+Cavendish's value differs less than 1\% from modern value!
+\note{[P0] "G measured by Henry Cavendish 1798"\\\\
+[P1] "Challenge: gravitational force between small masses incredibly weak"\\\\
+[P2] "Used torsion balance measure tiny twist in fiber"\\\\
+[P3] "Remarkably accurate - within 1 percent modern value"\\\\
+[THE HUMILITY] Took over 100 years after Newton measure G\\\\
+[THE WONDER] Determines strength one of four fundamental forces}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.2 Mass vs Weight}
+\begin{alertblock}{Civilian View vs Reality}
+\textbf{Civilian:} "Mass and weight same thing."\\
+\textbf{Physicist:} "Mass constant. Weight varies with gravity."
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Mass:} Amount of matter (kg) - constant everywhere
+
+\pause
+\textbf{Weight:} Gravitational force (N) - varies by location
+$$W = mg$$
+
+\pause
+\vspace{0.3cm}
+
+Your mass on moon same as Earth. Your weight 1/6 as much!
+\note{[P0] [THE CONFLICT] "People confuse mass and weight"\\\\
+[P1] "Mass amount matter - doesn't change"\\\\
+[P2] "Weight force of gravity - changes with g"\\\\
+[P3] "60 kg person weighs 588 N Earth, only 98 N moon"\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes: jump 6 times higher moon - same leg strength, less weight"\\\\
+[THE REVELATION] English units confuse this - pounds measure force, not mass}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.2 Connecting to Kepler}
+\textbf{Newton derived Kepler's third law from universal gravitation!}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Result:}
+$$\frac{r^3}{T^2} = \frac{GM}{4\pi^2}$$
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Revelation}
+Kepler said WHAT (pattern). Newton said WHY (gravitational force causes it).
+\end{exampleblock}
+
+\pause
+\textbf{Power:} If you know $r$ and $T$, can calculate mass $M$ of parent body!
+\note{[P0] "Newton proved Kepler's laws follow from universal gravitation"\\\\
+[P1] "Derived constant r-cubed over T-squared"\\\\
+[P2] [THE REVELATION] "Kepler described pattern. Newton explained cause"\\\\
+[P3] "Application: measure orbital radius and period, calculate mass planet or star"\\\\
+[THE WONDER] Measured masses distant planets this way\\\\
+- How we know mass sun, planets, even black holes}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Weight on Mars}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Value of $g$ on Mars is 3.71 m/s². You have mass 60.0 kg on Earth.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Your mass: $m = 60.0$ kg
+\item Mars gravity: $g_M = 3.71$ m/s²
+\item Earth gravity: $g_E = 9.80$ m/s²
+\end{itemize}
+
+\textbf{Find:}
+\begin{enumerate}
+\item What is your mass on Mars?
+\item What is your weight on Mars?
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textit{How much would you weigh on Mars? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Calculate weight on another planet?\\\\
+[SAY] "Think carefully mass versus weight"\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who remembers mass constant\\\\
+[WATCH FOR] Students changing mass on Mars\\\\
+[DON'T HELP] Let work through confusion}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Mass and Weight}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Does mass change when go Mars? Why or why not?
+\item What formula use for weight on Mars?
+\item How Mars weight compare Earth weight?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share reasoning.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen understanding mass vs weight\\\\
+[CHECK] Name wheel: call pair share\\\\
+[EXPECTED APPROACH] Mass stays 60 kg, weight equals m times g-M\\\\
+[COMMON ERROR] Thinking mass changes different planets}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Mars Weight}
+\textbf{Self-correct in different color:}
+
+\vspace{0.3cm}
+
+\textbf{Part 1:} Mass on Mars = \textbf{60.0 kg} (mass constant!)
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Part 2:} Weight on Mars: $W_M = mg_M$
+
+\pause
+$$W_M = (60.0 \text{ kg})(3.71 \text{ m/s}^2)$$
+
+\pause
+$$\boxed{W_M = 223 \text{ N}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Compare:} Earth weight = $(60.0)(9.80) = 588$ N
+
+\pause
+Mars weight about 38\% Earth weight!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] "Part 1: mass constant - still 60 kg"\\\\
+[P2] [ALGEBRA] "W-M equals m times g-M"\\\\
+[P3] "60 kg times 3.71 m/s squared"\\\\
+[P4] [ANSWER] "223 N on Mars"\\\\
+[P5] "Compare: 588 N Earth, so Mars about 38 percent"\\\\
+[THE WONDER] Mars weigh less but mass wouldn't change\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes: jump 2.6 times higher Mars"}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.2 Einstein's General Relativity}
+\textbf{Newton's theory works perfectly most situations...}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{But Einstein showed gravity more than just force:}
+
+\pause
+\begin{itemize}
+\item Gravity warps space and time \pause
+\item Light bends in gravitational fields \pause
+\item Massive objects drag space-time with them
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Newton: Gravity tug of war between masses.\\
+Einstein: Gravity bending of space-time itself.
+\end{exampleblock}
+\note{[P0] "Newton's theory works everyday situations"\\\\
+[P1] "But Einstein discovered gravity even stranger"\\\\
+[P2] "Gravity warps space and time - not separate"\\\\
+[P3] "Light bends around massive objects"\\\\
+[P4] "Spinning objects drag space-time with them"\\\\
+[P5] [THE REVELATION] "Newton: force between masses. Einstein: curved space-time"\\\\
+[THE WONDER] GPS satellites must correct general relativity to work\\\\
+[THE HUMILITY] Even Newton's brilliant theory needed refinement}
+\end{frame}
+
+\begin{frame}
+\frametitle{7.2 Light Bending Around Sun}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-gravitation-fig11.jpg}
+\end{figure}
+
+\pause
+\textbf{1919 solar eclipse:} Starlight bent exactly as Einstein predicted!
+
+\pause
+Made Einstein scientific celebrity overnight.
+\note{[P0] "Einstein's first major test: 1919 solar eclipse"\\\\
+[P1] "Starlight passing near sun bent - stars appeared shifted"\\\\
+[P2] "Amount bending matched Einstein's prediction perfectly"\\\\
+[THE REVELATION] Light follows curved space-time around massive objects\\\\
+- Revolutionary - light affected by gravity\\\\
+- Made Einstein world famous\\\\
+[THE WONDER] Use this effect detect distant planets and dark matter}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Earth's Gravity at Moon Distance}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Find acceleration due Earth's gravity at moon's distance.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $G = 6.67 \times 10^{-11}$ N·m²/kg²
+\item Earth mass: $M = 5.98 \times 10^{24}$ kg
+\item Earth-moon distance: $r = 3.84 \times 10^8$ m
+\end{itemize}
+
+\textbf{Find:} Value $g$ at moon's distance from Earth
+
+\vspace{0.3cm}
+
+\textit{How weak is Earth's pull at that distance? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Calculate how gravity weakens with distance?\\\\
+[SAY] "Use g equals G M over r squared"\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who remembers formula\\\\
+[WATCH FOR] Unit conversions and scientific notation\\\\
+[DON'T HELP] Let struggle with exponents}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Gravity Calculation}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What formula use for $g$?
+\item How handle scientific notation?
+\item How this $g$ compare Earth's surface $g = 9.8$ m/s²?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share approach.
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen formula g equals G M over r squared\\\\
+[CHECK] Name wheel: call pair share\\\\
+[EXPECTED APPROACH] Substitute values, calculate scientific notation\\\\
+[COMMON ERROR] Forgetting square distance}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Gravity at Moon Distance}
+\textbf{Self-correct in different color:}
+
+\vspace{0.3cm}
+
+\textbf{Formula:} $g = G\frac{M}{r^2}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:}
+$$g = \left(6.67 \times 10^{-11} \frac{\text{N·m}^2}{\text{kg}^2}\right) \left(\frac{5.98 \times 10^{24} \text{ kg}}{(3.84 \times 10^8 \text{ m})^2}\right)$$
+
+\pause
+\vspace{0.2cm}
+
+$$g = \frac{3.99 \times 10^{14}}{1.47 \times 10^{17}}$$
+
+\pause
+$$\boxed{g = 2.70 \times 10^{-3} \text{ m/s}^2}$$
+
+\pause
+\textbf{Compare:} About 0.03\% Earth's surface gravity!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "g equals G M over r squared"\\\\
+[P2] "Substitute values - watch exponents"\\\\
+[P3] "Divide: 3.99 times 10 to 14 over 1.47 times 10 to 17"\\\\
+[P4] [ANSWER] "2.70 times 10 to negative 3 m/s squared"\\\\
+[P5] "Only 0.03 percent surface gravity"\\\\
+[THE WONDER] Earth's pull weak moon distance, but still there\\\\
+- Moon's own gravity (1.62 m/s²) dominates at surface}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Kepler found three laws describing orbital motion \pause
+\item Newton discovered gravitational force explains Kepler's laws \pause
+\item Universal gravitation: $F = Gm_1m_2/r^2$ \pause
+\item Mass constant, weight varies with $g$ \pause
+\item Einstein showed gravity warps space-time itself \pause
+\item Same force governs falling apples and orbiting galaxies
+\end{enumerate}
+\end{block}
+\note{[P0] "Six revelations today"\\\\
+[P1] "Kepler found patterns planetary motion"\\\\
+[P2] "Newton found cause: gravitational force"\\\\
+[P3] "Universal gravitation works everywhere"\\\\
+[P4] "Mass constant, weight varies"\\\\
+[P5] "Einstein refined Newton's theory"\\\\
+[P6] "One force shapes cosmos"\\\\
+[THE WONDER] Now understand force holds galaxies together\\\\
+- Name wheel: which most mind-bending?}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+\text{Kepler's Third Law: } \frac{T_1^2}{T_2^2} &= \frac{r_1^3}{r_2^3} \\
+\text{Universal Gravitation: } F &= G\frac{mM}{r^2} \\
+\text{Gravitational Constant: } G &= 6.67 \times 10^{-11} \text{ N·m}^2/\text{kg}^2 \\
+\text{Weight: } W &= mg \\
+\text{Surface Gravity: } g &= G\frac{M}{r^2} \\
+\text{Orbital Constant: } \frac{r^3}{T^2} &= \frac{GM}{4\pi^2}
+\end{align}
+\note{- Six key equations this chapter\\\\
+- Kepler's third law: compare orbital periods\\\\
+- Universal gravitation: force between any two masses\\\\
+- Weight: force gravity on object\\\\
+- Surface gravity: calculate g any planet\\\\
+- Orbital constant: derive from Newton's law\\\\
+- Know when use each equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete assigned problems\\[0.3cm]
+posted on LMS
+\end{center}
+\note{[SAY] "Homework posted LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before end?\\\\
+[TRANSITION] Next class: Applications gravitation - satellites and tides\\\\
+[THE WONDER] Can now calculate orbits like NASA engineers}
+\end{frame}
+
+\end{document}

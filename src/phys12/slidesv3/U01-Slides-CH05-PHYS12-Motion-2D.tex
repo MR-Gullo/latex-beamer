@@ -1,0 +1,900 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Motion in 2D]{PHYS12 CH:5 Motion in Two Dimensions}
+\subtitle{Vectors and Projectiles}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we unlock motion in two dimensions.\\\\
+- First dimension was simple - just forward and back\\\\
+- Real world is 2D and 3D - basketballs, planes, rockets\\\\
+[THE WONDER] By end of class, you'll predict where a projectile lands\\\\
+- Same math NASA uses for spacecraft trajectories}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery}
+\begin{center}
+\Large How do you describe motion\\
+\textit{when objects move in two directions at once?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+A football spiraling downfield...
+
+\pause
+\vspace{0.3cm}
+A drone navigating through space...
+
+\pause
+\vspace{0.3cm}
+\alert{Motion happens in multiple dimensions simultaneously.}
+\note{[P0] "How do you describe motion when objects move in two directions at once?"\\\\
+[P1] "A football spiraling downfield - horizontal and vertical motion together"\\\\
+[P2] "A drone navigating through space - three dimensional control"\\\\
+[P3] [THE WONDER] "Motion happens in multiple dimensions simultaneously"\\\\
+[THE REVELATION] We break complex 2D motion into simple 1D components}
+\end{frame}
+
+\section{Vector Addition: Graphical Methods}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{5.1:} Describe the graphical method of vector addition and subtraction \pause
+\item \textbf{5.1:} Use the graphical method to solve physics problems
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for graphical vector addition"\\\\
+[P1] "Second: use this method to solve real physics problems"\\\\
+- This is foundation for all 2D motion}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.1 What Is a Vector?}
+\begin{block}{The Dual Nature}
+A vector is a quantity with both magnitude AND direction.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Vectors in physics:}
+\begin{itemize}
+\item Displacement, velocity, acceleration \pause
+\item Force, momentum \pause
+\item Boldface notation: $\mathbf{F}$, $\mathbf{v}$, $\mathbf{a}$
+\end{itemize}
+
+\pause
+\begin{exampleblock}{The Mental Model}
+Velocity is like a speedometer with a compass attached.
+Speed tells how fast. Velocity adds where.
+\end{exampleblock}
+\note{[P0] "A vector has both magnitude AND direction"\\\\
+[P1] "Displacement, velocity, acceleration - all vectors"\\\\
+[P2] "Force, momentum - also vectors"\\\\
+[P3] "Boldface notation shows it's a vector"\\\\
+[P4] [THE CONNECTION - Digital Archetype] "Like a game character - position vector tells x,y coordinates"\\\\
+[THE WONDER] Direction matters as much as size}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.1 The Journey to the Destination}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-motion-2d-fig04.jpg}
+\end{figure}
+
+\pause
+\textbf{Path:} 9 blocks east + 5 blocks north = 14 blocks walked
+
+\textbf{Displacement:} 10.3 blocks at $29.1^\circ$ north of east
+
+\pause
+\begin{alertblock}{Civilian View vs. Reality}
+\textbf{Civilian:} "I walked 14 blocks."\\
+\textbf{Physicist:} "Displacement was 10.3 blocks."
+\end{alertblock}
+\note{[P0] "A person walks through a city grid"\\\\
+[P1] "Path: 14 blocks total. Displacement: 10.3 blocks straight line"\\\\
+[P2] [THE CONFLICT] "Civilians measure path. Physicists measure displacement"\\\\
+[THE REVELATION] Displacement is shortest straight-line distance\\\\
+[THE CONNECTION - Kinetic Archetype] "Like GPS navigation - shows straight-line distance, not road distance"}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.1 The Head-to-Tail Method}
+\textbf{How to add vectors graphically:}
+\begin{enumerate}
+\item Draw first vector to scale with protractor \pause
+\item Place tail of second vector at head of first \pause
+\item Continue for all vectors \pause
+\item Draw resultant from tail of first to head of last \pause
+\item Measure magnitude with ruler, direction with protractor
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+\textbf{Key insight:} Order doesn't matter! $\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}$
+\note{[P0] "Five steps to add vectors graphically"\\\\
+[P1] "Draw first vector to scale"\\\\
+[P2] "Place tail of second at head of first"\\\\
+[P3] "Continue for all vectors"\\\\
+[P4] "Draw resultant from start to finish"\\\\
+[P5] "Measure with ruler and protractor"\\\\
+[P6] [THE REVELATION] "Order doesn't matter - commutative property"\\\\
+[THE HUMILITY] Graphical method is approximate - limited by drawing precision}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.1 Building the Resultant}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{phys12-motion-2d-fig05.jpg}
+\end{figure}
+
+\pause
+The resultant vector connects start to finish.
+\note{[P0] "Head-to-tail method shown step by step"\\\\
+[P1] "Resultant vector is the sum - connects start to finish"\\\\
+- Use ruler and protractor for precision\\\\
+- This is how we solved problems before calculators\\\\
+[THE WONDER] Same method works for forces, velocities, any vectors}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.1 Vector Subtraction}
+\textbf{To subtract:} Add the negative vector
+
+\vspace{0.3cm}
+$\mathbf{A} - \mathbf{B} = \mathbf{A} + (-\mathbf{B})$
+
+\pause
+\vspace{0.3cm}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys12-motion-2d-fig06.jpg}
+\end{figure}
+
+\pause
+\textbf{The negative vector:} Same magnitude, opposite direction
+\note{[P0] "Vector subtraction uses addition of negative vector"\\\\
+[P1] "Negative vector shown - opposite direction, same magnitude"\\\\
+[P2] "Just flip it 180 degrees"\\\\
+- Same head-to-tail method applies\\\\
+[THE CONNECTION - Digital Archetype] "Like reversing velocity in a game"}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.1 Forces on Ice}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-motion-2d-fig08.jpg}
+\end{figure}
+
+\pause
+Two skaters push with 400 N each at right angles.
+
+\pause
+\textbf{Resultant force:} $F_{tot} = \sqrt{(400)^2 + (400)^2} = 566$ N
+
+\pause
+\alert{Pythagorean theorem works when vectors are perpendicular!}
+\note{[P0] "Two skaters push on a third - force vectors at right angles"\\\\
+[P1] "Each pushes with 400 N"\\\\
+[P2] "Use Pythagorean theorem: 566 N resultant"\\\\
+[P3] [THE REVELATION] "Pythagorean theorem only for right angles"\\\\
+[THE CONNECTION - Kinetic Archetype] "Hockey players use this instinctively"\\\\
+[THE WONDER] Vector addition is geometric, not just arithmetic}
+\end{frame}
+
+\section{Vector Addition: Analytical Methods}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{5.2:} Define components of vectors \pause
+\item \textbf{5.2:} Describe the analytical method of vector addition \pause
+\item \textbf{5.2:} Use the analytical method to solve problems
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for analytical method"\\\\
+[P1] "First: break vectors into x and y components"\\\\
+[P2] "Second: learn the analytical method - more precise than graphical"\\\\
+[P3] "Third: solve real problems with this method"\\\\
+- This is the method we'll use most often}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.2 The Power of Trigonometry}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys12-motion-2d-fig19.jpg}
+\end{figure}
+
+\pause
+\textbf{Refresher:}
+\begin{itemize}
+\item $\sin\theta = \frac{\text{opposite}}{\text{hypotenuse}}$ \pause
+\item $\cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}}$ \pause
+\item $\tan\theta = \frac{\text{opposite}}{\text{adjacent}}$
+\end{itemize}
+\note{[P0] "Trigonometry is the key to analytical method"\\\\
+[P1] "Sine: opposite over hypotenuse"\\\\
+[P2] "Cosine: adjacent over hypotenuse"\\\\
+[P3] "Tangent: opposite over adjacent"\\\\
+[THE HUMILITY] "If trig feels rusty, that's normal - we'll practice"\\\\
+[THE WONDER] Ancient Greeks discovered these ratios 2000 years ago}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.2 Breaking Vectors Into Components}
+\begin{block}{The Source Code}
+\begin{center}
+\Large $\boxed{A_x = A \cos\theta}$
+
+\Large $\boxed{A_y = A \sin\theta}$
+\end{center}
+Every 2D vector can be split into x and y components.
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.35\textheight,keepaspectratio]{phys12-motion-2d-fig20.jpg}
+\end{figure}
+\note{[P0] [THE REVELATION] "Every 2D vector splits into x and y components"\\\\
+- Cosine gives x-component (horizontal)\\\\
+- Sine gives y-component (vertical)\\\\
+[P1] "Diagram shows vector A and its components"\\\\
+[THE CONNECTION - Digital Archetype] "Like pixel coordinates - every position is x,y"\\\\
+[THE WONDER] This transforms geometry into algebra}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.2 Example: City Walk Components}
+Displacement: $A = 10.3$ blocks at $\theta = 29.1^\circ$ north of east
+
+\pause
+\vspace{0.3cm}
+
+\textbf{East component (x):}
+\begin{align*}
+A_x &= A \cos\theta \\
+&= (10.3)(\cos 29.1^\circ) = 9.0 \text{ blocks}
+\end{align*}
+
+\pause
+
+\textbf{North component (y):}
+\begin{align*}
+A_y &= A \sin\theta \\
+&= (10.3)(\sin 29.1^\circ) = 5.0 \text{ blocks}
+\end{align*}
+
+\pause
+\alert{Components match the original path: 9 east + 5 north!}
+\note{[P0] "Apply component formulas to city walk"\\\\
+[P1] [ALGEBRA] "A-x equals A times cosine theta"\\\\
+[P2] [ALGEBRA] "A-y equals A times sine theta"\\\\
+[P3] [THE REVELATION] "Components match the original path - 9 east, 5 north"\\\\
+[ANSWER] x = 9.0 blocks, y = 5.0 blocks\\\\
+[THE WONDER] Trig recovers the information we started with}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.2 Reverse: From Components to Vector}
+\begin{block}{Reconstruction Formulas}
+\begin{center}
+\Large $\boxed{A = \sqrt{A_x^2 + A_y^2}}$
+
+\Large $\boxed{\theta = \tan^{-1}\left(\frac{A_y}{A_x}\right)}$
+\end{center}
+Pythagorean theorem gives magnitude, inverse tangent gives direction.
+\end{block}
+
+\pause
+\begin{alertblock}{The Paradox}
+\textbf{Students confuse:} $\mathbf{A}_x + \mathbf{A}_y = \mathbf{A}$ (vector addition)\\
+with $A = \sqrt{A_x^2 + A_y^2}$ (magnitude calculation)
+\end{alertblock}
+\note{[P0] [THE REVELATION] "Pythagorean theorem gives magnitude, inverse tangent gives direction"\\\\
+- Square root of sum of squares for magnitude\\\\
+- Arctangent of y over x for angle\\\\
+[P1] [THE CONFLICT] "Common mistake: adding magnitudes directly"\\\\
+- Vector addition is NOT scalar addition\\\\
+[THE HUMILITY] This confuses everyone at first\\\\
+[THE WONDER] Two numbers (components) completely describe a vector}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.2 The Analytical Method}
+\textbf{To add vectors $\mathbf{A}$ and $\mathbf{B}$ analytically:}
+
+\begin{enumerate}
+\item Find components: $A_x, A_y, B_x, B_y$ \pause
+\item Add x-components: $R_x = A_x + B_x$ \pause
+\item Add y-components: $R_y = A_y + B_y$ \pause
+\item Find magnitude: $R = \sqrt{R_x^2 + R_y^2}$ \pause
+\item Find direction: $\theta = \tan^{-1}(R_y/R_x)$
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+\alert{More accurate than graphical method - not limited by drawing precision!}
+\note{[P0] "Five steps to analytical vector addition"\\\\
+[P1] "Find all components using sine and cosine"\\\\
+[P2] "Add x-components separately"\\\\
+[P3] "Add y-components separately"\\\\
+[P4] "Pythagorean theorem for magnitude"\\\\
+[P5] "Inverse tangent for direction"\\\\
+[P6] [THE REVELATION] "Much more accurate than ruler and protractor"\\\\
+[THE WONDER] Algebra is more precise than geometry}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Two-Leg Journey}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A person walks 53.0 m at $20.0^\circ$ north of east, then 34.0 m at $63.0^\circ$ north of east.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $A = 53.0$ m, $\theta_A = 20.0^\circ$
+\item $B = 34.0$ m, $\theta_B = 63.0^\circ$
+\end{itemize}
+
+\textbf{Find:} Total displacement magnitude and direction
+
+\vspace{0.3cm}
+
+\textit{Can you decode this journey? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they navigate this two-leg journey?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who breaks into components correctly\\\\
+[WATCH FOR] Confusion about which angle to use\\\\
+[DON'T HELP] Productive struggle builds understanding}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Vector Addition Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What's the first step - find components or add vectors?
+\item How many components do you need to calculate?
+\item Do you add x and y together, or keep them separate?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for understanding of component method\\\\
+[CHECK] Name wheel: call a pair to share approach\\\\
+[EXPECTED APPROACH] Find A-x, A-y, B-x, B-y, then add separately\\\\
+[COMMON ERROR] Adding magnitudes directly without components}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Navigation Solution}
+\textbf{Self-correct in a different color:}
+
+\textbf{Step 1:} Find components of $\mathbf{A}$
+\begin{align*}
+A_x &= (53.0)(\cos 20.0^\circ) = 49.8 \text{ m} \\
+A_y &= (53.0)(\sin 20.0^\circ) = 18.1 \text{ m}
+\end{align*}
+
+\pause
+
+\textbf{Step 2:} Find components of $\mathbf{B}$
+\begin{align*}
+B_x &= (34.0)(\cos 63.0^\circ) = 15.4 \text{ m} \\
+B_y &= (34.0)(\sin 63.0^\circ) = 30.3 \text{ m}
+\end{align*}
+\note{[P0] [ALGEBRA] "A-x equals 53 times cosine 20 degrees equals 49.8 meters"\\\\
+- "A-y equals 53 times sine 20 degrees equals 18.1 meters"\\\\
+[P1] [ALGEBRA] "B-x equals 34 times cosine 63 degrees equals 15.4 meters"\\\\
+- "B-y equals 34 times sine 63 degrees equals 30.3 meters"\\\\
+[THE CONNECTION - Digital Archetype] "Like calculating sprite positions in a game"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Combining Components}
+\textbf{Step 3:} Add components
+\begin{align*}
+R_x &= A_x + B_x = 49.8 + 15.4 = 65.2 \text{ m} \\
+R_y &= A_y + B_y = 18.1 + 30.3 = 48.4 \text{ m}
+\end{align*}
+
+\pause
+
+\textbf{Step 4:} Find magnitude
+$$R = \sqrt{(65.2)^2 + (48.4)^2} = \boxed{81.2 \text{ m}}$$
+
+\pause
+
+\textbf{Step 5:} Find direction
+$$\theta = \tan^{-1}(48.4/65.2) = \boxed{36.6^\circ \text{ north of east}}$$
+\note{[P0] [ALGEBRA] "R-x equals 65.2 meters, R-y equals 48.4 meters"\\\\
+[P1] [ALGEBRA] "R equals square root of 65.2 squared plus 48.4 squared"\\\\
+[ANSWER] Magnitude: 81.2 meters\\\\
+[P2] [ALGEBRA] "Theta equals inverse tangent of 48.4 over 65.2"\\\\
+[ANSWER] Direction: 36.6 degrees north of east\\\\
+[THE WONDER] You just navigated like a GPS satellite does}
+\end{frame}
+
+\section{Projectile Motion}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{5.3:} Describe the properties of projectile motion \pause
+\item \textbf{5.3:} Apply kinematic equations and vectors to solve projectile problems
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for projectile motion"\\\\
+[P1] "Second: use kinematics to predict trajectories"\\\\
+- This is where vectors meet motion\\\\
+[THE WONDER] Same equations that land spacecraft on Mars}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.3 The Great Separation}
+\begin{block}{Nature's Rule for Projectiles}
+\begin{center}
+\Large Horizontal and vertical motions\\
+\Large \alert{are independent}
+\end{center}
+They don't influence each other.
+\end{block}
+
+\pause
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys12-motion-2d-fig34-1.jpg}
+\end{figure}
+\note{[P0] [THE REVELATION] "Horizontal and vertical motions are independent"\\\\
+- Most important concept in projectile motion\\\\
+- They happen simultaneously but separately\\\\
+[P1] "Diagram shows cannonball in free fall vs projectile motion"\\\\
+- Both fall at same rate vertically\\\\
+[THE WONDER] One idea unlocks all projectile motion}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.3 What Is a Projectile?}
+\textbf{Definition:} An object launched into the air that moves under gravity alone
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key terms:}
+\begin{itemize}
+\item \textbf{Projectile:} The moving object \pause
+\item \textbf{Trajectory:} Its curved path \pause
+\item \textbf{Range:} Horizontal distance traveled \pause
+\item \textbf{Maximum height:} Peak altitude
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{We ignore air resistance in introductory physics.}
+\note{[P0] "Projectile moves under gravity alone after launch"\\\\
+[P1] "Projectile is the object"\\\\
+[P2] "Trajectory is the curved path"\\\\
+[P3] "Range is horizontal distance"\\\\
+[P4] "Maximum height is peak altitude"\\\\
+[P5] [THE HUMILITY] "Air resistance matters in reality, but calculation is complex"\\\\
+[THE CONNECTION - Kinetic Archetype] "Every ball you throw is a projectile"}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.3 The Independence Principle}
+\textbf{Horizontal motion:}
+\begin{itemize}
+\item No acceleration: $a_x = 0$ \pause
+\item Constant velocity: $v_x = v_{0x}$ \pause
+\item Position: $x = x_0 + v_x t$
+\end{itemize}
+
+\pause
+
+\textbf{Vertical motion:}
+\begin{itemize}
+\item Constant acceleration: $a_y = -g = -9.8$ m/s$^2$ \pause
+\item Velocity: $v_y = v_{0y} - gt$ \pause
+\item Position: $y = y_0 + v_{0y}t - \frac{1}{2}gt^2$
+\end{itemize}
+
+\pause
+\alert{Time $t$ is the only variable connecting the two motions!}
+\note{[P0] "Horizontal: no acceleration, constant velocity"\\\\
+[P1] "Velocity stays constant horizontally"\\\\
+[P2] "Position is velocity times time"\\\\
+[P3] "Vertical: gravity pulls down at 9.8 m/s squared"\\\\
+[P4] "Velocity decreases going up, increases coming down"\\\\
+[P5] "Position uses kinematic equation with gravity"\\\\
+[P6] [THE REVELATION] "Time connects the two - same t for both"\\\\
+[THE WONDER] Two 1D problems instead of one 2D problem}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.3 The Trajectory}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{phys12-motion-2d-fig34.jpg}
+\end{figure}
+
+\pause
+Ball kicked at angle $\theta$ follows parabolic path.
+\note{[P0] "Ball kicked at angle follows parabolic trajectory"\\\\
+[P1] "Displacement has x and y components"\\\\
+- Horizontal component from constant velocity\\\\
+- Vertical component from accelerated motion\\\\
+[THE CONNECTION - Kinetic Archetype] "Every soccer player knows this curve instinctively"\\\\
+[THE WONDER] Parabola is the natural shape of projectile motion}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.3 The Four-Step Method}
+\textbf{To solve projectile problems:}
+
+\begin{enumerate}
+\item Separate into x and y components \pause
+\item Treat as two independent 1D motions \pause
+\item Solve for unknowns (use $t$ to connect them) \pause
+\item Recombine to find total displacement and velocity
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Recombination formulas:}
+$$d = \sqrt{x^2 + y^2}, \quad \theta = \tan^{-1}(y/x)$$
+$$v = \sqrt{v_x^2 + v_y^2}, \quad \theta_v = \tan^{-1}(v_y/v_x)$$
+\note{[P0] "Four-step method for projectile problems"\\\\
+[P1] "Separate into x and y - use sine and cosine"\\\\
+[P2] "Treat as independent 1D motions"\\\\
+[P3] "Solve separately, time connects them"\\\\
+[P4] "Recombine using Pythagorean theorem and inverse tangent"\\\\
+[P5] [THE REVELATION] "Same component formulas we learned earlier"\\\\
+[THE WONDER] All 2D motion reduces to two 1D problems}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.3 Maximum Height Formula}
+\begin{block}{The Peak}
+\begin{center}
+\Large $\boxed{h = \frac{v_{0y}^2}{2g}}$
+\end{center}
+Maximum height depends only on initial vertical velocity.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insight:} At maximum height, $v_y = 0$
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{What Your Brain Gets Wrong}
+\textbf{Intuition:} "Faster launch means higher peak."\\
+\textbf{Reality:} "Only the \textit{vertical} component matters."
+\end{alertblock}
+\note{[P0] [THE REVELATION] "Max height depends only on vertical velocity"\\\\
+- Horizontal velocity doesn't affect height\\\\
+[P1] "At peak, vertical velocity is zero - turning point"\\\\
+[P2] [THE CONFLICT] "Intuition says total speed matters"\\\\
+- Reality: only v-zero-y matters for height\\\\
+[THE WONDER] You can throw horizontally fast and barely go up}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Fireworks Launch}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A fireworks shell is launched at 70.0 m/s at $75^\circ$ above horizontal.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $v_0 = 70.0$ m/s
+\item $\theta = 75^\circ$
+\end{itemize}
+
+\textbf{Find:} Maximum height
+
+\vspace{0.3cm}
+
+\textit{Can you predict where it explodes? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they predict the explosion height?\\\\
+[SAY] "Try this on your own. This is real pyrotechnics physics."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who finds vertical component first\\\\
+[WATCH FOR] Using total velocity instead of v-zero-y\\\\
+[DON'T HELP] Let them discover the vertical component insight}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Projectile Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What's the first step - find components or use a formula?
+\item Which velocity matters - total or vertical?
+\item Which kinematic equation did you choose?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for understanding of vertical component\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Find v-zero-y using sine, then use max height formula\\\\
+[COMMON ERROR] Using total velocity in height formula}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Reaching the Sky}
+\textbf{Self-correct in a different color:}
+
+\textbf{Step 1:} Find vertical velocity component
+\begin{align*}
+v_{0y} &= v_0 \sin\theta \\
+&= (70.0)(\sin 75^\circ) = 67.6 \text{ m/s}
+\end{align*}
+
+\pause
+
+\textbf{Step 2:} Use maximum height formula
+\begin{align*}
+h &= \frac{v_{0y}^2}{2g} \\
+&= \frac{(67.6)^2}{2(9.8)} = \boxed{233 \text{ m}}
+\end{align*}
+
+\pause
+\textbf{Check:} About 765 feet - reasonable for large fireworks!
+\note{[P0] [ALGEBRA] "v-zero-y equals v-zero times sine theta"\\\\
+- "equals 70 times sine 75 degrees equals 67.6 m/s"\\\\
+[P1] [ALGEBRA] "h equals v-zero-y squared over 2g"\\\\
+- "equals 67.6 squared over 2 times 9.8"\\\\
+[ANSWER] Maximum height: 233 meters\\\\
+[P2] [THE WONDER] "That's 765 feet - taller than a 70-story building"\\\\
+- Professional fireworks reach these heights\\\\
+[THE CONNECTION - Harmonic Archetype] "The boom echoes across the city"}
+\end{frame}
+
+\begin{frame}
+\frametitle{5.3 The Range Equation}
+\begin{block}{The Distance Formula}
+\begin{center}
+\Large $\boxed{R = \frac{v_0^2 \sin 2\theta}{g}}$
+\end{center}
+Range depends on initial speed and launch angle.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Key insights:}
+\begin{itemize}
+\item Maximum range at $\theta = 45^\circ$ \pause
+\item Same range for complementary angles: $30^\circ$ and $60^\circ$ \pause
+\item Only valid when initial and final heights are equal
+\end{itemize}
+\note{[P0] [THE REVELATION] "Range formula for level ground"\\\\
+- v-zero squared times sine of twice theta, over g\\\\
+[P1] "Maximum range at 45 degrees - perfect balance"\\\\
+[P2] "Complementary angles give same range"\\\\
+- 30 and 60, or 20 and 70, etc.\\\\
+[P3] "Only works if you land at same height you launched"\\\\
+[THE WONDER] Artillery officers memorized this 500 years ago}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Volcanic Rock}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A rock is ejected from a volcano at 25.0 m/s at $35^\circ$ above horizontal. It lands 20.0 m below its starting point.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $v_0 = 25.0$ m/s, $\theta = 35^\circ$
+\item $y = -20.0$ m
+\end{itemize}
+
+\textbf{Find:} Time of flight
+
+\vspace{0.3cm}
+
+\textit{Can you predict the flight time? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they handle vertical displacement?\\\\
+[SAY] "This one is trickier - quadratic equation ahead"\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who sets up kinematic equation correctly\\\\
+[WATCH FOR] Sign errors with negative displacement\\\\
+[DON'T HELP] Quadratic struggle is valuable learning}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Quadratic Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which kinematic equation has both $y$ and $t$?
+\item What values do you substitute for $y_0$ and $y$?
+\item How do you solve a quadratic equation?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for quadratic equation recognition\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Use y equals y-zero plus v-zero-y t minus half g t squared\\\\
+[COMMON ERROR] Forgetting negative sign for downward displacement}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Time of Flight}
+\textbf{Self-correct in a different color:}
+
+\textbf{Step 1:} Find $v_{0y} = (25.0)(\sin 35^\circ) = 14.3$ m/s
+
+\pause
+
+\textbf{Step 2:} Use kinematic equation with $y_0 = 0$, $y = -20.0$ m
+$$-20.0 = (14.3)t - (4.90)t^2$$
+
+\pause
+
+\textbf{Step 3:} Rearrange to standard form
+$$(4.90)t^2 - (14.3)t - (20.0) = 0$$
+
+\pause
+
+\textbf{Step 4:} Quadratic formula
+$$t = \frac{14.3 \pm \sqrt{(14.3)^2 - 4(4.90)(-20.0)}}{2(4.90)}$$
+\note{[P0] [ALGEBRA] "v-zero-y equals 14.3 m/s"\\\\
+[P1] "Substitute into y equals v-zero-y t minus half g t squared"\\\\
+[P2] "Rearrange to standard quadratic form"\\\\
+[P3] [ALGEBRA] "Quadratic formula: t equals negative b plus or minus square root..."\\\\
+[THE HUMILITY] "Quadratic formula is tedious but reliable"\\\\
+[THE CONNECTION - Digital Archetype] "Calculators use this exact method"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Solving the Quadratic}
+\textbf{Step 5:} Calculate discriminant
+$$\sqrt{(14.3)^2 + 4(4.90)(20.0)} = \sqrt{596.5} = 24.4$$
+
+\pause
+
+\textbf{Step 6:} Two solutions
+$$t = \frac{14.3 + 24.4}{9.8} = 3.96 \text{ s} \quad \text{(physical)}$$
+$$t = \frac{14.3 - 24.4}{9.8} = -1.03 \text{ s} \quad \text{(reject)}$$
+
+\pause
+
+$$\boxed{t = 3.96 \text{ s}}$$
+
+\pause
+\alert{Negative time means before launch - physically impossible!}
+\note{[P0] [ALGEBRA] "Calculate discriminant: 24.4"\\\\
+[P1] "Two solutions: 3.96 seconds and negative 1.03 seconds"\\\\
+[P2] [ANSWER] Time of flight: 3.96 seconds\\\\
+[P3] [THE REVELATION] "Negative time is before launch - reject it"\\\\
+[THE WONDER] Math gives two answers, physics picks the right one\\\\
+- Quadratics always give two roots\\\\
+- Physical reasoning eliminates impossible solution}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Vectors have magnitude AND direction \pause
+\item Graphical addition: head-to-tail method \pause
+\item Analytical method: break into components, recombine \pause
+\item Projectile motion: horizontal and vertical are independent \pause
+\item Time connects the two dimensions \pause
+\item Maximum height depends only on $v_{0y}$
+\end{enumerate}
+\end{block}
+\note{[P0] "Six revelations from motion in 2D"\\\\
+[P1] "Vectors encode two pieces of information"\\\\
+[P2] "Head-to-tail for graphical addition"\\\\
+[P3] "Components for analytical precision"\\\\
+[P4] "Independence principle for projectiles"\\\\
+[P5] "Time is the bridge between dimensions"\\\\
+[P6] "Vertical component determines height"\\\\
+[THE WONDER] You now predict trajectories like NASA engineers\\\\
+- Name wheel: which concept was most surprising?}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\textbf{Vector Components:}
+\begin{align}
+A_x &= A \cos\theta \\
+A_y &= A \sin\theta
+\end{align}
+
+\textbf{Magnitude and Direction:}
+\begin{align}
+A &= \sqrt{A_x^2 + A_y^2} \\
+\theta &= \tan^{-1}(A_y/A_x)
+\end{align}
+
+\textbf{Projectile Motion:}
+\begin{align}
+\text{Horizontal: } x &= x_0 + v_x t \\
+\text{Vertical: } y &= y_0 + v_{0y}t - \frac{1}{2}gt^2 \\
+\text{Max height: } h &= \frac{v_{0y}^2}{2g}
+\end{align}
+\note{- Seven fundamental equations for 2D motion\\\\
+- Components split vectors into x and y\\\\
+- Pythagorean and inverse tangent recombine\\\\
+- Horizontal motion has constant velocity\\\\
+- Vertical motion has constant acceleration\\\\
+- Max height from vertical component only\\\\
+[THE WONDER] Seven equations unlock all 2D trajectories}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework is posted on the LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Chapter 6 - Circular Motion and Gravitation\\\\
+[THE WONDER] We've conquered 2D. Next: objects moving in circles.}
+\end{frame}
+
+\end{document}

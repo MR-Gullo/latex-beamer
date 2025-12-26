@@ -1,0 +1,684 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Reading Motion]{PHYS11 CH:2 Reading the Story of Motion}
+\subtitle{Position and Velocity Graphs}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we learn to read the language of motion.\\\\
+- Graphs are physics's storytelling tool\\\\
+- Two chapters: position graphs and velocity graphs\\\\
+[THE WONDER] By end of class, you'll decode motion like reading a book\\\\
+- Same tools NASA uses to track spacecraft}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery}
+\begin{center}
+\Large How can a single line\\
+\textit{tell the complete story of motion?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+Position, velocity, acceleration—all encoded in curves and slopes.
+
+\pause
+\vspace{0.3cm}
+\alert{A graph is worth a thousand equations.}
+\note{[P0] "How can a single line tell the complete story of motion?"\\\\
+[P1] "Position, velocity, acceleration - all encoded in curves and slopes"\\\\
+[P2] [THE WONDER] "A graph is worth a thousand equations. Today you learn to read them"\\\\
+[THE CONNECTION - Digital Archetype] Like reading computer code - every pixel has meaning}
+\end{frame}
+
+\section{Position vs. Time Graphs}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this lesson, you will be able to:}
+\begin{itemize}
+\item \textbf{2.3:} Explain the meaning of slope in position vs. time graphs \pause
+\item \textbf{2.3:} Solve problems using position vs. time graphs
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for position graphs"\\\\
+[P1] "First: understand what slope means. Second: solve real problems"\\\\
+- Assessment: practice problems and quiz}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 The Language of Graphs}
+\begin{exampleblock}{The Mental Model}
+A graph is like a picture—worth a thousand words. It reveals relationships between physical quantities.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Standard graph anatomy:}
+\begin{itemize}
+\item Horizontal axis = independent variable (usually time) \pause
+\item Vertical axis = dependent variable (position, velocity) \pause
+\item Straight line: $y = mx + b$ where $m$ = slope, $b$ = y-intercept
+\end{itemize}
+\note{[P0] [THE REVELATION] "Graphs are the visual language of physics"\\\\
+[P1] "Horizontal axis is independent - usually time"\\\\
+[P2] "Vertical axis is dependent - position, velocity"\\\\
+[P3] "Straight line: y equals m x plus b"\\\\
+- m is slope, b is y-intercept\\\\
+- We'll give these physical meaning}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 Drive to School}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig02.jpg}
+
+\small Graph of position vs. time for 5 km drive to school
+\end{center}
+
+\pause
+\textbf{What does this line tell us?}
+\begin{itemize}
+\item Starts at home ($d_0 = 0$)
+\item Ends at school ($d_f = 5$ km)
+\item Takes 10 minutes
+\end{itemize}
+\note{[P0] "Position versus time for drive to school"\\\\
+[P1] "Starts at home - zero position. Ends at school - 5 km. Takes 10 minutes"\\\\
+- Straight line means constant velocity\\\\
+- Name wheel: what is the slope?}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 Reading the Slope}
+\begin{block}{Universal Law: Slope is Velocity}
+In a position vs. time graph:
+$$\text{slope} = \frac{\text{rise}}{\text{run}} = \frac{\Delta d}{\Delta t} = v_{\text{avg}}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{For the drive to school:}
+$$v_{\text{avg}} = \frac{5 \text{ km}}{10 \text{ min}} = 0.5 \text{ km/min}$$
+
+\pause
+\begin{exampleblock}{The Anchor}
+Steeper slope = faster motion. Flat line = at rest.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "Slope is velocity - rise over run"\\\\
+[P1] "Drive to school: 5 km divided by 10 min equals 0.5 km per min"\\\\
+[P2] [THE CONNECTION - Kinetic Archetype] "Steeper slope means faster motion. Athletes know this instinctively"\\\\
+[THE WONDER] Slope connects position to velocity}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 Round Trip}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig03.jpg}
+
+\small What does the graph look like with the return trip?
+\end{center}
+
+\pause
+\textbf{Second leg:}
+\begin{itemize}
+\item Negative slope = moving backward
+\item Returns to $d = 0$ (back home)
+\item Net displacement = 0 km
+\end{itemize}
+\note{[P0] "Add the return trip to the graph"\\\\
+[P1] "Second leg has negative slope - moving backward. Returns to zero - back home"\\\\
+- Total distance: 10 km\\\\
+- Net displacement: 0 km\\\\
+- Direction matters!}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 Jet Car on Salt Flats}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig04.jpg}
+
+\small Position vs. time for jet-powered car
+\end{center}
+
+\pause
+\textbf{Reading the graph:}
+\begin{itemize}
+\item At $t = 0$ s: $d = 400$ m
+\item At $t = 1$ s: $d = 650$ m
+\item Slope = velocity = $250$ m/s
+\end{itemize}
+\note{[P0] "Jet car on Bonneville Salt Flats"\\\\
+[P1] "At t equals 0, position is 400 m. At t equals 1 s, position is 650 m"\\\\
+- Calculate slope: 250 m divided by 1 s\\\\
+- Velocity is 250 m/s\\\\
+- That's 900 km/h! Incredibly fast}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 The Position Equation}
+\begin{block}{Universal Law: Linear Motion}
+From the graph equation $y = mx + b$, we get:
+$$\boxed{d = v t + d_0}$$
+or equivalently
+$$\boxed{d = d_0 + vt}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Where:
+\begin{itemize}
+\item $m$ (slope) = velocity $v$
+\item $b$ (y-intercept) = initial position $d_0$
+\end{itemize}
+\note{[P0] [THE REVELATION] "From graph anatomy, we derive motion equation"\\\\
+[P1] "Slope m becomes velocity v. Y-intercept b becomes initial position"\\\\
+- d equals d-zero plus v t\\\\
+- This is foundational kinematics\\\\
+[THE WONDER] Graph and equation are two languages for same truth}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 Curved Position Graphs}
+\begin{center}
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys11-kinematics-fig05.jpg}
+
+\small Jet car speeding up - curved graph
+\end{center}
+
+\pause
+\begin{alertblock}{The Conflict}
+When the graph curves, velocity is changing. Slope is not constant!
+\end{alertblock}
+
+\pause
+\textbf{Solution:} Use tangent line to find instantaneous velocity at any point.
+\note{[P0] "When object speeds up, graph curves"\\\\
+[P1] [THE CONFLICT] "Slope is not constant - velocity is changing"\\\\
+[P2] "Draw tangent line at any point - its slope is instantaneous velocity"\\\\
+- Tangent touches curve at only one point\\\\
+- Steeper curve means faster acceleration}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.3 Instantaneous Velocity from Tangent}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig06.jpg}
+
+\small Slope of tangent line = instantaneous velocity
+\end{center}
+
+\pause
+\textbf{At point Q ($t = 25$ s):}
+$$v_Q = \frac{3120 - 1300 \text{ m}}{32 - 19 \text{ s}} = \frac{1820 \text{ m}}{13 \text{ s}} = 140 \text{ m/s}$$
+\note{[P0] "Two tangent lines shown at different points"\\\\
+[P1] "At point Q, t equals 25 s. Calculate slope of tangent"\\\\
+- Rise: 1820 m. Run: 13 s\\\\
+- Instantaneous velocity: 140 m/s\\\\
+- This is how we find velocity at any instant}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Reading a Position Graph}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+\begin{center}
+\includegraphics[width=0.6\textwidth,height=0.35\textheight,keepaspectratio]{phys11-kinematics-fig07.jpg}
+\end{center}
+
+\textbf{Given:} The graph above
+
+\textbf{Find:} Average velocity over entire time interval (0 to 16 s)
+
+\vspace{0.2cm}
+\textit{Can you decode this motion? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they extract velocity from a graph?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who identifies initial and final positions\\\\
+[WATCH FOR] Students trying to use every point instead of endpoints\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Graph Reading Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What two points did you choose?
+\item How did you calculate the slope?
+\item What units did you get?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for common approaches\\\\
+[CHECK] Name wheel: call a pair to share approach\\\\
+[EXPECTED APPROACH] Use endpoints - initial and final position\\\\
+[COMMON ERROR] Adding up all segments instead of using net displacement}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Slope Equals Velocity}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Identify endpoints: $(t_0, d_0) = (0, 0)$ m and $(t_f, d_f) = (16, 5)$ m
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2:} Calculate slope
+$$v_{\text{avg}} = \frac{\Delta d}{\Delta t} = \frac{d_f - d_0}{t_f - t_0}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 3:} Substitute
+$$v_{\text{avg}} = \frac{5 - 0 \text{ m}}{16 - 0 \text{ s}} = \boxed{0.31 \text{ m/s}}$$
+
+\pause
+\textbf{Check:} About 1 km/h - a slow walk. Reasonable!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "Identify endpoints - zero and 16 s, zero and 5 m"\\\\
+[P2] "Velocity equals change in d over change in t"\\\\
+[P3] "5 m divided by 16 s equals 0.31 m/s"\\\\
+[P4] [ANSWER] "0.31 m/s - about 1 km/h, a slow walk"\\\\
+[THE WONDER] Slope unlocks velocity - graph becomes data}
+\end{frame}
+
+\section{Velocity vs. Time Graphs}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this lesson, you will be able to:}
+\begin{itemize}
+\item \textbf{2.4:} Explain the meaning of slope and area in velocity vs. time graphs \pause
+\item \textbf{2.4:} Solve problems using velocity vs. time graphs
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for velocity graphs"\\\\
+[P1] "First: understand slope AND area. Second: solve problems"\\\\
+- Velocity graphs are more powerful\\\\
+- Can extract both displacement and acceleration}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 From Position to Velocity Graph}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.45\textheight,keepaspectratio]{phys11-kinematics-fig08.jpg}
+
+\small Position graph: drive to and from school
+\end{center}
+
+\pause
+\column{0.48\textwidth}
+\begin{center}
+\includegraphics[width=\linewidth,height=0.45\textheight,keepaspectratio]{phys11-kinematics-fig09.jpg}
+
+\small Velocity graph: two constant velocities
+\end{center}
+\end{columns}
+
+\vspace{0.3cm}
+\pause
+\textbf{Key insight:} Slope of position graph becomes height of velocity graph!
+\note{[P0] "Position graph on left - V-shaped"\\\\
+[P1] "Velocity graph on right - two horizontal lines"\\\\
+[P2] "Slope of position graph becomes height of velocity graph"\\\\
+- Forward: +0.5 km/min\\\\
+- Backward: -0.5 km/min\\\\
+- Constant velocity means horizontal line}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 Reading Velocity Graphs}
+\begin{block}{Universal Law: The Dual Nature}
+In a velocity vs. time graph:
+\begin{enumerate}
+\item \textbf{Slope} = acceleration (rate of velocity change)
+\item \textbf{Area under curve} = displacement
+\end{enumerate}
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Anchor}
+Position graphs give velocity. Velocity graphs give acceleration AND displacement.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "Velocity graphs have two powers"\\\\
+[P1] "Slope tells acceleration. Area tells displacement"\\\\
+[P2] [THE CONNECTION - Digital Archetype] "Like function returns two values"\\\\
+[THE WONDER] More information packed into one graph}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 Area Equals Displacement}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig10.jpg}
+
+\small Velocity graph for drive to school
+\end{center}
+
+\pause
+\textbf{Calculate displacement:}
+$$d = v \times t = 0.5 \text{ km/min} \times 10 \text{ min} = 5 \text{ km}$$
+
+\pause
+\textbf{Return trip:}
+$$d = (-0.5 \text{ km/min}) \times 10 \text{ min} = -5 \text{ km}$$
+
+\pause
+\textbf{Net:} $5 + (-5) = 0$ km. Back where you started!
+\note{[P0] "Calculate area under velocity curve"\\\\
+[P1] "Forward leg: 0.5 km/min times 10 min equals 5 km"\\\\
+[P2] "Return leg: negative 0.5 times 10 equals negative 5 km"\\\\
+[P3] [THE WONDER] "Add them: zero displacement. Math confirms you're home"\\\\
+- Units cancel: km/min times min equals km}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 The Velocity Equation}
+\begin{block}{Universal Law: Velocity with Acceleration}
+From the velocity graph equation $y = mx + b$, we get:
+$$\boxed{v = v_0 + at}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Where:
+\begin{itemize}
+\item $m$ (slope) = acceleration $a$
+\item $b$ (y-intercept) = initial velocity $v_0$
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{And from area:}
+$$\boxed{d = vt} \quad \text{(for constant velocity)}$$
+\note{[P0] [THE REVELATION] "From graph anatomy, we derive velocity equation"\\\\
+[P1] "Slope m becomes acceleration a. Y-intercept b becomes initial velocity"\\\\
+[P2] "Area under curve gives displacement"\\\\
+- v equals v-zero plus a t\\\\
+- Connects velocity to acceleration\\\\
+[THE WONDER] Same graph pattern, different physical meaning}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 Jet Car Velocity Graph}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig11.jpg}
+
+\small Jet car speeding up - straight line with positive slope
+\end{center}
+
+\pause
+\textbf{What we can read:}
+\begin{itemize}
+\item Starts at $v_0 = 20$ m/s at $t = 0$
+\item Ends at $v_f = 160$ m/s at $t = 30$ s
+\item Slope = acceleration (constant)
+\end{itemize}
+\note{[P0] "Straight line means constant acceleration"\\\\
+[P1] "Starts at 20 m/s, ends at 160 m/s over 30 s"\\\\
+- Positive slope means speeding up\\\\
+- Can calculate acceleration from slope\\\\
+- Can calculate displacement from area}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 Zero Slope Means Constant Velocity}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig12.jpg}
+
+\small Horizontal line in velocity graph
+\end{center}
+
+\pause
+\begin{alertblock}{Key Insight}
+Slope = 0 means acceleration = 0. Object moves at constant velocity.
+\end{alertblock}
+
+\pause
+This is what we saw in the drive to school example!
+\note{[P0] "Horizontal line in velocity graph"\\\\
+[P1] "Slope is zero, so acceleration is zero"\\\\
+[P2] "Constant velocity - no speeding up or slowing down"\\\\
+- Position graph would be straight diagonal line\\\\
+- This is uniform motion}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Calculating from Velocity Graph}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+\begin{center}
+\includegraphics[width=0.5\textwidth,height=0.3\textheight,keepaspectratio]{phys11-kinematics-fig13.jpg}
+\end{center}
+
+\textbf{Given:} Velocity graph above (jet car from 0 to 30 s)
+
+\textbf{Find:}
+\begin{itemize}
+\item (a) Displacement
+\item (b) Acceleration
+\end{itemize}
+
+\vspace{0.2cm}
+\textit{Use both slope and area. Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they extract two quantities from one graph?\\\\
+[SAY] "Find displacement AND acceleration. Use what you learned."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who recognizes area vs. slope\\\\
+[WATCH FOR] Confusing which is which\\\\
+[DON'T HELP] Productive struggle builds understanding}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Dual Extraction}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How did you find displacement? (Hint: area)
+\item How did you find acceleration? (Hint: slope)
+\item Did you break the area into shapes?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for strategy\\\\
+[CHECK] Name wheel: call a pair to share approach\\\\
+[EXPECTED APPROACH] Area = rectangle + triangle. Slope = rise/run\\\\
+[COMMON ERROR] Using slope for displacement or area for acceleration}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Area and Slope}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.2cm}
+
+\textbf{(a) Displacement = Area under curve}
+
+\pause
+Rectangle: $20 \text{ m/s} \times 30 \text{ s} = 600$ m
+
+\pause
+Triangle: $\frac{1}{2} \times 30 \text{ s} \times 140 \text{ m/s} = 2100$ m
+
+\pause
+Total: $\boxed{d = 2700 \text{ m}}$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{(b) Acceleration = Slope}
+\pause
+$$a = \frac{\Delta v}{\Delta t} = \frac{140 \text{ m/s}}{30 \text{ s}} = \boxed{4.67 \text{ m/s}^2}$$
+\note{[P0] "Part a: displacement equals area"\\\\
+[P1] "Rectangle: 20 m/s times 30 s equals 600 m"\\\\
+[P2] "Triangle: half times base times height equals 2100 m"\\\\
+[P3] [ANSWER] "Total displacement: 2700 m"\\\\
+[P4] "Part b: acceleration equals slope"\\\\
+[P5] "Change in v divided by change in t equals 4.67 m/s squared"\\\\
+[THE WONDER] One graph, two insights - displacement and acceleration}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 Curved Velocity Graphs}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig14.jpg}
+
+\small More realistic jet car - curved velocity graph
+\end{center}
+
+\pause
+\begin{alertblock}{The Complication}
+When velocity graph curves, acceleration is changing! Use tangent for instantaneous acceleration.
+\end{alertblock}
+\note{[P0] "More realistic graph - velocity doesn't jump instantly"\\\\
+[P1] [THE CONFLICT] "Curved means acceleration is changing"\\\\
+- Draw tangent line for instantaneous acceleration\\\\
+- Estimate area by breaking into sections\\\\
+- Real motion is usually curved, not straight}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 Negative Velocity}
+\begin{center}
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-kinematics-fig15.jpg}
+
+\small Velocity graph going below zero
+\end{center}
+
+\pause
+\textbf{Interpretation:}
+\begin{itemize}
+\item Positive velocity = moving forward
+\item Negative velocity = moving backward
+\item Zero crossing = turning point (changes direction)
+\end{itemize}
+\note{[P0] "Velocity can be positive or negative"\\\\
+[P1] "Positive means forward, negative means backward"\\\\
+- Zero crossing is turning point\\\\
+- Area below axis is negative displacement\\\\
+- Net displacement = positive area minus negative area}
+\end{frame}
+
+\begin{frame}
+\frametitle{2.4 Position from Velocity Graph}
+\begin{exampleblock}{The Connection}
+\textbf{From position graph:} slope $\rightarrow$ velocity
+
+\textbf{From velocity graph:} area $\rightarrow$ displacement
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{Circular Relationship}
+\begin{center}
+Position $\xrightarrow{\text{slope}}$ Velocity $\xrightarrow{\text{slope}}$ Acceleration
+
+\vspace{0.2cm}
+
+Position $\xleftarrow{\text{area}}$ Velocity $\xleftarrow{\text{?}}$ Acceleration
+\end{center}
+\end{block}
+
+\pause
+We'll learn about acceleration graphs in the next chapter!
+\note{[P0] [THE REVELATION] "Graphs connect position, velocity, acceleration"\\\\
+[P1] "Slope gives rate of change. Area gives accumulation"\\\\
+[P2] "Next chapter: acceleration graphs complete the picture"\\\\
+[THE WONDER] Three quantities, linked by calculus - slope and area are inverse operations}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Graphs are the visual language of motion \pause
+\item Position graph: slope = velocity \pause
+\item Velocity graph: slope = acceleration, area = displacement \pause
+\item Tangent lines extract instantaneous values \pause
+\item Negative slopes/areas show direction \pause
+\item One graph encodes multiple quantities
+\end{enumerate}
+\end{block}
+\note{[P0] "Six revelations today"\\\\
+[P1] "Graphs are visual language of motion"\\\\
+[P2] "Position graph slope is velocity"\\\\
+[P3] "Velocity graph: slope is acceleration, area is displacement"\\\\
+[P4] "Tangent lines extract instantaneous values"\\\\
+[P5] "Negative shows direction"\\\\
+[P6] "One graph, multiple insights"\\\\
+[THE WONDER] You can now read motion like a book\\\\
+- Name wheel: what surprised you most?}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+\text{Position graph slope} &= \frac{\Delta d}{\Delta t} = v_{\text{avg}} \\
+\text{Position equation} &= d = d_0 + vt \\
+\text{Velocity graph slope} &= \frac{\Delta v}{\Delta t} = a \\
+\text{Velocity equation} &= v = v_0 + at \\
+\text{Displacement from velocity} &= \text{area under } v\text{-}t \text{ curve}
+\end{align}
+\note{- Five foundational equations from graphs\\\\
+- First two: position graphs\\\\
+- Last three: velocity graphs\\\\
+- Know when to use each\\\\
+- Questions before we end?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework is posted on the LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Chapter 2 sections 2.5-2.6 - Acceleration and equations of motion}
+\end{frame}
+
+\end{document}

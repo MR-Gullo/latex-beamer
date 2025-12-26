@@ -1,0 +1,1080 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Heat and Work]{PHYS11 CH:12 The Universe's Accounting System}
+\subtitle{How Energy Becomes Unavailable}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we discover why no engine can be perfect.\\\\
+- Same laws limit steam engines, car engines, and your body\\\\
+- Three revelations: thermal equilibrium, energy conservation, entropy's arrow\\\\
+[THE WONDER] By end, you'll understand why the universe runs in only one direction.\\\\
+- This is the physics of why time moves forward}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery of the Perfect Engine}
+\begin{center}
+\Large What if you could build an engine\\
+\textit{that converts all heat into work?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+Engineers have been trying for 300 years...
+
+\pause
+\vspace{0.3cm}
+\alert{Nature says: Impossible.}
+\note{[P0] "What if you could build a perfect engine?"\\\\
+[P1] "Engineers have tried for 300 years - steam engines, car engines, jet engines"\\\\
+[P2] [THE CONFLICT] "Nature says impossible. The laws of thermodynamics set hard limits"\\\\
+[THE WONDER] Today we discover why the universe has unbreakable accounting rules}
+\end{frame}
+
+\begin{frame}
+\frametitle{Energy Transforms}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig01.jpg}
+\caption{Steam engine: burning fuel transfers heat to do work}
+\end{figure}
+
+\pause
+\textbf{The challenge:} Most thermal energy escapes as waste heat.
+\note{[P0] "Steam engines revolutionized civilization"\\\\
+[P1] "But most energy is wasted - only 25 to 30 percent becomes useful work"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like running a race where only 30 percent of effort moves you forward"\\\\
+[THE WONDER] Laws of thermodynamics explain why this waste is unavoidable}
+\end{frame}
+
+\section{12.1 Zeroth Law: Thermal Equilibrium}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{12.1:} Explain the zeroth law of thermodynamics
+\end{itemize}
+\end{block}
+\note{- One objective: understand thermal equilibrium\\\\
+- Foundation for temperature measurement\\\\
+- Why it's called zeroth law\\\\
+- Assessment: conceptual questions}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.1 When Things Stop Changing}
+\begin{exampleblock}{The Mental Model}
+Place ice in warm water. What happens?
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{itemize}
+\item Ice melts (gains heat) \pause
+\item Water cools (loses heat) \pause
+\item Eventually: both reach same temperature \pause
+\item Heat transfer stops
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{Nature's Rule}
+They are now in \textbf{thermal equilibrium}.
+\end{block}
+\note{[P0] "Place ice in warm water - what happens?"\\\\
+[P1] "Ice melts - gains heat"\\\\
+[P2] "Water cools - loses heat"\\\\
+[P3] "Eventually both reach same temperature"\\\\
+[P4] "Heat transfer stops"\\\\
+[P5] [THE REVELATION] "Thermal equilibrium - same temp, no more energy flow"\\\\
+[THE WONDER] This is how thermometers work}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.1 The Zeroth Law}
+\begin{block}{Universal Law: The Transitive Property}
+If system A is in thermal equilibrium with system B,\\
+and B is in thermal equilibrium with system C,\\
+then A is also in thermal equilibrium with C.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{In Math Terms}
+If $a = b$ and $b = c$, then $a = c$.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\alert{Why "zeroth"?} Discovered after first and second laws, but more fundamental.
+\note{[P0] "The zeroth law of thermodynamics"\\\\
+[P1] "Like transitive property in math"\\\\
+[P2] "Why zeroth? Discovered AFTER first and second but realized it's foundational"\\\\
+[THE HUMILITY] Science doesn't always discover in logical order\\\\
+[THE CONNECTION - Digital Archetype] "Like version 1.0 then realizing you need 0.0"}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.1 Real-World: Neonatal Incubators}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys11-thermodynamics-fig02.jpg}
+\caption{Premature baby in incubator}
+\end{figure}
+
+\pause
+\textbf{Zeroth law in action:}\\
+Air, incubator walls, and baby all reach thermal equilibrium at safe temperature.
+\note{- Premature babies have little body covering\\\\
+- Incubator maintains constant temperature\\\\
+- Air, walls, baby all reach thermal equilibrium\\\\
+- Baby safe and comfortable\\\\
+- Zeroth law guarantees temperature consistency throughout}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.1 Why Not Earth and Sun?}
+\begin{alertblock}{Question for Discussion}
+Sun transfers heat to Earth. Why don't they reach thermal equilibrium?
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+Answer: Empty space separates them.
+
+\pause
+\vspace{0.3cm}
+
+Thermal equilibrium requires \textbf{thermal contact} - ability to freely exchange energy.
+
+\pause
+\vspace{0.3cm}
+
+\alert{Fortunately!} Otherwise Earth would be as hot as sun's surface ($\sim$5800 K).
+\note{[P0] [THE CONFLICT] "Why doesn't Earth heat to match sun?"\\\\
+[P1] "Empty space separates them"\\\\
+[P2] "Thermal equilibrium needs thermal contact"\\\\
+[P3] [THE WONDER] "If thermal contact with sun, life impossible"\\\\
+- Space is insulator - we get radiation but not direct heat transfer}
+\end{frame}
+
+\section{12.2 First Law: Energy Conservation}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{12.2:} Describe how pressure, volume, temperature relate using ideal gas law \pause
+\item \textbf{12.2:} Describe pressure-volume work \pause
+\item \textbf{12.2:} State first law verbally and mathematically \pause
+\item \textbf{12.2:} Solve first law problems
+\end{itemize}
+\end{block}
+\note{[P0] "Four objectives for first law"\\\\
+[P1] "Understand ideal gas law"\\\\
+[P2] "Learn pressure-volume work"\\\\
+[P3] "State first law"\\\\
+[P4] "Solve practical problems - assessment"}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Pressure: Force over Area}
+\begin{block}{Definition: Pressure}
+\begin{center}
+\Large $\boxed{P = \frac{F}{A}}$
+\end{center}
+Pressure is force per unit area perpendicular to surface.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{SI unit:} Pascal (Pa), where $1 \text{ Pa} = 1 \text{ N/m}^2$
+\note{[P0] [ALGEBRA] "P equals F over A"\\\\
+[P1] "Pascal: one newton per square meter"\\\\
+[THE CONNECTION - Kinetic Archetype] "Why sharp objects pierce skin - same force, tiny area, huge pressure"\\\\
+- Large area: low pressure\\\\
+- Tiny area: high pressure}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Same Force, Different Pressure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig03.jpg}
+\end{figure}
+
+\pause
+\begin{alertblock}{Civilian View vs. Reality}
+\textbf{Civilian:} "The needle pushes harder."\\
+\textbf{Physicist:} "Same force, smaller area = higher pressure."
+\end{alertblock}
+\note{[P0] "Same force applied two ways"\\\\
+[P1] [THE CONFLICT] "Civilians think needle pushes harder. Same force!"\\\\
+- Finger: large area, low pressure\\\\
+- Needle: tiny area, high pressure\\\\
+[THE REVELATION] Pressure equals force divided by area}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 The Ideal Gas Law}
+\begin{block}{Universal Law: Gas Behavior}
+\begin{center}
+\Large $\boxed{PV = NkT}$
+\end{center}
+Pressure times volume equals particles times Boltzmann constant times absolute temperature.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Where:
+\begin{itemize}
+\item $P$ = pressure (Pa)
+\item $V$ = volume (m$^3$)
+\item $N$ = number of particles
+\item $k = 1.38 \times 10^{-23}$ J/K (Boltzmann constant)
+\item $T$ = absolute temperature (K)
+\end{itemize}
+\note{[P0] [ALGEBRA] "P-V equals N-k-T"\\\\
+[P1] "One of physics' most important equations"\\\\
+- Works for ideal gases: low pressure, high temp\\\\
+- Boltzmann constant links microscopic to macroscopic\\\\
+[THE WONDER] One equation describes all gases everywhere}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Gas Law Relationships}
+For fixed amount of gas:
+
+\vspace{0.3cm}
+
+\begin{itemize}
+\item \textbf{Constant volume:} $P \propto T$ (pressure rises with temperature) \pause
+\item \textbf{Constant temperature:} $P \propto \frac{1}{V}$ (pressure inverse to volume) \pause
+\item \textbf{Constant pressure:} $V \propto T$ (volume rises with temperature)
+\end{itemize}
+
+\pause
+\vspace{0.5cm}
+
+\begin{exampleblock}{The Mental Model}
+Pumping tire: volume increases, then pressure builds, tire warms up.
+\end{exampleblock}
+\note{[P0] "Three relationships from ideal gas law"\\\\
+[P1] "Constant V: P up means T up"\\\\
+[P2] "Constant T: P up means V down"\\\\
+[P3] "Constant P: V up means T up"\\\\
+[P4] [THE CONNECTION - Kinetic Archetype] "Pump tire - feel all three"\\\\
+- First volume grows, then pressure builds, tire gets warm}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Pumping a Tire}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig04.jpg}
+\end{figure}
+
+\pause
+(a) Volume increases. (b) Pressure increases. (c) Temperature increases.
+\note{[P0] "Three stages of pumping air into deflated tire"\\\\
+- All three variables P, V, T connected by ideal gas law\\\\
+[P1] "Stage a: volume expands. Stage b: walls resist, pressure rises. Stage c: temp rises"\\\\
+[THE CONNECTION - Digital Archetype] "Three linked variables in physics simulation"\\\\
+[THE WONDER] Ideal gas law predicts all three stages}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Pressure-Volume Work}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys11-thermodynamics-fig05.jpg}
+\caption{Gas expansion does work pushing piston}
+\end{figure}
+
+\pause
+\begin{block}{Nature's Rule for Gases}
+\begin{center}
+\Large $\boxed{W = P\Delta V}$
+\end{center}
+Work equals pressure times change in volume.
+\end{block}
+\note{[P0] "When gas expands, it does work"\\\\
+[P1] [ALGEBRA] "W equals P delta V"\\\\
+- Gas pushes piston through distance\\\\
+- Force times distance equals work\\\\
+- P times A times d equals P times delta V\\\\
+[THE REVELATION] For fluids: pressure like force, volume change like distance}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 The First Law of Thermodynamics}
+\begin{block}{Universal Law: Energy Conservation}
+\begin{center}
+\Large $\boxed{\Delta U = Q - W}$
+\end{center}
+Change in internal energy equals heat added minus work done by system.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Where:
+\begin{itemize}
+\item $\Delta U$ = change in internal energy
+\item $Q$ = net heat into system (positive if in, negative if out)
+\item $W$ = net work by system (positive if out, negative if in)
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{This is conservation of energy for thermal systems.}
+\note{[P0] [ALGEBRA] "Delta U equals Q minus W"\\\\
+[P1] "Q and W are energy in transit - delta U is stored"\\\\
+[P2] "This is conservation of energy"\\\\
+[THE REVELATION] Energy cannot be created or destroyed\\\\
+[THE HUMILITY] Sign conventions confuse everyone at first}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Understanding the Signs}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Heat Q:}
+\begin{itemize}
+\item Positive: flows IN\\(adds energy)
+\item Negative: flows OUT\\(removes energy)
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Work W:}
+\begin{itemize}
+\item Positive: done BY system\\(removes energy)
+\item Negative: done ON system\\(adds energy)
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.5cm}
+
+\begin{alertblock}{Key Insight}
+Positive $Q$ adds energy. Positive $W$ removes energy.
+\end{alertblock}
+\note{[P0] "Sign conventions critical"\\\\
+[P1] "Q positive: heat in, energy up. Q negative: heat out, energy down"\\\\
+[P2] "W positive: system does work, energy down. W negative: work on system, energy up"\\\\
+[THE HUMILITY] This trips everyone up - track energy flow direction carefully}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Energy Flow Diagram}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig06.jpg}
+\end{figure}
+
+\vspace{0.3cm}
+
+$Q$ in adds energy. $W$ out removes energy. $\Delta U$ is net change.
+\note{- System like bank account\\\\
+- Q is deposits and withdrawals\\\\
+- W is spending\\\\
+- Delta U is change in balance\\\\
+[THE CONNECTION - Digital Archetype] "Like tracking energy credits in game"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Energy Accounting}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+System absorbs 40.0 J of heat, does 10.0 J of work.\\
+Later, 25.0 J heat leaves, 4.0 J work done ON system.
+
+\vspace{0.3cm}
+
+\textbf{Find:} Net change in internal energy $\Delta U$
+
+\vspace{0.3cm}
+
+\textit{Can you track energy? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they track energy like accountant?\\\\
+[SAY] "Try on your own. Watch signs carefully."\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who reverses signs\\\\
+[WATCH FOR] Confusion: heat in vs out, work by vs on\\\\
+[DON'T HELP] Let them struggle with signs}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Energy Tracking}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What was net heat $Q$? How calculate?
+\item What was net work $W$? Signs correct?
+\item Did you use $\Delta U = Q - W$?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share approach (not answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for sign confusion\\\\
+[CHECK] Name wheel: call pair\\\\
+[EXPECTED APPROACH] Q = 40 - 25 = 15 J. W = 10 - 4 = 6 J. Delta U = Q - W\\\\
+[COMMON ERROR] Forget work ON system is negative W}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Energy Conservation}
+\textbf{Self-correct in different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1 - Net heat:}
+$$Q = 40.0 \text{ J} - 25.0 \text{ J} = 15.0 \text{ J}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2 - Net work:}
+$$W = 10.0 \text{ J} - 4.0 \text{ J} = 6.0 \text{ J}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 3 - First law:}
+$$\Delta U = Q - W = 15.0 \text{ J} - 6.0 \text{ J}$$
+
+\pause
+$$\boxed{\Delta U = 9.0 \text{ J}}$$
+
+\pause
+\textbf{Check:} More heat in than work out $\rightarrow$ internal energy increases.
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Net heat: 40 in minus 25 out = 15 J"\\\\
+[P2] "Net work: 10 by minus 4 on = 6 J"\\\\
+[P3] "First law: delta U = Q - W"\\\\
+[P4] [ANSWER] "9.0 J - internal energy increased"\\\\
+[THE WONDER] You just did energy accounting like thermodynamics engineer}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.2 Biology: Your Body as Heat Engine}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys11-thermodynamics-fig07.jpg}
+\end{figure}
+
+\pause
+$$\Delta U = Q - W + \text{food energy}$$
+
+\pause
+\begin{itemize}
+\item Food adds chemical potential energy
+\item Work (exercise) removes energy
+\item Heat (body temp) removes energy
+\item Leftover stored as fat
+\end{itemize}
+\note{[P0] "Your body obeys first law"\\\\
+[P1] [ALGEBRA] "Delta U = Q - W + food"\\\\
+[P2] "Food is input. Exercise is work. Body heat is thermal output"\\\\
+[THE CONNECTION - Kinetic Archetype] "Athletes burn more calories - more work output"\\\\
+[THE WONDER] Same physics: steam engines and human metabolism}
+\end{frame}
+
+\section{12.3 Second Law: Entropy}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{12.3:} Describe entropy \pause
+\item \textbf{12.3:} Describe second law of thermodynamics \pause
+\item \textbf{12.3:} Solve entropy problems
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for second law"\\\\
+[P1] "Understand entropy"\\\\
+[P2] "Learn second law"\\\\
+[P3] "Calculate entropy - assessment"\\\\
+- This explains arrow of time}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.3 The Arrow of Time}
+\begin{center}
+\Large Why does time only move forward?
+\end{center}
+
+\pause
+\vspace{0.5cm}
+
+\begin{itemize}
+\item Ice melts in warm water \pause
+\item But water never spontaneously freezes around ice \pause
+\item Gas expands to fill room \pause
+\item But gas never spontaneously compresses to corner
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{Nature has preferred direction.}
+\note{[P0] "Why does time only move forward?"\\\\
+[P1] "Ice melts in warm water"\\\\
+[P2] "Reverse never happens spontaneously"\\\\
+[P3] "Gas expands to fill room"\\\\
+[P4] "Never spontaneously gathers in corner"\\\\
+[P5] [THE REVELATION] "Nature prefers disorder"\\\\
+[THE WONDER] This why we remember past, not future}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.3 Entropy: Measure of Disorder}
+\begin{block}{Definition: Entropy}
+\begin{center}
+\Large $\boxed{\Delta S = \frac{Q}{T}}$
+\end{center}
+Change in entropy equals heat transfer divided by absolute temperature.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{What entropy measures:}
+\begin{itemize}
+\item Disorder in system
+\item Energy unavailable to do work
+\item Direction of spontaneous processes
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{SI unit:} J/K (joules per kelvin)
+\note{[P0] [ALGEBRA] "Delta S = Q over T"\\\\
+[P1] "Entropy is disorder, unavailable energy, process direction"\\\\
+[THE HUMILITY] Entropy abstract - hardest concept in thermodynamics\\\\
+[THE REVELATION] Higher entropy = more disorder, less usable energy}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.3 Ice Melting: Entropy Increases}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig08.jpg}
+\caption{Ice melts: ordered crystal becomes disordered liquid}
+\end{figure}
+
+\pause
+\textbf{Entropy increases because:}
+\begin{itemize}
+\item Structured ice $\rightarrow$ random liquid
+\item System becomes more disordered
+\end{itemize}
+\note{[P0] "Ice melting: classic entropy increase"\\\\
+[P1] "Ice: molecules locked in crystal. Water: molecules move randomly"\\\\
+- Ordered to disordered\\\\
+- Structure to chaos\\\\
+[THE WONDER] Can see entropy increase when ice melts}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.3 The Second Law}
+\begin{block}{Universal Law: Entropy Always Increases}
+For any spontaneous process, total entropy of universe either increases or remains constant. Never decreases.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+$$\Delta S_{\text{total}} = \Delta S_{\text{system}} + \Delta S_{\text{env}} \geq 0$$
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Key Consequences}
+\begin{itemize}
+\item Heat flows spontaneously hot to cold, never cold to hot
+\item Energy becomes less available over time
+\item Disorder increases
+\end{itemize}
+\end{alertblock}
+\note{[P0] "Second law - entropy never decreases"\\\\
+[P1] [ALGEBRA] "Delta S-total = system + environment, always ≥ 0"\\\\
+[P2] "Heat flows hot to cold. Energy becomes less useful. Disorder grows"\\\\
+[THE REVELATION] This is arrow of time\\\\
+[THE WONDER] Explains aging, inefficiency, universe trending to chaos}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.3 Heat Flow and Entropy}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig09.jpg}
+\end{figure}
+
+\pause
+\textbf{Why heat flows hot to cold:}\\
+Larger entropy increase at low T than decrease at high T.
+
+\pause
+$$\Delta S = \frac{Q}{T} \rightarrow \text{smaller } T \text{ means larger } \Delta S$$
+\note{[P0] "Heat always flows hot to cold - why?"\\\\
+[P1] [ALGEBRA] "Delta S = Q/T. Smaller T = larger delta S"\\\\
+[P2] "Cold gains more entropy than hot loses"\\\\
+[THE REVELATION] Total entropy increases when heat flows hot to cold\\\\
+- Reverse would decrease total entropy - forbidden}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.3 Can Entropy Decrease?}
+\textbf{Yes, locally!} But total entropy of universe must increase.
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{Local Entropy Decrease Examples}
+\begin{itemize}
+\item Clean room (you do work)
+\item Build bridge from ore (energy input)
+\item Plant grows (uses solar energy)
+\item Freezer makes ice (work input)
+\end{itemize}
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\alert{In all cases, environment entropy increases MORE than system entropy decreases.}
+\note{[P0] "Can entropy decrease? Yes, locally, with energy input"\\\\
+[P1] "Clean room, build bridge, plant grow - all decrease local entropy"\\\\
+[P2] "But environment entropy up MORE - total still up"\\\\
+[THE HUMILITY] Second law applies to universe, not just one system\\\\
+[THE WONDER] Life is local entropy decrease powered by sun}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Ice Melting Entropy}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Find entropy increase when 1.00 kg ice at $0^\circ$C melts to water at $0^\circ$C.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Mass: $m = 1.00$ kg
+\item Temperature: $T = 0^\circ$C $= 273$ K
+\item Latent heat fusion: $L_f = 334$ kJ/kg
+\end{itemize}
+
+\textbf{Find:} $\Delta S$
+
+\vspace{0.3cm}
+
+\textit{Can you quantify disorder? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they calculate measure of disorder?\\\\
+[SAY] "Try on your own. Remember Kelvin."\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who forgets Kelvin, who doesn't calc Q first\\\\
+[WATCH FOR] Dividing by Celsius not Kelvin\\\\
+[DON'T HELP] Let them work through}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Entropy Calculation}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Formula for heat $Q$?
+\item Convert to Kelvin?
+\item Equation connecting $Q$ and $\Delta S$?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share approach (not answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for temperature conversion issues\\\\
+[CHECK] Name wheel: call pair\\\\
+[EXPECTED APPROACH] Q = m×L_f, then ΔS = Q/T in Kelvin\\\\
+[COMMON ERROR] Using Celsius not Kelvin}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Entropy of Melting}
+\textbf{Self-correct in different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1 - Heat to melt:}
+$$Q = mL_f = (1.00)(334 \text{ kJ/kg}) = 3.34 \times 10^5 \text{ J}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 2 - Convert temp:}
+$$T = 0^\circ\text{C} = 273 \text{ K}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Step 3 - Entropy:}
+$$\Delta S = \frac{Q}{T} = \frac{3.34 \times 10^5}{273}$$
+
+\pause
+$$\boxed{\Delta S = 1.22 \times 10^3 \text{ J/K}}$$
+
+\pause
+\textbf{Check:} Positive - disorder increased as ice melted.
+\note{[P0] "Self-correct different color"\\\\
+[P1] [ALGEBRA] "Q = m×L_f = 334,000 J"\\\\
+[P2] "0 Celsius = 273 Kelvin - always absolute temp"\\\\
+[P3] [ALGEBRA] "Delta S = Q/T"\\\\
+[P4] [ANSWER] "1220 J/K - large entropy increase"\\\\
+[THE WONDER] You quantified increase in disorder during phase change}
+\end{frame}
+
+\section{12.4 Heat Engines}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{12.4:} Explain how heat engines work \pause
+\item \textbf{12.4:} Describe thermal efficiency \pause
+\item \textbf{12.4:} Solve efficiency problems
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for heat engines"\\\\
+[P1] "Understand engine operation"\\\\
+[P2] "Learn efficiency"\\\\
+[P3] "Calculate efficiency - assessment"\\\\
+- Explains why no engine perfect}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.4 What Is Heat Engine?}
+\begin{block}{Definition: Heat Engine}
+Machine that converts thermal energy into mechanical work using heat transfer.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Examples:}
+\begin{itemize}
+\item Car engines (gasoline, diesel)
+\item Jet engines
+\item Steam turbines
+\item Your body
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{All use cyclical processes.}
+\note{[P0] "Heat engine converts heat to work"\\\\
+[P1] "Car, jet, steam, even body"\\\\
+[P2] "Cyclical: returns to start after each cycle"\\\\
+[THE CONNECTION - Kinetic Archetype] "Every muscle contraction is heat engine cycle"\\\\
+[THE WONDER] Civilization runs on heat engines}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.4 How Heat Engines Work}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig10.jpg}
+\end{figure}
+
+\pause
+\begin{enumerate}
+\item Absorb heat $Q_h$ from hot reservoir
+\item Do work $W$
+\item Reject waste heat $Q_c$ to cold reservoir
+\end{enumerate}
+
+\pause
+$$W = Q_h - Q_c$$
+\note{[P0] "Heat engine operation"\\\\
+[P1] "Take heat from hot, do work, dump waste to cold"\\\\
+[P2] [ALGEBRA] "W = Q_h - Q_c"\\\\
+[THE REVELATION] Cannot convert all heat to work - some MUST be wasted\\\\
+[THE CONFLICT] Second law forbids perfect conversion}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.4 Thermal Efficiency}
+\begin{block}{Definition: Efficiency}
+\begin{center}
+\Large $\boxed{\text{Eff} = \frac{W}{Q_h}}$
+\end{center}
+Efficiency equals useful work divided by energy input.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Typical efficiencies:}
+\begin{itemize}
+\item Gasoline car: 25-30\%
+\item Diesel engine: 35-40\%
+\item Coal plant: 40-45\%
+\item Human body: ~25\%
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{100\% impossible!} (Second law forbids)
+\note{[P0] [ALGEBRA] "Eff = W/Q_h"\\\\
+[P1] "Car engines: only 25-30\% efficient"\\\\
+[P2] "100\% impossible - second law sets hard limit"\\\\
+[THE HUMILITY] Engineers tried centuries to beat this\\\\
+[THE WONDER] Nature's accounting rules unbreakable}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.4 Why Engines Cannot Be Perfect}
+\textbf{Perfect efficiency requires:} $Q_c = 0$ (no waste heat)
+
+\pause
+\vspace{0.3cm}
+
+\textbf{But second law says:}
+\begin{itemize}
+\item Entropy must increase
+\item Heat MUST flow to cold reservoir
+\item Some energy MUST become unavailable
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Fundamental Limit}
+Second law sets absolute ceiling on efficiency.
+\end{alertblock}
+\note{[P0] "Perfect efficiency needs zero waste"\\\\
+[P1] "But second law requires entropy increase = some heat wasted"\\\\
+[P2] "Fundamental limit - not just engineering"\\\\
+[THE CONFLICT] We want perfect, nature forbids\\\\
+[THE WONDER] Universe has unbreakable rules}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Power Plant Efficiency}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Coal plant absorbs $2.50 \times 10^{14}$ J, releases $1.48 \times 10^{14}$ J as waste in one day.
+
+\vspace{0.3cm}
+
+\textbf{Find:}
+\begin{enumerate}
+\item Work output $W$
+\item Efficiency
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textit{Can you measure wastefulness? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they calculate real efficiency?\\\\
+[SAY] "Try on your own. Where does energy go?"\\\\
+[TIMING] 3-4 min SILENT\\\\
+[CIRCULATE] Note who forgets W = Q_h - Q_c\\\\
+[WATCH FOR] Wrong efficiency formula\\\\
+[DON'T HELP] Let them apply what learned}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Efficiency Analysis}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item How find work $W$?
+\item Which formula for efficiency?
+\item Is 40\% good or bad?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share approach (not answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for understanding\\\\
+[CHECK] Name wheel: call pair\\\\
+[EXPECTED APPROACH] W = Q_h - Q_c, Eff = W/Q_h\\\\
+[COMMON ERROR] Dividing by wrong heat}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Power Plant Analysis}
+\textbf{Self-correct in different color:}
+
+\vspace{0.3cm}
+
+\textbf{(a) Work output:}
+$$W = Q_h - Q_c = 2.50 \times 10^{14} - 1.48 \times 10^{14}$$
+
+\pause
+$$\boxed{W = 1.02 \times 10^{14} \text{ J}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{(b) Efficiency:}
+$$\text{Eff} = \frac{W}{Q_h} = \frac{1.02 \times 10^{14}}{2.50 \times 10^{14}}$$
+
+\pause
+$$\boxed{\text{Eff} = 0.408 = 40.8\%}$$
+
+\pause
+\textbf{Check:} Typical for coal. 59.2\% wasted!
+\note{[P0] "Self-correct different color"\\\\
+[P1] [ALGEBRA] "W = heat in - heat out"\\\\
+[P2] [ANSWER] "1.02×10^14 J"\\\\
+[P3] [ALGEBRA] "Eff = W/Q_h"\\\\
+[P4] [ANSWER] "40.8\% - typical for coal"\\\\
+[THE WONDER] Almost 60\% wasted - climate change challenge}
+\end{frame}
+
+\begin{frame}
+\frametitle{12.4 Heat Pumps and Refrigerators}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-thermodynamics-fig11.jpg}
+\end{figure}
+
+\pause
+\textbf{Heat engines in reverse:}
+\begin{itemize}
+\item Use work to move heat cold to hot
+\item Refrigerators cool interior, warm exterior
+\item Heat pumps warm house using outside air
+\end{itemize}
+\note{[P0] "Heat pumps/fridges: engines backward"\\\\
+[P1] "Use work to move heat cold to hot - opposite spontaneous"\\\\
+[THE REVELATION] Don't create cold, move heat\\\\
+[THE CONNECTION - Digital Archetype] "Like running game backward"\\\\
+- Requires energy to fight natural tendency}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{Four Laws of Thermodynamics}
+\begin{enumerate}
+\item \textbf{Zeroth:} Temperature equilibrium transitive \pause
+\item \textbf{First:} Energy conserved: $\Delta U = Q - W$ \pause
+\item \textbf{Second:} Entropy always increases \pause
+\item \textbf{Third:} (Not covered) Absolute zero unreachable
+\end{enumerate}
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{Universe's Accounting System}
+Energy conserved, but becomes less useful over time.
+\end{alertblock}
+\note{[P0] "Four laws"\\\\
+[P1] "Zeroth: equilibrium transitive"\\\\
+[P2] "First: energy conservation"\\\\
+[P3] "Second: entropy up"\\\\
+[P4] "Third: we didn't cover - absolute zero unreachable"\\\\
+[THE WONDER] Four laws govern every energy transformation}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+P &= \frac{F}{A} \quad \text{(Pressure)} \\
+PV &= NkT \quad \text{(Ideal gas)} \\
+W &= P\Delta V \quad \text{(P-V work)} \\
+\Delta U &= Q - W \quad \text{(First law)} \\
+\Delta S &= \frac{Q}{T} \quad \text{(Entropy)} \\
+\text{Eff} &= \frac{W}{Q_h} \quad \text{(Efficiency)}
+\end{align}
+\note{- Six key equations\\\\
+- Pressure, ideal gas, work, first law, entropy, efficiency\\\\
+- Know when to use each\\\\
+- Questions before end?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Arrow of Time}
+\begin{center}
+\Large You now understand why time moves forward.
+\end{center}
+
+\pause
+\vspace{0.5cm}
+
+\textbf{Entropy increases:}
+\begin{itemize}
+\item Ice melts, doesn't spontaneously freeze
+\item Gas expands, doesn't spontaneously compress
+\item Engines waste heat - cannot recover
+\item We age - time cannot run backward
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\alert{Second law gives time its direction.}
+\note{[P0] "You now understand arrow of time"\\\\
+[P1] "Entropy increases - why time moves forward"\\\\
+[P2] "Second law explains aging, inefficiency, one-way time"\\\\
+[THE WONDER] You learned deepest truth about universe\\\\
+[THE HUMILITY] Took humanity centuries to figure this}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete assigned problems\\[0.3cm]
+posted on LMS
+\end{center}
+\note{[SAY] "Homework on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before end?\\\\
+[TRANSITION] Next: Review for Unit 5 test}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,1073 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Geometric Optics]{PHYS11 CH:16 How Light Bends Reality}
+\subtitle{Mirrors, Refraction, and Lenses}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we decode how light creates illusions.\\\\
+- Mirrors that make you appear behind walls\\\\
+- Pencils that bend in water\\\\
+- Lenses that focus sunlight to burn paper\\\\
+[THE WONDER] Same physics that corrects your vision explains telescopes and microscopes.\\\\
+- Three sections: Reflection, Refraction, Lenses}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Illusion}
+\begin{center}
+\Large What if you could see yourself\\
+\textit{standing behind a solid wall?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+Mirrors create images where nothing exists. Your brain is fooled.
+
+\pause
+\vspace{0.3cm}
+\alert{Yet cameras capture the same illusion. This is geometric optics.}
+\note{[P0] "What if you could see yourself standing behind a solid wall?"\\\\
+[P1] "Mirrors create images where nothing exists - your brain is fooled"\\\\
+[P2] [THE REVELATION] "Yet cameras capture the same illusion - this is real physics"\\\\
+[THE CONNECTION - Digital Archetype] "Same ray tracing math used in video game engines"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Alice Through the Looking Glass}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-1.jpg}
+\end{figure}
+
+\pause
+In Lewis Carroll's story, Alice steps through a mirror into a virtual world.
+
+\pause
+Today we explore the optical meaning of real versus virtual.
+\note{[P0] [Fig 16.1: Mirror reflection] "Alice Through the Looking Glass - stepping through mirrors into virtual worlds"\\\\
+[P1] "In Lewis Carroll's story, Alice enters a virtual world"\\\\
+[P2] "Today we explore real versus virtual in physics"\\\\
+[THE WONDER] What your eyes see, your brain interprets - physics explains both}
+\end{frame}
+
+\begin{frame}
+\frametitle{Geometric Optics}
+\begin{block}{Definition: Geometric Optics}
+When light interacts with objects much larger than its wavelength, it behaves like rays traveling in straight lines.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Light as rays:}
+\begin{itemize}
+\item Travels in straight lines through a medium \pause
+\item Changes direction at boundaries \pause
+\item Predictable using geometry and trigonometry
+\end{itemize}
+\note{[P0] "Geometric optics: light behaves like rays"\\\\
+[P1] "Light travels in straight lines through a medium"\\\\
+[P2] "Changes direction at boundaries between materials"\\\\
+[P3] "Predictable using geometry - angles, triangles, trig functions"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like billiard balls bouncing off walls - angles predict everything"}
+\end{frame}
+
+\section{Reflection}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{16.1:} Explain reflection from mirrors and describe image formation \pause
+\item \textbf{16.1:} Apply ray diagrams to predict image locations \pause
+\item \textbf{16.1:} Perform calculations using the law of reflection and curved mirror equations
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for reflection"\\\\
+[P1] "First: explain reflection and image formation"\\\\
+[P2] "Second: use ray diagrams to predict where images appear"\\\\
+[P3] "Third: calculate image properties using equations"\\\\
+- Real-world applications: security mirrors, telescopes, makeup mirrors}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Three Paths for Light}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-2.jpg}
+\end{figure}
+
+\pause
+Light can travel: (a) through empty space, (b) through media, or (c) by reflection.
+\note{[P0] [Fig 16.2: Light travel paths] "Three ways light travels from source to destination"\\\\
+[P1] "Through empty space like sunlight to Earth, through media like air and glass, or by reflection like mirrors"\\\\
+- All three cases: light modeled as traveling in straight lines\\\\
+- Changes direction at boundaries between materials}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 The Law of Reflection}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-3.jpg}
+\end{figure}
+
+\pause
+\begin{block}{Universal Law: The Mirror's Rule}
+\begin{center}
+\Large $\boxed{\theta_r = \theta_i}$
+\end{center}
+Angle of reflection equals angle of incidence.
+\end{block}
+\note{[P0] [Fig 16.3: Law of reflection] "The law of reflection - governs all wave behavior at smooth surfaces"\\\\
+[P1] [THE REVELATION] "Theta-r equals theta-i - angle of reflection equals angle of incidence"\\\\
+- Angles measured from the normal line - perpendicular to surface\\\\
+[THE WONDER] Same law for sound waves, water waves, light waves - universal}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Smooth vs Rough Surfaces}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-4.jpg}
+\end{figure}
+
+\pause
+\textbf{Smooth surface:} Specular reflection - rays reflect at same angle
+
+\pause
+\textbf{Rough surface:} Diffuse reflection - rays scatter in many directions
+\note{[P0] "Two types of reflection"\\\\
+[P1] "Smooth surface like mirror: specular reflection - all rays reflect at same angle"\\\\
+[P2] "Rough surface like paper: diffuse reflection - rays scatter"\\\\
+[THE CONNECTION - Kinetic Archetype] "Why you can read paper from any angle - light scatters to reach your eyes"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Virtual Images in Plane Mirrors}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-5.jpg}
+\end{figure}
+
+\pause
+\begin{block}{Definition: Virtual Image}
+An image formed when light rays \textit{appear} to diverge from a point without actually doing so.
+\end{block}
+\note{[P0] "How flat mirrors create images"\\\\
+[P1] "Virtual image: rays appear to diverge from behind mirror"\\\\
+- Image distance d-i equals object distance d-o\\\\
+- Image is same size as object\\\\
+[THE CONFLICT] Image appears behind solid wall - impossible, yet cameras capture it}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Curved Mirrors}
+\begin{exampleblock}{The Mental Model}
+\textbf{Concave:} Caves inward (like a spoon bowl)
+
+\textbf{Convex:} Curves outward (like a spoon back)
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Focal point (F):} Where parallel rays converge or appear to converge
+
+\textbf{Focal length (f):} Distance from mirror to focal point
+\note{[P0] "Two types of curved mirrors"\\\\
+[P1] "Concave caves inward, convex curves outward"\\\\
+- Focal point: where parallel rays meet\\\\
+- Focal length: distance from mirror to focal point\\\\
+- Concave f is positive, convex f is negative}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Concave vs Convex Focal Points}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-9.jpg}
+\end{figure}
+
+\pause
+Concave: rays \textbf{converge} (f positive). Convex: rays \textbf{diverge} (f negative).
+\note{[P0] "Focal points for curved mirrors"\\\\
+[P1] "Concave: rays converge to real focal point in front. Convex: rays diverge, appear to come from virtual focal point behind"\\\\
+- Sign convention matters for calculations\\\\
+- Parabolic mirrors focus all parallel rays to one point}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Concave Mirror Image Formation}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-10.jpg}
+\end{figure}
+
+\pause
+\textbf{Object beyond F:} Real, inverted image
+
+\pause
+\textbf{Object inside F:} Virtual, upright, magnified image
+\note{[P0] "Ray diagrams show image formation"\\\\
+[P1] "Object beyond focal point: real inverted image forms in front"\\\\
+[P2] "Object inside focal point: virtual upright magnified image appears behind"\\\\
+[THE CONNECTION - Harmonic Archetype] "Makeup mirrors use this - place face inside focal point for magnification"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Applications: Car Headlights}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-12.jpg}
+\end{figure}
+
+\pause
+\textbf{Parabolic concave mirror:} Bulb at focal point $\rightarrow$ parallel rays exit
+
+\pause
+Same principle: spotlights, solar collectors, satellite dishes
+\note{[P0] "Parabolic mirrors have special property"\\\\
+[P1] "Light source at focal point creates parallel rays - perfect for headlights"\\\\
+[P2] "Reverse works too: parallel rays from Sun focus to one point, generate heat"\\\\
+[THE WONDER] Same geometry explains car headlights and solar power plants}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Applications: Security Mirrors}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-11.jpg}
+\end{figure}
+
+\pause
+\textbf{Convex mirrors:} Create smaller, upright images $\rightarrow$ wider field of view
+\note{[P0] "Convex mirrors in stores"\\\\
+[P1] "Create smaller upright images - wider field of view for security"\\\\
+- Also used in car side mirrors\\\\
+- Trade-off: wider view but objects appear smaller and farther\\\\
+- "Objects in mirror are closer than they appear"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Mirror Equations}
+\begin{block}{Universal Laws: The Source Code}
+\textbf{Lens/Mirror equation:}
+$$\frac{1}{f} = \frac{1}{d_i} + \frac{1}{d_o}$$
+
+\pause
+\textbf{Magnification:}
+$$m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+
+\pause
+\textbf{Radius of curvature:}
+$$R = 2f$$
+\end{block}
+\note{[P0] "Three equations govern all curved mirrors"\\\\
+[P1] "Lens-mirror equation relates focal length, object distance, image distance"\\\\
+[P2] "Magnification relates image size to object size"\\\\
+[P3] "Radius of curvature is twice focal length"\\\\
+[ALGEBRA] "One over f equals one over d-i plus one over d-o"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.1 Sign Conventions}
+\begin{alertblock}{The Paradox: What Negative Means}
+\begin{itemize}
+\item Negative $d_i$ $\rightarrow$ virtual image \pause
+\item Negative $h_i$ $\rightarrow$ inverted image \pause
+\item Concave: $f$ positive; Convex: $f$ negative
+\end{itemize}
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+\textbf{Key insight:} Signs tell you where and how the image appears.
+\note{[P0] "Sign conventions decode the results"\\\\
+[P1] "Negative d-i means virtual image - appears behind mirror"\\\\
+[P2] "Negative h-i means inverted image - upside down"\\\\
+[P3] "Concave f is positive, convex f is negative"\\\\
+[THE HUMILITY] Easy to mix up signs - check carefully every time}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Security Mirror}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A person stands 6.0 m from a convex security mirror. The virtual image appears 1.0 m behind the mirror.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $d_o = 6.0$ m
+\item $d_i = -1.0$ m (virtual)
+\end{itemize}
+
+\textbf{Find:} Focal length $f$
+
+\vspace{0.3cm}
+
+\textit{Can you decode the mirror's geometry? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they apply the lens-mirror equation?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who forgets negative sign for d-i\\\\
+[WATCH FOR] Students using magnification equation instead\\\\
+[DON'T HELP] Let them struggle with equation choice}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Mirror Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equation did you choose? Why?
+\item What sign did you use for $d_i$? Why negative?
+\item How did you rearrange to solve for $f$?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for equation choice\\\\
+[CHECK] Name wheel: call a pair to share approach\\\\
+[EXPECTED APPROACH] Use lens-mirror equation, d-i is negative because virtual, rearrange to f equals d-i times d-o over d-o plus d-i\\\\
+[COMMON ERROR] Forgetting negative sign or using wrong equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Mirror Math}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} Lens/mirror equation
+$$f = \frac{d_i d_o}{d_o + d_i}$$
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Substitute:} $d_i = -1.0$ m, $d_o = 6.0$ m
+
+\pause
+\vspace{0.2cm}
+
+$$f = \frac{(-1.0)(6.0)}{6.0 + (-1.0)} = \frac{-6.0}{5.0}$$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{f = -1.2 \text{ m}}$$
+
+\pause
+\textbf{Check:} Negative $f$ confirms convex mirror!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "f equals d-i times d-o over d-o plus d-i"\\\\
+[P2] "Substitute: d-i negative 1.0 m, d-o 6.0 m"\\\\
+[P3] "f equals negative 6.0 over 5.0"\\\\
+[P4] [ANSWER] "f equals negative 1.2 m"\\\\
+[P5] [THE WONDER] "Negative confirms convex - physics encoded in sign"}
+\end{frame}
+
+\section{Refraction}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{16.2:} Explain refraction at media boundaries and predict light paths \pause
+\item \textbf{16.2:} Describe the index of refraction and explain total internal reflection \pause
+\item \textbf{16.2:} Perform calculations using Snell's law
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for refraction"\\\\
+[P1] "First: explain refraction and predict how light bends"\\\\
+[P2] "Second: understand index of refraction and total internal reflection"\\\\
+[P3] "Third: calculate angles using Snell's law"\\\\
+- Applications: fiber optics, diamonds, rainbows}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 The Mystery of the Bent Pencil}
+\begin{center}
+\Large Why does a pencil appear broken\\
+\textit{when placed in water?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+Light changes direction when moving between air and water.
+
+\pause
+\vspace{0.3cm}
+\alert{This is refraction - the bending of light at boundaries.}
+\note{[P0] "Classic observation: pencil in glass of water looks bent"\\\\
+[P1] "Light changes direction when crossing from air to water"\\\\
+[P2] [THE REVELATION] "This is refraction - bending at boundaries between media"\\\\
+[THE CONNECTION - Harmonic Archetype] "Like sound changing pitch when you hear it through wall"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Why Light Bends}
+\begin{exampleblock}{The Mental Model: Lawnmower Analogy}
+\begin{itemize}
+\item Lawnmower from sidewalk to grass: right wheel slows first, mower turns \pause
+\item Light from air to glass: slows down, bends toward normal \pause
+\item Light from glass to air: speeds up, bends away from normal
+\end{itemize}
+\end{exampleblock}
+\note{[P0] "Why does light change direction?"\\\\
+[P1] "Lawnmower from sidewalk to grass - one wheel slows, mower turns"\\\\
+[P2] "Light entering denser medium slows, bends toward normal"\\\\
+[P3] "Light entering less dense medium speeds up, bends away from normal"\\\\
+[THE CONNECTION - Kinetic Archetype] "Like running from track onto sand - you slow and veer"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Index of Refraction}
+\begin{block}{Nature's Speed Limit Code}
+$$n = \frac{c}{v}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Where:}
+\begin{itemize}
+\item $n$ = index of refraction (dimensionless) \pause
+\item $c = 3.00 \times 10^8$ m/s (speed of light in vacuum) \pause
+\item $v$ = speed of light in the material
+\end{itemize}
+
+\pause
+Because $c > v$ always, $n \geq 1$ always.
+\note{[P0] "Index of refraction: n equals c over v"\\\\
+[P1] "n is index of refraction - no units"\\\\
+[P2] "c is speed of light in vacuum - 3.0 times 10 to 8 m/s"\\\\
+[P3] "v is speed of light in material - always less than c"\\\\
+[P4] "Because c greater than v, n is always greater than or equal to 1"\\\\
+[THE WONDER] Light slows in matter - interacts with atoms}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Snell's Law}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys11-geometric-optics-fig16-16.jpg}
+\end{figure}
+
+\pause
+\begin{block}{Universal Law: The Bending Rule}
+\begin{center}
+\Large $\boxed{n_1 \sin\theta_1 = n_2 \sin\theta_2}$
+\end{center}
+This predicts exactly how light bends at any boundary.
+\end{block}
+\note{[P0] "Light bending at boundary between media"\\\\
+[P1] [THE REVELATION] "Snell's law: n-1 sin-theta-1 equals n-2 sin-theta-2"\\\\
+[ALGEBRA] "n-one sine-theta-one equals n-two sine-theta-two"\\\\
+- Theta measured from normal to surface\\\\
+- Greater n means slower light, more bending\\\\
+[THE WONDER] Works for any two materials - air-water, glass-diamond, anything}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Dispersion: Rainbows}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-18.jpg}
+\end{figure}
+
+\pause
+\textbf{Dispersion:} Index of refraction varies slightly with wavelength
+
+\pause
+White light separates into colors: red bends least, violet bends most
+\note{[P0] "Prism separating white light into rainbow"\\\\
+[P1] "Dispersion: index of refraction varies with wavelength"\\\\
+[P2] "Red light bends least, violet most - different speeds in glass"\\\\
+[THE CONNECTION - Harmonic Archetype] "Each color is different frequency - prism separates them like sorting musical notes"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Total Internal Reflection}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-20.jpg}
+\end{figure}
+
+\pause
+When $\theta_1 > \theta_c$, \textbf{all} light reflects back - no refraction!
+\note{[P0] "Total internal reflection: 100 percent reflection"\\\\
+[P1] "When incident angle exceeds critical angle, all light reflects - none escapes"\\\\
+- Only occurs when going from high n to low n\\\\
+- Critical angle: angle that produces 90-degree refraction\\\\
+[THE WONDER] Perfect mirrors using refraction instead of reflection}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Critical Angle}
+\begin{block}{The Escape Threshold}
+$$\theta_c = \sin^{-1}\left(\frac{n_2}{n_1}\right)$$
+for $n_1 > n_2$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Example:} Water to air
+
+$\theta_c = \sin^{-1}(1.00/1.33) = 48.6°$
+\note{[P0] "Critical angle equation"\\\\
+[P1] [ALGEBRA] "Theta-c equals arcsine of n-2 over n-1, only when n-1 greater than n-2"\\\\
+- Arcsine means inverse sine function\\\\
+- Water to air: critical angle 48.6 degrees\\\\
+- Beyond this angle, light cannot escape water}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Applications: Diamonds}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.45\textheight,keepaspectratio]{phys11-geometric-optics-fig16-22.jpg}
+\end{figure}
+
+\pause
+Diamond critical angle: only $24.4°$!
+
+\pause
+Light enters easily but struggles to exit $\rightarrow$ sparkle!
+\note{[P0] "Why diamonds sparkle"\\\\
+[P1] "Diamond has very high index of refraction, critical angle only 24.4 degrees"\\\\
+[P2] "Light enters easily but trapped inside, exits only at specific angles"\\\\
+- Facets designed to trap light\\\\
+- Concentrated exits create sparkle\\\\
+[THE WONDER] Geometry explains beauty}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.2 Applications: Fiber Optics}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-23.jpg}
+\end{figure}
+
+\pause
+\textbf{Total internal reflection in thin fibers:}
+\begin{itemize}
+\item Light enters at large angle
+\item Reflects repeatedly inside fiber
+\item Carries signals around corners!
+\end{itemize}
+\note{[P0] "Fiber optics use total internal reflection"\\\\
+[P1] "Light enters fiber at large angle, exceeds critical angle at walls, trapped inside"\\\\
+- Used for internet, telephone, cable TV\\\\
+- Light pipes carry signals around corners\\\\
+- Faster than electrical signals in copper\\\\
+[THE WONDER] Your internet travels as trapped light bouncing through glass}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Light Bending Through Glass}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Light enters glass ($n = 1.50$) from air ($n = 1.00$) at $45.0°$ to the normal.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $n_1 = 1.00$ (air)
+\item $n_2 = 1.50$ (glass)
+\item $\theta_1 = 45.0°$
+\end{itemize}
+
+\textbf{Find:} Angle of refraction $\theta_2$
+
+\vspace{0.3cm}
+
+\textit{Can you predict the bend? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they apply Snell's law?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who struggles with sine and arcsine\\\\
+[WATCH FOR] Students using degrees in calculator set to radians\\\\
+[DON'T HELP] Let them wrestle with trig functions}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Refraction Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which law did you use?
+\item How did you rearrange for $\theta_2$?
+\item Did you use arcsine? Why?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for Snell's law application\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Use Snell's law, solve for sin-theta-2, use arcsine to find theta-2\\\\
+[COMMON ERROR] Calculator in radians instead of degrees}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Snell's Law Solution}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Snell's Law:} $n_1 \sin\theta_1 = n_2 \sin\theta_2$
+
+\pause
+\textbf{Rearrange:} $\sin\theta_2 = \frac{n_1 \sin\theta_1}{n_2}$
+
+\pause
+\textbf{Substitute:} $\sin\theta_2 = \frac{(1.00)(\sin 45.0°)}{1.50} = \frac{0.707}{1.50}$
+
+\pause
+$$\sin\theta_2 = 0.471$$
+
+\pause
+$$\boxed{\theta_2 = \sin^{-1}(0.471) = 28.1°}$$
+
+\pause
+\textbf{Check:} Light bends toward normal entering denser medium!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Snell's law: n-1 sine-theta-1 equals n-2 sine-theta-2"\\\\
+[P2] "Rearrange: sine-theta-2 equals n-1 sine-theta-1 over n-2"\\\\
+[P3] "Substitute: 1.00 times 0.707 over 1.50"\\\\
+[P4] "Sine-theta-2 equals 0.471"\\\\
+[P5] [ANSWER] "Theta-2 equals arcsine of 0.471 equals 28.1 degrees"\\\\
+[P6] [THE WONDER] "Light bent from 45 to 28 degrees - toward normal entering denser glass"}
+\end{frame}
+
+\section{Lenses}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{16.3:} Describe image formation by convex and concave lenses \pause
+\item \textbf{16.3:} Explain how the human eye works using geometric optics \pause
+\item \textbf{16.3:} Perform calculations using the thin-lens equation
+\end{itemize}
+\end{block}
+\note{[P0] "Three objectives for lenses"\\\\
+[P1] "First: understand image formation by lenses"\\\\
+[P2] "Second: explain how your eye works"\\\\
+[P3] "Third: calculate image properties using thin-lens equation"\\\\
+- Applications: eyeglasses, cameras, microscopes, telescopes}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 The Power to Focus Sunlight}
+\begin{center}
+\Large What if you could concentrate sunlight\\
+\textit{to ignite paper?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+A converging lens bends all parallel rays to one focal point.
+
+\pause
+\vspace{0.3cm}
+\alert{Enough concentrated light energy = fire!}
+\note{[P0] "The power of converging lenses"\\\\
+[P1] "Converging lens bends all parallel rays to single focal point"\\\\
+[P2] "Concentrated light energy can produce enough heat to ignite paper"\\\\
+[THE CONNECTION - Digital Archetype] "Like Death Star focusing laser - concentrate energy at one point"\\\\
+[SAFETY] "Never look at Sun through lens - can cause permanent eye damage"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Converging vs Diverging Lenses}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-25.jpg}
+\end{figure}
+
+\pause
+\textbf{Convex (converging):} Parallel rays converge to focal point ($f$ positive)
+
+\pause
+\textbf{Concave (diverging):} Parallel rays diverge from focal point ($f$ negative)
+\note{[P0] "Two types of lenses"\\\\
+[P1] "Convex or converging: parallel rays converge to focal point, f positive"\\\\
+[P2] "Concave or diverging: parallel rays diverge, appear to come from focal point, f negative"\\\\
+- Thicker in middle: converging\\\\
+- Thicker at edges: diverging}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Lens Power}
+\begin{block}{The Focusing Strength}
+$$P = \frac{1}{f}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Where:}
+\begin{itemize}
+\item $P$ = power in diopters (D) or m$^{-1}$ \pause
+\item $f$ = focal length in meters
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+Shorter focal length = stronger lens = higher power
+\note{[P0] "Power of lens: P equals one over f"\\\\
+[P1] "P is power in diopters or reciprocal meters"\\\\
+[P2] "f is focal length in meters"\\\\
+[P3] "Shorter focal length means stronger lens, higher power"\\\\
+[ALERT] "Power in diopters different from power in watts - same word, different meanings"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Ray Tracing Rules for Lenses}
+\textbf{Converging lens:}
+\begin{enumerate}
+\item Ray parallel to axis $\rightarrow$ passes through far focal point \pause
+\item Ray through center $\rightarrow$ continues straight \pause
+\item Ray through near focal point $\rightarrow$ exits parallel to axis
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Diverging lens:}
+\begin{enumerate}
+\item Ray parallel to axis $\rightarrow$ appears from near focal point \pause
+\item Ray through center $\rightarrow$ continues straight \pause
+\item Ray toward far focal point $\rightarrow$ exits parallel to axis
+\end{enumerate}
+\note{[P0] "Ray tracing rules for converging lenses"\\\\
+[P1] "Ray parallel to axis passes through far focal point"\\\\
+[P2] "Ray through center continues straight"\\\\
+[P3] "Ray through near focal point exits parallel"\\\\
+[P4] "Diverging lens rules similar but rays diverge"\\\\
+- Only need two rays to locate image}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Converging Lens Image Formation}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-27.jpg}
+\end{figure}
+
+\pause
+Object beyond $f$: Real, inverted image on far side
+
+\pause
+Object inside $f$: Virtual, upright, magnified image on near side
+\note{[P0] "Ray diagram for converging lens"\\\\
+[P1] "Object beyond focal length: real inverted image forms on opposite side"\\\\
+[P2] "Object inside focal length: virtual upright magnified image on same side"\\\\
+- Real images can be projected on screen\\\\
+- Virtual images cannot\\\\
+[THE CONNECTION - Kinetic Archetype] "Movie projectors use this - film beyond f creates real image on screen"}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Thin Lens Equation}
+\begin{block}{Same Equation as Mirrors}
+$$\frac{1}{f} = \frac{1}{d_i} + \frac{1}{d_o}$$
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Magnification:}
+$$m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Sign conventions:}
+\begin{itemize}
+\item Converging lens: $f$ positive; Diverging lens: $f$ negative
+\item Negative $d_i$ $\rightarrow$ virtual image
+\item Negative $m$ $\rightarrow$ inverted image
+\end{itemize}
+\note{[P0] "Thin lens equation identical to mirror equation"\\\\
+[P1] "One over f equals one over d-i plus one over d-o"\\\\
+[P2] "Magnification m equals h-i over h-o equals negative d-i over d-o"\\\\
+[P3] "Sign conventions tell you image type"\\\\
+[THE WONDER] Same math for mirrors and lenses - universal geometric optics}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 The Human Eye}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-34.jpg}
+\end{figure}
+
+\pause
+\textbf{Cornea and lens:} Form real image on retina
+
+\pause
+\textbf{Ciliary muscles:} Change lens shape to adjust focal length
+
+\pause
+Eye adjusts power to keep image distance constant for all object distances!
+\note{[P0] "The eye as optical instrument"\\\\
+[P1] "Cornea and lens act as single converging lens, form real image on retina"\\\\
+[P2] "Ciliary muscles change lens shape to adjust focal length"\\\\
+[P3] "Eye adjusts power to focus objects at different distances - accommodation"\\\\
+- Retina is fixed distance from lens\\\\
+- Most refraction occurs at cornea, not lens}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Vision Defects}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-28.jpg}
+\end{figure}
+
+\pause
+\textbf{Nearsighted (myopia):} Eye too strong, image forms in front of retina
+
+\pause
+\textbf{Farsighted (hyperopia):} Eye too weak, image forms behind retina
+\note{[P0] "Two common vision defects"\\\\
+[P1] "Nearsighted: eye overconverges rays, image forms in front of retina"\\\\
+[P2] "Farsighted: eye underconverges rays, image forms behind retina"\\\\
+- Nearsighted: see close clearly, distant blurry\\\\
+- Farsighted: see distant clearly, close blurry}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Correcting Vision Defects}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-31.jpg}
+\end{figure}
+
+\pause
+\textbf{Nearsighted:} Diverging lens (concave) reduces power
+
+\pause
+\textbf{Farsighted:} Converging lens (convex) increases power
+\note{[P0] "Correcting vision with eyeglasses"\\\\
+[P1] "Nearsighted: diverging lens reduces overall power, moves image back to retina"\\\\
+[P2] "Farsighted: converging lens increases overall power, moves image forward to retina"\\\\
+[THE WONDER] Physics corrects biology - lenses compensate for eye shape}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Applications: Microscope}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-geometric-optics-fig16-30.jpg}
+\end{figure}
+
+\pause
+\textbf{Two converging lenses:}
+\begin{itemize}
+\item Objective: Creates magnified real image
+\item Eyepiece: Further magnifies that image
+\end{itemize}
+\note{[P0] "Compound microscope uses two lenses"\\\\
+[P1] "Objective lens creates magnified real image"\\\\
+- Eyepiece acts as magnifying glass on that image\\\\
+- Total magnification is product of both\\\\
+- Invented early 1600s by eyeglass makers}
+\end{frame}
+
+\begin{frame}
+\frametitle{16.3 Applications: Telescope}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-geometric-optics-fig16-29.jpg}
+\end{figure}
+
+\pause
+\textbf{Galileo design:} Convex objective + concave eyepiece = upright image
+
+\pause
+\textbf{Astronomical:} Two convex lenses = inverted image (doesn't matter for stars!)
+\note{[P0] "Telescope designs using lenses"\\\\
+[P1] "Galileo design: convex objective, concave eyepiece, produces upright image"\\\\
+[P2] "Astronomical design: two convex lenses, inverted image fine for celestial objects"\\\\
+[THE WONDER] Same physics lets us see cells and galaxies}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Magnifying Glass Power}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A magnifying glass focuses sunlight to a bright spot 8.00 cm from the lens.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $f = 8.00$ cm $= 0.0800$ m
+\end{itemize}
+
+\textbf{Find:} Power $P$ in diopters
+
+\vspace{0.3cm}
+
+\textit{Can you calculate the lens strength? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they use the power equation?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who forgets to convert cm to m\\\\
+[WATCH FOR] Students confusing power with energy\\\\
+[DON'T HELP] Let them discover unit conversion need}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Power Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equation relates power and focal length?
+\item What units did you use for focal length?
+\item Did you convert centimeters to meters?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for unit conversion\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] Use P equals one over f, convert cm to m first\\\\
+[COMMON ERROR] Forgetting to convert units}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Lens Power}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Given:} $f = 8.00$ cm
+
+\pause
+\textbf{Convert to meters:} $f = 0.0800$ m
+
+\pause
+\vspace{0.2cm}
+
+\textbf{Power equation:} $P = \frac{1}{f}$
+
+\pause
+\vspace{0.2cm}
+
+$$P = \frac{1}{0.0800 \text{ m}}$$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{P = 12.5 \text{ D}}$$
+
+\pause
+\textbf{Check:} This is a relatively powerful lens!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] "Given: f equals 8.00 cm"\\\\
+[P2] "Convert: f equals 0.0800 m"\\\\
+[P3] "Power equation: P equals one over f"\\\\
+[P4] "P equals one over 0.0800 m"\\\\
+[P5] [ANSWER] "P equals 12.5 diopters"\\\\
+[P6] [THE WONDER] "Powerful lens - can focus sunlight to ignite paper"}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Law of Reflection: $\theta_r = \theta_i$ (mirrors create virtual images) \pause
+\item Curved mirrors use focal points to form real or virtual images \pause
+\item Snell's Law: $n_1\sin\theta_1 = n_2\sin\theta_2$ (light bends at boundaries) \pause
+\item Total internal reflection traps light (fiber optics, diamonds) \pause
+\item Lenses use refraction to converge or diverge rays \pause
+\item Your eye is a variable-power converging lens \pause
+\item Same equations govern mirrors and lenses
+\end{enumerate}
+\end{block}
+\note{[P0] "Seven revelations today"\\\\
+[P1] "Law of Reflection creates virtual images in mirrors"\\\\
+[P2] "Curved mirrors use focal points"\\\\
+[P3] "Snell's Law predicts refraction"\\\\
+[P4] "Total internal reflection traps light"\\\\
+[P5] "Lenses converge or diverge"\\\\
+[P6] "Eye adjusts focal length"\\\\
+[P7] "Same math for mirrors and lenses"\\\\
+[THE WONDER] You now understand how light creates illusions and corrects vision}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+\text{Law of Reflection:} \quad &\theta_r = \theta_i \\
+\text{Index of refraction:} \quad &n = \frac{c}{v} \\
+\text{Snell's Law:} \quad &n_1\sin\theta_1 = n_2\sin\theta_2 \\
+\text{Critical angle:} \quad &\theta_c = \sin^{-1}\left(\frac{n_2}{n_1}\right) \\
+\text{Lens/Mirror:} \quad &\frac{1}{f} = \frac{1}{d_i} + \frac{1}{d_o} \\
+\text{Magnification:} \quad &m = \frac{h_i}{h_o} = -\frac{d_i}{d_o} \\
+\text{Lens power:} \quad &P = \frac{1}{f}
+\end{align}
+\note{- Seven key equations for geometric optics\\\\
+- Law of reflection for mirrors\\\\
+- Index of refraction and Snell's law for refraction\\\\
+- Critical angle for total internal reflection\\\\
+- Lens-mirror equation and magnification\\\\
+- Lens power\\\\
+- Master these and you can solve any optics problem}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next: Wave Optics - interference and diffraction\\\\
+[THE WONDER] Today geometric optics - next we see wave nature of light}
+\end{frame}
+
+\end{document}

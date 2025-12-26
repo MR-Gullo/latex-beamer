@@ -1,0 +1,1524 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+% Title configuration
+\title[Ch22: Atomic and Nuclear Physics]{Chapter 22: Atomic and Nuclear Physics}
+\subtitle{The Structure of Matter and Nuclear Processes}
+\author[Mr. Gullo]{Mr. Gullo}
+\institute[NANMO]{NANMO Physics 12}
+\date{Winter 2025}
+
+\begin{document}
+
+% Title page
+\frame{\titlepage}
+
+% Table of Contents
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\note{[P0] [THE HOOK] "Today we dive into the invisible architecture of reality"\\\\
+- "We'll explore atoms smaller than light wavelengths"\\\\
+- "And nuclear forces millions of times stronger than chemistry"\\\\
+[THE CONNECTION - Digital] "Game engines simulate this physics"\\\\
+[TIMING] Brief overview, 1 min}
+\end{frame}
+
+\section{22.1 The Structure of the Atom}
+
+% Learning Objectives
+\begin{frame}
+\frametitle{Learning Objectives: 22.1}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item Describe Rutherford's experiment and his model of the atom \pause
+\item Describe emission and absorption spectra of atoms \pause
+\item Describe the Bohr model of the atom \pause
+\item Calculate the energy of electrons when they change energy levels \pause
+\item Calculate the frequency and wavelength of emitted photons \pause
+\item Describe the quantum model of the atom
+\end{itemize}
+\end{block}
+\note{[P0] "Six objectives for understanding atomic structure"\\\\
+[P1] "First: Rutherford's gold foil shock"\\\\
+[P2] "Spectra: atomic fingerprints"\\\\
+[P3] "Bohr: quantized orbits"\\\\
+[P4] "Energy calculations"\\\\
+[P5] "Light from atoms"\\\\
+[P6] "Quantum reality: probability clouds"\\\\
+[THE WONDER] "From spectra to quantum mechanics in one section"}
+\end{frame}
+
+% Rutherford's Gold Foil Experiment
+\begin{frame}
+\frametitle{22.1 Rutherford's Gold Foil Experiment}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.55\textheight,keepaspectratio]{phys12-atomic-nuclear-fig05-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\textbf{The Setup (1909):}
+\begin{itemize}
+\item Radioactive source shoots alpha particles
+\item Thin gold foil target
+\item Phosphorescent screen detects scattered particles
+\end{itemize}
+\pause
+
+\textbf{Expected:} Slight deflection (plum pudding model)
+
+\pause
+\textbf{Observed:} Some particles bounced straight back!
+\end{columns}
+\note{[P0] [THE HOOK] "Imagine firing bullets at tissue paper and having them bounce back"\\\\
+- "That's what shocked Rutherford"\\\\
+[THE CONNECTION - Kinetic] "Like throwing a tennis ball at a curtain and having it ricochet"\\\\
+[P1] "Expected: particles sail through"\\\\
+- "Plum pudding: diffuse positive charge"\\\\
+[P2] [THE CONFLICT] "1 in 8,000 bounced backward"\\\\
+- "Rutherford: 'Most incredible event of my life'"\\\\
+[THE WONDER] "This proved atoms are mostly empty space"}
+\end{frame}
+
+% Rutherford's Discovery
+\begin{frame}
+\frametitle{22.1 The Nuclear Atom}
+\begin{block}{Rutherford's Revolutionary Conclusion}
+\begin{center}
+The atom has a tiny, dense nucleus\\
+surrounded by mostly empty space
+\end{center}
+\end{block}
+
+\pause
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.45\textheight,keepaspectratio]{phys12-atomic-nuclear-fig06-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\textbf{Key Facts:}
+\begin{itemize}
+\item Nucleus: $\sim 10^{-15}$ m
+\item Atom: $\sim 10^{-10}$ m
+\item Nucleus is 100,000 times smaller!
+\item Density: $10^{15}$ g/cm$^3$
+\end{itemize}
+\end{columns}
+\note{[P0] [THE REVELATION] "Most of the atom is vacuum"\\\\
+- "If nucleus were a marble, atom would be football stadium"\\\\
+[P1] "Scale comparison"\\\\
+[ALGEBRA] "ten to the negative fifteen meters"\\\\
+- "Nucleus: femtometer scale"\\\\
+- "Atom: angstrom scale"\\\\
+[THE WONDER] "You are 99.9999999999999 percent empty space"\\\\
+[THE CONNECTION - Digital] "This emptiness is why wifi signals pass through you"}
+\end{frame}
+
+% Planetary Model
+\begin{frame}
+\frametitle{22.1 The Planetary Model}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig07-1.jpg}
+\end{figure}
+
+\begin{exampleblock}{The Analogy}
+Low-mass electrons orbit massive nucleus\\
+like planets orbit the Sun
+\end{exampleblock}
+
+\pause
+\begin{alertblock}{The Problem}
+Classical physics predicts orbiting electrons should radiate energy\\
+and spiral into the nucleus in $10^{-10}$ seconds!
+\end{alertblock}
+\note{[P0] "Rutherford proposed planetary model"\\\\
+- "Coulomb force replaces gravity"\\\\
+- "Beautiful analogy"\\\\
+[P1] [THE CONFLICT] "But classical EM says this is impossible"\\\\
+- "Accelerating charges radiate"\\\\
+- "Atoms should collapse instantly"\\\\
+[THE HUMILITY] "Rutherford knew his model was incomplete"\\\\
+[THE WONDER] "The solution required quantum mechanics"}
+\end{frame}
+
+% Emission Spectra
+\begin{frame}
+\frametitle{22.1 Emission and Absorption Spectra}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.4\textheight,keepaspectratio]{phys12-atomic-nuclear-fig09-1.jpg}
+\end{figure}
+
+\column{0.4\textwidth}
+\textbf{The Mystery:}
+\begin{itemize}
+\item Heat a gas
+\item It emits discrete wavelengths
+\item Not continuous spectrum!
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+\begin{block}{Each Element Has a Unique Spectral Fingerprint}
+Iron, hydrogen, helium - all produce different line patterns
+\end{block}
+\note{[P0] "Spectroscopy: the quantum detective work"\\\\
+- "Pass light through diffraction grating"\\\\
+- "See discrete lines, not rainbow"\\\\
+[THE CONNECTION - Harmonic] "Like a guitar string only playing certain notes"\\\\
+[P1] [THE REVELATION] "Each element sings its own song"\\\\
+- "Astronomers use this to identify stars"\\\\
+[THE WONDER] "We know what distant galaxies are made of because of spectroscopy"}
+\end{frame}
+
+% Hydrogen Spectrum
+\begin{frame}
+\frametitle{22.1 The Hydrogen Spectrum}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.4\textheight,keepaspectratio]{phys12-atomic-nuclear-fig10-3.jpg}
+\end{figure}
+
+\textbf{Three Series:}
+\begin{itemize}
+\item \textbf{Lyman series:} Ultraviolet (electrons drop to $n=1$)
+\item \textbf{Balmer series:} Visible light (electrons drop to $n=2$)
+\item \textbf{Paschen series:} Infrared (electrons drop to $n=3$)
+\end{itemize}
+
+\pause
+\begin{exampleblock}{The Pattern}
+The wavelengths follow precise mathematical relationships.\\
+But why?
+\end{exampleblock}
+\note{[P0] "Hydrogen: simplest atom, richest spectrum"\\\\
+- "UV, visible, IR emissions"\\\\
+- "Named after discoverers"\\\\
+[THE CONNECTION - Digital] "Fiber optics use specific wavelengths"\\\\
+[P1] [THE CONFLICT] "Pattern was known for decades"\\\\
+- "But no one could explain WHY"\\\\
+- "Needed Bohr's genius"\\\\
+[THE WONDER] "A single proton and electron create this complexity"}
+\end{frame}
+
+% Bohr Model
+\begin{frame}
+\frametitle{22.1 Bohr's Quantum Atom (1913)}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.45\textheight,keepaspectratio]{phys12-atomic-nuclear-fig11-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{block}{Bohr's Radical Ideas}
+\begin{enumerate}
+\item Only certain orbits allowed (quantized!)
+\item Electrons don't radiate while in orbit
+\item Energy emitted/absorbed when electron jumps
+\end{enumerate}
+\end{block}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+\begin{block}{Energy Levels for Hydrogen}
+\Large
+$$E_n = -\frac{13.6 \text{ eV}}{n^2} \quad (n=1,2,3,\ldots)$$
+\end{block}
+\note{[P0] [THE REVELATION] "Bohr said: orbits are quantized"\\\\
+- "Like rungs on a ladder"\\\\
+- "You can be on rung 1 or 2, but not 1.5"\\\\
+[THE CONNECTION - Harmonic] "Standing waves in a loop - only certain frequencies fit"\\\\
+[P1] "Ground state: n equals 1"\\\\
+[ALGEBRA] "E-one equals negative 13.6 electron-volts"\\\\
+- "Negative because electron is bound"\\\\
+[THE WONDER] "This equation predicted hydrogen spectrum perfectly"}
+\end{frame}
+
+% Energy Level Diagram
+\begin{frame}
+\frametitle{22.1 Energy Level Diagram}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.6\textheight,keepaspectratio]{phys12-atomic-nuclear-fig13-1.jpg}
+\end{figure}
+
+\begin{exampleblock}{Reading the Diagram}
+\begin{itemize}
+\item Arrow down: photon emitted
+\item Arrow up: photon absorbed
+\item Longer arrow: higher energy photon
+\end{itemize}
+\end{exampleblock}
+\note{[P0] "Vertical axis: energy"\\\\
+- "Horizontal lines: allowed states"\\\\
+- "Ground state at bottom"\\\\
+- "Zero energy: electron is free"\\\\
+[THE CONNECTION - Digital] "LEDs work by electron transitions"\\\\
+- "Different materials give different colors"\\\\
+[THE WONDER] "Every photon tells a story of an electron's journey"}
+\end{frame}
+
+% Attempt: Energy Calculation
+\begin{frame}
+\frametitle{Attempt: Electron Energy Transition}
+\textbf{Try this on your own (3 min, silent):}
+
+A hydrogen atom absorbs a photon. The electron jumps from the ground state ($n=1$) to the third energy level ($n=3$).
+
+\textbf{Given:}
+\begin{itemize}
+\item Initial state: $n_i = 1$
+\item Final state: $n_f = 3$
+\item $E_n = -\frac{13.6 \text{ eV}}{n^2}$
+\end{itemize}
+
+\textbf{Find:} How much energy must the photon have?
+
+\vspace{0.3cm}
+\textit{Work individually. Show your GUESS steps.}
+\note{[THE CHALLENGE] "Can you find the photon energy?"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+- NO HINTS - let them struggle\\\\
+[CIRCULATE] Note who uses delta-E correctly\\\\
+- Watch for sign errors\\\\
+- Common mistake: forgetting it's absorption (positive delta-E)\\\\
+[EXPECTED APPROACH] Find E-initial, E-final, then delta-E}
+\end{frame}
+
+% Compare: Energy Calculation
+\begin{frame}
+\frametitle{Compare: Energy Transition Approach}
+\textbf{Turn and talk (2 min):}
+
+\begin{enumerate}
+\item What equation did you use first?
+\item Did you get a positive or negative result?
+\item What does the sign mean physically?
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[P0] "Pair discussion"\\\\
+- Listen for: Do they find each E separately?\\\\
+- Listen for: Sign confusion\\\\
+[P1] [THE CONFLICT] "Some will get negative delta-E"\\\\
+- "That means emission, not absorption!"\\\\
+[CIRCULATE] Find a pair with correct approach\\\\
+- And one with sign error\\\\
+[EXPECTED APPROACH] E-final minus E-initial equals delta-E\\\\
+- Positive: absorption\\\\
+- Negative: emission}
+\end{frame}
+
+% Reveal: Energy Calculation
+\begin{frame}
+\frametitle{Reveal: Solution}
+\textbf{Self-correct in a different color:}
+
+\textbf{U - Unknown:} $\Delta E = ?$
+
+\pause
+\textbf{E - Equations:}
+$$E_n = -\frac{13.6 \text{ eV}}{n^2}, \quad \Delta E = E_f - E_i$$
+
+\pause
+\textbf{S - Substitute:}
+$$E_i = -\frac{13.6}{1^2} = -13.6 \text{ eV}$$
+$$E_f = -\frac{13.6}{3^2} = -1.51 \text{ eV}$$
+
+\pause
+$$\Delta E = (-1.51) - (-13.6) = +12.09 \text{ eV}$$
+
+\pause
+$$\boxed{\Delta E = 12.1 \text{ eV}}$$
+
+\textbf{Check:} Positive means absorption. Photon must provide energy!
+\note{[P0] [ALGEBRA] "Unknown: delta-E"\\\\
+[P1] "Two equations needed"\\\\
+[P2] "E-initial: negative 13.6 eV"\\\\
+- "E-final: negative 1.51 eV"\\\\
+[P3] "Subtract: negative 1.51 minus negative 13.6"\\\\
+- "Watch those signs!"\\\\
+[P4] [ANSWER] 12.1 electron-volts\\\\
+[THE WONDER] "This exact energy creates one specific UV wavelength"\\\\
+- "Hydrogen's unique signature"}
+\end{frame}
+
+% Wavelength and Energy
+\begin{frame}
+\frametitle{22.1 Photon Energy and Wavelength}
+\begin{block}{Energy-Frequency Relationship}
+\Large
+$$E = hf = \frac{hc}{\lambda}$$
+\end{block}
+
+\pause
+\textbf{Where:}
+\begin{itemize}
+\item $h = 6.626 \times 10^{-34}$ J$\cdot$s (Planck's constant)
+\item $c = 3.00 \times 10^8$ m/s (speed of light)
+\item $f$ = frequency (Hz)
+\item $\lambda$ = wavelength (m)
+\end{itemize}
+
+\pause
+\begin{exampleblock}{The Connection}
+Higher energy transition $\rightarrow$ shorter wavelength photon
+\end{exampleblock}
+\note{[P0] "Photon energy connects to wavelength"\\\\
+[ALGEBRA] "E equals h-f equals h-c over lambda"\\\\
+[P1] "Planck's constant: quantum of action"\\\\
+- "Smallest possible angular momentum"\\\\
+[P2] [THE REVELATION] "Energy and wavelength inversely related"\\\\
+- "Blue photons more energetic than red"\\\\
+[THE WONDER] "Light is both particle and wave"}
+\end{frame}
+
+% Rydberg Formula
+\begin{frame}
+\frametitle{22.1 The Rydberg Formula}
+\begin{block}{Wavelength of Emitted Light}
+\Large
+$$\frac{1}{\lambda} = R\left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right)$$
+\end{block}
+
+\textbf{Where:}
+\begin{itemize}
+\item $R = 1.097 \times 10^7$ m$^{-1}$ (Rydberg constant)
+\item $n_i$ = initial quantum number (higher)
+\item $n_f$ = final quantum number (lower)
+\end{itemize}
+
+\pause
+\begin{alertblock}{Historical Note}
+Rydberg discovered this formula empirically in 1888.\\
+Bohr explained why it works in 1913!
+\end{alertblock}
+\note{[P0] "This formula was magic until Bohr"\\\\
+[ALGEBRA] "One over lambda equals R times difference of inverse squares"\\\\
+- "Works perfectly for hydrogen"\\\\
+[THE HUMILITY] "Rydberg found pattern but didn't know why"\\\\
+[P1] [THE REVELATION] "Bohr derived it from first principles"\\\\
+- "Proof that quantization is real"\\\\
+[THE WONDER] "Math reveals nature's hidden rules"}
+\end{frame}
+
+% De Broglie Waves
+\begin{frame}
+\frametitle{22.1 De Broglie's Matter Waves}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig22-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{block}{De Broglie (1924)}
+If light can be particles,\\
+can particles be waves?
+\end{block}
+
+\pause
+\textbf{Yes!}
+$$\lambda = \frac{h}{p}$$
+
+Only certain wavelengths fit in orbit $\rightarrow$ quantization!
+\end{columns}
+\note{[P0] [THE HOOK] "Matter waves: the ultimate twist"\\\\
+- "Electron is both particle and wave"\\\\
+[THE CONNECTION - Harmonic] "Standing wave on circular string"\\\\
+- "Only integer wavelengths fit"\\\\
+[P1] "Lambda equals h over p"\\\\
+- "Momentum determines wavelength"\\\\
+[THE WONDER] "This is WHY orbits are quantized"\\\\
+- "Constructive interference only for certain orbits"}
+\end{frame}
+
+% Heisenberg Uncertainty
+\begin{frame}
+\frametitle{22.1 Heisenberg Uncertainty Principle}
+\begin{block}{The Fundamental Limit}
+\Large
+$$\Delta x \Delta p \geq \frac{h}{4\pi}$$
+\end{block}
+
+\pause
+\begin{alertblock}{What It Means}
+You cannot simultaneously know exact position AND exact momentum.\\
+This is not a measurement problem - it's reality!
+\end{alertblock}
+
+\pause
+\begin{exampleblock}{Implication for Atoms}
+Electrons don't have well-defined orbits.\\
+They exist as probability clouds.
+\end{exampleblock}
+\note{[P0] [THE CONFLICT] "Your intuition says: know position and velocity"\\\\
+- "Quantum says: impossible!"\\\\
+[ALGEBRA] "Delta-x times delta-p greater-than-or-equal h over 4-pi"\\\\
+[P1] "Not experimental limitation"\\\\
+[THE HUMILITY] "Einstein fought this. He was wrong."\\\\
+[P2] [THE REVELATION] "This destroys planetary model"\\\\
+- "Replaces it with probability cloud"\\\\
+[THE WONDER] "The universe is fundamentally uncertain"}
+\end{frame}
+
+% Quantum Model
+\begin{frame}
+\frametitle{22.1 The Quantum Model}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig26-1.jpg}
+\end{figure}
+
+\begin{block}{Electron Cloud}
+\begin{itemize}
+\item Each dot: one position measurement
+\item Darker region: higher probability
+\item No defined orbit - only probability distribution
+\end{itemize}
+\end{block}
+\note{[P0] "Modern view: electron cloud"\\\\
+- "Probability density function"\\\\
+- "Darker means more likely"\\\\
+[THE CONNECTION - Digital] "Computer graphics use probability rendering"\\\\
+[THE WONDER] "This is what atoms actually look like"\\\\
+- "Not tiny solar systems"\\\\
+- "Fuzzy clouds of possibility"}
+\end{frame}
+
+\section{22.2 Nuclear Forces and Radioactivity}
+
+% Learning Objectives 22.2
+\begin{frame}
+\frametitle{Learning Objectives: 22.2}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item Describe the structure and forces present within the nucleus \pause
+\item Explain the three types of radiation \pause
+\item Write nuclear equations associated with radioactive decay
+\end{itemize}
+\end{block}
+\note{[P0] "Now we zoom into the nucleus"\\\\
+- "Ten thousand times smaller than atom"\\\\
+[P1] "Strong force: most powerful in nature"\\\\
+[P2] "Alpha, beta, gamma radiation"\\\\
+[P3] "Nuclear equations conserve mass and charge"\\\\
+[THE WONDER] "The energy here dwarfs chemistry"}
+\end{frame}
+
+% Nuclear Structure
+\begin{frame}
+\frametitle{22.2 The Nucleus}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig31-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\textbf{Nucleons:}
+\begin{itemize}
+\item Protons: +1e charge
+\item Neutrons: neutral
+\item Mass $\approx$ 1 u (atomic mass unit)
+\end{itemize}
+
+\pause
+\textbf{Notation:}
+$$^A_Z X_N$$
+\begin{itemize}
+\item $Z$ = atomic number (protons)
+\item $A$ = mass number (protons + neutrons)
+\item $N = A - Z$ (neutrons)
+\end{itemize}
+\end{columns}
+\note{[P0] "Nucleus: protons and neutrons"\\\\
+- "Collectively: nucleons"\\\\
+- "Nearly equal mass"\\\\
+[THE CONNECTION - Kinetic] "Nucleus like tightly packed ball of marbles"\\\\
+[P1] "Nuclide notation"\\\\
+[ALGEBRA] "Lithium-7: three protons, four neutrons"\\\\
+- "Mass number: A equals 7"\\\\
+- "Atomic number: Z equals 3"\\\\
+[THE WONDER] "Carbon-12 defines the atomic mass unit"}
+\end{frame}
+
+% Isotopes
+\begin{frame}
+\frametitle{22.2 Isotopes}
+\begin{block}{Same Element, Different Neutrons}
+Isotopes have same $Z$ (same element) but different $A$
+\end{block}
+
+\pause
+\textbf{Hydrogen Isotopes:}
+\begin{itemize}
+\item $^1$H: 1 proton, 0 neutrons (hydrogen)
+\item $^2$H: 1 proton, 1 neutron (deuterium)
+\item $^3$H: 1 proton, 2 neutrons (tritium - radioactive)
+\end{itemize}
+
+\pause
+\begin{exampleblock}{Chemistry vs. Physics}
+\textbf{Chemistry:} Isotopes behave nearly identically (same electrons)\\
+\textbf{Physics:} Isotopes have very different nuclear stability
+\end{exampleblock}
+\note{[P0] "Isotopes: same chemistry, different nucleus"\\\\
+- "All have 1 proton: all are hydrogen"\\\\
+[P1] "Deuterium: heavy water"\\\\
+- "Tritium: radioactive, rare"\\\\
+[P2] [THE REVELATION] "Neutrons don't affect chemistry"\\\\
+- "But dramatically affect stability"\\\\
+[THE WONDER] "Most elements have multiple stable isotopes"\\\\
+- "Carbon-12 and carbon-13 both common"}
+\end{frame}
+
+% Nuclear Forces
+\begin{frame}
+\frametitle{22.2 The Strong Nuclear Force}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{The Problem}
+Protons repel via Coulomb force.\\
+Why doesn't nucleus explode?
+\end{block}
+
+\pause
+\begin{block}{The Solution}
+\textbf{Strong nuclear force:}
+\begin{itemize}
+\item Attractive between nucleons
+\item Much stronger than EM force
+\item Very short range ($\sim 10^{-15}$ m)
+\end{itemize}
+\end{block}
+
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig33-1.jpg}
+\end{figure}
+\end{columns}
+\note{[P0] [THE CONFLICT] "Protons hate each other"\\\\
+- "Coulomb repulsion is enormous"\\\\
+- "At femtometer distances: trillions of newtons"\\\\
+[P1] [THE REVELATION] "Strong force is the glue"\\\\
+- "100 times stronger than EM"\\\\
+- "But only at contact"\\\\
+[THE WONDER] "Without strong force: no atoms, no chemistry, no life"}
+\end{frame}
+
+% Radioactivity Discovery
+\begin{frame}
+\frametitle{22.2 Discovery of Radioactivity (1896)}
+\begin{block}{Becquerel's Accident}
+\begin{itemize}
+\item Uranium ore placed on wrapped photographic plate
+\item Plate darkened - even in complete darkness!
+\item Uranium emitting invisible, penetrating rays
+\end{itemize}
+\end{block}
+
+\pause
+\begin{alertblock}{The Shock}
+Energy emerging from matter without any input!\\
+Apparent violation of energy conservation!
+\end{alertblock}
+
+\pause
+\begin{exampleblock}{The Resolution}
+Einstein's $E = mc^2$ explains it:\\
+Mass converts to energy in nuclear reactions
+\end{exampleblock}
+\note{[P0] [THE HOOK] "Becquerel didn't plan this discovery"\\\\
+- "Cloudy day, left ore in drawer"\\\\
+- "Developed plate anyway: fogged!"\\\\
+[P1] [THE CONFLICT] "Energy from nowhere?"\\\\
+- "Violated known physics"\\\\
+[THE HUMILITY] "Took years to understand"\\\\
+[P2] [THE REVELATION] "Mass IS energy"\\\\
+[THE WONDER] "Uranium slowly converting mass to energy for billions of years"}
+\end{frame}
+
+% Three Types of Radiation
+\begin{frame}
+\frametitle{22.2 Three Types of Nuclear Radiation}
+\begin{block}{Alpha ($\alpha$) Radiation}
+2 protons + 2 neutrons (helium nucleus)\\
+Charge: +2e, Penetration: cm in air, stopped by paper
+\end{block}
+
+\pause
+\begin{block}{Beta ($\beta$) Radiation}
+Electron (or positron) from nucleus\\
+Charge: $-$e (or +e), Penetration: m in air, stopped by aluminum
+\end{block}
+
+\pause
+\begin{block}{Gamma ($\gamma$) Radiation}
+High-energy photon\\
+Charge: 0, Penetration: km in air, reduced by lead
+\end{block}
+\note{[P0] "Three flavors of radioactive decay"\\\\
+[ALGEBRA] "Alpha: helium-4 nucleus"\\\\
+- "Massive, highly charged"\\\\
+- "Interacts strongly: short range"\\\\
+[P1] "Beta: electron from neutron decay"\\\\
+- "Less massive, less charged"\\\\
+- "Penetrates further"\\\\
+[P2] "Gamma: pure energy"\\\\
+- "No charge, no mass"\\\\
+- "Hardest to stop"\\\\
+[THE WONDER] "Same nucleus can emit all three at different times"}
+\end{frame}
+
+% Alpha Decay
+\begin{frame}
+\frametitle{22.2 Alpha Decay}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig35-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{block}{Nuclear Equation}
+$$^A_Z X_N \rightarrow ^{A-4}_{Z-2} Y_{N-2} + ^4_2 He_2$$
+\end{block}
+
+\pause
+\textbf{Example:} Uranium-238
+$$^{238}_{92} U \rightarrow ^{234}_{90} Th + ^4_2 He$$
+
+\pause
+\textbf{Conservation:}
+\begin{itemize}
+\item Mass number: 238 = 234 + 4 \checkmark
+\item Charge: 92 = 90 + 2 \checkmark
+\end{itemize}
+\end{columns}
+\note{[P0] "Alpha: eject helium nucleus"\\\\
+- "Reduces A by 4"\\\\
+- "Reduces Z by 2"\\\\
+[THE CONNECTION - Digital] "Smoke detectors use alpha decay"\\\\
+[P1] "Uranium to thorium transmutation"\\\\
+- "Element changes!"\\\\
+[P2] "Conservation laws sacred"\\\\
+[ALGEBRA] "238 equals 234 plus 4"\\\\
+[THE WONDER] "Alchemist's dream: elements changing"}
+\end{frame}
+
+% Beta Decay
+\begin{frame}
+\frametitle{22.2 Beta Decay}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig36-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{block}{$\beta^-$ Decay (most common)}
+Neutron $\rightarrow$ proton + electron + antineutrino
+$$^A_Z X_N \rightarrow ^A_{Z+1} Y_{N-1} + e^- + \bar{\nu}_e$$
+\end{block}
+
+\pause
+\textbf{Example:} Carbon-14
+$$^{14}_6 C \rightarrow ^{14}_7 N + e^- + \bar{\nu}_e$$
+\end{columns}
+\note{[P0] "Beta: neutron transforms"\\\\
+- "Becomes proton, ejects electron"\\\\
+- "Also releases neutrino (ghostly particle)"\\\\
+[P1] "Carbon-14 to nitrogen-14"\\\\
+- "Basis of radiocarbon dating"\\\\
+[ALGEBRA] "Mass number unchanged: 14 equals 14"\\\\
+- "Charge increases: 6 to 7"\\\\
+[THE WONDER] "Fundamental particles can change identity"\\\\
+- "Weak nuclear force at work"}
+\end{frame}
+
+% Gamma Decay
+\begin{frame}
+\frametitle{22.2 Gamma Decay}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig37-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{block}{Excited Nucleus}
+Nucleus drops from excited state to ground state
+$$^A_Z X^* \rightarrow ^A_Z X + \gamma$$
+\end{block}
+
+\pause
+\textbf{Key Points:}
+\begin{itemize}
+\item $A$ and $Z$ unchanged
+\item Pure energy release
+\item Often follows $\alpha$ or $\beta$ decay
+\item MeV energies (vs. eV for atoms)
+\end{itemize}
+\end{columns}
+\note{[P0] "Gamma: nucleus de-excites"\\\\
+- "Like electron dropping energy levels"\\\\
+- "But million times more energetic"\\\\
+[P1] "Element doesn't change"\\\\
+- "Just releases energy"\\\\
+[THE CONNECTION - Harmonic] "Nucleus vibrating, releases photon"\\\\
+[THE WONDER] "Gamma rays from space tell us about supernova"}
+\end{frame}
+
+% Attempt: Nuclear Equation
+\begin{frame}
+\frametitle{Attempt: Write Nuclear Equation}
+\textbf{Try this on your own (3 min, silent):}
+
+Plutonium-239 undergoes alpha decay.
+
+\textbf{Given:}
+\begin{itemize}
+\item Parent nucleus: $^{239}_{94}Pu$
+\item Type: alpha decay
+\item Periodic table for atomic numbers
+\end{itemize}
+
+\textbf{Find:}
+\begin{enumerate}
+\item Complete nuclear equation
+\item Identity of daughter nucleus
+\end{enumerate}
+
+\vspace{0.3cm}
+\textit{Remember to conserve mass number and charge!}
+\note{[THE CHALLENGE] "Can you find the daughter nucleus?"\\\\
+[TIMING] 3 min SILENT work\\\\
+[CIRCULATE] Watch for:\\\\
+- Do they subtract 4 from A?\\\\
+- Do they subtract 2 from Z?\\\\
+- Do they identify element Z equals 92?\\\\
+[EXPECTED APPROACH] A: 239 minus 4 equals 235\\\\
+- Z: 94 minus 2 equals 92\\\\
+- Look up Z equals 92 on table}
+\end{frame}
+
+% Compare: Nuclear Equation
+\begin{frame}
+\frametitle{Compare: Nuclear Equation Strategy}
+\textbf{Turn and talk (2 min):}
+
+\begin{enumerate}
+\item What did you subtract from $A$ and $Z$?
+\item How did you identify the daughter element?
+\item Did you check conservation?
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+\alert{Name wheel:} One pair share their method.
+\note{[P0] "Pair discussion"\\\\
+[CIRCULATE] Listen for correct logic\\\\
+- A decreases by 4\\\\
+- Z decreases by 2\\\\
+[P1] "Most should get Z equals 92"\\\\
+- "But did they identify uranium?"\\\\
+[EXPECTED APPROACH] Subtract alpha particle\\\\
+- Use periodic table\\\\
+- Verify conservation}
+\end{frame}
+
+% Reveal: Nuclear Equation
+\begin{frame}
+\frametitle{Reveal: Alpha Decay Solution}
+\textbf{Self-correct in a different color:}
+
+\textbf{General form:}
+$$^A_Z X \rightarrow ^{A-4}_{Z-2} Y + ^4_2 He$$
+
+\pause
+\textbf{Apply to Pu-239:}
+$$A_{daughter} = 239 - 4 = 235$$
+$$Z_{daughter} = 94 - 2 = 92$$
+
+\pause
+\textbf{Identify element:} $Z = 92$ is Uranium (U)
+
+\pause
+$$\boxed{^{239}_{94}Pu \rightarrow ^{235}_{92}U + ^4_2He}$$
+
+\pause
+\textbf{Check:} 239 = 235 + 4 \checkmark, \quad 94 = 92 + 2 \checkmark
+\note{[P0] [ALGEBRA] "A decreases by 4"\\\\
+[P1] "239 minus 4 equals 235"\\\\
+[P2] "Z equals 92: uranium"\\\\
+[P3] [ANSWER] Plutonium to uranium plus helium\\\\
+[P4] "Conservation verified"\\\\
+[THE WONDER] "This is how plutonium bombs work"\\\\
+- "Chain reaction of fission, not just decay"}
+\end{frame}
+
+\section{22.3 Half Life and Radiometric Dating}
+
+% Learning Objectives 22.3
+\begin{frame}
+\frametitle{Learning Objectives: 22.3}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item Explain radioactive half-life and its role in radiometric dating \pause
+\item Calculate radioactive half-life and solve problems associated with radiometric dating
+\end{itemize}
+\end{block}
+\note{[P0] "Half-life: nuclear clock"\\\\
+[P1] "Carbon dating, uranium dating"\\\\
+[THE WONDER] "We can determine age of Earth, fossils, ancient artifacts"}
+\end{frame}
+
+% Half-Life Concept
+\begin{frame}
+\frametitle{22.3 What is Half-Life?}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig45-1.jpg}
+\end{figure}
+
+\begin{block}{Definition}
+\textbf{Half-life ($t_{1/2}$):} Time for half the nuclei to decay
+\end{block}
+
+\pause
+\begin{itemize}
+\item After $t_{1/2}$: $N \rightarrow N/2$
+\item After $2t_{1/2}$: $N \rightarrow N/4$
+\item After $3t_{1/2}$: $N \rightarrow N/8$
+\end{itemize}
+\note{[P0] [THE HOOK] "Exponential decay: nature's countdown"\\\\
+- "Every half-life: divide by two"\\\\
+[THE CONNECTION - Digital] "Battery life, game cooldowns use exponential decay"\\\\
+[P1] "Geometric series"\\\\
+- "Never reaches zero"\\\\
+- "But becomes negligible"\\\\
+[THE WONDER] "Some isotopes: microseconds. Uranium-238: 4.5 billion years"}
+\end{frame}
+
+% Exponential Decay
+\begin{frame}
+\frametitle{22.3 Exponential Decay Law}
+\begin{block}{Number of Nuclei vs. Time}
+\Large
+$$N(t) = N_0 e^{-\lambda t}$$
+\end{block}
+
+\textbf{Where:}
+\begin{itemize}
+\item $N_0$ = initial number of nuclei
+\item $N(t)$ = number remaining at time $t$
+\item $\lambda$ = decay constant
+\item $e = 2.71828\ldots$
+\end{itemize}
+
+\pause
+\begin{block}{Relationship to Half-Life}
+$$\lambda = \frac{\ln(2)}{t_{1/2}} \approx \frac{0.693}{t_{1/2}}$$
+\end{block}
+\note{[P0] "Exponential function: fundamental decay"\\\\
+[ALGEBRA] "N-of-t equals N-zero e to the negative lambda-t"\\\\
+- "Lambda: decay constant"\\\\
+- "Large lambda: fast decay, short half-life"\\\\
+[P1] "Decay constant from half-life"\\\\
+- "Natural log of 2 over t-half"\\\\
+[THE WONDER] "Same math describes drug elimination, atmospheric pressure"}
+\end{frame}
+
+% Activity
+\begin{frame}
+\frametitle{22.3 Activity (Rate of Decay)}
+\begin{block}{Definition}
+\textbf{Activity $R$:} Number of decays per unit time
+$$R = \frac{\Delta N}{\Delta t} = \lambda N$$
+\end{block}
+
+\pause
+\textbf{Units:}
+\begin{itemize}
+\item Becquerel (Bq): 1 decay/second (SI unit)
+\item Curie (Ci): $3.7 \times 10^{10}$ decays/second (traditional)
+\end{itemize}
+
+\pause
+\begin{exampleblock}{Physical Meaning}
+More radioactive material $\rightarrow$ higher activity\\
+As sample decays $\rightarrow$ activity decreases
+\end{exampleblock}
+\note{[P0] "Activity: how radioactive is it RIGHT NOW?"\\\\
+[ALGEBRA] "R equals lambda times N"\\\\
+- "Proportional to amount remaining"\\\\
+[P1] "Becquerel: one decay per second"\\\\
+- "Curie: named for Marie Curie"\\\\
+- "Based on 1 gram of radium-226"\\\\
+[THE WONDER] "Geiger counter clicks measure activity"}
+\end{frame}
+
+% Carbon Dating
+\begin{frame}
+\frametitle{22.3 Carbon-14 Dating}
+\begin{block}{The Method}
+\begin{enumerate}
+\item Cosmic rays create $^{14}$C in atmosphere
+\item Living organisms maintain constant $^{14}$C ratio
+\item After death: no new $^{14}$C absorbed
+\item $^{14}$C decays with $t_{1/2} = 5,730$ years
+\item Measure remaining $^{14}$C to find age
+\end{enumerate}
+\end{block}
+
+\pause
+\begin{exampleblock}{Range}
+Effective for ages: 100 to 50,000 years\\
+(about 10 half-lives maximum)
+\end{exampleblock}
+\note{[P0] [THE HOOK] "How old is this bone?"\\\\
+- "Carbon dating answers"\\\\
+[THE CONNECTION - Kinetic] "Every breath you take contains C-14"\\\\
+- "You are slightly radioactive!"\\\\
+[P1] "While alive: C-14 replenished"\\\\
+- "Death: clock starts"\\\\
+[THE WONDER] "Shroud of Turin dated 1300 CE, not 33 CE"}
+\end{frame}
+
+% Shroud of Turin
+\begin{frame}
+\frametitle{22.3 Case Study: Shroud of Turin}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig48-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\textbf{The Claim:}
+Burial shroud of Jesus (33 CE)
+
+\pause
+\textbf{The Test (1988):}
+\begin{itemize}
+\item Three independent labs
+\item Found 92\% of living $^{14}$C
+\item Calculate age...
+\end{itemize}
+
+\pause
+\textbf{The Result:}
+Dated to $1320 \pm 60$ CE\\
+Medieval, not ancient!
+\end{columns}
+\note{[P0] "Famous controversy"\\\\
+- "Appeared in 1354 CE"\\\\
+- "Claimed to be 1300 years older"\\\\
+[P1] "Triple-blind test"\\\\
+- "Three labs, didn't know which sample was shroud"\\\\
+[P2] [THE REVELATION] "92 percent C-14 remaining"\\\\
+- "Corresponds to ~700 years"\\\\
+[THE WONDER] "Physics settled 700-year debate"}
+\end{frame}
+
+% Attempt: Half-Life Problem
+\begin{frame}
+\frametitle{Attempt: Half-Life Calculation}
+\textbf{Try this on your own (3 min, silent):}
+
+A radioactive sample has a half-life of 10 days. You start with 80 g of material.
+
+\textbf{Given:}
+\begin{itemize}
+\item $N_0 = 80$ g
+\item $t_{1/2} = 10$ days
+\item Time elapsed: $t = 30$ days
+\end{itemize}
+
+\textbf{Find:} How much material remains after 30 days?
+
+\vspace{0.3cm}
+\textit{Think: How many half-lives have passed?}
+\note{[THE CHALLENGE] "Can you think in half-lives?"\\\\
+[TIMING] 3 min SILENT work\\\\
+[CIRCULATE] Watch for:\\\\
+- Do they divide 30 by 10?\\\\
+- Do they repeatedly halve?\\\\
+- Or use exponential formula?\\\\
+[EXPECTED APPROACH] 30 days = 3 half-lives\\\\
+- After 1: 40 g\\\\
+- After 2: 20 g\\\\
+- After 3: 10 g}
+\end{frame}
+
+% Compare: Half-Life Problem
+\begin{frame}
+\frametitle{Compare: Half-Life Strategy}
+\textbf{Turn and talk (2 min):}
+
+\begin{enumerate}
+\item How many half-lives occurred?
+\item Did you use repeated halving or a formula?
+\item What's your final answer?
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+\alert{Name wheel:} Share your approach.
+\note{[P0] "Pair discussion"\\\\
+[CIRCULATE] Two methods should emerge:\\\\
+- Intuitive: divide by 2 three times\\\\
+- Formula: N equals N-zero over 2 to the n\\\\
+[P1] "Both valid!"\\\\
+[EXPECTED APPROACH] Recognize 3 half-lives\\\\
+- Divide by 8}
+\end{frame}
+
+% Reveal: Half-Life Problem
+\begin{frame}
+\frametitle{Reveal: Half-Life Solution}
+\textbf{Self-correct in a different color:}
+
+\textbf{Method 1 - Counting Half-Lives:}
+
+Number of half-lives: $n = \frac{t}{t_{1/2}} = \frac{30}{10} = 3$
+
+\pause
+After each half-life:
+\begin{itemize}
+\item $t = 10$ days: $80 \div 2 = 40$ g
+\item $t = 20$ days: $40 \div 2 = 20$ g
+\item $t = 30$ days: $20 \div 2 = 10$ g
+\end{itemize}
+
+\pause
+\textbf{Method 2 - Formula:}
+$$N = N_0 \left(\frac{1}{2}\right)^n = 80 \left(\frac{1}{2}\right)^3 = 80 \times \frac{1}{8} = 10 \text{ g}$$
+
+\pause
+$$\boxed{N = 10 \text{ g}}$$
+\note{[P0] "Two paths to same answer"\\\\
+[P1] [ALGEBRA] "Method 1: intuitive"\\\\
+- "Halve three times"\\\\
+[P2] "Method 2: formula"\\\\
+- "One-half to the n"\\\\
+[P3] [ANSWER] 10 grams remaining\\\\
+[THE WONDER] "After 10 half-lives: less than 0.1 percent left"}
+\end{frame}
+
+% Other Dating Methods
+\begin{frame}
+\frametitle{22.3 Other Radiometric Dating}
+\begin{block}{Uranium-Lead Dating}
+$^{238}$U $\rightarrow$ $^{206}$Pb, \quad $t_{1/2} = 4.5 \times 10^9$ years\\
+Used for ancient rocks (oldest Earth rocks: 3.5 billion years)
+\end{block}
+
+\pause
+\begin{block}{Potassium-Argon Dating}
+$^{40}$K $\rightarrow$ $^{40}$Ar, \quad $t_{1/2} = 1.25 \times 10^9$ years\\
+Used for volcanic rocks, human fossils
+\end{block}
+
+\pause
+\begin{exampleblock}{The Power}
+Different isotopes cover different time scales:\\
+Years, millennia, millions of years, billions of years
+\end{exampleblock}
+\note{[P0] "Different isotopes for different timescales"\\\\
+- "C-14: thousands of years"\\\\
+- "U-238: billions of years"\\\\
+[P1] "Uranium dating: oldest tool"\\\\
+- "Age of Earth: 4.54 billion years"\\\\
+[P2] "Potassium dating: human evolution"\\\\
+[THE WONDER] "We know Earth's age to eight significant figures"}
+\end{frame}
+
+\section{22.4 Nuclear Fission and Fusion}
+
+% Learning Objectives 22.4
+\begin{frame}
+\frametitle{Learning Objectives: 22.4}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item Explain nuclear fission \pause
+\item Explain nuclear fusion \pause
+\item Describe how fission and fusion work in weapons and power generation
+\end{itemize}
+\end{block}
+\note{[P0] "Nuclear energy: million times more powerful than chemical"\\\\
+[P1] "Fission: splitting heavy nuclei"\\\\
+[P2] "Fusion: combining light nuclei"\\\\
+[P3] "Both power civilization and threaten it"\\\\
+[THE WONDER] "Stars are fusion reactors. We're trying to build our own"}
+\end{frame}
+
+% Binding Energy Curve
+\begin{frame}
+\frametitle{22.4 Nuclear Binding Energy}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig58-1.jpg}
+\end{figure}
+
+\begin{block}{The Key Insight}
+Iron-56 has highest binding energy per nucleon\\
+$\rightarrow$ Most stable nucleus
+\end{block}
+
+\pause
+\begin{itemize}
+\item Heavy nuclei (right of Fe): release energy by \textbf{fission}
+\item Light nuclei (left of Fe): release energy by \textbf{fusion}
+\end{itemize}
+\note{[P0] [THE REVELATION] "This curve explains everything"\\\\
+- "Why stars shine"\\\\
+- "Why bombs explode"\\\\
+- "Why iron is endpoint"\\\\
+[P1] "Moving UP the curve releases energy"\\\\
+- "Left side: fusion climbs"\\\\
+- "Right side: fission climbs"\\\\
+[THE WONDER] "Iron is nuclear ash - can't be burned for energy"}
+\end{frame}
+
+% Nuclear Fission
+\begin{frame}
+\frametitle{22.4 Nuclear Fission}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig53-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{block}{The Process}
+\begin{enumerate}
+\item Neutron strikes heavy nucleus
+\item Nucleus elongates
+\item EM repulsion overcomes strong force
+\item Nucleus splits
+\item Releases energy + more neutrons
+\end{enumerate}
+\end{block}
+\end{columns}
+
+\pause
+\textbf{Typical energy:} ~200 MeV per fission\\
+(vs. ~1 eV per chemical reaction)
+\note{[P0] [THE HOOK] "Splitting the unsplittable"\\\\
+[THE CONNECTION - Digital] "Nuclear power plants run game servers"\\\\
+[P1] "Liquid drop model"\\\\
+- "Nucleus wobbles like water drop"\\\\
+- "Stretches, narrows, breaks"\\\\
+[THE WONDER] "One fission: 200 million electron-volts"\\\\
+- "Million times more than breaking molecular bond"}
+\end{frame}
+
+% Chain Reaction
+\begin{frame}
+\frametitle{22.4 Chain Reaction}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig54-1.jpg}
+\end{figure}
+
+\begin{block}{Self-Sustaining Fission}
+Each fission releases 2-3 neutrons\\
+$\rightarrow$ Those neutrons cause more fissions\\
+$\rightarrow$ Exponential growth
+\end{block}
+
+\pause
+\begin{alertblock}{Critical Mass}
+Minimum amount of fissile material for self-sustaining reaction\\
+$^{235}$U: ~52 kg, \quad $^{239}$Pu: ~10 kg
+\end{alertblock}
+\note{[P0] "Chain reaction: nuclear avalanche"\\\\
+- "1 becomes 2, becomes 4, becomes 8..."\\\\
+- "Generation time: microseconds"\\\\
+[P1] [THE CONFLICT] "Below critical mass: fizzles"\\\\
+- "Above: explodes"\\\\
+[THE WONDER] "Hiroshima bomb: 64 kg U-235, only 0.7 kg fissioned"\\\\
+- "Rest scattered without fissioning"}
+\end{frame}
+
+% Nuclear Reactor
+\begin{frame}
+\frametitle{22.4 Nuclear Fission Reactor}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.55\textheight,keepaspectratio]{phys12-atomic-nuclear-fig55-1.jpg}
+\end{figure}
+
+\textbf{Key Components:}
+\begin{itemize}
+\item Fuel rods: enriched $^{235}$U
+\item Moderator: water (slows neutrons)
+\item Control rods: absorb excess neutrons
+\item Heat exchanger: produces steam $\rightarrow$ turbine $\rightarrow$ electricity
+\end{itemize}
+\note{[P0] "Controlled chain reaction"\\\\
+- "Balance: exactly one neutron causes next fission"\\\\
+[THE CONNECTION - Digital] "Nuclear plants provide baseload power for internet"\\\\
+[THE WONDER] "20 percent of US electricity from ~90 nuclear plants"\\\\
+- "France: 70 percent nuclear"}
+\end{frame}
+
+% Mass-Energy in Fission
+\begin{frame}
+\frametitle{22.4 Mass-Energy Conversion}
+\begin{block}{Einstein's Equation}
+\Large
+$$E = mc^2$$
+\end{block}
+
+\pause
+\textbf{In fission:}
+\begin{itemize}
+\item Products have less mass than reactants
+\item Missing mass $\rightarrow$ converted to energy
+\item $\Delta m \approx 0.1\%$ of original mass
+\item Still liberates enormous energy
+\end{itemize}
+
+\pause
+\begin{exampleblock}{Example}
+1 kg of $^{235}$U fully fissioned:\\
+$E = 8.2 \times 10^{13}$ J $\approx$ 14,000 barrels of oil!
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "Mass IS energy"\\\\
+- "Not converts TO energy"\\\\
+- "Mass IS a form of energy"\\\\
+[ALGEBRA] "E equals m c-squared"\\\\
+- "c-squared: huge number"\\\\
+[P1] "Tiny mass loss: gigantic energy"\\\\
+[P2] [THE WONDER] "1 gram equals energy to power car 270 years"}
+\end{frame}
+
+% Nuclear Fusion
+\begin{frame}
+\frametitle{22.4 Nuclear Fusion}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth,height=0.5\textheight,keepaspectratio]{phys12-atomic-nuclear-fig59-1.jpg}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{block}{The Process}
+Combine light nuclei\\
+$\rightarrow$ Overcome Coulomb repulsion\\
+$\rightarrow$ Strong force binds them\\
+$\rightarrow$ Release energy
+\end{block}
+
+\pause
+\textbf{Requirements:}
+\begin{itemize}
+\item Extreme temperature ($\sim 10^7$ K)
+\item Extreme pressure
+\item $\rightarrow$ Found in star cores!
+\end{itemize}
+\end{columns}
+\note{[P0] [THE HOOK] "How does the Sun shine?"\\\\
+- "Fusion: nature's power source"\\\\
+[P1] "Barrier: positive charges repel"\\\\
+- "Need high kinetic energy to overcome"\\\\
+[THE WONDER] "Sun fuses 620 million tons H per second"\\\\
+- "Has done so for 4.6 billion years"\\\\
+- "Will continue 5 billion more"}
+\end{frame}
+
+% Proton-Proton Chain
+\begin{frame}
+\frametitle{22.4 The Proton-Proton Cycle}
+\begin{block}{How the Sun Fuses Hydrogen}
+\begin{align*}
+^1\text{H} + ^1\text{H} &\rightarrow ^2\text{H} + e^+ + \nu_e \quad (0.42 \text{ MeV})\\
+^1\text{H} + ^2\text{H} &\rightarrow ^3\text{He} + \gamma \quad (5.49 \text{ MeV})\\
+^3\text{He} + ^3\text{He} &\rightarrow ^4\text{He} + ^1\text{H} + ^1\text{H} \quad (12.86 \text{ MeV})
+\end{align*}
+\end{block}
+
+\pause
+\textbf{Net result:}
+$$4\,^1\text{H} \rightarrow\, ^4\text{He} + 2e^+ + 2\nu_e + 6\gamma \quad (26.7 \text{ MeV})$$
+
+\pause
+\begin{exampleblock}{The Wonder}
+This energy took 32,000 years to reach Sun's surface\\
+Then 8 minutes to reach Earth!
+\end{exampleblock}
+\note{[P0] "Three-step dance"\\\\
+[ALGEBRA] "First: two protons make deuterium"\\\\
+- "Releases positron and neutrino"\\\\
+[P1] "Second: deuterium captures proton"\\\\
+- "Makes helium-3, releases gamma"\\\\
+[P2] "Third: two helium-3s fuse"\\\\
+- "Makes helium-4, returns two protons"\\\\
+[THE WONDER] "Net: 4 protons become 1 helium"\\\\
+- "0.7 percent mass becomes energy"}
+\end{frame}
+
+% Fusion Energy
+\begin{frame}
+\frametitle{22.4 Fusion Energy Potential}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys12-atomic-nuclear-fig67-1.jpg}
+\end{figure}
+
+\begin{block}{The Promise}
+\begin{itemize}
+\item Fuel: deuterium from seawater (virtually unlimited)
+\item No chain reaction $\rightarrow$ inherently safe
+\item No long-lived radioactive waste
+\item 4x more energy per kg than fission
+\end{itemize}
+\end{block}
+
+\pause
+\begin{alertblock}{The Challenge}
+Confine 100-million-degree plasma long enough for net energy gain\\
+\textbf{Progress:} ITER reactor under construction in France
+\end{alertblock}
+\note{[P0] [THE HOOK] "Energy of the future - for 70 years"\\\\
+- "Always 20 years away"\\\\
+[P1] "Tokamak: magnetic bottle"\\\\
+- "Plasma can't touch walls"\\\\
+- "Would instantly cool"\\\\
+[THE HUMILITY] "Fusion is hard. Sun has gravity. We don't."\\\\
+[THE WONDER] "If we succeed: energy problem solved forever"}
+\end{frame}
+
+% Fission vs Fusion Summary
+\begin{frame}
+\frametitle{22.4 Fission vs. Fusion Summary}
+\begin{columns}[t]
+\column{0.5\textwidth}
+\begin{block}{Fission}
+\textbf{Split} heavy nuclei\\[0.3cm]
+\textbf{Fuel:} $^{235}$U, $^{239}$Pu (rare)\\[0.3cm]
+\textbf{Products:} Radioactive waste\\[0.3cm]
+\textbf{Status:} Mature technology\\[0.3cm]
+\textbf{Use:} Power plants, weapons
+\end{block}
+
+\column{0.5\textwidth}
+\begin{block}{Fusion}
+\textbf{Combine} light nuclei\\[0.3cm]
+\textbf{Fuel:} H isotopes (abundant)\\[0.3cm]
+\textbf{Products:} Helium (inert)\\[0.3cm]
+\textbf{Status:} Experimental\\[0.3cm]
+\textbf{Use:} Stars, H-bombs, (future power?)
+\end{block}
+\end{columns}
+\note{[P0] "Two paths to nuclear energy"\\\\
+- "Both tap binding energy curve"\\\\
+[THE REVELATION] "Fission: we've mastered"\\\\
+- "Fusion: still learning"\\\\
+[THE WONDER] "Both release energy by becoming more like iron"}
+\end{frame}
+
+% Section Summary
+\begin{frame}
+\frametitle{Summary: Chapter 22 (Sections 1-4)}
+\begin{block}{22.1 Atomic Structure}
+Rutherford $\rightarrow$ Bohr $\rightarrow$ Quantum model\\
+Discrete energy levels explain emission spectra
+\end{block}
+
+\begin{block}{22.2 Nuclear Forces and Radioactivity}
+Strong force holds nucleus together\\
+Alpha, beta, gamma decay restore stability
+\end{block}
+
+\begin{block}{22.3 Half-Life}
+Exponential decay enables radiometric dating\\
+Carbon-14, U-238 date different timescales
+\end{block}
+
+\begin{block}{22.4 Fission and Fusion}
+Binding energy curve: both release enormous energy\\
+Fission mature, fusion promising
+\end{block}
+\note{[P0] "Journey from atoms to stars"\\\\
+[THE WONDER] "Physics reveals unity:"\\\\
+- "Atoms and nuclei obey same quantum rules"\\\\
+- "Energy and mass are interchangeable"\\\\
+- "Stars and bombs use same fusion"\\\\
+"Understanding this changes civilization"}
+\end{frame}
+
+% Key Equations
+\begin{frame}[shrink]
+\frametitle{Key Equations: Chapter 22}
+\begin{block}{Atomic Structure}
+$$E_n = -\frac{13.6 \text{ eV}}{n^2}, \quad \Delta E = E_f - E_i, \quad E = hf = \frac{hc}{\lambda}$$
+$$\frac{1}{\lambda} = R\left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right), \quad \Delta x \Delta p \geq \frac{h}{4\pi}$$
+\end{block}
+
+\begin{block}{Nuclear Physics}
+$$E = mc^2$$
+\end{block}
+
+\begin{block}{Radioactive Decay}
+$$N(t) = N_0 e^{-\lambda t}, \quad \lambda = \frac{0.693}{t_{1/2}}, \quad R = \lambda N$$
+\end{block}
+
+\begin{block}{Nuclear Notation}
+$$^A_Z X_N \quad (A = Z + N)$$
+\end{block}
+\note{[P0] "Seven essential equations"\\\\
+- "Bohr energy, photon energy, Rydberg"\\\\
+- "Heisenberg uncertainty"\\\\
+- "Einstein mass-energy"\\\\
+- "Exponential decay, half-life, activity"\\\\
+- "Nuclide notation"\\\\
+[THE WONDER] "These equations describe reality from atoms to stars"}
+\end{frame}
+
+% Homework
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[P0] "Practice these concepts"\\\\
+- "Energy level transitions"\\\\
+- "Half-life calculations"\\\\
+- "Nuclear equations"\\\\
+[TIMING] "Due date on LMS"\\\\
+"Questions before we end?"}
+\end{frame}
+
+\end{document}

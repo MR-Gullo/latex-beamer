@@ -1,0 +1,807 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[Work and Energy]{PHYS11 CH:9 The Currency of the Universe}
+\subtitle{How Energy Powers Everything}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we learn the universe's currency - energy.\\\\
+- Same rules on roller coasters as on falling apples\\\\
+- Two revelations: work changes energy, energy is conserved\\\\
+[THE WONDER] By end of class, you'll understand what makes roller coasters work\\\\
+- This is the foundation of thermodynamics, electricity, and every machine ever built}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery}
+\begin{center}
+\Large What if nothing ever stopped?\\[0.3cm]
+\textit{What if motion could last forever?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+Balls bounce lower. Roller coasters slow down. Pendulums stop swinging.
+
+\pause
+\vspace{0.3cm}
+\alert{Where does the motion go?}
+\note{[P0] "What if nothing ever stopped?"\\\\
+[P1] "Balls bounce lower. Roller coasters slow down. Pendulums stop swinging."\\\\
+[P2] [THE CONFLICT] "Where does the motion go? Motion doesn't vanish. It transforms."\\\\
+[THE REVELATION] Today you discover the universe's accounting system}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Roller Coaster Experience}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-work-energy-fig01.jpg}
+\caption{Roller coaster: energy transformation in action}
+\end{figure}
+
+\pause
+Lifted to the top. Released. Speed builds. Climbs again. Slows down.
+
+\pause
+\textbf{Same energy. Different forms.}
+\note{[P0] "Roller coaster - pure physics playground"\\\\
+[P1] "Lifted to the top. Released. Speed builds. Climbs again. Slows down."\\\\
+[P2] [THE REVELATION] "Same energy. Different forms. This is what we decode today."\\\\
+[THE CONNECTION - Kinetic Archetype] "Every twist your body feels is energy transforming"\\\\
+[THE WONDER] Engineers use these equations to keep riders safe at 100 km/h}
+\end{frame}
+
+\section{Work, Power, and the Work-Energy Theorem}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{9.1:} Describe and apply the work-energy theorem \pause
+\item \textbf{9.1:} Describe and calculate work and power
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for work and energy"\\\\
+[P1] "First: work-energy theorem connects force to motion. Second: power is rate of doing work"\\\\
+- Assessment: problem set and quiz}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 What Is Work?}
+\begin{alertblock}{Civilian View vs. Reality}
+\textbf{Civilian:} "Homework is work. Holding a heavy box is hard work."\\
+\textbf{Physicist:} "Neither is work. No motion, no work."
+\end{alertblock}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{The Universal Law of Work}
+\begin{center}
+\Large $\boxed{W = Fd}$
+\end{center}
+Work equals force times distance moved in the direction of the force.
+\end{block}
+\note{[P0] [THE CONFLICT] "Civilians use work to mean effort. Physicists mean force moving an object."\\\\
+[P1] [THE REVELATION] "W equals F d - force times distance"\\\\
+- Lifting a rock upward: work\\\\
+- Carrying a rock horizontally at constant speed: not work\\\\
+- Holding a rock still: not work\\\\
+[THE HUMILITY] This feels wrong. Our language lies. The math tells truth.}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 Three Examples}
+\textbf{Consider these scenarios:}
+
+\pause
+\begin{enumerate}
+\item Homework - objects not moving over distance \pause
+\item Lifting a rock upward - force moves object upward \pause
+\item Carrying a rock horizontally at constant speed
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Work requires TWO things: force AND motion in the direction of force.
+\end{exampleblock}
+\note{[P0] "Three scenarios - which is work?"\\\\
+[P1] "Homework - no objects moving"\\\\
+[P2] "Lifting a rock - force moves object upward - this IS work"\\\\
+[P3] "Carrying rock horizontally at constant speed"\\\\
+[P4] "No net force needed for constant velocity. Gravity pulls down, you push up, forces cancel. No work."\\\\
+[THE CONNECTION - Kinetic Archetype] "Skaters know this - once you're gliding, no force needed"}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 Energy: The Ability to Do Work}
+\textbf{Two forms of mechanical energy:}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{Kinetic Energy (KE)}
+Energy of motion. A moving object has kinetic energy.
+\end{block}
+
+\pause
+
+\begin{block}{Potential Energy (PE)}
+Stored energy. Gravitational PE is energy an object has due to its position above Earth's surface.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+Both measured in joules (J), same unit as work.
+\note{[P0] "Two forms of mechanical energy"\\\\
+[P1] "Kinetic energy - energy of motion"\\\\
+[P2] "Potential energy - stored energy from position"\\\\
+[P3] "Both measured in joules - same unit as work"\\\\
+[THE REVELATION] Work and energy use the same unit because they convert into each other\\\\
+[THE WONDER] One joule - force of 1 newton over 1 meter}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 Gravitational Potential Energy}
+Lift a rock off the ground. You exert force upward over distance.
+
+\pause
+\vspace{0.3cm}
+
+The force equals the rock's weight: $F = w = mg$
+
+\pause
+
+Work done equals force times distance:
+
+\begin{block}{Gravitational Potential Energy}
+\begin{center}
+\Large $\boxed{PE = mgh}$
+\end{center}
+Potential energy equals mass times gravity times height.
+\end{block}
+\note{[P0] "Lift a rock - you do work against gravity"\\\\
+[P1] "Force equals weight: F equals m g"\\\\
+[P2] "Work done equals force times distance: W equals m g h"\\\\
+[P3] [THE REVELATION] "This work becomes stored as potential energy: PE equals m g h"\\\\
+- m: mass in kg\\\\
+- g: 9.8 m/s squared\\\\
+- h: height in meters\\\\
+[THE WONDER] Energy stored at top becomes motion at bottom}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 Kinetic Energy}
+Drop the rock. Gravity does work on it. Rock speeds up.
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{Kinetic Energy}
+\begin{center}
+\Large $\boxed{KE = \frac{1}{2}mv^2}$
+\end{center}
+Kinetic energy equals one-half mass times velocity squared.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Heavier objects and faster objects have more KE. Velocity matters more because it's squared.
+\end{exampleblock}
+\note{[P0] "Drop the rock - gravity does work, rock speeds up"\\\\
+[P1] [THE REVELATION] "KE equals one-half m v squared"\\\\
+[P2] "Heavier and faster means more energy. Velocity matters MORE because it's squared."\\\\
+[THE CONNECTION - Kinetic Archetype] "Doubling speed quadruples kinetic energy. That's why crashes are deadly."\\\\
+[THE WONDER] Same equation for baseball, car, asteroid}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 The Work-Energy Theorem}
+\begin{block}{Nature's Source Code}
+\begin{center}
+\Large $\boxed{W = \Delta KE = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2}$
+\end{center}
+Net work equals change in kinetic energy.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+When you do work on an object, you change its kinetic energy.
+
+\pause
+
+\textbf{Subscripts:} $_1$ is initial, $_2$ is final.
+\note{[P0] [THE REVELATION] "Work equals change in kinetic energy"\\\\
+[P1] "When you do work on an object, you change its KE"\\\\
+[P2] "Subscript 1 is initial, subscript 2 is final"\\\\
+- James Joule discovered this\\\\
+- Joule: unit named after him\\\\
+[THE WONDER] Push a cart, increase its KE. Same law on Earth and Mars.}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 James Joule}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=0.4\textheight,keepaspectratio]{phys11-work-energy-fig02.jpg}
+\caption{James Joule (1818-1889)}
+\end{figure}
+
+\pause
+The joule (J) is named after this physicist who proved the work-energy connection.
+
+\pause
+\vspace{0.3cm}
+$1.0 \text{ J} = 1.0 \text{ N} \cdot \text{m} = 1.0 \text{ kg} \cdot \text{m}^2/\text{s}^2$
+\note{[P0] "James Joule - English physicist"\\\\
+[P1] "The joule is named after him"\\\\
+[P2] "1 joule equals 1 newton-meter, which equals 1 kg m squared per s squared"\\\\
+- Units reveal relationships\\\\
+- Joule proved heat is a form of energy\\\\
+[THE HUMILITY] Took decades to convince other scientists}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 Power: Rate of Doing Work}
+Work tells you how much. Power tells you how fast.
+
+\pause
+
+\begin{block}{Power}
+\begin{center}
+\Large $\boxed{P = \frac{W}{t}}$
+\end{center}
+Power equals work divided by time.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Unit:} Watt (W)
+
+\pause
+One watt equals one joule per second.
+\note{[P0] "Power - rate of doing work"\\\\
+[P1] [THE REVELATION] "P equals W over t"\\\\
+[P2] "Unit is the watt"\\\\
+[P3] "One watt equals one joule per second"\\\\
+- Light bulb: 60 watts means 60 joules per second\\\\
+- Electricity sold in kilowatt-hours: power times time equals energy\\\\
+[THE CONNECTION - Digital Archetype] "Your gaming PC draws hundreds of watts"}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 Work vs. Power}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-work-energy-fig03.jpg}
+\caption{Two ways to move a TV to the fourth floor}
+\end{figure}
+
+\pause
+\textbf{Same work. Different power.}
+
+Pulley (2 min) generates more power than stairs (5 min).
+\note{[P0] "Two ways to move TV to fourth floor"\\\\
+[P1] "Same work - same mass, same height, same force times distance"\\\\
+[P2] "Pulley takes 2 minutes. Stairs take 5 minutes. Pulley generates more power."\\\\
+- Power equals work over time\\\\
+- Smaller time in denominator means more power\\\\
+[THE CONNECTION - Kinetic Archetype] "Sprinting up stairs: more power than walking"}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.1 James Watt and the Steam Engine}
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth,height=0.4\textheight,keepaspectratio]{phys11-work-energy-fig04.jpg}
+\caption{James Watt (1736-1819)}
+\end{figure}
+
+\pause
+Watt improved the steam engine, converting reciprocal motion to circular motion.
+
+\pause
+This innovation powered the industrial revolution.
+\note{[P0] "James Watt - Scottish engineer"\\\\
+[P1] "Improved steam engine - converted reciprocal to circular motion"\\\\
+[P2] "This powered the industrial revolution"\\\\
+- Watt unit named after him\\\\
+- Suddenly trains, factories, ships could move\\\\
+[THE WONDER] Power available to humanity increased tenfold in decades}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: The Skater's Push}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+An ice skater with mass 50 kg glides at 8 m/s. Her friend pushes, increasing speed to 12 m/s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m = 50$ kg
+\item $v_1 = 8$ m/s
+\item $v_2 = 12$ m/s
+\end{itemize}
+
+\textbf{Find:} How much work did the friend do on the skater?
+
+\vspace{0.3cm}
+
+\textit{Can you calculate the work? Try it silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they use work-energy theorem?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who uses W = delta KE, who tries other approaches\\\\
+[WATCH FOR] Students forgetting to subtract initial KE\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: The Skater's Push}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation did you use?
+\item Did you calculate KE initial and KE final?
+\item What operation connects them to work?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for common approaches\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] W equals delta KE equals one-half m v-2 squared minus one-half m v-1 squared\\\\
+[COMMON ERROR] Forgetting the subtraction, or using wrong velocities}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Skater's Push}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Equation:} $W = \Delta KE = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$
+
+\pause
+
+\textbf{Factor out:} $W = \frac{1}{2}m(v_2^2 - v_1^2)$
+
+\pause
+
+\textbf{Substitute:} $W = \frac{1}{2}(50)(12^2 - 8^2)$
+
+\pause
+
+$W = 25(144 - 64) = 25(80)$
+
+\pause
+
+$$\boxed{W = 2000 \text{ J}}$$
+
+\pause
+\textbf{Check:} Energy increased because friend did work. Reasonable!
+\note{[P0] "Self-correct in a different color"\\\\
+[P1] [ALGEBRA] "W equals one-half m times quantity v-2 squared minus v-1 squared"\\\\
+[P2] "Factor out one-half m"\\\\
+[P3] "Substitute: one-half times 50 times quantity 144 minus 64"\\\\
+[P4] "25 times 80"\\\\
+[P5] [ANSWER] "2000 joules"\\\\
+[P6] "Energy increased because friend did work. KE went from 1600 J to 3600 J, gain of 2000 J."\\\\
+[THE WONDER] You just calculated what happens in every hockey check, every car acceleration}
+\end{frame}
+
+\section{Mechanical Energy and Conservation of Energy}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{9.2:} Explain the law of conservation of energy in terms of kinetic and potential energy \pause
+\item \textbf{9.2:} Perform calculations related to kinetic and potential energy and apply conservation of energy
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for energy conservation"\\\\
+[P1] "First: understand conservation law. Second: solve problems using it"\\\\
+- This is one of the most powerful laws in all of physics}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 The Universe's Accounting System}
+\begin{center}
+\Large Energy is never created or destroyed.\\[0.3cm]
+\textit{It only transforms.}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+
+\begin{block}{The Law of Conservation of Energy}
+In a closed system, total energy remains constant.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Illusion}
+\textbf{Civilian:} "The ball lost energy when it stopped bouncing."\\
+\textbf{Physicist:} "Energy transformed to heat from friction and sound."
+\end{alertblock}
+\note{[P0] "Energy is never created or destroyed. It only transforms."\\\\
+[P1] [THE REVELATION] "Law of conservation of energy - total energy is constant in closed system"\\\\
+[P2] [THE CONFLICT] "Civilians think energy disappears. Physicists know it transforms."\\\\
+- Bouncing ball: mechanical energy to heat and sound\\\\
+- No energy lost, just transformed to less useful forms\\\\
+[THE WONDER] This law has never been violated. Never. Not once in recorded history.}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 Energy Transformations}
+Lift a rock to the top. You do work. Rock gains PE.
+
+\pause
+
+Release the rock. PE converts to KE as it falls.
+
+\pause
+
+Hit the ground. KE converts to heat and sound.
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Energy changes form constantly. The total amount stays the same.
+\end{exampleblock}
+\note{[P0] "Lift a rock - you do work, rock gains PE"\\\\
+[P1] "Release - PE converts to KE as it falls"\\\\
+[P2] "Hit ground - KE converts to heat and sound"\\\\
+[P3] "Energy changes form constantly. Total stays same."\\\\
+[THE CONNECTION - Harmonic Archetype] "Like money changing currency - dollars to euros, still same value"\\\\
+[THE WONDER] Universe keeps perfect books. Energy always balances.}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 The Roller Coaster}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-work-energy-fig05.jpg}
+\caption{Energy transformations on a roller coaster}
+\end{figure}
+
+\pause
+\textbf{Top:} High PE, low KE (slow)
+
+\pause
+\textbf{Bottom:} Low PE, high KE (fast)
+
+\pause
+\textbf{Next hill:} KE converts back to PE
+\note{[P0] "Roller coaster - energy transformation in action"\\\\
+[P1] "Top: high PE, low KE - moving slowly"\\\\
+[P2] "Bottom: low PE, high KE - moving fast"\\\\
+[P3] "Next hill: KE converts back to PE, car slows down"\\\\
+- Total energy constant (ignoring friction)\\\\
+- PE plus KE at top equals PE plus KE at bottom\\\\
+[THE WONDER] Engineers design the track so energy carries you through}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 Conservation Equation}
+Assume no energy lost to friction.
+
+\pause
+
+\begin{block}{Conservation of Mechanical Energy}
+\begin{center}
+\Large $\boxed{KE_1 + PE_1 = KE_2 + PE_2}$
+\end{center}
+Initial kinetic plus initial potential equals final kinetic plus final potential.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Either side equals total mechanical energy.
+
+\pause
+
+\textbf{Closed system:} No energy lost to surroundings.
+\note{[P0] "Assume no energy lost to friction"\\\\
+[P1] [THE REVELATION] "KE-1 plus PE-1 equals KE-2 plus PE-2"\\\\
+[P2] "Either side equals total mechanical energy"\\\\
+[P3] "Closed system means no energy escapes"\\\\
+- Subscript 1: initial state\\\\
+- Subscript 2: final state\\\\
+[THE HUMILITY] Real systems lose energy to friction, but this is excellent approximation}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 Equations Summary}
+\begin{align*}
+KE &= \frac{1}{2}mv^2 \\
+PE &= mgh \\
+KE_1 + PE_1 &= KE_2 + PE_2
+\end{align*}
+
+\pause
+\vspace{0.3cm}
+
+Combining them:
+$$\frac{1}{2}mv_1^2 + mgh_1 = \frac{1}{2}mv_2^2 + mgh_2$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Pro tip:} Mass often cancels out!
+\note{[P0] "Three key equations"\\\\
+[P1] "Combine them into one master equation"\\\\
+[P2] "Pro tip: m appears in every term, so it often cancels"\\\\
+- Can solve problems without knowing mass\\\\
+- This simplifies many calculations\\\\
+[THE WONDER] Same equations for baseball, meteor, moon}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: The Falling Rock}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A 10 kg rock falls from a 20 m cliff. When it has fallen 10 m, what are its KE and PE?
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $m = 10$ kg
+\item $h_1 = 20$ m (initial height)
+\item $h_2 = 10$ m (after falling 10 m)
+\item $v_1 = 0$ (dropped from rest)
+\item $g = 9.8$ m/s$^2$
+\end{itemize}
+
+\textbf{Find:} $KE_2$ and $PE_2$
+
+\vspace{0.3cm}
+
+\textit{Can you use conservation of energy? Work silently.}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can they apply conservation of energy?\\\\
+[SAY] "Try this on your own. It's okay to get stuck."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who uses conservation equation, who calculates PE first\\\\
+[WATCH FOR] Students forgetting initial KE is zero\\\\
+[DON'T HELP] Let them struggle productively}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: The Falling Rock}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What is the initial KE? Why?
+\item How did you calculate PE at 10 m height?
+\item How did you find KE at 10 m height?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for approaches\\\\
+[CHECK] Name wheel: call a pair\\\\
+[EXPECTED APPROACH] Initial KE is zero, calculate PE-2, use conservation to find KE-2\\\\
+[COMMON ERROR] Not recognizing initial KE is zero, mixing up h-1 and h-2}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Falling Rock}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Initial energy:} $KE_1 = 0$ (at rest), $PE_1 = mgh_1 = 10 \times 9.8 \times 20 = 1960$ J
+
+\pause
+
+\textbf{At 10 m height:} $PE_2 = mgh_2 = 10 \times 9.8 \times 10 = 980$ J
+
+\pause
+
+\textbf{Conservation:} $KE_1 + PE_1 = KE_2 + PE_2$
+
+\pause
+
+$0 + 1960 = KE_2 + 980$
+
+\pause
+
+$$\boxed{KE_2 = 980 \text{ J}}$$
+
+\pause
+
+\textbf{Check:} Lost 980 J of PE, gained 980 J of KE. Energy conserved!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Initial: KE-1 is zero, PE-1 equals m g h-1 equals 1960 joules"\\\\
+[P2] "At 10 m: PE-2 equals m g h-2 equals 980 joules"\\\\
+[P3] "Conservation: KE-1 plus PE-1 equals KE-2 plus PE-2"\\\\
+[P4] "Zero plus 1960 equals KE-2 plus 980"\\\\
+[P5] [ANSWER] "KE-2 equals 980 joules"\\\\
+[P6] "Lost 980 J of PE, gained 980 J of KE. Perfect energy balance."\\\\
+[THE WONDER] Universe's accounting system never makes mistakes}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 Why Conservation Works}
+Total mechanical energy at any point equals energy at start.
+
+\pause
+\vspace{0.3cm}
+
+At the top of roller coaster: mostly PE, little KE
+
+\pause
+
+At the bottom: mostly KE, little PE
+
+\pause
+
+At any point in between: PE + KE = constant
+
+\pause
+\vspace{0.3cm}
+
+\begin{alertblock}{The Paradox}
+\textbf{Your brain says:} "The roller coaster is slowing down, losing energy."\\
+\textbf{Reality:} "KE converting to PE. Total energy unchanged."
+\end{alertblock}
+\note{[P0] "Total energy at any point equals energy at start"\\\\
+[P1] "Top: mostly PE, little KE"\\\\
+[P2] "Bottom: mostly KE, little PE"\\\\
+[P3] "In between: PE plus KE equals constant"\\\\
+[P4] [THE CONFLICT] "Brain says losing energy. Reality: energy transforming."\\\\
+[THE HUMILITY] Friction does steal some energy as heat, but engineers minimize this\\\\
+[THE WONDER] This law governs atoms, planets, galaxies}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 Real Systems and Friction}
+\textbf{Ideal system:} No friction, energy perfectly conserved
+
+\pause
+
+\textbf{Real system:} Friction converts mechanical energy to heat
+
+\pause
+\vspace{0.3cm}
+
+\begin{exampleblock}{The Mental Model}
+Friction is not a violation of conservation. Heat is still energy, just less useful.
+\end{exampleblock}
+
+\pause
+\vspace{0.3cm}
+
+Engineers design to minimize friction losses.
+\note{[P0] "Ideal system: no friction, energy perfectly conserved"\\\\
+[P1] "Real system: friction converts mechanical energy to heat"\\\\
+[P2] "Friction doesn't violate conservation. Heat is still energy, just less useful."\\\\
+[P3] "Engineers design to minimize friction"\\\\
+- Lubricants reduce friction\\\\
+- Smooth surfaces reduce friction\\\\
+- Air resistance is friction with air\\\\
+[THE CONNECTION - Digital Archetype] "Hard drives spin on air bearings to reduce friction"}
+\end{frame}
+
+\begin{frame}
+\frametitle{9.2 The Closed System}
+\textbf{Closed system:} No energy enters or leaves
+
+\pause
+
+In reality, perfectly closed systems don't exist.
+
+\pause
+
+But many systems are approximately closed for short times.
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{The Approximation}
+Falling objects, roller coasters, pendulums: closed system is good approximation if friction is small.
+\end{block}
+\note{[P0] "Closed system: no energy in or out"\\\\
+[P1] "Perfectly closed systems don't exist in reality"\\\\
+[P2] "But many systems approximately closed for short times"\\\\
+[P3] "Falling objects, roller coasters, pendulums: good approximation"\\\\
+- Air resistance small for dense objects\\\\
+- Friction small for smooth surfaces\\\\
+[THE HUMILITY] Physicists use approximations, not perfection}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Work = force times distance (only if motion happens) \pause
+\item Work changes energy (work-energy theorem) \pause
+\item Energy has two forms: kinetic (motion) and potential (stored) \pause
+\item Power = rate of doing work \pause
+\item Energy is conserved: KE + PE = constant \pause
+\item Energy transforms but never vanishes
+\end{enumerate}
+\end{block}
+\note{[P0] "Six revelations today"\\\\
+[P1] "Work equals force times distance"\\\\
+[P2] "Work changes energy - work-energy theorem"\\\\
+[P3] "Two forms: kinetic and potential"\\\\
+[P4] "Power is rate of doing work"\\\\
+[P5] "Energy conserved: KE plus PE equals constant"\\\\
+[P6] "Energy transforms but never vanishes"\\\\
+[THE WONDER] You now understand the currency of the universe\\\\
+- Name wheel: which revelation surprised you most?}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align*}
+W &= Fd \\
+KE &= \frac{1}{2}mv^2 \\
+PE &= mgh \\
+W &= \Delta KE = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2 \\
+P &= \frac{W}{t} \\
+KE_1 + PE_1 &= KE_2 + PE_2
+\end{align*}
+\note{- Six foundational equations\\\\
+- Work, kinetic energy, potential energy\\\\
+- Work-energy theorem\\\\
+- Power\\\\
+- Conservation of energy\\\\
+- Master these and you master energy\\\\
+- Questions before we end?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Simple Machines - how to multiply force}
+\end{frame}
+
+\end{document}

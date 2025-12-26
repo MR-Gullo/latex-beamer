@@ -1,0 +1,695 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\graphicspath{{../images/}{../../shared/images/}}
+
+\title[The Rate of Change]{PHYS11 CH:3 The Rate of Change}
+\subtitle{Understanding Acceleration}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\frame{\titlepage
+\note{[THE HOOK] Today we discover how to measure change itself.\\\\
+- Motion is one thing - but the CHANGE in motion? That's acceleration\\\\
+- Two revelations: what acceleration IS, how we MEASURE it with equations and graphs\\\\
+[THE WONDER] By end of class, you'll understand the force that pins you to your seat in a car}
+}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{The Mystery of Motion}
+\begin{center}
+\Large What if you could feel\\
+\textit{the rate at which change happens?}
+\end{center}
+
+\pause
+\vspace{0.5cm}
+From the airplane landing to the dragster launching...
+
+\pause
+\vspace{0.3cm}
+\alert{You experience acceleration every day.}
+\note{[P0] "What if you could feel the rate at which change happens?"\\\\
+[P1] "From the airplane landing to the dragster launching..."\\\\
+[P2] [THE WONDER] "You experience acceleration every day - in cars, elevators, even walking"\\\\
+[THE CONNECTION - Kinetic Archetype] Athletes: every time you speed up or slow down}
+\end{frame}
+
+\begin{frame}
+\frametitle{Landing in St. Maarten}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth,height=0.6\textheight,keepaspectratio]{phys11-acceleration-fig01.jpg}
+\caption{A plane slows down as it comes in for landing}
+\end{figure}
+
+\pause
+\begin{alertblock}{The Paradox}
+\textbf{Civilian:} "Acceleration means speeding up."\\
+\textbf{Physicist:} "Acceleration is ANY change in velocity - speeding up, slowing down, or turning."
+\end{alertblock}
+\note{[P0] "Plane landing at St. Maarten - velocity decreasing"\\\\
+[P1] [THE CONFLICT] "Civilians think acceleration means going fast"\\\\
+- "Physicist knows: acceleration is CHANGE in velocity"\\\\
+- "This plane IS accelerating - just in opposite direction to motion"\\\\
+[THE HUMILITY] Your brain evolved to feel changes, not measure them precisely}
+\end{frame}
+
+\section{3.1 Acceleration}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{3.1:} Explain acceleration and determine direction and magnitude in one dimension \pause
+\item \textbf{3.1:} Analyze motion using kinematic equations and graphic representations
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for section 3.1"\\\\
+[P1] "First: understand what acceleration IS and how to find it"\\\\
+- "Second: use equations and graphs to analyze accelerated motion"\\\\
+- Assessment: quiz next week on kinematics}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.1 The Source Code of Change}
+\begin{block}{Nature's Rule for Acceleration}
+\begin{center}
+\Large $\boxed{\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_0}{t_f - t_0}}$
+\end{center}
+Acceleration equals change in velocity divided by change in time.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{SI Units:} meters per second per second ($\text{m/s}^2$)
+
+\pause
+\begin{exampleblock}{The Mental Model}
+If velocity is how fast you're going, acceleration is how fast your "how fast" is changing.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "a-bar equals v-f minus v-zero over t-f minus t-zero"\\\\
+[P1] "Units: meters per second per second - velocity change per second"\\\\
+[P2] [THE CONNECTION - Digital Archetype] "Like your speedometer app showing not just speed but how quickly speed changes"\\\\
+[THE WONDER] Same equation works for rocket ships and bicycles}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.1 Understanding the Sign}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{Positive Acceleration}
+\begin{itemize}
+\item Velocity and acceleration in same direction
+\item Speeding up to the right
+\item Slowing down to the left
+\end{itemize}
+
+\pause
+\column{0.48\textwidth}
+\textbf{Negative Acceleration}
+\begin{itemize}
+\item Velocity and acceleration in opposite directions
+\item Slowing down to the right
+\item Speeding up to the left
+\end{itemize}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+\begin{alertblock}{Key Insight}
+The sign tells you the DIRECTION, not whether you're speeding up or slowing down!
+\end{alertblock}
+\note{[P0] "Two types based on direction"\\\\
+[P1] "Negative acceleration doesn't mean slowing down"\\\\
+[P2] [THE CONFLICT] "Your brain thinks negative means slowing. Physics disagrees"\\\\
+- "Negative just means direction - could be speeding up leftward"\\\\
+[THE HUMILITY] Even physics students mix this up at first}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.1 Speeding Up and Slowing Down}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-acceleration-fig02.jpg}
+\caption{(a) Car speeding up, (b) Car slowing down}
+\end{figure}
+
+\pause
+\textbf{The Rule:}
+\begin{itemize}
+\item Same direction = speeding up
+\item Opposite direction = slowing down
+\end{itemize}
+\note{[P0] "Two scenarios with vector arrows"\\\\
+[P1] "When arrows point same way: speeding up. Opposite: slowing down"\\\\
+[THE CONNECTION - Kinetic Archetype] "In a car: gas pedal adds acceleration forward. Brake adds acceleration backward"\\\\
+- "Both are acceleration - just different directions"}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.1 Acceleration is a Vector}
+\textbf{Vector quantities have both magnitude AND direction:}
+\begin{itemize}
+\item Displacement \pause
+\item Velocity \pause
+\item Acceleration
+\end{itemize}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Critical insight:} An object traveling at constant speed can still accelerate if it changes direction!
+
+\pause
+\begin{exampleblock}{Real-World: Turning}
+When you turn the steering wheel in a moving car, the car accelerates even if the speedometer doesn't change.
+\end{exampleblock}
+\note{[P0] "Three vector quantities we study"\\\\
+[P1] "Displacement"\\\\
+[P2] "Velocity"\\\\
+[P3] "Acceleration - change in velocity includes direction changes"\\\\
+[P4] [THE REVELATION] "Constant speed in a circle? Still accelerating"\\\\
+[P5] [THE CONNECTION - Kinetic Archetype] "Runners: turning a corner at constant speed requires acceleration toward the center"\\\\
+[THE WONDER] Direction is as fundamental as magnitude}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Subway Train Accelerating}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A subway train accelerates from rest to 30.0 km/h in 20.0 s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Initial velocity: $v_0 = 0$ (starts from rest)
+\item Final velocity: $v_f = 30.0$ km/h
+\item Time interval: $\Delta t = 20.0$ s
+\end{itemize}
+
+\textbf{Find:} Average acceleration in m/s$^2$
+
+\vspace{0.3cm}
+
+\textit{Can you decode this motion? Work silently. Remember to convert units!}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you find how quickly the train speeds up?\\\\
+[SAY] "Try this on your own. It's okay to get stuck on the units."\\\\
+[TIMING] 3-4 min SILENT individual work\\\\
+[CIRCULATE] Note who forgets to convert km/h to m/s\\\\
+[WATCH FOR] Common error: keeping mixed units\\\\
+[DON'T HELP] Let them struggle - learning happens in Compare}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Unit Conversion Strategy}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What equation did you use for acceleration?
+\item How did you convert km/h to m/s?
+\item What multiplication factors did you use?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair share your approach (not your answer).
+\note{[TIMING] 2-3 min pair discussion\\\\
+[CIRCULATE] Listen for conversion approaches\\\\
+[CHECK] Name wheel: call a pair to share\\\\
+[EXPECTED APPROACH] a-bar equals delta-v over delta-t, convert using 1000 m per km and 3600 s per h\\\\
+[COMMON ERROR] Multiplying by 3600 instead of dividing}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: The Acceleration Calculation}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Convert 30.0 km/h to m/s
+
+\pause
+$$30.0 \frac{\text{km}}{\text{h}} \times \frac{1000\text{ m}}{1\text{ km}} \times \frac{1\text{ h}}{3600\text{ s}} = 8.333 \text{ m/s}$$
+
+\pause
+\textbf{Step 2:} Calculate $\Delta v = v_f - v_0 = 8.333 - 0 = 8.333$ m/s
+
+\pause
+\textbf{Step 3:} Apply the equation
+$$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{8.333\text{ m/s}}{20.0\text{ s}} = \boxed{+0.417 \text{ m/s}^2}$$
+
+\pause
+\textbf{Check:} Positive sign means acceleration to the right. Reasonable for train speeding up!
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "30 km per h times 1000 m per km times 1 h per 3600 s equals 8.333 m per s"\\\\
+[P2] "Change in velocity: 8.333 minus zero equals 8.333"\\\\
+[P3] "a-bar equals 8.333 divided by 20 equals 0.417 meters per second squared"\\\\
+[P4] [ANSWER] "Plus 0.417 - positive because train speeds up to the right"\\\\
+[THE WONDER] You just calculated what subway engineers design for}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Subway Train Slowing Down}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+Now the train slows to a stop from 30.0 km/h in 8.00 s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item Initial velocity: $v_0 = 30.0$ km/h = 8.333 m/s
+\item Final velocity: $v_f = 0$ (comes to rest)
+\item Time interval: $\Delta t = 8.00$ s
+\end{itemize}
+
+\textbf{Find:} Average acceleration in m/s$^2$
+
+\vspace{0.3cm}
+
+\textit{Will the sign be positive or negative? Why?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Now the train is slowing - what changes?\\\\
+[SAY] "Same process, but train is stopping. Think about the sign."\\\\
+[TIMING] 3 min SILENT work\\\\
+[CIRCULATE] Note who gets the negative sign\\\\
+[THE CONNECTION - Kinetic Archetype] "Like hitting the brakes"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Sign of Acceleration}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item What did you get for $\Delta v$?
+\item Is it positive or negative?
+\item What does the sign of acceleration tell you?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} Share your reasoning about the sign.
+\note{[TIMING] 2 min pair discussion\\\\
+[CIRCULATE] Listen for understanding of negative sign\\\\
+[CHECK] Name wheel call pair\\\\
+[EXPECTED APPROACH] Delta-v equals 0 minus 8.333 equals negative 8.333\\\\
+[KEY INSIGHT] Negative because velocity is decreasing}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Deceleration Calculation}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Calculate $\Delta v = v_f - v_0 = 0 - 8.333 = -8.333$ m/s
+
+\pause
+\textbf{Step 2:} Apply the equation
+$$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{-8.333\text{ m/s}}{8.00\text{ s}} = \boxed{-1.04 \text{ m/s}^2}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Check:} Negative sign means acceleration to the left (opposite to velocity). Train is slowing down!
+
+\pause
+\begin{alertblock}{Physics vs Civilian Language}
+\textbf{Civilian:} "The train is decelerating."\\
+\textbf{Physicist:} "The train has negative acceleration."
+\end{alertblock}
+\note{[P0] "Self-correct in different color"\\\\
+[P1] [ALGEBRA] "Delta-v equals zero minus 8.333 equals negative 8.333"\\\\
+[P2] [ANSWER] "Negative 1.04 meters per second squared - acceleration opposes motion"\\\\
+[P3] [THE CONFLICT] "Civilians say deceleration. Physicists just say negative acceleration"\\\\
+[THE WONDER] Same math describes braking and launching - just different signs}
+\end{frame}
+
+\section{3.2 Representing Acceleration with Equations and Graphs}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{block}{By the end of this section, you will be able to:}
+\begin{itemize}
+\item \textbf{3.2:} Explain kinematic equations related to acceleration and illustrate with graphs \pause
+\item \textbf{3.2:} Apply kinematic equations and graphs to problems involving acceleration
+\end{itemize}
+\end{block}
+\note{[P0] "Two objectives for section 3.2"\\\\
+[P1] "First: understand the five kinematic equations and their graphs"\\\\
+- "Second: solve real problems with these tools"\\\\
+- "These are the prediction engines of motion"}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.2 The Five Kinematic Equations}
+\textbf{For constant acceleration only:}
+
+\begin{align}
+d &= d_0 + \bar{v}t \\
+\bar{v} &= \frac{v_0 + v_f}{2} \\
+v &= v_0 + at \\
+d &= d_0 + v_0 t + \frac{1}{2}at^2 \\
+v^2 &= v_0^2 + 2a(d - d_0)
+\end{align}
+
+\pause
+\begin{exampleblock}{The Mental Model}
+These five equations are the grammar of motion. Learn which one to use when.
+\end{exampleblock}
+\note{[P0] "Five equations - memorize these patterns"\\\\
+[P1] [THE REVELATION] "Each relates different variables"\\\\
+- "Equation 1: displacement, average velocity, time"\\\\
+- "Equation 3: no displacement - useful when you don't know or need it"\\\\
+- "Equation 5: no time - useful when time isn't given"\\\\
+[THE CONNECTION - Digital Archetype] "Like function calls - pick the right one for your inputs"}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.2 Displacement vs Time}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-acceleration-fig03.jpg}
+\caption{Slope of displacement vs time gives velocity}
+\end{figure}
+
+\pause
+\textbf{Key insight:}
+$$\bar{v} = \frac{d}{t} \quad \text{(when starting from origin)}$$
+
+\pause
+The slope IS the velocity!
+\note{[P0] "Graph of displacement vs time"\\\\
+[P1] "Slope equals rise over run equals displacement over time equals velocity"\\\\
+[P2] [THE WONDER] "Every line on a d-vs-t graph tells you a velocity"\\\\
+- "Steeper slope means faster motion"\\\\
+- "This is why we graph - pictures reveal patterns"}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.2 Velocity vs Time}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=0.5\textheight,keepaspectratio]{phys11-acceleration-fig04.jpg}
+\caption{Slope of velocity vs time gives acceleration}
+\end{figure}
+
+\pause
+\textbf{Key insight:}
+$$a = \frac{v}{t} \quad \text{(when starting from rest)}$$
+
+\pause
+The slope IS the acceleration!
+\note{[P0] "Graph of velocity vs time"\\\\
+[P1] "Slope equals velocity change over time equals acceleration"\\\\
+[P2] [THE REVELATION] "Every v-vs-t graph encodes acceleration"\\\\
+- "Straight line means constant acceleration"\\\\
+- "Curved line means changing acceleration"\\\\
+[THE CONNECTION - Digital Archetype] "Derivative in calculus - slope of tangent line"}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.2 Choosing the Right Equation}
+\textbf{Strategy:}
+\begin{enumerate}
+\item List the knowns \pause
+\item Identify the unknown \pause
+\item Pick equation with unknown and all knowns
+\end{enumerate}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{Example Decision Tree}
+\begin{itemize}
+\item Time not given? Use equation 5: $v^2 = v_0^2 + 2a(d - d_0)$
+\item Displacement not needed? Use equation 3: $v = v_0 + at$
+\item From rest ($v_0 = 0$)? Equations simplify!
+\end{itemize}
+\end{block}
+\note{[P0] "Problem-solving strategy"\\\\
+[P1] "List knowns from problem"\\\\
+[P2] "What are you solving for?"\\\\
+[P3] "Match equation to your variables"\\\\
+[THE HUMILITY] Even experts check their equation choice twice\\\\
+[THE CONNECTION - Digital Archetype] "Like choosing the right algorithm for your data"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Dragster Problem}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A dragster accelerates from rest at $26.0$ m/s$^2$ for a quarter mile (402 m).
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $v_0 = 0$ (starts from rest)
+\item $a = 26.0$ m/s$^2$
+\item $d - d_0 = 402$ m
+\end{itemize}
+
+\textbf{Find:} Final velocity $v_f$
+
+\vspace{0.3cm}
+
+\textit{Which kinematic equation should you use? Why?}
+\end{exampleblock}
+\note{[THE CHALLENGE] Can you predict the speed of a dragster?\\\\
+[SAY] "Real race car problem. Choose your equation wisely."\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who picks equation 5 (no time given)\\\\
+[WATCH FOR] Square root at the end\\\\
+[THE CONNECTION - Kinetic Archetype] "This is actual drag racing acceleration"}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Equation Selection}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equation did you choose?
+\item Why is that equation appropriate?
+\item What variables does it NOT include?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} One pair explain their equation choice.
+\note{[TIMING] 2-3 min discussion\\\\
+[CIRCULATE] Listen for equation 5 reasoning\\\\
+[CHECK] Name wheel\\\\
+[EXPECTED APPROACH] "Equation 5: v-squared equals v-zero-squared plus 2ad because time is not given"\\\\
+[KEY INSIGHT] Choose equation based on what you DON'T know}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Dragster Speed}
+\textbf{Self-correct in a different color:}
+
+\vspace{0.3cm}
+
+\textbf{Step 1:} Choose equation 5 (no time): $v^2 = v_0^2 + 2a(d - d_0)$
+
+\pause
+\textbf{Step 2:} Since $v_0 = 0$: $v^2 = 2a(d - d_0)$
+
+\pause
+\textbf{Step 3:} Substitute values
+$$v^2 = 2(26.0)(402) = 2.09 \times 10^4 \text{ m}^2/\text{s}^2$$
+
+\pause
+\textbf{Step 4:} Take square root
+$$v = \sqrt{2.09 \times 10^4} = \boxed{145 \text{ m/s}}$$
+
+\pause
+\textbf{Check:} About 324 mph - reasonable for dragster!
+\note{[P0] "Self-correct"\\\\
+[P1] [ALGEBRA] "Equation 5: v-squared equals v-zero-squared plus 2ad"\\\\
+[P2] "v-zero is zero, so v-squared equals 2 times 26 times 402"\\\\
+[P3] "Equals 2.09 times 10 to the 4"\\\\
+[P4] [ANSWER] "145 meters per second - about 324 miles per hour"\\\\
+[THE WONDER] You just calculated drag race speed from pure math}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.2 Acceleration Due to Gravity}
+\begin{block}{Nature's Constant}
+\begin{center}
+\Large $\boxed{g = 9.80 \text{ m/s}^2}$
+\end{center}
+Near Earth's surface, all objects fall with this acceleration (ignoring air resistance).
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Convention:} When using $g$ in equations, give it a negative sign because gravity points downward.
+
+\pause
+\begin{exampleblock}{The Mental Model}
+Every second of free fall, velocity increases by 9.80 m/s downward.
+\end{exampleblock}
+\note{[P0] [THE REVELATION] "g equals 9.80 meters per second squared"\\\\
+[P1] "Negative in equations because downward"\\\\
+[P2] [THE CONNECTION - Kinetic Archetype] "Every jump, every throw - this is the number"\\\\
+[THE WONDER] Same value whether you drop a feather or a hammer (on the Moon)\\\\
+[THE HUMILITY] Galileo discovered this fighting 2000 years of wrong ideas}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attempt: Rock Thrown Upward}
+\begin{exampleblock}{The Challenge (3 min, silent)}
+A rock is thrown straight up with initial velocity $v_0 = 13.0$ m/s.
+
+\vspace{0.3cm}
+
+\textbf{Given:}
+\begin{itemize}
+\item $v_0 = 13.0$ m/s (upward)
+\item $a = -9.80$ m/s$^2$ (gravity)
+\item $t = 1.00$ s
+\end{itemize}
+
+\textbf{Find:}
+\begin{itemize}
+\item Position $y$ at 1.00 s
+\item Velocity $v$ at 1.00 s
+\end{itemize}
+
+\textit{Choose your equations wisely!}
+\end{exampleblock}
+\note{[THE CHALLENGE] Predict where a thrown rock will be\\\\
+[SAY] "You need TWO equations - one for position, one for velocity"\\\\
+[TIMING] 3-4 min SILENT work\\\\
+[CIRCULATE] Note who uses equation 4 for position, equation 3 for velocity\\\\
+[WATCH FOR] Negative sign on acceleration}
+\end{frame}
+
+\begin{frame}
+\frametitle{Compare: Gravity Problems}
+\textbf{Turn and talk (2 min):}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item Which equations did you use?
+\item How did you handle the negative sign for gravity?
+\item Is the rock still going up or coming down?
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\pause
+\alert{Name wheel:} Share your approach.
+\note{[TIMING] 2-3 min discussion\\\\
+[CIRCULATE] Listen for equation choices\\\\
+[CHECK] Name wheel\\\\
+[EXPECTED] Equation 4 for y, equation 3 for v\\\\
+[KEY QUESTION] How do you know if rock is going up or down? Check velocity sign!}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reveal: Rock Position and Velocity}
+\textbf{Self-correct in a different color:}
+
+\textbf{Position:} $y = y_0 + v_0 t + \frac{1}{2}at^2$
+
+\pause
+$$y = 0 + (13.0)(1.00) + \frac{1}{2}(-9.80)(1.00)^2 = \boxed{8.10 \text{ m}}$$
+
+\pause
+\textbf{Velocity:} $v = v_0 + at$
+
+\pause
+$$v = 13.0 + (-9.80)(1.00) = \boxed{3.20 \text{ m/s}}$$
+
+\pause
+\vspace{0.3cm}
+
+\textbf{Check:} Positive position (above starting point) and positive velocity (still going up). Makes sense!
+\note{[P0] "Self-correct"\\\\
+[P1] [ALGEBRA] "y equals 13 times 1 plus one-half times negative 9.8 times 1 squared equals 8.10 m"\\\\
+[P2] "Rock is 8.10 meters above starting point"\\\\
+[P3] "v equals 13 plus negative 9.8 times 1"\\\\
+[P4] [ANSWER] "3.20 m/s - positive means still going up, but slowing"\\\\
+[THE WONDER] You just predicted the future using 400-year-old equations}
+\end{frame}
+
+\section{Summary}
+
+\begin{frame}
+\frametitle{What You Now Know}
+\begin{block}{The Revelations}
+\begin{enumerate}
+\item Acceleration = rate of change of velocity (direction matters!) \pause
+\item $\bar{a} = \Delta v / \Delta t$ - the definition of acceleration \pause
+\item Five kinematic equations predict motion \pause
+\item Graphs reveal acceleration as slopes \pause
+\item $g = 9.80$ m/s$^2$ - Earth's gravitational acceleration \pause
+\item Choose equations based on knowns and unknowns
+\end{enumerate}
+\end{block}
+\note{[P0] "Six revelations today"\\\\
+[P1] "Acceleration is rate of velocity change"\\\\
+[P2] "Master equation: a-bar equals delta-v over delta-t"\\\\
+[P3] "Five kinematic equations for constant acceleration"\\\\
+[P4] "Graphs show acceleration as slopes"\\\\
+[P5] "g equals 9.80 - the constant of falling"\\\\
+[P6] "Problem-solving: match equation to variables"\\\\
+[THE WONDER] You can now predict motion like a physicist}
+\end{frame}
+
+\begin{frame}[shrink]
+\frametitle{Key Equations}
+\begin{align}
+\bar{a} &= \frac{\Delta v}{\Delta t} = \frac{v_f - v_0}{t_f - t_0} \\
+d &= d_0 + \bar{v}t \\
+\bar{v} &= \frac{v_0 + v_f}{2} \\
+v &= v_0 + at \\
+d &= d_0 + v_0 t + \frac{1}{2}at^2 \\
+v^2 &= v_0^2 + 2a(d - d_0) \\
+g &= 9.80 \text{ m/s}^2
+\end{align}
+\note{- Seven equations - these are your tools\\\\
+- Equation 1: definition of acceleration\\\\
+- Equations 2-6: kinematic equations for constant acceleration\\\\
+- Equation 7: gravitational acceleration\\\\
+- Know when to use each\\\\
+- Questions?}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework}
+\begin{center}
+\Large
+Complete the assigned problems\\[0.3cm]
+posted on the LMS
+\end{center}
+\note{[SAY] "Homework posted on LMS"\\\\
+[TIMING] Due date: check LMS\\\\
+[CHECK] Questions before we end?\\\\
+[TRANSITION] Next class: Chapter 4 Motion in Two Dimensions}
+\end{frame}
+
+\end{document}
