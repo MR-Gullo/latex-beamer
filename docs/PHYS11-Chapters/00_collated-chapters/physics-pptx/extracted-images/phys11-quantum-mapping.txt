@@ -1,0 +1,31 @@
+# Image extraction from 21-the-quantum-nature-of-light.pptx
+# Topic: quantum
+
+Slide 3: image3.jpg -> phys11-quantum-fig21-1.jpg
+  Alt: An image from the book Alice in Wonderland is shown. Alice is attending a tea party with the Mad Hatter and the White Rabbit.
+Slide 4: image4.jpg -> phys11-quantum-fig21-2.jpg
+  Alt: A graph plotting radiation intensity against wavelength is shown. On the graph, there are three lines, each one corresponding to the temperature of a different radiator. Each of the three lines curves sharply upward and then gradually back downward. This shows two things: First, for each temperature, there is energy emitted across the electromagnetic section. Second, there is a peak wavelength, where the radiation intensity is greatest. On the graph it can be seen that as temperatures get hotter, the peak wavelength shifts to the left of the visible spectrum.
+Slide 5: image5.jpg -> phys11-quantum-fig21-3.jpg
+  Alt: A graph plotting intensity of spectral radiation (or, loosely speaking, brightness) vs wavelength is shown. There is another line shown, called ‘Classical Theory.’ This line starts at the right of the graph and curves sharply upward and to the left. It appears to reach an infinite value around 1.2 micrometers.
+Slide 6: image6.jpg -> phys11-quantum-fig21-4.jpg
+  Alt: A photo of Max Planck sitting at a desk is shown. The photo is taken from his side and he appears to be reading a document.
+Slide 7: image7.jpg -> phys11-quantum-fig21-5.jpg
+  Alt: A picture of a lightmeter is shown. There is a clear bulb placed on top of a black base. Inside the bulb is a metal plate attached to a wire. The wire drops into the black base and is no longer visible to the viewer.
+Slide 8: image8.jpg -> phys11-quantum-fig21-6.jpg
+  Alt: A drawing is shown of a flashlight with a beam projected out of it. Within the beam are a series of ovals that have wavelengths drawn within them. Each of these ovals corresponds to a photon. Near some of the photons is written the equation E = hf  while near other photons is written the equation E' = hf' . The symbols f and f' correspond to different frequencies (or colors) of light. The visible white light from the flashlight is a result of the combination of these different frequencies.
+Slide 9: image9.jpg -> phys11-quantum-fig21-7.jpg
+  Alt: Four arrows representing ‘incoming radiation’ are shown striking a metal surface full of negative electrons. The metal surface is labeled ‘Sea of electrons inside the metal waiting to be set free.’ Leaving the metal surface are two new arrows, traveling upward and in the direction opposite the radiation strike. These arrows show the trajectory of two ejected electrons and are accompanied by the label ‘Electrons knocked out.’
+Slide 10: image10.jpg -> phys11-quantum-fig21-8.jpg
+  Alt: A graph shows the maximum kinetic energy of an electron plotted against the frequency of light. On the graph is a diagonal line, leaving the horizontal axis at a non-zero x-intercept labeled f0. The label f0 is accompanied with the equation f0 = BE/h. Also on the graph is the equation KEe = hf - BE. This equation explains the diagonal line, showing that as frequency increases, the electron's maximum kinetic energy does as well. However, this takes place only when the frequency is greater than f0, or BE/h.
+Slide 12: image11.jpg -> phys11-quantum-fig21-9.jpg
+  Alt: There is an image of a blue solar cell. The solar cell is square, with diagonal notches removed from each corner.
+Slide 13: image12.jpg -> phys11-quantum-fig21-10.jpg
+  Alt: There are two images shown. The left image is a drawing of a comet’s path around the sun. The comet’s path is shown with a black line, while the comet is drawn in orange for nine successive moments in time. In each comet drawing, the tail of the comet is seen pointing away from the sun. The right image is a photograph of a comet. In the image, the comet is seen with two tails: one bright white and one a faint blue.
+Slide 14: image13.jpg -> phys11-quantum-fig21-11.jpg
+  Alt: The image shows a collision between a photon of light and an electron. The photon of light is shown travelling downward and to the right toward a stationary electron, and then is shown rebounding upward and to the right after the drawn collision. The electron is shown stationary and the moving downward after the collision. Also in the image are the equations E = hf and E' = hf', which correspond to the energy of the photon before and after the collision. Near the electron is the equation KEe = E - E', showing the effect the collision has on the electron’s energy.
+Slide 15: image14.jpg -> phys11-quantum-fig21-12.jpg
+  Alt: There are two images shown. The image on the left is a drawing of a solar sail, which looks like a large parachute carrying a payload (the spacecraft). The solar sail is moving to the left. Blue arrows show photons from the sun moving from the right and striking the solar sail. The image on the right is an overhead photo of the very large solar sail unfurled. There are four people shown at the bottom of the picture for scale. They are approximately one-sixth of the width of the sail.
+Slide 16: image15.jpg -> phys11-quantum-fig21-13.jpg
+  Alt: An image of the NanoSail is shown. The sail is shown fully unfurled, with the satellite in the center. The width of the satellite is approximately one-eighth the width of the sail.
+Slide 17: image16.jpg -> phys11-quantum-fig21-14.jpg
+  Alt: There are two drawings shown. On the left is a drawing of light striking a barrier with two slits. As the light passes through the slits, it creates an interference pattern. The interference pattern projects onto a screen, where the terms max and min are used to show the locations of constructive and destructive wave interference. On the right is an enlarged drawing of a grain of sand. There is an arrow pointing to the grain of sand, with a picture of a photon at the other end of the arrow.

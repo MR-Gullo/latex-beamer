@@ -1,0 +1,85 @@
+# Image extraction from 5-motion-in-two-dimensions.pptx
+# Topic: motion-2d
+
+Slide 3: image3.jpg -> phys11-motion-2d-fig5-1.jpg
+  Alt: Billiard balls in two-dimensional motion after the initial shot.
+Slide 4: image4.jpg -> phys11-motion-2d-fig5-2.jpg
+  Alt: A map is shown over top x and y-axes. The origin is labeled Starting Point. The x-axis represents east and has a scale from zero to nine in increments of one. The y-axis represents north and has a scale from zero to five in increments of one. Lines show that a person walks nine blocks east and five blocks north. A displacement vector is plotted from the origin to the destination of nine, five on the axes.
+Slide 5: image5.jpg -> phys11-motion-2d-fig5-3.jpg
+  Alt: The diagram shows a vector along an x-axis with a magnitude of nine units and a direction of 0°. An unlabeled y-axis is also shown.
+Slide 6: image6.jpg -> phys11-motion-2d-fig5-4.jpg
+  Alt: The diagram shows a vector along an x-axis with a magnitude of nine units and a direction of 0°. A vertical vector is also shown at nine units with a height of five units. A y-axis is also shown with ten tick marks.
+Slide 7: image7.jpg -> phys11-motion-2d-fig5-5.jpg
+  Alt: The diagram shows a vector along an x-axis with a magnitude of nine units and a direction of 0°. A vertical vector is also shown at nine units with a height of five units. A y-axis is shown with ten tick marks. A resultant vector is drawn, forming a right triangle with the other two vectors. This vector is labeled D, has a magnitude of ten point three units, and forms a twenty-nine point one degree angle with the x-axis.
+Slide 8: image8.jpg -> phys11-motion-2d-fig5-6.jpg
+  Alt: Two vectors are shown. Vector B points upward at an angle. Vector negative B is parallel to vector B and points downward.
+Slide 9: image9.jpg -> phys11-motion-2d-fig5-7.jpg
+  Alt: Two diagrams are shown. Diagram a is an overhead view of two skaters, one on the left and one below, pushing on a third skater in the center. A force vector is shown on each of the pushing skaters pointing from the skater's shoulder to the skater in the center. A right triangle is drawn using the force vectors, with F tot as the hypotenuse, F one as the bottom leg, and F two as the right leg. Diagram b is a free body diagram with F one pointing to the right and F two pointing up. Both vectors have the same magnitude.
+Slide 10: image10.jpg -> phys11-motion-2d-fig5-8.jpg
+  Alt: Three displacement vectors are drawn on separate x-y axes. Vector A points upward from the origin and is twenty-five meters with an angle of forty-nine degrees. Vector B points upward from the origin and is twenty-three meters with an angle of fifteen degrees. Vector C points downward from the origin and is thirty-two meters with an angle of sixty-eight degrees.
+Slide 11: image11.jpg -> phys11-motion-2d-fig5-9.jpg
+  Alt: Three vectors, A, B, and C are shown. They form three sides of a polygon, with an x-axis forming the fourth side. The arrow of vector A touches the end of vector B and has an x-y-axis shown at the touching point. The arrow of vector B touches the end of vector C and has an x-y-axis shown at the touching point.
+Slide 12: image12.jpg -> phys11-motion-2d-fig5-10.jpg
+  Alt: Vectors A, B, C, and R form a four-sided figure, with vector R intersecting an x-axis. The magnitude of vector R is fifty meters and vector R forms a seven degree angle with the x-axis.
+Slide 13: image13.jpg -> phys11-motion-2d-fig5-11.jpg
+  Alt: Vectors A, B, C, and R form a four-sided figure, with vector R intersecting an x-axis. A ruler and a protractor are pictured below the figure. The magnitude of vector R is fifty meters and the direction of vector R is ninety degrees.
+Slide 14: image14.jpg -> phys11-motion-2d-fig5-12.jpg
+  Alt: Vectors A, B, C, and R are shown. Angle CR is against the origin of x and y-axes and vector R has a length of 50 centimeters. Vector R forms a seven degree angle with the x-axis. Vectors C and A form an angle, and vectors B and R form an angle.
+Slide 15: image15.jpg -> phys11-motion-2d-fig5-13.jpg
+  Alt: An x-y axis is shown for reference. Vector A points upward from the x-axis is twenty-seven point five meters, and has an angle of sixty-six degrees. Vector B points upward from the x-axis is thirty meters, and has an angle of one hundred twelve degrees.
+Slide 16: image16.jpg -> phys11-motion-2d-fig5-14.jpg
+  Alt: An x-y-axis is shown on the left for reference. On the right, vector negative B points downward and intersects the x-axis, forming an angle that measures sixty-eight degrees and a supplementary angle that measures one hundred twelve degrees.
+Slide 17: image17.jpg -> phys11-motion-2d-fig5-15.jpg
+  Alt: An x-y axis is shown on the left. On the right, vectors A, negative B, and R form a triangle. R and the x-axis form an angle with a measure of seven point five degrees. A minus B equals R and R equals twenty-three meters.
+Slide 18: image18.jpg -> phys11-motion-2d-fig5-16.jpg
+  Alt: A river is shown with a boat traveling across it. Three images of the boat are shown to indicate the boat's motion in diagonal path across the river from the bottom left to the upper right corner. Three vectors are drawn to form a right triangle. The hypotenuse intersects the path of the boat and is labeled V tot. The left leg of the triangle is labeled V boat, three point eight meters per second. The upper leg of the triangle is labeled V river at one point six one meters per second. An x-y axis is in the bottom left corner for reference.
+Slide 19: image19.jpg -> phys11-motion-2d-fig5-17.jpg
+  Alt: A right triangle is shown. The hypotenuse is labeled h, the vertical leg is labeled Y, and the horizontal leg is labeled X. The right angle is labeled with the angle symbol. The following formulas appear next to the triangle: sine angle equals y over h, cosine angle equals x over h, and tangent angle equals y over x.
+Slide 20: image20.jpg -> phys11-motion-2d-fig5-18.jpg
+  Alt: Vectors A, Ax, and Ay are shown. The vector A, with its tail at the origin of an x, y-coordinate system, is shown together with its x- and y-components, Ax and Ay. These vectors form a right triangle. The formula Ax plus Ay equals A is shown above the vectors.
+Slide 21: image21.jpg -> phys11-motion-2d-fig5-19.jpg
+  Alt: Vectors A x and A y form the legs of a right triangle and vector A forms the hypotenuse. Vector Ax is along an x-axis and vector Y is vertical and dashed. A x equals A times cosine angle. A y equals A times sine angle. A x plus A y equals A.
+Slide 22: image22.jpg -> phys11-motion-2d-fig5-20.jpg
+  Alt: A map is shown over top x and y-axes. The origin is labeled Starting Point. The x-axis represents east and has a scale from zero to nine in increments of one. The y-axis represents north and has a scale from zero to five in increments of one. Lines show that a person walks nine blocks east and five blocks north. A displacement vector is plotted from the origin to the destination of nine, five on the axes. The following label is next to the y-axis: A y equals A times sine angle, equals ten point three blocks times sine twenty-nine point one, equals five blocks north. The following label is next to the x-axis: A x equals A cosine angle, equals ten point three blocks times sine twenty-nine point one, equals nine blocks east.
+Slide 23: image23.jpg -> phys11-motion-2d-fig5-21.jpg
+  Alt: Vectors Ax and Ay form the legs of a right triangle and vector A forms the hypotenuse. Vectors Ax and Ay are dashed. The formula angle equals inverse tangent times Ay over Ax is inside the triangle. Vector A is labeled A equals the square root of Ax squared plus Ay squared.
+Slide 24: image24.jpg -> phys11-motion-2d-fig5-22.jpg
+  Alt: A compass is shown on the left. On the right, vectors A, B, and R form a triangle, with the vertex of AR at the origin of an x-y axis. The formula A plus B equals R is above the triangle.
+Slide 25: image25.jpg -> phys11-motion-2d-fig5-23.jpg
+  Alt: A compass is shown on the left. On the right, vectors A, B, and R form a triangle, with the vertex of AR at the origin of an x-y axis. The formula A plus B equals R is above the triangle. Dashed lines indicate vertical and horizontal components of each vector. Labels indicate locations for angle A and angle B.
+Slide 26: image26.jpg -> phys11-motion-2d-fig5-24.jpg
+  Alt: A compass is shown on the left. On the right, vectors A, B, and R form a triangle, with the vertex of AR at the origin of an x-y axis. The formula A plus B equals R is above the triangle. Dashed lines indicate vertical and horizontal components of each vector. Labels indicate locations for angle A and angle B. The formula Rx equals Ax plus Bx is below the x-axis. The formula Ry equals Ay plus By is next to the y-axis.
+Slide 27: image27.jpg -> phys11-motion-2d-fig5-25.jpg
+  Alt: Vectors A, B, and R form a triangle with vertex RA at the origin of an x y-axis. The following labels are included: angle (where R and A form an angle) equals thirty-six point six degrees, angle A equals twenty degrees, angle B equals sixty-three degrees, A equals fifty-three meters, B equals thirty-four meters, and A plus B equals R. A compass is shown in the bottom corner for reference.
+Slide 28: image28.jpg -> phys11-motion-2d-fig5-26.jpg
+  Alt: A black and white photograph of a meteorologist is shown. The meteorologist is standing in front of a weather map with a television camera pointing at him.
+Slide 29: image29.jpg -> phys11-motion-2d-fig5-27.jpg
+  Alt: A cannonball is sitting on a flat surface. Dotted lines show the projectile motion of a cannon ball. Dotted line A shows the ball dropping vertically. Dotted line B shows a curved path. Dotted line C shows the ball moving horizontally.
+Slide 30: image30.jpg -> phys11-motion-2d-fig5-28.jpg
+  Alt: A boy is kicking a soccer ball. A curved line shows the ball's motion. A right triangle is drawn with vectors using an x-y axis. The hypotenuse is labeled d, the vertical leg is labeled y and the horizontal leg is labeled x.
+Slide 32: image32.jpg -> phys11-motion-2d-fig5-29.jpg
+  Alt: Four related diagrams of projectile motion are show, a, b, c, and d. Diagram a shows two-dimensional curved motion, vx and vy, along an x-y axis and includes the formulas V y equals negative V oy and angle equals negative angle o. Diagram b shows horizontal motion, vx. Diagram c shows upward and downward vertical velocity, vy. And diagram d shows the combination of vx, vy, and v, forming a right triangle.
+Slide 33: image33.jpg -> phys11-motion-2d-fig5-30.jpg
+  Alt: The diagram shows the trajectory of a fireworks shell. An x-axis is labeled x, a y-axis is labeled h, and a vector, labeled V o, points upward from the axis origin. An angle is formed by the vector and the x-axis with a measure of seventy-five degrees.
+Slide 34: image34.jpg -> phys11-motion-2d-fig5-31.jpg
+  Alt: A volcano is shown with labels illustrating the projectile motion of rock shooting out of the volcano. Vector v o equals twenty-five meters per second and points from the volcano opening upward. Vector v curves downward to the ground and forms an angle of thirty-five degrees with a horizontal plane at the height of the volcano opening. The distance between the horizontal plane and the ground is labeled as negative twenty meters.
+Slide 35: image35.jpg -> phys11-motion-2d-fig5-32.jpg
+  Alt: Two trajectory diagrams are shown. Diagram a shows three trajectories that curve upward then downward. They are labeled as follows: thirty meters per second and ninety-eight point one meters; forty meters per second and one hundred sixty-three meters; fifty meters per second and two hundred fifty-five meters. Diagram b shows three trajectories that curve upward then downward. They are labeled as follows: fifteen degrees and one hundred twenty-eight meters; forty-five degrees and two hundred fifty-five meters; seventy-five degrees and one hundred twenty-eight meters. The diagram also includes the formula v o equals fifty meters per second.
+Slide 36: image36.jpg -> phys11-motion-2d-fig5-33.jpg
+  Alt: A box is shown sitting on a floor. A vector labeled f points to the left from the area where the bottom of the box meets the floor. A zoom-in diagram shows the bottom surface of the box and the surface of the floor as rough.
+Slide 37: image37.jpg -> phys11-motion-2d-fig5-34.jpg
+  Alt: A diagram shows perpendicular and horizontal components of weight. The weight is on an inclined plane that slopes downward to the right.
+Slide 38: image38.jpg -> phys11-motion-2d-fig5-35.jpg
+  Alt: A skier is moving down a slope with an angle measure of twenty-five degrees to the ground. Force vectors are shown: N points upward from the skier, f points to the right of the skis, w points at a downward left angle from the skiers' feet, forming an angle with vector w that has a measure of twenty-five degrees. A free-body diagram illustrates the right triangle formed by these vectors.
+Slide 39: image39.jpg -> phys11-motion-2d-fig5-36.jpg
+  Alt: A skier is moving down a slope with an angle measure of twenty-five degrees to the ground. Force vectors are shown: N points upward from the skier, f points to the right of the skis, w points at a downward left angle from the skiers' feet, forming an angle with vector w that has a measure of twenty-five degrees. A free-body diagram illustrates the right triangle formed by these vectors.
+Slide 40: image40.jpg -> phys11-motion-2d-fig5-37.jpg
+  Alt: A drawing is shown of hands holding and flicking an upright ruler. A double-ended arrow is shown over the ruler and a label Equilibrium position points to the upright position of the ruler.
+Slide 41: image41.jpg -> phys11-motion-2d-fig5-38.jpg
+  Alt: Four diagrams are shown, side-by-side, labeled a, b, c, d, and e. They show the sideways motion of a ruler that has been flicked. The vertical position of the ruler is labeled equilibrium position. A right-pointing force vector is shown on diagram a. A right-facing velocity vector and F equals zero is shown on b. A left-pointing force vector is shown on diagram c. A left-facing velocity vector and F equals zero is shown on d. A right-pointing force vector is shown on diagram e.
+Slide 42: image42.jpg -> phys11-motion-2d-fig5-39.jpg
+  Alt: Five diagrams, a, b, c, d, and e are shown. They show an object attached to a spring sliding on a frictionless surface. Diagram a shows a left-pointing force vector and the following labels: v equals zero, x equals zero, x equals x, k. Diagram b has the following labels: F equals zero, negative v max, x equals zero. Diagram c shows a right-pointing force vector and the following labels: v equals zero, x equals zero, x equals negative x. Diagram d has the following labels: F equals zero, positive v max, x equals zero. Diagram e shows a left-pointing force vector and the following labels: v equals zero, x equals zero, x equals x. Free-body diagrams illustrate the forces acting on each system.
+Slide 43: image43.jpg -> phys11-motion-2d-fig5-40.jpg
+  Alt: A pendulum is shown with a small-diameter bob and a string that has a very small mass but is strong enough not to stretch. The linear displacement from equilibrium is labeled s, the length of the arc. Also shown are the forces on the bob, which result in a net force of  negative m times g sine angle toward the equilibrium position.
+Slide 44: image44.jpg -> phys11-motion-2d-fig5-41.jpg
+  Alt: A side view of the back end of a blue compact car is shown. The car is sitting on black asphalt.

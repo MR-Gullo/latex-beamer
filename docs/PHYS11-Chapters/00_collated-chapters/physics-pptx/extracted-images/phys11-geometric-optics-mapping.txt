@@ -1,0 +1,75 @@
+# Image extraction from 16-mirrors-and-lenses.pptx
+# Topic: geometric-optics
+
+Slide 3: image3.jpg -> phys11-geometric-optics-fig16-1.jpg
+  Alt: A scientist is holding a flashlight and is bending over a mirror to examine its surface. The mirror is reflecting the image of the scientist and his fellow coworkers.[/Figure][S1-LO1]
+Slide 4: image4.jpg -> phys11-geometric-optics-fig16-2.jpg
+  Alt: In view (a), a cartoon image of Earth contains a house superimposed over North America. The Sun is included above and to the right of Earth. An arrow points from the Sun’s rays to a series of lines, which represent Earth’s atmosphere, directly above the Earth. In view (b), a woman is looking out of a window at her car. Arrows show the Sun’s rays bouncing off the car and traveling as light toward the woman.
+Slide 5: image5.jpg -> phys11-geometric-optics-fig16-3.jpg
+  Alt: A smooth, flat reflective surface is shown. A dotted line drops from the top of the figure and ends when it reaches the smooth surface. This line is perpendicular to the surface; there is a 90° angle between the surface and the perpendicular line. To the left of the perpendicular line, a ray (called an “incident ray” strikes the surface at a 45° angle. This ray—the “reflective ray”—is reflected off the surface to the right of the perpendicular line, again at a 45° angle. The angle between the incident ray and the perpendicular line is θi; the angle between the perpendicular line and the reflected ray is θr.
+Slide 6: image6.jpg -> phys11-geometric-optics-fig16-4.jpg
+  Alt: A rough surface, such as the ground, is shown. Multiple rays are striking the uneven surface and are bouncing off the ground in different directions.
+Slide 7: image7.jpg -> phys11-geometric-optics-fig16-5.jpg
+  Alt: A flat mirror is placed perpendicular to our field of view. We see the side of the mirror. A bottle is placed to the left of the mirror at distance do to the mirror. Two rays originate from the bottle, strike the mirror, and reflect to an eye that is looking at the mirror. To the right of the mirror, a virtual image of the bottle is included as a backward extrapolation of the path of the rays from the eye to the mirror. The bottle to the right of the mirror is at distance di from the mirror.
+Slide 8: image8.jpg -> phys11-geometric-optics-fig16-6.jpg
+  Alt: This black-and-white still shot shows Charlie Chaplin and a thief in a maze of mirrors. Images of Chaplin and the thief appear in mirrors, within mirrors, within mirrors.
+Slide 9: image9.jpg -> phys11-geometric-optics-fig16-7.jpg
+  Alt: The Hall of Mirrors at Versailles features an al fresco and gilded domed ceiling; many large, hanging crystal chandeliers; exquisite painted panels on the walls; and mirrors—lots and lots of mirrors—to give an illusion of space. Tourists are pictured roaming the Hall.
+Slide 10: image8.jpg -> phys11-geometric-optics-fig16-8.jpg
+  Alt: A grayscale image of Charlie Chaplain in a house of mirrors is shown. There are infinite images of him, His image in the foreground has his hat tilted to the left.
+Slide 11: image10.jpg -> phys11-geometric-optics-fig16-9.jpg
+  Alt: There are two curved mirrors in this figure. In view (a), the front of a concave mirror is struck by rays of light that originate in front of the mirror. The rays reflect off the concave mirror and converge at varying angles to a point F in front of the mirror. The distance from F to the mirror is f. In view (b), the back of a convex mirror is struck by rays of light that diverge off the back of the mirror at varying angles. If one were to extrapolate the diverging rays backward, to the front of the mirror, the backward-extrapolated rays meet at point F; however, the distance from the back of the mirror to F is a negative f.
+Slide 12: image11.jpg -> phys11-geometric-optics-fig16-10.jpg
+  Alt: View (a) shows a concave mirror to the right with a lit candle to the left placed outside the focal point. It is a real image. View (b) shows a concave mirror to the right with a lit candle to the left placed inside the focal point. This image is virtual. View (c) shows a convex mirror to the right with a lit candle to the left. The image is virtual.
+Slide 14: image13.jpg -> phys11-geometric-optics-fig16-11.jpg
+  Alt: The image shows a woman taking a picture in front of a convex mirror.
+Slide 15: image14.jpg -> phys11-geometric-optics-fig16-12.jpg
+  Alt: There is an eye to the right of the diagram. The eye represents the focal plane. Moving from right to left, in front of the eye, there is a perforated primary mirror and a secondary mirror. The end of the telescope is to the left of the figure. Rays enter the end of the telescoped, hit the primary mirror, bounce backward to the secondary mirror, bounce through the hole (perforation) in the primary mirror, and travel to the eye.
+Slide 16: image15.jpg -> phys11-geometric-optics-fig16-13.jpg
+  Alt: This diagram shows a car headlight, also called a spotlight, which has a light bulb surrounded by a parabolic mirror. The mirror is bowl shaped, with the bulb sitting at the center of recessed side of the bowl. Arrows show that light rays from the bulb extend out in all directions and then bounce off of the mirror so that all of the light rays travel straight out from the headlight
+Slide 17: image16.jpg -> phys11-geometric-optics-fig16-14.jpg
+  Alt: This photo depicts a long length of parabolic trough deflectors angled toward the sun.
+Slide 18: image17.jpg -> phys11-geometric-optics-fig16-15.jpg
+  Alt: This figure shows an old-fashioned key inside the focal point of a concave mirror. All the variables used for calculations involving curved mirrors depicted.
+Slide 19: image18.jpg -> phys11-geometric-optics-fig16-16.jpg
+  Alt: A man is looking at the corner of a fish tank. Although the fish is directly in his line of sight, he sees the fish to the right and left of the corner of the fish tank.
+Slide 20: image19.jpg -> phys11-geometric-optics-fig16-17.jpg
+  Alt: In view (a), a lawnmower is on a sidewalk and is approaching a strip of grass, which is perpendicular to the sidewalk, at angle θ1. As the right front wheel of the lawnmower hits the grass, the path of the angle, θ1, moves closer to the perpendicular. In view (b), a lawnmower is on the grass and is approaching the sidewalk, which is perpendicular to the grass, at angle θ2. As the left front wheel of the lawnmower hits the sidewalk, the path of the angle, θ2, moves farther from the perpendicular.
+Slide 21: image20.jpg -> phys11-geometric-optics-fig16-18.jpg
+  Alt: In view (a), a ray of pure light (denoted by an arrow) hits the edge of a glass prism at an angle. As demonstrated by the arrow, this light is refracted as it enters the prism and as it exits the prism. In view (b), white light (also denoted by an arrow) hits the edge of a glass prism at an angle. In this case the ray of light disperses, as shown by two arrows originating where the white light enters the prism. When the rays pass through the prism, the angle widens and a rainbow of light is seen exiting the prism.
+Slide 22: image21.jpg -> phys11-geometric-optics-fig16-19.jpg
+  Alt: A water droplet is depicted in this figure. A ray of sunlight, denoted by an arrow, hits drop of water and disperses at its point of entry, denoted by the arrow splitting in two. These two rays are then reflected off the back of the droplet at two different angles and are dispersed again as they leave the droplet, creating a rainbow.
+Slide 23: image22.jpg -> phys11-geometric-optics-fig16-20.jpg
+  Alt: Views (a) through (c) depict how light behaves when light strikes a boundary and is reflected and refracted.
+Slide 24: image23.jpg -> phys11-geometric-optics-fig16-21.jpg
+  Alt: A sketch of a diamond shows a ray of light entering the diamond and bouncing of various facets of the diamond at an angle less than the critical angle.
+Slide 25: image24.jpg -> phys11-geometric-optics-fig16-22.jpg
+  Alt: A pair of binoculars is shown. The right side is a cutout view of the internal workings of the binoculars. A light ray (depicted by an arrow) enters the binoculars, reflects off two prisms (corner reflectors) to transmit the image, which exits the eyepiece.
+Slide 26: image25.jpg -> phys11-geometric-optics-fig16-23.jpg
+  Alt: View (a) shows a cross-section of a fiber optic cable that consists of a core (n1) and thin cladding (n2). A light ray (depicted by an arrow) enters the cable/fiber and reflects off various surfaces. View (b) shows a cross-section of a bent thin fiber and a light ray that reflects off the sides and around corners.
+Slide 27: image26.jpg -> phys11-geometric-optics-fig16-24.jpg
+  Alt: A sketch of an endoscope shows the eyepiece attached to an optic tube.
+Slide 28: image27.jpg -> phys11-geometric-optics-fig16-25.jpg
+  Alt: A drawing on the left side of the figure depicts a convex lens with three parallel light rays (labeled 1, 2, and 3 from top to bottom) passing through the lens from the left and converging to the right of the lens at F. After passing through F, the light rays are flipped from top to bottom (3, 2, 1). The figure on the right is an expanded view of the figure on the left.
+Slide 29: image28.jpg -> phys11-geometric-optics-fig16-26.jpg
+  Alt: In this schematic, parallel rays of light (rays 1, 2, and 3, top to bottom) enter a convex lens and diverge away from the axis. These diverging rays are labeled 1, 2, and 3 (top to bottom). Another schematic shows an expanded view of ray 1.
+Slide 30: image29.jpg -> phys11-geometric-optics-fig16-27.jpg
+  Alt: This series of drawings shows a woman standing to the left of a lens. Rays originate from the top of her head and pass through the lens at various angles to create a real image on the other side of the lens.
+Slide 32: image30.jpg -> phys11-geometric-optics-fig16-28.jpg
+  Alt: These two schematics, (a) and (b), are a visual depiction of cases 1 through 3 presented in Three Types of Images Formed by Lenses.
+Slide 33: image31.jpg -> phys11-geometric-optics-fig16-29.jpg
+  Alt: In view (a), moving from left to right, there is a tree (which is a real final image), an objective, an eyepiece, and an eye. Incoming parallel rays of light pass through the objective (which is convex) and the eyepiece (which is concave) to the eye. In view (b), moving from left to right, there is an inverted tree (which is a magnified final image), an objective and an eyepiece (both of which are convex), and an eye. Incoming rays of light pass through the first objective and converge, then pass through the second lens (the eyepiece) to the eye.
+Slide 34: image32.jpg -> phys11-geometric-optics-fig16-30.jpg
+  Alt: The schematic depicts the inner workings of a microscope.
+Slide 35: image33.jpg -> phys11-geometric-optics-fig16-31.jpg
+  Alt: View (a) is a sketch of a convex lens. White light, originating at a single point to the left, diverges and enters the lens. The rays pass through the lens and refract to produce a chromatic aberration. View (b) is a sketch of a multilense system in which parallel rays of white light to the left of the system pass through a convex lens, then a concave lens, to converge at a point that corrects the chromatic aberration.
+Slide 36: image34.jpg -> phys11-geometric-optics-fig16-32.jpg
+  Alt: This schematic is a cross-section of the various parts of the eye.
+Slide 37: image35.jpg -> phys11-geometric-optics-fig16-33.jpg
+  Alt: This schematic shows a cross-section of an eyeball. An upright tree is to the left of the eye. Rays 1 and 2 come from the top of the tree; rays 3 and 4 originate from the bottom of the tree. The rays enter the eyeball, pass through the components of the eye, and produce an image of an inverted tree.
+Slide 38: image36.jpg -> phys11-geometric-optics-fig16-34.jpg
+  Alt: View (a) shows schematic cross-sections of the eye indicative of myopia. View (b) show schematic cross-sections of the eye indicative of hyperopia.
+Slide 39: image37.jpg -> phys11-geometric-optics-fig16-35.jpg
+  Alt: View (a) shows a schematic cross-section of the eye and a concave lens that corrects for nearsightedness. View (b) shows a schematic cross-section of the eye and a convex lens that corrects for farsightedness.
+Slide 40: image38.jpg -> phys11-geometric-optics-fig16-36.jpg
+  Alt: The example is illustrated and depicts values of f = 0.50 m, do = 0.75 m, and di = 1.50 m.

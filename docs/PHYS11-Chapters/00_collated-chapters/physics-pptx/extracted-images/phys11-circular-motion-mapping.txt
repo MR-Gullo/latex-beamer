@@ -1,0 +1,25 @@
+# Image extraction from 6-circular-and-rotational-motion.pptx
+# Topic: circular-motion
+
+Slide 3: image3.jpg -> phys11-circular-motion-fig6-1.jpg
+  Alt: The picture is a race car with large wheels turning on a track.
+Slide 4: image4.jpg -> phys11-circular-motion-fig6-2.jpg
+  Alt: The diagram shows a picture of a CD with about an eighth of the shiny surface peeled away to display the inside of the CD with pits (dots) arranged in lines from the center. An angle theta is marked from one line of dots to another.
+Slide 5: image5.jpg -> phys11-circular-motion-fig6-3.jpg
+  Alt: The diagram shows a circle with the center marked O, a radius r ending on the circumference at A, an arc change of s starting at A and ending at B. The angle for the arc is change of theta. A formula to the right of the circle says change of theta is equal to change of s divided by r.
+Slide 6: image6.jpg -> phys11-circular-motion-fig6-4.jpg
+  Alt: The picture shows a circle with a radius r2 going from the center, through a point 1 half-way on the radius and point 2 on the circumference. The distance from center to point 1 is labeled r1. A second radius line is drawn with an angle of change in theta. The arc from point 1 to the second radius is labeled change s1. The arc at point 2 is labeled change s2. There are two formulas to the right of the diagram: theta is equal to change of s1 over r1 and theta is equal to change of s2 over r2.
+Slide 7: image7.jpg -> phys11-circular-motion-fig6-5.jpg
+  Alt: The diagram shows an illustration of the front part of a car. The diagram shows an arrow on the wheel pointing clockwise and labeled omega (angular velocity). There is a green arrow pointing toward the front of the car labeled v (velocity). The radius of the wheel is labeled r. To the right of the wheel is an equation v equals r times omega.
+Slide 8: image8.png -> phys11-circular-motion-fig6-6.jpg
+  Alt: The figure shows an illustration of a vinyl record with an arrow omega (angular velocity) pointing in a clockwise direction. There are two lines for the radius, marked r, one going from the center up and the other going from the center to the right. There are three flies on the record. One is positioned at the top of the record on the vertical radius. A v (velocity) arrow points to the right. A second fly is half-way around the circumference toward the horizontal radius and an arrow v is pointing tangential to the fly. The third fly is on the circumference at the horizontal radius and an arrow v is pointing down.
+Slide 9: image9.jpg -> phys11-circular-motion-fig6-7.jpg
+  Alt: The diagram shows a formula: change in v is equal to v2 minus v1. There are three rays positioned on a triangle with points P, Q, and R. The ray between P and Q is labeled v1. The ray between P and R is labeled v2 and the ray opposite P between Q and R is labeled change in v. Below the formula and triangle is a circle with center A and two radii labeled r with the angle between them labeled change in theta. The points on the circumference for the two radii are labeled B and C with a line segment of change in r indicated for the distance between the two points. The arc going from B to C along the circumference is labeled change of s and the velocity arrow at point B is labeled v1 and at C is labeled v2.
+Slide 10: image10.jpg -> phys11-circular-motion-fig6-8.jpg
+  Alt: The figure shows a semicircle with an arrow indicating a counterclockwise Path with radius labeled r, and arrow pointing from the outside of the circle towards the radius arrow. The arrow opposite the radius is labeled large r and has an f indicating force. The arrow tangential to the circle between the radius and large r arrows is labeled v (velocity). Below the first semicircle is a formula: f equals Fc is parallel to ac since Fc equals m times a alpha. Another semicircle with the same directional path is drawn below formula with a radius r prime, velocity v, large Fc pointing toward the r prime radius arrow and a label below the large Fc showing smaller r prime and same v.
+Slide 11: image11.jpg -> phys11-circular-motion-fig6-9.jpg
+  Alt: The diagram shows a picture of an ice skater with an arrow pointing around her leg indicating that she is spinning in a counterclockwise direction.
+Slide 14: image14.jpg -> phys11-circular-motion-fig6-10.jpg
+  Alt: The figure shows a photograph of a dark tornado funnel cloud touching the ground and kicking up a lot of debris.
+Slide 15: image15.jpg -> phys11-circular-motion-fig6-11.jpg
+  Alt: The figure shows an illustration of a merry-go-round with a radius of r and a man pushing on a bar on the circumference with an arrow indicating a force of F. To the right of the diagram, it is noted that F is perpendicular to r for maximum alpha.

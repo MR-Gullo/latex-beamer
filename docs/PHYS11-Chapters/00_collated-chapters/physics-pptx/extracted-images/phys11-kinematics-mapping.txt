@@ -1,0 +1,45 @@
+# Image extraction from 2-motion-in-one-dimension.pptx
+# Topic: kinematics
+
+Slide 3: image3.jpg -> phys11-kinematics-fig2-1.jpg
+  Alt: A photograph shows a maglev train traveling past an airport.
+Slide 4: image4.jpg -> phys11-kinematics-fig2-2.jpg
+  Alt: A photograph of an airplane flying in an upward direction is shown. The sky is partly cloudy.
+Slide 5: image5.jpg -> phys11-kinematics-fig2-3.jpg
+  Alt: A painting of Galileo Galilei is shown.
+Slide 6: image6.jpg -> phys11-kinematics-fig2-4.jpg
+  Alt: A drawing is shown of a house on the left facing a school on the right. A vector between points from the house to the school is labeled d o on the left and d f on the right. A car is shown driving from the house to the school.
+Slide 7: image7.jpg -> phys11-kinematics-fig2-5.jpg
+  Alt: A diagram is shown of a house on the left labeled home and another house on the right labeled Friend's house. The driveways of the houses are facing each other and a curvy road connects the driveways. A car is on the curvy road about half-way between the two houses.
+Slide 8: image8.jpg -> phys11-kinematics-fig2-6.jpg
+  Alt: A drawing is shown of a house on the left facing a school on the right. The distance between the two is labeled five miles. A double-arrow vector between the house and the school is labeled do on the left and df on the right. The equation change in d total equals zero is shown below the vector.
+Slide 9: image9.jpg -> phys11-kinematics-fig2-7.jpg
+  Alt: An image of the Mars Climate Orbiter is shown hovering above Mars.
+Slide 10: image10.jpg -> phys11-kinematics-fig2-8.jpg
+  Alt: A drawing is shown of a house on the left and a store on the right. The distance between the two is labeled three kilometers. A double-arrow vector between the house and the store is labeled with the equation change in d total equals zero.
+Slide 11: image11.jpg -> phys11-kinematics-fig2-9.jpg
+  Alt: A drawing of an airplane facing to the right is shown, and is set in quadrant one of a coordinate plane. The x-axis is labeled df and then do. The distance between df and do is labeled with a left-pointing vector, change in d total. Four other vectors are shown below the airplane. Vector change in d a points to the left and is short. Vector change in d b points to the left and is also short. Vector change in d c points to the right and is short. Vector change in d d points to the left and is longer.
+Slide 12: image12.jpg -> phys11-kinematics-fig2-10.jpg
+  Alt: A line graph is shown. The plotted line has a positive slope. The point of intersection with the y-axis is labeled intercept, b. The distance between the graphed line and the x-axis at the intercept is also labeled b. The line is labeled with the equation y equals m x plus b. The equation slope equals rise over run equals change in x over change in y equals m is also shown.
+Slide 13: image13.jpg -> phys11-kinematics-fig2-11.jpg
+  Alt: A line graph of position versus time is shown. The scale on the x-axis is from zero to twelve in increments of one, and is labeled time in minutes. The scale on the y-axis is from zero to twelve in increments of one and is labeled position in kilometers. A line of the equation y equals point five x is graphed and ends at ten minutes.
+Slide 14: image14.jpg -> phys11-kinematics-fig2-12.jpg
+  Alt: A line graph is shown. The x-axis is labeled time in seconds and has a scale from zero to eight in increments of one. The y-axis is labeled position, d, in meters and has a scale from zero to two thousand four hundred in increments of four hundred. A line is plotted that intersects the following data points: zero, four hundred (labeled d 0 equals four hundred), point five, five hundred twenty-five; and six point four, two thousand (labeled y equals d o plus bar over v times t). The line is labeled Slope equals bar over v equals change in d over change in t. The distance between points point five, five hundred twenty-five and six point four, two thousand is labeled change in t. The distance between points six point four, five hundred twenty-five and six point four, two thousand is labeled change in d.
+Slide 15: image15.jpg -> phys11-kinematics-fig2-13.jpg
+  Alt: A line graph titled Jet Car Displacement is shown. The x-axis is labeled time, t, in seconds and has a scale from zero to forty on increments of ten. The y-axis is labeled displacement, x, in meters and has a scale from zero to three thousand five hundred in increments of five hundred. The following approximate data points are plotted, resulting in a line that curves upward: eight, two hundred fifty; ten, five hundred; fifteen, one thousand; twenty, one thousand five hundred; twenty-five, two thousand; thirty, three thousand. A right triangle is drawn at points eight, two hundred fifty; twelve, two hundred fifty, and twelve seven hundred fifty. The legs are labeled change in tp and change in dp. Point ten, five hundred is labeled P. Another right triangle is drawn at points twenty, one thousand five hundred; thirty, one thousand five hundred, and thirty, three thousand. The legs are labeled change in tq and change in dq. Point twenty-five, two thousand is labeled Q.
+Slide 16: image16.jpg -> phys11-kinematics-fig2-14.jpg
+  Alt: A photograph of a United States Air Force jet car is shown speeding down a track. Smoke is billowing from the back end.
+Slide 17: image17.jpg -> phys11-kinematics-fig2-15.jpg
+  Alt: A line graph titled Position versus Time is shown. The x-axis is labeled time in minutes and has a scale from zero to twenty in increments of one. The y-axis is labeled position, d, in kilometers and has a scale from zero to twelve in increments of one. The line intersects the following data points to form a line that slopes upward and then downward: zero, zero; two, one; four, two; ten, five; twelve, four; fourteen, three; twenty, zero.
+Slide 18: image18.jpg -> phys11-kinematics-fig2-16.jpg
+  Alt: A graph that shows time in minutes on the x-axis and velocity in kilometers per minute on the y axis. A horizontal line is show at a velocity of 0.5 that runs from 0 to 10 minutes. Another horizontal line is shown at a velocity of –0.5 that runs from 10 to 20 minutes.
+Slide 19: image19.jpg -> phys11-kinematics-fig2-17.jpg
+  Alt: A line graph titled Jet Car Displacement is shown. The x-axis is labeled time, t, in seconds and has a scale from zero to forty on increments of ten. The y-axis is labeled displacement, x, in meters and has a scale from zero to three thousand five hundred in increments of five hundred. The following approximate data points are plotted, resulting in a line that curves upward: eight, two hundred fifty; ten, five hundred; fifteen, one thousand; twenty, one thousand five hundred; twenty-five, two thousand; thirty, three thousand. A right triangle is drawn at points eight, two hundred fifty; twelve, two hundred fifty, and twelve seven hundred fifty. The legs are labeled change in tp and change in dp. Point ten, five hundred is labeled P. Another right triangle is drawn at points twenty, one thousand five hundred; thirty, one thousand five hundred, and thirty, three thousand. The legs are labeled change in tq and change in dq. Point twenty-five, two thousand is labeled Q.
+Slide 20: image20.jpg -> phys11-kinematics-fig2-18.jpg
+  Alt: A line graph titled Jet Car Velocity is shown. The x-axis is labeled time, t, in seconds and has a scale from zero to forty on increments of ten. The y-axis is labeled velocity, v, in meters per second and has a scale from zero to one hundred eighty in increments of twenty. A straight line with a positive slope is plotted that intersects the following approximate points: zero, eighteen; ten, sixty (labeled P); fifteen, ninety; twenty, one hundred twenty; twenty five, one hundred fifty (labeled Q); thirty, one hundred sixty. Slope equals a is shown above the graphed lined.
+Slide 21: image21.jpg -> phys11-kinematics-fig2-19.jpg
+  Alt: A line graph titled Jet Car Velocity is shown. The x-axis is labeled time, t, in seconds and has a scale from zero to eighty on increments of ten. The y-axis is labeled velocity, v, in meters per second and has a scale from one hundred sixty to two hundred sixty in increments of ten. The following approximate data points are plotted and connected to form a line that curves upward, and then becomes flat: zero, one hundred sixty five; ten, two hundred ten; twenty, two hundred thirty; thirty, two hundred forty; forty, two hundred forty-five; fifty, two hundred forty-five; sixty, two hundred forty-five; seventy, two hundred forty-five. A right triangle is drawn, with a hypotenuse that intersects points twenty, two hundred thirty and thirty, two hundred forty. The bottom leg of the triangle has ends at points zero, two hundred ten and fifty, two hundred ten and is labeled change in t. The upright leg has ends at points fifty, two hundred ten and fifty, two hundred sixty and is labeled change in v.
+Slide 22: image22.jpg -> phys11-kinematics-fig2-20.jpg
+  Alt: no alt text
+Slide 23: image22.jpg -> phys11-kinematics-fig2-21.jpg
+  Alt: no alt text

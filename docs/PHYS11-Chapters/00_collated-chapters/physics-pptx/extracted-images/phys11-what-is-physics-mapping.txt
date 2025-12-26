@@ -1,0 +1,61 @@
+# Image extraction from 1-what-is-physics.pptx
+# Topic: what-is-physics
+
+Slide 3: image3.jpg -> phys11-what-is-physics-fig1-1.jpg
+  Alt: The elliptical-shaped Andromeda galaxy is shown.
+Slide 4: image4.jpg -> phys11-what-is-physics-fig1-2.jpg
+  Alt: A common smart phone with a GPS function is shown.
+Slide 5: image5.jpg -> phys11-what-is-physics-fig1-3.jpg
+  Alt: A photograph of Stonehenge shows large rocks sitting upright and other laying across the upright rocks. Stonehenge functions as an ancient astronomical observatory, with certain rocks in the monument aligning with the position of the Sun during the summer and winter solstices. Other rocks align with the rising and setting of the Moon during certain days of the year.
+Slide 6: image6.jpg -> phys11-what-is-physics-fig1-4.jpg
+  Alt: An image of Earth in outer space sitting in a mesh net is shown. The mesh is pushed downward by the mass of Earth and arrows indicate that Earth is spinning. The image illustrates Einstein’s theory of relativity describes space and time as an interweaved mesh.
+Slide 7: image7.jpg -> phys11-what-is-physics-fig1-5.jpg
+  Alt: An image of gold taken by a scanning tunneling microscope shows individual gold atoms.
+Slide 8: image8.jpg -> phys11-what-is-physics-fig1-6.jpg
+  Alt: A photograph shows a large collider, called the Fermilab, with a long tube that allows subatomic particles to be accelerated.
+Slide 9: image9.jpg -> phys11-what-is-physics-fig1-7.jpg
+  Alt: A small, counter-top microwave oven is shown. Microwave ovens use electromagnetic waves to heat food.
+Slide 10: image10.jpg -> phys11-what-is-physics-fig1-8.jpg
+  Alt: An MRI image of a brain is shown. This type of photography uses electromagnetic radiation to produce images.
+Slide 11: image11.jpg -> phys11-what-is-physics-fig1-9.jpg
+  Alt: A group of onion cells is shown. Each cell has a visible cell wall and nucleus.
+Slide 12: image12.jpg -> phys11-what-is-physics-fig1-10.jpg
+  Alt: An image of the Rosetta spacecraft is shown. It has large solar panels and is hovering over a comet.
+Slide 13: image13.jpg -> phys11-what-is-physics-fig1-11.jpg
+  Alt: Two diagrams are shown. The diagram on the left illustrates the path of the Voyager 2 spacecraft starting at Earth on August 20th, 1977. The following labels describe the path: Jupiter on July 9th, 1979, Saturn on August 25th, 1981, Uranus on January 24th, 1986, and Neptune on August 25th, 1989. The diagram on the right illustrates the Voyager 1 space probe.
+Slide 14: image14.jpg -> phys11-what-is-physics-fig1-12.jpg
+  Alt: A drawing of an electron cloud model shows an atom with a nucleus and predicted geometry and shape of areas where electrons surround the nucleus.
+Slide 15: image15.jpg -> phys11-what-is-physics-fig1-13.jpg
+  Alt: A person is standing in front of a map that has cable as units. The person is confused and is wondering how big a cable is.
+Slide 16: image16.jpg -> phys11-what-is-physics-fig1-14.jpg
+  Alt: A shining flashlight is placed over top a meter stick to illustrate that the meter is defined as the distance light travels in 1/299,792,458 of a second through a vacuum.
+Slide 17: image17.jpg -> phys11-what-is-physics-fig1-15.jpg
+  Alt: A photograph shows an atomic clock. The image is taken looking downward from the top of an atomic clock.
+Slide 18: image18.jpg -> phys11-what-is-physics-fig1-16.jpg
+  Alt: A photograph shows tiny plankton floating in water. They range in shape and size, from a few micrometers to as much as 2 millimeters in length.
+Slide 19: image19.jpg -> phys11-what-is-physics-fig1-17.jpg
+  Alt: An image of colliding galaxies is shown, with bright stars and colors ranging from blue to purple to pink surrounding the galaxies.
+Slide 20: image20.jpg -> phys11-what-is-physics-fig1-18.jpg
+  Alt: A photograph taken from the moon shows Earth in the distance.
+Slide 21: image21.jpg -> phys11-what-is-physics-fig1-19.jpg
+  Alt: A double-pan mechanical balance is shown. A metal mass is sitting in the left pan.
+Slide 22: image22.jpg -> phys11-what-is-physics-fig1-20.jpg
+  Alt: A plastic pen cap is sitting on a digital scale and has a measured mass of 0.98 grams.
+Slide 23: image23.jpg -> phys11-what-is-physics-fig1-21.jpg
+  Alt: A red target is shown with four dots that are spread out around the outer center ring, or bull's eye. The dots represent attempts by a GPS system to locate a restaurant at the center of the bull’s-eye. The dots are spread out quite far apart from one another, indicating low precision, but they are each rather close to the actual location of the restaurant, indicating high accuracy.
+Slide 24: image24.jpg -> phys11-what-is-physics-fig1-22.jpg
+  Alt: A red target is shown with four dots that represent attempts by a GPS system to locate a restaurant at the center of the bull’s-eye. The dots are concentrated close to one another, indicating high precision, but they are rather far away from the actual location of the restaurant, indicating low accuracy.
+Slide 25: image25.jpg -> phys11-what-is-physics-fig1-23.jpg
+  Alt: A red target is shown with four dots that represent attempts by a GPS system to locate a restaurant at the center of the bull’s-eye. The dots are concentrated close to one another, indicating high precision, and they are very close to the actual location of the restaurant, indicating high accuracy.
+Slide 26: image26.jpg -> phys11-what-is-physics-fig1-24.jpg
+  Alt: The stick can be measured with increasing accuracy as we use smaller and smaller scales of measurement.
+Slide 27: image27.jpg -> phys11-what-is-physics-fig1-25.jpg
+  Alt: A stack of United States paper money is shown with one hundred hundred-dollar bills.
+Slide 28: image28.jpg -> phys11-what-is-physics-fig1-26.jpg
+  Alt: A graph titled Train Motion with plotted points is shown. The x-axis is labeled Time in minutes and has a scale from zero to seventy in increments of ten. The y-axis is labeled Distance from station in kilometers and has a scale from zero to one hundred sixty in increments of twenty. The following points are plotted: zero, zero; ten, twenty-two; twenty, thirty-eight; thirty, sixty; forty, eighty-two; fifty, ninety-eight; sixty, one-hundred eighteen; seventy, one-hundred forty.
+Slide 29: image29.jpg -> phys11-what-is-physics-fig1-27.jpg
+  Alt: A graph titled Train Motion with a trend line is shown. The x-axis is labeled Time in minutes and has a scale from zero to seventy in increments of ten. The y-axis is labeled Distance from station in kilometers and has a scale from zero to one hundred sixty in increments of twenty. The following points are plotted along the trend line: zero, zero; ten, twenty-two; twenty, thirty-eight; thirty, sixty; forty, eighty-two; fifty, ninety-eight; sixty, one-hundred eighteen; seventy, one-hundred forty.
+Slide 30: image30.jpg -> phys11-what-is-physics-fig1-28.jpg
+  Alt: Four line graphs are shown. All graphs have x-axis and y-axis scales from zero to ten in increments of two. Graph a is a linear relationship between x and y, where y equals m times x plus b, with a positive and a negative slope shown. Graph b is a quadratic relationship where y equals a times x squared plus b x plus c. The line curves upward. Graph c is a an inverse relationship where y equals a over x. The line curves downward. And graph d is an exponential relationship where y equals a to the power of x and the line curves upward, and where y equals a to the negative power of x and the line curves downward.
+Slide 31: image31.jpg -> phys11-what-is-physics-fig1-29.jpg
+  Alt: Two line graphs are shown. Graph a shows a graphical representation the Richter scale and uses a log base 10 scale on its y-axis in microns of amplified maximum ground motion. The x-axis has a scale from negative one through nine and indicates categories of earthquakes. Negative one to two is categorized as “Not felt.” Two to four is “Minor”, four to five is “Small”, five to six is “Moderate”, six to seven is “Strong”, seven to eight is “Major”, and above eight is “Great.” Graph b shows the relationship between the frequency and wavelength of electromagnetic radiation, plotted as a straight line using a log-log plot. The x-axis is labeled Wavelength in centimeters and has a scale from ten to the power of negative six through ten to the power of negative eight. The y-axis is labeled Frequency with units in s to the power of negative one. Using these units, the y-axis scale is from ten to the power of sixteen through ten to the power of nineteen. The plotted line shows an inverse relationship between frequency and wavelength.

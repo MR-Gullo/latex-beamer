@@ -1,0 +1,27 @@
+# Image extraction from 9-work-energy-and-simple-machines.pptx
+# Topic: work-energy
+
+Slide 3: image3.jpg -> phys11-work-energy-fig9-1.jpg
+  Alt: A photograph shows a roller coaster cart in an upside down position inside a roller coaster loop of a track
+Slide 4: image4.jpg -> phys11-work-energy-fig9-2.jpg
+  Alt: A black and white photograph of James Joule is shown.
+Slide 5: image5.jpg -> phys11-work-energy-fig9-3.jpg
+  Alt: A cross-section view of a four-story elevator is shown. The first three floors are labeled with h. A person is carrying a television up a flight of stairs on the second floor. Another person is standing on the ground floor, using a pulley to move a television up the floors.
+Slide 6: image6.jpg -> phys11-work-energy-fig9-4.jpg
+  Alt: A painting of James Watt is shown.
+Slide 7: image7.jpg -> phys11-work-energy-fig9-5.jpg
+  Alt: A black and white illustration of an early steam engine is shown.
+Slide 8: image8.jpg -> phys11-work-energy-fig9-6.jpg
+  Alt: An illustration shows a side view of a roller coaster. People in a cart are at the top of a hill, and the cart is labeled Start. The cart is heading towards a downward slope. The opposite end of the roller coaster is flat and is labeled Finish.
+Slide 9: image9.jpg -> phys11-work-energy-fig9-7.jpg
+  Alt: Two diagrams are shown side by side. The diagram on the left shows a drawing of a hand pulling a mail out of wood using a lever. The diagram on the right shows an illustration of a lever and a fulcrum. The fulcrum is closer to the left side of the lever than the right side. The distance of the left side of the lever is labeled L subscript r and the distance of the right side is labeled L subscript e. A force vector is pointing down on the left side and is labeled F subscript r, and a force vector is pointing down on the right side and is labeled F subscript e. The equation IMA equals L subscript e over L subscript r is also shown.
+Slide 10: image10.jpg -> phys11-work-energy-fig9-8.jpg
+  Alt: A diagram of a wheel is shown. The equation IMA equals capital R over lowercase r. A small grey circle is inside a larger blue circle. An arrow labeled lowercase r points from the center of the smaller circle to its edge. An arrow labeled capital R points from the center of the smaller circle to the edge of the larger circle. A mass is attached to the smaller circle and has a force vector, F subscript r, pointing downward from it. Another force vector, F subscript e, points downward and to the right from the edge of the larger circle.
+Slide 11: image11.jpg -> phys11-work-energy-fig9-9.jpg
+  Alt: Two diagrams are shown side-by-side. On the left, an inclined plane is shown. Its horizontal surface distance is labeled L and its height is labeled h. A box is shown on the surface with a force vector that points up the plane. The equation IMA equals L over h is shown. On the right, a wedge is shown. Its horizontal surface distance is labeled L. Its height is labeled t. The equation IMA equals L over t is also shown.
+Slide 12: image12.jpg -> phys11-work-energy-fig9-10.jpg
+  Alt: An illustration of a screw is shown. It has a long lever, labeled L. P is pitch, the distance between the threads.
+Slide 13: image13.jpg -> phys11-work-energy-fig9-11.jpg
+  Alt: Three pulley systems are shown in side-by-side diagrams. The first consists of a single pulley and is shown holding a mass. The mass is labeled with a force vector, F r, that also points downward. Another force vector, F e, is shown pointing downward from the pulley. N equals one is also shown. The second pulley system consists of a single pulley holding a mass. A force vector, F e, points upward from the pulley. N equals two is shown. The last pulley system shows four pulleys holding a mass with a hook. A force vector, F e, points downward from the pulley. N equals four is shown.
+Slide 14: image14.jpg -> phys11-work-energy-fig9-12.jpg
+  Alt: An illustration shows a pair of hand-held wire cutters.

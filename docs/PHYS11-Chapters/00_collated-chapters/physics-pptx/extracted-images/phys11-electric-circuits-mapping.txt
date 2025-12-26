@@ -1,0 +1,47 @@
+# Image extraction from 19-electrical-circuits.pptx
+# Topic: electric-circuits
+
+Slide 3: image3.jpg -> phys11-electric-circuits-fig19-1.jpg
+  Alt: Water is shown flowing through a hydroelectric facility.
+Slide 4: image4.jpg -> phys11-electric-circuits-fig19-2.jpg
+  Alt: Electrons move from the negative terminal to the positive terminal of a battery.
+Slide 5: image5.jpg -> phys11-electric-circuits-fig19-3.jpg
+  Alt: Positive charges move through a section of wire of cross-section A.
+Slide 6: image6.jpg -> phys11-electric-circuits-fig19-4.jpg
+  Alt: In part (a), positive charges move in the same direction as the current and electric field. In part (b), negative charges move against the direction of the current and electric field.
+Slide 7: image7.jpg -> phys11-electric-circuits-fig19-5.jpg
+  Alt: The random path and collisions of an electron moving in an electrical conductor opposite the current and electric field.
+Slide 8: image8.jpg -> phys11-electric-circuits-fig19-6.jpg
+  Alt: A graph showing alternating current in which the current increases and decreases at regular intervals, and the direction of the current changing from one direction to another (arrows pointing left or right)
+Slide 9: image9.jpg -> phys11-electric-circuits-fig19-7.jpg
+  Alt: The graph shows current in milliamperes on the y-axis and voltage in volts on the x-axis with a straight line such that at 3V, the current is 3 mA.
+Slide 10: image10.jpg -> phys11-electric-circuits-fig19-8.jpg
+  Alt: Part (a) shows a circuit board with a small “chip.” Part (b) shows a high-power electric power transmission station.
+Slide 11: image11.jpg -> phys11-electric-circuits-fig19-9.jpg
+  Alt: Part (a) shows a circuit diagram with a zigzag line of a resistor, a battery, and current. Part (b) shows an analogous water circuit with a pump (similar to a battery) and a sand filter (similar to the resistor).
+Slide 12: image12.jpg -> phys11-electric-circuits-fig19-10.jpg
+  Alt: Typical resistors of various color values are shown.
+Slide 13: image13.jpg -> phys11-electric-circuits-fig19-11.jpg
+  Alt: A circuit diagram showing a battery and resistor at constant voltage: V=Vbattery and V=Vground=0.
+Slide 14: image14.jpg -> phys11-electric-circuits-fig19-12.jpg
+  Alt: Part (a) is a circuit diagram with a battery, switch, and capacitor. Part (b) is an analogous water circuit with a pump (like a battery), a valve (like a switch), and a stretchable membrane (like a capacitor).
+Slide 15: image15.jpg -> phys11-electric-circuits-fig19-13.jpg
+  Alt: The left shows a microprocessor chip; the right shows a missile being launched.
+Slide 16: image16.jpg -> phys11-electric-circuits-fig19-14.jpg
+  Alt: The left circuit diagram shows three resistors and a battery connected in series. The right circuit diagram shows one resistor that is equivalent to the combination of the three resistors shown on the left.
+Slide 17: image17.jpg -> phys11-electric-circuits-fig19-15.jpg
+  Alt: An image is shown with a continuous line. The line starts out straight and black, becomes red and up and down pointed, and goes back to straight and black.
+Slide 18: image18.jpg -> phys11-electric-circuits-fig19-16.jpg
+  Alt: On the left is a circuit diagram with three resistors connected in parallel. On the right is a circuit diagram with only one resistor that has equivalent resistance to the three resistors shown on the left.
+Slide 19: image19.jpg -> phys11-electric-circuits-fig19-17.jpg
+  Alt: Four steps are shown to simplify a complex circuit diagram of seven resistors to one with only a single equivalent resistor. Initially, two groups of parallel resistors, circled by the blue dashed loop, are combined; then, two resistors in series, circled by the red dashed loop, are combined, which is then combined with a resistor in parallel, circled by the green dashed loop; finally, two resistors in series are combined, circled by the purple dashed loop, yielding the final diagram.
+Slide 20: image20.jpg -> phys11-electric-circuits-fig19-18.jpg
+  Alt: A “dogbot” in the general shape of a dog is shown
+Slide 21: image21.jpg -> phys11-electric-circuits-fig19-19.jpg
+  Alt: This shows a vertical parallel circuit. In the middle of either side there are resistors. The left resistor is labeled R1 = 35Ω. The right resistor is labeled R1 = 55Ω
+Slide 22: image22.jpg -> phys11-electric-circuits-fig19-20.jpg
+  Alt: The left image shows a 25-W light bulb, whereas the right image shows a 60-W light bulb.
+Slide 23: image23.jpg -> phys11-electric-circuits-fig19-21.jpg
+  Alt: A circuit diagram with one resistor and one battery is shown.
+Slide 24: image24.jpg -> phys11-electric-circuits-fig19-22.jpg
+  Alt: A formula wheel relating power, voltage, current, and resistance.

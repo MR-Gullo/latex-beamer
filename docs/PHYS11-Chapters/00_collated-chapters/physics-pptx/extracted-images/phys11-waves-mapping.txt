@@ -1,0 +1,39 @@
+# Image extraction from 13-waves-and-their-properties.pptx
+# Topic: waves
+
+Slide 3: image3.jpg -> phys11-waves-fig13-1.jpg
+  Alt: An ocean whitecap crashes near two surfers and three boats.
+Slide 4: image4.jpg -> phys11-waves-fig13-2.jpg
+  Alt: A seagull bobs up and down on a sine-wave-shaped periodic ocean wave.
+Slide 5: image5.jpg -> phys11-waves-fig13-3.jpg
+  Alt: A woman moves a slinky up and down, creating transverse waves that propagate horizontally away from her while disturbing the slinky vertically.
+Slide 6: image6.jpg -> phys11-waves-fig13-4.jpg
+  Alt: A woman stretches and compresses a slinky horizontally, creating longitudinal waves that propagate horizontally away from her and disturbing the slinky horizontally as well.
+Slide 7: image7.jpg -> phys11-waves-fig13-5.jpg
+  Alt: A guitar string is disturbed vertically but travels horizontally. Sound travels from the guitar, through an amplifier, out of a speaker, and to a piece of paper, which vibrates back and forth with the waves of compression.
+Slide 8: image8.jpg -> phys11-waves-fig13-6.jpg
+  Alt: A surfer glides down a giant wave while another surfer watches from the wave’s crest.
+Slide 9: image9.jpg -> phys11-waves-fig13-7.jpg
+  Alt: A seagull bobs up and down on a sinusoidal-shaped periodic ocean wave with a given wave velocity of νw. The wavelength λ is shown as the distance from one crest to the next crest. The amplitude X is shown as the distance between the resting position and the crest. The total distance traveled by the seagull in one cycle or period is shown as 2X.
+Slide 10: image10.jpg -> phys11-waves-fig13-8.jpg
+  Alt: A smaller speaker emits a high-frequency sound wave with a small wavelength, while a larger speaker emits a lower-frequency sound wave with a larger wavelength.
+Slide 11: image11.jpg -> phys11-waves-fig13-9.jpg
+  Alt: A town with collapsed buildings after an earthquake.
+Slide 12: image12.jpg -> phys11-waves-fig13-10.jpg
+  Alt: Waves ripple across a lake by the mountains.
+Slide 13: image13.jpg -> phys11-waves-fig13-11.jpg
+  Alt: Wave 1 and wave 2 are perfectly in phase, and their resultant has twice the amplitude of each individual wave.
+Slide 14: image14.jpg -> phys11-waves-fig13-12.jpg
+  Alt: Wave 1 and wave 2 are perfectly out of phase, and their resultant has zero amplitude.
+Slide 15: image15.jpg -> phys11-waves-fig13-13.jpg
+  Alt: Wave 1 has a large amplitude and a low frequency. Wave 2 has a small amplitude and a high frequency. The resultant is squiggly, without a perfect sinusoidal shape.
+Slide 16: image16.jpg -> phys11-waves-fig13-14.jpg
+  Alt: Two identical waves moving in opposite directions alternate between creating no disturbance during destructive interference and doubling the disturbance during constructive interference.
+Slide 17: image17.jpg -> phys11-waves-fig13-15.jpg
+  Alt: One antinode and two nodes are created by a single standing wave.
+Slide 18: image18.jpg -> phys11-waves-fig13-16.jpg
+  Alt: Two antinodes and three nodes are created by two standing waves. Three antinodes and four nodes are created by three standing waves.
+Slide 19: image19.jpg -> phys11-waves-fig13-17.jpg
+  Alt: A wave travels to the right, hits the fixed end, flips vertically, and travels to the left.
+Slide 20: image20.jpg -> phys11-waves-fig13-18.jpg
+  Alt: A wave bends slightly to the right of its original path as it crosses the line into another medium.

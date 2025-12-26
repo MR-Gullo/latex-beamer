@@ -1,0 +1,25 @@
+# Image extraction from 11-thermal-energy-heat-and-work.pptx
+# Topic: thermal
+
+Slide 3: image3.jpg -> phys11-thermal-fig11-1.jpg
+  Alt: Sparks fly as a welder wearing a mask welds.
+Slide 4: image4.jpg -> phys11-thermal-fig11-2.jpg
+  Alt: Lines representing the temperature ranges from 0 to 373 K are shown for the Fahrenheit, Celsius, and Kelvin scales, with absolute zero, the freezing point of water, normal body temperature, and the boiling point of water marked on all three scales.
+Slide 5: image5.jpg -> phys11-thermal-fig11-3.jpg
+  Alt: Hot air rises up the chimney, cold air comes in through the window, and heat radiates into the room from the fireplace.
+Slide 6: image6.jpg -> phys11-thermal-fig11-4.jpg
+  Alt: A particle in the lower-temperature region collides with a particle in the higher-temperature region. After the collision, the energy (represented by velocity vectors) of the particle in the higher-temperature region decreases, and the energy of the particle in the lower-temperature region increases.
+Slide 7: image7.jpg -> phys11-thermal-fig11-5.jpg
+  Alt: Hot air rises from the furnace, circulates along the ceiling, cools, sinks, and returns to be heated again by the furnace, forming a convective loop in a house.
+Slide 8: image8.jpg -> phys11-thermal-fig11-6.jpg
+  Alt: Heating water circulates in a pot heated on top of a burner on the stove.
+Slide 9: image9.jpg -> phys11-thermal-fig11-7.jpg
+  Alt: Image of a raging fire..
+Slide 10: image10.jpg -> phys11-thermal-fig11-8.jpg
+  Alt: A rock, representing a solid is shown in part (a), along with its tightly bound particles. In part (b), liquid water is shown with its molecules attracted to one another, but not tightly bound. In part (c) oxygen is shown with molecules far apart and bouncing off one another in random directions.
+Slide 11: image11.jpg -> phys11-thermal-fig11-9.jpg
+  Alt: Energy input (melting) converts solid to liquid. Energy output (freezing) converts liquid to solid. Energy input (boiling) converts liquid to gas. Energy output (condensation) converts gas to liquid. Energy input (sublimation) converts solid to gas.
+Slide 12: image12.jpg -> phys11-thermal-fig11-10.jpg
+  Alt: A graph of change in heat per mass on the x-axis and change in temperature on the y-axis is shown. It is level during phase changes, indicating no change in temperature, and rises steeply after phase changes are completed.
+Slide 13: image13.jpg -> phys11-thermal-fig11-11.jpg
+  Alt: A woman holds a strawberry ice cream cone.

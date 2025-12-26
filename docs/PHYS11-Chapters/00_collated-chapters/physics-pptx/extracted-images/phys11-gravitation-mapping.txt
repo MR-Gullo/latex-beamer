@@ -1,0 +1,27 @@
+# Image extraction from 7-newtons-law-of-gravitation.pptx
+# Topic: gravitation
+
+Slide 3: image3.jpg -> phys11-gravitation-fig7-1.jpg
+  Alt: Two photos show men in old-fashioned dress.
+Slide 4: image4.jpg -> phys11-gravitation-fig7-2.jpg
+  Alt: Three ellipses are shown. In image (a) the ellipse is divided into quadrants. In image (b) the sun and a planet are shown. In image (c), the sun and planet are shown, and the aphelion and perihelion.
+Slide 5: image5.jpg -> phys11-gravitation-fig7-3.jpg
+  Alt: A picture shows a hand holding a pen, drawing a blue ellipse, with 2 black pins inside the ellipse. A red string is attached to the pins. The pen is held inside the red string, to draw the ellipse.
+Slide 6: image6.jpg -> phys11-gravitation-fig7-4.jpg
+  Alt: A diagram shows a circle, divided into quadrants. The sun (labeled M) is inside the circle. The circle represents a planet’s orbit around the sun. The planet is labeled m. Shaded regions are labeled A1, A2, and A3
+Slide 7: image7.jpg -> phys11-gravitation-fig7-5.jpg
+  Alt: Image a shows the Ptolemaic view of the solar system. This view shows Earth at the center of the solar system with all other planets orbiting clockwise, the moon circling the Earth, Mercury and Venus which go in wide circles as it orbits, which are called Epicycles. The Sun orbits earth between Venus and Mars. Mars circles opposite of the others, its own path shown with a looping arrow. Jupiter and Saturn come next. On the outside of the solar system are stars. Image b shows the Copernican view of the solar system which is the more traditional view of the solar system with the Sun in the center and the other planets orbiting the sun.
+Slide 8: image8.jpg -> phys11-gravitation-fig7-6.jpg
+  Alt: A drawing shows as ellipse, divided into quadrants. The horizontal line is labeled major axis; the vertical line is labeled minor axis. A focus point is marked at each end of the major axis.
+Slide 9: image9.jpg -> phys11-gravitation-fig7-7.jpg
+  Alt: A painting shows a man sitting under a tree, from which an apple is falling.
+Slide 10: image10.jpg -> phys11-gravitation-fig7-8.jpg
+  Alt: A figure shows a small circle and a large circle. A black line goes from one circle to the other. A red line with an arrow extends outward from each circle. The red lines have arrows on one end, pointing away from the circles, towards the midpoint of the space in between the circles.
+Slide 11: image11.jpg -> phys11-gravitation-fig7-9.jpg
+  Alt: Apparatus consisting of two large spheres, one on each end of a horizontal rod centered on a pivot. Two smaller spheres are at the extremity of a smaller horizontal rod also centered on same pivot point. Light source shines laser beam that hits mirror and reflects onto scale to show pivot angle of spheres.
+Slide 12: image12.jpg -> phys11-gravitation-fig7-10.jpg
+  Alt: Left panel shows a person in an elevator who shines a light beam on the wall. Beam of light bends down. Elevator is labelled “accelerated up.” Right panel shows same picture, but person is in a room on Earth.
+Slide 13: image13.jpg -> phys11-gravitation-fig7-11.jpg
+  Alt: Schematic drawing of sun at left and Earth at right. A person is standing on Earth. Two stars to left of sun. Lines drawn from starts to person’s eyes. Lower star has curved solid line, and upper star has straight dashed line.
+Slide 14: image14.jpg -> phys11-gravitation-fig7-12.jpg
+  Alt: Photo shows satellite in space.

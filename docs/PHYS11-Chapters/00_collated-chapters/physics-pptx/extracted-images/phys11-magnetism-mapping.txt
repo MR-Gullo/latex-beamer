@@ -1,0 +1,79 @@
+# Image extraction from 20-magnetism.pptx
+# Topic: magnetism
+
+Slide 3: image3.jpg -> phys11-magnetism-fig20-1.jpg
+  Alt: The Aurora Borealis.
+Slide 4: image4.jpg -> phys11-magnetism-fig20-2.jpg
+  Alt: A bar magnet with paper clips attached to it.
+Slide 5: image5.jpg -> phys11-magnetism-fig20-3.jpg
+  Alt: A compass on a lanyard.
+Slide 6: image6.jpg -> phys11-magnetism-fig20-4.jpg
+  Alt: Bar magnets oriented in the same direction repel, whereas if they are oriented in the opposite direction of each other, they attract.
+Slide 7: image7.jpg -> phys11-magnetism-fig20-5.jpg
+  Alt: Earth depicted as a giant bar magnet whose magnetic north pole is at its geographic South Pole and vice versa.
+Slide 8: image8.jpg -> phys11-magnetism-fig20-6.jpg
+  Alt: A magnet cut into smaller and smaller sizes, all with a north and a south pole.
+Slide 9: image9.jpg -> phys11-magnetism-fig20-7.jpg
+  Alt: An iron bar is magnetized when heated and cooled (or tapped when cold) when placed between a magnet’s north and south poles.
+Slide 10: image10.jpg -> phys11-magnetism-fig20-8.jpg
+  Alt: Part (a) shows domains in an unmagnetized ferromagnetic material. Part (b) shows alignment of the domains when the material is magnetized.
+Slide 11: image11.jpg -> phys11-magnetism-fig20-9.jpg
+  Alt: Two bar magnets with magnetic field lines emanating from them in complete loops.
+Slide 12: image12.jpg -> phys11-magnetism-fig20-10.jpg
+  Alt: Parts (a) through (d) show the steps in drawing magnetic field lines using a small compass that is moved from point to point around a magnet; the image on the right shows iron filings sprinkled around a magnet.
+Slide 13: image13.jpg -> phys11-magnetism-fig20-11.jpg
+  Alt: Part (a) shows the field lines when two north poles are brought close together. Part (b) shows the field lines when opposite poles are brought together; they become denser.
+Slide 14: image14.jpg -> phys11-magnetism-fig20-12.jpg
+  Alt: MRI machine.
+Slide 15: image15.jpg -> phys11-magnetism-fig20-13.jpg
+  Alt: Demonstration of the right-hand rule, where the thumb points in the direction of the current and the fingers curl in the direction of the magnetic field.
+Slide 16: image16.jpg -> phys11-magnetism-fig20-14.jpg
+  Alt: A wire coil with current running through it. The magnetic field generated is shown by a red arrow.
+Slide 17: image17.jpg -> phys11-magnetism-fig20-15.jpg
+  Alt: Part (a) shows iron filings around a solenoid; part (b) shows iron filings around a bar magnet.
+Slide 18: image18.jpg -> phys11-magnetism-fig20-16.jpg
+  Alt: Part (a) shows a proton moving in a uniform magnetic field. Part (b) outlines the steps of the right-hand rule.
+Slide 19: image19.jpg -> phys11-magnetism-fig20-17.jpg
+  Alt: Typhoon-class Russian submarine.
+Slide 20: image20.jpg -> phys11-magnetism-fig20-18.jpg
+  Alt: Drawing of a magnetohydrodynamic dive showing the current (red arrow), the water channel, the magnetic field and the resulting force.
+Slide 21: image21.jpg -> phys11-magnetism-fig20-19.jpg
+  Alt: A current-carrying wire in a magnetic field, with force acting on the wire going into the page.
+Slide 22: image22.jpg -> phys11-magnetism-fig20-20.jpg
+  Alt: A proton dot enters (green arrow) a magnetic field (depicted as circles with dots).
+Slide 23: image23.jpg -> phys11-magnetism-fig20-21.jpg
+  Alt: The right-hand rule depicted with an actual hand showing a velocity vector and magnetic field, with the thumb pointing in the direction of the resulting force.
+Slide 24: image24.jpg -> phys11-magnetism-fig20-22.jpg
+  Alt: A proton dot enters a magnetic field perpendicularly, making a circular motion.
+Slide 25: image25.jpg -> phys11-magnetism-fig20-23.jpg
+  Alt: Schematic drawing of an electric motor, including a horizontal magnetic field and a vertical loop of wire through which a current is passed. Torque is exerted on the wire, turning the shaft to which the magnetic field is attached.
+Slide 26: image26.jpg -> phys11-magnetism-fig20-24.jpg
+  Alt: View of the wire loop from the previous figure from above.
+Slide 27: image27.jpg -> phys11-magnetism-fig20-25.jpg
+  Alt: Part (a) shows the torque remaining clockwise when the brushes reverse the current as the coil passes through 0. Part (b) shows the coil rotating continuously in a clockwise direction with the current reversing each one-half revolution.
+Slide 28: image28.jpg -> phys11-magnetism-fig20-26.jpg
+  Alt: Image of a generator, including a coil that rotates and changes the magnetic flux, which induces an emf and drives current through an external circuit.
+Slide 29: image29.jpg -> phys11-magnetism-fig20-27.jpg
+  Alt: The emf in a straight wire moving at velocity v through a magnetic field B, where the velocity is perpendicular to the magnetic field.
+Slide 30: image30.jpg -> phys11-magnetism-fig20-28.jpg
+  Alt: A generator connected to a light bulb and a graph of the emf vs. time.
+Slide 31: image31.jpg -> phys11-magnetism-fig20-29.jpg
+  Alt: Steam turbine.
+Slide 32: image32.jpg -> phys11-magnetism-fig20-30.jpg
+  Alt: Part (a) shows a laminated-core transformer. Part (b) shows a toroidal transformer.
+Slide 33: image33.jpg -> phys11-magnetism-fig20-31.jpg
+  Alt: Schematic of a simple transformer with two coils wound around a laminated ferromagnetic core.
+Slide 34: image34.jpg -> phys11-magnetism-fig20-32.jpg
+  Alt: Cartoon of the electric grid, from power plant to a home, travelling through transformers and over transmission lines.
+Slide 35: image35.jpg -> phys11-magnetism-fig20-33.jpg
+  Alt: Movement of a magnet relative to a coil as measured by an ammeter.
+Slide 36: image36.jpg -> phys11-magnetism-fig20-34.jpg
+  Alt: Part (a) shows seven magnetic field lines going through a wire loop. Part (b) shows that after a period of time, only five magnetic field lines are going through the loop.
+Slide 37: image37.jpg -> phys11-magnetism-fig20-35.jpg
+  Alt: As a wire loop is rotated through a magnetic field, it generates an emf. The dots show where the magnetic field lines intersect the plane defined by the loop.
+Slide 38: image38.jpg -> phys11-magnetism-fig20-36.jpg
+  Alt: A bar magnet with a pickup coil to its right. Parts (a) through (c) show what happens as the two are moved toward each other with respect to electron movement and current flow.
+Slide 39: image39.jpg -> phys11-magnetism-fig20-37.jpg
+  Alt: A coil with a magnetic field running through it.
+Slide 40: image40.jpg -> phys11-magnetism-fig20-38.jpg
+  Alt: A slider circuit consisting of a U-shaped wire with a resistor and the ends connected by a sliding conducting rod.

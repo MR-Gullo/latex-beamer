@@ -1,0 +1,29 @@
+# Image extraction from 3-acceleration.pptx
+# Topic: acceleration
+
+Slide 3: image3.jpg -> phys11-acceleration-fig3-1.jpg
+  Alt: An airplane is flying over a beach area in St. Maarten as it comes in for a landing at the airport. The airplane's acceleration is in the opposite direction of its velocity.
+Slide 4: image4.jpg -> phys11-acceleration-fig3-2.jpg
+  Alt: Two similar cars are shown. The first car is speeding up as indicated by a velocity vector and an acceleration vector pointing to the right. The second car is slowing down as indicated by a velocity vector pointing to the right and an acceleration vector pointing to the left. Unlabeled x and y-axes are shown for reference.
+Slide 5: image4.jpg -> phys11-acceleration-fig3-3.jpg
+  Alt: no alt text
+Slide 6: image5.jpg -> phys11-acceleration-fig3-4.jpg
+  Alt: A velocity vector and an acceleration vector are shown. The original velocity is zero kilometers per hour, and the final velocity is thirty kilometers per hour. The acceleration is unknown. Both vectors are pointing to the right, and the velocity vector is longer than the acceleration vector. Unlabeled x and y-axes are shown reference.
+Slide 7: image6.jpg -> phys11-acceleration-fig3-5.jpg
+  Alt: A velocity vector and an acceleration vector are shown. The original velocity is thirty kilometers per hour, and the final velocity is zero kilometers per hour. The acceleration is unknown. The velocity vector is longer than the acceleration vector and is pointing to the right. The acceleration vector is pointing to the left. Unlabeled x and y-axes are shown reference.
+Slide 8: image7.jpg -> phys11-acceleration-fig3-6.jpg
+  Alt:  A line graph is shown. The x-axis is labeled time and includes a directional arrow pointing to the right. The y-axis is labeled displacement and includes a directional arrow pointing upward. The graphed line shows a directly proportional relationship between time and displacement.
+Slide 9: image8.jpg -> phys11-acceleration-fig3-7.jpg
+  Alt: A line graph is shown. The x-axis is labeled time in seconds and the y-axis is labeled velocity in meters per second. The graphed line shows a directly proportional relationship between time and velocity.
+Slide 10: image9.jpg -> phys11-acceleration-fig3-8.jpg
+  Alt: A line graph is shown. The x-axis is labeled t squared and the y-axis is labeled two d in meters. The graphed line shows that the slope of two d versus t squared equals constant acceleration.
+Slide 11: image10.jpg -> phys11-acceleration-fig3-9.jpg
+  Alt: A line graph is shown. The x-axis is labeled two d in meters and the y-axis is labeled v squared in meters per second squared. The graphed line shows a directly proportional relationship between two d, twice the displacement, and v squared, velocity squared.
+Slide 12: image11.jpg -> phys11-acceleration-fig3-10.jpg
+  Alt: Smoke is coming from the tires of a race car as the car accelerates at the beginning of a drag race.
+Slide 13: image12.jpg -> phys11-acceleration-fig3-11.jpg
+  Alt: An astronaut is strapped into a G-Force simulator.
+Slide 14: image13.jpg -> phys11-acceleration-fig3-12.jpg
+  Alt: An upward-pointing original velocity vector is shown and is labeled thirteen meters per second. Next to it, a downward, shorter acceleration vector is shown and is labeled negative nine point eight meters per second squared. Unlabeled x and y-axes are shown for reference.
+Slide 15: image14.jpg -> phys11-acceleration-fig3-13.jpg
+  Alt: Three line graphs are shown: position versus time, velocity versus time, and acceleration versus time. In position versus time, the x-axis is labeled time in seconds and the scale is zero through four in increments of one. The y-axis is labeled vertical position in meters and the scale is negative six through ten in increments of two. The graphed line curves upward starting at position zero, zero. It then curves and slopes downward from about one point five, eight and ends at position three, negative five. In velocity versus time, the x-axis is labeled time in seconds and the scale is zero through four in increments of one. The y-axis is labeled velocity in meters per second and the scale is negative twenty through fifteen in increments of five. The graphed line is straight and slopes downward. Plotted data points are approximately zero thirteen, one four, two negative six, and three negative sixteen. In acceleration versus time, the x-axis is labeled time in seconds and the scale is zero through four in increments of one. The y-axis is labeled acceleration in meters per second squared and the scale is negative twelve to zero in increments of two. The graphed line is straight and horizontal at y equals negative ten.

@@ -1,0 +1,35 @@
+# Image extraction from 12-thermodynamics.pptx
+# Topic: thermodynamics
+
+Slide 3: image3.jpg -> phys11-thermodynamics-fig12-1.jpg
+  Alt: Smoke rises from the stack of a train travelling through the mountains
+Slide 4: image4.jpg -> phys11-thermodynamics-fig12-2.jpg
+  Alt: A woman wearing a hardhat walks between steaming pipes.
+Slide 5: image5.jpg -> phys11-thermodynamics-fig12-3.jpg
+  Alt: In part (a), a finger pokes a man’s arm. In part (b), a needle pokes a man’s arm with the same force but over a smaller area, resulting in greater pressure.
+Slide 6: image6.jpg -> phys11-thermodynamics-fig12-4.jpg
+  Alt: In part (a), air is added to a tire, measured using a pressure gauge, and the tire increases in volume. In part (b), more air is added but the volume remains the same, resulting in greater pressure as indicated by the gauge. In part (c), the volume remains nearly constant, so that an increase in temperature increases the pressure.
+Slide 7: image7.jpg -> phys11-thermodynamics-fig12-5.jpg
+  Alt: A piston in an engine cylinder with cross-sectional area A moves up a distance d as energy is added, causing the volume to expand by Ad.
+Slide 8: image8.jpg -> phys11-thermodynamics-fig12-6.jpg
+  Alt: Q is shown adding energy to the system, while W causes energy to leave the system. For the system, the following equations are shown:
+Slide 9: image9.jpg -> phys11-thermodynamics-fig12-7.jpg
+  Alt: A man takes in energy from food, gives off heat, and does work in part (a). A flower absorbs heat from the Sun and gives off heat in part (b).
+Slide 10: image10.jpg -> phys11-thermodynamics-fig12-8.jpg
+  Alt: Two different processes produce the same change in a system. (a) Heat transfers a total of 15.00 J into the system, while work takes out a total of 6.00 J. The change in internal energy is ΔU = Q - W = 9.00 J. (b) Heat removes 150.00 J from the system while work puts 159.00 J into it, producing an increase in internal energy of 9.00 J.
+Slide 11: image11.jpg -> phys11-thermodynamics-fig12-9.jpg
+  Alt: Ice water in a glass with a straw and lemon wedge.
+Slide 12: image12.jpg -> phys11-thermodynamics-fig12-10.jpg
+  Alt: In part (a), heat travels from a hotter box to a cooler box. In part (b), a car brakes and releases some heat to the environment. In part (c), a spray bottle releases a puff of air into a vacuum, where the molecules become evenly distributed.
+Slide 13: image13.jpg -> phys11-thermodynamics-fig12-11.jpg
+  Alt: Ice frozen in the shape of an alligator pokes through the surface of the water.
+Slide 14: image14.jpg -> phys11-thermodynamics-fig12-12.jpg
+  Alt: Ice is shown side-by-side with water. Ice has more structure, and water has more disorder. Water molecules are traveling in random directions, and the change in entropy is positive as melting occurs.
+Slide 15: image15.jpg -> phys11-thermodynamics-fig12-13.jpg
+  Alt: In part (a), heat transfers energy into the gas in a cylinder. In part (b), force pushes the cylinder. In part (c), heat transfers energy out to the environment.
+Slide 16: image16.jpg -> phys11-thermodynamics-fig12-14.jpg
+  Alt: In part (a), heat transfers energy from the hot reservoir to the cold reservoir. In part (b), work is produced as this heat transfers energy from the hot to the cold reservoir. The amount of work generated is Qh – Qc.
+Slide 17: image17.jpg -> phys11-thermodynamics-fig12-15.jpg
+  Alt: A complete cycle from evaporator to compressor to condenser to expansion valve is shown. Qc is transferred to the evaporator from outdoors, and the condenser releases Qh indoors.
+Slide 18: image18.jpg -> phys11-thermodynamics-fig12-16.jpg
+  Alt: In a refrigerator, there is heat transfer (Qc) into the system from a cold reservoir, and heat transfer (Qh) out of the system into a hot reservoir, caused by work (W) done on the system.

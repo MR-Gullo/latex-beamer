@@ -1,0 +1,85 @@
+# Image extraction from 22-the-atom.pptx
+# Topic: atomic-nuclear
+
+Slide 3: image3.jpg -> phys11-atomic-nuclear-fig22-1.jpg
+  Alt: The microscopic image shows carbon atoms in a carbon nanotube.
+Slide 4: image4.jpg -> phys11-atomic-nuclear-fig22-2.jpg
+  Alt: The figure shows the set-up for Rutherford’s experiment. It contains a source which emits alpha particles on a gold foil. The gold foil scatters the particles at different angles to a screen surrounding the gold foil.
+Slide 5: image5.jpg -> phys11-atomic-nuclear-fig22-3.jpg
+  Alt: The figure shows several circular atoms in a gold foil in Rutherford’s experiment. Each atom contains a tiny dot, known as the nucleus. The radius of an atom is 10−10  m whereas the radius of a nucleus is 10−15 m.
+Slide 6: image6.jpg -> phys11-atomic-nuclear-fig22-4.jpg
+  Alt: The figure shows the structure of an atom with a positive nucleus in the center and three negative spherical electrons circling around the center in their respective orbits.
+Slide 7: image7.jpg -> phys11-atomic-nuclear-fig22-5.jpg
+  Alt: Part (a) shows the equipment set-up to observe the emission spectrum of iron and part (b) shows the resulting emission spectrum with discrete wavelengths.
+Slide 8: image8.jpg -> phys11-atomic-nuclear-fig22-6.jpg
+  Alt: The figure shows the hydrogen spectrum, with wavelengths from 91 nm  to 1875 nm. The spectrum from 91 nm to 122 nm is labelled as Layman series, the spectrum from 365 nm to 656 nm is labelled as Balmer series and the spectrum from 820 nm to 1875 nm is labelled as Paschen series.
+Slide 9: image9.jpg -> phys11-atomic-nuclear-fig22-7.jpg
+  Alt: The figure shows sun’s absorption spectrum, with wavelengths from 385 nm to 765 nm.
+Slide 10: image10.jpg -> phys11-atomic-nuclear-fig22-8.jpg
+  Alt: A photo of Niels Bohr.
+Slide 11: image11.jpg -> phys11-atomic-nuclear-fig22-9.jpg
+  Alt: The figure shows Bohr’s atom model with circular electron orbits having distinct quantized energy levels. The figure also shows that energy is absorbed or emitted by an electron when it moves from one orbit (level) to another.
+Slide 12: image12.jpg -> phys11-atomic-nuclear-fig22-10.jpg
+  Alt: The figure shows energy levels on the vertical axis for the various orbits, from 1 to infinity and change in energy as an electron transitions from orbit 4 to 2.
+Slide 13: image13.jpg -> phys11-atomic-nuclear-fig22-11.jpg
+  Alt: The figure shows orbital energies on the vertical axis calculated for various orbits (from n=1 to n=infinity). The energy is –13.6eV for n=1, -3.40eV for n=2, –1.51eV for n=3, –0.85eV for n=4, –0.54eV for n=5 and 0 for n=infinity. The figure also shows transitions for Layman series (transitions to n=1 from higher levels), Balmer series (transitions to n=2 from higher levels) and Pacshen series (transitions to n=3 from higher levels).
+Slide 14: image14.jpg -> phys11-atomic-nuclear-fig22-12.jpg
+  Alt: Part (a) shows standing waves on a string. With wave representing an electron parts (b) and (c) show allowed orbit (constructive interference) and forbidden orbit (destructive interference) respectively. The figure also shows equations—constructive interference occurs when 2πr=nλ where r is orbit radius and n is an integer and destructive interference occurs when 2πr’≠nλ’ where r’ is orbit radius and n is an integer.
+Slide 15: image15.jpg -> phys11-atomic-nuclear-fig22-13.jpg
+  Alt: The figure shows two circular orbits representing third and fourth allowed orbits with three and four wavelengths respectively.
+Slide 16: image16.jpg -> phys11-atomic-nuclear-fig22-14.jpg
+  Alt: A photo of Werner Heisenberg.
+Slide 17: image17.jpg -> phys11-atomic-nuclear-fig22-15.jpg
+  Alt: The figure shows a three dimensional axis with a spherical atom and a nucleus centered at the origin. The figure also shows a circle whose radius represents the most probable distance for an electron.
+Slide 19: image19.jpg -> phys11-atomic-nuclear-fig22-16.jpg
+  Alt: The figure shows the Lithium-7 atom with three protons and four neutrons at the center (nucleus) and three electrons orbiting around the nucleus in different orbits.
+Slide 20: image20.jpg -> phys11-atomic-nuclear-fig22-17.jpg
+  Alt: The figure shows a nucleus with several spherical protons and neutrons which are held together.
+Slide 22: image21.jpg -> phys11-atomic-nuclear-fig22-18.jpg
+  Alt: The figure shows alpha decay of a nucleus (with several spherical protons and neutrons), resulting in release of an alpha particle, i.e. two protons and two neutrons.
+Slide 23: image22.jpg -> phys11-atomic-nuclear-fig22-19.jpg
+  Alt: The figure shows beta decay of a nucleus (with several spherical protons and neutrons), resulting in splitting of a neutron intro three particles, namely proton, electron and neutrino.
+Slide 24: image23.jpg -> phys11-atomic-nuclear-fig22-20.jpg
+  Alt: The figure shows gamma decay of a nucleus (with several spherical protons and neutrons), resulting in release of a gamma ray.
+Slide 26: image25.jpg -> phys11-atomic-nuclear-fig22-21.jpg
+  Alt: Part (a) shows penetration of two beta radiations with different energy levels in the same material—higher energy radiation achieves better penetration. Part (b) shows penetration of two beta radiations with same energy but in different materials (Pb and Li). The penetration is greater in Li due to lower electron density. Part (c) shows penetration of alpha, beta and gamma radiations with same energy in the same material. Gamma radiation has greatest penetration whereas alpha radiation has least penetration.
+Slide 27: image26.jpg -> phys11-atomic-nuclear-fig22-22.jpg
+  Alt: A photo of a film badge.
+Slide 28: image27.jpg -> phys11-atomic-nuclear-fig22-23.jpg
+  Alt: Part (a) shows the photo of a Geiger counter. Part (b) shows the working of Geiger counter as radiation comes from the left into a thin window and enters a cylinder filled with rarefied gas. The electronic counter on the right is used to detect the current.
+Slide 29: image28.jpg -> phys11-atomic-nuclear-fig22-24.jpg
+  Alt: The figure shows a graph and table with the readings. The exponential decay graph shows number of nuclides on the y axis and time (in half-lives) on the x-axis. The graph starts from 1000 at t=0 and decreases to half after every half-life. The range on the x-axis is from 0 to 10 half-lives.
+Slide 30: image29.jpg -> phys11-atomic-nuclear-fig22-25.jpg
+  Alt: A photo of Shroud of Turin and its negative imprint.
+Slide 31: image30.jpg -> phys11-atomic-nuclear-fig22-26.jpg
+  Alt: Part (a) shows a neutron approaching a nucleus (with several protons and neutrons). Part (b) shows the deformation of the nucleus after the approaching neutron is absorbed. Part (c) shows two smaller nuclei formed from the original nucleus. Part (d) shows the neutrons released as two nuclei are formed after fission.
+Slide 32: image31.jpg -> phys11-atomic-nuclear-fig22-27.jpg
+  Alt: The figure shows chain reaction after fission as the neutrons released after fission of a nucleus cause fission in other nuclei.
+Slide 33: image32.jpg -> phys11-atomic-nuclear-fig22-28.jpg
+  Alt: The figure shows the schematic of a pressurized water reactor used for fission reaction.
+Slide 34: image33.jpg -> phys11-atomic-nuclear-fig22-29.jpg
+  Alt: The figure shows a graph with binding energy per nucleon on the y-axis and atomic mass on the x-axis. The range of y-axis is from 0 to 9 MeV and x-axis is 0 to 200. The atomic mass and binding energy of several elements are marked but it is stated that elements with low atomic mass and binding energy approximately between 1 MeV and 7 Me produce fusion energy.
+Slide 35: image34.jpg -> phys11-atomic-nuclear-fig22-30.jpg
+  Alt: The figure shows potential energy between nuclei on the y-axis and distance between them on the x-axis. The parabolic graph shows Coulomb’s repulsion hump with attractive pulling force on the left side of the hump and repelling repulsive force of the right side of the hump.
+Slide 36: image35.jpg -> phys11-atomic-nuclear-fig22-31.jpg
+  Alt: The figure shows fusion reaction in sun which has helium is in the center and hydrogen around it.
+Slide 37: image36.jpg -> phys11-atomic-nuclear-fig22-32.jpg
+  Alt: The figure shows the schematic of gun-type fusion bomb.
+Slide 38: image37.jpg -> phys11-atomic-nuclear-fig22-33.jpg
+  Alt: The figure shows the use of plutonium in a bomb. The spherical plutonium is surrounded by detonators, explosive lenses and shape charges that implode the plutonium which is crushed into a smaller volume.
+Slide 39: image38.jpg -> phys11-atomic-nuclear-fig22-34.jpg
+  Alt: A photo showing the Trinity test, the first nuclear bomb.
+Slide 40: image39.jpg -> phys11-atomic-nuclear-fig22-35.jpg
+  Alt: The figure shows schematic of a fusion bomb, in the shape of a closed cylinder. The outer portion has reflector and fission material and the inner portion has Styrofoam with gamma absorbers. The Styrofoam contains the shape charges, beryllium neutron reflector, lithium deuteride and the plutonium and uranium.
+Slide 41: image40.jpg -> phys11-atomic-nuclear-fig22-36.jpg
+  Alt: The figure shows parts of Tokamak confinement model.
+Slide 42: image41.jpg -> phys11-atomic-nuclear-fig22-37.jpg
+  Alt: The figure shows brain image of a patient with Alzheimer’s disease.
+Slide 43: image42.jpg -> phys11-atomic-nuclear-fig22-38.jpg
+  Alt: The figure shows the working of an Anger camera (or gamma camera) with the input rays on the left, camera in the centre and output on the right (which is used for image construction).
+Slide 44: image43.jpg -> phys11-atomic-nuclear-fig22-39.jpg
+  Alt: A photo showing the equipment for Single-photon-emission computer tomography (SPECT).
+Slide 45: image44.jpg -> phys11-atomic-nuclear-fig22-40.jpg
+  Alt: The figure shows the equipment for Positron emission tomography (PET).
+Slide 46: image45.jpg -> phys11-atomic-nuclear-fig22-41.jpg
+  Alt: The figure shows the use of radiotherapy for treating tumors. A patient is lying and gamma rays are passed through him from several directions and concentrated on the tumor point.

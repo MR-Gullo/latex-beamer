@@ -1,0 +1,21 @@
+# Image extraction from 10-special-relativity.pptx
+# Topic: relativity
+
+Slide 3: image3.jpg -> phys11-relativity-fig10-1.jpg
+  Alt: A photo shows a star system, the Orion Nebula.
+Slide 4: image4.jpg -> phys11-relativity-fig10-2.jpg
+  Alt: A drawing shows how light travels from a coherent light source, through a semi-silvered mirror to a mirror, then travels up, then back down towards a detector.
+Slide 5: image5.jpg -> phys11-relativity-fig10-3.jpg
+  Alt: A photograph of Albert Einstein.
+Slide 6: image6.jpg -> phys11-relativity-fig10-4.jpg
+  Alt: There are two illustrations. Both show a man standing beside a railroad track looking at a rail car with an open side. Sitting in the center of the rail car is a woman facing toward the left. Mounted on the wall at either end of the car are light fixtures. In the first illustration, the light that is emitted from the light fixtures is shown as arrows that start at the light fixture and fan out toward the center of the rail car. In the second illustration, the rail car is shown as having moved to the right and the arrows representing the light on the right are shown closer to the woman while the ones coming from the light on the left have not moved.
+Slide 7: image7.jpg -> phys11-relativity-fig10-5.jpg
+  Alt: A series of three illustrations the different frames of reference for an astronaut on a flight versus an observer on Earth.
+Slide 8: image8.jpg -> phys11-relativity-fig10-6.jpg
+  Alt: A picture of an empty highway in the desert.
+Slide 9: image9.jpg -> phys11-relativity-fig10-7.jpg
+  Alt: A graph with a line representing momentum (on the y-axis) relative to speed (on the x-axis). The line stays close to 0 from a speed of 0 up to about a speed of 0.6c where it begins to rise gradually. As it approaches 1.0c, however, it rises dramatically and ends going straight up.
+Slide 10: image10.jpg -> phys11-relativity-fig10-8.jpg
+  Alt: A picture of the sun (a) and a power plant (b)
+Slide 11: image11.jpg -> phys11-relativity-fig10-9.jpg
+  Alt: Aerial view of a large building complex.
