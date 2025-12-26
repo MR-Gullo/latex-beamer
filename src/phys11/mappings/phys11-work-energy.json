@@ -1,0 +1,67 @@
+{
+  "course": "phys11",
+  "topic": "work-energy",
+  "chapter": "9",
+  "figures": {
+    "fig9-1": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-01.jpg",
+      "new_name": "phys11-work-energy-fig9-1.jpg",
+      "caption": "Figure 9.1 People on a roller coaster experience thrills caused by changes in types of energy. (Jonrev, Wikimedia Commons)"
+    },
+    "fig9-2": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-06.jpg",
+      "new_name": "phys11-work-energy-fig9-2.jpg",
+      "caption": "Figure 9.2 The joule is named after physicist James Joule (1818-1889). (C. H. Jeens, Wikimedia Commons)"
+    },
+    "fig9-3": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-08.jpg",
+      "new_name": "phys11-work-energy-fig9-3.jpg",
+      "caption": "Figure 9.3 No matter how you move a TV to the fourth floor, the amount of work performed and the potential energy gain are the same."
+    },
+    "fig9-6": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-11.jpg",
+      "new_name": "phys11-work-energy-fig9-6.jpg",
+      "caption": "Figure 9.6"
+    },
+    "fig9-7": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-19.jpg",
+      "new_name": "phys11-work-energy-fig9-7.jpg",
+      "caption": "Figure 9.7 During this roller coaster ride, there are conversions between potential and kinetic energy."
+    },
+    "fig9-8": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-28.jpg",
+      "new_name": "phys11-work-energy-fig9-8.jpg",
+      "caption": "Figure 9.8 (a) A pry bar is a type of lever. (b) The ideal mechanical advantage equals the length of the effort arm divided by the length of the resis"
+    },
+    "fig9-9": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-30.jpg",
+      "new_name": "phys11-work-energy-fig9-9.jpg",
+      "caption": "Figure 9.9 Force applied to a wheel exerts a force on its axle."
+    },
+    "fig9-10": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-31.jpg",
+      "new_name": "phys11-work-energy-fig9-10.jpg",
+      "caption": "Figure 9.10 An inclined plane is shown on the left, and a wedge is shown on the right."
+    },
+    "fig9-11": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-32.jpg",
+      "new_name": "phys11-work-energy-fig9-11.jpg",
+      "caption": "Figure 9.11 The screw shown here is used to lift very heavy objects, like the corner of a car or a house a short distance."
+    },
+    "fig9-12": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-33.jpg",
+      "new_name": "phys11-work-energy-fig9-12.jpg",
+      "caption": "Figure 9.12 Three pulley systems are shown here."
+    },
+    "fig9-13": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-34.jpg",
+      "new_name": "phys11-work-energy-fig9-13.jpg",
+      "caption": "Figure 9.13 Wire cutters are a common complex machine."
+    },
+    "fig9-14": {
+      "original": "8b6c1c7c-84c8-44b6-9353-a83bfff7835e-36.jpg",
+      "new_name": "phys11-work-energy-fig9-14.jpg",
+      "caption": "Figure 9.14"
+    }
+  }
+}

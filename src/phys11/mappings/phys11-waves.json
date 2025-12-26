@@ -1,0 +1,72 @@
+{
+  "course": "phys11",
+  "topic": "waves",
+  "chapter": "13",
+  "figures": {
+    "fig13-1": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-01.jpg",
+      "new_name": "phys11-waves-fig13-1.jpg",
+      "caption": "Figure 13.1 Waves in the ocean behave similarly to all other types of waves. (Steve Jurveston, Flickr)"
+    },
+    "fig13-3": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-05(1).jpg",
+      "new_name": "phys11-waves-fig13-3.jpg",
+      "caption": "Figure 13.3 In this example of a transverse wave, the wave propagates horizontally and the disturbance in the toy spring is in the vertical direction."
+    },
+    "fig13-5": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-05.jpg",
+      "new_name": "phys11-waves-fig13-5.jpg",
+      "caption": "Figure 13.5 The wave on a guitar string is transverse. However, the sound wave coming out of a speaker rattles a sheet of paper in a direction that sh"
+    },
+    "fig13-6": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-08.jpg",
+      "new_name": "phys11-waves-fig13-6.jpg",
+      "caption": "Figure 13.6 A surfer negotiates a steep take-off on a winter day in California while his friend watches. (Ljsurf, Wikimedia Commons)"
+    },
+    "fig13-7": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-12.jpg",
+      "new_name": "phys11-waves-fig13-7.jpg",
+      "caption": "Figure 13.7 The wave has a wavelength , which is the distance between adjacent identical parts of the wave. The up-and-down disturbance of the surface"
+    },
+    "fig13-8": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-14.jpg",
+      "new_name": "phys11-waves-fig13-8.jpg",
+      "caption": "Figure 13.8 Because they travel at the same speed in a given medium, lowfrequency sounds must have a greater wavelength than high-frequency sounds. He"
+    },
+    "fig13-10": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-16.jpg",
+      "new_name": "phys11-waves-fig13-10.jpg",
+      "caption": "Figure 13.10 These waves result from the superposition of several waves from different sources, producing a complex pattern. (Waterborough, Wikimedia "
+    },
+    "fig13-11": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-23(1).jpg",
+      "new_name": "phys11-waves-fig13-11.jpg",
+      "caption": "Figure 13.11 The pure constructive interference of two identical waves produces a wave with twice the amplitude but the same wavelength."
+    },
+    "fig13-12": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-23.jpg",
+      "new_name": "phys11-waves-fig13-12.jpg",
+      "caption": "Figure 13.12 The pure destructive interference of two identical waves produces zero amplitude, or complete cancellation."
+    },
+    "fig13-14": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-24.jpg",
+      "new_name": "phys11-waves-fig13-14.jpg",
+      "caption": "Figure 13.14 A standing wave is created by the superposition of two identical waves moving in opposite directions. The oscillations are at fixed locat"
+    },
+    "fig13-16": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-26(1).jpg",
+      "new_name": "phys11-waves-fig13-16.jpg",
+      "caption": "Figure 13.16 The figure shows a string oscillating with multiple nodes."
+    },
+    "fig13-17": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-27.jpg",
+      "new_name": "phys11-waves-fig13-17.jpg",
+      "caption": "Figure 13.17 A wave is inverted after reflection from a fixed end."
+    },
+    "fig13-18": {
+      "original": "e5042e07-d38c-4a98-ad7f-01ff1992bfa2-27(1).jpg",
+      "new_name": "phys11-waves-fig13-18.jpg",
+      "caption": "Figure 13.18 A wave refracts as it enters a different medium."
+    }
+  }
+}

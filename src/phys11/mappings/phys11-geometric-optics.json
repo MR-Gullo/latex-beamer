@@ -1,0 +1,152 @@
+{
+  "course": "phys11",
+  "topic": "geometric-optics",
+  "chapter": "16",
+  "figures": {
+    "fig16-1": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-01.jpg",
+      "new_name": "phys11-geometric-optics-fig16-1.jpg",
+      "caption": "Figure 16.1 Flat, smooth surfaces reflect light to form mirror images. (credit: NASA Goddard Photo and Video, via Flickr)"
+    },
+    "fig16-2": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-04.jpg",
+      "new_name": "phys11-geometric-optics-fig16-2.jpg",
+      "caption": "Figure 16.2 Three methods for light to travel from a source to another location are shown. (a) Light reaches the upper atmosphere of Earth by travelin"
+    },
+    "fig16-3": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-06.jpg",
+      "new_name": "phys11-geometric-optics-fig16-3.jpg",
+      "caption": "Figure 16.3 The law of reflection states that the angle of reflection, \\(\\mathbf{r"
+    },
+    "fig16-4": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-06(1).jpg",
+      "new_name": "phys11-geometric-optics-fig16-4.jpg",
+      "caption": "Figure 16.4 Light is diffused when it reflects from a rough surface. Here, many parallel rays are incident, but they are reflected at many different a"
+    },
+    "fig16-5": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-07.jpg",
+      "new_name": "phys11-geometric-optics-fig16-5.jpg",
+      "caption": "Figure 16.5 When two sets of rays from common points on an object are reflected by a flat mirror into the eye of an observer, the reflected rays seem "
+    },
+    "fig16-6": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-08(1).jpg",
+      "new_name": "phys11-geometric-optics-fig16-6.jpg",
+      "caption": "Figure 16.6 Charlie Chaplin is in a mirror maze. Which image is real?"
+    },
+    "fig16-7": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-08.jpg",
+      "new_name": "phys11-geometric-optics-fig16-7.jpg",
+      "caption": "Figure 16.7 Tourists love to wander in the Hall of Mirrors at the Palace of Versailles. (credit: Michal Osmenda, Flickr)"
+    },
+    "fig16-8": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-09.jpg",
+      "new_name": "phys11-geometric-optics-fig16-8.jpg",
+      "caption": "Figure 16.8"
+    },
+    "fig16-9": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-11.jpg",
+      "new_name": "phys11-geometric-optics-fig16-9.jpg",
+      "caption": "Figure 16.9 (a, b) The focal length for the concave mirror in (a), formed by converging rays, is in front of the mirror, and has a positive value. The"
+    },
+    "fig16-10": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-12.jpg",
+      "new_name": "phys11-geometric-optics-fig16-10.jpg",
+      "caption": "Figure 16.10 (a) The image of an object placed outside the focal point of a concave mirror is inverted and real. (b) The image of an object placed ins"
+    },
+    "fig16-11": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-15.jpg",
+      "new_name": "phys11-geometric-optics-fig16-11.jpg",
+      "caption": "Figure 16.11 Security mirrors are convex, producing a smaller, upright image. Because the image is smaller, a larger area is imaged compared with what"
+    },
+    "fig16-12": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-16.jpg",
+      "new_name": "phys11-geometric-optics-fig16-12.jpg",
+      "caption": "Figure 16.12 This diagram shows the design of a Schmidt-Cassegrain telescope."
+    },
+    "fig16-14": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-16(1).jpg",
+      "new_name": "phys11-geometric-optics-fig16-14.jpg",
+      "caption": "Figure 16.14 Parabolic trough collectors are used to generate electricity in southern California. (credit: kjkolb, Wikimedia Commons)"
+    },
+    "fig16-15": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-17.jpg",
+      "new_name": "phys11-geometric-optics-fig16-15.jpg",
+      "caption": "Figure 16.15 Look for the variables, \\(d_{o"
+    },
+    "fig16-16": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-23.jpg",
+      "new_name": "phys11-geometric-optics-fig16-16.jpg",
+      "caption": "Figure 16.16 Looking at the fish tank as shown, we can see the same fish in two different locations, because light changes directions when it passes f"
+    },
+    "fig16-18": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-25.jpg",
+      "new_name": "phys11-geometric-optics-fig16-18.jpg",
+      "caption": "Figure 16.18 (a) A pure wavelength of light ( \\(\\lambda\\) ) falls onto a prism and is refracted at both surfaces. (b) White light is dispersed by the "
+    },
+    "fig16-19": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-29.jpg",
+      "new_name": "phys11-geometric-optics-fig16-19.jpg",
+      "caption": "Figure 16.19 Part of the light falling on this water drop enters and is reflected from the back of the drop. This light is refracted and dispersed bot"
+    },
+    "fig16-20": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-31.jpg",
+      "new_name": "phys11-geometric-optics-fig16-20.jpg",
+      "caption": "Figure 16.20 (a) A ray of light crosses a boundary where the speed of light increases and the index of refraction decreases-that is, \\(\\mathrm{n"
+    },
+    "fig16-22": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-32.jpg",
+      "new_name": "phys11-geometric-optics-fig16-22.jpg",
+      "caption": "Figure 16.22 These binoculars use corner reflectors with total internal reflection to get light to the observer's eyes."
+    },
+    "fig16-23": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-34(1).jpg",
+      "new_name": "phys11-geometric-optics-fig16-23.jpg",
+      "caption": "Figure 16.23 (a) Fibers in bundles are clad by a material that has a lower index of refraction than the core to ensure total internal reflection, even"
+    },
+    "fig16-25": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-34.jpg",
+      "new_name": "phys11-geometric-optics-fig16-25.jpg",
+      "caption": "Figure 16.25 Rays of light entering a convex, or converging, lens parallel to its axis converge at its focal point, F . Ray 2 lies on the axis of the "
+    },
+    "fig16-26": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-41(1).jpg",
+      "new_name": "phys11-geometric-optics-fig16-26.jpg",
+      "caption": "Figure 16.26 Rays of light enter a concave, or diverging, lens parallel to its axis"
+    },
+    "fig16-27": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-44.jpg",
+      "new_name": "phys11-geometric-optics-fig16-27.jpg",
+      "caption": "Figure 16.27 Ray tracing is used to locate the image formed by a lens. Rays originating from the same point on the object are traced. The three chosen"
+    },
+    "fig16-28": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-46.jpg",
+      "new_name": "phys11-geometric-optics-fig16-28.jpg",
+      "caption": "Figure 16.28 (a) The image is virtual and larger than the object. (b) The image is virtual and smaller than the object."
+    },
+    "fig16-29": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-49.jpg",
+      "new_name": "phys11-geometric-optics-fig16-29.jpg",
+      "caption": "Figure 16.29 (a) Galileo made telescopes with a convex objective and a concave eyepiece. They produce an upright image and are used in spyglasses. (b)"
+    },
+    "fig16-30": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-50.jpg",
+      "new_name": "phys11-geometric-optics-fig16-30.jpg",
+      "caption": "Figure 16.30 A compound microscope composed of two lenses, an objective and an eyepiece. The objective forms a case 1 image that is larger than the ob"
+    },
+    "fig16-31": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-51.jpg",
+      "new_name": "phys11-geometric-optics-fig16-31.jpg",
+      "caption": "Figure 16.31 (a) Chromatic aberration is caused by the dependence of a lens's index of refraction on color (wavelength). The lens is more powerful for"
+    },
+    "fig16-34": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-52.jpg",
+      "new_name": "phys11-geometric-optics-fig16-34.jpg",
+      "caption": "Figure 16.34 (a) The nearsighted (myopic) eye converges rays from a distant object in front of the retina; thus, they are diverging when they strike t"
+    },
+    "fig16-36": {
+      "original": "64c96986-1ad4-421f-aa2e-1bd997fa6081-54.jpg",
+      "new_name": "phys11-geometric-optics-fig16-36.jpg",
+      "caption": "Figure 16.36 A light bulb placed 0.75 m from a lens with a 0.50 m focal length produces a real image on a poster board, as discussed in the previous e"
+    }
+  }
+}

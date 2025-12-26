@@ -1,0 +1,102 @@
+{
+  "course": "phys11",
+  "topic": "wave-optics",
+  "chapter": "17",
+  "figures": {
+    "fig17-1": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-01.jpg",
+      "new_name": "phys11-wave-optics-fig17-1.jpg",
+      "caption": "Figure 17.1 The colors reflected by this compact disc vary with angle and are not caused by pigments. Colors such as these are direct evidence of the "
+    },
+    "fig17-2": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-04.jpg",
+      "new_name": "phys11-wave-optics-fig17-2.jpg",
+      "caption": "Figure 17.2 (a) The light beam emitted by a laser at the Paranal Observatory (part of the European Southern Observatory in Chile) acts like a ray, tra"
+    },
+    "fig17-3": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-05.jpg",
+      "new_name": "phys11-wave-optics-fig17-3.jpg",
+      "caption": "Figure 17.3 Incoming waves (at the top of the picture) pass through the gaps in the rocks and create an interference pattern (in the foreground)."
+    },
+    "fig17-4": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-06.jpg",
+      "new_name": "phys11-wave-optics-fig17-4.jpg",
+      "caption": "Figure 17.4 Huygens's principle applied to a straight wavefront. Each point on the wavefront emits a semicircular wavelet that moves a distance \\(s=v "
+    },
+    "fig17-5": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-07(1).jpg",
+      "new_name": "phys11-wave-optics-fig17-5.jpg",
+      "caption": "Figure 17.5 Huygens's principle applied to a straight wavefront striking an opening. The edges of the wavefront bend after passing through the opening"
+    },
+    "fig17-6": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-07.jpg",
+      "new_name": "phys11-wave-optics-fig17-6.jpg",
+      "caption": "Figure 17.6 Ocean waves pass through an opening in a reef, resulting in a diffraction pattern. Diffraction occurs because the opening is similar in wi"
+    },
+    "fig17-7": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-08.jpg",
+      "new_name": "phys11-wave-optics-fig17-7.jpg",
+      "caption": "Figure 17.7 Young's double-slit experiment. Here, light of a single wavelength passes through a pair of vertical slits and produces a diffraction patt"
+    },
+    "fig17-8": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-09.jpg",
+      "new_name": "phys11-wave-optics-fig17-8.jpg",
+      "caption": "Figure 17.8 Double slits produce two sources of waves that interfere. (a) Light spreads out (diffracts) from each slit, because the slits are narrow. "
+    },
+    "fig17-9": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-11.jpg",
+      "new_name": "phys11-wave-optics-fig17-9.jpg",
+      "caption": "Figure 17.9 The paths from each slit to a common point on the screen differ by an amount \\(d \\sin \\theta\\), assuming the distance to the screen is muc"
+    },
+    "fig17-10": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-11(1).jpg",
+      "new_name": "phys11-wave-optics-fig17-10.jpg",
+      "caption": "Figure 17.10 The interference pattern for a double slit has an intensity that falls off with angle. The photograph shows multiple bright and dark line"
+    },
+    "fig17-11": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-12.jpg",
+      "new_name": "phys11-wave-optics-fig17-11.jpg",
+      "caption": "Figure 17.11 (a) Single-slit diffraction pattern. Monochromatic light passing through a single slit produces a central maximum and many smaller and di"
+    },
+    "fig17-12": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-13.jpg",
+      "new_name": "phys11-wave-optics-fig17-12.jpg",
+      "caption": "Figure 17.12 Equations for a single-slit diffraction pattern, where is the wavelength of light, \\(D\\) is the slit width, \\(\\theta\\) is the angle betwe"
+    },
+    "fig17-13": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-20.jpg",
+      "new_name": "phys11-wave-optics-fig17-13.jpg",
+      "caption": "Figure 17.13 A diffraction grating consists of a large number of evenly-spaced parallel slits. (a) Light passing through the grating is diffracted in "
+    },
+    "fig17-14": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-20(1).jpg",
+      "new_name": "phys11-wave-optics-fig17-14.jpg",
+      "caption": "Figure 17.14 (a) This Australian opal and (b) the butterfly wings have rows of reflectors that act like reflection gratings, reflecting different colo"
+    },
+    "fig17-15": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-21.jpg",
+      "new_name": "phys11-wave-optics-fig17-15.jpg",
+      "caption": "Figure 17.15 Idealized graphs of the intensity of light passing through a double slit (a) and a diffraction grating (b) for monochromatic light. Maxim"
+    },
+    "fig17-16": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-22.jpg",
+      "new_name": "phys11-wave-optics-fig17-16.jpg",
+      "caption": "Figure 17.16 For its size, this CD holds a surprising amount of information. Likewise, the CD player it is in houses a surprising number of electronic"
+    },
+    "fig17-18": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-24.jpg",
+      "new_name": "phys11-wave-optics-fig17-18.jpg",
+      "caption": "Figure 17.18 The diagram shows the function of a diffraction grating in a spectroscope."
+    },
+    "fig17-19": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-26.jpg",
+      "new_name": "phys11-wave-optics-fig17-19.jpg",
+      "caption": "Figure 17.19 (a) Monochromatic light passed through a small circular aperture produces this diffraction pattern. (b) Two point light sources that are "
+    },
+    "fig17-20": {
+      "original": "2964a1e9-ab41-4e16-802f-4d831a0a3895-29.jpg",
+      "new_name": "phys11-wave-optics-fig17-20.jpg",
+      "caption": "Figure 17.20 (a) Graph of intensity of the diffraction pattern for a circular aperture. Note that, similar to a single slit, the central maximum is wi"
+    }
+  }
+}

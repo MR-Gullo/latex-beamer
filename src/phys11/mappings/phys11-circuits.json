@@ -1,0 +1,97 @@
+{
+  "course": "phys11",
+  "topic": "circuits",
+  "chapter": "19",
+  "figures": {
+    "fig19-1": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-01.jpg",
+      "new_name": "phys11-circuits-fig19-1.jpg",
+      "caption": "Figure 19.1 Electric energy in massive quantities is transmitted from this hydroelectric facility, the Srisailam power station located along the Krish"
+    },
+    "fig19-2": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-04.jpg",
+      "new_name": "phys11-circuits-fig19-2.jpg",
+      "caption": "Figure 19.2 A battery has a wire connecting the positive and negative terminals, which allows electrons to move from the negative terminal to the posi"
+    },
+    "fig19-3": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-05.jpg",
+      "new_name": "phys11-circuits-fig19-3.jpg",
+      "caption": "Figure 19.3 The electric current moving through this wire is the charge that moves past the cross-section A divided by the time it takes for this char"
+    },
+    "fig19-4": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-06.jpg",
+      "new_name": "phys11-circuits-fig19-4.jpg",
+      "caption": "Figure 19.4 (a) The electric field points to the right, the current moves to the right, and positive charges move to the right. (b) The equivalent sit"
+    },
+    "fig19-5": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-08.jpg",
+      "new_name": "phys11-circuits-fig19-5.jpg",
+      "caption": "Figure 19.5 Free electrons moving in a conductor make many collisions with other electrons and atoms. The path of one electron is shown. The average v"
+    },
+    "fig19-6": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-09.jpg",
+      "new_name": "phys11-circuits-fig19-6.jpg",
+      "caption": "Figure 19.6 With alternating current, the direction of the current reverses at regular time intervals. The graph on the top shows the current versus t"
+    },
+    "fig19-7": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-14.jpg",
+      "new_name": "phys11-circuits-fig19-7.jpg",
+      "caption": "Figure 19.7 The line shows the current as a function of voltage. Notice that the current is given in milliamperes. For example, at 3 V , the current i"
+    },
+    "fig19-8": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-19.jpg",
+      "new_name": "phys11-circuits-fig19-8.jpg",
+      "caption": "Figure 19.8 The photo on the left shows a chip that contains complex integrated electric circuitry. Chips such as this are at the heart of devices suc"
+    },
+    "fig19-9": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-20.jpg",
+      "new_name": "phys11-circuits-fig19-9.jpg",
+      "caption": "Figure 19.9 On the left is a circuit diagram showing a battery (in red), a resistor (black zigzag element), and the current \\(I\\). On the right is the"
+    },
+    "fig19-10": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-21.jpg",
+      "new_name": "phys11-circuits-fig19-10.jpg",
+      "caption": "Figure 19.10 Some typical resistors. The color bands indicate the value of the resistance of each resistor."
+    },
+    "fig19-11": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-23.jpg",
+      "new_name": "phys11-circuits-fig19-11.jpg",
+      "caption": "Figure 19.11 The voltage in the red wire is constant at \\(V=V_{\\text {battery "
+    },
+    "fig19-12": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-25.jpg",
+      "new_name": "phys11-circuits-fig19-12.jpg",
+      "caption": "Figure 19.12 On the left is an electrical circuit containing a battery, a switch, and a capacitor. On the left is the analogous water circuit with a p"
+    },
+    "fig19-13": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-27.jpg",
+      "new_name": "phys11-circuits-fig19-13.jpg",
+      "caption": "Figure 19.13 The systems that electrical engineers work on range from microprocessor circuits (left)] to missile systems (right)."
+    },
+    "fig19-16": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-28.jpg",
+      "new_name": "phys11-circuits-fig19-16.jpg",
+      "caption": "Figure 19.16 The left circuit diagram shows three resistors in parallel. The voltage \\(V\\) of the battery is applied across all three resistors. The c"
+    },
+    "fig19-17": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-37(1).jpg",
+      "new_name": "phys11-circuits-fig19-17.jpg",
+      "caption": "Figure 19.17 This combination of seven resistors has both series and parallel parts. Each is identified and reduced to an equivalent resistance, and t"
+    },
+    "fig19-19": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-45.jpg",
+      "new_name": "phys11-circuits-fig19-19.jpg",
+      "caption": "Figure 19.19"
+    },
+    "fig19-20": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-55.jpg",
+      "new_name": "phys11-circuits-fig19-20.jpg",
+      "caption": "Figure 19.20 On the left is a \\(25-\\mathrm{W"
+    },
+    "fig19-22": {
+      "original": "2ef76fc9-a8ab-4858-bdbf-5edb0a2597a3-56.jpg",
+      "new_name": "phys11-circuits-fig19-22.jpg",
+      "caption": "Figure 19.22 The formula wheel shows how volts, resistance, current, and power are related. The quantities in the inner quarter circles equal the quan"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "course": "phys11",
+  "topic": "kinematics",
+  "chapter": "2",
+  "figures": {
+    "fig2-1": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-01.jpg",
+      "new_name": "phys11-kinematics-fig2-1.jpg",
+      "caption": "Figure 2.1 Shanghai Maglev. At this rate, a train traveling from Boston to Washington, DC, a distance of 439 miles, could make the trip in under an ho"
+    },
+    "fig2-4": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-04.jpg",
+      "new_name": "phys11-kinematics-fig2-4.jpg",
+      "caption": "Figure 2.4 Your total change in position is measured from your house to your school."
+    },
+    "fig2-5": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-11(1).jpg",
+      "new_name": "phys11-kinematics-fig2-5.jpg",
+      "caption": "Figure 2.5 A short line separates the starting and ending points of this motion, but the distance along the path of motion is considerably longer."
+    },
+    "fig2-6": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-11.jpg",
+      "new_name": "phys11-kinematics-fig2-6.jpg",
+      "caption": "Figure 2.6 The total distance that your car travels is 10 km , but the total displacement is 0 ."
+    },
+    "fig2-7": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-16.jpg",
+      "new_name": "phys11-kinematics-fig2-7.jpg",
+      "caption": "Figure 2.7 The Mars Climate Orbiter disaster illustrates the importance of using the correct calculations in physics. (NASA)"
+    },
+    "fig2-8": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-24.jpg",
+      "new_name": "phys11-kinematics-fig2-8.jpg",
+      "caption": "Figure 2.8 During a 30 -minute round trip to the store, the total distance traveled is 6 km . The average speed is \\(12 \\mathrm{~km"
+    },
+    "fig2-9": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-26.jpg",
+      "new_name": "phys11-kinematics-fig2-9.jpg",
+      "caption": "Figure 2.9 The diagram shows a more detailed record of an airplane passenger heading toward the back of the plane, showing smaller segments of his tri"
+    },
+    "fig2-10": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-33.jpg",
+      "new_name": "phys11-kinematics-fig2-10.jpg",
+      "caption": "Figure 2.10 The diagram shows a straight-line graph. The equation for the straight line is \\(y\\) equals \\(m x+b\\)."
+    },
+    "fig2-11": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-34.jpg",
+      "new_name": "phys11-kinematics-fig2-11.jpg",
+      "caption": "Figure 2.11 A graph of position versus time for the drive to school is shown. What would the graph look like if we added the return trip?"
+    },
+    "fig2-12": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-35.jpg",
+      "new_name": "phys11-kinematics-fig2-12.jpg",
+      "caption": "Figure 2.12 The diagram shows a graph of position versus time for a jet-powered car on the Bonneville Salt Flats."
+    },
+    "fig2-13": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-39.jpg",
+      "new_name": "phys11-kinematics-fig2-13.jpg",
+      "caption": "Figure 2.13 The diagram shows a graph of the position of a jet-powered car during the time span when it is speeding up. The slope of a distance versus"
+    },
+    "fig2-14": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-39(1).jpg",
+      "new_name": "phys11-kinematics-fig2-14.jpg",
+      "caption": "Figure 2.14 A U.S. Air Force jet car speeds down a track. (Matt Trostle, Flickr)"
+    },
+    "fig2-15": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-41.jpg",
+      "new_name": "phys11-kinematics-fig2-15.jpg",
+      "caption": "Figure 2.15 A graph of position versus time for the drive to and from school is shown."
+    },
+    "fig2-16": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-45.jpg",
+      "new_name": "phys11-kinematics-fig2-16.jpg",
+      "caption": "Figure 2.16 Graph of velocity versus time for the drive to and from school."
+    },
+    "fig2-17": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-46.jpg",
+      "new_name": "phys11-kinematics-fig2-17.jpg",
+      "caption": "Figure 2.17 A graph is shown of the position of a jet-powered car during the time span when it is speeding up. The slope of a d vs. t graph is velocit"
+    },
+    "fig2-18": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-47.jpg",
+      "new_name": "phys11-kinematics-fig2-18.jpg",
+      "caption": "Figure 2.18 The graph shows the velocity of a jet-powered car during the time span when it is speeding up."
+    },
+    "fig2-19": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-50.jpg",
+      "new_name": "phys11-kinematics-fig2-19.jpg",
+      "caption": "Figure 2.19 The graph shows a more accurate graph of the velocity of a jetpowered car during the time span when it is speeding up."
+    },
+    "fig2-20": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-52.jpg",
+      "new_name": "phys11-kinematics-fig2-20.jpg",
+      "caption": "Figure 2.20"
+    },
+    "fig2-21": {
+      "original": "1bfcec96-a1a9-4e0f-9291-d0b7d1308d1c-53.jpg",
+      "new_name": "phys11-kinematics-fig2-21.jpg",
+      "caption": "Figure 2.21"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "course": "phys11",
+  "topic": "acceleration",
+  "chapter": "3",
+  "figures": {
+    "fig3-1": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-01.jpg",
+      "new_name": "phys11-acceleration-fig3-1.jpg",
+      "caption": "Figure 3.1 A plane slows down as it comes in for landing in St. Maarten. Its acceleration is in the opposite direction of its velocity. (Steve Conry, "
+    },
+    "fig3-2": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-06(1).jpg",
+      "new_name": "phys11-acceleration-fig3-2.jpg",
+      "caption": "Figure 3.2 The car is speeding up in (a) and slowing down in (b)."
+    },
+    "fig3-4": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-06.jpg",
+      "new_name": "phys11-acceleration-fig3-4.jpg",
+      "caption": "Figure 3.4"
+    },
+    "fig3-5": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-10.jpg",
+      "new_name": "phys11-acceleration-fig3-5.jpg",
+      "caption": "Figure 3.5"
+    },
+    "fig3-6": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-17.jpg",
+      "new_name": "phys11-acceleration-fig3-6.jpg",
+      "caption": "Figure 3.6 The slope of displacement versus time is velocity."
+    },
+    "fig3-7": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-18(1).jpg",
+      "new_name": "phys11-acceleration-fig3-7.jpg",
+      "caption": "Figure 3.7 The slope of velocity versus time is acceleration."
+    },
+    "fig3-9": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-18.jpg",
+      "new_name": "phys11-acceleration-fig3-9.jpg",
+      "caption": "Figure 3.9"
+    },
+    "fig3-10": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-23.jpg",
+      "new_name": "phys11-acceleration-fig3-10.jpg",
+      "caption": "Figure 3.10 Smoke rises from the tires of a dragster at the beginning of a drag race. (Lt. Col. William Thurmond. Photo courtesy of U.S. Army.)"
+    },
+    "fig3-11": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-27.jpg",
+      "new_name": "phys11-acceleration-fig3-11.jpg",
+      "caption": "Figure 3.11 Astronauts train using G Force Simulators. (NASA)"
+    },
+    "fig3-12": {
+      "original": "b9ef3717-e0c7-4b61-bf9f-f8eb1ba3da83-29.jpg",
+      "new_name": "phys11-acceleration-fig3-12.jpg",
+      "caption": "Figure 3.12 Initial conditions for rock thrown straight up."
+    }
+  }
+}

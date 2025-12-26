@@ -1,0 +1,117 @@
+{
+  "course": "phys11",
+  "topic": "sound",
+  "chapter": "14",
+  "figures": {
+    "fig14-1": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-01.jpg",
+      "new_name": "phys11-sound-fig14-1.jpg",
+      "caption": "Figure 14.1 This tree fell some time ago. When it fell, particles in the air were disturbed by the energy of the tree hitting the ground. This disturb"
+    },
+    "fig14-2": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-04(1).jpg",
+      "new_name": "phys11-sound-fig14-2.jpg",
+      "caption": "Figure 14.2 A vibrating string moving to the right compresses the air in front of it and expands the air behind it."
+    },
+    "fig14-3": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-04.jpg",
+      "new_name": "phys11-sound-fig14-3.jpg",
+      "caption": "Figure 14.3 As the string moves to the left, it creates another compression and rarefaction as the particles on the right move away from the string."
+    },
+    "fig14-4": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-05.jpg",
+      "new_name": "phys11-sound-fig14-4.jpg",
+      "caption": "Figure 14.4 After many vibrations, there is a series of compressions and rarefactions that have been transmitted from the string as a sound wave. The "
+    },
+    "fig14-6": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-05(1).jpg",
+      "new_name": "phys11-sound-fig14-6.jpg",
+      "caption": "Figure 14.6 When fireworks explode in the sky, the light energy is perceived before the sound energy. Sound travels more slowly than light does. (Domi"
+    },
+    "fig14-7": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-09.jpg",
+      "new_name": "phys11-sound-fig14-7.jpg",
+      "caption": "Figure 14.7 A sound wave emanates from a source vibrating at a frequency \\(f\\), propagates at \\(v\\), and has a wavelength \\(\\lambda\\)."
+    },
+    "fig14-9": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-13.jpg",
+      "new_name": "phys11-sound-fig14-9.jpg",
+      "caption": "Figure 14.9 Noise on crowded roadways like this one in Delhi makes it hard to hear others unless they shout. (Lingaraj G J, Flickr)"
+    },
+    "fig14-10": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-19.jpg",
+      "new_name": "phys11-sound-fig14-10.jpg",
+      "caption": "Figure 14.10 Graphs of the pressures in two sound waves of different intensities. The more intense sound is produced by a source that has larger-ampli"
+    },
+    "fig14-11": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-24.jpg",
+      "new_name": "phys11-sound-fig14-11.jpg",
+      "caption": "Figure 14.11 The illustration shows the anatomy of the human ear."
+    },
+    "fig14-12": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-25.jpg",
+      "new_name": "phys11-sound-fig14-12.jpg",
+      "caption": "Figure 14.12 The inner ear, or cochlea, is a coiled tube about 3 mm in diameter and 3 cm in length when uncoiled. As the stapes vibrates against the o"
+    },
+    "fig14-13": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-26.jpg",
+      "new_name": "phys11-sound-fig14-13.jpg",
+      "caption": "Figure 14.13 Playing music, also known as \"rocking out\", involves creating vibrations using musical instruments. (John Norton)"
+    },
+    "fig14-14": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-31.jpg",
+      "new_name": "phys11-sound-fig14-14.jpg",
+      "caption": "Figure 14.14 Sounds emitted by a source spread out in spherical waves. Because the source, observers, and air are stationary, the wavelength and frequ"
+    },
+    "fig14-15": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-31(1).jpg",
+      "new_name": "phys11-sound-fig14-15.jpg",
+      "caption": "Figure 14.15 Sounds emitted by a source moving to the right spread out from the points at which they were emitted. The wavelength is reduced and, cons"
+    },
+    "fig14-18": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-34.jpg",
+      "new_name": "phys11-sound-fig14-18.jpg",
+      "caption": "Figure 14.18 The paddle ball on its rubber band moves in response to the finger supporting it. If the finger moves with the natural frequency of the b"
+    },
+    "fig14-19": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-40.jpg",
+      "new_name": "phys11-sound-fig14-19.jpg",
+      "caption": "Figure 14.19 Some types of headphones use the phenomena of constructive and destructive interference to cancel out outside noises."
+    },
+    "fig14-21": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-41.jpg",
+      "new_name": "phys11-sound-fig14-21.jpg",
+      "caption": "Figure 14.21 Resonance of air in a tube closed at one end, caused by a tuning fork. A disturbance moves down the tube."
+    },
+    "fig14-22": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-42(1).jpg",
+      "new_name": "phys11-sound-fig14-22.jpg",
+      "caption": "Figure 14.22 Resonance of air in a tube closed at one end, caused by a tuning fork. The disturbance reflects from the closed end of the tube."
+    },
+    "fig14-23": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-42.jpg",
+      "new_name": "phys11-sound-fig14-23.jpg",
+      "caption": "Figure 14.23 Resonance of air in a tube closed at one end, caused by a tuning fork. If the length of the tube \\(L\\) is just right, the disturbance get"
+    },
+    "fig14-24": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-43.jpg",
+      "new_name": "phys11-sound-fig14-24.jpg",
+      "caption": "Figure 14.24 The same standing wave is created in the tube by a vibration introduced near its closed end."
+    },
+    "fig14-25": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-43(1).jpg",
+      "new_name": "phys11-sound-fig14-25.jpg",
+      "caption": "Figure 14.25 Another resonance for a tube closed at one end. This has maximum air displacements at the open end, and none at the closed end. The wavel"
+    },
+    "fig14-26": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-44.jpg",
+      "new_name": "phys11-sound-fig14-26.jpg",
+      "caption": "Figure 14.26 The fundamental and three lowest overtones for a tube closed at one end. All have maximum air displacements at the open end and none at t"
+    },
+    "fig14-27": {
+      "original": "971f4937-33ce-4297-8938-cac113e8d1f3-45.jpg",
+      "new_name": "phys11-sound-fig14-27.jpg",
+      "caption": "Figure 14.27 The resonant frequencies of a tube open at both ends are shown, including the fundamental and the first three overtones. In all cases the"
+    }
+  }
+}

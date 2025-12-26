@@ -1,0 +1,127 @@
+{
+  "course": "phys11",
+  "topic": "physics",
+  "chapter": "1",
+  "figures": {
+    "fig1-1": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-01.jpg",
+      "new_name": "phys11-physics-fig1-1.jpg",
+      "caption": "Figure 1.1 Galaxies, such as the Andromeda galaxy pictured here, are immense in size. The small blue spots in this photo are also galaxies. The same p"
+    },
+    "fig1-3": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-07.jpg",
+      "new_name": "phys11-physics-fig1-3.jpg",
+      "caption": "Figure 1.3 Stonehenge is a monument located in England that was built between 3000 and 1000 B.C. It functions as an ancient astronomical observatory, "
+    },
+    "fig1-4": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-11.jpg",
+      "new_name": "phys11-physics-fig1-4.jpg",
+      "caption": "Figure 1.4 Einstein's theory of relativity describes space and time as an interweaved mesh. Large objects, such as a planet, distort space, causing ob"
+    },
+    "fig1-5": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-12.jpg",
+      "new_name": "phys11-physics-fig1-5.jpg",
+      "caption": "Figure 1.5 Using a scanning tunneling microscope (STM), scientists can see the individual atoms that compose this sheet of gold. (Erwinrossen)"
+    },
+    "fig1-6": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-13.jpg",
+      "new_name": "phys11-physics-fig1-6.jpg",
+      "caption": "Figure 1.6 Particle colliders such as the Large Hadron Collider in Switzerland or Fermilab in the United States (pictured here), have long tunnels tha"
+    },
+    "fig1-7": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-14.jpg",
+      "new_name": "phys11-physics-fig1-7.jpg",
+      "caption": "Figure 1.7 Why can't you put metal in the microwave? Microwaves are highenergy radiation that increases the movement of electrons in metal. These movi"
+    },
+    "fig1-9": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-16.jpg",
+      "new_name": "phys11-physics-fig1-9.jpg",
+      "caption": "Figure 1.9 Physics, chemistry, and biology help describe the properties of cell walls in plant cells, such as the onion cells seen here. (Umberto Salv"
+    },
+    "fig1-10": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-18.jpg",
+      "new_name": "phys11-physics-fig1-10.jpg",
+      "caption": "Figure 1.10 The Rosetta spacecraft, with its large and revolutionary solar panels, carried the Philae lander to a comet. The lander then detached and "
+    },
+    "fig1-11": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-19.jpg",
+      "new_name": "phys11-physics-fig1-11.jpg",
+      "caption": "Figure 1.11 a) Voyager 2, launched in 1977, used the gravity of Saturn to slingshot over to Uranus and Neptune. NASA b) A rendering of Voyager 1, the "
+    },
+    "fig1-12": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-25.jpg",
+      "new_name": "phys11-physics-fig1-12.jpg",
+      "caption": "Figure 1.12 The electron cloud model of the atom predicts the geometry and shape of areas where different electrons may be found in an atom. However, "
+    },
+    "fig1-13": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-32.jpg",
+      "new_name": "phys11-physics-fig1-13.jpg",
+      "caption": "Figure 1.13 Distances given in unknown units are maddeningly useless."
+    },
+    "fig1-14": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-34.jpg",
+      "new_name": "phys11-physics-fig1-14.jpg",
+      "caption": "Figure 1.14 The meter is defined to be the distance light travels in \\(1 / 299,792,458\\) of a second through a vacuum. Distance traveled is speed mult"
+    },
+    "fig1-15": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-35.jpg",
+      "new_name": "phys11-physics-fig1-15.jpg",
+      "caption": "Figure 1.15 An atomic clock such as this one uses the vibrations of cesium atoms to keep time to a precision of one microsecond per year. The fundamen"
+    },
+    "fig1-18": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-38.jpg",
+      "new_name": "phys11-physics-fig1-18.jpg",
+      "caption": "Figure 1.18 The distance from Earth to the moon may seem immense, but it is just a tiny fraction of the distance from Earth to our closest neighboring"
+    },
+    "fig1-19": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-45.jpg",
+      "new_name": "phys11-physics-fig1-19.jpg",
+      "caption": "Figure 1.19 A double-pan mechanical balance is used to compare different masses. Usually an object with unknown mass is placed in one pan and objects"
+    },
+    "fig1-20": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-46.jpg",
+      "new_name": "phys11-physics-fig1-20.jpg",
+      "caption": "Figure 1.20 Whereas a mechanical balance may only read the mass of an object to the nearest tenth of a gram, some digital scales can measure the mass "
+    },
+    "fig1-21": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-48.jpg",
+      "new_name": "phys11-physics-fig1-21.jpg",
+      "caption": "Figure 1.21 A GPS system attempts to locate a restaurant at the center of the bull's-eye. The black dots represent each attempt to pinpoint the locati"
+    },
+    "fig1-22": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-49.jpg",
+      "new_name": "phys11-physics-fig1-22.jpg",
+      "caption": "Figure 1.22 In this figure, the dots are concentrated close to one another, indicating high precision, but they are rather far away from the actual lo"
+    },
+    "fig1-23": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-50.jpg",
+      "new_name": "phys11-physics-fig1-23.jpg",
+      "caption": "Figure 1.23 In this figure, the dots are concentrated close to one another, indicating high precision, and they are very close to the actual location "
+    },
+    "fig1-25": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-53(1).jpg",
+      "new_name": "phys11-physics-fig1-25.jpg",
+      "caption": "Figure 1.25 A bank stack contains one hundred \\(\\$ 100\\) bills, and is worth \\(\\$ 10,000\\). How many bank stacks make up a trillion dollars? (Andrew M"
+    },
+    "fig1-26": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-60.jpg",
+      "new_name": "phys11-physics-fig1-26.jpg",
+      "caption": "Figure 1.26 The graph of the train's distance from the station versus time from the exercise above."
+    },
+    "fig1-27": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-61.jpg",
+      "new_name": "phys11-physics-fig1-27.jpg",
+      "caption": "Figure 1.27 The completed graph with the trend line included."
+    },
+    "fig1-28": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-63.jpg",
+      "new_name": "phys11-physics-fig1-28.jpg",
+      "caption": "Figure 1.28 Examples of (a) linear, (b) quadratic, (c) inverse, and (d) exponential relationship graphs."
+    },
+    "fig1-29": {
+      "original": "8484573f-7913-4d1d-981f-d54fe53a1e32-64.jpg",
+      "new_name": "phys11-physics-fig1-29.jpg",
+      "caption": "Figure 1.29 (a) The Richter scale uses a log base 10 scale on its \\(y\\)-axis (microns of amplified maximum ground motion). (b) The relationship betwee"
+    }
+  }
+}

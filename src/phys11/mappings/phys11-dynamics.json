@@ -1,0 +1,52 @@
+{
+  "course": "phys11",
+  "topic": "dynamics",
+  "chapter": "4",
+  "figures": {
+    "fig4-1": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-01.jpg",
+      "new_name": "phys11-dynamics-fig4-1.jpg",
+      "caption": "Figure 4.1 Newton's laws of motion describe the motion of the dolphin's path. (Credit: Jin Jang)"
+    },
+    "fig4-3": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-06.jpg",
+      "new_name": "phys11-dynamics-fig4-3.jpg",
+      "caption": "Figure 4.3 For a box sliding across a floor, friction acts in the direction opposite to the velocity."
+    },
+    "fig4-4": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-13.jpg",
+      "new_name": "phys11-dynamics-fig4-4.jpg",
+      "caption": "Figure 4.4 (a) The wagon and rider form a system that is acted on by external forces. (b) The two children pushing the wagon and child provide two ext"
+    },
+    "fig4-5": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-20.jpg",
+      "new_name": "phys11-dynamics-fig4-5.jpg",
+      "caption": "Figure 4.5 The same force exerted on systems of different masses produces different accelerations. (a) A boy pushes a basketball to make a pass. The e"
+    },
+    "fig4-6": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-24.jpg",
+      "new_name": "phys11-dynamics-fig4-6.jpg",
+      "caption": "Figure 4.6"
+    },
+    "fig4-7": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-26.jpg",
+      "new_name": "phys11-dynamics-fig4-7.jpg",
+      "caption": "Figure 4.7"
+    },
+    "fig4-8": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-30.jpg",
+      "new_name": "phys11-dynamics-fig4-8.jpg",
+      "caption": "Figure 4.8 When the swimmer exerts a force \\(\\mathbf{F"
+    },
+    "fig4-10": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-32.jpg",
+      "new_name": "phys11-dynamics-fig4-10.jpg",
+      "caption": "Figure 4.10 (a) A sketch of Tarzan hanging motionless from a vine. (b) Arrows are used to represent all forces. \\(\\mathbf{T"
+    },
+    "fig4-11": {
+      "original": "245726cb-221c-4c44-8efe-f3bac2e19c79-36.jpg",
+      "new_name": "phys11-dynamics-fig4-11.jpg",
+      "caption": "Figure 4.11"
+    }
+  }
+}

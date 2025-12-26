@@ -1,0 +1,62 @@
+{
+  "course": "phys11",
+  "topic": "em-spectrum",
+  "chapter": "15",
+  "figures": {
+    "fig15-1": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-01.jpg",
+      "new_name": "phys11-em-spectrum-fig15-1.jpg",
+      "caption": "Figure 15.1 Human eyes detect these orange sea goldie fish swimming over a coral reef in the blue waters of the Gulf of Eilat, in the Red Sea, using v"
+    },
+    "fig15-2": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-06.jpg",
+      "new_name": "phys11-em-spectrum-fig15-2.jpg",
+      "caption": "Figure 15.2 A part of the electromagnetic wave sent out from an oscillating charge at one instant in time. The electric and magnetic fields ( \\(\\mathb"
+    },
+    "fig15-3": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-07.jpg",
+      "new_name": "phys11-em-spectrum-fig15-3.jpg",
+      "caption": "Figure 15.3 The electromagnetic spectrum, showing the major categories of electromagnetic waves. The range of frequencies and wavelengths is remarkabl"
+    },
+    "fig15-4": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-09.jpg",
+      "new_name": "phys11-em-spectrum-fig15-4.jpg",
+      "caption": "Figure 15.4 Maxwell and Sutton's photograph of a colored ribbon. This was the first durable color photograph. The plaid tartan of the Scots made a col"
+    },
+    "fig15-5": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-11.jpg",
+      "new_name": "phys11-em-spectrum-fig15-5.jpg",
+      "caption": "Figure 15.5 A small part of the electromagnetic spectrum that includes its visible"
+    },
+    "fig15-6": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-13.jpg",
+      "new_name": "phys11-em-spectrum-fig15-6.jpg",
+      "caption": "Figure 15.6 Mixing colored pigments follows the subtractive color wheel, and mixing colored light follows the additive color wheel."
+    },
+    "fig15-7": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-14.jpg",
+      "new_name": "phys11-em-spectrum-fig15-7.jpg",
+      "caption": "Figure 15.7 Humans, bees, and dogs see colors differently. Dogs see fewer colors than humans, and bees see a different range of colors."
+    },
+    "fig15-8": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-17.jpg",
+      "new_name": "phys11-em-spectrum-fig15-8.jpg",
+      "caption": "Figure 15.8 This shadow X-ray image shows many interesting features, such as artificial heart valves, a pacemaker, and wires used to close the sternum"
+    },
+    "fig15-9": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-21.jpg",
+      "new_name": "phys11-em-spectrum-fig15-9.jpg",
+      "caption": "Figure 15.9 Light striking a thin film is partially reflected (ray 1) and partially refracted at the top surface. The refracted ray is partially refle"
+    },
+    "fig15-10": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-22.jpg",
+      "new_name": "phys11-em-spectrum-fig15-10.jpg",
+      "caption": "Figure 15.10 The transverse oscillations in one rope are in a vertical plane, and those in the other rope are in a horizontal plane. The first is said"
+    },
+    "fig15-11": {
+      "original": "5703778b-3a35-40a5-96b5-75c6410c9ea9-23.jpg",
+      "new_name": "phys11-em-spectrum-fig15-11.jpg",
+      "caption": "Figure 15.11 These two photographs of a river show the effect of a polarizing filter in reducing glare in light reflected from the surface of water. P"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "course": "phys11",
+  "topic": "thermal",
+  "chapter": "11",
+  "figures": {
+    "fig11-1": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-01.jpg",
+      "new_name": "phys11-thermal-fig11-1.jpg",
+      "caption": "Figure 11.1 The welder's gloves and helmet protect the welder from the electric arc, which transfers enough thermal energy to melt the rod, spray spar"
+    },
+    "fig11-2": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-05.jpg",
+      "new_name": "phys11-thermal-fig11-2.jpg",
+      "caption": "Figure 11.2 Relationships between the Fahrenheit, Celsius, and Kelvin temperature scales, rounded to the nearest degree. The relative sizes of the sca"
+    },
+    "fig11-3": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-15.jpg",
+      "new_name": "phys11-thermal-fig11-3.jpg",
+      "caption": "Figure 11.3 In a fireplace, heat transfer occurs by all three methods: conduction, convection, and radiation. Radiation is responsible for most of the"
+    },
+    "fig11-4": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-17.jpg",
+      "new_name": "phys11-thermal-fig11-4.jpg",
+      "caption": "Figure 11.4 The particles in two bodies at different temperatures have different average kinetic energies. Collisions occurring at the contact surface"
+    },
+    "fig11-5": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-18(1).jpg",
+      "new_name": "phys11-thermal-fig11-5.jpg",
+      "caption": "Figure 11.5 Air heated by the so-called gravity furnace expands and rises, forming a convective loop that transfers energy to other parts of the room."
+    },
+    "fig11-6": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-18.jpg",
+      "new_name": "phys11-thermal-fig11-6.jpg",
+      "caption": "Figure 11.6 Convection plays an important role in heat transfer inside this pot of water. Once conducted to the inside fluid, heat transfer to other p"
+    },
+    "fig11-8": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-19.jpg",
+      "new_name": "phys11-thermal-fig11-8.jpg",
+      "caption": "Figure 11.8 (a) Particles in a solid always have the same neighbors, held close by forces represented here by springs. These particles are essentially"
+    },
+    "fig11-9": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-29.jpg",
+      "new_name": "phys11-thermal-fig11-9.jpg",
+      "caption": "Figure 11.9 (a) Energy is required to partially overcome the attractive forces between particles in a solid to form a liquid. That same energy must be"
+    },
+    "fig11-10": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-31.jpg",
+      "new_name": "phys11-thermal-fig11-10.jpg",
+      "caption": "Figure 11.10 A graph of temperature versus added energy. The system is constructed so that no vapor forms while ice warms to become liquid water, and "
+    },
+    "fig11-11": {
+      "original": "9044bee6-b601-41f3-ac5a-eb9d55d1bb9c-32.jpg",
+      "new_name": "phys11-thermal-fig11-11.jpg",
+      "caption": "Figure 11.11 With the proper ingredients, some ice and a couple of plastic bags, you could make your own ice cream in five minutes. (ElinorD, Wikimedi"
+    }
+  }
+}

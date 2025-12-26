@@ -1,0 +1,62 @@
+{
+  "course": "phys11",
+  "topic": "thermodynamics",
+  "chapter": "12",
+  "figures": {
+    "fig12-1": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-01.jpg",
+      "new_name": "phys11-thermodynamics-fig12-1.jpg",
+      "caption": "Figure 12.1 A steam engine uses energy transfer by heat to do work. (Modification of work by Gerald Friedrich, Pixabay)"
+    },
+    "fig12-2": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-05.jpg",
+      "new_name": "phys11-thermodynamics-fig12-2.jpg",
+      "caption": "Figure 12.2 An engineer makes a site visit to the Baghdad South power plant."
+    },
+    "fig12-3": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-08.jpg",
+      "new_name": "phys11-thermodynamics-fig12-3.jpg",
+      "caption": "Figure 12.3 (a) Although the person being poked with the finger might be irritated, the force has little lasting effect. (b) In contrast, the same for"
+    },
+    "fig12-4": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-09.jpg",
+      "new_name": "phys11-thermodynamics-fig12-4.jpg",
+      "caption": "Figure 12.4 (a) When air is pumped into a deflated tire, its volume first increases without much increase in pressure. (b) When the tire is filled to "
+    },
+    "fig12-7": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-10.jpg",
+      "new_name": "phys11-thermodynamics-fig12-7.jpg",
+      "caption": "Figure 12.7 (a) The first law of thermodynamics applies to metabolism. Heat transferred out of the body (Q) and work done by the body (W) remove inter"
+    },
+    "fig12-8": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-18.jpg",
+      "new_name": "phys11-thermodynamics-fig12-8.jpg",
+      "caption": "Figure 12.8 Two different processes produce the same change in a system. (a) A total of 15.00 J of heat transfer occurs into the system, while work ta"
+    },
+    "fig12-10": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-24.jpg",
+      "new_name": "phys11-thermodynamics-fig12-10.jpg",
+      "caption": "Figure 12.10 Examples of one-way processes in nature. (a) Heat transfer occurs spontaneously from hot to cold, but not from cold to hot. (b) The brake"
+    },
+    "fig12-11": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-28.jpg",
+      "new_name": "phys11-thermodynamics-fig12-11.jpg",
+      "caption": "Figure 12.11 These ice floes melt during the Arctic summer. Some of them refreeze in the winter, but the second law of thermodynamics predicts that it"
+    },
+    "fig12-13": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-29.jpg",
+      "new_name": "phys11-thermodynamics-fig12-13.jpg",
+      "caption": "Figure 12.13 (a) Heat transfer to the gas in a cylinder increases the internal energy of the gas, creating higher pressure and temperature. (b) The fo"
+    },
+    "fig12-14": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-34.jpg",
+      "new_name": "phys11-thermodynamics-fig12-14.jpg",
+      "caption": "Figure 12.14 (a) Heat transfers energy spontaneously from a hot object to a cold one, as is consistent with the second law of thermodynamics. (b) A he"
+    },
+    "fig12-16": {
+      "original": "88bd9fb4-f67e-4150-aa24-ddea9da5ef74-36.jpg",
+      "new_name": "phys11-thermodynamics-fig12-16.jpg",
+      "caption": "Figure 12.16 Heat pumps, air conditioners, and refrigerators are heat engines operated backward. Almost every home contains a refrigerator. Most peopl"
+    }
+  }
+}
