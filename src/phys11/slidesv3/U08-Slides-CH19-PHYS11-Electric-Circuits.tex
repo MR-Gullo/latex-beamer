@@ -56,7 +56,7 @@ From nerve impulses in your brain to hydroelectric dams sending power across con
 \begin{exampleblock}{The Mental Model}
 Electric current is like water flowing through pipes - voltage is the pressure, resistance is the friction.
 \end{exampleblock}
-\note{[P0][Fig 19.1: Electric energy in massive]  "Hydroelectric facility - converts water pressure to electric current"\\\\
+\note{[P0][Fig 19.1: Hydroelectric facility with flowing water] "This analogy is pedagogically powerful because students already understand water flow intuitively - leverage this prior knowledge to scaffold abstract electric current concept. Water pressure maps to voltage, flow rate to current, pipe narrowness to resistance. Ask: 'What pushes water through pipes?' then connect to voltage pushing charge."\\\\
 [P1] [THE REVELATION] "Electric current is like water flowing through pipes"\\\\
 - Voltage is pressure pushing charges\\\\
 - Resistance slows the flow\\\\
@@ -119,11 +119,11 @@ If 5 coulombs flow past a point in 1 second, the current is 5 A.
 \textbf{Reality:} Electrons flow from negative to positive.\\
 \textbf{Convention:} Current flows from positive to negative.
 \end{alertblock}
-\note{[P0] [Fig 19.2: A battery has a] "Battery with wire connecting terminals"\\\\
+\note{[P0][Fig 19.2: Battery showing electron flow from negative to positive terminal] "Students find this confusing - address misconception explicitly. The diagram shows physical reality (electron movement) vs convention (current direction). Emphasize: both perspectives work mathematically, but we must be consistent. This builds critical thinking about scientific conventions vs physical reality."\\\\
 [P1] [THE CONFLICT] "Electrons carry negative charge, so they flow from negative terminal to positive"\\\\
 - But we define conventional current as positive charge flow\\\\
 - Blame Benjamin Franklin - he guessed wrong in 1750s\\\\
-[THE HUMILITY] We're stuck with this backwards convention}
+[THE HUMILITY] We're stuck with this backwards convention - science admits mistakes but keeps useful conventions}
 \end{frame}
 
 \begin{frame}
@@ -154,12 +154,12 @@ If 5 coulombs flow past a point in 1 second, the current is 5 A.
 \centering
 \includegraphics[width=0.6\textwidth,height=0.3\textheight,keepaspectratio]{phys11-circuits-fig19-6.jpg}
 \end{figure}
-\note{[P0][Fig 19.6: With alternating current, the]  "Two types of current"\\\\
+\note{[P0][Fig 19.6: Graph showing sinusoidal AC current reversing direction periodically] "Graph literacy critical here - students must read temporal patterns. Trace the curve with your finger showing how current magnitude AND direction change. Ask: 'Why would we use AC instead of DC?' Lead to transmission efficiency. This graph appears in every electrical engineering context."\\\\
 [P1] "DC flows one direction - batteries, flashlights, cars"\\\\
 [P2] "AC alternates back and forth - wall sockets, power grid"\\\\
-- AC graph shows current reversing smoothly\\\\
+- AC graph shows current reversing smoothly at 60 Hz in North America\\\\
 - Most devices use transformers to convert AC to DC\\\\
-[THE CONNECTION - Digital Archetype] Your laptop charger is really an AC-to-DC converter}
+[THE CONNECTION - Digital Archetype] Your laptop charger is really an AC-to-DC converter - look for the heavy black box}
 \end{frame}
 
 \begin{frame}
@@ -380,19 +380,19 @@ $$\boxed{R = 4.8 \Omega}$$
 \item Wire: perfect conductor (no resistance)
 \item Ground: reference point (voltage = 0)
 \end{itemize}
-\note{[P0][Fig 19.9: On the left is]  "Circuit diagram with battery and resistor"\\\\
+\note{[P0][Fig 19.9: Circuit diagram paired with analogous water circuit] "Symbolic literacy is non-negotiable for circuit analysis - this is their 'Rosetta Stone' moment. Dual representation (schematic + physical analogy) helps students who struggle with pure abstraction. Point out: battery = pump (energy source), resistor = sand filter (energy dissipation), wire = frictionless pipe (ideal conductor). Build fluency by having students verbally describe each symbol."\\\\
 [P1] "Learn to read the schematic language"\\\\
 - Battery: longer line is positive terminal\\\\
 - Resistor: zigzag shows opposition to flow\\\\
 - Wires assumed perfect - no voltage drop\\\\
-[THE CONNECTION - Digital Archetype] Like learning to read code}
+[THE CONNECTION - Digital Archetype] Like learning to read code - symbols represent complex physical processes}
 \end{frame}
 
 \begin{frame}
 \frametitle{19.2 Resistors in Series}
 \begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys11-circuits-fig19-16.jpg}
+\includegraphics[width=0.7\textwidth,height=0.45\textheight,keepaspectratio]{phys11-circuits-fig19-14.jpg}
 \end{figure}
 
 \pause
@@ -402,11 +402,11 @@ $$\boxed{R = 4.8 \Omega}$$
 \end{center}
 Series resistances add. One path, obstacles accumulate.
 \end{block}
-\note{[P0][Fig 19.16: The left circuit diagram]  "Three resistors connected head-to-tail"\\\\
+\note{[P0][Fig 19.14: Left shows three resistors in series, right shows equivalent single resistor] "Students struggle visualizing how multiple components reduce to one - this side-by-side comparison builds mental model of equivalence. Point out same current flows through all three, forcing voltage drops to add."\\\\
 [P1] [THE REVELATION] "Series resistances add - R-equiv equals R-1 plus R-2 plus R-3"\\\\
 - Same current flows through all\\\\
 - Voltage drops across each resistor\\\\
-[THE CONNECTION - Kinetic Archetype] Like running through multiple obstacles in a row}
+[THE CONNECTION - Kinetic Archetype] Like running through multiple obstacles in a row - each slows you down, total resistance accumulates}
 \end{frame}
 
 \begin{frame}
@@ -545,13 +545,12 @@ $$I = \frac{12 \text{ V}}{20 \Omega} = \boxed{0.60 \text{ A}}$$
 \end{center}
 Parallel resistance is reciprocal of sum of reciprocals.
 \end{block}
-\note{[Fig 19.16: three resistors in parallel with current paths]\\\\
-[P0] "Three resistors connected side-by-side"\\\\
+\note{[P0][Fig 19.16: Left shows three resistors in parallel, right shows equivalent single resistor] "Most counterintuitive concept in circuits - explicitly confront misconception. Diagram shows current splitting into three paths - use traffic analogy: more lanes means less congestion. Critical pedagogical moment: students who memorize formula without understanding the 'why' will fail complex problems. Emphasize: parallel provides MORE paths for charge, reducing effective opposition."\\\\
 [P1] [THE REVELATION] "Parallel resistance uses reciprocals - more complex formula"\\\\
-- Same voltage across all resistors\\\\
-- Current splits between paths\\\\
+- Same voltage across all resistors (connected to same two points)\\\\
+- Current splits between paths (sum of branch currents equals total)\\\\
 - More paths means LESS total resistance\\\\
-[THE CONFLICT] Counterintuitive - adding resistors decreases total resistance!}
+[THE CONFLICT] Counterintuitive - adding resistors decreases total resistance! Like opening more checkout lanes at grocery store}
 \end{frame}
 
 \begin{frame}
@@ -759,12 +758,12 @@ P &= \frac{V^2}{R} \quad \text{(using } I = \frac{V}{R} \text{)}
 \begin{alertblock}{The Revelation}
 They have DIFFERENT resistances! Using $P = \frac{V^2}{R}$, higher power means LOWER resistance.
 \end{alertblock}
-\note{[P0][Fig 19.20: On the left is]  "Two light bulbs - different power ratings"\\\\
+\note{[P0][Fig 19.20: Two bulbs labeled 25W and 60W showing brightness difference] "Visual comparison makes abstract power concept concrete. Students incorrectly assume 'bigger number = more resistance' - this image forces cognitive conflict. Guide reasoning: both see 120V, but 60W dissipates more energy per second, so current must be larger (P=IV), which requires SMALLER resistance (V=IR). This synthesis of multiple equations builds problem-solving sophistication."\\\\
 [P1] "Both operate on 120 V - so why different brightness?"\\\\
 [P2] [THE REVELATION] "Different resistances! P equals V squared over R"\\\\
 - Higher power requires lower resistance at same voltage\\\\
-- 60-W bulb has lower resistance than 25-W bulb\\\\
-[THE WONDER] Brightness is about resistance, not just voltage}
+- 60-W bulb has R=240Ω, 25-W bulb has R=576Ω (calculate if time permits)\\\\
+[THE WONDER] Brightness is about resistance, not just voltage - manufacturer designs different filament thicknesses}
 \end{frame}
 
 \begin{frame}
