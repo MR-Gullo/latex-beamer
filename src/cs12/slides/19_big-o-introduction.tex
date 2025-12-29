@@ -1,11 +1,39 @@
 \documentclass{beamer}
 % Use DS9 global theme
-\usepackage{../../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/ds9_theme}
 \definecolor{ds9blue}{HTML}{0066CC}
 \definecolor{ds9red}{HTML}{CC0000}
 
 % Additional packages for code
 \usepackage{listings}
+\usepackage{xcolor}
+
+% VS Code One Dark style syntax highlighting
+\definecolor{codepurple}{HTML}{C678DD}
+\definecolor{codeyellow}{HTML}{E5C07B}
+\definecolor{codecyan}{HTML}{56B6C2}
+\definecolor{codegreen}{HTML}{98C379}
+\definecolor{codeorange}{HTML}{E06C75}
+\definecolor{codegray}{HTML}{5C6370}
+
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{codepurple},
+    stringstyle=\color{codegreen},
+    commentstyle=\color{codegray}\itshape,
+    numberstyle=\tiny\color{codegray},
+    identifierstyle=\color{codecyan},
+    numbers=left,
+    breaklines=true,
+    tabsize=4,
+    showstringspaces=false,
+    frame=lines,
+    morekeywords={cout, cin, endl, nullptr}
+}
+
+% Image path configuration
+\graphicspath{{../images/}}
 
 % Title page configuration
 \title[Big O Notation]{CS12: Introduction to Big O Notation}
@@ -21,13 +49,23 @@
     \titlepage
 \end{frame}
 
+% Key Terms (ESL Vocabulary Scaffolding)
+\begin{frame}{Key Terms for This Lesson}
+    \begin{block}{Vocabulary}
+        \textbf{Algorithm}: A step-by-step set of instructions to solve a problem\\[0.5em]
+        \textbf{Efficiency}: How fast and how little memory an algorithm uses\\[0.5em]
+        \textbf{Input size (n)}: The amount of data the algorithm works with\\[0.5em]
+        \textbf{Complexity}: How the time or space grows as n gets bigger
+    \end{block}
+\end{frame}
+
 % Learning objectives
 \begin{frame}{Learning Objectives}
     By the end of this lesson, you will be able to:
     \begin{itemize}
-        \item Define algorithm efficiency in your own words
-        \item Identify and explain common Big O notations
-        \item Analyze simple algorithms to determine their time complexity
+        \item Define algorithm efficiency in your own words\pause
+        \item Identify and explain common Big O notations\pause
+        \item Analyze simple algorithms to determine their time complexity\pause
         \item Compare different algorithms based on their efficiency
     \end{itemize}
 \end{frame}
@@ -35,14 +73,15 @@
 % Introduction to Big O
 \begin{frame}{What is Big O Notation?}
     \begin{block}{Definition}
-        Big O notation measures how an algorithm's running time or space requirements grow as the input size increases.
+        Big O notation measures how long an algorithm takes or how much memory it uses as the input size grows.
     \end{block}
-    
+    \pause
+
     \begin{itemize}
-        \item Think of it as a way to measure an algorithm's speed
-        \item Helps us compare different solutions
-        \item Focuses on the worst-case scenario
-        \item Ignores smaller details and focuses on the big picture
+        \item Think of it as a way to measure an algorithm's speed\pause
+        \item Helps us compare different solutions\pause
+        \item Focuses on the slowest possible situation\pause
+        \item Ignores smaller details and focuses on the main pattern
     \end{itemize}
 \end{frame}
 
@@ -55,10 +94,19 @@
         \draw[ds9blue, thick] (0,0) -- (5,0.5) node[right] {O(1)};
         \draw[ds9gold, thick] (0,0) -- (5,5) node[right] {O(n)};
         \draw[ds9red, thick] (0,0) to[out=0,in=270] (5,5.5) node[right] {O(n²)};
-        
+
         \node[below] at (3,-0.5) {As input grows...};
     \end{tikzpicture}
     \end{center}
+\end{frame}
+
+% Big O Complexity Comparison Image
+\begin{frame}{Big O Complexity Comparison}
+    \begin{center}
+    \includegraphics[width=0.9\textwidth,height=0.65\textheight,keepaspectratio]{big-o-complexity-chart.png}
+    \end{center}
+    \pause
+    \textbf{Key insight:} As input grows, the gap between O(1) and O(n!) becomes enormous.
 \end{frame}
 
 % Real-world analogies
@@ -70,20 +118,23 @@
             \item Finding a book on your desk
             \item Looking up array element by index
         \end{itemize}
-        
+        \pause
+
         \textbf{O(n) - Linear Time}
         \begin{itemize}
             \item Searching through a line of books
             \item Finding maximum in unsorted array
         \end{itemize}
-        
+
         \column{0.5\textwidth}
+        \pause
         \textbf{O(n²) - Quadratic Time}
         \begin{itemize}
             \item Comparing every book with others
             \item Bubble sort algorithm
         \end{itemize}
-        
+        \pause
+
         \textbf{O(log n) - Logarithmic Time}
         \begin{itemize}
             \item Finding word in dictionary
@@ -107,8 +158,9 @@ int linearSearch(int arr[], int n, int x) {
     return -1;  // Not found
 }
     \end{lstlisting}
+    \pause
     \begin{itemize}
-        \item Time Complexity: O(n)
+        \item Time Complexity: O(n)\pause
         \item Why? In worst case, we check every element
     \end{itemize}
 \end{frame}
@@ -129,9 +181,9 @@ void printPairs(int arr[], int n) {
     \end{lstlisting}
     \pause
     \begin{itemize}
-        \item Let's count the operations...
-        \item Outer loop runs n times
-        \item For each outer loop, inner loop runs n times
+        \item Let's count the operations...\pause
+        \item Outer loop runs n times\pause
+        \item For each outer loop, inner loop runs n times\pause
         \item Total operations: n × n = n²
     \end{itemize}
 \end{frame}
@@ -156,13 +208,32 @@ void printPairs(int arr[], int n) {
     \end{alertblock}
 \end{frame}
 
+% Big O Quick Reference Table
+\begin{frame}{Big O Quick Reference}
+    \begin{center}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Notation} & \textbf{Name} & \textbf{If n = 1000} \\
+    \hline
+    O(1) & Constant & 1 operation \\ \hline
+    O(log n) & Logarithmic & $\sim$10 operations \\ \hline
+    O(n) & Linear & 1,000 operations \\ \hline
+    O(n log n) & Linearithmic & $\sim$10,000 operations \\ \hline
+    O(n²) & Quadratic & 1,000,000 operations \\ \hline
+    O(2$^n$) & Exponential & More than atoms in universe! \\ \hline
+    \end{tabular}
+    \end{center}
+    \pause
+    \textbf{Rule of thumb:} Anything slower than O(n²) is usually too slow for large data.
+\end{frame}
+
 % Summary
 \begin{frame}{Key Takeaways}
     \begin{block}{Remember These Points}
         \begin{itemize}
-            \item Big O notation helps us measure efficiency
-            \item Most common notations: O(1), O(n), O(n²)
-            \item Consider how performance changes with input size
+            \item Big O notation helps us measure efficiency\pause
+            \item Most common notations: O(1), O(n), O(n²)\pause
+            \item Consider how performance changes with input size\pause
             \item Different problems require different solutions
         \end{itemize}
     \end{block}

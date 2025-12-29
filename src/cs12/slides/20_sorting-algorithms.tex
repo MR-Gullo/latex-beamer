@@ -8,6 +8,8 @@
 \usepackage{listings}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{multimedia}  % For pdfpc video playback
+\graphicspath{{images/}}
 
 % Title page configuration
 \title[Sorting Algorithms]{C++ Sorting Algorithms}
@@ -68,6 +70,18 @@ void bubbleSort(int arr[], int n) {
 \end{lstlisting}
 \end{frame}
 
+\begin{frame}{Bubble Sort Animation}
+\begin{center}
+% 300x180 = 5:3 aspect ratio
+\movie[width=0.8\textwidth,height=0.48\textwidth,autostart,loop]{%
+  \includegraphics[width=0.8\textwidth,height=0.48\textwidth,keepaspectratio]{bubble_sort_poster.png}%
+}{../images/bubble_sort.mp4}
+\end{center}
+\begin{block}{Watch}
+Adjacent elements swap until largest "bubbles" to the end.
+\end{block}
+\end{frame}
+
 \begin{frame}{Bubble Sort Steps}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -108,6 +122,100 @@ void selectionSort(int arr[], int n) {
     }
 }
 \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Selection Sort Animation}
+\begin{center}
+% 288x288 = 1:1 square
+\movie[width=0.5\textwidth,height=0.5\textwidth,autostart,loop]{%
+  \includegraphics[width=0.5\textwidth,height=0.5\textwidth,keepaspectratio]{selection_sort_poster.png}%
+}{../images/selection_sort.mp4}
+\end{center}
+\begin{block}{Watch}
+Find the minimum, swap to front. Repeat for remaining unsorted portion.
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Insertion Sort}
+\begin{block}{Algorithm Description}
+\begin{itemize}
+\item Builds sorted array one element at a time
+\item Takes each element and inserts into correct position
+\item Efficient for small or nearly sorted data
+\end{itemize}
+\end{block}
+
+\begin{lstlisting}
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Insertion Sort Animation}
+\begin{center}
+% 276x684 = ~2:5 tall portrait
+\movie[width=0.25\textwidth,height=0.62\textwidth,autostart,loop]{%
+  \includegraphics[width=0.25\textwidth,height=0.62\textwidth,keepaspectratio]{insertion_sort_poster.png}%
+}{../images/insertion_sort.mp4}
+\end{center}
+\begin{block}{Watch}
+Each element slides into its correct position in the sorted portion.
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Merge Sort}
+\begin{block}{Algorithm Description}
+\begin{itemize}
+\item Divide and conquer approach
+\item Splits array in half recursively
+\item Merges sorted halves back together
+\end{itemize}
+\end{block}
+Time complexity: O(n log n) - consistent performance
+\end{frame}
+
+\begin{frame}{Merge Sort Animation}
+\begin{center}
+% 300x180 = 5:3 aspect ratio
+\movie[width=0.8\textwidth,height=0.48\textwidth,autostart,loop]{%
+  \includegraphics[width=0.8\textwidth,height=0.48\textwidth,keepaspectratio]{merge_sort_poster.png}%
+}{../images/merge_sort.mp4}
+\end{center}
+\begin{block}{Watch}
+Split, sort, merge. The "divide and conquer" strategy in action.
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Quick Sort}
+\begin{block}{Algorithm Description}
+\begin{itemize}
+\item Choose a pivot element
+\item Partition: smaller elements left, larger elements right
+\item Recursively sort the partitions
+\end{itemize}
+\end{block}
+Time complexity: O(n log n) average, O(n²) worst case
+\end{frame}
+
+\begin{frame}{Quick Sort Animation}
+\begin{center}
+% 280x214 = ~4:3 aspect ratio
+\movie[width=0.7\textwidth,height=0.535\textwidth,autostart,loop]{%
+  \includegraphics[width=0.7\textwidth,height=0.535\textwidth,keepaspectratio]{quick_sort_poster.png}%
+}{../images/quick_sort.mp4}
+\end{center}
+\begin{block}{Watch}
+Pick pivot, partition, recurse. Generally the fastest in practice.
+\end{block}
 \end{frame}
 
 % Continue with remaining frames similarly...
