@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -127,18 +128,18 @@ E and B fields oscillate in phase, perpendicular to each other and to direction 
 \frametitle{15.1 Wave Properties Review}
 \textbf{All waves share these features:}
 \begin{itemize}
-\item \textbf{Wavelength} $\lambda$: Distance between two crests (meters) \pause
-\item \textbf{Frequency} $f$: Number of crests passing per second (Hz) \pause
-\item \textbf{Amplitude}: Height of crest above null point
+\item \textbf{\wavelen{Wavelength}} $\wavelen{\lambda}$: Distance between two crests (meters) \pause
+\item \textbf{\freq{Frequency}} $\freq{f}$: Number of crests passing per second (Hz) \pause
+\item \textbf{\amplitude{Amplitude}}: Height of crest above null point
 \end{itemize}
 
 \pause
 
 \begin{block}{Universal Law: The Speed of Light}
 \begin{center}
-\Large $\boxed{c = f\lambda}$
+\Large $\boxed{\vel{c} = \freq{f}\wavelen{\lambda}}$
 \end{center}
-Speed equals frequency times wavelength. $c = 3.00 \times 10^{8}$ m/s.
+\vel{Speed} equals \freq{frequency} times \wavelen{wavelength}. $\vel{c} = 3.00 \times 10^{8}$ m/s.
 \end{block}
 \note{[P0] "Three wave properties apply to all waves"\\\\
 [P1] "Wavelength lambda: distance between crests"\\\\
@@ -505,9 +506,9 @@ UV radiation damages cells. Higher energy than visible light. Always use sunscre
 \frametitle{15.2 The Universal Speed Limit}
 \begin{block}{Nature's Law: Speed of Light}
 \begin{center}
-\Large $\boxed{c = 3.00 \times 10^{8} \text{ m/s}}$
+\Large $\boxed{\vel{c} = 3.00 \times 10^{8} \text{ m/s}}$
 \end{center}
-All EM radiation travels at this speed in a vacuum. 671 million mph. Constant everywhere in the universe.
+All EM radiation travels at this \vel{speed} in a vacuum. 671 million mph. Constant everywhere in the universe.
 \end{block}
 
 \pause
@@ -530,22 +531,22 @@ All EM radiation travels at this speed in a vacuum. 671 million mph. Constant ev
 
 \begin{frame}
 \frametitle{15.2 Light in Different Media}
-\textbf{In vacuum:} $c = 3.00 \times 10^{8}$ m/s
+\textbf{In vacuum:} $\vel{c} = 3.00 \times 10^{8}$ m/s
 
 \pause
 \vspace{0.3cm}
 
 \textbf{In other materials (slower):}
 \begin{itemize}
-\item Air: 99.97\% of $c$
-\item Water: 75\% of $c$
-\item Diamond: 41\% of $c$
+\item Air: 99.97\% of $\vel{c}$
+\item Water: 75\% of $\vel{c}$
+\item Diamond: 41\% of $\vel{c}$
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
-When light changes speed at boundary, it changes direction. This is called \textbf{refraction}.
+When light changes \vel{speed} at boundary, it changes direction. This is called \textbf{refraction}.
 \note{- In vacuum, light travels at c\\\\
 - In materials, light slows down\\\\
 - Air: barely slower\\\\
@@ -625,17 +626,17 @@ When light changes speed at boundary, it changes direction. This is called \text
 \begin{frame}
 \frametitle{Attempt: Decoding Yellow Light}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-Yellow light has a wavelength of $6.00 \times 10^{-7}$ m.
+Yellow light has a \wavelen{wavelength} of $\wavelen{\lambda} = 6.00 \times 10^{-7}$ m.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item $\lambda = 6.00 \times 10^{-7}$ m
-\item $c = 3.00 \times 10^{8}$ m/s
+\item $\wavelen{\lambda} = 6.00 \times 10^{-7}$ m
+\item $\vel{c} = 3.00 \times 10^{8}$ m/s
 \end{itemize}
 
-\textbf{Find:} Frequency $f$ in Hz
+\textbf{Find:} \freq{Frequency} $\freq{f}$ in Hz
 
 \vspace{0.3cm}
 
@@ -656,8 +657,8 @@ Yellow light has a wavelength of $6.00 \times 10^{-7}$ m.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What equation relates c, f, and $\lambda$?
-\item How did you rearrange to solve for f?
+\item What equation relates $\vel{c}$, $\freq{f}$, and $\wavelen{\lambda}$?
+\item How did you rearrange to solve for $\freq{f}$?
 \item Did you divide or multiply?
 \end{enumerate}
 
@@ -678,22 +679,22 @@ Yellow light has a wavelength of $6.00 \times 10^{-7}$ m.
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $c = f\lambda$
+\textbf{Equation:} $\vel{c} = \freq{f}\wavelen{\lambda}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Rearrange:} $f = \frac{c}{\lambda}$
+\textbf{Rearrange:} $\freq{f} = \frac{\vel{c}}{\wavelen{\lambda}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $f = \frac{3.00 \times 10^{8} \text{ m/s}}{6.00 \times 10^{-7} \text{ m}}$
+\textbf{Substitute:} $\freq{f} = \frac{3.00 \times 10^{8} \text{ m/s}}{6.00 \times 10^{-7} \text{ m}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{f = 5.00 \times 10^{14} \text{ Hz}}$$
+$$\boxed{\freq{f} = 5.00 \times 10^{14} \text{ Hz}}$$
 
 \pause
 \textbf{Check:} $10^{14}$ Hz is in visible range. Reasonable!
@@ -707,7 +708,7 @@ $$\boxed{f = 5.00 \times 10^{14} \text{ Hz}}$$
 
 \begin{frame}
 \frametitle{15.2 Illuminance: Light Intensity}
-\textbf{Luminous flux P:} Rate light radiates from source (lumens, lm)
+\textbf{Luminous flux \power{P}:} Rate light radiates from source (lumens, lm)
 
 \pause
 \vspace{0.3cm}
@@ -719,9 +720,9 @@ $$\boxed{f = 5.00 \times 10^{14} \text{ Hz}}$$
 
 \begin{block}{Universal Law: Inverse Square Law}
 \begin{center}
-\Large $\boxed{\text{Illuminance} = \frac{P}{4\pi r^{2}}}$
+\Large $\boxed{\text{Illuminance} = \frac{\power{P}}{4\pi \disp{r}^{2}}}$
 \end{center}
-Light intensity decreases with square of distance.
+Light \intensity{intensity} decreases with square of \disp{distance}.
 \end{block}
 \note{[P0] "Luminous flux P: rate light radiates - measured in lumens"\\\\
 [P1] "Illuminance: lumens per square meter - measured in lux"\\\\
@@ -741,8 +742,8 @@ A floor lamp has luminous flux of 2000 lm. You hold a book 2.00 m from the bulb.
 
 \textbf{Given:}
 \begin{itemize}
-\item $P = 2000$ lm
-\item $r = 2.00$ m
+\item $\power{P} = 2000$ lm
+\item $\disp{r} = 2.00$ m
 \item $\pi = 3.14$
 \end{itemize}
 
@@ -769,7 +770,7 @@ A floor lamp has luminous flux of 2000 lm. You hold a book 2.00 m from the bulb.
 \begin{enumerate}
 \item What equation did you use?
 \item What goes in the denominator?
-\item Did you square the radius?
+\item Did you square the \disp{radius}?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -789,7 +790,7 @@ A floor lamp has luminous flux of 2000 lm. You hold a book 2.00 m from the bulb.
 
 \vspace{0.3cm}
 
-\textbf{Equation:} Illuminance $= \frac{P}{4\pi r^{2}}$
+\textbf{Equation:} Illuminance $= \frac{\power{P}}{4\pi \disp{r}^{2}}$
 
 \pause
 \vspace{0.2cm}
@@ -825,10 +826,10 @@ $$\boxed{\text{Illuminance} = 39.8 \text{ lx}}$$
 \item EM spectrum = radio to gamma rays (same physics) \pause
 \item Visible light = tiny sliver of what exists \pause
 \item E and B fields oscillate perpendicular to propagation \pause
-\item c = $3.00 \times 10^{8}$ m/s in vacuum (constant) \pause
-\item Higher frequency = higher energy = more penetrating \pause
+\item $\vel{c} = 3.00 \times 10^{8}$ m/s in vacuum (constant) \pause
+\item Higher \freq{frequency} = higher energy = more penetrating \pause
 \item Polarization = E field vibrates in one direction \pause
-\item Illuminance decreases with inverse square of distance
+\item Illuminance decreases with inverse square of \disp{distance}
 \end{enumerate}
 \end{block}
 \note{[P0] "Seven revelations today"\\\\
@@ -845,11 +846,11 @@ $$\boxed{\text{Illuminance} = 39.8 \text{ lx}}$$
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-c &= f\lambda \\
-c &= 3.00 \times 10^{8} \text{ m/s} \\
-f &= \frac{c}{\lambda} \\
-\lambda &= \frac{c}{f} \\
-\text{Illuminance} &= \frac{P}{4\pi r^{2}}
+\vel{c} &= \freq{f}\wavelen{\lambda} \\
+\vel{c} &= 3.00 \times 10^{8} \text{ m/s} \\
+\freq{f} &= \frac{\vel{c}}{\wavelen{\lambda}} \\
+\wavelen{\lambda} &= \frac{\vel{c}}{\freq{f}} \\
+\text{Illuminance} &= \frac{\power{P}}{4\pi \disp{r}^{2}}
 \end{align}
 \note{- Five foundational formulas\\\\
 - c equals f lambda: relate speed, frequency, wavelength\\\\

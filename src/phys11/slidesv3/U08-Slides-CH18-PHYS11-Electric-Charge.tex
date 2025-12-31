@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -177,9 +178,9 @@ Rutherford's model: electrons orbit a tiny, dense nucleus of protons.
 \frametitle{18.1 The Fundamental Unit of Charge}
 \begin{block}{Nature's Quantum}
 \begin{center}
-\Large $e = 1.602 \times 10^{-19}$ C
+\Large $\charge{e} = 1.602 \times 10^{-19}$ C
 \end{center}
-The fundamental unit of electric charge (magnitude).
+The fundamental unit of electric \charge{charge} (magnitude).
 \end{block}
 
 \pause
@@ -187,8 +188,8 @@ The fundamental unit of electric charge (magnitude).
 
 \textbf{The carriers:}
 \begin{itemize}
-\item Proton charge: $+e = +1.602 \times 10^{-19}$ C \pause
-\item Electron charge: $-e = -1.602 \times 10^{-19}$ C
+\item Proton \charge{charge}: $+\charge{e} = +1.602 \times 10^{-19}$ C \pause
+\item Electron \charge{charge}: $-\charge{e} = -1.602 \times 10^{-19}$ C
 \end{itemize}
 
 \pause
@@ -230,16 +231,16 @@ The fundamental unit of electric charge (magnitude).
 
 \begin{frame}
 \frametitle{18.1 Charge Quantization}
-\textbf{Discovery:} Charge always comes in multiples of $e$
+\textbf{Discovery:} \charge{Charge} always comes in multiples of $\charge{e}$
 
 \pause
 \vspace{0.3cm}
 
 \begin{block}{Universal Law: Charge Quantization}
 \begin{center}
-\Large $\boxed{Q = ne}$
+\Large $\boxed{\charge{Q} = \particles{n}\charge{e}}$
 \end{center}
-where $n$ is an integer ($\pm 1, \pm 2, \pm 3, \ldots$)
+where $\particles{n}$ is an integer ($\pm 1, \pm 2, \pm 3, \ldots$)
 \end{block}
 
 \pause
@@ -258,9 +259,9 @@ where $n$ is an integer ($\pm 1, \pm 2, \pm 3, \ldots$)
 \frametitle{18.1 Conservation of Charge}
 \begin{block}{Nature's Accounting System}
 \begin{center}
-\Large $\boxed{q_{\text{initial}} = q_{\text{final}}}$
+\Large $\boxed{\charge{q}_{\text{initial}} = \charge{q}_{\text{final}}}$
 \end{center}
-Electric charge cannot be created or destroyed.
+Electric \charge{charge} cannot be created or destroyed.
 \end{block}
 
 \pause
@@ -268,8 +269,8 @@ Electric charge cannot be created or destroyed.
 
 \textbf{What this means:}
 \begin{itemize}
-\item Total charge before interaction = total charge after \pause
-\item Charge can move, but net charge stays constant \pause
+\item Total \charge{charge} before interaction = total \charge{charge} after \pause
+\item \charge{Charge} can move, but net \charge{charge} stays constant \pause
 \item Most fundamental conservation law in physics
 \end{itemize}
 
@@ -286,7 +287,7 @@ Electric charge cannot be created or destroyed.
 \begin{columns}[T]
 \column{0.48\textwidth}
 \begin{block}{Conductors}
-Materials that allow charge to move freely
+Materials that allow \charge{charge} to move freely
 \end{block}
 
 \textbf{Examples:}
@@ -298,7 +299,7 @@ Materials that allow charge to move freely
 \pause
 \column{0.48\textwidth}
 \begin{block}{Insulators}
-Materials that prevent charge from moving
+Materials that prevent \charge{charge} from moving
 \end{block}
 
 \textbf{Examples:}
@@ -347,8 +348,8 @@ Conductor = highway for electrons. Insulator = roadblock.
 \end{figure}
 
 \pause
-\textbf{Conductor:} Charge spreads to outer surface (repulsion wins).\\
-\textbf{Insulator:} Charge stays in place (can't move).
+\textbf{Conductor:} \charge{Charge} spreads to outer surface (repulsion wins).\\
+\textbf{Insulator:} \charge{Charge} stays in place (can't move).
 
 \note{[P0] [Fig 18.10: Charge redistribution] "Before contact: 100 electrons on left, 50 on right. At contact: electrons flow because they repel each other. After contact: 75 on each - charges equalized. Nature always equalizes."\\\\
 [P1] [THE CONFLICT] "Conductor: like charges repel, spread to outer surface. Insulator: charge can't move, stays put"\\\\
@@ -506,12 +507,12 @@ Two metal spheres initially have charges of +4 C and +8 C. After touching each o
 
 \textbf{Given:}
 \begin{itemize}
-\item Blue sphere initial: $q_1 = +4$ C
-\item Red sphere initial: $q_2 = +8$ C
-\item Blue sphere final: $q_1' = +10$ C
+\item Blue sphere initial: $\charge{q_1} = +4$ C
+\item Red sphere initial: $\charge{q_2} = +8$ C
+\item Blue sphere final: $\charge{q_1'} = +10$ C
 \end{itemize}
 
-\textbf{Find:} Final charge on red sphere $q_2'$
+\textbf{Find:} Final \charge{charge} on red sphere $\charge{q_2'}$
 
 \vspace{0.3cm}
 
@@ -556,29 +557,29 @@ Two metal spheres initially have charges of +4 C and +8 C. After touching each o
 
 \vspace{0.3cm}
 
-\textbf{Law:} $q_{\text{initial}} = q_{\text{final}}$
+\textbf{Law:} $\charge{q}_{\text{initial}} = \charge{q}_{\text{final}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 1:} Find total initial charge
-$$q_{\text{initial}} = +4\text{ C} + 8\text{ C} = +12\text{ C}$$
+\textbf{Step 1:} Find total initial \charge{charge}
+$$\charge{q}_{\text{initial}} = +4\text{ C} + 8\text{ C} = +12\text{ C}$$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Step 2:} Apply conservation law
-$$q_{\text{final}} = +10\text{ C} + q_2'$$
+$$\charge{q}_{\text{final}} = +10\text{ C} + \charge{q_2'}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 3:} Solve for $q_2'$
-$$+12\text{ C} = +10\text{ C} + q_2'$$
-$$\boxed{q_2' = +2\text{ C}}$$
+\textbf{Step 3:} Solve for $\charge{q_2'}$
+$$+12\text{ C} = +10\text{ C} + \charge{q_2'}$$
+$$\boxed{\charge{q_2'} = +2\text{ C}}$$
 
 \pause
-\textbf{Check:} $12 = 10 + 2$ \checkmark Charge is conserved!
+\textbf{Check:} $12 = 10 + 2$ \checkmark \charge{Charge} is conserved!
 
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "Total initial charge equals 4 plus 8 equals 12 coulombs"\\\\
@@ -594,14 +595,14 @@ $$\boxed{q_2' = +2\text{ C}}$$
 \begin{frame}
 \frametitle{Attempt: Counting Electrons}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-An ink droplet in a printer has net charge $q = -1.0 \times 10^{-10}$ C after passing through an electron beam.
+An ink droplet in a printer has net \charge{charge} $\charge{q} = -1.0 \times 10^{-10}$ C after passing through an electron beam.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item Droplet charge: $q = -1.0 \times 10^{-10}$ C
-\item Electron charge: $e = -1.602 \times 10^{-19}$ C
+\item Droplet \charge{charge}: $\charge{q} = -1.0 \times 10^{-10}$ C
+\item Electron \charge{charge}: $\charge{e} = -1.602 \times 10^{-19}$ C
 \end{itemize}
 
 \textbf{Find:} Number of electrons captured by droplet
@@ -626,7 +627,7 @@ An ink droplet in a printer has net charge $q = -1.0 \times 10^{-10}$ C after pa
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What equation relates total charge to number of electrons?
+\item What equation relates total \charge{charge} to number of electrons?
 \item Did you multiply or divide?
 \item What happens with the negative signs?
 \end{enumerate}
@@ -649,24 +650,24 @@ An ink droplet in a printer has net charge $q = -1.0 \times 10^{-10}$ C after pa
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $Q = ne$, so $n = \frac{Q}{e}$
+\textbf{Equation:} $\charge{Q} = \particles{n}\charge{e}$, so $\particles{n} = \frac{\charge{Q}}{\charge{e}}$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Substitute:}
-$$n = \frac{q}{q_{e^-}} = \frac{-1.0 \times 10^{-10}\text{ C}}{-1.602 \times 10^{-19}\text{ C}}$$
+$$\particles{n} = \frac{\charge{q}}{\charge{q_{e^-}}} = \frac{-1.0 \times 10^{-10}\text{ C}}{-1.602 \times 10^{-19}\text{ C}}$$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Simplify:}
-$$n = \frac{1.0 \times 10^{-10}}{1.602 \times 10^{-19}} = 6.24 \times 10^{8}$$
+$$\particles{n} = \frac{1.0 \times 10^{-10}}{1.602 \times 10^{-19}} = 6.24 \times 10^{8}$$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{n = 6 \times 10^{8} \text{ electrons}}$$
+$$\boxed{\particles{n} = 6 \times 10^{8} \text{ electrons}}$$
 
 \pause
 \textbf{Check:} About 600 million electrons - seems large but atoms have $10^{16}$ atoms!
@@ -686,11 +687,11 @@ $$\boxed{n = 6 \times 10^{8} \text{ electrons}}$$
 \frametitle{What You Now Know}
 \begin{block}{The Revelations}
 \begin{enumerate}
-\item Two types of charge: positive (protons) and negative (electrons) \pause
-\item Fundamental charge: $e = 1.602 \times 10^{-19}$ C \pause
-\item Charge quantization: $Q = ne$ (only integer multiples) \pause
-\item Conservation: $q_{\text{initial}} = q_{\text{final}}$ (never violated) \pause
-\item Conductors let charge move; insulators don't \pause
+\item Two types of \charge{charge}: positive (protons) and negative (electrons) \pause
+\item Fundamental \charge{charge}: $\charge{e} = 1.602 \times 10^{-19}$ C \pause
+\item \charge{Charge} quantization: $\charge{Q} = \particles{n}\charge{e}$ (only integer multiples) \pause
+\item Conservation: $\charge{q}_{\text{initial}} = \charge{q}_{\text{final}}$ (never violated) \pause
+\item Conductors let \charge{charge} move; insulators don't \pause
 \item Transfer methods: contact, conduction, induction
 \end{enumerate}
 \end{block}
@@ -709,9 +710,9 @@ $$\boxed{n = 6 \times 10^{8} \text{ electrons}}$$
 \begin{frame}
 \frametitle{Key Equations}
 \begin{align}
-e &= 1.602 \times 10^{-19}\text{ C} && \text{(fundamental charge)} \\
-Q &= ne && \text{(charge quantization)} \\
-q_{\text{initial}} &= q_{\text{final}} && \text{(conservation of charge)}
+\charge{e} &= 1.602 \times 10^{-19}\text{ C} && \text{(fundamental charge)} \\
+\charge{Q} &= \particles{n}\charge{e} && \text{(charge quantization)} \\
+\charge{q}_{\text{initial}} &= \charge{q}_{\text{final}} && \text{(conservation of charge)}
 \end{align}
 
 \note{- Three foundational equations\\\\

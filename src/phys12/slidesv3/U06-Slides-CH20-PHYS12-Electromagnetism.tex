@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -102,9 +103,9 @@
 
     \begin{block}{Nature's Rule for Moving Charges}
         \begin{center}
-            \Large $\boxed{F = qvB \sin \theta}$
+            \Large $\boxed{\force{F} = \charge{q}\vel{v}\pConst{B} \sin \theta}$
         \end{center}
-        Force on a charge moving through a magnetic field.
+        \force{Force} on a \charge{charge} moving through a magnetic field.
     \end{block}
 
     \pause
@@ -112,11 +113,11 @@
 
     \textbf{Variables:}
     \begin{itemize}
-        \item $F$ = force (N)
-        \item $q$ = charge (C)
-        \item $v$ = velocity (m/s)
-        \item $B$ = magnetic field strength (T, tesla)
-        \item $\theta$ = angle between $\vec{v}$ and $\vec{B}$
+        \item $\force{F}$ = \force{force} (N)
+        \item $\charge{q}$ = \charge{charge} (C)
+        \item $\vel{v}$ = \vel{velocity} (m/s)
+        \item $\pConst{B}$ = magnetic field strength (T, tesla)
+        \item $\theta$ = angle between $\vec{\vel{v}}$ and $\vec{\pConst{B}}$
     \end{itemize}
 
     \note{[P0] [THE REVELATION] "F equals q v B sine theta - force on moving charge"\\\\
@@ -131,18 +132,18 @@
 \begin{frame}
     \frametitle{20.1 Right-Hand Rule for Force}
 
-    \textbf{To find force direction on positive charge:}
+    \textbf{To find \force{force} direction on positive \charge{charge}:}
     \begin{enumerate}
-        \item Point fingers in direction of velocity $\vec{v}$ \pause
-        \item Curl fingers toward magnetic field $\vec{B}$ \pause
-        \item Thumb points in direction of force $\vec{F}$
+        \item Point fingers in direction of \vel{velocity} $\vec{\vel{v}}$ \pause
+        \item Curl fingers toward magnetic field $\vec{\pConst{B}}$ \pause
+        \item Thumb points in direction of \force{force} $\vec{\force{F}}$
     \end{enumerate}
 
     \pause
     \vspace{0.3cm}
 
     \begin{exampleblock}{Key Insight}
-        For negative charges, force is OPPOSITE the thumb direction.
+        For negative \charge{charges}, \force{force} is OPPOSITE the thumb direction.
     \end{exampleblock}
 
     \note{[P0] "Right-hand rule determines force direction"\\\\
@@ -157,25 +158,25 @@
 \begin{frame}
     \frametitle{20.1 Maximum Force Condition}
 
-    \begin{alertblock}{When is Force Maximum?}
+    \begin{alertblock}{When is \force{Force} Maximum?}
         $\sin \theta$ is maximum when $\theta = 90°$
     \end{alertblock}
 
     \pause
     \vspace{0.3cm}
 
-    \textbf{Maximum force:} $F_{\text{max}} = qvB$ (when $v \perp B$)
+    \textbf{Maximum \force{force}:} $\force{F}_{\text{max}} = \charge{q}\vel{v}\pConst{B}$ (when $\vel{v} \perp \pConst{B}$)
 
     \pause
     \vspace{0.3cm}
 
-    \textbf{Zero force:} $F = 0$ (when $v \parallel B$, $\theta = 0°$ or $180°$)
+    \textbf{Zero \force{force}:} $\force{F} = 0$ (when $\vel{v} \parallel \pConst{B}$, $\theta = 0°$ or $180°$)
 
     \pause
     \vspace{0.3cm}
 
     \begin{exampleblock}{The Mental Model}
-        Charge moving parallel to field lines feels no force. Moving perpendicular to field lines feels maximum force.
+        \charge{Charge} moving parallel to field lines feels no \force{force}. Moving perpendicular to field lines feels maximum \force{force}.
     \end{exampleblock}
 
     \note{[P0] "When is force maximum?"\\\\
@@ -192,10 +193,10 @@
 
     \begin{block}{Universal Law: Magnetic Force on Wire}
         \begin{center}
-            \Large $\boxed{F = I \ell B \sin \theta}$
+            \Large $\boxed{\force{F} = \current{I} \disp{\ell} \pConst{B} \sin \theta}$
         \end{center}
         \vspace{0.2cm}
-        Current-carrying wire in magnetic field experiences force.
+        \current{Current}-carrying wire in magnetic field experiences \force{force}.
     \end{block}
 
     \pause
@@ -226,7 +227,7 @@
 
     \begin{alertblock}{The Paradox}
         \textbf{Civilian:} "Motors are complicated machines."\\
-        \textbf{Physicist:} "Just a current loop in a magnetic field."
+        \textbf{Physicist:} "Just a \current{current} loop in a magnetic field."
     \end{alertblock}
 
     \note{[Fig 20.23: Electric motor schematic] "Point out shaft, loop, magnetic field vectors - simplify before complicating"\\\\
@@ -251,11 +252,11 @@
 
     \pause
 
-    \begin{block}{Universal Law: Torque on Current Loop}
+    \begin{block}{Universal Law: \torque{Torque} on \current{Current} Loop}
         \begin{center}
-            \Large $\boxed{\tau = NIAB \sin \theta}$
+            \Large $\boxed{\torque{\tau} = \particles{N}\current{I}\area{A}\pConst{B} \sin \theta}$
         \end{center}
-        Where $N$ = turns, $I$ = current, $A$ = loop area, $B$ = magnetic field
+        Where $\particles{N}$ = turns, $\current{I}$ = \current{current}, $\area{A}$ = loop \area{area}, $\pConst{B}$ = magnetic field
     \end{block}
 
     \note{[Fig 20.24: Top view of wire loop] "Trace force vectors from previous schematic - connect 3D to 2D view"\\\\
@@ -281,7 +282,7 @@
     \pause
 
     \begin{alertblock}{The Problem}
-        Torque reverses every half turn. Without \textbf{brushes} to reverse current, motor oscillates instead of rotating.
+        \torque{Torque} reverses every half turn. Without \textbf{brushes} to reverse \current{current}, motor oscillates instead of rotating.
     \end{alertblock}
 
     \note{[Fig 20.25: Torque vs angle, brushes reversing current] "Show both parts (a) and (b) - diagram explains what equation predicts"\\\\
@@ -308,8 +309,8 @@
     \pause
 
     \begin{exampleblock}{The Symmetry}
-        \textbf{Motor:} Electrical energy $\rightarrow$ Mechanical energy\\
-        \textbf{Generator:} Mechanical energy $\rightarrow$ Electrical energy
+        \textbf{Motor:} Electrical \energy{energy} $\rightarrow$ Mechanical \energy{energy}\\
+        \textbf{Generator:} Mechanical \energy{energy} $\rightarrow$ Electrical \energy{energy}
     \end{exampleblock}
 
     \note{[Fig 20.26: Generator schematic] "Compare directly to motor figure - emphasize identical structure, reversed energy flow"\\\\
@@ -338,9 +339,9 @@
 
     \begin{block}{Universal Law: Generator EMF}
         \begin{center}
-            \Large $\boxed{\varepsilon = NAB\omega \sin \omega t}$
+            \Large $\boxed{\voltage{\varepsilon} = \particles{N}\area{A}\pConst{B}\angvel{\omega} \sin \angvel{\omega} \tvar{t}}$
         \end{center}
-        Peak emf: $\varepsilon_0 = NAB\omega$
+        Peak emf: $\voltage{\varepsilon_0} = \particles{N}\area{A}\pConst{B}\angvel{\omega}$
     \end{block}
 
     \note{[Fig 20.27: EMF in straight wire through B field] "Isolate single wire first - show velocity decomposition before full coil"\\\\
@@ -420,7 +421,7 @@
         \begin{column}{0.5\textwidth}
             \pause
             \begin{block}{What Transformers Do}
-                Change AC voltage from one value to another\\
+                Change AC \voltage{voltage} from one value to another\\
                 \vspace{0.2cm}
                 \textit{Phone chargers, laptop adapters, power tools}
             \end{block}
@@ -451,10 +452,10 @@
 
     \begin{block}{The Principle}
         \begin{enumerate}
-            \item AC current in primary coil creates changing magnetic field
+            \item AC \current{current} in primary coil creates changing magnetic field
             \item Iron core traps and amplifies magnetic field
             \item Changing field passes through secondary coil
-            \item Induces AC voltage in secondary coil
+            \item Induces AC \voltage{voltage} in secondary coil
         \end{enumerate}
     \end{block}
 
@@ -474,19 +475,19 @@
 \begin{frame}
     \frametitle{20.2 Transformer Equation}
 
-    \begin{block}{Universal Law: Voltage Transformation}
+    \begin{block}{Universal Law: \voltage{Voltage} Transformation}
         \begin{center}
-            \Large $\boxed{\frac{V_S}{V_P} = \frac{N_S}{N_P}}$
+            \Large $\boxed{\frac{\voltage{V_S}}{\voltage{V_P}} = \frac{\particles{N_S}}{\particles{N_P}}}$
         \end{center}
         \vspace{0.2cm}
-        Secondary voltage / Primary voltage = Turns ratio
+        Secondary \voltage{voltage} / Primary \voltage{voltage} = Turns ratio
     \end{block}
 
     \pause
 
     \begin{exampleblock}{Step-Up vs. Step-Down}
-        \textbf{Step-Up:} $N_S > N_P$ $\rightarrow$ Increases voltage (power transmission)\\
-        \textbf{Step-Down:} $N_S < N_P$ $\rightarrow$ Decreases voltage (home delivery)
+        \textbf{Step-Up:} $\particles{N_S} > \particles{N_P}$ $\rightarrow$ Increases \voltage{voltage} (power transmission)\\
+        \textbf{Step-Down:} $\particles{N_S} < \particles{N_P}$ $\rightarrow$ Decreases \voltage{voltage} (home delivery)
     \end{exampleblock}
 
     \note{[P0] [ALGEBRA] "V-S over V-P equals N-S over N-P"\\\\
@@ -502,21 +503,21 @@
 \begin{frame}
     \frametitle{20.2 Power Transmission: Why High Voltage?}
 
-    \begin{block}{Power Transmitted}
-        $$P_{\text{transmitted}} = I_{\text{transmitted}} V_{\text{transmitted}}$$
+    \begin{block}{\power{Power} Transmitted}
+        $$\power{P}_{\text{transmitted}} = \current{I}_{\text{transmitted}} \voltage{V}_{\text{transmitted}}$$
     \end{block}
 
     \pause
 
     \begin{alertblock}{The Problem: Joule Losses}
-        $$P_{\text{lost}} = I_{\text{transmitted}}^2 R_{\text{wire}}$$
-        Power lost as heat proportional to \textbf{current squared}
+        $$\power{P}_{\text{lost}} = \current{I}_{\text{transmitted}}^2 \resist{R}_{\text{wire}}$$
+        \power{Power} lost as heat proportional to \textbf{\current{current} squared}
     \end{alertblock}
 
     \pause
 
     \begin{exampleblock}{The Solution}
-        Increase voltage $\rightarrow$ Decrease current $\rightarrow$ Minimize losses
+        Increase \voltage{voltage} $\rightarrow$ Decrease \current{current} $\rightarrow$ Minimize losses
     \end{exampleblock}
 
     \note{[P0] [ALGEBRA] "P-transmitted equals I-transmitted times V-transmitted"\\\\
@@ -559,13 +560,13 @@
     \frametitle{20.3 Nature's Symmetry}
 
     \begin{block}{We Already Know}
-        Electric current creates magnetic field (electromagnet)
+        Electric \current{current} creates magnetic field (electromagnet)
     \end{block}
 
     \pause
 
     \begin{block}{Faraday's Question (1831)}
-        Can magnetic field create electric current?
+        Can magnetic field create electric \current{current}?
     \end{block}
 
     \pause
@@ -612,17 +613,17 @@
     \frametitle{20.3 What is EMF?}
 
     \begin{alertblock}{Terrible Name}
-        \textbf{Electromotive Force} is NOT a force\\
-        It's a \textit{potential difference} (voltage)
+        \textbf{Electromotive Force} is NOT a \force{force}\\
+        It's a \textit{\voltage{potential difference}} (\voltage{voltage})
     \end{alertblock}
 
     \pause
 
     \begin{block}{Universal Law: EMF Definition}
         \begin{center}
-            Energy added per unit charge by source\\
+            \energy{Energy} added per unit \charge{charge} by source\\
             \vspace{0.2cm}
-            Symbol: $\varepsilon$ \quad Units: Volts (V)
+            Symbol: $\voltage{\varepsilon}$ \quad Units: Volts (V)
         \end{center}
     \end{block}
 
@@ -650,11 +651,11 @@
 
     \begin{block}{Universal Law: Magnetic Flux}
         \begin{center}
-            \Large $\boxed{\Phi = BA \cos \theta}$
+            \Large $\boxed{\pSpace{\Phi} = \pConst{B}\area{A} \cos \theta}$
         \end{center}
         \vspace{0.2cm}
-        Number of field lines perpendicular through area $A$\\
-        Unit: Weber (Wb) = T·m$^2$ = V·s
+        Number of field lines perpendicular through \area{area} $\area{A}$\\
+        Unit: Weber (Wb) = T$\cdot$m$^2$ = V$\cdot$s
     \end{block}
 
     \note{[Fig 20.34: Field lines through loop changing] "Count lines explicitly in both panels - quantify abstraction"\\\\
@@ -682,8 +683,8 @@
 
     \begin{exampleblock}{The Sail Analogy}
         \textbf{Loop = Sail, Magnetic Field = Wind}\\
-        Maximum flux when perpendicular ($\theta = 0°$)\\
-        Zero flux when parallel ($\theta = 90°$)
+        Maximum \pSpace{flux} when perpendicular ($\theta = 0°$)\\
+        Zero \pSpace{flux} when parallel ($\theta = 90°$)
     \end{exampleblock}
 
     \note{[Fig 20.35: Loop rotation through B field] "Rotate mentally between extremes - connect cos theta to visualization"\\\\
@@ -704,18 +705,18 @@
 
     \begin{block}{Universal Law: Faraday's Law}
         \begin{center}
-            \Large $\boxed{\varepsilon = -N \frac{\Delta \Phi}{\Delta t}}$
+            \Large $\boxed{\voltage{\varepsilon} = -\particles{N} \frac{\Delta \pSpace{\Phi}}{\Delta \tvar{t}}}$
         \end{center}
         \vspace{0.2cm}
-        EMF induced equals rate of change of magnetic flux
+        EMF induced equals rate of change of magnetic \pSpace{flux}
     \end{block}
 
     \pause
 
     \begin{exampleblock}{Three Ways to Induce EMF}
         \begin{enumerate}
-            \item Change magnetic field strength $B$
-            \item Change loop area $A$
+            \item Change magnetic field strength $\pConst{B}$
+            \item Change loop \area{area} $\area{A}$
             \item Change orientation angle $\theta$
         \end{enumerate}
     \end{exampleblock}
@@ -737,14 +738,14 @@
     \frametitle{20.3 Lenz's Law: The Minus Sign}
 
     \begin{block}{Universal Law: Lenz's Law}
-        Induced current flows in direction that \textit{opposes} the change in flux
+        Induced \current{current} flows in direction that \textit{opposes} the change in \pSpace{flux}
     \end{block}
 
     \pause
 
     \begin{alertblock}{Nature Resists Change}
-        Flux increasing? $\rightarrow$ Induced field opposes increase\\
-        Flux decreasing? $\rightarrow$ Induced field opposes decrease
+        \pSpace{Flux} increasing? $\rightarrow$ Induced field opposes increase\\
+        \pSpace{Flux} decreasing? $\rightarrow$ Induced field opposes decrease
     \end{alertblock}
 
     \note{[P0] "Why the minus sign?"\\\\
@@ -795,14 +796,14 @@
 
     \textbf{Given:}
     \begin{itemize}
-        \item $N = 16$ turns
-        \item $d = 0.020$ m
-        \item $\Delta B = -0.010$ T
-        \item $\Delta t = 34$ s
-        \item $R = 0.1$ $\Omega$
+        \item $\particles{N} = 16$ turns
+        \item $\disp{d} = 0.020$ m
+        \item $\Delta \pConst{B} = -0.010$ T
+        \item $\Delta \tvar{t} = 34$ s
+        \item $\resist{R} = 0.1$ $\Omega$
     \end{itemize}
 
-    \textbf{Find:} Magnitude and direction of induced current
+    \textbf{Find:} Magnitude and direction of induced \current{current}
 
     \vspace{0.2cm}
 
@@ -823,9 +824,9 @@
 
     \begin{enumerate}
         \item What equation did you use for EMF?
-        \item How did you calculate the magnetic flux?
-        \item How did you find current from EMF?
-        \item What direction does current flow?
+        \item How did you calculate the magnetic \pSpace{flux}?
+        \item How did you find \current{current} from EMF?
+        \item What direction does \current{current} flow?
     \end{enumerate}
 
     \pause
@@ -852,24 +853,24 @@
 
     \pause
 
-    \textbf{U - Unknown:} $I = ?$
+    \textbf{U - Unknown:} $\current{I} = ?$
 
     \pause
 
     \textbf{E - Equations:}
     \begin{align*}
-        \varepsilon &= -N \frac{\Delta \Phi}{\Delta t} = -N \frac{\Delta B \pi d^2}{4 \Delta t}\\
-        I &= \frac{\varepsilon}{R}
+        \voltage{\varepsilon} &= -\particles{N} \frac{\Delta \pSpace{\Phi}}{\Delta \tvar{t}} = -\particles{N} \frac{\Delta \pConst{B} \pi \disp{d}^2}{4 \Delta \tvar{t}}\\
+        \current{I} &= \frac{\voltage{\varepsilon}}{\resist{R}}
     \end{align*}
 
     \pause
 
     \textbf{S - Substitute:}
-    $$I = -16 \frac{(-0.010\text{ T}) \pi (0.020\text{ m})^2}{4(0.10\, \Omega)(34\text{ s})} = 15\, \mu\text{A}$$
+    $$\current{I} = -16 \frac{(-0.010\text{ T}) \pi (0.020\text{ m})^2}{4(0.10\, \Omega)(34\text{ s})} = 15\, \mu\text{A}$$
 
     \pause
 
-    \textbf{S - Statement:} $\boxed{I = 15\, \mu\text{A}}$ to the right (opposes decrease in field)
+    \textbf{S - Statement:} $\boxed{\current{I} = 15\, \mu\text{A}}$ to the right (opposes decrease in field)
 
     \note{[ALGEBRA] Step by step\\\\
     [P1] "Unknown: Current in microamps"\\\\
@@ -897,9 +898,9 @@
         \includegraphics[width=0.5\textwidth,height=0.25\textheight,keepaspectratio]{phys11-magnetism-fig20-38.jpg}
     \end{figure}
 
-    \textbf{Given:} $B = 0.010$ T, $v = 0.50$ m/s, $\ell = 0.10$ m, $R = 20\, \Omega$
+    \textbf{Given:} $\pConst{B} = 0.010$ T, $\vel{v} = 0.50$ m/s, $\disp{\ell} = 0.10$ m, $\resist{R} = 20\, \Omega$
 
-    \textbf{Find:} Current magnitude and direction
+    \textbf{Find:} \current{Current} magnitude and direction
 
     \vspace{0.2cm}
 
@@ -920,10 +921,10 @@
     \textbf{Turn and talk (2 min):}
 
     \begin{enumerate}
-        \item What changes: $B$, $A$, or $\theta$?
-        \item How fast does area change?
-        \item What's the rate of flux change?
-        \item Direction of induced current?
+        \item What changes: $\pConst{B}$, $\area{A}$, or $\theta$?
+        \item How fast does \area{area} change?
+        \item What's the rate of \pSpace{flux} change?
+        \item Direction of induced \current{current}?
     \end{enumerate}
 
     \pause
@@ -945,24 +946,24 @@
     \textbf{Self-correct in a different color:}
 
     \textbf{E - Equation:}
-    $$\frac{\Delta \Phi}{\Delta t} = B \frac{\Delta A}{\Delta t} = B v \ell$$
+    $$\frac{\Delta \pSpace{\Phi}}{\Delta \tvar{t}} = \pConst{B} \frac{\Delta \area{A}}{\Delta \tvar{t}} = \pConst{B} \vel{v} \disp{\ell}$$
 
     \pause
 
-    $$\varepsilon = -B v \ell$$
+    $$\voltage{\varepsilon} = -\pConst{B} \vel{v} \disp{\ell}$$
 
     \pause
 
     \textbf{S - Substitute:}
-    $$I = \frac{\varepsilon}{R} = \frac{B v \ell}{R} = \frac{(0.010\text{ T})(0.50\text{ m/s})(0.10\text{ m})}{20\,\Omega}$$
+    $$\current{I} = \frac{\voltage{\varepsilon}}{\resist{R}} = \frac{\pConst{B} \vel{v} \disp{\ell}}{\resist{R}} = \frac{(0.010\text{ T})(0.50\text{ m/s})(0.10\text{ m})}{20\,\Omega}$$
 
     \pause
 
-    $$\boxed{I = 25\,\mu\text{A}}$$ flowing \textbf{clockwise}
+    $$\boxed{\current{I} = 25\,\mu\text{A}}$$ flowing \textbf{clockwise}
 
     \pause
 
-    \textbf{Check:} Lenz's law - flux into page increasing, so induced field out of page (counterclockwise current would point out, but we have sign... current is clockwise)
+    \textbf{Check:} Lenz's law - \pSpace{flux} into page increasing, so induced field out of page (\current{current} is clockwise)
 
     \note{[P1] [ALGEBRA] "Rate of area change is v times ell"\\\\
     - "EMF equals negative B v ell"\\\\
@@ -983,16 +984,16 @@
 
     \begin{block}{Motors and Generators}
         \begin{align*}
-            F &= I\ell B \sin\theta \quad \text{(Force on wire)}\\
-            \tau &= NIAB\sin\theta \quad \text{(Motor torque)}\\
-            \varepsilon &= NAB\omega\sin\omega t \quad \text{(Generator EMF)}
+            \force{F} &= \current{I}\disp{\ell} \pConst{B} \sin\theta \quad \text{(\force{Force} on wire)}\\
+            \torque{\tau} &= \particles{N}\current{I}\area{A}\pConst{B}\sin\theta \quad \text{(Motor \torque{torque})}\\
+            \voltage{\varepsilon} &= \particles{N}\area{A}\pConst{B}\angvel{\omega}\sin\angvel{\omega} \tvar{t} \quad \text{(Generator EMF)}
         \end{align*}
     \end{block}
 
-    \begin{block}{Transformers and Power}
+    \begin{block}{Transformers and \power{Power}}
         \begin{align*}
-            \frac{V_S}{V_P} &= \frac{N_S}{N_P} \quad \text{(Transformer equation)}\\
-            P_{\text{lost}} &= I^2 R \quad \text{(Joule heating)}
+            \frac{\voltage{V_S}}{\voltage{V_P}} &= \frac{\particles{N_S}}{\particles{N_P}} \quad \text{(Transformer equation)}\\
+            \power{P}_{\text{lost}} &= \current{I}^2 \resist{R} \quad \text{(Joule heating)}
         \end{align*}
     \end{block}
 
@@ -1009,16 +1010,16 @@
 
     \begin{block}{Electromagnetic Induction}
         \begin{align*}
-            \Phi &= BA\cos\theta \quad \text{(Magnetic flux)}\\
-            \varepsilon &= -N\frac{\Delta\Phi}{\Delta t} \quad \text{(Faraday's Law)}\\
-            \varepsilon &= B\ell v \quad \text{(Motional EMF)}
+            \pSpace{\Phi} &= \pConst{B}\area{A}\cos\theta \quad \text{(Magnetic \pSpace{flux})}\\
+            \voltage{\varepsilon} &= -\particles{N}\frac{\Delta\pSpace{\Phi}}{\Delta \tvar{t}} \quad \text{(Faraday's Law)}\\
+            \voltage{\varepsilon} &= \pConst{B}\disp{\ell} \vel{v} \quad \text{(Motional EMF)}
         \end{align*}
     \end{block}
 
     \vspace{0.3cm}
 
     \begin{exampleblock}{Lenz's Law (Direction)}
-        Induced current opposes the change in magnetic flux
+        Induced \current{current} opposes the change in magnetic \pSpace{flux}
     \end{exampleblock}
 
     \note{"Three more for electromagnetic induction"\\\\
@@ -1041,17 +1042,17 @@
     \pause
 
     \begin{itemize}
-        \item Electric current creates magnetic field (electromagnet)
+        \item Electric \current{current} creates magnetic field (electromagnet)
         \pause
-        \item Changing magnetic field creates electric current (induction)
+        \item Changing magnetic field creates electric \current{current} (induction)
         \pause
-        \item Motors convert electrical $\rightarrow$ mechanical energy
+        \item Motors convert electrical $\rightarrow$ mechanical \energy{energy}
         \pause
-        \item Generators convert mechanical $\rightarrow$ electrical energy
+        \item Generators convert mechanical $\rightarrow$ electrical \energy{energy}
         \pause
-        \item Transformers change voltage using induction
+        \item Transformers change \voltage{voltage} using induction
         \pause
-        \item Power grid uses transformers to transmit energy efficiently
+        \item \power{Power} grid uses transformers to transmit \energy{energy} efficiently
     \end{itemize}
 
     \note{[P0] "Beautiful symmetry"\\\\

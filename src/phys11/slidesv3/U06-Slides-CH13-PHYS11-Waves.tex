@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -298,11 +299,11 @@ Ocean waves are \textbf{orbital progressive waves}:
 \begin{frame}
 \frametitle{13.2 Wave Variables}
 \begin{block}{Universal Law: The Five Variables}
-\textbf{Amplitude} $A$: Maximum displacement from equilibrium\\
-\textbf{Wavelength} $\lambda$: Distance between adjacent crests\\
-\textbf{Period} $T$: Time for one complete cycle\\
-\textbf{Frequency} $f$: Number of cycles per second (Hz)\\
-\textbf{Wave velocity} $v_w$: Speed of disturbance
+\textbf{\amplitude{Amplitude}} $\amplitude{A}$: Maximum displacement from equilibrium\\
+\textbf{\wavelen{Wavelength}} $\wavelen{\lambda}$: Distance between adjacent crests\\
+\textbf{\period{Period}} $\period{T}$: Time for one complete cycle\\
+\textbf{\freq{Frequency}} $\freq{f}$: Number of cycles per second (Hz)\\
+\textbf{\vel{Wave velocity}} $\vel{v_w}$: Speed of disturbance
 \end{block}
 
 \pause
@@ -326,9 +327,9 @@ These five variables describe ALL waves in the universe.
 
 \pause
 \begin{itemize}
-\item $\lambda$ = wavelength (crest to crest)
-\item $A$ = amplitude (rest to crest)
-\item $v_w$ = wave velocity (disturbance speed)
+\item $\wavelen{\lambda}$ = \wavelen{wavelength} (crest to crest)
+\item $\amplitude{A}$ = \amplitude{amplitude} (rest to crest)
+\item $\vel{v_w}$ = \vel{wave velocity} (disturbance speed)
 \end{itemize}
 \note{[P0][Fig 13.7: Labeled wave anatomy] "Seagull on sinusoidal wave with wavelength λ, amplitude X, wave velocity marked. Teaching hint: Emphasize seagull travels 2X per cycle vertically but disturbance travels λ horizontally - different motions. Use this to preview v=fλ relationship."\\\\
 [P1] "Lambda is wavelength - crest to crest or trough to trough"\\\\
@@ -342,9 +343,9 @@ These five variables describe ALL waves in the universe.
 \frametitle{13.2 The Universal Relationship}
 \begin{block}{Nature's Source Code}
 \begin{center}
-\Large $\boxed{f = \frac{1}{T}}$
+\Large $\boxed{\freq{f} = \frac{1}{\period{T}}}$
 \end{center}
-Frequency equals one over period.
+\freq{Frequency} equals one over \period{period}.
 \end{block}
 
 \pause
@@ -352,8 +353,8 @@ Frequency equals one over period.
 
 \textbf{Meaning:}
 \begin{itemize}
-\item Higher frequency $\rightarrow$ shorter period \pause
-\item Lower frequency $\rightarrow$ longer period
+\item Higher \freq{frequency} $\rightarrow$ shorter \period{period} \pause
+\item Lower \freq{frequency} $\rightarrow$ longer \period{period}
 \end{itemize}
 
 \pause
@@ -371,20 +372,20 @@ Frequency equals one over period.
 \frametitle{13.2 The Master Equation}
 \begin{block}{Universal Law: Wave Equation}
 \begin{center}
-\Large $\boxed{v_w = f \lambda}$
+\Large $\boxed{\vel{v_w} = \freq{f} \wavelen{\lambda}}$
 \end{center}
-Wave velocity equals frequency times wavelength.
+\vel{Wave velocity} equals \freq{frequency} times \wavelen{wavelength}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \textbf{Alternative form:}
-$$v_w = \frac{\lambda}{T}$$
+$$\vel{v_w} = \frac{\wavelen{\lambda}}{\period{T}}$$
 
 \pause
 \textbf{Key insight:}
-In a given medium where $v_w$ is constant, higher frequency means shorter wavelength.
+In a given medium where $\vel{v_w}$ is constant, higher \freq{frequency} means shorter \wavelen{wavelength}.
 \note{[P0] [THE REVELATION] "v-w equals f lambda - the master equation for all waves"\\\\
 [P1] "Or v-w equals lambda over T - wavelength per period"\\\\
 [P2] "In constant medium: high frequency creates short wavelength"\\\\
@@ -402,8 +403,8 @@ In a given medium where $v_w$ is constant, higher frequency means shorter wavele
 
 \pause
 \begin{exampleblock}{In the Real World: Sound Speakers}
-\textbf{Woofer} (large): low frequency, long wavelength\\
-\textbf{Tweeter} (small): high frequency, short wavelength
+\textbf{Woofer} (large): low \freq{frequency}, long \wavelen{wavelength}\\
+\textbf{Tweeter} (small): high \freq{frequency}, short \wavelen{wavelength}
 \end{exampleblock}
 \note{[P0][Fig 13.8: Speaker comparison] "Smaller speaker emits high-freq short-λ wave, larger emits low-freq long-λ wave. Teaching hint: Ask why speaker size matches wavelength - physical resonance requires matching dimensions. Connect v=fλ: same v means high f needs small λ."\\\\
 [P1] [THE CONNECTION - Harmonic Archetype] "Woofer reproduces bass - low frequency, long wavelength"\\\\
@@ -426,7 +427,7 @@ In a given medium where $v_w$ is constant, higher frequency means shorter wavele
 \item P-waves: 4-7 km/s in Earth's crust
 \item S-waves: 2-5 km/s in Earth's crust
 \item Both faster in more rigid materials
-\item Energy related to amplitude - large amplitude = more damage
+\item Energy related to \amplitude{amplitude} - large \amplitude{amplitude} = more damage
 \end{itemize}
 \note{[P0][Fig 13.9: Earthquake destruction] "Town with collapsed buildings after earthquake - visceral evidence of wave energy. Teaching hint: Connect amplitude to damage - larger A means more energy. Ask students why some buildings fall while others stand (resonance frequencies)."\\\\
 [P1] "P-waves faster than S-waves - time difference tells distance to epicenter"\\\\
@@ -445,11 +446,11 @@ Ocean waves have wavelength 10.0 m. A seagull bobs up and down once every 5.00 s
 
 \textbf{Given:}
 \begin{itemize}
-\item $\lambda = 10.0$ m
-\item $T = 5.00$ s
+\item $\wavelen{\lambda} = 10.0$ m
+\item $\period{T} = 5.00$ s
 \end{itemize}
 
-\textbf{Find:} Wave velocity $v_w$
+\textbf{Find:} \vel{Wave velocity} $\vel{v_w}$
 
 \vspace{0.3cm}
 
@@ -471,8 +472,8 @@ Ocean waves have wavelength 10.0 m. A seagull bobs up and down once every 5.00 s
 
 \begin{enumerate}
 \item What formula did you choose?
-\item Did you use $v_w = f\lambda$ or $v_w = \frac{\lambda}{T}$?
-\item If you used frequency, how did you find it?
+\item Did you use $\vel{v_w} = \freq{f}\wavelen{\lambda}$ or $\vel{v_w} = \frac{\wavelen{\lambda}}{\period{T}}$?
+\item If you used \freq{frequency}, how did you find it?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -495,17 +496,17 @@ Ocean waves have wavelength 10.0 m. A seagull bobs up and down once every 5.00 s
 
 \textbf{Method 1:} Direct calculation
 \pause
-$$v_w = \frac{\lambda}{T} = \frac{10.0 \text{ m}}{5.00 \text{ s}} = 2.00 \text{ m/s}$$
+$$\vel{v_w} = \frac{\wavelen{\lambda}}{\period{T}} = \frac{10.0 \text{ m}}{5.00 \text{ s}} = 2.00 \text{ m/s}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Method 2:} Using frequency
+\textbf{Method 2:} Using \freq{frequency}
 \pause
-$$f = \frac{1}{T} = \frac{1}{5.00 \text{ s}} = 0.200 \text{ Hz}$$
+$$\freq{f} = \frac{1}{\period{T}} = \frac{1}{5.00 \text{ s}} = 0.200 \text{ Hz}$$
 
 \pause
-$$v_w = f\lambda = (0.200 \text{ Hz})(10.0 \text{ m}) = 2.00 \text{ m/s}$$
+$$\vel{v_w} = \freq{f}\wavelen{\lambda} = (0.200 \text{ Hz})(10.0 \text{ m}) = 2.00 \text{ m/s}$$
 
 \pause
 \textbf{Check:} 2 meters per second - reasonable for gentle ocean wave.
@@ -527,11 +528,11 @@ A woman creates 2 waves per second on a toy spring. Each wave travels 0.9 m in o
 
 \textbf{Given:}
 \begin{itemize}
-\item $f = 2$ Hz (2 waves per second)
-\item $\lambda = 0.9$ m (one cycle)
+\item $\freq{f} = 2$ Hz (2 waves per second)
+\item $\wavelen{\lambda} = 0.9$ m (one cycle)
 \end{itemize}
 
-\textbf{Find:} (a) Period $T$ \quad (b) Wave velocity $v_w$
+\textbf{Find:} (a) \period{Period} $\period{T}$ \quad (b) \vel{Wave velocity} $\vel{v_w}$
 
 \vspace{0.3cm}
 
@@ -552,8 +553,8 @@ A woman creates 2 waves per second on a toy spring. Each wave travels 0.9 m in o
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item How did you find the period from frequency?
-\item Which velocity formula did you use?
+\item How did you find the \period{period} from \freq{frequency}?
+\item Which \vel{velocity} formula did you use?
 \item Did your units work out correctly?
 \end{enumerate}
 
@@ -575,21 +576,21 @@ A woman creates 2 waves per second on a toy spring. Each wave travels 0.9 m in o
 
 \vspace{0.3cm}
 
-\textbf{Part (a):} Find period
+\textbf{Part (a):} Find \period{period}
 \pause
-$$T = \frac{1}{f} = \frac{1}{2 \text{ s}^{-1}} = 0.5 \text{ s}$$
+$$\period{T} = \frac{1}{\freq{f}} = \frac{1}{2 \text{ s}^{-1}} = 0.5 \text{ s}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Part (b):} Find wave velocity
+\textbf{Part (b):} Find \vel{wave velocity}
 \pause
-$$v_w = f\lambda = (2 \text{ s}^{-1})(0.9 \text{ m}) = 1.8 \text{ m/s}$$
+$$\vel{v_w} = \freq{f}\wavelen{\lambda} = (2 \text{ s}^{-1})(0.9 \text{ m}) = 1.8 \text{ m/s}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Check:} Could also use $v_w = \frac{\lambda}{T} = \frac{0.9}{0.5} = 1.8$ m/s
+\textbf{Check:} Could also use $\vel{v_w} = \frac{\wavelen{\lambda}}{\period{T}} = \frac{0.9}{0.5} = 1.8$ m/s
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "T equals 1 over f equals 1 over 2 equals 0.5 seconds"\\\\
 [P2] "Period is half a second per wave"\\\\
@@ -668,11 +669,11 @@ When two or more waves meet, they combine by adding their disturbances.
 
 \pause
 \begin{block}{Nature's Rule}
-Constructive interference: waves exactly in phase combine to produce larger amplitude.
+Constructive interference: waves exactly in phase combine to produce larger \amplitude{amplitude}.
 \end{block}
 
 \pause
-Amplitude doubles when two identical waves align crest-to-crest!
+\amplitude{Amplitude} doubles when two identical waves align crest-to-crest!
 \note{[P0][Fig 13.11: Perfect constructive interference] "Wave 1 and Wave 2 perfectly in phase, resultant has twice amplitude. Teaching hint: Emphasize vector addition - both push up at same time, forces add. Ask why amplitude exactly doubles (identical waves, perfect alignment)."\\\\
 [P1] [THE REVELATION] "Constructive interference: crests align, troughs align"\\\\
 [P2] "Resulting amplitude is sum - twice the original"\\\\
@@ -695,7 +696,7 @@ Destructive interference: waves exactly out of phase combine to cancel each othe
 
 \pause
 \begin{alertblock}{The Paradox}
-Two waves can add to create... nothing! Zero amplitude.
+Two waves can add to create... nothing! Zero \amplitude{amplitude}.
 \end{alertblock}
 \note{[P0][Fig 13.12: Perfect destructive interference] "Wave 1 and Wave 2 perfectly out of phase, resultant has zero amplitude. Teaching hint: Counterintuitive - two disturbances create silence/stillness. Connect to noise-cancelling headphones - mic samples ambient noise, speaker produces inverted wave."\\\\
 [P1] [THE REVELATION] "Destructive interference: crest aligns with trough"\\\\
@@ -755,10 +756,10 @@ Pattern oscillates in place - doesn't propagate!
 \end{figure}
 
 \pause
-\textbf{Node:} point of zero amplitude (no motion)
+\textbf{Node:} point of zero \amplitude{amplitude} (no motion)
 
 \pause
-\textbf{Antinode:} point of maximum amplitude
+\textbf{Antinode:} point of maximum \amplitude{amplitude}
 
 \pause
 \vspace{0.3cm}
@@ -808,8 +809,8 @@ Refraction: wave bends when passing from one medium to another.
 \end{block}
 
 \pause
-\textbf{What changes:} speed, wavelength, direction\\
-\textbf{What stays same:} frequency
+\textbf{What changes:} \vel{speed}, \wavelen{wavelength}, direction\\
+\textbf{What stays same:} \freq{frequency}
 \note{[P0][Fig 13.18: Wave refraction at boundary] "Wave bends slightly right as it crosses into another medium. Teaching hint: Emphasize frequency constant (source unchanged) but v and λ change (medium properties). Ask why wave bends - one side enters new medium first, changes speed first."\\\\
 [P1] [THE REVELATION] "Refraction bends wave at boundary between media"\\\\
 [P2] "Speed and wavelength change, frequency stays constant"\\\\
@@ -855,8 +856,8 @@ Distance from epicenter doesn't always predict damage - interference patterns ma
 \begin{enumerate}
 \item Waves = disturbances that transport energy, not matter \pause
 \item Transverse: perpendicular; Longitudinal: parallel \pause
-\item Five variables: $A$, $\lambda$, $T$, $f$, $v_w$ \pause
-\item Master equation: $v_w = f\lambda$ \pause
+\item Five variables: $\amplitude{A}$, $\wavelen{\lambda}$, $\period{T}$, $\freq{f}$, $\vel{v_w}$ \pause
+\item Master equation: $\vel{v_w} = \freq{f}\wavelen{\lambda}$ \pause
 \item Superposition: waves add disturbances \pause
 \item Interference: constructive amplifies, destructive cancels \pause
 \item Standing waves, reflection, refraction
@@ -876,18 +877,18 @@ Distance from epicenter doesn't always predict damage - interference patterns ma
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-f &= \frac{1}{T} \quad \text{(frequency and period)}\\
-T &= \frac{1}{f}\\
-v_w &= f\lambda \quad \text{(wave equation)}\\
-v_w &= \frac{\lambda}{T}
+\freq{f} &= \frac{1}{\period{T}} \quad \text{(\freq{frequency} and \period{period})}\\
+\period{T} &= \frac{1}{\freq{f}}\\
+\vel{v_w} &= \freq{f}\wavelen{\lambda} \quad \text{(wave equation)}\\
+\vel{v_w} &= \frac{\wavelen{\lambda}}{\period{T}}
 \end{align}
 
 \vspace{0.3cm}
 
 \textbf{Remember:}
 \begin{itemize}
-\item In constant medium, higher frequency $\rightarrow$ shorter wavelength
-\item Amplitude is independent of velocity
+\item In constant medium, higher \freq{frequency} $\rightarrow$ shorter \wavelen{wavelength}
+\item \amplitude{Amplitude} is independent of \vel{velocity}
 \item All waves obey these relationships
 \end{itemize}
 \note{- Four fundamental equations\\\\

@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -90,9 +91,9 @@ You see light's ray behavior every day. Its wave behavior is hidden - until obje
 \frametitle{17.1 The Source Code of Light}
 \begin{block}{Nature's Law for Light}
 \begin{center}
-\Large $\boxed{c = f\lambda}$
+\Large $\boxed{\vel{c} = \freq{f}\wavelen{\lambda}}$
 \end{center}
-Speed equals frequency times wavelength
+\vel{Speed} equals \freq{frequency} times \wavelen{wavelength}
 \end{block}
 
 \pause
@@ -100,9 +101,9 @@ Speed equals frequency times wavelength
 
 \textbf{For visible light in vacuum:}
 \begin{itemize}
-\item Speed: $c = 3.00 \times 10^8$ m/s (constant) \pause
-\item Wavelength: $\lambda = 380$ to 750 nm \pause
-\item Frequency: $f = 4.0 \times 10^{14}$ to $7.9 \times 10^{14}$ Hz
+\item \vel{Speed}: $\vel{c} = 3.00 \times 10^8$ m/s (constant) \pause
+\item \wavelen{Wavelength}: $\wavelen{\lambda} = 380$ to 750 nm \pause
+\item \freq{Frequency}: $\freq{f} = 4.0 \times 10^{14}$ to $7.9 \times 10^{14}$ Hz
 \end{itemize}
 \note{[P0] [THE REVELATION] "c equals f lambda - fundamental equation for electromagnetic waves"\\\\
 [P1] "Speed of light: 3 times 10 to the 8th meters per second"\\\\
@@ -151,17 +152,17 @@ Speed equals frequency times wavelength
 \frametitle{17.1 Light in Different Media}
 \textbf{When light enters a medium:}
 \begin{itemize}
-\item Speed changes: $v = \frac{c}{n}$ \pause
-\item Wavelength changes: $\lambda_n = \frac{\lambda}{n}$ \pause
-\item Frequency stays constant \pause
-\item Color stays constant (color linked to frequency)
+\item \vel{Speed} changes: $\vel{v} = \frac{\vel{c}}{\pConst{n}}$ \pause
+\item \wavelen{Wavelength} changes: $\wavelen{\lambda_n} = \frac{\wavelen{\lambda}}{\pConst{n}}$ \pause
+\item \freq{Frequency} stays constant \pause
+\item Color stays constant (color linked to \freq{frequency})
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{Real-World: Light in Water}
-Water has $n = 1.333$, so visible wavelengths compress to 285-570 nm
+Water has $\pConst{n} = 1.333$, so visible \wavelen{wavelengths} compress to 285-570 nm
 \end{exampleblock}
 \note{[P0] "When light enters medium like water"\\\\
 [P1] "Speed decreases by factor n"\\\\
@@ -202,15 +203,15 @@ Sound bends around doorways. Light seems to travel straight. Why?
 \pause
 \vspace{0.3cm}
 
-\textbf{Answer:} Wavelength compared to opening size
+\textbf{Answer:} \wavelen{Wavelength} compared to opening size
 \begin{itemize}
-\item Sound wavelength: $\sim$1 m (comparable to door width) \pause
-\item Visible light wavelength: $\sim$500 nm (much smaller than door)
+\item Sound \wavelen{wavelength}: $\sim$1 m (comparable to door width) \pause
+\item Visible light \wavelen{wavelength}: $\sim$500 nm (much smaller than door)
 \end{itemize}
 
 \pause
 \begin{alertblock}{The Paradox}
-Light DOES bend - but only around objects comparable to its wavelength
+Light DOES bend - but only around objects comparable to its \wavelen{wavelength}
 \end{alertblock}
 \note{[P0] "Sound bends around corners - you hear it everywhere"\\\\
 [P1] [THE CONFLICT] "Light seems to go straight - sharp shadows"\\\\
@@ -301,7 +302,7 @@ Light DOES bend - but only around objects comparable to its wavelength
 \frametitle{17.1 The Math of Double-Slit Interference}
 \begin{block}{Universal Law: Constructive Interference}
 \begin{center}
-\Large $\boxed{d \sin \theta = m\lambda}$
+\Large $\boxed{\disp{d} \sin \angle{\theta} = m\wavelen{\lambda}}$
 \end{center}
 For $m = 0, \pm 1, \pm 2, \pm 3, \ldots$ (order of maximum)
 \end{block}
@@ -311,7 +312,7 @@ For $m = 0, \pm 1, \pm 2, \pm 3, \ldots$ (order of maximum)
 
 \begin{block}{Universal Law: Destructive Interference}
 \begin{center}
-\Large $\boxed{d \sin \theta = \left(m + \frac{1}{2}\right)\lambda}$
+\Large $\boxed{\disp{d} \sin \angle{\theta} = \left(m + \frac{1}{2}\right)\wavelen{\lambda}}$
 \end{center}
 For $m = 0, \pm 1, \pm 2, \ldots$ (order of minimum)
 \end{block}
@@ -328,7 +329,7 @@ For $m = 0, \pm 1, \pm 2, \ldots$ (order of minimum)
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth,height=0.55\textheight,keepaspectratio]{phys11-wave-optics-fig17-9.jpg}
-\caption{Path difference $\Delta L = d \sin \theta$}
+\caption{Path difference $\Delta \disp{L} = \disp{d} \sin \angle{\theta}$}
 \end{figure}
 
 \pause
@@ -393,7 +394,7 @@ For $m = 0, \pm 1, \pm 2, \ldots$ (order of minimum)
 \pause
 \begin{block}{Universal Law: Single-Slit Minima}
 \begin{center}
-$\boxed{D \sin \theta = m\lambda}$ \quad or \quad $\boxed{\frac{Dy}{L} = m\lambda}$
+$\boxed{\disp{D} \sin \angle{\theta} = m\wavelen{\lambda}}$ \quad or \quad $\boxed{\frac{\disp{D}\disp{y}}{\disp{L}} = m\wavelen{\lambda}}$
 \end{center}
 For $m = \pm 1, \pm 2, \pm 3, \ldots$ (not zero)
 \end{block}
@@ -415,12 +416,12 @@ Light from a He-Ne laser passes through two slits separated by 0.0100 mm. The th
 
 \textbf{Given:}
 \begin{itemize}
-\item $d = 0.0100$ mm $= 1.00 \times 10^{-5}$ m
-\item $\theta = 10.95^\circ$
+\item $\disp{d} = 0.0100$ mm $= 1.00 \times 10^{-5}$ m
+\item $\angle{\theta} = 10.95^\circ$
 \item $m = 3$ (third bright line)
 \end{itemize}
 
-\textbf{Find:} Wavelength $\lambda$ in nm
+\textbf{Find:} \wavelen{Wavelength} $\wavelen{\lambda}$ in nm
 
 \vspace{0.3cm}
 
@@ -442,8 +443,8 @@ Light from a He-Ne laser passes through two slits separated by 0.0100 mm. The th
 
 \begin{enumerate}
 \item Which equation did you choose for constructive interference?
-\item How did you rearrange it to solve for $\lambda$?
-\item What units did you get for wavelength?
+\item How did you rearrange it to solve for $\wavelen{\lambda}$?
+\item What units did you get for \wavelen{wavelength}?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -463,28 +464,28 @@ Light from a He-Ne laser passes through two slits separated by 0.0100 mm. The th
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $d \sin \theta = m\lambda$
+\textbf{Equation:} $\disp{d} \sin \angle{\theta} = m\wavelen{\lambda}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Rearrange:} $\lambda = \frac{d \sin \theta}{m}$
+\textbf{Rearrange:} $\wavelen{\lambda} = \frac{\disp{d} \sin \angle{\theta}}{m}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $\lambda = \frac{(1.00 \times 10^{-5} \text{ m})(\sin 10.95^\circ)}{3}$
+\textbf{Substitute:} $\wavelen{\lambda} = \frac{(1.00 \times 10^{-5} \text{ m})(\sin 10.95^\circ)}{3}$
 
 \pause
 \vspace{0.2cm}
 
-$$\lambda = \frac{(1.00 \times 10^{-5})(0.190)}{3} = 6.33 \times 10^{-7} \text{ m}$$
+$$\wavelen{\lambda} = \frac{(1.00 \times 10^{-5})(0.190)}{3} = 6.33 \times 10^{-7} \text{ m}$$
 
 \pause
-$$\boxed{\lambda = 633 \text{ nm}}$$
+$$\boxed{\wavelen{\lambda} = 633 \text{ nm}}$$
 
 \pause
-\textbf{Check:} 633 nm is red light - wavelength of He-Ne laser. Perfect!
+\textbf{Check:} 633 nm is red light - \wavelen{wavelength} of He-Ne laser. Perfect!
 \note{[P0] "Self-correct in different color"\\\\
 [P1] [ALGEBRA] "Start with d sine theta equals m lambda"\\\\
 [P2] "Solve for lambda: divide both sides by m"\\\\
@@ -504,12 +505,12 @@ Visible light of wavelength 550 nm falls on single slit and produces second diff
 
 \textbf{Given:}
 \begin{itemize}
-\item $\lambda = 550$ nm $= 550 \times 10^{-9}$ m
-\item $\theta = 45.0^\circ$
+\item $\wavelen{\lambda} = 550$ nm $= 550 \times 10^{-9}$ m
+\item $\angle{\theta} = 45.0^\circ$
 \item $m = 2$ (second minimum)
 \end{itemize}
 
-\textbf{Find:} Slit width $D$ in micrometers
+\textbf{Find:} Slit width $\disp{D}$ in micrometers
 
 \vspace{0.3cm}
 
@@ -531,7 +532,7 @@ Visible light of wavelength 550 nm falls on single slit and produces second diff
 
 \begin{enumerate}
 \item What's the difference between single-slit and double-slit equations?
-\item How did you solve for $D$?
+\item How did you solve for $\disp{D}$?
 \item What units did you get?
 \end{enumerate}
 
@@ -552,28 +553,28 @@ Visible light of wavelength 550 nm falls on single slit and produces second diff
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $D \sin \theta = m\lambda$
+\textbf{Equation:} $\disp{D} \sin \angle{\theta} = m\wavelen{\lambda}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Rearrange:} $D = \frac{m\lambda}{\sin \theta}$
+\textbf{Rearrange:} $\disp{D} = \frac{m\wavelen{\lambda}}{\sin \angle{\theta}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $D = \frac{2(550 \times 10^{-9} \text{ m})}{\sin 45.0^\circ}$
+\textbf{Substitute:} $\disp{D} = \frac{2(550 \times 10^{-9} \text{ m})}{\sin 45.0^\circ}$
 
 \pause
 \vspace{0.2cm}
 
-$$D = \frac{1100 \times 10^{-9}}{0.707} = 1.56 \times 10^{-6} \text{ m}$$
+$$\disp{D} = \frac{1100 \times 10^{-9}}{0.707} = 1.56 \times 10^{-6} \text{ m}$$
 
 \pause
-$$\boxed{D = 1.56 \text{ }\mu\text{m}}$$
+$$\boxed{\disp{D} = 1.56 \text{ }\mu\text{m}}$$
 
 \pause
-\textbf{Check:} Only few times wavelength - consistent with significant wave effects!
+\textbf{Check:} Only few times \wavelen{wavelength} - consistent with significant wave effects!
 \note{[P0] "Self-correct in different color"\\\\
 [P1] [ALGEBRA] "D sine theta equals m lambda"\\\\
 [P2] "Solve for D: divide by sine theta"\\\\
@@ -814,8 +815,8 @@ Two images just resolvable when center of one diffraction pattern falls on first
 \end{figure}
 
 \pause
-$$\boxed{\theta = 1.22 \frac{\lambda}{D}}$$
-where $\theta$ is minimum resolvable angle (in radians), $D$ is aperture diameter
+$$\boxed{\angle{\theta} = 1.22 \frac{\wavelen{\lambda}}{\disp{D}}}$$
+where $\angle{\theta}$ is minimum resolvable \angle{angle} (in radians), $\disp{D}$ is aperture diameter
 \note{[Fig 17.20: Rayleigh criterion - overlapping Airy disks] "Quantifying resolution limit"\\\\
 [P0] [THE REVELATION] "Lord Rayleigh, 19th century - criterion for resolution"\\\\
 [P1] "Graph shows intensity of diffraction pattern"\\\\
@@ -861,11 +862,11 @@ A monochromatic laser beam of green light with wavelength 550 nm in air enters w
 
 \textbf{Given:}
 \begin{itemize}
-\item $\lambda = 550$ nm (in vacuum/air)
-\item $n = 1.33$ (water)
+\item $\wavelen{\lambda} = 550$ nm (in vacuum/air)
+\item $\pConst{n} = 1.33$ (water)
 \end{itemize}
 
-\textbf{Find:} Wavelength $\lambda_n$ in water
+\textbf{Find:} \wavelen{Wavelength} $\wavelen{\lambda_n}$ in water
 
 \vspace{0.3cm}
 
@@ -886,9 +887,9 @@ A monochromatic laser beam of green light with wavelength 550 nm in air enters w
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What happens to speed, wavelength, and frequency when light enters water?
-\item Which equation relates wavelength in medium to wavelength in vacuum?
-\item Does wavelength increase or decrease in water?
+\item What happens to \vel{speed}, \wavelen{wavelength}, and \freq{frequency} when light enters water?
+\item Which equation relates \wavelen{wavelength} in medium to \wavelen{wavelength} in vacuum?
+\item Does \wavelen{wavelength} increase or decrease in water?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -908,22 +909,22 @@ A monochromatic laser beam of green light with wavelength 550 nm in air enters w
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $\lambda_n = \frac{\lambda}{n}$
+\textbf{Equation:} $\wavelen{\lambda_n} = \frac{\wavelen{\lambda}}{\pConst{n}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $\lambda_n = \frac{550 \text{ nm}}{1.33}$
+\textbf{Substitute:} $\wavelen{\lambda_n} = \frac{550 \text{ nm}}{1.33}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{\lambda_n = 414 \text{ nm}}$$
+$$\boxed{\wavelen{\lambda_n} = 414 \text{ nm}}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Check:} Wavelength decreased (550 $\rightarrow$ 414 nm). Color stays green because frequency constant!
+\textbf{Check:} \wavelen{Wavelength} decreased (550 $\rightarrow$ 414 nm). Color stays green because \freq{frequency} constant!
 \note{[P0] "Self-correct in different color"\\\\
 [P1] [ALGEBRA] "Lambda-n equals lambda over n"\\\\
 [P2] "Substitute: 550 divided by 1.33"\\\\
@@ -944,12 +945,12 @@ A diffraction grating has 2,000 lines per centimeter. Green light with wavelengt
 
 \textbf{Given:}
 \begin{itemize}
-\item 2,000 lines/cm $\rightarrow$ $d = \frac{1 \text{ cm}}{2000} = 5.00 \times 10^{-4}$ cm
-\item $\lambda = 520$ nm $= 520 \times 10^{-9}$ m
+\item 2,000 lines/cm $\rightarrow$ $\disp{d} = \frac{1 \text{ cm}}{2000} = 5.00 \times 10^{-4}$ cm
+\item $\wavelen{\lambda} = 520$ nm $= 520 \times 10^{-9}$ m
 \item $m = 1$ (first-order maximum)
 \end{itemize}
 
-\textbf{Find:} Angle $\theta$ for first-order maximum
+\textbf{Find:} \angle{Angle} $\angle{\theta}$ for first-order maximum
 
 \vspace{0.3cm}
 
@@ -970,9 +971,9 @@ A diffraction grating has 2,000 lines per centimeter. Green light with wavelengt
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item How did you calculate $d$ from lines per cm?
-\item Which equation relates $d$, $\theta$, and $\lambda$ for grating?
-\item How did you solve for $\theta$?
+\item How did you calculate $\disp{d}$ from lines per cm?
+\item Which equation relates $\disp{d}$, $\angle{\theta}$, and $\wavelen{\lambda}$ for grating?
+\item How did you solve for $\angle{\theta}$?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -992,28 +993,28 @@ A diffraction grating has 2,000 lines per centimeter. Green light with wavelengt
 
 \vspace{0.3cm}
 
-\textbf{Find d:} $d = \frac{1 \text{ cm}}{2000} = 5.00 \times 10^{-4}$ cm $= 5.00 \times 10^{-6}$ m
+\textbf{Find d:} $\disp{d} = \frac{1 \text{ cm}}{2000} = 5.00 \times 10^{-4}$ cm $= 5.00 \times 10^{-6}$ m
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Equation:} $d \sin \theta = m\lambda$
+\textbf{Equation:} $\disp{d} \sin \angle{\theta} = m\wavelen{\lambda}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Rearrange:} $\theta = \sin^{-1}\left(\frac{m\lambda}{d}\right)$
+\textbf{Rearrange:} $\angle{\theta} = \sin^{-1}\left(\frac{m\wavelen{\lambda}}{\disp{d}}\right)$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $\theta = \sin^{-1}\left(\frac{(1)(520 \times 10^{-9})}{5.00 \times 10^{-6}}\right) = \sin^{-1}(0.104)$
+\textbf{Substitute:} $\angle{\theta} = \sin^{-1}\left(\frac{(1)(520 \times 10^{-9})}{5.00 \times 10^{-6}}\right) = \sin^{-1}(0.104)$
 
 \pause
-$$\boxed{\theta = 5.97^\circ}$$
+$$\boxed{\angle{\theta} = 5.97^\circ}$$
 
 \pause
-\textbf{Check:} Small angle - reasonable for first maximum!
+\textbf{Check:} Small \angle{angle} - reasonable for first maximum!
 \note{[P0] "Self-correct in different color"\\\\
 [P1] "First find d: 1 over 2000 equals 5 times 10 to negative 6 meters"\\\\
 [P2] [ALGEBRA] "d sine theta equals m lambda"\\\\
@@ -1033,11 +1034,11 @@ A He-Ne laser beam (633 nm wavelength) is originally 1.00 mm in diameter.
 
 \textbf{Given:}
 \begin{itemize}
-\item $\lambda = 633$ nm $= 633 \times 10^{-9}$ m
-\item $D = 1.00$ mm $= 1.00 \times 10^{-3}$ m
+\item $\wavelen{\lambda} = 633$ nm $= 633 \times 10^{-9}$ m
+\item $\disp{D} = 1.00$ mm $= 1.00 \times 10^{-3}$ m
 \end{itemize}
 
-\textbf{Find:} Minimum angular spread $\theta$ in radians and degrees
+\textbf{Find:} Minimum angular spread $\angle{\theta}$ in radians and degrees
 
 \vspace{0.3cm}
 
@@ -1059,7 +1060,7 @@ A He-Ne laser beam (633 nm wavelength) is originally 1.00 mm in diameter.
 
 \begin{enumerate}
 \item Which equation gives minimum angular spread?
-\item What does the diameter $D$ represent?
+\item What does the diameter $\disp{D}$ represent?
 \item How did you convert radians to degrees?
 \end{enumerate}
 
@@ -1080,25 +1081,25 @@ A He-Ne laser beam (633 nm wavelength) is originally 1.00 mm in diameter.
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $\theta = \frac{1.22\lambda}{D}$
+\textbf{Equation:} $\angle{\theta} = \frac{1.22\wavelen{\lambda}}{\disp{D}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $\theta = \frac{(1.22)(633 \times 10^{-9} \text{ m})}{1.00 \times 10^{-3} \text{ m}}$
+\textbf{Substitute:} $\angle{\theta} = \frac{(1.22)(633 \times 10^{-9} \text{ m})}{1.00 \times 10^{-3} \text{ m}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\theta = 7.72 \times 10^{-4} \text{ rad}$$
+$$\angle{\theta} = 7.72 \times 10^{-4} \text{ rad}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Convert:} $\theta = (7.72 \times 10^{-4})(57.3^\circ/\text{rad}) = \boxed{0.0442^\circ}$
+\textbf{Convert:} $\angle{\theta} = (7.72 \times 10^{-4})(57.3^\circ/\text{rad}) = \boxed{0.0442^\circ}$
 
 \pause
-\textbf{Check:} Tiny spread - barely noticeable over short distances!
+\textbf{Check:} Tiny spread - barely noticeable over short \disp{distances}!
 \note{[P0] "Self-correct in different color"\\\\
 [P1] [ALGEBRA] "Theta equals 1.22 lambda over D"\\\\
 [P2] "Substitute: 1.22 times 633 nanometers over 1 millimeter"\\\\
@@ -1116,12 +1117,12 @@ $$\theta = 7.72 \times 10^{-4} \text{ rad}$$
 \begin{enumerate}
 \item Light exhibits wave behavior: diffraction and interference \pause
 \item Huygens's principle: every point on wavefront creates wavelets \pause
-\item Double-slit interference proves wave nature: $d \sin \theta = m\lambda$ \pause
-\item Single slit produces diffraction pattern: $D \sin \theta = m\lambda$ \pause
+\item Double-slit interference proves wave nature: $\disp{d} \sin \angle{\theta} = m\wavelen{\lambda}$ \pause
+\item Single slit produces diffraction pattern: $\disp{D} \sin \angle{\theta} = m\wavelen{\lambda}$ \pause
 \item Lasers produce coherent light via stimulated emission \pause
-\item Diffraction gratings separate wavelengths sharply \pause
-\item Resolution fundamentally limited by wave nature: $\theta = 1.22\lambda/D$ \pause
-\item Wavelength changes in media: $\lambda_n = \lambda/n$, but frequency constant
+\item Diffraction gratings separate \wavelen{wavelengths} sharply \pause
+\item Resolution fundamentally limited by wave nature: $\angle{\theta} = 1.22\wavelen{\lambda}/\disp{D}$ \pause
+\item \wavelen{Wavelength} changes in media: $\wavelen{\lambda_n} = \wavelen{\lambda}/\pConst{n}$, but \freq{frequency} constant
 \end{enumerate}
 \end{block}
 \note{[P0] "Eight revelations today"\\\\
@@ -1140,12 +1141,12 @@ $$\theta = 7.72 \times 10^{-4} \text{ rad}$$
 \begin{frame}
 \frametitle{Key Equations}
 \begin{align}
-c &= f\lambda \quad \text{(light in vacuum)} \\
-\lambda_n &= \frac{\lambda}{n} \quad \text{(wavelength in medium)} \\
-d \sin \theta &= m\lambda \quad \text{(double-slit constructive)} \\
-d \sin \theta &= \left(m + \frac{1}{2}\right)\lambda \quad \text{(double-slit destructive)} \\
-D \sin \theta &= m\lambda \quad \text{(single-slit minima)} \\
-\theta &= 1.22\frac{\lambda}{D} \quad \text{(Rayleigh criterion)}
+\vel{c} &= \freq{f}\wavelen{\lambda} \quad \text{(light in vacuum)} \\
+\wavelen{\lambda_n} &= \frac{\wavelen{\lambda}}{\pConst{n}} \quad \text{(wavelength in medium)} \\
+\disp{d} \sin \angle{\theta} &= m\wavelen{\lambda} \quad \text{(double-slit constructive)} \\
+\disp{d} \sin \angle{\theta} &= \left(m + \frac{1}{2}\right)\wavelen{\lambda} \quad \text{(double-slit destructive)} \\
+\disp{D} \sin \angle{\theta} &= m\wavelen{\lambda} \quad \text{(single-slit minima)} \\
+\angle{\theta} &= 1.22\frac{\wavelen{\lambda}}{\disp{D}} \quad \text{(Rayleigh criterion)}
 \end{align}
 \note{- Six fundamental equations\\\\
 - c equals f lambda: speed-frequency-wavelength relationship\\\\

@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -76,9 +77,9 @@ A vector is a quantity with both magnitude AND direction.
 
 \textbf{Vectors in physics:}
 \begin{itemize}
-\item Displacement, velocity, acceleration \pause
-\item Force, momentum \pause
-\item Boldface notation: $\mathbf{F}$, $\mathbf{v}$, $\mathbf{a}$
+\item \disp{Displacement}, \vel{velocity}, \accel{acceleration} \pause
+\item \force{Force}, \mom{momentum} \pause
+\item Boldface notation: $\mathbf{\force{F}}$, $\mathbf{\vel{v}}$, $\mathbf{\accel{a}}$
 \end{itemize}
 
 \pause
@@ -193,7 +194,7 @@ $\mathbf{A} - \mathbf{B} = \mathbf{A} + (-\mathbf{B})$
 Two skaters push with 400 N each at right angles.
 
 \pause
-\textbf{Resultant force:} $F_{tot} = \sqrt{(400)^2 + (400)^2} = 566$ N
+\textbf{Resultant force:} $\force{F}_{tot} = \sqrt{(400)^2 + (400)^2} = 566$ N
 
 \pause
 \alert{Pythagorean theorem works when vectors are perpendicular!}
@@ -249,9 +250,9 @@ Two skaters push with 400 N each at right angles.
 \frametitle{5.2 Breaking Vectors Into Components}
 \begin{block}{The Source Code}
 \begin{center}
-\Large $\boxed{A_x = A \cos\theta}$
+\Large $\boxed{\disp{A_x} = \disp{A} \cos\angle{\theta}}$
 
-\Large $\boxed{A_y = A \sin\theta}$
+\Large $\boxed{\disp{A_y} = \disp{A} \sin\angle{\theta}}$
 \end{center}
 Every 2D vector can be split into x and y components.
 \end{block}
@@ -271,14 +272,14 @@ Every 2D vector can be split into x and y components.
 
 \begin{frame}
 \frametitle{5.2 Example: City Walk Components}
-Displacement: $A = 10.3$ blocks at $\theta = 29.1^\circ$ north of east
+\disp{Displacement}: $\disp{A} = 10.3$ blocks at $\angle{\theta} = 29.1^\circ$ north of east
 
 \pause
 \vspace{0.3cm}
 
 \textbf{East component (x):}
 \begin{align*}
-A_x &= A \cos\theta \\
+\disp{A_x} &= \disp{A} \cos\angle{\theta} \\
 &= (10.3)(\cos 29.1^\circ) = 9.0 \text{ blocks}
 \end{align*}
 
@@ -286,7 +287,7 @@ A_x &= A \cos\theta \\
 
 \textbf{North component (y):}
 \begin{align*}
-A_y &= A \sin\theta \\
+\disp{A_y} &= \disp{A} \sin\angle{\theta} \\
 &= (10.3)(\sin 29.1^\circ) = 5.0 \text{ blocks}
 \end{align*}
 
@@ -304,17 +305,17 @@ A_y &= A \sin\theta \\
 \frametitle{5.2 Reverse: From Components to Vector}
 \begin{block}{Reconstruction Formulas}
 \begin{center}
-\Large $\boxed{A = \sqrt{A_x^2 + A_y^2}}$
+\Large $\boxed{\disp{A} = \sqrt{\disp{A_x}^2 + \disp{A_y}^2}}$
 
-\Large $\boxed{\theta = \tan^{-1}\left(\frac{A_y}{A_x}\right)}$
+\Large $\boxed{\angle{\theta} = \tan^{-1}\left(\frac{\disp{A_y}}{\disp{A_x}}\right)}$
 \end{center}
 Pythagorean theorem gives magnitude, inverse tangent gives direction.
 \end{block}
 
 \pause
 \begin{alertblock}{The Paradox}
-\textbf{Students confuse:} $\mathbf{A}_x + \mathbf{A}_y = \mathbf{A}$ (vector addition)\\
-with $A = \sqrt{A_x^2 + A_y^2}$ (magnitude calculation)
+\textbf{Students confuse:} $\mathbf{\disp{A}}_x + \mathbf{\disp{A}}_y = \mathbf{\disp{A}}$ (vector addition)\\
+with $\disp{A} = \sqrt{\disp{A_x}^2 + \disp{A_y}^2}$ (magnitude calculation)
 \end{alertblock}
 \note{[P0] [THE REVELATION] "Pythagorean theorem gives magnitude, inverse tangent gives direction"\\\\
 - Square root of sum of squares for magnitude\\\\
@@ -330,11 +331,11 @@ with $A = \sqrt{A_x^2 + A_y^2}$ (magnitude calculation)
 \textbf{To add vectors $\mathbf{A}$ and $\mathbf{B}$ analytically:}
 
 \begin{enumerate}
-\item Find components: $A_x, A_y, B_x, B_y$ \pause
-\item Add x-components: $R_x = A_x + B_x$ \pause
-\item Add y-components: $R_y = A_y + B_y$ \pause
-\item Find magnitude: $R = \sqrt{R_x^2 + R_y^2}$ \pause
-\item Find direction: $\theta = \tan^{-1}(R_y/R_x)$
+\item Find components: $\disp{A_x}, \disp{A_y}, \disp{B_x}, \disp{B_y}$ \pause
+\item Add x-components: $\disp{R_x} = \disp{A_x} + \disp{B_x}$ \pause
+\item Add y-components: $\disp{R_y} = \disp{A_y} + \disp{B_y}$ \pause
+\item Find magnitude: $\disp{R} = \sqrt{\disp{R_x}^2 + \disp{R_y}^2}$ \pause
+\item Find direction: $\angle{\theta} = \tan^{-1}(\disp{R_y}/\disp{R_x})$
 \end{enumerate}
 
 \pause
@@ -359,8 +360,8 @@ A person walks 53.0 m at $20.0^\circ$ north of east, then 34.0 m at $63.0^\circ$
 
 \textbf{Given:}
 \begin{itemize}
-\item $A = 53.0$ m, $\theta_A = 20.0^\circ$
-\item $B = 34.0$ m, $\theta_B = 63.0^\circ$
+\item $\disp{A} = 53.0$ m, $\angle{\theta_A} = 20.0^\circ$
+\item $\disp{B} = 34.0$ m, $\angle{\theta_B} = 63.0^\circ$
 \end{itemize}
 
 \textbf{Find:} Total displacement magnitude and direction
@@ -404,18 +405,18 @@ A person walks 53.0 m at $20.0^\circ$ north of east, then 34.0 m at $63.0^\circ$
 \frametitle{Reveal: The Navigation Solution}
 \textbf{Self-correct in a different color:}
 
-\textbf{Step 1:} Find components of $\mathbf{A}$
+\textbf{Step 1:} Find components of $\mathbf{\disp{A}}$
 \begin{align*}
-A_x &= (53.0)(\cos 20.0^\circ) = 49.8 \text{ m} \\
-A_y &= (53.0)(\sin 20.0^\circ) = 18.1 \text{ m}
+\disp{A_x} &= (53.0)(\cos 20.0^\circ) = 49.8 \text{ m} \\
+\disp{A_y} &= (53.0)(\sin 20.0^\circ) = 18.1 \text{ m}
 \end{align*}
 
 \pause
 
-\textbf{Step 2:} Find components of $\mathbf{B}$
+\textbf{Step 2:} Find components of $\mathbf{\disp{B}}$
 \begin{align*}
-B_x &= (34.0)(\cos 63.0^\circ) = 15.4 \text{ m} \\
-B_y &= (34.0)(\sin 63.0^\circ) = 30.3 \text{ m}
+\disp{B_x} &= (34.0)(\cos 63.0^\circ) = 15.4 \text{ m} \\
+\disp{B_y} &= (34.0)(\sin 63.0^\circ) = 30.3 \text{ m}
 \end{align*}
 \note{[P0] [ALGEBRA] "A-x equals 53 times cosine 20 degrees equals 49.8 meters"\\\\
 - "A-y equals 53 times sine 20 degrees equals 18.1 meters"\\\\
@@ -428,19 +429,19 @@ B_y &= (34.0)(\sin 63.0^\circ) = 30.3 \text{ m}
 \frametitle{Reveal: Combining Components}
 \textbf{Step 3:} Add components
 \begin{align*}
-R_x &= A_x + B_x = 49.8 + 15.4 = 65.2 \text{ m} \\
-R_y &= A_y + B_y = 18.1 + 30.3 = 48.4 \text{ m}
+\disp{R_x} &= \disp{A_x} + \disp{B_x} = 49.8 + 15.4 = 65.2 \text{ m} \\
+\disp{R_y} &= \disp{A_y} + \disp{B_y} = 18.1 + 30.3 = 48.4 \text{ m}
 \end{align*}
 
 \pause
 
 \textbf{Step 4:} Find magnitude
-$$R = \sqrt{(65.2)^2 + (48.4)^2} = \boxed{81.2 \text{ m}}$$
+$$\disp{R} = \sqrt{(65.2)^2 + (48.4)^2} = \boxed{81.2 \text{ m}}$$
 
 \pause
 
 \textbf{Step 5:} Find direction
-$$\theta = \tan^{-1}(48.4/65.2) = \boxed{36.6^\circ \text{ north of east}}$$
+$$\angle{\theta} = \tan^{-1}(48.4/65.2) = \boxed{36.6^\circ \text{ north of east}}$$
 \note{[P0] [ALGEBRA] "R-x equals 65.2 meters, R-y equals 48.4 meters"\\\\
 [P1] [ALGEBRA] "R equals square root of 65.2 squared plus 48.4 squared"\\\\
 [ANSWER] Magnitude: 81.2 meters\\\\
@@ -519,22 +520,22 @@ They don't influence each other.
 \frametitle{5.3 The Independence Principle}
 \textbf{Horizontal motion:}
 \begin{itemize}
-\item No acceleration: $a_x = 0$ \pause
-\item Constant velocity: $v_x = v_{0x}$ \pause
-\item Position: $x = x_0 + v_x t$
+\item No acceleration: $\accel{a_x} = 0$ \pause
+\item Constant velocity: $\vel{v_x} = \vel{v_{0x}}$ \pause
+\item Position: $\disp{x} = \disp{x_0} + \vel{v_x} \tvar{t}$
 \end{itemize}
 
 \pause
 
 \textbf{Vertical motion:}
 \begin{itemize}
-\item Constant acceleration: $a_y = -g = -9.8$ m/s$^2$ \pause
-\item Velocity: $v_y = v_{0y} - gt$ \pause
-\item Position: $y = y_0 + v_{0y}t - \frac{1}{2}gt^2$
+\item Constant acceleration: $\accel{a_y} = -\grav{g} = -9.8$ m/s$^2$ \pause
+\item Velocity: $\vel{v_y} = \vel{v_{0y}} - \grav{g}\tvar{t}$ \pause
+\item Position: $\disp{y} = \disp{y_0} + \vel{v_{0y}}\tvar{t} - \frac{1}{2}\grav{g}\tvar{t}^2$
 \end{itemize}
 
 \pause
-\alert{Time $t$ is the only variable connecting the two motions!}
+\alert{\tvar{Time} $\tvar{t}$ is the only variable connecting the two motions!}
 \note{[P0] "Horizontal: no acceleration, constant velocity"\\\\
 [P1] "Velocity stays constant horizontally"\\\\
 [P2] "Position is velocity times time"\\\\
@@ -577,8 +578,8 @@ Ball kicked at angle $\theta$ follows parabolic path.
 \vspace{0.3cm}
 
 \textbf{Recombination formulas:}
-$$d = \sqrt{x^2 + y^2}, \quad \theta = \tan^{-1}(y/x)$$
-$$v = \sqrt{v_x^2 + v_y^2}, \quad \theta_v = \tan^{-1}(v_y/v_x)$$
+$$\disp{d} = \sqrt{\disp{x}^2 + \disp{y}^2}, \quad \angle{\theta} = \tan^{-1}(\disp{y}/\disp{x})$$
+$$\vel{v} = \sqrt{\vel{v_x}^2 + \vel{v_y}^2}, \quad \angle{\theta_v} = \tan^{-1}(\vel{v_y}/\vel{v_x})$$
 \note{[P0] "Four-step method for projectile problems"\\\\
 [P1] "Separate into x and y - use sine and cosine"\\\\
 [P2] "Treat as independent 1D motions"\\\\
@@ -592,15 +593,15 @@ $$v = \sqrt{v_x^2 + v_y^2}, \quad \theta_v = \tan^{-1}(v_y/v_x)$$
 \frametitle{5.3 Maximum Height Formula}
 \begin{block}{The Peak}
 \begin{center}
-\Large $\boxed{h = \frac{v_{0y}^2}{2g}}$
+\Large $\boxed{\disp{h} = \frac{\vel{v_{0y}}^2}{2\grav{g}}}$
 \end{center}
-Maximum height depends only on initial vertical velocity.
+Maximum height depends only on initial vertical \vel{velocity}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Key insight:} At maximum height, $v_y = 0$
+\textbf{Key insight:} At maximum height, $\vel{v_y} = 0$
 
 \pause
 \vspace{0.3cm}
@@ -626,11 +627,11 @@ A fireworks shell is launched at 70.0 m/s at $75^\circ$ above horizontal.
 
 \textbf{Given:}
 \begin{itemize}
-\item $v_0 = 70.0$ m/s
-\item $\theta = 75^\circ$
+\item $\vel{v_0} = 70.0$ m/s
+\item $\angle{\theta} = 75^\circ$
 \end{itemize}
 
-\textbf{Find:} Maximum height
+\textbf{Find:} Maximum height $\disp{h}$
 
 \vspace{0.3cm}
 
@@ -671,9 +672,9 @@ A fireworks shell is launched at 70.0 m/s at $75^\circ$ above horizontal.
 \frametitle{Reveal: Reaching the Sky}
 \textbf{Self-correct in a different color:}
 
-\textbf{Step 1:} Find vertical velocity component
+\textbf{Step 1:} Find vertical \vel{velocity} component
 \begin{align*}
-v_{0y} &= v_0 \sin\theta \\
+\vel{v_{0y}} &= \vel{v_0} \sin\angle{\theta} \\
 &= (70.0)(\sin 75^\circ) = 67.6 \text{ m/s}
 \end{align*}
 
@@ -681,7 +682,7 @@ v_{0y} &= v_0 \sin\theta \\
 
 \textbf{Step 2:} Use maximum height formula
 \begin{align*}
-h &= \frac{v_{0y}^2}{2g} \\
+\disp{h} &= \frac{\vel{v_{0y}}^2}{2\grav{g}} \\
 &= \frac{(67.6)^2}{2(9.8)} = \boxed{233 \text{ m}}
 \end{align*}
 
@@ -701,9 +702,9 @@ h &= \frac{v_{0y}^2}{2g} \\
 \frametitle{5.3 The Range Equation}
 \begin{block}{The Distance Formula}
 \begin{center}
-\Large $\boxed{R = \frac{v_0^2 \sin 2\theta}{g}}$
+\Large $\boxed{\disp{R} = \frac{\vel{v_0}^2 \sin 2\angle{\theta}}{\grav{g}}}$
 \end{center}
-Range depends on initial speed and launch angle.
+\disp{Range} depends on initial \vel{speed} and launch \angle{angle}.
 \end{block}
 
 \pause
@@ -711,7 +712,7 @@ Range depends on initial speed and launch angle.
 
 \textbf{Key insights:}
 \begin{itemize}
-\item Maximum range at $\theta = 45^\circ$ \pause
+\item Maximum range at $\angle{\theta} = 45^\circ$ \pause
 \item Same range for complementary angles: $30^\circ$ and $60^\circ$ \pause
 \item Only valid when initial and final heights are equal
 \end{itemize}
@@ -733,11 +734,11 @@ A rock is ejected from a volcano at 25.0 m/s at $35^\circ$ above horizontal. It 
 
 \textbf{Given:}
 \begin{itemize}
-\item $v_0 = 25.0$ m/s, $\theta = 35^\circ$
-\item $y = -20.0$ m
+\item $\vel{v_0} = 25.0$ m/s, $\angle{\theta} = 35^\circ$
+\item $\disp{y} = -20.0$ m
 \end{itemize}
 
-\textbf{Find:} Time of flight
+\textbf{Find:} \tvar{Time} of flight
 
 \vspace{0.3cm}
 
@@ -758,8 +759,8 @@ A rock is ejected from a volcano at 25.0 m/s at $35^\circ$ above horizontal. It 
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item Which kinematic equation has both $y$ and $t$?
-\item What values do you substitute for $y_0$ and $y$?
+\item Which kinematic equation has both $\disp{y}$ and $\tvar{t}$?
+\item What values do you substitute for $\disp{y_0}$ and $\disp{y}$?
 \item How do you solve a quadratic equation?
 \end{enumerate}
 
@@ -778,22 +779,22 @@ A rock is ejected from a volcano at 25.0 m/s at $35^\circ$ above horizontal. It 
 \frametitle{Reveal: Time of Flight}
 \textbf{Self-correct in a different color:}
 
-\textbf{Step 1:} Find $v_{0y} = (25.0)(\sin 35^\circ) = 14.3$ m/s
+\textbf{Step 1:} Find $\vel{v_{0y}} = (25.0)(\sin 35^\circ) = 14.3$ m/s
 
 \pause
 
-\textbf{Step 2:} Use kinematic equation with $y_0 = 0$, $y = -20.0$ m
-$$-20.0 = (14.3)t - (4.90)t^2$$
+\textbf{Step 2:} Use kinematic equation with $\disp{y_0} = 0$, $\disp{y} = -20.0$ m
+$$-20.0 = (14.3)\tvar{t} - (4.90)\tvar{t}^2$$
 
 \pause
 
 \textbf{Step 3:} Rearrange to standard form
-$$(4.90)t^2 - (14.3)t - (20.0) = 0$$
+$$(4.90)\tvar{t}^2 - (14.3)\tvar{t} - (20.0) = 0$$
 
 \pause
 
 \textbf{Step 4:} Quadratic formula
-$$t = \frac{14.3 \pm \sqrt{(14.3)^2 - 4(4.90)(-20.0)}}{2(4.90)}$$
+$$\tvar{t} = \frac{14.3 \pm \sqrt{(14.3)^2 - 4(4.90)(-20.0)}}{2(4.90)}$$
 \note{[P0] [ALGEBRA] "v-zero-y equals 14.3 m/s"\\\\
 [P1] "Substitute into y equals v-zero-y t minus half g t squared"\\\\
 [P2] "Rearrange to standard quadratic form"\\\\
@@ -810,15 +811,15 @@ $$\sqrt{(14.3)^2 + 4(4.90)(20.0)} = \sqrt{596.5} = 24.4$$
 \pause
 
 \textbf{Step 6:} Two solutions
-$$t = \frac{14.3 + 24.4}{9.8} = 3.96 \text{ s} \quad \text{(physical)}$$
-$$t = \frac{14.3 - 24.4}{9.8} = -1.03 \text{ s} \quad \text{(reject)}$$
+$$\tvar{t} = \frac{14.3 + 24.4}{9.8} = 3.96 \text{ s} \quad \text{(physical)}$$
+$$\tvar{t} = \frac{14.3 - 24.4}{9.8} = -1.03 \text{ s} \quad \text{(reject)}$$
 
 \pause
 
-$$\boxed{t = 3.96 \text{ s}}$$
+$$\boxed{\tvar{t} = 3.96 \text{ s}}$$
 
 \pause
-\alert{Negative time means before launch - physically impossible!}
+\alert{Negative \tvar{time} means before launch - physically impossible!}
 \note{[P0] [ALGEBRA] "Calculate discriminant: 24.4"\\\\
 [P1] "Two solutions: 3.96 seconds and negative 1.03 seconds"\\\\
 [P2] [ANSWER] Time of flight: 3.96 seconds\\\\
@@ -839,7 +840,7 @@ $$\boxed{t = 3.96 \text{ s}}$$
 \item Analytical method: break into components, recombine \pause
 \item Projectile motion: horizontal and vertical are independent \pause
 \item Time connects the two dimensions \pause
-\item Maximum height depends only on $v_{0y}$
+\item Maximum height depends only on $\vel{v_{0y}}$
 \end{enumerate}
 \end{block}
 \note{[P0] "Six revelations from motion in 2D"\\\\
@@ -857,21 +858,21 @@ $$\boxed{t = 3.96 \text{ s}}$$
 \frametitle{Key Equations}
 \textbf{Vector Components:}
 \begin{align}
-A_x &= A \cos\theta \\
-A_y &= A \sin\theta
+\disp{A_x} &= \disp{A} \cos\angle{\theta} \\
+\disp{A_y} &= \disp{A} \sin\angle{\theta}
 \end{align}
 
 \textbf{Magnitude and Direction:}
 \begin{align}
-A &= \sqrt{A_x^2 + A_y^2} \\
-\theta &= \tan^{-1}(A_y/A_x)
+\disp{A} &= \sqrt{\disp{A_x}^2 + \disp{A_y}^2} \\
+\angle{\theta} &= \tan^{-1}(\disp{A_y}/\disp{A_x})
 \end{align}
 
 \textbf{Projectile Motion:}
 \begin{align}
-\text{Horizontal: } x &= x_0 + v_x t \\
-\text{Vertical: } y &= y_0 + v_{0y}t - \frac{1}{2}gt^2 \\
-\text{Max height: } h &= \frac{v_{0y}^2}{2g}
+\text{Horizontal: } \disp{x} &= \disp{x_0} + \vel{v_x} \tvar{t} \\
+\text{Vertical: } \disp{y} &= \disp{y_0} + \vel{v_{0y}}\tvar{t} - \frac{1}{2}\grav{g}\tvar{t}^2 \\
+\text{Max height: } \disp{h} &= \frac{\vel{v_{0y}}^2}{2\grav{g}}
 \end{align}
 \note{- Seven fundamental equations for 2D motion\\\\
 - Components split vectors into x and y\\\\

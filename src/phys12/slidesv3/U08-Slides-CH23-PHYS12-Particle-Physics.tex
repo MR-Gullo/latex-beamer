@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -146,7 +147,7 @@ When you sit in chair: electrons in your atoms repel electrons in chair. That's 
 \pause
 \begin{block}{The Strong Nuclear Force}
 \begin{itemize}
-\item Strongest force at short range ($<10^{-15}$ m)
+\item Strongest force at short range ($<10^{-15}$ \disp{m})
 \item Acts on protons AND neutrons
 \item Overcomes EM repulsion
 \item Drops to zero beyond nuclear diameter
@@ -176,7 +177,7 @@ When you sit in chair: electrons in your atoms repel electrons in chair. That's 
 \end{column}
 \begin{column}{0.4\textwidth}
 Beta decay:
-$${}_{Z}^{A}X_{N} \rightarrow {}_{Z+1}^{A}Y_{N-1} + e^- + \bar{\nu}$$
+$${}^{\particles{A}}_{\particles{Z}}X_{\particles{N}} \rightarrow {}^{\particles{A}}_{\particles{Z}+1}Y_{\particles{N}-1} + e^- + \bar{\nu}$$
 \end{column}
 \end{columns}
 
@@ -349,17 +350,17 @@ Expected: massless, chargeless, spin-2 particle traveling at speed of light
 \frametitle{23.1 Particle Accelerators: Creating Matter from Energy}
 \begin{block}{The Universal Equation}
 \begin{center}
-\Large $\boxed{E = mc^2}$
+\Large $\boxed{\energy{E} = \mass{m}\vel{c}^2}$
 \end{center}
-Energy converts to matter
+\energy{Energy} converts to \mass{matter}
 \end{block}
 
 \pause
 \begin{itemize}
-\item Accelerate known particles to high energy
+\item Accelerate known particles to high \energy{energy}
 \item Collide them with targets or each other
-\item Create new particles from energy
-\item Probe smaller distances = higher energies needed
+\item Create new particles from \energy{energy}
+\item Probe smaller distances = higher \energy{energies} needed
 \end{itemize}
 
 \pause
@@ -425,8 +426,8 @@ Energy converts to matter
 
 \pause
 \begin{block}{Why Collide Head-On?}
-Stationary target: much energy lost to recoil\\
-Colliding beams: particles created with near-zero momentum
+Stationary target: much \energy{energy} lost to recoil\\
+Colliding beams: particles created with near-zero \mom{momentum}
 \end{block}
 \note{[Fig 23.10: Circulating rings with proton/antiproton sources, collision detector] "Teaching hint: Trace particle paths with different colors - blue protons clockwise, red antiprotons counterclockwise. Ask: 'Why use antimatter?' (Opposite charge allows same magnets to bend both beams into collision course)"\\\\
 [P0] [THE PARADOX] Hitting stationary target wastes energy\\\\
@@ -532,13 +533,13 @@ Three point-like charges consistent with quark model
 \begin{center}
 \small
 \begin{tabular}{lll}
-\textbf{Quark} & \textbf{Symbol} & \textbf{Charge} \\ \hline
-Up & u & +$\frac{2}{3}$e \\
-Down & d & -$\frac{1}{3}$e \\
-Charm & c & +$\frac{2}{3}$e \\
-Strange & s & -$\frac{1}{3}$e \\
-Top & t & +$\frac{2}{3}$e \\
-Bottom & b & -$\frac{1}{3}$e
+\textbf{Quark} & \textbf{Symbol} & \textbf{\charge{Charge}} \\ \hline
+Up & u & +$\frac{2}{3}$\charge{e} \\
+Down & d & -$\frac{1}{3}$\charge{e} \\
+Charm & c & +$\frac{2}{3}$\charge{e} \\
+Strange & s & -$\frac{1}{3}$\charge{e} \\
+Top & t & +$\frac{2}{3}$\charge{e} \\
+Bottom & b & -$\frac{1}{3}$\charge{e}
 \end{tabular}
 \end{center}
 \end{block}
@@ -547,8 +548,8 @@ Bottom & b & -$\frac{1}{3}$e
 \vspace{0.3cm}
 
 \begin{alertblock}{The Illusion}
-\textbf{Expected:} Charge is discrete (multiples of e)\\
-\textbf{Reality:} Quarks have fractional charge!
+\textbf{Expected:} \charge{Charge} is discrete (multiples of \charge{e})\\
+\textbf{Reality:} Quarks have fractional \charge{charge}!
 \end{alertblock}
 \note{[P0] Six quark flavors - discovered between 1967 and 1995\\\\
 [P1] [THE CONFLICT] Charge thought to be discrete - multiples of elementary charge\\\\
@@ -620,7 +621,7 @@ Quark flavor does NOT change, only color
 Proton = two up quarks + one down quark
 
 \pause
-Charge: $\frac{2}{3} + \frac{2}{3} - \frac{1}{3} = +1$ \checkmark
+\charge{Charge}: $\frac{2}{3} + \frac{2}{3} - \frac{1}{3} = +1$ \checkmark
 
 \pause
 Color: red + green + blue = white \checkmark
@@ -685,7 +686,7 @@ Hadrons are composite. Leptons are fundamental.
 \end{figure}
 
 \pause
-Same mass as electron, opposite charge = antielectron
+Same \mass{mass} as electron, opposite \charge{charge} = antielectron
 \note{[Fig 23.16: Incident photon creates upward positron spiral, downward electron spiral] "Teaching hint: Show how magnetic field curves paths into spirals (not straight). Ask: 'Why opposite spirals?' (Opposite charges curve opposite directions). Then ask: 'Why spirals not circles?' (Particles lose energy via ionization). Connect to pair production energy threshold."\\\\
 [P0] Carl Anderson 1932 - cloud chamber experiment\\\\
 [P1] Magnetic field curves particles - some curve like negative charge, others like positive\\\\
@@ -700,7 +701,7 @@ Same mass as electron, opposite charge = antielectron
 \begin{center}
 Photon $\rightarrow$ electron + positron
 \end{center}
-Energy converts to matter
+\energy{Energy} converts to \mass{matter}
 \end{block}
 
 \pause
@@ -710,13 +711,13 @@ Energy converts to matter
 \begin{center}
 electron + positron $\rightarrow$ photons
 \end{center}
-Matter converts to energy
+\mass{Matter} converts to \energy{energy}
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-Both mass-energy and charge conserved!
+Both \mass{mass}-\energy{energy} and \charge{charge} conserved!
 \note{[P0] Pair production - photon converts to electron and positron\\\\
 - Energy becomes matter\\\\
 [P1] Annihilation - electron and positron meet, convert to photons\\\\
@@ -782,9 +783,9 @@ We are made of leftover matter!
 \pause
 \vspace{0.3cm}
 
-\textbf{Pattern:} Mass increases left to right
+\textbf{Pattern:} \mass{Mass} increases left to right
 
-\textbf{Trend:} Higher mass = less stable = faster decay
+\textbf{Trend:} Higher \mass{mass} = less stable = faster decay
 \note{[P0] Three families of matter\\\\
 [P1] Family 1: normal matter - up, down, electron, electron neutrino\\\\
 - This is what you're made of\\\\
@@ -796,7 +797,7 @@ We are made of leftover matter!
 
 \begin{frame}
 \frametitle{23.2 The Higgs Boson: The Mass Giver}
-\textbf{The problem:} Why do W and Z bosons have mass, but photons and gluons don't?
+\textbf{The problem:} Why do W and Z bosons have \mass{mass}, but photons and gluons don't?
 
 \pause
 \vspace{0.3cm}
@@ -811,7 +812,7 @@ Higgs field is like water. Some particles swim through easily (photon), others s
 \end{exampleblock}
 
 \pause
-The slowing creates mass!
+The slowing creates \mass{mass}!
 \note{[P0] Why do some carrier particles have mass and others don't?\\\\
 [P1] Peter Higgs 1960s: all particles pass through Higgs field\\\\
 [P2] [THE CONNECTION] Like swimming through water - some particles pass easily, others slowed down\\\\
@@ -833,7 +834,7 @@ The slowing creates mass!
 \pause
 \vspace{0.3cm}
 
-\textbf{Evidence:} Particle with predicted mass, spin, and interactions
+\textbf{Evidence:} Particle with predicted \mass{mass}, spin, and interactions
 
 \pause
 \vspace{0.3cm}
@@ -952,8 +953,8 @@ Predicted masses: W = 81 GeV/c$^2$, Z = 90 GeV/c$^2$
 \vspace{0.3cm}
 
 \begin{alertblock}{The Challenge}
-\textbf{LHC maximum:} 14 TeV = $1.4 \times 10^4$ GeV\\
-\textbf{GUT energy:} $10^{14}$ GeV\\
+\textbf{LHC maximum:} 14 TeV = $1.4 \times 10^4$ \energy{GeV}\\
+\textbf{GUT \energy{energy}:} $10^{14}$ \energy{GeV}\\
 We're $10^{10}$ times too low!
 \end{alertblock}
 

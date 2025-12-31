@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -242,7 +243,7 @@ But why?
 \vspace{0.3cm}
 \begin{block}{Energy Levels for Hydrogen}
 \Large
-$$E_n = -\frac{13.6 \text{ eV}}{n^2} \quad (n=1,2,3,\ldots)$$
+$$\energy{E_n} = -\frac{13.6 \text{ eV}}{\particles{n}^2} \quad (\particles{n}=1,2,3,\ldots)$$
 \end{block}
 \note{[Fig 22.9: Bohr model with quantized orbits] "Trace energy levels increasing outward. Show photon absorption (arrow up) vs emission (arrow down). Emphasize: electron doesn't spiral - it JUMPS"\\\\
 [P0] [THE REVELATION] "Bohr said: orbits are quantized"\\\\
@@ -289,9 +290,9 @@ A hydrogen atom absorbs a photon. The electron jumps from the ground state ($n=1
 
 \textbf{Given:}
 \begin{itemize}
-\item Initial state: $n_i = 1$
-\item Final state: $n_f = 3$
-\item $E_n = -\frac{13.6 \text{ eV}}{n^2}$
+\item Initial state: $\particles{n_i} = 1$
+\item Final state: $\particles{n_f} = 3$
+\item $\energy{E_n} = -\frac{13.6 \text{ eV}}{\particles{n}^2}$
 \end{itemize}
 
 \textbf{Find:} How much energy must the photon have?
@@ -338,22 +339,22 @@ A hydrogen atom absorbs a photon. The electron jumps from the ground state ($n=1
 \frametitle{Reveal: Solution}
 \textbf{Self-correct in a different color:}
 
-\textbf{U - Unknown:} $\Delta E = ?$
+\textbf{U - Unknown:} $\Delta \energy{E} = ?$
 
 \pause
 \textbf{E - Equations:}
-$$E_n = -\frac{13.6 \text{ eV}}{n^2}, \quad \Delta E = E_f - E_i$$
+$$\energy{E_n} = -\frac{13.6 \text{ eV}}{\particles{n}^2}, \quad \Delta \energy{E} = \energy{E_f} - \energy{E_i}$$
 
 \pause
 \textbf{S - Substitute:}
-$$E_i = -\frac{13.6}{1^2} = -13.6 \text{ eV}$$
-$$E_f = -\frac{13.6}{3^2} = -1.51 \text{ eV}$$
+$$\energy{E_i} = -\frac{13.6}{1^2} = -13.6 \text{ eV}$$
+$$\energy{E_f} = -\frac{13.6}{3^2} = -1.51 \text{ eV}$$
 
 \pause
-$$\Delta E = (-1.51) - (-13.6) = +12.09 \text{ eV}$$
+$$\Delta \energy{E} = (-1.51) - (-13.6) = +12.09 \text{ eV}$$
 
 \pause
-$$\boxed{\Delta E = 12.1 \text{ eV}}$$
+$$\boxed{\Delta \energy{E} = 12.1 \text{ eV}}$$
 
 \textbf{Check:} Positive means absorption. Photon must provide energy!
 \note{[P0] [ALGEBRA] "Unknown: delta-E"\\\\
@@ -372,21 +373,21 @@ $$\boxed{\Delta E = 12.1 \text{ eV}}$$
 \frametitle{22.1 Photon Energy and Wavelength}
 \begin{block}{Energy-Frequency Relationship}
 \Large
-$$E = hf = \frac{hc}{\lambda}$$
+$$\energy{E} = \pConst{h}\freq{f} = \frac{\pConst{h}\vel{c}}{\wavelen{\lambda}}$$
 \end{block}
 
 \pause
 \textbf{Where:}
 \begin{itemize}
-\item $h = 6.626 \times 10^{-34}$ J$\cdot$s (Planck's constant)
-\item $c = 3.00 \times 10^8$ m/s (speed of light)
-\item $f$ = frequency (Hz)
-\item $\lambda$ = wavelength (m)
+\item $\pConst{h} = 6.626 \times 10^{-34}$ J$\cdot$s (Planck's constant)
+\item $\vel{c} = 3.00 \times 10^8$ m/s (speed of light)
+\item $\freq{f}$ = frequency (Hz)
+\item $\wavelen{\lambda}$ = wavelength (m)
 \end{itemize}
 
 \pause
 \begin{exampleblock}{The Connection}
-Higher energy transition $\rightarrow$ shorter wavelength photon
+Higher \energy{energy} transition $\rightarrow$ shorter \wavelen{wavelength} photon
 \end{exampleblock}
 \note{[P0] "Photon energy connects to wavelength"\\\\
 [ALGEBRA] "E equals h-f equals h-c over lambda"\\\\
@@ -402,14 +403,14 @@ Higher energy transition $\rightarrow$ shorter wavelength photon
 \frametitle{22.1 The Rydberg Formula}
 \begin{block}{Wavelength of Emitted Light}
 \Large
-$$\frac{1}{\lambda} = R\left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right)$$
+$$\frac{1}{\wavelen{\lambda}} = \pConst{R}\left(\frac{1}{\particles{n_f}^2} - \frac{1}{\particles{n_i}^2}\right)$$
 \end{block}
 
 \textbf{Where:}
 \begin{itemize}
-\item $R = 1.097 \times 10^7$ m$^{-1}$ (Rydberg constant)
-\item $n_i$ = initial quantum number (higher)
-\item $n_f$ = final quantum number (lower)
+\item $\pConst{R} = 1.097 \times 10^7$ m$^{-1}$ (Rydberg constant)
+\item $\particles{n_i}$ = initial quantum number (higher)
+\item $\particles{n_f}$ = final quantum number (lower)
 \end{itemize}
 
 \pause
@@ -444,9 +445,9 @@ can particles be waves?
 
 \pause
 \textbf{Yes!}
-$$\lambda = \frac{h}{p}$$
+$$\wavelen{\lambda} = \frac{\pConst{h}}{\mom{p}}$$
 
-Only certain wavelengths fit in orbit $\rightarrow$ quantization!
+Only certain \wavelen{wavelengths} fit in orbit $\rightarrow$ quantization!
 \end{columns}
 \note{[Fig 22.12: Standing waves - allowed vs forbidden] "Show part (a) standing wave on string. Parts (b)/(c): allowed orbit has integer wavelengths (2πr=nλ constructive), forbidden doesn't (destructive). This explains quantization!"\\\\
 [P0] [THE HOOK] "Matter waves: the ultimate twist"\\\\
@@ -464,7 +465,7 @@ Only certain wavelengths fit in orbit $\rightarrow$ quantization!
 \frametitle{22.1 Heisenberg Uncertainty Principle}
 \begin{block}{The Fundamental Limit}
 \Large
-$$\Delta x \Delta p \geq \frac{h}{4\pi}$$
+$$\Delta \disp{x} \Delta \mom{p} \geq \frac{\pConst{h}}{4\pi}$$
 \end{block}
 
 \pause
@@ -553,11 +554,11 @@ They exist as probability clouds.
 
 \pause
 \textbf{Notation:}
-$$^A_Z X_N$$
+$$^{\particles{A}}_{\particles{Z}} X_{\particles{N}}$$
 \begin{itemize}
-\item $Z$ = atomic number (protons)
-\item $A$ = mass number (protons + neutrons)
-\item $N = A - Z$ (neutrons)
+\item $\particles{Z}$ = atomic number (protons)
+\item $\particles{A}$ = mass number (protons + neutrons)
+\item $\particles{N} = \particles{A} - \particles{Z}$ (neutrons)
 \end{itemize}
 \end{columns}
 \note{[Fig 22.16: Lithium-7 atom structure] "Point to nucleus: 3 protons (red) + 4 neutrons (gray). Count them! Then show 3 electrons orbiting. Emphasize: protons determine element identity"\\\\
@@ -657,8 +658,8 @@ Apparent violation of energy conservation!
 
 \pause
 \begin{exampleblock}{The Resolution}
-Einstein's $E = mc^2$ explains it:\\
-Mass converts to energy in nuclear reactions
+Einstein's $\energy{E} = \mass{m}\vel{c}^2$ explains it:\\
+\mass{Mass} converts to \energy{energy} in nuclear reactions
 \end{exampleblock}
 \note{[P0] [THE HOOK] "Becquerel didn't plan this discovery"\\\\
 - "Cloudy day, left ore in drawer"\\\\
@@ -714,7 +715,7 @@ Charge: 0, Penetration: km in air, reduced by lead
 
 \column{0.5\textwidth}
 \begin{block}{Nuclear Equation}
-$$^A_Z X_N \rightarrow ^{A-4}_{Z-2} Y_{N-2} + ^4_2 He_2$$
+$$^{\particles{A}}_{\particles{Z}} X_{\particles{N}} \rightarrow ^{\particles{A}-4}_{\particles{Z}-2} Y_{\particles{N}-2} + ^4_2 He_2$$
 \end{block}
 
 \pause
@@ -724,8 +725,8 @@ $$^{238}_{92} U \rightarrow ^{234}_{90} Th + ^4_2 He$$
 \pause
 \textbf{Conservation:}
 \begin{itemize}
-\item Mass number: 238 = 234 + 4 \checkmark
-\item Charge: 92 = 90 + 2 \checkmark
+\item \particles{Mass number}: 238 = 234 + 4 \checkmark
+\item \charge{Charge}: 92 = 90 + 2 \checkmark
 \end{itemize}
 \end{columns}
 \note{[Fig 22.18: Alpha decay - nucleus releasing He nucleus] "Show parent nucleus before, then alpha (2p+2n) ejected, leaving smaller daughter. Emphasize: alpha = He-4 nucleus, very stable configuration"\\\\
@@ -753,7 +754,7 @@ $$^{238}_{92} U \rightarrow ^{234}_{90} Th + ^4_2 He$$
 \column{0.5\textwidth}
 \begin{block}{$\beta^-$ Decay (most common)}
 Neutron $\rightarrow$ proton + electron + antineutrino
-$$^A_Z X_N \rightarrow ^A_{Z+1} Y_{N-1} + e^- + \bar{\nu}_e$$
+$$^{\particles{A}}_{\particles{Z}} X_{\particles{N}} \rightarrow ^{\particles{A}}_{\particles{Z}+1} Y_{\particles{N}-1} + e^- + \bar{\nu}_e$$
 \end{block}
 
 \pause
@@ -785,16 +786,16 @@ $$^{14}_6 C \rightarrow ^{14}_7 N + e^- + \bar{\nu}_e$$
 \column{0.5\textwidth}
 \begin{block}{Excited Nucleus}
 Nucleus drops from excited state to ground state
-$$^A_Z X^* \rightarrow ^A_Z X + \gamma$$
+$$^{\particles{A}}_{\particles{Z}} X^* \rightarrow ^{\particles{A}}_{\particles{Z}} X + \gamma$$
 \end{block}
 
 \pause
 \textbf{Key Points:}
 \begin{itemize}
-\item $A$ and $Z$ unchanged
-\item Pure energy release
+\item $\particles{A}$ and $\particles{Z}$ unchanged
+\item Pure \energy{energy} release
 \item Often follows $\alpha$ or $\beta$ decay
-\item MeV energies (vs. eV for atoms)
+\item MeV \energy{energies} (vs. eV for atoms)
 \end{itemize}
 \end{columns}
 \note{[Fig 22.20: Gamma ray emission from nucleus] "Show excited nucleus (marked *) releasing wavy gamma ray. Nucleus identical before/after - only energy state changes. Compare to electron transitions but MeV vs eV scale"\\\\
@@ -871,15 +872,15 @@ Plutonium-239 undergoes alpha decay.
 \textbf{Self-correct in a different color:}
 
 \textbf{General form:}
-$$^A_Z X \rightarrow ^{A-4}_{Z-2} Y + ^4_2 He$$
+$$^{\particles{A}}_{\particles{Z}} X \rightarrow ^{\particles{A}-4}_{\particles{Z}-2} Y + ^4_2 He$$
 
 \pause
 \textbf{Apply to Pu-239:}
-$$A_{daughter} = 239 - 4 = 235$$
-$$Z_{daughter} = 94 - 2 = 92$$
+$$\particles{A}_{daughter} = 239 - 4 = 235$$
+$$\particles{Z}_{daughter} = 94 - 2 = 92$$
 
 \pause
-\textbf{Identify element:} $Z = 92$ is Uranium (U)
+\textbf{Identify element:} $\particles{Z} = 92$ is Uranium (U)
 
 \pause
 $$\boxed{^{239}_{94}Pu \rightarrow ^{235}_{92}U + ^4_2He}$$
@@ -920,14 +921,14 @@ $$\boxed{^{239}_{94}Pu \rightarrow ^{235}_{92}U + ^4_2He}$$
 \end{figure}
 
 \begin{block}{Definition}
-\textbf{Half-life ($t_{1/2}$):} Time for half the nuclei to decay
+\textbf{Half-life ($\tvar{t_{1/2}}$):} Time for half the nuclei to decay
 \end{block}
 
 \pause
 \begin{itemize}
-\item After $t_{1/2}$: $N \rightarrow N/2$
-\item After $2t_{1/2}$: $N \rightarrow N/4$
-\item After $3t_{1/2}$: $N \rightarrow N/8$
+\item After $\tvar{t_{1/2}}$: $\particles{N} \rightarrow \particles{N}/2$
+\item After $2\tvar{t_{1/2}}$: $\particles{N} \rightarrow \particles{N}/4$
+\item After $3\tvar{t_{1/2}}$: $\particles{N} \rightarrow \particles{N}/8$
 \end{itemize}
 \note{[Fig 22.24: Exponential decay graph with table] "Trace curve: starts 1000, drops to 500 (1 half-life), 250 (2), 125 (3). Show table reinforces pattern. After 10 half-lives: less than 0.1% remains"\\\\
 [P0] [THE HOOK] "Exponential decay: nature's countdown"\\\\
@@ -944,20 +945,20 @@ $$\boxed{^{239}_{94}Pu \rightarrow ^{235}_{92}U + ^4_2He}$$
 \frametitle{22.3 Exponential Decay Law}
 \begin{block}{Number of Nuclei vs. Time}
 \Large
-$$N(t) = N_0 e^{-\lambda t}$$
+$$\particles{N}(\tvar{t}) = \particles{N_0} e^{-\lambda \tvar{t}}$$
 \end{block}
 
 \textbf{Where:}
 \begin{itemize}
-\item $N_0$ = initial number of nuclei
-\item $N(t)$ = number remaining at time $t$
+\item $\particles{N_0}$ = initial number of nuclei
+\item $\particles{N}(\tvar{t})$ = number remaining at time $\tvar{t}$
 \item $\lambda$ = decay constant
 \item $e = 2.71828\ldots$
 \end{itemize}
 
 \pause
 \begin{block}{Relationship to Half-Life}
-$$\lambda = \frac{\ln(2)}{t_{1/2}} \approx \frac{0.693}{t_{1/2}}$$
+$$\lambda = \frac{\ln(2)}{\tvar{t_{1/2}}} \approx \frac{0.693}{\tvar{t_{1/2}}}$$
 \end{block}
 \note{[P0] "Exponential function: fundamental decay"\\\\
 [ALGEBRA] "N-of-t equals N-zero e to the negative lambda-t"\\\\
@@ -973,7 +974,7 @@ $$\lambda = \frac{\ln(2)}{t_{1/2}} \approx \frac{0.693}{t_{1/2}}$$
 \frametitle{22.3 Activity (Rate of Decay)}
 \begin{block}{Definition}
 \textbf{Activity $R$:} Number of decays per unit time
-$$R = \frac{\Delta N}{\Delta t} = \lambda N$$
+$$R = \frac{\Delta \particles{N}}{\Delta \tvar{t}} = \lambda \particles{N}$$
 \end{block}
 
 \pause
@@ -1071,9 +1072,9 @@ A radioactive sample has a half-life of 10 days. You start with 80 g of material
 
 \textbf{Given:}
 \begin{itemize}
-\item $N_0 = 80$ g
-\item $t_{1/2} = 10$ days
-\item Time elapsed: $t = 30$ days
+\item $\particles{N_0} = 80$ g
+\item $\tvar{t_{1/2}} = 10$ days
+\item Time elapsed: $\tvar{t} = 30$ days
 \end{itemize}
 
 \textbf{Find:} How much material remains after 30 days?
@@ -1122,19 +1123,19 @@ A radioactive sample has a half-life of 10 days. You start with 80 g of material
 
 \textbf{Method 1 - Counting Half-Lives:}
 
-Number of half-lives: $n = \frac{t}{t_{1/2}} = \frac{30}{10} = 3$
+Number of half-lives: $\particles{n} = \frac{\tvar{t}}{\tvar{t_{1/2}}} = \frac{30}{10} = 3$
 
 \pause
 After each half-life:
 \begin{itemize}
-\item $t = 10$ days: $80 \div 2 = 40$ g
-\item $t = 20$ days: $40 \div 2 = 20$ g
-\item $t = 30$ days: $20 \div 2 = 10$ g
+\item $\tvar{t} = 10$ days: $80 \div 2 = 40$ g
+\item $\tvar{t} = 20$ days: $40 \div 2 = 20$ g
+\item $\tvar{t} = 30$ days: $20 \div 2 = 10$ g
 \end{itemize}
 
 \pause
 \textbf{Method 2 - Formula:}
-$$N = N_0 \left(\frac{1}{2}\right)^n = 80 \left(\frac{1}{2}\right)^3 = 80 \times \frac{1}{8} = 10 \text{ g}$$
+$$\particles{N} = \particles{N_0} \left(\frac{1}{2}\right)^{\particles{n}} = 80 \left(\frac{1}{2}\right)^3 = 80 \times \frac{1}{8} = 10 \text{ g}$$
 
 \pause
 $$\boxed{N = 10 \text{ g}}$$
@@ -1315,22 +1316,22 @@ $^{235}$U: ~52 kg, \quad $^{239}$Pu: ~10 kg
 \frametitle{22.4 Mass-Energy Conversion}
 \begin{block}{Einstein's Equation}
 \Large
-$$E = mc^2$$
+$$\energy{E} = \mass{m}\vel{c}^2$$
 \end{block}
 
 \pause
 \textbf{In fission:}
 \begin{itemize}
-\item Products have less mass than reactants
-\item Missing mass $\rightarrow$ converted to energy
-\item $\Delta m \approx 0.1\%$ of original mass
-\item Still liberates enormous energy
+\item Products have less \mass{mass} than reactants
+\item Missing \mass{mass} $\rightarrow$ converted to \energy{energy}
+\item $\Delta \mass{m} \approx 0.1\%$ of original \mass{mass}
+\item Still liberates enormous \energy{energy}
 \end{itemize}
 
 \pause
 \begin{exampleblock}{Example}
 1 kg of $^{235}$U fully fissioned:\\
-$E = 8.2 \times 10^{13}$ J $\approx$ 14,000 barrels of oil!
+$\energy{E} = 8.2 \times 10^{13}$ J $\approx$ 14,000 barrels of oil!
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "Mass IS energy"\\\\
 - "Not converts TO energy"\\\\
@@ -1503,20 +1504,20 @@ Fission mature, fusion promising
 \begin{frame}[shrink]
 \frametitle{Key Equations: Chapter 22}
 \begin{block}{Atomic Structure}
-$$E_n = -\frac{13.6 \text{ eV}}{n^2}, \quad \Delta E = E_f - E_i, \quad E = hf = \frac{hc}{\lambda}$$
-$$\frac{1}{\lambda} = R\left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right), \quad \Delta x \Delta p \geq \frac{h}{4\pi}$$
+$$\energy{E_n} = -\frac{13.6 \text{ eV}}{\particles{n}^2}, \quad \Delta \energy{E} = \energy{E_f} - \energy{E_i}, \quad \energy{E} = \pConst{h}\freq{f} = \frac{\pConst{h}\vel{c}}{\wavelen{\lambda}}$$
+$$\frac{1}{\wavelen{\lambda}} = \pConst{R}\left(\frac{1}{\particles{n_f}^2} - \frac{1}{\particles{n_i}^2}\right), \quad \Delta \disp{x} \Delta \mom{p} \geq \frac{\pConst{h}}{4\pi}$$
 \end{block}
 
 \begin{block}{Nuclear Physics}
-$$E = mc^2$$
+$$\energy{E} = \mass{m}\vel{c}^2$$
 \end{block}
 
 \begin{block}{Radioactive Decay}
-$$N(t) = N_0 e^{-\lambda t}, \quad \lambda = \frac{0.693}{t_{1/2}}, \quad R = \lambda N$$
+$$\particles{N}(\tvar{t}) = \particles{N_0} e^{-\lambda \tvar{t}}, \quad \lambda = \frac{0.693}{\tvar{t_{1/2}}}, \quad R = \lambda \particles{N}$$
 \end{block}
 
 \begin{block}{Nuclear Notation}
-$$^A_Z X_N \quad (A = Z + N)$$
+$$^{\particles{A}}_{\particles{Z}} X_{\particles{N}} \quad (\particles{A} = \particles{Z} + \particles{N})$$
 \end{block}
 \note{[P0] "Seven essential equations"\\\\
 - "Bohr energy, photon energy, Rydberg"\\\\

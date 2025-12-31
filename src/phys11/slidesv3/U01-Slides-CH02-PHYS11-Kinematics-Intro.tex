@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -158,21 +159,21 @@ Both are correct! Description depends on the reference frame.
 
 \begin{frame}
 \frametitle{2.1 Two Ways to Measure Motion}
-\begin{block}{Distance}
+\begin{block}{\disp{Distance}}
 Total length of the path traveled. (Scalar)
 \end{block}
 
 \pause
 
-\begin{block}{Displacement}
-Straight-line change in position from start to finish. (Vector)
+\begin{block}{\disp{Displacement}}
+Straight-line change in \pos{position} from start to finish. (Vector)
 \end{block}
 
 \pause
 
 \begin{alertblock}{Key Difference}
 \textbf{Civilian:} "I drove 100 km today."\\
-\textbf{Physicist:} "But your displacement was 0 - you ended where you started."
+\textbf{Physicist:} "But your \disp{displacement} was 0 - you ended where you started."
 \end{alertblock}
 \note{[P0] "Two ways to measure how far you've gone"\\\\
 [P1] "Distance: total length of path - like odometer reading"\\\\
@@ -191,7 +192,7 @@ Straight-line change in position from start to finish. (Vector)
 \end{figure}
 
 \pause
-Distance $\geq$ Displacement (always!)
+\disp{Distance} $\geq$ \disp{Displacement} (always!)
 \note{[P0][Fig 2.5: House and friend's house with curvy road] "Visual representation of distance vs displacement"\\\\
 [P1] "Short straight arrow between houses is displacement magnitude"\\\\
 - "Curved road length is distance traveled"\\\\
@@ -209,10 +210,10 @@ Distance $\geq$ Displacement (always!)
 \end{figure}
 
 \pause
-\textbf{Distance:} 10 km
+\textbf{\disp{Distance}:} 10 km
 
 \pause
-\textbf{Displacement:} 0 km (start and end at same position)
+\textbf{\disp{Displacement}:} 0 km (start and end at same \pos{position})
 \note{[P0][Fig 2.6: House and school 5 mi apart, round trip] "Classic example: drive to school and back"\\\\
 [P1] "Distance: 10 km total - odometer reading"\\\\
 [P2] "Displacement: zero - ended where you started"\\\\
@@ -233,11 +234,11 @@ Magnitude only
 \pause
 \textbf{Examples:}
 \begin{itemize}
-\item Distance
-\item Speed
-\item Time
-\item Temperature
-\item Mass
+\item \disp{Distance}
+\item \vel{Speed}
+\item \tvar{Time}
+\item \temp{Temperature}
+\item \mass{Mass}
 \end{itemize}
 
 \pause
@@ -249,10 +250,10 @@ Magnitude AND direction
 \pause
 \textbf{Examples:}
 \begin{itemize}
-\item Displacement
-\item Velocity
-\item Force
-\item Acceleration
+\item \disp{Displacement}
+\item \vel{Velocity}
+\item \force{Force}
+\item \accel{Acceleration}
 \end{itemize}
 \end{columns}
 \note{[P0] "Two types of quantities in physics"\\\\
@@ -265,11 +266,11 @@ Magnitude AND direction
 
 \begin{frame}
 \frametitle{2.1 Displacement Equation}
-\begin{block}{Calculating Displacement}
+\begin{block}{Calculating \disp{Displacement}}
 \begin{center}
-\Large $\boxed{\Delta \mathbf{d} = \mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0}}$
+\Large $\boxed{\Delta \disp{\mathbf{d}} = \disp{\mathbf{d}}_{\mathrm{f}} - \disp{\mathbf{d}}_{0}}$
 \end{center}
-Change in position equals final position minus initial position.
+Change in \pos{position} equals final \pos{position} minus initial \pos{position}.
 \end{block}
 
 \pause
@@ -278,8 +279,8 @@ Change in position equals final position minus initial position.
 \textbf{Symbols:}
 \begin{itemize}
 \item $\Delta$ (delta) = change in
-\item $\mathbf{d}_{0}$ = initial position
-\item $\mathbf{d}_{\mathrm{f}}$ = final position
+\item $\disp{\mathbf{d}}_{0}$ = initial \pos{position}
+\item $\disp{\mathbf{d}}_{\mathrm{f}}$ = final \pos{position}
 \end{itemize}
 \note{[P0] [THE REVELATION] "The displacement equation - foundation of kinematics"\\\\
 - Delta means change in\\\\
@@ -377,19 +378,19 @@ A cyclist rides 3 km west and then turns around and rides 2 km east.
 
 \pause
 
-\textbf{(a) Displacement:}
-$$\Delta \mathbf{d} = \mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0} = -1 \text{ km}$$
+\textbf{(a) \disp{Displacement}:}
+$$\Delta \disp{\mathbf{d}} = \disp{\mathbf{d}}_{\mathrm{f}} - \disp{\mathbf{d}}_{0} = -1 \text{ km}$$
 (or 1 km west)
 
 \pause
 
-\textbf{(b) Distance traveled:}
-$$\text{Distance} = 3 \text{ km} + 2 \text{ km} = 5 \text{ km}$$
+\textbf{(b) \disp{Distance} traveled:}
+$$\text{\disp{Distance}} = 3 \text{ km} + 2 \text{ km} = 5 \text{ km}$$
 
 \pause
 
-\textbf{(c) Magnitude of displacement:}
-$$|\Delta \mathbf{d}| = 1 \text{ km}$$
+\textbf{(c) Magnitude of \disp{displacement}:}
+$$|\Delta \disp{\mathbf{d}}| = 1 \text{ km}$$
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "Displacement equals final minus initial: negative 1 km"\\\\
 - Negative because net motion is west (negative direction)\\\\
@@ -441,7 +442,7 @@ $$|\Delta \mathbf{d}| = 1 \text{ km}$$
 \begin{frame}
 \frametitle{2.2 What Is Speed?}
 \begin{block}{The Rate of Motion}
-Speed is the rate at which an object changes its location. (Scalar)
+\vel{Speed} is the rate at which an object changes its location. (Scalar)
 \end{block}
 
 \pause
@@ -468,9 +469,9 @@ Speed is your odometer. It tells you how fast, but not where you're going.
 \frametitle{2.2 Average Speed}
 \begin{block}{Universal Law: Rate of Motion}
 \begin{center}
-\Large $\boxed{v_{\text{avg}} = \frac{\text{distance}}{\text{time}}}$
+\Large $\boxed{\vel{v}_{\text{avg}} = \frac{\disp{d}}{\tvar{t}}}$
 \end{center}
-Average speed equals total distance divided by total time.
+Average \vel{speed} equals total \disp{distance} divided by total \tvar{time}.
 \end{block}
 
 \pause
@@ -478,8 +479,8 @@ Average speed equals total distance divided by total time.
 
 \textbf{Rearranged:}
 \begin{align*}
-\text{distance} &= v_{\text{avg}} \times \text{time}\\
-\text{time} &= \frac{\text{distance}}{v_{\text{avg}}}
+\disp{d} &= \vel{v}_{\text{avg}} \times \tvar{t}\\
+\tvar{t} &= \frac{\disp{d}}{\vel{v}_{\text{avg}}}
 \end{align*}
 \note{[P0] [THE REVELATION] "The speed equation - first kinematics formula"\\\\
 [ALGEBRA] "v-average equals distance over time"\\\\
@@ -491,18 +492,18 @@ Average speed equals total distance divided by total time.
 
 \begin{frame}
 \frametitle{2.2 Average vs. Instantaneous Speed}
-\textbf{Average speed:} Total distance divided by total time
+\textbf{Average \vel{speed}:} Total \disp{distance} divided by total \tvar{time}
 
 \pause
 \vspace{0.3cm}
 
 \textbf{Example:} Car travels 150 km in 3.2 hours
-$$v_{\text{avg}} = \frac{150 \text{ km}}{3.2 \text{ h}} = 47 \text{ km/h}$$
+$$\vel{v}_{\text{avg}} = \frac{150 \text{ km}}{3.2 \text{ h}} = 47 \text{ km/h}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Instantaneous speed:} Speed at a specific instant
+\textbf{Instantaneous \vel{speed}:} \vel{Speed} at a specific instant
 
 \begin{exampleblock}{Real-World}
 Your car's speedometer shows instantaneous speed, not average.
@@ -524,9 +525,9 @@ Your car's speedometer shows instantaneous speed, not average.
 \end{figure}
 
 \pause
-\textbf{Average speed:} $\frac{6 \text{ km}}{0.5 \text{ h}} = 12 \text{ km/h}$
+\textbf{Average \vel{speed}:} $\frac{6 \text{ km}}{0.5 \text{ h}} = 12 \text{ km/h}$
 
-\textbf{Displacement:} 0 km (round trip)
+\textbf{\disp{Displacement}:} 0 km (round trip)
 \note{[P0][Fig 2.8: House and store 3 km apart, round trip] "Round trip example"\\\\
 [P1] "Total distance 6 km in half hour = 12 km/h average speed"\\\\
 - But displacement is zero - ended where started\\\\
@@ -595,12 +596,12 @@ A marble rolls 5.2 m in 1.8 s.
 \pause
 
 \textbf{Equation:}
-$$v_{\text{avg}} = \frac{\text{distance}}{\text{time}}$$
+$$\vel{v}_{\text{avg}} = \frac{\disp{d}}{\tvar{t}}$$
 
 \pause
 
 \textbf{Substitute:}
-$$v_{\text{avg}} = \frac{5.2 \text{ m}}{1.8 \text{ s}} = 2.9 \text{ m/s}$$
+$$\vel{v}_{\text{avg}} = \frac{5.2 \text{ m}}{1.8 \text{ s}} = 2.9 \text{ m/s}$$
 
 \pause
 
@@ -615,16 +616,16 @@ $$v_{\text{avg}} = \frac{5.2 \text{ m}}{1.8 \text{ s}} = 2.9 \text{ m/s}$$
 
 \begin{frame}
 \frametitle{2.2 What Is Velocity?}
-\begin{block}{Speed Plus Direction}
-Velocity is the vector version of speed. It includes both magnitude (how fast) and direction (which way).
+\begin{block}{\vel{Speed} Plus Direction}
+\vel{Velocity} is the vector version of \vel{speed}. It includes both magnitude (how fast) and direction (which way).
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{The Mental Model}
-Velocity is your speedometer with a compass attached.\\
-Speed tells you how fast. Velocity adds where.
+\vel{Velocity} is your speedometer with a compass attached.\\
+\vel{Speed} tells you how fast. \vel{Velocity} adds where.
 \end{exampleblock}
 
 \pause
@@ -632,8 +633,8 @@ Speed tells you how fast. Velocity adds where.
 
 \textbf{Bold vs. italics:}
 \begin{itemize}
-\item $\mathbf{v}$ = velocity (vector, includes direction)
-\item $v$ = speed (scalar, magnitude only)
+\item $\vel{\mathbf{v}}$ = \vel{velocity} (vector, includes direction)
+\item $\vel{v}$ = \vel{speed} (scalar, magnitude only)
 \end{itemize}
 \note{[P0] "Velocity is vector version of speed"\\\\
 [P1] [THE CONNECTION] "Speedometer shows speed. GPS shows velocity - speed AND direction"\\\\
@@ -644,24 +645,24 @@ Speed tells you how fast. Velocity adds where.
 
 \begin{frame}
 \frametitle{2.2 Average Velocity}
-\begin{block}{Universal Law: Rate of Displacement}
+\begin{block}{Universal Law: Rate of \disp{Displacement}}
 \begin{center}
-\Large $\boxed{\mathbf{v}_{\text{avg}} = \frac{\Delta \mathbf{d}}{\Delta t} = \frac{\mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0}}{t_{\mathrm{f}} - t_{0}}}$
+\Large $\boxed{\vel{\mathbf{v}}_{\text{avg}} = \frac{\Delta \disp{\mathbf{d}}}{\Delta \tvar{t}} = \frac{\disp{\mathbf{d}}_{\mathrm{f}} - \disp{\mathbf{d}}_{0}}{\tvar{t}_{\mathrm{f}} - \tvar{t}_{0}}}$
 \end{center}
-Average velocity equals displacement divided by time interval.
+Average \vel{velocity} equals \disp{displacement} divided by \tvar{time} interval.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{SI unit:} m/s (same as speed, but includes direction)
+\textbf{SI unit:} m/s (same as \vel{speed}, but includes direction)
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{The Paradox}
-Round trip: Speed = 12 km/h, but velocity = 0 km/h!\\
-(Displacement is zero)
+Round trip: \vel{Speed} = 12 km/h, but \vel{velocity} = 0 km/h!\\
+(\disp{Displacement} is zero)
 \end{alertblock}
 \note{[P0] [THE REVELATION] "The velocity equation"\\\\
 [ALGEBRA] "v-average equals delta d over delta t"\\\\
@@ -676,9 +677,9 @@ Round trip: Speed = 12 km/h, but velocity = 0 km/h!\\
 \frametitle{2.2 Speed vs. Velocity}
 \begin{columns}[T]
 \column{0.48\textwidth}
-\begin{block}{Speed (Scalar)}
+\begin{block}{\vel{Speed} (Scalar)}
 \begin{itemize}
-\item Uses distance
+\item Uses \disp{distance}
 \item Magnitude only
 \item Always positive
 \item Example: 50 km/h
@@ -687,9 +688,9 @@ Round trip: Speed = 12 km/h, but velocity = 0 km/h!\\
 
 \pause
 \column{0.48\textwidth}
-\begin{block}{Velocity (Vector)}
+\begin{block}{\vel{Velocity} (Vector)}
 \begin{itemize}
-\item Uses displacement
+\item Uses \disp{displacement}
 \item Magnitude + direction
 \item Can be negative
 \item Example: 50 km/h north
@@ -701,8 +702,8 @@ Round trip: Speed = 12 km/h, but velocity = 0 km/h!\\
 \vspace{0.3cm}
 
 \begin{alertblock}{Civilian View vs. Reality}
-\textbf{Civilian:} "Speed and velocity are the same thing."\\
-\textbf{Physicist:} "Speed is how fast. Velocity is how fast AND which way."
+\textbf{Civilian:} "\vel{Speed} and \vel{velocity} are the same thing."\\
+\textbf{Physicist:} "\vel{Speed} is how fast. \vel{Velocity} is how fast AND which way."
 \end{alertblock}
 \note{[P0] "Two sides of the same coin"\\\\
 [P1] "Speed: scalar, distance, always positive"\\\\
@@ -770,12 +771,12 @@ A student has a displacement of 304 m north in 180 s.
 \pause
 
 \textbf{Equation:}
-$$\mathbf{v}_{\text{avg}} = \frac{\Delta \mathbf{d}}{\Delta t}$$
+$$\vel{\mathbf{v}}_{\text{avg}} = \frac{\Delta \disp{\mathbf{d}}}{\Delta \tvar{t}}$$
 
 \pause
 
 \textbf{Substitute:}
-$$\mathbf{v}_{\text{avg}} = \frac{304 \text{ m}}{180 \text{ s}} = 1.7 \text{ m/s north}$$
+$$\vel{\mathbf{v}}_{\text{avg}} = \frac{304 \text{ m}}{180 \text{ s}} = 1.7 \text{ m/s north}$$
 
 \pause
 
@@ -790,12 +791,12 @@ $$\mathbf{v}_{\text{avg}} = \frac{304 \text{ m}}{180 \text{ s}} = 1.7 \text{ m/s
 
 \begin{frame}
 \frametitle{2.2 Instantaneous Velocity}
-\textbf{Average velocity:} Over a time interval
+\textbf{Average \vel{velocity}:} Over a \tvar{time} interval
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Instantaneous velocity:} At a specific instant in time
+\textbf{Instantaneous \vel{velocity}:} At a specific instant in \tvar{time}
 
 \pause
 \vspace{0.3cm}
@@ -807,7 +808,7 @@ $$\mathbf{v}_{\text{avg}} = \frac{304 \text{ m}}{180 \text{ s}} = 1.7 \text{ m/s
 \end{figure}
 
 \pause
-If velocity is constant, instantaneous = average.
+If \vel{velocity} is constant, instantaneous = average.
 \note{[P0][Fig 2.9: Airplane with displacement vectors in segments] "Two types of velocity, like speed"\\\\
 [P1] "Average: over entire time interval"\\\\
 [P2] "Instantaneous: at one specific moment"\\\\
@@ -824,11 +825,11 @@ If velocity is constant, instantaneous = average.
 \begin{block}{The Revelations}
 \begin{enumerate}
 \item Motion is relative - depends on reference frame \pause
-\item Distance (scalar) vs. displacement (vector) \pause
-\item Speed (scalar) vs. velocity (vector) \pause
-\item Displacement = final position - initial position \pause
-\item Average speed = distance / time \pause
-\item Average velocity = displacement / time
+\item \disp{Distance} (scalar) vs. \disp{displacement} (vector) \pause
+\item \vel{Speed} (scalar) vs. \vel{velocity} (vector) \pause
+\item \disp{Displacement} = final \pos{position} - initial \pos{position} \pause
+\item Average \vel{speed} = \disp{distance} / \tvar{time} \pause
+\item Average \vel{velocity} = \disp{displacement} / \tvar{time}
 \end{enumerate}
 \end{block}
 \note{[P0] "Six revelations today"\\\\
@@ -845,9 +846,9 @@ If velocity is constant, instantaneous = average.
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-\Delta \mathbf{d} &= \mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0} \\
-v_{\text{avg}} &= \frac{\text{distance}}{\text{time}} \\
-\mathbf{v}_{\text{avg}} &= \frac{\Delta \mathbf{d}}{\Delta t} = \frac{\mathbf{d}_{\mathrm{f}} - \mathbf{d}_{0}}{t_{\mathrm{f}} - t_{0}}
+\Delta \disp{\mathbf{d}} &= \disp{\mathbf{d}}_{\mathrm{f}} - \disp{\mathbf{d}}_{0} \\
+\vel{v}_{\text{avg}} &= \frac{\disp{d}}{\tvar{t}} \\
+\vel{\mathbf{v}}_{\text{avg}} &= \frac{\Delta \disp{\mathbf{d}}}{\Delta \tvar{t}} = \frac{\disp{\mathbf{d}}_{\mathrm{f}} - \disp{\mathbf{d}}_{0}}{\tvar{t}_{\mathrm{f}} - \tvar{t}_{0}}
 \end{align}
 
 \vspace{0.3cm}

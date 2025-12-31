@@ -250,11 +250,11 @@ A subway train accelerates from rest to 30.0 km/h in 20.0 s.
 $$30.0 \frac{\text{km}}{\text{h}} \times \frac{1000\text{ m}}{1\text{ km}} \times \frac{1\text{ h}}{3600\text{ s}} = 8.333 \text{ m/s}$$
 
 \pause
-\textbf{Step 2:} Calculate $\Delta v = v_f - v_0 = 8.333 - 0 = 8.333$ m/s
+\textbf{Step 2:} Calculate $\Delta \vel{v} = \vel{v_f} - \vel{v_0} = 8.333 - 0 = 8.333$ m/s
 
 \pause
 \textbf{Step 3:} Apply the equation
-$$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{8.333\text{ m/s}}{20.0\text{ s}} = \boxed{+0.417 \text{ m/s}^2}$$
+$$\bar{\accel{a}} = \frac{\Delta \vel{v}}{\Delta \tvar{t}} = \frac{8.333\text{ m/s}}{20.0\text{ s}} = \boxed{+0.417 \text{ m/s}^2}$$
 
 \pause
 \textbf{Check:} Positive sign means acceleration to the right. Reasonable for train speeding up!
@@ -322,11 +322,11 @@ Now the train slows to a stop from 30.0 km/h in 8.00 s.
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Calculate $\Delta v = v_f - v_0 = 0 - 8.333 = -8.333$ m/s
+\textbf{Step 1:} Calculate $\Delta \vel{v} = \vel{v_f} - \vel{v_0} = 0 - 8.333 = -8.333$ m/s
 
 \pause
 \textbf{Step 2:} Apply the equation
-$$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{-8.333\text{ m/s}}{8.00\text{ s}} = \boxed{-1.04 \text{ m/s}^2}$$
+$$\bar{\accel{a}} = \frac{\Delta \vel{v}}{\Delta \tvar{t}} = \frac{-8.333\text{ m/s}}{8.00\text{ s}} = \boxed{-1.04 \text{ m/s}^2}$$
 
 \pause
 \vspace{0.3cm}
@@ -363,14 +363,14 @@ $$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{-8.333\text{ m/s}}{8.00\text{ s}} 
 
 \begin{frame}
 \frametitle{3.2 The Five Kinematic Equations}
-\textbf{For constant acceleration only:}
+\textbf{For constant \accel{acceleration} only:}
 
 \begin{align}
-d &= d_0 + \bar{v}t \\
-\bar{v} &= \frac{v_0 + v_f}{2} \\
-v &= v_0 + at \\
-d &= d_0 + v_0 t + \frac{1}{2}at^2 \\
-v^2 &= v_0^2 + 2a(d - d_0)
+\disp{d} &= \disp{d_0} + \bar{\vel{v}}\tvar{t} \\
+\bar{\vel{v}} &= \frac{\vel{v_0} + \vel{v_f}}{2} \\
+\vel{v} &= \vel{v_0} + \accel{a}\tvar{t} \\
+\disp{d} &= \disp{d_0} + \vel{v_0} \tvar{t} + \frac{1}{2}\accel{a}\tvar{t}^2 \\
+\vel{v}^2 &= \vel{v_0}^2 + 2\accel{a}(\disp{d} - \disp{d_0})
 \end{align}
 
 \pause
@@ -395,7 +395,7 @@ These five equations are the grammar of motion. Learn which one to use when.
 
 \pause
 \textbf{Key insight:}
-$$\bar{v} = \frac{d}{t} \quad \text{(when starting from origin)}$$
+$$\bar{\vel{v}} = \frac{\disp{d}}{\tvar{t}} \quad \text{(when starting from origin)}$$
 
 \pause
 The slope IS the velocity!
@@ -417,7 +417,7 @@ The slope IS the velocity!
 
 \pause
 \textbf{Key insight:}
-$$a = \frac{v}{t} \quad \text{(when starting from rest)}$$
+$$\accel{a} = \frac{\vel{v}}{\tvar{t}} \quad \text{(when starting from rest)}$$
 
 \pause
 The slope IS the acceleration!
@@ -444,9 +444,9 @@ The slope IS the acceleration!
 
 \begin{block}{Example Decision Tree}
 \begin{itemize}
-\item Time not given? Use equation 5: $v^2 = v_0^2 + 2a(d - d_0)$
-\item Displacement not needed? Use equation 3: $v = v_0 + at$
-\item From rest ($v_0 = 0$)? Equations simplify!
+\item \tvar{Time} not given? Use equation 5: $\vel{v}^2 = \vel{v_0}^2 + 2\accel{a}(\disp{d} - \disp{d_0})$
+\item \disp{Displacement} not needed? Use equation 3: $\vel{v} = \vel{v_0} + \accel{a}\tvar{t}$
+\item From rest ($\vel{v_0} = 0$)? Equations simplify!
 \end{itemize}
 \end{block}
 \note{[P0] "Problem-solving strategy"\\\\
@@ -514,18 +514,18 @@ A dragster accelerates from rest at $26.0$ m/s$^2$ for a quarter mile (402 m).
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Choose equation 5 (no time): $v^2 = v_0^2 + 2a(d - d_0)$
+\textbf{Step 1:} Choose equation 5 (no \tvar{time}): $\vel{v}^2 = \vel{v_0}^2 + 2\accel{a}(\disp{d} - \disp{d_0})$
 
 \pause
-\textbf{Step 2:} Since $v_0 = 0$: $v^2 = 2a(d - d_0)$
+\textbf{Step 2:} Since $\vel{v_0} = 0$: $\vel{v}^2 = 2\accel{a}(\disp{d} - \disp{d_0})$
 
 \pause
 \textbf{Step 3:} Substitute values
-$$v^2 = 2(26.0)(402) = 2.09 \times 10^4 \text{ m}^2/\text{s}^2$$
+$$\vel{v}^2 = 2(26.0)(402) = 2.09 \times 10^4 \text{ m}^2/\text{s}^2$$
 
 \pause
 \textbf{Step 4:} Take square root
-$$v = \sqrt{2.09 \times 10^4} = \boxed{145 \text{ m/s}}$$
+$$\vel{v} = \sqrt{2.09 \times 10^4} = \boxed{145 \text{ m/s}}$$
 
 \pause
 \textbf{Check:} About 324 mph - reasonable for dragster!
@@ -541,15 +541,15 @@ $$v = \sqrt{2.09 \times 10^4} = \boxed{145 \text{ m/s}}$$
 \frametitle{3.2 Acceleration Due to Gravity}
 \begin{block}{Nature's Constant}
 \begin{center}
-\Large $\boxed{g = 9.80 \text{ m/s}^2}$
+\Large $\boxed{\grav{g} = 9.80 \text{ m/s}^2}$
 \end{center}
-Near Earth's surface, all objects fall with this acceleration (ignoring air resistance).
+Near Earth's surface, all objects fall with this \accel{acceleration} (ignoring air resistance).
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Convention:} When using $g$ in equations, give it a negative sign because gravity points downward.
+\textbf{Convention:} When using $\grav{g}$ in equations, give it a negative sign because gravity points downward.
 
 \pause
 \begin{exampleblock}{The Mental Model}
@@ -618,16 +618,16 @@ A rock is thrown straight up with initial velocity $v_0 = 13.0$ m/s.
 \frametitle{Reveal: Rock Position and Velocity}
 \textbf{Self-correct in a different color:}
 
-\textbf{Position:} $y = y_0 + v_0 t + \frac{1}{2}at^2$
+\textbf{Position:} $\disp{y} = \disp{y_0} + \vel{v_0} \tvar{t} + \frac{1}{2}\accel{a}\tvar{t}^2$
 
 \pause
-$$y = 0 + (13.0)(1.00) + \frac{1}{2}(-9.80)(1.00)^2 = \boxed{8.10 \text{ m}}$$
+$$\disp{y} = 0 + (13.0)(1.00) + \frac{1}{2}(-9.80)(1.00)^2 = \boxed{8.10 \text{ m}}$$
 
 \pause
-\textbf{Velocity:} $v = v_0 + at$
+\textbf{Velocity:} $\vel{v} = \vel{v_0} + \accel{a}\tvar{t}$
 
 \pause
-$$v = 13.0 + (-9.80)(1.00) = \boxed{3.20 \text{ m/s}}$$
+$$\vel{v} = 13.0 + (-9.80)(1.00) = \boxed{3.20 \text{ m/s}}$$
 
 \pause
 \vspace{0.3cm}
@@ -647,11 +647,11 @@ $$v = 13.0 + (-9.80)(1.00) = \boxed{3.20 \text{ m/s}}$$
 \frametitle{What You Now Know}
 \begin{block}{The Revelations}
 \begin{enumerate}
-\item Acceleration = rate of change of velocity (direction matters!) \pause
-\item $\bar{a} = \Delta v / \Delta t$ - the definition of acceleration \pause
+\item \accel{Acceleration} = rate of change of \vel{velocity} (direction matters!) \pause
+\item $\bar{\accel{a}} = \Delta \vel{v} / \Delta \tvar{t}$ - the definition of \accel{acceleration} \pause
 \item Five kinematic equations predict motion \pause
-\item Graphs reveal acceleration as slopes \pause
-\item $g = 9.80$ m/s$^2$ - Earth's gravitational acceleration \pause
+\item Graphs reveal \accel{acceleration} as slopes \pause
+\item $\grav{g} = 9.80$ m/s$^2$ - Earth's gravitational \accel{acceleration} \pause
 \item Choose equations based on knowns and unknowns
 \end{enumerate}
 \end{block}
@@ -668,13 +668,13 @@ $$v = 13.0 + (-9.80)(1.00) = \boxed{3.20 \text{ m/s}}$$
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-\bar{a} &= \frac{\Delta v}{\Delta t} = \frac{v_f - v_0}{t_f - t_0} \\
-d &= d_0 + \bar{v}t \\
-\bar{v} &= \frac{v_0 + v_f}{2} \\
-v &= v_0 + at \\
-d &= d_0 + v_0 t + \frac{1}{2}at^2 \\
-v^2 &= v_0^2 + 2a(d - d_0) \\
-g &= 9.80 \text{ m/s}^2
+\bar{\accel{a}} &= \frac{\Delta \vel{v}}{\Delta \tvar{t}} = \frac{\vel{v_f} - \vel{v_0}}{\tvar{t_f} - \tvar{t_0}} \\
+\disp{d} &= \disp{d_0} + \bar{\vel{v}}\tvar{t} \\
+\bar{\vel{v}} &= \frac{\vel{v_0} + \vel{v_f}}{2} \\
+\vel{v} &= \vel{v_0} + \accel{a}\tvar{t} \\
+\disp{d} &= \disp{d_0} + \vel{v_0} \tvar{t} + \frac{1}{2}\accel{a}\tvar{t}^2 \\
+\vel{v}^2 &= \vel{v_0}^2 + 2\accel{a}(\disp{d} - \disp{d_0}) \\
+\grav{g} &= 9.80 \text{ m/s}^2
 \end{align}
 \note{- Seven equations - these are your tools\\\\
 - Equation 1: definition of acceleration\\\\

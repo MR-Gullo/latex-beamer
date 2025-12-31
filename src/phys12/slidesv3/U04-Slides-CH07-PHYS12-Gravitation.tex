@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -153,19 +154,19 @@ Orbit of each planet is ellipse with sun at one focus.
 
 \begin{frame}
 \frametitle{7.1 Ellipse Formulas}
-\textbf{If you know perihelion $r_p$ and aphelion $r_a$:}
+\textbf{If you know perihelion $\disp{r_p}$ and aphelion $\disp{r_a}$:}
 
 \pause
 \begin{align}
-\text{Semi-major axis: } a &= \frac{r_a + r_p}{2} \\
-\text{Semi-minor axis: } b &= \sqrt{r_a r_p}
+\text{Semi-major axis: } \disp{a} &= \frac{\disp{r_a} + \disp{r_p}}{2} \\
+\text{Semi-minor axis: } \disp{b} &= \sqrt{\disp{r_a} \disp{r_p}}
 \end{align}
 
 \pause
 \vspace{0.3cm}
 
 \textbf{Eccentricity} (elongation measure):
-$$e = \frac{f}{a}$$
+$$e = \frac{\disp{f}}{\disp{a}}$$
 
 \pause
 When $e = 0$, ellipse is circle!
@@ -212,7 +213,7 @@ Ratio of periods squared equals ratio of orbital radii cubed.
 \pause
 \begin{center}
 \Large
-$$\boxed{\frac{T_1^2}{T_2^2} = \frac{r_1^3}{r_2^3}}$$
+$$\boxed{\frac{\tvar{T_1}^2}{\tvar{T_2}^2} = \frac{\disp{r_1}^3}{\disp{r_2}^3}}$$
 \end{center}
 
 \pause
@@ -220,8 +221,8 @@ $$\boxed{\frac{T_1^2}{T_2^2} = \frac{r_1^3}{r_2^3}}$$
 
 \textbf{Where:}
 \begin{itemize}
-\item $T$ = period (time for one orbit)
-\item $r$ = average orbital radius
+\item $\tvar{T}$ = period (\tvar{time} for one orbit)
+\item $\disp{r}$ = average orbital \disp{radius}
 \end{itemize}
 
 \pause
@@ -281,9 +282,9 @@ Moon orbits Earth every 27.3 days at average distance $3.84 \times 10^8$ m from 
 
 \textbf{Given:}
 \begin{itemize}
-\item Moon: $T_1 = 27.3$ d, $r_1 = 3.84 \times 10^8$ m
+\item Moon: $\tvar{T_1} = 27.3$ d, $\disp{r_1} = 3.84 \times 10^8$ m
 \item Satellite: altitude = 1500 km above surface
-\item Earth radius = 6380 km
+\item Earth \disp{radius} = 6380 km
 \end{itemize}
 
 \textbf{Find:} Period of satellite
@@ -307,7 +308,7 @@ Moon orbits Earth every 27.3 days at average distance $3.84 \times 10^8$ m from 
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What is $r_2$ for satellite? Did you add Earth's radius?
+\item What is $\disp{r_2}$ for satellite? Did you add Earth's \disp{radius}?
 \item Which version Kepler's third law use?
 \item Did you solve for $T_2$ correctly?
 \end{enumerate}
@@ -329,21 +330,21 @@ Moon orbits Earth every 27.3 days at average distance $3.84 \times 10^8$ m from 
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Find orbital radius: $r_2 = 1500 \text{ km} + 6380 \text{ km} = 7880 \text{ km}$
+\textbf{Step 1:} Find orbital \disp{radius}: $\disp{r_2} = 1500 \text{ km} + 6380 \text{ km} = 7880 \text{ km}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2:} Use Kepler's third law: $T_2 = T_1 \left(\frac{r_2}{r_1}\right)^{3/2}$
+\textbf{Step 2:} Use Kepler's third law: $\tvar{T_2} = \tvar{T_1} \left(\frac{\disp{r_2}}{\disp{r_1}}\right)^{3/2}$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Step 3:} Substitute and solve:
-$$T_2 = (27.3 \text{ d}) \left(\frac{24.0 \text{ h}}{\text{d}}\right) \left(\frac{7880 \text{ km}}{3.84 \times 10^5 \text{ km}}\right)^{3/2}$$
+$$\tvar{T_2} = (27.3 \text{ d}) \left(\frac{24.0 \text{ h}}{\text{d}}\right) \left(\frac{7880 \text{ km}}{3.84 \times 10^5 \text{ km}}\right)^{3/2}$$
 
 \pause
-$$\boxed{T_2 = 1.93 \text{ h}}$$
+$$\boxed{\tvar{T_2} = 1.93 \text{ h}}$$
 
 \pause
 \textbf{Check:} Closer orbit = shorter period. Makes sense!
@@ -401,9 +402,9 @@ Why do apples fall straight down? What if same force pulling apples also pulls m
 \begin{block}{The Universal Law}
 \begin{center}
 \Large
-$$\boxed{F = G\frac{mM}{r^2}}$$
+$$\boxed{\force{F} = \grav{G}\frac{\mass{m}\mass{M}}{\disp{r}^2}}$$
 \end{center}
-Every mass attracts every other mass with force proportional to product of masses and inversely proportional to distance squared.
+Every \mass{mass} attracts every other \mass{mass} with \force{force} proportional to product of \mass{masses} and inversely proportional to \disp{distance} squared.
 \end{block}
 
 \pause
@@ -411,10 +412,10 @@ Every mass attracts every other mass with force proportional to product of masse
 
 \textbf{Where:}
 \begin{itemize}
-\item $F$ = gravitational force (N)
-\item $G = 6.67 \times 10^{-11}$ N·m²/kg² (universal constant)
-\item $m, M$ = masses (kg)
-\item $r$ = distance between centers (m)
+\item $\force{F}$ = gravitational \force{force} (N)
+\item $\grav{G} = 6.67 \times 10^{-11}$ N·m²/kg² (universal constant)
+\item $\mass{m}, \mass{M}$ = \mass{masses} (kg)
+\item $\disp{r}$ = \disp{distance} between centers (m)
 \end{itemize}
 \note{[P0] "Newton's law universal gravitation - source code"\\\\
 [P1] "F equals G times m M over r squared"\\\\
@@ -439,7 +440,7 @@ Every mass attracts every other mass with force proportional to product of masse
 \pause
 \vspace{0.3cm}
 
-\textbf{Result:} $G = 6.67 \times 10^{-11}$ N·m²/kg²
+\textbf{Result:} $\grav{G} = 6.67 \times 10^{-11}$ N·m²/kg²
 
 \pause
 Cavendish's value differs less than 1\% from modern value!
@@ -462,11 +463,11 @@ Cavendish's value differs less than 1\% from modern value!
 \pause
 \vspace{0.3cm}
 
-\textbf{Mass:} Amount of matter (kg) - constant everywhere
+\textbf{\mass{Mass}:} Amount of matter (kg) - constant everywhere
 
 \pause
-\textbf{Weight:} Gravitational force (N) - varies by location
-$$W = mg$$
+\textbf{\force{Weight}:} Gravitational \force{force} (N) - varies by location
+$$\force{W} = \mass{m}\grav{g}$$
 
 \pause
 \vspace{0.3cm}
@@ -488,17 +489,17 @@ Your mass on moon same as Earth. Your weight 1/6 as much!
 \vspace{0.3cm}
 
 \textbf{Result:}
-$$\frac{r^3}{T^2} = \frac{GM}{4\pi^2}$$
+$$\frac{\disp{r}^3}{\tvar{T}^2} = \frac{\grav{G}\mass{M}}{4\pi^2}$$
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{The Revelation}
-Kepler said WHAT (pattern). Newton said WHY (gravitational force causes it).
+Kepler said WHAT (pattern). Newton said WHY (gravitational \force{force} causes it).
 \end{exampleblock}
 
 \pause
-\textbf{Power:} If you know $r$ and $T$, can calculate mass $M$ of parent body!
+\textbf{Power:} If you know $\disp{r}$ and $\tvar{T}$, can calculate \mass{mass} $\mass{M}$ of parent body!
 \note{[P0] "Newton proved Kepler's laws follow from universal gravitation"\\\\
 [P1] "Derived constant r-cubed over T-squared"\\\\
 [P2] [THE REVELATION] "Kepler described pattern. Newton explained cause"\\\\
@@ -510,15 +511,15 @@ Kepler said WHAT (pattern). Newton said WHY (gravitational force causes it).
 \begin{frame}
 \frametitle{Attempt: Weight on Mars}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-Value of $g$ on Mars is 3.71 m/s². You have mass 60.0 kg on Earth.
+Value of $\grav{g}$ on Mars is 3.71 m/s². You have \mass{mass} 60.0 kg on Earth.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item Your mass: $m = 60.0$ kg
-\item Mars gravity: $g_M = 3.71$ m/s²
-\item Earth gravity: $g_E = 9.80$ m/s²
+\item Your \mass{mass}: $\mass{m} = 60.0$ kg
+\item Mars gravity: $\grav{g_M} = 3.71$ m/s²
+\item Earth gravity: $\grav{g_E} = 9.80$ m/s²
 \end{itemize}
 
 \textbf{Find:}
@@ -546,9 +547,9 @@ Value of $g$ on Mars is 3.71 m/s². You have mass 60.0 kg on Earth.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item Does mass change when go Mars? Why or why not?
-\item What formula use for weight on Mars?
-\item How Mars weight compare Earth weight?
+\item Does \mass{mass} change when go Mars? Why or why not?
+\item What formula use for \force{weight} on Mars?
+\item How Mars \force{weight} compare Earth \force{weight}?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -568,23 +569,23 @@ Value of $g$ on Mars is 3.71 m/s². You have mass 60.0 kg on Earth.
 
 \vspace{0.3cm}
 
-\textbf{Part 1:} Mass on Mars = \textbf{60.0 kg} (mass constant!)
+\textbf{Part 1:} \mass{Mass} on Mars = \textbf{60.0 kg} (\mass{mass} constant!)
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Part 2:} Weight on Mars: $W_M = mg_M$
+\textbf{Part 2:} \force{Weight} on Mars: $\force{W_M} = \mass{m}\grav{g_M}$
 
 \pause
-$$W_M = (60.0 \text{ kg})(3.71 \text{ m/s}^2)$$
+$$\force{W_M} = (60.0 \text{ kg})(3.71 \text{ m/s}^2)$$
 
 \pause
-$$\boxed{W_M = 223 \text{ N}}$$
+$$\boxed{\force{W_M} = 223 \text{ N}}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Compare:} Earth weight = $(60.0)(9.80) = 588$ N
+\textbf{Compare:} Earth \force{weight} = $(60.0)(9.80) = 588$ N
 
 \pause
 Mars weight about 38\% Earth weight!
@@ -662,12 +663,12 @@ Find acceleration due Earth's gravity at moon's distance.
 
 \textbf{Given:}
 \begin{itemize}
-\item $G = 6.67 \times 10^{-11}$ N·m²/kg²
-\item Earth mass: $M = 5.98 \times 10^{24}$ kg
-\item Earth-moon distance: $r = 3.84 \times 10^8$ m
+\item $\grav{G} = 6.67 \times 10^{-11}$ N·m²/kg²
+\item Earth \mass{mass}: $\mass{M} = 5.98 \times 10^{24}$ kg
+\item Earth-moon \disp{distance}: $\disp{r} = 3.84 \times 10^8$ m
 \end{itemize}
 
-\textbf{Find:} Value $g$ at moon's distance from Earth
+\textbf{Find:} Value $\grav{g}$ at moon's \disp{distance} from Earth
 
 \vspace{0.3cm}
 
@@ -688,9 +689,9 @@ Find acceleration due Earth's gravity at moon's distance.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What formula use for $g$?
+\item What formula use for $\grav{g}$?
 \item How handle scientific notation?
-\item How this $g$ compare Earth's surface $g = 9.8$ m/s²?
+\item How this $\grav{g}$ compare Earth's surface $\grav{g} = 9.8$ m/s²?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -710,21 +711,21 @@ Find acceleration due Earth's gravity at moon's distance.
 
 \vspace{0.3cm}
 
-\textbf{Formula:} $g = G\frac{M}{r^2}$
+\textbf{Formula:} $\grav{g} = \grav{G}\frac{\mass{M}}{\disp{r}^2}$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Substitute:}
-$$g = \left(6.67 \times 10^{-11} \frac{\text{N·m}^2}{\text{kg}^2}\right) \left(\frac{5.98 \times 10^{24} \text{ kg}}{(3.84 \times 10^8 \text{ m})^2}\right)$$
+$$\grav{g} = \left(6.67 \times 10^{-11} \frac{\text{N·m}^2}{\text{kg}^2}\right) \left(\frac{5.98 \times 10^{24} \text{ kg}}{(3.84 \times 10^8 \text{ m})^2}\right)$$
 
 \pause
 \vspace{0.2cm}
 
-$$g = \frac{3.99 \times 10^{14}}{1.47 \times 10^{17}}$$
+$$\grav{g} = \frac{3.99 \times 10^{14}}{1.47 \times 10^{17}}$$
 
 \pause
-$$\boxed{g = 2.70 \times 10^{-3} \text{ m/s}^2}$$
+$$\boxed{\grav{g} = 2.70 \times 10^{-3} \text{ m/s}^2}$$
 
 \pause
 \textbf{Compare:} About 0.03\% Earth's surface gravity!
@@ -745,9 +746,9 @@ $$\boxed{g = 2.70 \times 10^{-3} \text{ m/s}^2}$$
 \begin{block}{The Revelations}
 \begin{enumerate}
 \item Kepler found three laws describing orbital motion \pause
-\item Newton discovered gravitational force explains Kepler's laws \pause
-\item Universal gravitation: $F = Gm_1m_2/r^2$ \pause
-\item Mass constant, weight varies with $g$ \pause
+\item Newton discovered gravitational \force{force} explains Kepler's laws \pause
+\item Universal gravitation: $\force{F} = \grav{G}\mass{m_1}\mass{m_2}/\disp{r}^2$ \pause
+\item \mass{Mass} constant, \force{weight} varies with $\grav{g}$ \pause
 \item Einstein showed gravity warps space-time itself \pause
 \item Same force governs falling apples and orbiting galaxies
 \end{enumerate}
@@ -766,12 +767,12 @@ $$\boxed{g = 2.70 \times 10^{-3} \text{ m/s}^2}$$
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-\text{Kepler's Third Law: } \frac{T_1^2}{T_2^2} &= \frac{r_1^3}{r_2^3} \\
-\text{Universal Gravitation: } F &= G\frac{mM}{r^2} \\
-\text{Gravitational Constant: } G &= 6.67 \times 10^{-11} \text{ N·m}^2/\text{kg}^2 \\
-\text{Weight: } W &= mg \\
-\text{Surface Gravity: } g &= G\frac{M}{r^2} \\
-\text{Orbital Constant: } \frac{r^3}{T^2} &= \frac{GM}{4\pi^2}
+\text{Kepler's Third Law: } \frac{\tvar{T_1}^2}{\tvar{T_2}^2} &= \frac{\disp{r_1}^3}{\disp{r_2}^3} \\
+\text{Universal Gravitation: } \force{F} &= \grav{G}\frac{\mass{m}\mass{M}}{\disp{r}^2} \\
+\text{Gravitational Constant: } \grav{G} &= 6.67 \times 10^{-11} \text{ N·m}^2/\text{kg}^2 \\
+\text{\force{Weight}: } \force{W} &= \mass{m}\grav{g} \\
+\text{Surface Gravity: } \grav{g} &= \grav{G}\frac{\mass{M}}{\disp{r}^2} \\
+\text{Orbital Constant: } \frac{\disp{r}^3}{\tvar{T}^2} &= \frac{\grav{G}\mass{M}}{4\pi^2}
 \end{align}
 \note{- Six key equations this chapter\\\\
 - Kepler's third law: compare orbital periods\\\\

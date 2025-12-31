@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -103,15 +104,15 @@ Charles-Augustin de Coulomb (1780s) used a torsion balance to measure forces bet
 \frametitle{18.2 The Source Code of Electric Force}
 \begin{block}{Universal Law: Coulomb's Law}
 \begin{center}
-\Large $\boxed{F = \frac{kq_1q_2}{r^2}}$
+\Large $\boxed{\force{F} = \frac{\coulombk{k}\charge{q_1}\charge{q_2}}{\disp{r}^2}}$
 \end{center}
-Force between charges equals Coulomb's constant times the product of charges divided by distance squared.
+\force{Force} between \charge{charges} equals Coulomb's constant times the product of \charge{charges} divided by \disp{distance} squared.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-Where: $k = 8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$
+Where: $\coulombk{k} = 8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$
 \note{[P0] [THE REVELATION] "F equals k q-1 q-2 over r-squared"\\\\
 - Force proportional to each charge\\\\
 - Force inversely proportional to distance squared\\\\
@@ -122,8 +123,8 @@ Where: $k = 8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$
 \begin{frame}
 \frametitle{18.2 Reading the Signs}
 \begin{alertblock}{The Paradox}
-If both charges are positive OR both negative: $F > 0$ (repulsive)\\
-If charges have opposite signs: $F < 0$ (attractive)
+If both \charge{charges} are positive OR both negative: $\force{F} > 0$ (repulsive)\\
+If \charge{charges} have opposite signs: $\force{F} < 0$ (attractive)
 \end{alertblock}
 
 \pause
@@ -149,16 +150,16 @@ If charges have opposite signs: $F < 0$ (attractive)
 
 \pause
 \begin{itemize}
-\item Double the distance $(r \to 2r)$: Force becomes $\frac{1}{4}$ as strong \pause
-\item Triple the distance $(r \to 3r)$: Force becomes $\frac{1}{9}$ as strong \pause
-\item Halve the distance $(r \to \frac{r}{2})$: Force becomes $4$ times stronger
+\item Double the \disp{distance} $(\disp{r} \to 2\disp{r})$: \force{Force} becomes $\frac{1}{4}$ as strong \pause
+\item Triple the \disp{distance} $(\disp{r} \to 3\disp{r})$: \force{Force} becomes $\frac{1}{9}$ as strong \pause
+\item Halve the \disp{distance} $(\disp{r} \to \frac{\disp{r}}{2})$: \force{Force} becomes $4$ times stronger
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{The Mental Model}
-Bring charges twice as close: force quadruples. Move them twice as far: force drops to one-fourth.
+Bring \charge{charges} twice as close: \force{force} quadruples. Move them twice as far: \force{force} drops to one-fourth.
 \end{exampleblock}
 \note{[P0] "What happens when you change the distance?"\\\\
 [P1] "Double distance: force becomes one-fourth"\\\\
@@ -181,7 +182,7 @@ Bring charges twice as close: force quadruples. Move them twice as far: force dr
 
 \textbf{Differences:}
 \begin{itemize}
-\item $k$ is MUCH larger than $G$ (electric forces are stronger) \pause
+\item $\coulombk{k}$ is MUCH larger than $G$ (electric \force{forces} are stronger) \pause
 \item Gravity only attracts; electric forces attract OR repel
 \end{itemize}
 
@@ -203,18 +204,18 @@ Bring charges twice as close: force quadruples. Move them twice as far: force dr
 \begin{frame}
 \frametitle{Attempt: Decoding Electric Force}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-Two charges $q_1 = +3 \times 10^{-9}$ C and $q_2 = -4 \times 10^{-9}$ C are separated by 3.0 cm.
+Two \charge{charges} $\charge{q_1} = +3 \times 10^{-9}$ C and $\charge{q_2} = -4 \times 10^{-9}$ C are separated by 3.0 cm.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item $q_1 = +3 \times 10^{-9}$ C
-\item $q_2 = -4 \times 10^{-9}$ C
-\item $r = 3.0$ cm $= 0.030$ m
+\item $\charge{q_1} = +3 \times 10^{-9}$ C
+\item $\charge{q_2} = -4 \times 10^{-9}$ C
+\item $\disp{r} = 3.0$ cm $= 0.030$ m
 \end{itemize}
 
-\textbf{Find:} Magnitude and direction of force
+\textbf{Find:} Magnitude and direction of \force{force}
 
 \vspace{0.3cm}
 
@@ -235,7 +236,7 @@ Two charges $q_1 = +3 \times 10^{-9}$ C and $q_2 = -4 \times 10^{-9}$ C are sepa
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What did you substitute for $q_1$ and $q_2$?
+\item What did you substitute for $\charge{q_1}$ and $\charge{q_2}$?
 \item Did you convert cm to m?
 \item Is the force attractive or repulsive? How do you know?
 \end{enumerate}
@@ -257,22 +258,22 @@ Two charges $q_1 = +3 \times 10^{-9}$ C and $q_2 = -4 \times 10^{-9}$ C are sepa
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} $F = \frac{kq_1q_2}{r^2}$
+\textbf{Step 1:} $\force{F} = \frac{\coulombk{k}\charge{q_1}\charge{q_2}}{\disp{r}^2}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2:} $F = \frac{(8.99 \times 10^9)(3 \times 10^{-9})(-4 \times 10^{-9})}{(0.030)^2}$
+\textbf{Step 2:} $\force{F} = \frac{(8.99 \times 10^9)(3 \times 10^{-9})(-4 \times 10^{-9})}{(0.030)^2}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 3:} $F = -1.2 \times 10^{-4}$ N
+\textbf{Step 3:} $\force{F} = -1.2 \times 10^{-4}$ N
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{|F| = 1.2 \times 10^{-4} \text{ N, attractive}}$$
+$$\boxed{|\force{F}| = 1.2 \times 10^{-4} \text{ N, attractive}}$$
 
 \pause
 \textbf{Check:} Opposite charges attract. Negative force confirms this!
@@ -328,16 +329,16 @@ Not science fiction - this is how physicists think about forces at a distance.
 \frametitle{18.3 The Source Code of Fields}
 \begin{block}{Universal Law: Electric Field}
 \begin{center}
-\Large $\boxed{\vec{E} = \frac{\vec{F}}{q_{\text{test}}}}$
+\Large $\boxed{\vec{\efield{E}} = \frac{\vec{\force{F}}}{\charge{q}_{\text{test}}}}$
 \end{center}
-Electric field equals force per unit charge.
+\efield{Electric field} equals \force{force} per unit \charge{charge}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-For a point charge $Q$:
-$$E = \frac{k|Q|}{r^2}$$
+For a point \charge{charge} $\charge{Q}$:
+$$\efield{E} = \frac{\coulombk{k}|\charge{Q}|}{\disp{r}^2}$$
 
 \pause
 Units: N/C (newtons per coulomb)
@@ -359,8 +360,8 @@ Units: N/C (newtons per coulomb)
 \pause
 \textbf{Field lines show:}
 \begin{itemize}
-\item Direction of force on positive charge
-\item Strength (closer lines = stronger field)
+\item Direction of \force{force} on positive \charge{charge}
+\item Strength (closer lines = stronger \efield{field})
 \end{itemize}
 \note{[Fig 18.17: Radial field lines from positive point charge] "Visualizing the invisible - force map in all directions"\\\\
 [P0] "Field lines from positive charge radiate outward"\\\\
@@ -374,18 +375,18 @@ Units: N/C (newtons per coulomb)
 \begin{frame}
 \frametitle{18.3 Field Line Rules}
 \begin{enumerate}
-\item Lines point \textbf{away} from positive charges \pause
-\item Lines point \textbf{toward} negative charges \pause
+\item Lines point \textbf{away} from positive \charge{charges} \pause
+\item Lines point \textbf{toward} negative \charge{charges} \pause
 \item Lines NEVER cross each other \pause
-\item Denser lines = stronger field
+\item Denser lines = stronger \efield{field}
 \end{enumerate}
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{The Paradox}
-\textbf{Misconception:} "Field lines are paths charges follow."\\
-\textbf{Reality:} Field lines show force direction, but moving charges have inertia - they curve gradually.
+\textbf{Misconception:} "\efield{Field} lines are paths \charge{charges} follow."\\
+\textbf{Reality:} \efield{Field} lines show \force{force} direction, but moving \charge{charges} have inertia - they curve gradually.
 \end{alertblock}
 \note{[P0] "Four rules for field lines"\\\\
 [P1] "Lines away from positive"\\\\
@@ -436,9 +437,9 @@ Look at this field map. Three charges create these field lines.
 
 \textbf{Questions:}
 \begin{enumerate}
-\item Which charges are positive? Which are negative?
-\item Which charge has the largest magnitude?
-\item Where is the field strongest?
+\item Which \charge{charges} are positive? Which are negative?
+\item Which \charge{charge} has the largest magnitude?
+\item Where is the \efield{field} strongest?
 \end{enumerate}
 
 \vspace{0.3cm}
@@ -459,9 +460,9 @@ Look at this field map. Three charges create these field lines.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item How did you identify positive vs negative charges?
-\item How did you compare charge magnitudes?
-\item Where is the field strongest, and how do you know?
+\item How did you identify positive vs negative \charge{charges}?
+\item How did you compare \charge{charge} magnitudes?
+\item Where is the \efield{field} strongest, and how do you know?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -483,24 +484,24 @@ Look at this field map. Three charges create these field lines.
 
 \textbf{Signs:}
 \begin{itemize}
-\item Lines OUT = positive charge
-\item Lines IN = negative charge
+\item Lines OUT = positive \charge{charge}
+\item Lines IN = negative \charge{charge}
 \end{itemize}
 
 \pause
 
 \textbf{Magnitude:}
 \begin{itemize}
-\item More lines = larger charge
-\item Count field lines touching each charge
+\item More lines = larger \charge{charge}
+\item Count \efield{field} lines touching each \charge{charge}
 \end{itemize}
 
 \pause
 
-\textbf{Field Strength:}
+\textbf{\efield{Field} Strength:}
 \begin{itemize}
-\item Closest lines = strongest field
-\item Usually near charges
+\item Closest lines = strongest \efield{field}
+\item Usually near \charge{charges}
 \end{itemize}
 \note{[P0] "Signs from direction"\\\\
 [P1] "Magnitude from counting lines - proportional to charge"\\\\
@@ -554,9 +555,9 @@ Both store energy that can be released to do work.
 \frametitle{18.4 Potential Energy of Two Charges}
 \begin{block}{Universal Law: Electric Potential Energy}
 \begin{center}
-\Large $\boxed{U_E = \frac{kq_1q_2}{r}}$
+\Large $\boxed{\energy{U_E} = \frac{\coulombk{k}\charge{q_1}\charge{q_2}}{\disp{r}}}$
 \end{center}
-Energy stored in configuration of two charges.
+\energy{Energy} stored in configuration of two \charge{charges}.
 \end{block}
 
 \pause
@@ -564,8 +565,8 @@ Energy stored in configuration of two charges.
 
 \textbf{Sign tells the story:}
 \begin{itemize}
-\item $U_E > 0$: like charges (they want to fly apart) \pause
-\item $U_E < 0$: opposite charges (they want to come together)
+\item $\energy{U_E} > 0$: like \charge{charges} (they want to fly apart) \pause
+\item $\energy{U_E} < 0$: opposite \charge{charges} (they want to come together)
 \end{itemize}
 \note{[P0] [THE REVELATION] "U-E equals k q-1 q-2 over r"\\\\
 - Similar to Coulomb's law but NO r-squared\\\\
@@ -579,17 +580,17 @@ Energy stored in configuration of two charges.
 \frametitle{18.4 Electric Potential (Voltage)}
 \begin{block}{Universal Law: Electric Potential}
 \begin{center}
-\Large $\boxed{V = \frac{U_E}{q} = \frac{kq}{r}}$
+\Large $\boxed{\voltage{V} = \frac{\energy{U_E}}{\charge{q}} = \frac{\coulombk{k}\charge{q}}{\disp{r}}}$
 \end{center}
-Potential energy per unit charge. Units: volts (V)
+\energy{Potential energy} per unit \charge{charge}. Units: volts (V)
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{Civilian vs Reality}
-\textbf{Civilian:} "Voltage is electricity flowing."\\
-\textbf{Physicist:} "Voltage is electric pressure - potential energy per charge."
+\textbf{Civilian:} "\voltage{Voltage} is electricity flowing."\\
+\textbf{Physicist:} "\voltage{Voltage} is electric pressure - \energy{potential energy} per \charge{charge}."
 \end{alertblock}
 \note{[P0] [THE REVELATION] "V equals U-E over q, which equals k q over r"\\\\
 - Potential per unit charge\\\\
@@ -606,16 +607,16 @@ Potential energy per unit charge. Units: volts (V)
 \pause
 \vspace{0.3cm}
 
-In uniform field $E$:
-$$\Delta V = -E(x_f - x_i)$$
+In uniform \efield{field} $\efield{E}$:
+$$\Delta \voltage{V} = -\efield{E}(\disp{x_f} - \disp{x_i})$$
 
 \pause
 
 \textbf{Rearranged:}
-$$E = \frac{\Delta V}{d}$$
+$$\efield{E} = \frac{\Delta \voltage{V}}{\disp{d}}$$
 
 \pause
-Electric field units: V/m (volts per meter)
+\efield{Electric field} units: V/m (volts per meter)
 \note{[P0] "Usually we care about potential DIFFERENCE"\\\\
 [P1] "In uniform field: delta-V equals negative E times distance"\\\\
 [P2] "Rearranged: E equals delta-V over d"\\\\
@@ -626,17 +627,17 @@ Electric field units: V/m (volts per meter)
 \begin{frame}
 \frametitle{18.4 The 9V Battery}
 \begin{exampleblock}{Real-World: Battery Voltage}
-A 9V battery creates 9V potential difference between terminals.
+A 9V battery creates 9V \voltage{potential difference} between terminals.
 
 \vspace{0.3cm}
 
-This means: moving 1 coulomb from - to + terminal requires 9 joules of work.
+This means: moving 1 coulomb from - to + terminal requires 9 joules of \work{work}.
 \end{exampleblock}
 
 \pause
 \vspace{0.3cm}
 
-Battery converts chemical energy to electric potential energy.
+Battery converts chemical \energy{energy} to electric \energy{potential energy}.
 \note{[P0] "9V battery example"\\\\
 - 9 volts means 9 joules per coulomb\\\\
 - Battery does work separating charges\\\\
@@ -648,17 +649,17 @@ Battery converts chemical energy to electric potential energy.
 \begin{frame}
 \frametitle{Attempt: Calculating Voltage}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-A point charge $Q = +5 \times 10^{-9}$ C creates an electric potential.
+A point \charge{charge} $\charge{Q} = +5 \times 10^{-9}$ C creates an electric \voltage{potential}.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item $Q = +5 \times 10^{-9}$ C
-\item $r = 0.10$ m
+\item $\charge{Q} = +5 \times 10^{-9}$ C
+\item $\disp{r} = 0.10$ m
 \end{itemize}
 
-\textbf{Find:} Electric potential at distance $r = 0.10$ m
+\textbf{Find:} Electric \voltage{potential} at distance $\disp{r} = 0.10$ m
 
 \vspace{0.3cm}
 
@@ -700,20 +701,20 @@ A point charge $Q = +5 \times 10^{-9}$ C creates an electric potential.
 
 \vspace{0.3cm}
 
-\textbf{Formula:} $V = \frac{kQ}{r}$
+\textbf{Formula:} $\voltage{V} = \frac{\coulombk{k}\charge{Q}}{\disp{r}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $V = \frac{(8.99 \times 10^9)(5 \times 10^{-9})}{0.10}$
+\textbf{Substitute:} $\voltage{V} = \frac{(8.99 \times 10^9)(5 \times 10^{-9})}{0.10}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{V = 450 \text{ V}}$$
+$$\boxed{\voltage{V} = 450 \text{ V}}$$
 
 \pause
-\textbf{Check:} 450 volts - much higher than a battery, but safe at this tiny charge!
+\textbf{Check:} 450 volts - much higher than a battery, but safe at this tiny \charge{charge}!
 \note{[P0] "V equals k Q over r"\\\\
 [P1] [ALGEBRA] "Substitute: 8.99 times 10 to the 9, times 5 times 10 to the negative 9, divided by 0.10"\\\\
 [P2] [ANSWER] "450 volts"\\\\
@@ -752,7 +753,7 @@ $$\boxed{V = 450 \text{ V}}$$
 \end{figure}
 
 \pause
-Capacitors store energy in electric fields between charged plates.
+\capac{Capacitors} store \energy{energy} in \efield{electric fields} between charged plates.
 \note{[Fig 18.29: Photograph of seven real capacitors in various shapes/sizes] "From theory to hardware - what they actually look like"\\\\
 [P0] "What if you could bottle electric fields?"\\\\
 [P1] "Capacitors - various types shown"\\\\
@@ -772,9 +773,9 @@ Capacitors store energy in electric fields between charged plates.
 \pause
 \textbf{Design:}
 \begin{itemize}
-\item Two metal plates separated by small distance
-\item One plate charged +, other charged -
-\item Electric field between plates is uniform
+\item Two metal plates separated by small \disp{distance}
+\item One plate \charge{charged} +, other \charge{charged} -
+\item \efield{Electric field} between plates is uniform
 \end{itemize}
 \note{[Fig 18.28: Parallel-plate capacitor connected to battery showing uniform field] "Canonical geometry - foundation for all capacitor understanding"\\\\
 [P0] "Parallel-plate capacitor - simplest design"\\\\
@@ -789,18 +790,18 @@ Capacitors store energy in electric fields between charged plates.
 \frametitle{18.5 The Source Code of Capacitance}
 \begin{block}{Universal Law: Capacitance}
 \begin{center}
-\Large $\boxed{C = \frac{Q}{V}}$
+\Large $\boxed{\capac{C} = \frac{\charge{Q}}{\voltage{V}}}$
 \end{center}
-Capacitance equals charge stored per volt applied. Units: farads (F)
+\capac{Capacitance} equals \charge{charge} stored per volt applied. Units: farads (F)
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 For parallel plates:
-$$C_0 = \varepsilon_0 \frac{A}{d}$$
+$$\capac{C_0} = \pConst{\varepsilon_0} \frac{\area{A}}{\disp{d}}$$
 
-where $\varepsilon_0 = 8.85 \times 10^{-12}$ F/m
+where $\pConst{\varepsilon_0} = 8.85 \times 10^{-12}$ F/m
 \note{[P0] [THE REVELATION] "C equals Q over V"\\\\
 - Charge per volt\\\\
 - Units: farads (extremely large unit)\\\\
@@ -814,16 +815,16 @@ where $\varepsilon_0 = 8.85 \times 10^{-12}$ F/m
 \frametitle{18.5 Energy Storage}
 \begin{block}{Universal Law: Energy in Capacitor}
 \begin{center}
-\Large $\boxed{U_E = \frac{1}{2}CV^2}$
+\Large $\boxed{\energy{U_E} = \frac{1}{2}\capac{C}\voltage{V}^2}$
 \end{center}
-Energy stored equals half capacitance times voltage squared.
+\energy{Energy} stored equals half \capac{capacitance} times \voltage{voltage} squared.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{The Mental Model}
-Like kinetic energy $K = \frac{1}{2}mv^2$, but for electric fields instead of motion.
+Like kinetic \energy{energy} $\kenergy{K} = \frac{1}{2}\mass{m}\vel{v}^2$, but for \efield{electric fields} instead of motion.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "U-E equals one-half C V-squared"\\\\
 - Energy proportional to voltage squared\\\\
@@ -835,24 +836,24 @@ Like kinetic energy $K = \frac{1}{2}mv^2$, but for electric fields instead of mo
 
 \begin{frame}
 \frametitle{18.5 Capacitance Factors}
-\textbf{What determines capacitance?}
+\textbf{What determines \capac{capacitance}?}
 
 \pause
-$$C_0 = \varepsilon_0 \frac{A}{d}$$
+$$\capac{C_0} = \pConst{\varepsilon_0} \frac{\area{A}}{\disp{d}}$$
 
 \pause
 \begin{itemize}
-\item Increase plate area $A$: capacitance increases \pause
-\item Increase separation $d$: capacitance decreases \pause
-\item Geometry only - not charge or voltage!
+\item Increase plate \area{area} $\area{A}$: \capac{capacitance} increases \pause
+\item Increase separation $\disp{d}$: \capac{capacitance} decreases \pause
+\item Geometry only - not \charge{charge} or \voltage{voltage}!
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{The Paradox}
-\textbf{Misconception:} "More charge means more capacitance."\\
-\textbf{Reality:} Capacitance is constant for given geometry. More charge just means higher voltage.
+\textbf{Misconception:} "More \charge{charge} means more \capac{capacitance}."\\
+\textbf{Reality:} \capac{Capacitance} is constant for given geometry. More \charge{charge} just means higher \voltage{voltage}.
 \end{alertblock}
 \note{[P0] "What determines capacitance?"\\\\
 [P1] "Formula: epsilon-zero A over d"\\\\
@@ -868,8 +869,8 @@ $$C_0 = \varepsilon_0 \frac{A}{d}$$
 \begin{exampleblock}{Real-World Enhancement}
 Insert insulating material (dielectric) between plates:
 \begin{itemize}
-\item Capacitance increases
-\item Can store more energy
+\item \capac{Capacitance} increases
+\item Can store more \energy{energy}
 \item Prevents electrical breakdown
 \end{itemize}
 \end{exampleblock}
@@ -892,18 +893,18 @@ Insert insulating material (dielectric) between plates:
 \begin{frame}
 \frametitle{Attempt: Capacitor Design}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-Design a parallel-plate capacitor with capacitance $C = 1.0 \times 10^{-9}$ F.
+Design a parallel-plate capacitor with \capac{capacitance} $\capac{C} = 1.0 \times 10^{-9}$ F.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item $C = 1.0 \times 10^{-9}$ F (1.0 nF)
-\item Plate area $A = 0.010$ m$^2$
-\item $\varepsilon_0 = 8.85 \times 10^{-12}$ F/m
+\item $\capac{C} = 1.0 \times 10^{-9}$ F (1.0 nF)
+\item Plate \area{area} $\area{A} = 0.010$ m$^2$
+\item $\pConst{\varepsilon_0} = 8.85 \times 10^{-12}$ F/m
 \end{itemize}
 
-\textbf{Find:} Required plate separation $d$
+\textbf{Find:} Required plate separation $\disp{d}$
 
 \vspace{0.3cm}
 
@@ -924,8 +925,8 @@ Design a parallel-plate capacitor with capacitance $C = 1.0 \times 10^{-9}$ F.
 
 \begin{enumerate}
 \item What formula did you start with?
-\item How did you rearrange to solve for $d$?
-\item What units did you get for $d$?
+\item How did you rearrange to solve for $\disp{d}$?
+\item What units did you get for $\disp{d}$?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -945,22 +946,22 @@ Design a parallel-plate capacitor with capacitance $C = 1.0 \times 10^{-9}$ F.
 
 \vspace{0.3cm}
 
-\textbf{Formula:} $C_0 = \varepsilon_0 \frac{A}{d}$
+\textbf{Formula:} $\capac{C_0} = \pConst{\varepsilon_0} \frac{\area{A}}{\disp{d}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Rearrange:} $d = \varepsilon_0 \frac{A}{C}$
+\textbf{Rearrange:} $\disp{d} = \pConst{\varepsilon_0} \frac{\area{A}}{\capac{C}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $d = (8.85 \times 10^{-12}) \frac{0.010}{1.0 \times 10^{-9}}$
+\textbf{Substitute:} $\disp{d} = (8.85 \times 10^{-12}) \frac{0.010}{1.0 \times 10^{-9}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{d = 8.85 \times 10^{-5} \text{ m} = 0.089 \text{ mm}}$$
+$$\boxed{\disp{d} = 8.85 \times 10^{-5} \text{ m} = 0.089 \text{ mm}}$$
 
 \pause
 \textbf{Check:} Less than a tenth of a millimeter - capacitors need very small spacing!
@@ -978,10 +979,10 @@ $$\boxed{d = 8.85 \times 10^{-5} \text{ m} = 0.089 \text{ mm}}$$
 \frametitle{The Four Revelations}
 \begin{block}{What You Now Know}
 \begin{enumerate}
-\item Coulomb's Law: $F = \frac{kq_1q_2}{r^2}$ - forces between charges \pause
-\item Electric Field: $E = \frac{F}{q}$ - force per unit charge \pause
-\item Electric Potential: $V = \frac{kq}{r}$ - energy per unit charge \pause
-\item Capacitance: $C = \frac{Q}{V}$ - charge storage capacity
+\item Coulomb's Law: $\force{F} = \frac{\coulombk{k}\charge{q_1}\charge{q_2}}{\disp{r}^2}$ - \force{forces} between \charge{charges} \pause
+\item \efield{Electric Field}: $\efield{E} = \frac{\force{F}}{\charge{q}}$ - \force{force} per unit \charge{charge} \pause
+\item Electric \voltage{Potential}: $\voltage{V} = \frac{\coulombk{k}\charge{q}}{\disp{r}}$ - \energy{energy} per unit \charge{charge} \pause
+\item \capac{Capacitance}: $\capac{C} = \frac{\charge{Q}}{\voltage{V}}$ - \charge{charge} storage capacity
 \end{enumerate}
 \end{block}
 \note{[P0] "Four revelations today"\\\\
@@ -995,14 +996,14 @@ $$\boxed{d = 8.85 \times 10^{-5} \text{ m} = 0.089 \text{ mm}}$$
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-F &= \frac{kq_1q_2}{r^2} \quad \text{(Coulomb's law)}\\
-E &= \frac{k|Q|}{r^2} \quad \text{(Electric field from point charge)}\\
-\vec{E} &= \frac{\vec{F}}{q} \quad \text{(Field definition)}\\
-U_E &= \frac{kq_1q_2}{r} \quad \text{(Electric potential energy)}\\
-V &= \frac{kq}{r} \quad \text{(Electric potential from point charge)}\\
-C &= \frac{Q}{V} \quad \text{(Capacitance)}\\
-C_0 &= \varepsilon_0 \frac{A}{d} \quad \text{(Parallel-plate capacitor)}\\
-U_E &= \frac{1}{2}CV^2 \quad \text{(Energy in capacitor)}
+\force{F} &= \frac{\coulombk{k}\charge{q_1}\charge{q_2}}{\disp{r}^2} \quad \text{(Coulomb's law)}\\
+\efield{E} &= \frac{\coulombk{k}|\charge{Q}|}{\disp{r}^2} \quad \text{(Electric field from point charge)}\\
+\vec{\efield{E}} &= \frac{\vec{\force{F}}}{\charge{q}} \quad \text{(Field definition)}\\
+\energy{U_E} &= \frac{\coulombk{k}\charge{q_1}\charge{q_2}}{\disp{r}} \quad \text{(Electric potential energy)}\\
+\voltage{V} &= \frac{\coulombk{k}\charge{q}}{\disp{r}} \quad \text{(Electric potential from point charge)}\\
+\capac{C} &= \frac{\charge{Q}}{\voltage{V}} \quad \text{(Capacitance)}\\
+\capac{C_0} &= \pConst{\varepsilon_0} \frac{\area{A}}{\disp{d}} \quad \text{(Parallel-plate capacitor)}\\
+\energy{U_E} &= \frac{1}{2}\capac{C}\voltage{V}^2 \quad \text{(Energy in capacitor)}
 \end{align}
 \note{- Eight essential equations\\\\
 - First three: forces and fields\\\\
@@ -1016,9 +1017,9 @@ U_E &= \frac{1}{2}CV^2 \quad \text{(Energy in capacitor)}
 \begin{center}
 \begin{tabular}{ll}
 \textbf{Constant} & \textbf{Value} \\ \hline
-Coulomb's constant $k$ & $8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$ \\
-Elementary charge $e$ & $1.602 \times 10^{-19}$ C \\
-Permittivity $\varepsilon_0$ & $8.85 \times 10^{-12}$ F/m
+Coulomb's constant $\coulombk{k}$ & $8.99 \times 10^9$ N$\cdot$m$^2$/C$^2$ \\
+Elementary \charge{charge} $\charge{e}$ & $1.602 \times 10^{-19}$ C \\
+Permittivity $\pConst{\varepsilon_0}$ & $8.85 \times 10^{-12}$ F/m
 \end{tabular}
 \end{center}
 
@@ -1036,12 +1037,12 @@ These appear in every calculation!
 \frametitle{From Theory to Reality}
 \textbf{You now understand:}
 \begin{itemize}
-\item Why static shocks happen (charge transfer) \pause
-\item How touchscreens work (capacitance sensing) \pause
-\item Why lightning forms (electric field breakdown) \pause
-\item How defibrillators work (capacitor discharge) \pause
-\item Why atoms bond (electric forces) \pause
-\item How computer memory works (capacitor charge storage)
+\item Why static shocks happen (\charge{charge} transfer) \pause
+\item How touchscreens work (\capac{capacitance} sensing) \pause
+\item Why lightning forms (\efield{electric field} breakdown) \pause
+\item How defibrillators work (\capac{capacitor} discharge) \pause
+\item Why atoms bond (electric \force{forces}) \pause
+\item How computer memory works (\capac{capacitor} \charge{charge} storage)
 \end{itemize}
 \note{[P0] "Real-world applications"\\\\
 [P1] "Static shocks: charge buildup and discharge"\\\\

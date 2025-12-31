@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -156,18 +157,18 @@ Reality: energy drops back down. \textbf{Physics was broken.}
 \frametitle{21.1 Planck's Revolution}
 \begin{block}{The Source Code: Quantized Energy}
 \begin{center}
-\Large $\boxed{E = nhf}$
+\Large $\boxed{\energy{E} = \particles{n}\pConst{h}\freq{f}}$
 \end{center}
-Energy is not continuous. Energy exists only in discrete chunks.
+\energy{Energy} is not continuous. \energy{Energy} exists only in discrete chunks.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{itemize}
-\item $n$ = integer (0, 1, 2, 3...)
-\item $h = 6.626 \times 10^{-34}$ J·s (Planck's constant)
-\item $f$ = frequency
+\item $\particles{n}$ = integer (0, 1, 2, 3...)
+\item $\pConst{h} = 6.626 \times 10^{-34}$ J·s (Planck's constant)
+\item $\freq{f}$ = frequency
 \end{itemize}
 
 \pause
@@ -261,7 +262,7 @@ Planck proved otherwise.
 \frametitle{21.1 The Photon Energy Equation}
 \begin{block}{Nature's Rule for Light}
 \begin{center}
-\Large $\boxed{E = hf = \frac{hc}{\lambda}}$
+\Large $\boxed{\energy{E} = \pConst{h}\freq{f} = \frac{\pConst{h}\vel{c}}{\wavelen{\lambda}}}$
 \end{center}
 \end{block}
 
@@ -270,9 +271,9 @@ Planck proved otherwise.
 
 \textbf{Key insights:}
 \begin{itemize}
-\item Higher frequency $\rightarrow$ higher energy per photon
-\item Shorter wavelength $\rightarrow$ higher energy per photon
-\item Planck's constant $h$ links energy to frequency
+\item Higher \freq{frequency} $\rightarrow$ higher \energy{energy} per photon
+\item Shorter \wavelen{wavelength} $\rightarrow$ higher \energy{energy} per photon
+\item Planck's constant $\pConst{h}$ links \energy{energy} to \freq{frequency}
 \end{itemize}
 \note{[P0] "Two forms of photon energy equation"\\\\
 [P1] "Higher frequency means higher energy per photon"\\\\
@@ -292,8 +293,8 @@ A 100-W light bulb converts 10\% of its power to visible light with average wave
 \textbf{Given:}
 \begin{itemize}
 \item Power in visible light: 10.0 J/s
-\item Wavelength: $\lambda = 580$ nm
-\item $h = 6.626 \times 10^{-34}$ J·s, $c = 3.00 \times 10^8$ m/s
+\item Wavelength: $\wavelen{\lambda} = 580$ nm
+\item $\pConst{h} = 6.626 \times 10^{-34}$ J·s, $\vel{c} = 3.00 \times 10^8$ m/s
 \end{itemize}
 
 \textbf{Find:} Photons per second
@@ -339,8 +340,8 @@ A 100-W light bulb converts 10\% of its power to visible light with average wave
 
 \vspace{0.3cm}
 
-\textbf{Step 1 - Energy per photon:}
-$$E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34})(3.00 \times 10^8)}{580 \times 10^{-9}} = 3.43 \times 10^{-19} \text{ J}$$
+\textbf{Step 1 - \energy{Energy} per photon:}
+$$\energy{E} = \frac{\pConst{h}\vel{c}}{\wavelen{\lambda}} = \frac{(6.626 \times 10^{-34})(3.00 \times 10^8)}{580 \times 10^{-9}} = 3.43 \times 10^{-19} \text{ J}$$
 
 \pause
 \vspace{0.2cm}
@@ -367,10 +368,10 @@ A blue flame is more dangerous than a red flame.\\
 \pause
 \vspace{0.3cm}
 
-Blue light: shorter wavelength $\rightarrow$ higher frequency $\rightarrow$ \alert{higher energy per photon}
+Blue light: shorter \wavelen{wavelength} $\rightarrow$ higher \freq{frequency} $\rightarrow$ \alert{higher \energy{energy} per photon}
 
 \pause
-Red light: longer wavelength $\rightarrow$ lower frequency $\rightarrow$ lower energy per photon
+Red light: longer \wavelen{wavelength} $\rightarrow$ lower \freq{frequency} $\rightarrow$ lower \energy{energy} per photon
 
 \pause
 \vspace{0.3cm}
@@ -560,7 +561,7 @@ This explains ALL five observations:
 \frametitle{21.2 The Photoelectric Equation}
 \begin{block}{The Law of Energy Exchange}
 \begin{center}
-\Large $\boxed{KE_e = hf - BE}$
+\Large $\boxed{\kenergy{KE_e} = \pConst{h}\freq{f} - \energy{BE}}$
 \end{center}
 \end{block}
 
@@ -568,9 +569,9 @@ This explains ALL five observations:
 \vspace{0.3cm}
 
 \begin{itemize}
-\item $KE_e$ = kinetic energy of ejected electron
-\item $hf$ = photon energy
-\item $BE$ = binding energy (work function)
+\item $\kenergy{KE_e}$ = kinetic energy of ejected electron
+\item $\pConst{h}\freq{f}$ = photon energy
+\item $\energy{BE}$ = binding energy (work function)
 \end{itemize}
 
 \pause
@@ -603,9 +604,9 @@ This explains ALL five observations:
 \pause
 \textbf{Key features:}
 \begin{itemize}
-\item Below $f_0$: NO electrons ejected ($KE = 0$)
-\item Above $f_0$: $KE$ increases linearly with $f$
-\item Slope = $h$ (Planck's constant!)
+\item Below $\freq{f_0}$: NO electrons ejected ($\kenergy{KE} = 0$)
+\item Above $\freq{f_0}$: $\kenergy{KE}$ increases linearly with $\freq{f}$
+\item Slope = $\pConst{h}$ (Planck's constant!)
 \end{itemize}
 \note{[Fig 21.8: KE vs frequency graph, diagonal line starting at f0, labeled KE=hf-BE] "Linear relationship proves photon model - slope equals h, x-intercept equals BE/h"\\\\
 [P0] "Graph of electron kinetic energy vs incident light frequency"\\\\
@@ -628,9 +629,9 @@ Binding energy of calcium: BE = 2.71 eV
 
 \textbf{Given:}
 \begin{itemize}
-\item $\lambda = 420$ nm $= 4.20 \times 10^{-7}$ m
-\item $BE = 2.71$ eV
-\item $h = 6.626 \times 10^{-34}$ J·s, $c = 3.00 \times 10^8$ m/s
+\item $\wavelen{\lambda} = 420$ nm $= 4.20 \times 10^{-7}$ m
+\item $\energy{BE} = 2.71$ eV
+\item $\pConst{h} = 6.626 \times 10^{-34}$ J·s, $\vel{c} = 3.00 \times 10^8$ m/s
 \item Conversion: $1 \text{ eV} = 1.60 \times 10^{-19}$ J
 \end{itemize}
 
@@ -678,17 +679,17 @@ Binding energy of calcium: BE = 2.71 eV
 
 \vspace{0.3cm}
 
-\textbf{Part (a) - Photon energy:}
-$$E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34})(3.00 \times 10^8)}{4.20 \times 10^{-7}} = 4.74 \times 10^{-19} \text{ J}$$
+\textbf{Part (a) - Photon \energy{energy}:}
+$$\energy{E} = \frac{\pConst{h}\vel{c}}{\wavelen{\lambda}} = \frac{(6.626 \times 10^{-34})(3.00 \times 10^8)}{4.20 \times 10^{-7}} = 4.74 \times 10^{-19} \text{ J}$$
 
 \pause
-Convert to eV: $E = \frac{4.74 \times 10^{-19}}{1.60 \times 10^{-19}} = \boxed{2.96 \text{ eV}}$
+Convert to eV: $\energy{E} = \frac{4.74 \times 10^{-19}}{1.60 \times 10^{-19}} = \boxed{2.96 \text{ eV}}$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Part (b) - Electron kinetic energy:}
-$$KE_e = hf - BE = 2.96 \text{ eV} - 2.71 \text{ eV} = \boxed{0.25 \text{ eV}}$$
+\textbf{Part (b) - Electron \kenergy{kinetic energy}:}
+$$\kenergy{KE_e} = \pConst{h}\freq{f} - \energy{BE} = 2.96 \text{ eV} - 2.71 \text{ eV} = \boxed{0.25 \text{ eV}}$$
 
 \pause
 \textbf{Check:} Small KE - photon energy barely exceeds threshold!
@@ -830,9 +831,9 @@ Light exhibits \textbf{wave-particle duality}. Which aspect you observe depends 
 \frametitle{21.3 Massless Momentum}
 \begin{block}{The Source Code: Photon Momentum}
 \begin{center}
-\Large $\boxed{p = \frac{h}{\lambda}}$
+\Large $\boxed{\mom{p} = \frac{\pConst{h}}{\wavelen{\lambda}}}$
 \end{center}
-Photons carry momentum despite having zero mass.
+Photons carry \mom{momentum} despite having zero \mass{mass}.
 \end{block}
 
 \pause
@@ -840,7 +841,7 @@ Photons carry momentum despite having zero mass.
 
 \textbf{Key insights:}
 \begin{itemize}
-\item Shorter wavelength = higher momentum
+\item Shorter \wavelen{wavelength} = higher \mom{momentum}
 \item Blue photons push harder than red photons
 \item Light exerts radiation pressure
 \end{itemize}
@@ -906,7 +907,7 @@ Can matter (a particle) act like a wave?
 
 \pause
 \textbf{Answer:} Yes. Louis de Broglie (1924) proposed:
-$$\boxed{\lambda = \frac{h}{p}}$$
+$$\boxed{\wavelen{\lambda} = \frac{\pConst{h}}{\mom{p}}}$$
 
 \pause
 \textbf{Consequence:} Electrons, atoms, molecules - \textit{everything} has a wavelength.
@@ -936,10 +937,10 @@ $$\boxed{\lambda = \frac{h}{p}}$$
 \frametitle{The Quantum Revolution}
 \begin{block}{What You Now Know}
 \begin{enumerate}
-\item Energy is quantized: $E = nhf$ (Planck) \pause
-\item Photons are discrete packets: $E = hf$ (Planck/Einstein) \pause
-\item Photoelectric effect proves light is quantized: $KE_e = hf - BE$ (Einstein) \pause
-\item Photons carry momentum: $p = h/\lambda$ (Einstein/Compton) \pause
+\item \energy{Energy} is quantized: $\energy{E} = \particles{n}\pConst{h}\freq{f}$ (Planck) \pause
+\item Photons are discrete packets: $\energy{E} = \pConst{h}\freq{f}$ (Planck/Einstein) \pause
+\item Photoelectric effect proves light is quantized: $\kenergy{KE_e} = \pConst{h}\freq{f} - \energy{BE}$ (Einstein) \pause
+\item Photons carry \mom{momentum}: $\mom{p} = \pConst{h}/\wavelen{\lambda}$ (Einstein/Compton) \pause
 \item Light exhibits wave-particle duality \pause
 \item All matter exhibits wave-particle duality (de Broglie) \pause
 \item Quantum mechanics governs the universe at atomic scales
@@ -959,16 +960,16 @@ $$\boxed{\lambda = \frac{h}{p}}$$
 \begin{frame}
 \frametitle{Key Equations: Chapter 21}
 \begin{align}
-E &= nhf \quad \text{(quantized energy - Planck)} \\
-E &= hf = \frac{hc}{\lambda} \quad \text{(photon energy)} \\
-KE_e &= hf - BE \quad \text{(photoelectric equation - Einstein)} \\
-p &= \frac{h}{\lambda} \quad \text{(photon momentum)}
+\energy{E} &= \particles{n}\pConst{h}\freq{f} \quad \text{(quantized energy - Planck)} \\
+\energy{E} &= \pConst{h}\freq{f} = \frac{\pConst{h}\vel{c}}{\wavelen{\lambda}} \quad \text{(photon energy)} \\
+\kenergy{KE_e} &= \pConst{h}\freq{f} - \energy{BE} \quad \text{(photoelectric equation - Einstein)} \\
+\mom{p} &= \frac{\pConst{h}}{\wavelen{\lambda}} \quad \text{(photon momentum)}
 \end{align}
 
 \vspace{0.3cm}
 
 \textbf{Key constant:}
-$$h = 6.626 \times 10^{-34} \text{ J·s (Planck's constant)}$$
+$$\pConst{h} = 6.626 \times 10^{-34} \text{ J·s (Planck's constant)}$$
 \note{- Four fundamental equations of quantum physics\\\\
 - Planck's constant h appears in all of them - the quantum of action\\\\
 - Know when to use each equation - wavelength given use h c over lambda, frequency given use h f\\\\

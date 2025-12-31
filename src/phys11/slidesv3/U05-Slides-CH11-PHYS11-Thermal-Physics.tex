@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -100,7 +101,7 @@ Faster motion = higher temperature.
 \vspace{0.3cm}
 
 \begin{center}
-\Large $KE = \frac{1}{2}mv^2$
+\Large $\kenergy{KE} = \frac{1}{2}\mass{m}\vel{v}^2$
 \end{center}
 
 \pause
@@ -168,10 +169,10 @@ The temperature at which all molecular motion ceases.
 \frametitle{11.1 Converting Temperature Scales}
 \begin{block}{Key Conversion Equations}
 \begin{align*}
-T_{\circ F} &= \frac{9}{5}T_{\circ C} + 32 \\
-T_{\circ C} &= \frac{5}{9}(T_{\circ F} - 32) \\
-T_{K} &= T_{\circ C} + 273.15 \\
-T_{\circ C} &= T_{K} - 273.15
+\temp{T_{\circ F}} &= \frac{9}{5}\temp{T_{\circ C}} + 32 \\
+\temp{T_{\circ C}} &= \frac{5}{9}(\temp{T_{\circ F}} - 32) \\
+\temp{T_{K}} &= \temp{T_{\circ C}} + 273.15 \\
+\temp{T_{\circ C}} &= \temp{T_{K}} - 273.15
 \end{align*}
 \end{block}
 
@@ -241,27 +242,27 @@ Your body temperature is normally 98.6 F.
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Convert F to C using $T_{\circ C} = \frac{5}{9}(T_{\circ F} - 32)$
+\textbf{Step 1:} Convert F to C using $\temp{T_{\circ C}} = \frac{5}{9}(\temp{T_{\circ F}} - 32)$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $T_{\circ C} = \frac{5}{9}(98.6 - 32) = \frac{5}{9}(66.6)$
+\textbf{Substitute:} $\temp{T_{\circ C}} = \frac{5}{9}(98.6 - 32) = \frac{5}{9}(66.6)$
 
 \pause
 \vspace{0.2cm}
 
-$$T_{\circ C} = \boxed{37.0\text{ C}}$$
+$$\temp{T_{\circ C}} = \boxed{37.0\text{ C}}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2:} Convert C to K using $T_{K} = T_{\circ C} + 273.15$
+\textbf{Step 2:} Convert C to K using $\temp{T_{K}} = \temp{T_{\circ C}} + 273.15$
 
 \pause
 \vspace{0.2cm}
 
-$$T_{K} = 37.0 + 273.15 = \boxed{310.2\text{ K}}$$
+$$\temp{T_{K}} = 37.0 + 273.15 = \boxed{310.2\text{ K}}$$
 
 \pause
 \textbf{Check:} 37 C is normal body temp. Makes sense!
@@ -320,9 +321,9 @@ $$T_{K} = 37.0 + 273.15 = \boxed{310.2\text{ K}}$$
 \frametitle{11.2 The Heat Equation}
 \begin{block}{Nature's Rule for Temperature Change}
 \begin{center}
-\Large $\boxed{Q = mc\Delta T}$
+\Large $\boxed{\heat{Q} = \mass{m}\specheat{c}\Delta \temp{T}}$
 \end{center}
-Heat transferred = mass × specific heat × temperature change
+\heat{Heat} transferred = \mass{mass} × \specheat{specific heat} × \temp{temperature} change
 \end{block}
 
 \pause
@@ -330,10 +331,10 @@ Heat transferred = mass × specific heat × temperature change
 
 \textbf{What each variable means:}
 \begin{itemize}
-\item $Q$ = heat transferred (J)
-\item $m$ = mass (kg)
-\item $c$ = specific heat (J/kg·C)
-\item $\Delta T$ = temperature change (C or K)
+\item $\heat{Q}$ = \heat{heat} transferred (J)
+\item $\mass{m}$ = \mass{mass} (kg)
+\item $\specheat{c}$ = \specheat{specific heat} (J/kg·C)
+\item $\Delta \temp{T}$ = \temp{temperature} change (C or K)
 \end{itemize}
 \note{[P0] [THE REVELATION] "Q equals m c delta T"\\\\
 - Q: heat transferred in joules\\\\
@@ -598,23 +599,23 @@ You heat 2.0 kg of water from 20 C to 80 C.
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Calculate temperature change
-$$\Delta T = T_f - T_i = 80 - 20 = 60\text{ C}$$
+\textbf{Step 1:} Calculate \temp{temperature} change
+$$\Delta \temp{T} = \temp{T_f} - \temp{T_i} = 80 - 20 = 60\text{ C}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2:} Use $Q = mc\Delta T$
+\textbf{Step 2:} Use $\heat{Q} = \mass{m}\specheat{c}\Delta \temp{T}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $Q = (2.0\text{ kg})(4186\text{ J/kg·C})(60\text{ C})$
+\textbf{Substitute:} $\heat{Q} = (2.0\text{ kg})(4186\text{ J/kg·C})(60\text{ C})$
 
 \pause
 \vspace{0.2cm}
 
-$$Q = 502,320\text{ J} = \boxed{502\text{ kJ}}$$
+$$\heat{Q} = 502,320\text{ J} = \boxed{502\text{ kJ}}$$
 
 \pause
 \textbf{Check:} About 500 kJ to heat 2 L water by 60 degrees. Reasonable!
@@ -742,8 +743,8 @@ No temperature change during phase transition!
 \frametitle{11.3 Latent Heat Equations}
 \begin{block}{Nature's Rules for Phase Change}
 \begin{align*}
-Q &= mL_f \quad \text{(melting/freezing)} \\
-Q &= mL_v \quad \text{(vaporization/condensation)}
+\heat{Q} &= \mass{m}\specheat{L_f} \quad \text{(melting/freezing)} \\
+\heat{Q} &= \mass{m}\specheat{L_v} \quad \text{(vaporization/condensation)}
 \end{align*}
 \end{block}
 
@@ -752,14 +753,14 @@ Q &= mL_v \quad \text{(vaporization/condensation)}
 
 \textbf{For water:}
 \begin{itemize}
-\item $L_f = 334$ kJ/kg (latent heat of fusion)
-\item $L_v = 2256$ kJ/kg (latent heat of vaporization)
+\item $\specheat{L_f} = 334$ kJ/kg (latent \heat{heat} of fusion)
+\item $\specheat{L_v} = 2256$ kJ/kg (latent \heat{heat} of vaporization)
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
-\alert{Note: No $\Delta T$ in these equations - temperature doesn't change!}
+\alert{Note: No $\Delta \temp{T}$ in these equations - \temp{temperature} doesn't change!}
 \note{[P0] "Two equations for phase change"\\\\
 - Q = m L-f for melting or freezing\\\\
 - Q = m L-v for boiling or condensing\\\\
@@ -825,17 +826,17 @@ How much energy is needed to melt 0.50 kg of ice at 0 C?
 
 \vspace{0.3cm}
 
-\textbf{Key insight:} Phase change, so use $Q = mL_f$
+\textbf{Key insight:} Phase change, so use $\heat{Q} = \mass{m}\specheat{L_f}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $Q = (0.50\text{ kg})(334\text{ kJ/kg})$
+\textbf{Substitute:} $\heat{Q} = (0.50\text{ kg})(334\text{ kJ/kg})$
 
 \pause
 \vspace{0.2cm}
 
-$$Q = \boxed{167\text{ kJ}}$$
+$$\heat{Q} = \boxed{167\text{ kJ}}$$
 
 \pause
 \vspace{0.3cm}
@@ -910,12 +911,12 @@ Gas $\rightarrow$ liquid releases 2256 kJ/kg for water.
 \frametitle{The Revelations of Thermal Physics}
 \begin{block}{What You Now Know}
 \begin{enumerate}
-\item Temperature = average molecular kinetic energy \pause
-\item Heat = energy transfer from hot to cold \pause
-\item $Q = mc\Delta T$ for temperature changes \pause
+\item \temp{Temperature} = average molecular kinetic energy \pause
+\item \heat{Heat} = energy transfer from hot to cold \pause
+\item $\heat{Q} = \mass{m}\specheat{c}\Delta \temp{T}$ for \temp{temperature} changes \pause
 \item Three transfer modes: conduction, convection, radiation \pause
-\item $Q = mL$ for phase changes (no temp change!) \pause
-\item Water's high specific heat stabilizes climate \pause
+\item $\heat{Q} = \mass{m}\specheat{L}$ for phase changes (no \temp{temp} change!) \pause
+\item Water's high \specheat{specific heat} stabilizes climate \pause
 \item Phase changes require enormous energy
 \end{enumerate}
 \end{block}
@@ -932,25 +933,25 @@ Gas $\rightarrow$ liquid releases 2256 kJ/kg for water.
 
 \begin{frame}[shrink]
 \frametitle{Key Equations}
-\textbf{Temperature Conversions:}
+\textbf{\temp{Temperature} Conversions:}
 \begin{align}
-T_{\circ F} &= \frac{9}{5}T_{\circ C} + 32 \\
-T_{\circ C} &= \frac{5}{9}(T_{\circ F} - 32) \\
-T_{K} &= T_{\circ C} + 273.15
+\temp{T_{\circ F}} &= \frac{9}{5}\temp{T_{\circ C}} + 32 \\
+\temp{T_{\circ C}} &= \frac{5}{9}(\temp{T_{\circ F}} - 32) \\
+\temp{T_{K}} &= \temp{T_{\circ C}} + 273.15
 \end{align}
 
-\textbf{Heat Transfer:}
+\textbf{\heat{Heat} Transfer:}
 \begin{align}
-Q &= mc\Delta T \quad \text{(temperature change)} \\
-Q &= mL_f \quad \text{(melting/freezing)} \\
-Q &= mL_v \quad \text{(vaporization/condensation)}
+\heat{Q} &= \mass{m}\specheat{c}\Delta \temp{T} \quad \text{(\temp{temperature} change)} \\
+\heat{Q} &= \mass{m}\specheat{L_f} \quad \text{(melting/freezing)} \\
+\heat{Q} &= \mass{m}\specheat{L_v} \quad \text{(vaporization/condensation)}
 \end{align}
 
 \textbf{Water Constants:}
 \begin{itemize}
-\item $c_{water} = 4186$ J/kg·C
-\item $L_f = 334$ kJ/kg
-\item $L_v = 2256$ kJ/kg
+\item $\specheat{c_{water}} = 4186$ J/kg·C
+\item $\specheat{L_f} = 334$ kJ/kg
+\item $\specheat{L_v} = 2256$ kJ/kg
 \end{itemize}
 \note{- Six key equations plus three constants\\\\
 - Temp conversions: know order of operations\\\\

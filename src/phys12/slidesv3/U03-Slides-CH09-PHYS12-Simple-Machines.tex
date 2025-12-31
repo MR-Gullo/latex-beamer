@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -77,14 +78,14 @@ Machines cannot create energy.
 
 \textbf{What simple machines DO:}
 \begin{itemize}
-\item Reduce force required \pause
-\item Increase distance over which force acts \pause
-\item Product $f \times d$ stays constant
+\item Reduce \force{force} required \pause
+\item Increase \disp{distance} over which \force{force} acts \pause
+\item Product $\force{f} \times \disp{d}$ stays constant
 \end{itemize}
 
 \pause
 \begin{alertblock}{The Illusion}
-Machines make work "easier" but don't reduce total work.
+Machines make \work{work} "easier" but don't reduce total \work{work}.
 \end{alertblock}
 \note{[P0] [THE REVELATION] "In closed systems, total energy is conserved. Machines cannot create energy"\\\\
 [P1] "What simple machines DO: reduce force required"\\\\
@@ -99,23 +100,23 @@ Machines make work "easier" but don't reduce total work.
 \frametitle{9.3 The Trade-Off Equation}
 \begin{block}{Universal Law of Simple Machines}
 \begin{center}
-\Large $\boxed{W_i = W_o}$
+\Large $\boxed{\work{W_i} = \work{W_o}}$
 \end{center}
-Work input equals work output (in ideal case)
+\work{Work} input equals \work{work} output (in ideal case)
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 Expanding this:
-$$F_e \times d_e = F_r \times d_r$$
+$$\force{F_e} \times \disp{d_e} = \force{F_r} \times \disp{d_r}$$
 
 \pause
 \vspace{0.2cm}
 
 \begin{exampleblock}{The Mental Model}
-If effort force $F_e$ is less than resistance force $F_r$,\\
-then effort distance $d_e$ must be greater than resistance distance $d_r$.
+If effort \force{force} $\force{F_e}$ is less than resistance \force{force} $\force{F_r}$,\\
+then effort \disp{distance} $\disp{d_e}$ must be greater than resistance \disp{distance} $\disp{d_r}$.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "Work input equals work output in ideal case"\\\\
 [P1] "Expanding this: F-e times d-e equals F-r times d-r"\\\\
@@ -157,13 +158,13 @@ The number of times a machine multiplies the effort force.
 \vspace{0.3cm}
 
 \textbf{For a lever:}
-$$IMA = \frac{L_e}{L_r}$$
+$$IMA = \frac{\disp{L_e}}{\disp{L_r}}$$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{General formula:}
-$$IMA = \frac{F_r}{F_e} = \frac{d_e}{d_r}$$
+$$IMA = \frac{\force{F_r}}{\force{F_e}} = \frac{\disp{d_e}}{\disp{d_r}}$$
 
 \pause
 \begin{exampleblock}{The Mental Model}
@@ -215,7 +216,7 @@ Class 3 levers have IMA less than 1. They reduce force but increase speed!
 
 \pause
 \textbf{IMA formula:}
-$$IMA = \frac{r_{wheel}}{r_{axle}}$$
+$$IMA = \frac{\radius{r_{wheel}}}{\radius{r_{axle}}}$$
 
 \pause
 \begin{exampleblock}{Real-World Examples}
@@ -238,9 +239,9 @@ Steering wheel, door knob, windlass, screwdriver handle
 
 \pause
 \textbf{IMA formula:}
-$$IMA = \frac{L}{h}$$
+$$IMA = \frac{\disp{L}}{\disp{h}}$$
 
-where $L$ is length of ramp and $h$ is height
+where $\disp{L}$ is length of ramp and $\disp{h}$ is height
 \note{[P0] "Inclined plane: a ramp"\\\\
 [P1] "IMA equals length over height"\\\\
 [THE CONNECTION - Kinetic Archetype] "Wheelchair ramps, loading docks, mountain roads"\\\\
@@ -292,9 +293,9 @@ An inclined plane wrapped around a cylinder
 \vspace{0.3cm}
 
 \textbf{IMA formula:}
-$$IMA = \frac{2\pi L}{P}$$
+$$IMA = \frac{2\pi \disp{L}}{P}$$
 
-where $L$ is handle length and $P$ is pitch (distance between threads)
+where $\disp{L}$ is handle length and $P$ is pitch (\disp{distance} between threads)
 \note{[P0] "Screw: inclined plane wrapped around cylinder"\\\\
 [P1] "What it is: inclined plane wrapped in spiral"\\\\
 [P2] "IMA equals 2 pi L over P - handle length over thread spacing"\\\\
@@ -361,8 +362,8 @@ Car: hundreds of simple machines combined
 \begin{frame}
 \frametitle{9.3 The Reality of Friction}
 \begin{alertblock}{Civilian View vs. Reality}
-\textbf{Ideal machine:} $W_i = W_o$ (100\% efficiency)\\
-\textbf{Real machine:} $W_o < W_i$ (always less than 100\%)
+\textbf{Ideal machine:} $\work{W_i} = \work{W_o}$ (100\% efficiency)\\
+\textbf{Real machine:} $\work{W_o} < \work{W_i}$ (always less than 100\%)
 \end{alertblock}
 
 \pause
@@ -399,13 +400,13 @@ The ratio of output work to input work, expressed as percentage
 \vspace{0.3cm}
 
 \textbf{Efficiency formula:}
-$$\text{Efficiency} = \frac{W_o}{W_i} \times 100\%$$
+$$\text{Efficiency} = \frac{\work{W_o}}{\work{W_i}} \times 100\%$$
 
 \pause
 \vspace{0.3cm}
 
-Since $W = F \times d$:
-$$\text{Efficiency} = \frac{F_o \times d_o}{F_i \times d_i} \times 100\%$$
+Since $\work{W} = \force{F} \times \disp{d}$:
+$$\text{Efficiency} = \frac{\force{F_o} \times \disp{d_o}}{\force{F_i} \times \disp{d_i}} \times 100\%$$
 \note{[P0] "Efficiency: ratio of output work to input work"\\\\
 [P1] "Formula: W-o over W-i times 100 percent"\\\\
 [P2] "Since W equals F times d, can expand to forces and distances"\\\\
@@ -459,8 +460,8 @@ This lifts a 40 N weight on the resistance arm a distance of 0.1 m.
 
 \textbf{Given:}
 \begin{itemize}
-\item $F_i = 11$ N, $d_i = 0.4$ m
-\item $F_o = 40$ N, $d_o = 0.1$ m
+\item $\force{F_i} = 11$ N, $\disp{d_i} = 0.4$ m
+\item $\force{F_o} = 40$ N, $\disp{d_o} = 0.1$ m
 \end{itemize}
 
 \textbf{Find:} Efficiency of the lever
@@ -485,7 +486,7 @@ This lifts a 40 N weight on the resistance arm a distance of 0.1 m.
 
 \begin{enumerate}
 \item What equation did you use for efficiency?
-\item Did you calculate $W_i$ and $W_o$ separately?
+\item Did you calculate $\work{W_i}$ and $\work{W_o}$ separately?
 \item What units should efficiency have?
 \end{enumerate}
 
@@ -506,16 +507,16 @@ This lifts a 40 N weight on the resistance arm a distance of 0.1 m.
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Calculate input work
-$$W_i = F_i \times d_i = 11 \times 0.4 = 4.4 \text{ J}$$
+\textbf{Step 1:} Calculate input \work{work}
+$$\work{W_i} = \force{F_i} \times \disp{d_i} = 11 \times 0.4 = 4.4 \text{ J}$$
 
 \pause
-\textbf{Step 2:} Calculate output work
-$$W_o = F_o \times d_o = 40 \times 0.1 = 4.0 \text{ J}$$
+\textbf{Step 2:} Calculate output \work{work}
+$$\work{W_o} = \force{F_o} \times \disp{d_o} = 40 \times 0.1 = 4.0 \text{ J}$$
 
 \pause
 \textbf{Step 3:} Calculate efficiency
-$$\text{Efficiency} = \frac{W_o}{W_i} \times 100\% = \frac{4.0}{4.4} \times 100\% = \boxed{91\%}$$
+$$\text{Efficiency} = \frac{\work{W_o}}{\work{W_i}} \times 100\% = \frac{4.0}{4.4} \times 100\% = \boxed{91\%}$$
 
 \pause
 \textbf{Check:} 0.4 J lost to friction out of 4.4 J input - reasonable!
@@ -536,8 +537,8 @@ An inclined plane is 5.0 m long and 2.0 m high.
 
 \textbf{Given:}
 \begin{itemize}
-\item Length $L = 5.0$ m
-\item Height $h = 2.0$ m
+\item Length $\disp{L} = 5.0$ m
+\item Height $\disp{h} = 2.0$ m
 \end{itemize}
 
 \textbf{Find:} Ideal mechanical advantage (IMA)
@@ -585,7 +586,7 @@ An inclined plane is 5.0 m long and 2.0 m high.
 \vspace{0.3cm}
 
 \textbf{Formula for inclined plane:}
-$$IMA = \frac{L}{h}$$
+$$IMA = \frac{\disp{L}}{\disp{h}}$$
 
 \pause
 \textbf{Substitute values:}
@@ -594,9 +595,9 @@ $$IMA = \frac{5.0 \text{ m}}{2.0 \text{ m}} = \boxed{2.5}$$
 \pause
 \vspace{0.3cm}
 
-\textbf{Interpretation:} This ramp multiplies your force by 2.5.\\
+\textbf{Interpretation:} This ramp multiplies your \force{force} by 2.5.\\
 You can push a 250 N load with only 100 N effort.\\
-The trade-off: you push 2.5 times the distance.
+The trade-off: you push 2.5 times the \disp{distance}.
 
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] "IMA equals L over h for inclined plane"\\\\
@@ -616,8 +617,8 @@ The system has an efficiency of almost 100\%.
 
 \textbf{Given:}
 \begin{itemize}
-\item $F_r = 200$ N (load)
-\item $F_e = 52$ N (effort)
+\item $\force{F_r} = 200$ N (load)
+\item $\force{F_e} = 52$ N (effort)
 \item Efficiency $\approx 100\%$
 \end{itemize}
 
@@ -665,7 +666,7 @@ The system has an efficiency of almost 100\%.
 \vspace{0.3cm}
 
 \textbf{Step 1:} Calculate actual mechanical advantage
-$$MA = \frac{F_r}{F_e} = \frac{200 \text{ N}}{52 \text{ N}} = 3.85$$
+$$MA = \frac{\force{F_r}}{\force{F_e}} = \frac{200 \text{ N}}{52 \text{ N}} = 3.85$$
 
 \pause
 \textbf{Step 2:} For pulleys, $IMA = N$ (number of ropes)
@@ -691,11 +692,11 @@ Each rope carries roughly 200/4 = 50 N.
 \frametitle{The Six Force Multipliers}
 \begin{block}{Simple Machines Summary}
 \begin{enumerate}
-\item \textbf{Lever:} $IMA = \frac{L_e}{L_r}$ \pause
-\item \textbf{Wheel and Axle:} $IMA = \frac{r_{wheel}}{r_{axle}}$ \pause
-\item \textbf{Inclined Plane:} $IMA = \frac{L}{h}$ \pause
-\item \textbf{Wedge:} $IMA = \frac{L}{h}$ \pause
-\item \textbf{Screw:} $IMA = \frac{2\pi L}{P}$ \pause
+\item \textbf{Lever:} $IMA = \frac{\disp{L_e}}{\disp{L_r}}$ \pause
+\item \textbf{Wheel and Axle:} $IMA = \frac{\radius{r_{wheel}}}{\radius{r_{axle}}}$ \pause
+\item \textbf{Inclined Plane:} $IMA = \frac{\disp{L}}{\disp{h}}$ \pause
+\item \textbf{Wedge:} $IMA = \frac{\disp{L}}{\disp{h}}$ \pause
+\item \textbf{Screw:} $IMA = \frac{2\pi \disp{L}}{P}$ \pause
 \item \textbf{Pulley:} $IMA = N$ (number of ropes)
 \end{enumerate}
 \end{block}
@@ -712,10 +713,10 @@ Each rope carries roughly 200/4 = 50 N.
 \begin{frame}
 \frametitle{Key Equations}
 \begin{align}
-IMA &= \frac{F_r}{F_e} = \frac{d_e}{d_r} \\
-W_i &= W_o \quad \text{(ideal machine)} \\
-F_e \times d_e &= F_r \times d_r \\
-\text{Efficiency} &= \frac{W_o}{W_i} \times 100\%
+IMA &= \frac{\force{F_r}}{\force{F_e}} = \frac{\disp{d_e}}{\disp{d_r}} \\
+\work{W_i} &= \work{W_o} \quad \text{(ideal machine)} \\
+\force{F_e} \times \disp{d_e} &= \force{F_r} \times \disp{d_r} \\
+\text{Efficiency} &= \frac{\work{W_o}}{\work{W_i}} \times 100\%
 \end{align}
 \note{- Four fundamental equations for simple machines\\\\
 - IMA: resistance over effort or distances inverted\\\\
@@ -729,11 +730,11 @@ F_e \times d_e &= F_r \times d_r \\
 \frametitle{What You Now Know}
 \begin{block}{The Revelations}
 \begin{enumerate}
-\item Simple machines trade force for distance \pause
+\item Simple machines trade \force{force} for \disp{distance} \pause
 \item Machines cannot create energy - conservation rules \pause
 \item Six types: lever, wheel-axle, incline, wedge, screw, pulley \pause
-\item IMA tells you how much force is multiplied \pause
-\item Efficiency measures work lost to friction \pause
+\item IMA tells you how much \force{force} is multiplied \pause
+\item Efficiency measures \work{work} lost to friction \pause
 \item Complex machines combine simple machines
 \end{enumerate}
 \end{block}

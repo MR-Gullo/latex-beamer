@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -129,9 +130,9 @@ Light can travel: (a) through empty space, (b) through media, or (c) by reflecti
 \pause
 \begin{block}{Universal Law: The Mirror's Rule}
 \begin{center}
-\Large $\boxed{\theta_r = \theta_i}$
+\Large $\boxed{\angle{\theta_r} = \angle{\theta_i}}$
 \end{center}
-Angle of reflection equals angle of incidence.
+\angle{Angle} of reflection equals \angle{angle} of incidence.
 \end{block}
 \note{[P0] [Fig 16.3: Law of reflection] "The law of reflection - governs all wave behavior at smooth surfaces"\\\\
 [P1] [THE REVELATION] "Theta-r equals theta-i - angle of reflection equals angle of incidence"\\\\
@@ -188,7 +189,7 @@ An image formed when light rays \textit{appear} to diverge from a point without 
 
 \textbf{Focal point (F):} Where parallel rays converge or appear to converge
 
-\textbf{Focal length (f):} Distance from mirror to focal point
+\textbf{Focal length (\disp{f}):} \disp{Distance} from mirror to focal point
 \note{[P0] "Two types of curved mirrors"\\\\
 [P1] "Concave caves inward, convex curves outward"\\\\
 - Focal point: where parallel rays meet\\\\
@@ -204,7 +205,7 @@ An image formed when light rays \textit{appear} to diverge from a point without 
 \end{figure}
 
 \pause
-Concave: rays \textbf{converge} (f positive). Convex: rays \textbf{diverge} (f negative).
+Concave: rays \textbf{converge} ($\disp{f}$ positive). Convex: rays \textbf{diverge} ($\disp{f}$ negative).
 \note{[P0] [Fig 16.9: Focal points] "Focal points for curved mirrors"\\\\
 [P1] "Concave: rays converge to real focal point in front. Convex: rays diverge, appear to come from virtual focal point behind"\\\\
 - Sign convention matters for calculations\\\\
@@ -267,15 +268,15 @@ Same principle: spotlights, solar collectors, satellite dishes
 \frametitle{16.1 Mirror Equations}
 \begin{block}{Universal Laws: The Source Code}
 \textbf{Lens/Mirror equation:}
-$$\frac{1}{f} = \frac{1}{d_i} + \frac{1}{d_o}$$
+$$\frac{1}{\disp{f}} = \frac{1}{\disp{d_i}} + \frac{1}{\disp{d_o}}$$
 
 \pause
 \textbf{Magnification:}
-$$m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+$$m = \frac{\disp{h_i}}{\disp{h_o}} = -\frac{\disp{d_i}}{\disp{d_o}}$$
 
 \pause
 \textbf{Radius of curvature:}
-$$R = 2f$$
+$$\disp{R} = 2\disp{f}$$
 \end{block}
 \note{[P0] "Three equations govern all curved mirrors"\\\\
 [P1] "Lens-mirror equation relates focal length, object distance, image distance"\\\\
@@ -288,9 +289,9 @@ $$R = 2f$$
 \frametitle{16.1 Sign Conventions}
 \begin{alertblock}{The Paradox: What Negative Means}
 \begin{itemize}
-\item Negative $d_i$ $\rightarrow$ virtual image \pause
-\item Negative $h_i$ $\rightarrow$ inverted image \pause
-\item Concave: $f$ positive; Convex: $f$ negative
+\item Negative $\disp{d_i}$ $\rightarrow$ virtual image \pause
+\item Negative $\disp{h_i}$ $\rightarrow$ inverted image \pause
+\item Concave: $\disp{f}$ positive; Convex: $\disp{f}$ negative
 \end{itemize}
 \end{alertblock}
 
@@ -313,11 +314,11 @@ A person stands 6.0 m from a convex security mirror. The virtual image appears 1
 
 \textbf{Given:}
 \begin{itemize}
-\item $d_o = 6.0$ m
-\item $d_i = -1.0$ m (virtual)
+\item $\disp{d_o} = 6.0$ m
+\item $\disp{d_i} = -1.0$ m (virtual)
 \end{itemize}
 
-\textbf{Find:} Focal length $f$
+\textbf{Find:} Focal length $\disp{f}$
 
 \vspace{0.3cm}
 
@@ -339,8 +340,8 @@ A person stands 6.0 m from a convex security mirror. The virtual image appears 1
 
 \begin{enumerate}
 \item Which equation did you choose? Why?
-\item What sign did you use for $d_i$? Why negative?
-\item How did you rearrange to solve for $f$?
+\item What sign did you use for $\disp{d_i}$? Why negative?
+\item How did you rearrange to solve for $\disp{f}$?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -361,25 +362,25 @@ A person stands 6.0 m from a convex security mirror. The virtual image appears 1
 \vspace{0.3cm}
 
 \textbf{Equation:} Lens/mirror equation
-$$f = \frac{d_i d_o}{d_o + d_i}$$
+$$\disp{f} = \frac{\disp{d_i} \disp{d_o}}{\disp{d_o} + \disp{d_i}}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $d_i = -1.0$ m, $d_o = 6.0$ m
+\textbf{Substitute:} $\disp{d_i} = -1.0$ m, $\disp{d_o} = 6.0$ m
 
 \pause
 \vspace{0.2cm}
 
-$$f = \frac{(-1.0)(6.0)}{6.0 + (-1.0)} = \frac{-6.0}{5.0}$$
+$$\disp{f} = \frac{(-1.0)(6.0)}{6.0 + (-1.0)} = \frac{-6.0}{5.0}$$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{f = -1.2 \text{ m}}$$
+$$\boxed{\disp{f} = -1.2 \text{ m}}$$
 
 \pause
-\textbf{Check:} Negative $f$ confirms convex mirror!
+\textbf{Check:} Negative $\disp{f}$ confirms convex mirror!
 \note{[P0] "Self-correct in different color"\\\\
 [P1] [ALGEBRA] "f equals d-i times d-o over d-o plus d-i"\\\\
 [P2] "Substitute: d-i negative 1.0 m, d-o 6.0 m"\\\\
@@ -445,7 +446,7 @@ Light changes direction when moving between air and water.
 \begin{frame}
 \frametitle{16.2 Index of Refraction}
 \begin{block}{Nature's Speed Limit Code}
-$$n = \frac{c}{v}$$
+$$\pConst{n} = \frac{\vel{c}}{\vel{v}}$$
 \end{block}
 
 \pause
@@ -453,13 +454,13 @@ $$n = \frac{c}{v}$$
 
 \textbf{Where:}
 \begin{itemize}
-\item $n$ = index of refraction (dimensionless) \pause
-\item $c = 3.00 \times 10^8$ m/s (speed of light in vacuum) \pause
-\item $v$ = speed of light in the material
+\item $\pConst{n}$ = index of refraction (dimensionless) \pause
+\item $\vel{c} = 3.00 \times 10^8$ m/s (\vel{speed} of light in vacuum) \pause
+\item $\vel{v}$ = \vel{speed} of light in the material
 \end{itemize}
 
 \pause
-Because $c > v$ always, $n \geq 1$ always.
+Because $\vel{c} > \vel{v}$ always, $\pConst{n} \geq 1$ always.
 \note{[P0] "Index of refraction: n equals c over v"\\\\
 [P1] "n is index of refraction - no units"\\\\
 [P2] "c is speed of light in vacuum - 3.0 times 10 to 8 m/s"\\\\
@@ -478,7 +479,7 @@ Because $c > v$ always, $n \geq 1$ always.
 \pause
 \begin{block}{Universal Law: The Bending Rule}
 \begin{center}
-\Large $\boxed{n_1 \sin\theta_1 = n_2 \sin\theta_2}$
+\Large $\boxed{\pConst{n_1} \sin\angle{\theta_1} = \pConst{n_2} \sin\angle{\theta_2}}$
 \end{center}
 This predicts exactly how light bends at any boundary.
 \end{block}
@@ -498,7 +499,7 @@ This predicts exactly how light bends at any boundary.
 \end{figure}
 
 \pause
-\textbf{Dispersion:} Index of refraction varies slightly with wavelength
+\textbf{Dispersion:} Index of refraction varies slightly with \wavelen{wavelength}
 
 \pause
 White light separates into colors: red bends least, violet bends most
@@ -516,7 +517,7 @@ White light separates into colors: red bends least, violet bends most
 \end{figure}
 
 \pause
-When $\theta_1 > \theta_c$, \textbf{all} light reflects back - no refraction!
+When $\angle{\theta_1} > \angle{\theta_c}$, \textbf{all} light reflects back - no refraction!
 \note{[P0] [Fig 16.20: Critical angle] "Total internal reflection: 100 percent reflection"\\\\
 [P1] "When incident angle exceeds critical angle, all light reflects - none escapes"\\\\
 - Only occurs when going from high n to low n\\\\
@@ -527,8 +528,8 @@ When $\theta_1 > \theta_c$, \textbf{all} light reflects back - no refraction!
 \begin{frame}
 \frametitle{16.2 Critical Angle}
 \begin{block}{The Escape Threshold}
-$$\theta_c = \sin^{-1}\left(\frac{n_2}{n_1}\right)$$
-for $n_1 > n_2$
+$$\angle{\theta_c} = \sin^{-1}\left(\frac{\pConst{n_2}}{\pConst{n_1}}\right)$$
+for $\pConst{n_1} > \pConst{n_2}$
 \end{block}
 
 \pause
@@ -536,7 +537,7 @@ for $n_1 > n_2$
 
 \textbf{Example:} Water to air
 
-$\theta_c = \sin^{-1}(1.00/1.33) = 48.6^\circ$
+$\angle{\theta_c} = \sin^{-1}(1.00/1.33) = 48.6^\circ$
 \note{[P0] "Critical angle equation"\\\\
 [P1] [ALGEBRA] "Theta-c equals arcsine of n-2 over n-1, only when n-1 greater than n-2"\\\\
 - Arcsine means inverse sine function\\\\
@@ -595,12 +596,12 @@ Light enters glass ($n = 1.50$) from air ($n = 1.00$) at $45.0^\circ$ to the nor
 
 \textbf{Given:}
 \begin{itemize}
-\item $n_1 = 1.00$ (air)
-\item $n_2 = 1.50$ (glass)
-\item $\theta_1 = 45.0^\circ$
+\item $\pConst{n_1} = 1.00$ (air)
+\item $\pConst{n_2} = 1.50$ (glass)
+\item $\angle{\theta_1} = 45.0^\circ$
 \end{itemize}
 
-\textbf{Find:} Angle of refraction $\theta_2$
+\textbf{Find:} \angle{Angle} of refraction $\angle{\theta_2}$
 
 \vspace{0.3cm}
 
@@ -622,7 +623,7 @@ Light enters glass ($n = 1.50$) from air ($n = 1.00$) at $45.0^\circ$ to the nor
 
 \begin{enumerate}
 \item Which law did you use?
-\item How did you rearrange for $\theta_2$?
+\item How did you rearrange for $\angle{\theta_2}$?
 \item Did you use arcsine? Why?
 \end{enumerate}
 
@@ -643,19 +644,19 @@ Light enters glass ($n = 1.50$) from air ($n = 1.00$) at $45.0^\circ$ to the nor
 
 \vspace{0.3cm}
 
-\textbf{Snell's Law:} $n_1 \sin\theta_1 = n_2 \sin\theta_2$
+\textbf{Snell's Law:} $\pConst{n_1} \sin\angle{\theta_1} = \pConst{n_2} \sin\angle{\theta_2}$
 
 \pause
-\textbf{Rearrange:} $\sin\theta_2 = \frac{n_1 \sin\theta_1}{n_2}$
+\textbf{Rearrange:} $\sin\angle{\theta_2} = \frac{\pConst{n_1} \sin\angle{\theta_1}}{\pConst{n_2}}$
 
 \pause
-\textbf{Substitute:} $\sin\theta_2 = \frac{(1.00)(\sin 45.0^\circ)}{1.50} = \frac{0.707}{1.50}$
+\textbf{Substitute:} $\sin\angle{\theta_2} = \frac{(1.00)(\sin 45.0^\circ)}{1.50} = \frac{0.707}{1.50}$
 
 \pause
-$$\sin\theta_2 = 0.471$$
+$$\sin\angle{\theta_2} = 0.471$$
 
 \pause
-$$\boxed{\theta_2 = \sin^{-1}(0.471) = 28.1^\circ}$$
+$$\boxed{\angle{\theta_2} = \sin^{-1}(0.471) = 28.1^\circ}$$
 
 \pause
 \textbf{Check:} Light bends toward normal entering denser medium!
@@ -715,10 +716,10 @@ A converging lens bends all parallel rays to one focal point.
 \end{figure}
 
 \pause
-\textbf{Convex (converging):} Parallel rays converge to focal point ($f$ positive)
+\textbf{Convex (converging):} Parallel rays converge to focal point ($\disp{f}$ positive)
 
 \pause
-\textbf{Concave (diverging):} Parallel rays diverge from focal point ($f$ negative)
+\textbf{Concave (diverging):} Parallel rays diverge from focal point ($\disp{f}$ negative)
 \note{[P0] [Fig 16.25: Converging lens] "Two types of lenses"\\\\
 [P1] "Convex or converging: parallel rays converge to focal point, f positive"\\\\
 [P2] "Concave or diverging: parallel rays diverge, appear to come from focal point, f negative"\\\\
@@ -729,7 +730,7 @@ A converging lens bends all parallel rays to one focal point.
 \begin{frame}
 \frametitle{16.3 Lens Power}
 \begin{block}{The Focusing Strength}
-$$P = \frac{1}{f}$$
+$$\power{P} = \frac{1}{\disp{f}}$$
 \end{block}
 
 \pause
@@ -737,14 +738,14 @@ $$P = \frac{1}{f}$$
 
 \textbf{Where:}
 \begin{itemize}
-\item $P$ = power in diopters (D) or m$^{-1}$ \pause
-\item $f$ = focal length in meters
+\item $\power{P}$ = power in diopters (D) or m$^{-1}$ \pause
+\item $\disp{f}$ = focal length in meters
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
-Shorter focal length = stronger lens = higher power
+Shorter \disp{focal length} = stronger lens = higher \power{power}
 \note{[P0] "Power of lens: P equals one over f"\\\\
 [P1] "P is power in diopters or reciprocal meters"\\\\
 [P2] "f is focal length in meters"\\\\
@@ -786,10 +787,10 @@ Shorter focal length = stronger lens = higher power
 \end{figure}
 
 \pause
-Object beyond $f$: Real, inverted image on far side
+Object beyond $\disp{f}$: Real, inverted image on far side
 
 \pause
-Object inside $f$: Virtual, upright, magnified image on near side
+Object inside $\disp{f}$: Virtual, upright, magnified image on near side
 \note{[P0] [Fig 16.27: Ray tracing] "Ray diagram for converging lens"\\\\
 [P1] "Object beyond focal length: real inverted image forms on opposite side"\\\\
 [P2] "Object inside focal length: virtual upright magnified image on same side"\\\\
@@ -801,22 +802,22 @@ Object inside $f$: Virtual, upright, magnified image on near side
 \begin{frame}
 \frametitle{16.3 Thin Lens Equation}
 \begin{block}{Same Equation as Mirrors}
-$$\frac{1}{f} = \frac{1}{d_i} + \frac{1}{d_o}$$
+$$\frac{1}{\disp{f}} = \frac{1}{\disp{d_i}} + \frac{1}{\disp{d_o}}$$
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \textbf{Magnification:}
-$$m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+$$m = \frac{\disp{h_i}}{\disp{h_o}} = -\frac{\disp{d_i}}{\disp{d_o}}$$
 
 \pause
 \vspace{0.3cm}
 
 \textbf{Sign conventions:}
 \begin{itemize}
-\item Converging lens: $f$ positive; Diverging lens: $f$ negative
-\item Negative $d_i$ $\rightarrow$ virtual image
+\item Converging lens: $\disp{f}$ positive; Diverging lens: $\disp{f}$ negative
+\item Negative $\disp{d_i}$ $\rightarrow$ virtual image
 \item Negative $m$ $\rightarrow$ inverted image
 \end{itemize}
 \note{[P0] "Thin lens equation identical to mirror equation"\\\\
@@ -837,10 +838,10 @@ $$m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
 \textbf{Cornea and lens:} Form real image on retina
 
 \pause
-\textbf{Ciliary muscles:} Change lens shape to adjust focal length
+\textbf{Ciliary muscles:} Change lens shape to adjust \disp{focal length}
 
 \pause
-Eye adjusts power to keep image distance constant for all object distances!
+Eye adjusts \power{power} to keep image \disp{distance} constant for all object \disp{distances}!
 \note{[P0] [Fig 16.32: Eye cross-section] "The eye as optical instrument - schematic showing all internal components"\\\\
 [P1] "Cornea and lens act as single converging lens system, form real inverted image on retina"\\\\
 [P2] "Ciliary muscles change lens shape to adjust focal length - this is accommodation"\\\\
@@ -934,10 +935,10 @@ A magnifying glass focuses sunlight to a bright spot 8.00 cm from the lens.
 
 \textbf{Given:}
 \begin{itemize}
-\item $f = 8.00$ cm $= 0.0800$ m
+\item $\disp{f} = 8.00$ cm $= 0.0800$ m
 \end{itemize}
 
-\textbf{Find:} Power $P$ in diopters
+\textbf{Find:} \power{Power} $\power{P}$ in diopters
 
 \vspace{0.3cm}
 
@@ -958,8 +959,8 @@ A magnifying glass focuses sunlight to a bright spot 8.00 cm from the lens.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item Which equation relates power and focal length?
-\item What units did you use for focal length?
+\item Which equation relates \power{power} and \disp{focal length}?
+\item What units did you use for \disp{focal length}?
 \item Did you convert centimeters to meters?
 \end{enumerate}
 
@@ -980,25 +981,25 @@ A magnifying glass focuses sunlight to a bright spot 8.00 cm from the lens.
 
 \vspace{0.3cm}
 
-\textbf{Given:} $f = 8.00$ cm
+\textbf{Given:} $\disp{f} = 8.00$ cm
 
 \pause
-\textbf{Convert to meters:} $f = 0.0800$ m
-
-\pause
-\vspace{0.2cm}
-
-\textbf{Power equation:} $P = \frac{1}{f}$
+\textbf{Convert to meters:} $\disp{f} = 0.0800$ m
 
 \pause
 \vspace{0.2cm}
 
-$$P = \frac{1}{0.0800 \text{ m}}$$
+\textbf{Power equation:} $\power{P} = \frac{1}{\disp{f}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{P = 12.5 \text{ D}}$$
+$$\power{P} = \frac{1}{0.0800 \text{ m}}$$
+
+\pause
+\vspace{0.2cm}
+
+$$\boxed{\power{P} = 12.5 \text{ D}}$$
 
 \pause
 \textbf{Check:} This is a relatively powerful lens!
@@ -1017,12 +1018,12 @@ $$\boxed{P = 12.5 \text{ D}}$$
 \frametitle{What You Now Know}
 \begin{block}{The Revelations}
 \begin{enumerate}
-\item Law of Reflection: $\theta_r = \theta_i$ (mirrors create virtual images) \pause
+\item Law of Reflection: $\angle{\theta_r} = \angle{\theta_i}$ (mirrors create virtual images) \pause
 \item Curved mirrors use focal points to form real or virtual images \pause
-\item Snell's Law: $n_1\sin\theta_1 = n_2\sin\theta_2$ (light bends at boundaries) \pause
+\item Snell's Law: $\pConst{n_1}\sin\angle{\theta_1} = \pConst{n_2}\sin\angle{\theta_2}$ (light bends at boundaries) \pause
 \item Total internal reflection traps light (fiber optics, diamonds) \pause
 \item Lenses use refraction to converge or diverge rays \pause
-\item Your eye is a variable-power converging lens \pause
+\item Your eye is a variable-\power{power} converging lens \pause
 \item Same equations govern mirrors and lenses
 \end{enumerate}
 \end{block}
@@ -1040,13 +1041,13 @@ $$\boxed{P = 12.5 \text{ D}}$$
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-\text{Law of Reflection:} \quad &\theta_r = \theta_i \\
-\text{Index of refraction:} \quad &n = \frac{c}{v} \\
-\text{Snell's Law:} \quad &n_1\sin\theta_1 = n_2\sin\theta_2 \\
-\text{Critical angle:} \quad &\theta_c = \sin^{-1}\left(\frac{n_2}{n_1}\right) \\
-\text{Lens/Mirror:} \quad &\frac{1}{f} = \frac{1}{d_i} + \frac{1}{d_o} \\
-\text{Magnification:} \quad &m = \frac{h_i}{h_o} = -\frac{d_i}{d_o} \\
-\text{Lens power:} \quad &P = \frac{1}{f}
+\text{Law of Reflection:} \quad &\angle{\theta_r} = \angle{\theta_i} \\
+\text{Index of refraction:} \quad &\pConst{n} = \frac{\vel{c}}{\vel{v}} \\
+\text{Snell's Law:} \quad &\pConst{n_1}\sin\angle{\theta_1} = \pConst{n_2}\sin\angle{\theta_2} \\
+\text{Critical angle:} \quad &\angle{\theta_c} = \sin^{-1}\left(\frac{\pConst{n_2}}{\pConst{n_1}}\right) \\
+\text{Lens/Mirror:} \quad &\frac{1}{\disp{f}} = \frac{1}{\disp{d_i}} + \frac{1}{\disp{d_o}} \\
+\text{Magnification:} \quad &m = \frac{\disp{h_i}}{\disp{h_o}} = -\frac{\disp{d_i}}{\disp{d_o}} \\
+\text{Lens power:} \quad &\power{P} = \frac{1}{\disp{f}}
 \end{align}
 \note{- Seven key equations for geometric optics\\\\
 - Law of reflection for mirrors\\\\

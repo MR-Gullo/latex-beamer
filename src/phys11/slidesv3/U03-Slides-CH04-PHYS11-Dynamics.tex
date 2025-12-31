@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -404,9 +405,9 @@ The object \textbf{accelerates}.
 
 \begin{block}{Universal Law II: Newton's Second Law}
 \begin{center}
-\Large $\boxed{\vec{F}_{\text{net}} = m\vec{a}}$
+\Large $\boxed{\vec{\force{F}}_{\text{net}} = \mass{m}\vec{\accel{a}}}$
 \end{center}
-Net force equals mass times acceleration.
+Net \force{force} equals \mass{mass} times \accel{acceleration}.
 \end{block}
 \note{[P0] "What happens when net force is NOT zero?"\\\\
 [P1] "The object accelerates - changes velocity"\\\\
@@ -417,27 +418,27 @@ Net force equals mass times acceleration.
 
 \begin{frame}
 \frametitle{4.3 Reading the Equation}
-$$\vec{F}_{\text{net}} = m\vec{a}$$
+$$\vec{\force{F}}_{\text{net}} = \mass{m}\vec{\accel{a}}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Acceleration is directly proportional to force:}
+\textbf{\accel{Acceleration} is directly proportional to \force{force}:}
 
-Double the force $\rightarrow$ double the acceleration
+Double the \force{force} $\rightarrow$ double the \accel{acceleration}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Acceleration is inversely proportional to mass:}
+\textbf{\accel{Acceleration} is inversely proportional to \mass{mass}:}
 
-Double the mass $\rightarrow$ half the acceleration
+Double the \mass{mass} $\rightarrow$ half the \accel{acceleration}
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{Key Insight}
-Same force on different masses produces different accelerations!
+Same \force{force} on different \mass{masses} produces different \accel{accelerations}!
 \end{alertblock}
 \note{[P0] [ALGEBRA] "F-net equals m a"\\\\
 [P1] "Double the force, double the acceleration - directly proportional"\\\\
@@ -454,7 +455,7 @@ Same force on different masses produces different accelerations!
 \end{figure}
 
 \pause
-Same force, different masses, different accelerations.
+Same \force{force}, different \mass{masses}, different \accel{accelerations}.
 \note{[P0][Fig 4.5: Person pushing basketball vs car] "Person pushing basketball vs pushing car - same force F. Teaching hint: Fig 4.5 shows three diagrams (a: basketball with mass m1, b: car with mass m2, c: identical FBDs) - perfect visual for showing F=ma. Same force F, different masses produce different accelerations (a1 >> a2). The identical FBDs in diagram c reinforce that the equation is what determines the outcome."\\\\
 [P1] "Same force, different masses, different accelerations"\\\\
 [THE CONNECTION - Kinetic Archetype] "Why you can throw a ball farther than a boulder"\\\\
@@ -475,7 +476,7 @@ $$1 \text{ N} = 1 \text{ kg} \cdot \frac{\text{m}}{\text{s}^2}$$
 \pause
 \vspace{0.3cm}
 
-A 1-kg mass accelerated at 1 m/s² requires 1 N of force.
+A 1-kg \mass{mass} accelerated at 1 m/s² requires 1 N of \force{force}.
 
 \pause
 \vspace{0.3cm}
@@ -490,25 +491,25 @@ In the US: $1 \text{ N} = 0.225 \text{ lb}$
 
 \begin{frame}
 \frametitle{4.3 Weight: A Special Force}
-\textbf{Weight} is the gravitational force on an object.
+\textbf{\force{Weight}} is the gravitational \force{force} on an object.
 
 \pause
 \vspace{0.3cm}
 
 From Newton's second law:
-$$\vec{F}_{\text{net}} = m\vec{a}$$
+$$\vec{\force{F}}_{\text{net}} = \mass{m}\vec{\accel{a}}$$
 
 \pause
-For a falling object: $\vec{F}_{\text{net}} = \vec{W}$ and $\vec{a} = \vec{g}$
+For a falling object: $\vec{\force{F}}_{\text{net}} = \vec{\force{W}}$ and $\vec{\accel{a}} = \vec{\grav{g}}$
 
 \pause
 \vspace{0.3cm}
 
 \begin{block}{The Universal Law}
 \begin{center}
-\Large $\boxed{W = mg}$
+\Large $\boxed{\force{W} = \mass{m}\grav{g}}$
 \end{center}
-Weight equals mass times gravitational acceleration.
+\force{Weight} equals \mass{mass} times gravitational \accel{acceleration}.
 \end{block}
 \note{[P0] "Weight is gravitational force on an object"\\\\
 [P1] [ALGEBRA] "From Newton's second law: F-net equals m a"\\\\
@@ -520,25 +521,25 @@ Weight equals mass times gravitational acceleration.
 
 \begin{frame}
 \frametitle{4.3 Weight Changes, Mass Doesn't}
-On Earth: $g = 9.8 \text{ m/s}^2$
+On Earth: $\grav{g} = 9.8 \text{ m/s}^2$
 
 \pause
-On the Moon: $g = 1.67 \text{ m/s}^2$
+On the Moon: $\grav{g} = 1.67 \text{ m/s}^2$
 
 \pause
 \vspace{0.3cm}
 
-\begin{exampleblock}{Example: 1.0-kg mass}
+\begin{exampleblock}{Example: 1.0-kg \mass{mass}}
 \begin{itemize}
-\item Earth: $W = (1.0)(9.8) = 9.8$ N \pause
-\item Moon: $W = (1.0)(1.67) = 1.7$ N
+\item Earth: $\force{W} = (1.0)(9.8) = 9.8$ N \pause
+\item Moon: $\force{W} = (1.0)(1.67) = 1.7$ N
 \end{itemize}
 \end{exampleblock}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Same mass, different weight!}
+\textbf{Same \mass{mass}, different \force{weight}!}
 \note{[P0] "On Earth, g equals 9.8 m per s squared"\\\\
 [P1] "On Moon, g equals 1.67 m per s squared"\\\\
 [P2] "1-kg mass on Earth: W equals 9.8 N"\\\\
@@ -608,22 +609,22 @@ Mass: 24 kg
 
 \vspace{0.3cm}
 
-\textbf{E - Equation:} $F_{\text{net}} = ma$
+\textbf{E - Equation:} $\force{F}_{\text{net}} = \mass{m}\accel{a}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Rearrange:} $a = \frac{F_{\text{net}}}{m}$
+\textbf{Rearrange:} $\accel{a} = \frac{\force{F}_{\text{net}}}{\mass{m}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{S - Substitute:} $a = \frac{51 \text{ N}}{24 \text{ kg}}$
+\textbf{S - Substitute:} $\accel{a} = \frac{51 \text{ N}}{24 \text{ kg}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{a = 2.1 \text{ m/s}^2}$$
+$$\boxed{\accel{a} = 2.1 \text{ m/s}^2}$$
 
 \pause
 \textbf{Check:} Speed increases by 2.1 m/s every second. Reasonable for a person pushing!
@@ -679,10 +680,10 @@ You cannot touch something without being touched back.
 \frametitle{Universal Law III: Newton's Third Law}
 \begin{block}{The Law of Action and Reaction}
 \begin{center}
-\Large $\boxed{\vec{F}_{A \to B} = -\vec{F}_{B \to A}}$
+\Large $\boxed{\vec{\force{F}}_{A \to B} = -\vec{\force{F}}_{B \to A}}$
 \end{center}
-When object A exerts a force on object B,\\
-object B exerts an equal and opposite force on object A.
+When object A exerts a \force{force} on object B,\\
+object B exerts an equal and opposite \force{force} on object A.
 \end{block}
 
 \pause
@@ -726,23 +727,23 @@ Same force, opposite directions.
 \frametitle{The Paradox}
 \begin{alertblock}{Civilian View vs. Reality}
 \textbf{Civilian:} "The truck hits the bug harder than the bug hits the truck."\\[0.3cm]
-\textbf{Physicist:} "Same force. Different acceleration."
+\textbf{Physicist:} "Same \force{force}. Different \accel{acceleration}."
 \end{alertblock}
 
 \pause
 \vspace{0.3cm}
 
-$F = ma$
+$\force{F} = \mass{m}\accel{a}$
 
 \pause
 \vspace{0.3cm}
 
-Bug has tiny mass $\rightarrow$ huge acceleration $\rightarrow$ splat
+Bug has tiny \mass{mass} $\rightarrow$ huge \accel{acceleration} $\rightarrow$ splat
 
 \pause
 \vspace{0.3cm}
 
-Truck has huge mass $\rightarrow$ tiny acceleration $\rightarrow$ barely notices
+Truck has huge \mass{mass} $\rightarrow$ tiny \accel{acceleration} $\rightarrow$ barely notices
 \note{[P0] [THE CONFLICT] "Civilians think truck hits bug harder - feels wrong but it's true"\\\\
 [P1] "F equals m a - rearrange to a equals F over m"\\\\
 [P2] "Bug: tiny mass, so huge acceleration - splat"\\\\
@@ -758,24 +759,24 @@ When an object rests on a surface:
 \pause
 \vspace{0.3cm}
 
-\textbf{Weight} pulls down
+\textbf{\force{Weight}} pulls down
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Normal force} pushes up (perpendicular to surface)
+\textbf{\normal{Normal force}} pushes up (perpendicular to surface)
 
 \pause
 \vspace{0.3cm}
 
 \begin{block}{For horizontal surface}
-$$N = mg$$
+$$\normal{N} = \mass{m}\grav{g}$$
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-Equal magnitude, opposite direction $\rightarrow$ net force = 0
+Equal magnitude, opposite direction $\rightarrow$ net \force{force} = 0
 \note{[P0] "Object rests on surface - what forces act?"\\\\
 [P1] "Weight pulls down - gravitational force"\\\\
 [P2] "Normal force pushes up - surface supporting object"\\\\
@@ -792,12 +793,12 @@ Equal magnitude, opposite direction $\rightarrow$ net force = 0
 \end{figure}
 
 \pause
-\textbf{Tension} is the pulling force along a connector (rope, string, cable).
+\textbf{\force{Tension}} is the pulling \force{force} along a connector (rope, string, cable).
 
 \pause
 \vspace{0.3cm}
 
-For a stationary mass: $T = W = mg$
+For a stationary \mass{mass}: $\force{T} = \force{W} = \mass{m}\grav{g}$
 
 \pause
 \vspace{0.3cm}
@@ -828,7 +829,7 @@ Rocket pushes gas backward $\rightarrow$ Gas pushes rocket forward
 \pause
 \vspace{0.3cm}
 
-This forward force is called \textbf{thrust}.
+This forward \force{force} is called \textbf{\force{thrust}}.
 
 \pause
 \vspace{0.3cm}
@@ -907,20 +908,20 @@ Mass: 84.0 kg total
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Find net force
-$$F_{\text{net}} = F_{\text{floor}} - f = 150 - 24.0 = 126 \text{ N}$$
+\textbf{Step 1:} Find net \force{force}
+$$\force{F}_{\text{net}} = \force{F}_{\text{floor}} - \force{f} = 150 - 24.0 = 126 \text{ N}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2:} Find total mass
-$$m = 65.0 + 12.0 + 7.0 = 84.0 \text{ kg}$$
+\textbf{Step 2:} Find total \mass{mass}
+$$\mass{m} = 65.0 + 12.0 + 7.0 = 84.0 \text{ kg}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 3:} Calculate acceleration
-$$a = \frac{F_{\text{net}}}{m} = \frac{126}{84.0} = \boxed{1.5 \text{ m/s}^2}$$
+\textbf{Step 3:} Calculate \accel{acceleration}
+$$\accel{a} = \frac{\force{F}_{\text{net}}}{\mass{m}} = \frac{126}{84.0} = \boxed{1.5 \text{ m/s}^2}$$
 
 \pause
 \textbf{Check:} Speed increases by 1.5 m/s every second. Reasonable!
@@ -939,7 +940,7 @@ $$a = \frac{F_{\text{net}}}{m} = \frac{126}{84.0} = \boxed{1.5 \text{ m/s}^2}$$
 \begin{block}{The Three Laws That Run Reality}
 \begin{enumerate}
 \item \textbf{Law of Inertia:} Objects maintain their motion unless forced to change \pause
-\item \textbf{Law of Acceleration:} $\vec{F}_{\text{net}} = m\vec{a}$ connects force, mass, and motion \pause
+\item \textbf{Law of Acceleration:} $\vec{\force{F}}_{\text{net}} = \mass{m}\vec{\accel{a}}$ connects \force{force}, \mass{mass}, and motion \pause
 \item \textbf{Law of Action-Reaction:} Forces always come in equal and opposite pairs
 \end{enumerate}
 \end{block}
@@ -959,10 +960,10 @@ These three laws explain ALL motion in the universe.
 \begin{frame}
 \frametitle{Key Equations}
 \begin{align}
-\text{Newton's Second Law:} \quad \vec{F}_{\text{net}} &= m\vec{a} \\
-\text{Weight:} \quad W &= mg \\
-\text{Friction:} \quad f &= \mu N \\
-\text{Normal Force (horizontal):} \quad N &= mg
+\text{Newton's Second Law:} \quad \vec{\force{F}}_{\text{net}} &= \mass{m}\vec{\accel{a}} \\
+\text{Weight:} \quad \force{W} &= \mass{m}\grav{g} \\
+\text{Friction:} \quad \force{f} &= \fric{\mu} \normal{N} \\
+\text{Normal Force (horizontal):} \quad \normal{N} &= \mass{m}\grav{g}
 \end{align}
 \note{- Four key equations you'll use constantly\\\\
 - Newton's second law: the core engine\\\\

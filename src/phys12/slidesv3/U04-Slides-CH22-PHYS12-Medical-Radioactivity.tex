@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -243,7 +244,7 @@ Uses isotopes that emit positrons ($\beta^+$ particles).
 \item Radiopharmaceutical emits positron ($e^+$) \pause
 \item Positron encounters electron ($e^-$) in tissue \pause
 \item \textbf{Annihilation:} Both particles destroyed \pause
-\item Two gamma rays created, each with 0.511 MeV energy \pause
+\item Two gamma rays created, each with 0.511 MeV \energy{energy} \pause
 \item Gamma rays travel in \textbf{exactly opposite directions}
 \end{enumerate}
 
@@ -252,9 +253,9 @@ Uses isotopes that emit positrons ($\beta^+$ particles).
 
 \begin{block}{The Universal Law}
 \begin{center}
-$E = mc^2$
+$\energy{E} = \mass{m}c^2$
 \end{center}
-Mass converts to energy: electron mass = 0.511 MeV per gamma ray.
+\mass{Mass} converts to \energy{energy}: electron \mass{mass} = 0.511 MeV per gamma ray.
 \end{block}
 \note{[P0] "Positron-electron annihilation - the core of PET"\\\\
 [P1] "Radiopharmaceutical emits positron - antimatter"\\\\
@@ -560,7 +561,7 @@ Technique is limited by tolerable damage to organs that process and eliminate th
 
 \begin{block}{The Rad (Radiation Absorbed Dose)}
 $$1 \text{ rad} = 0.01 \text{ J/kg}$$
-Amount of ionizing energy deposited per kilogram of tissue.
+Amount of ionizing \energy{energy} deposited per kilogram of tissue.
 \end{block}
 
 \pause
@@ -590,8 +591,8 @@ A 60.0-kg person is exposed to ionizing radiation over their entire body and abs
 
 \textbf{Given:}
 \begin{itemize}
-\item Mass = 60.0 kg
-\item Energy absorbed = 1.80 J
+\item \mass{Mass} = 60.0 kg
+\item \energy{Energy} absorbed = 1.80 J
 \end{itemize}
 
 \textbf{Find:} Whole-body radiation dose in rads
@@ -615,7 +616,7 @@ A 60.0-kg person is exposed to ionizing radiation over their entire body and abs
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What formula relates energy, mass, and dose?
+\item What formula relates \energy{energy}, \mass{mass}, and dose?
 \item How do you convert J/kg to rads?
 \item What conversion factor did you use?
 \end{enumerate}
@@ -637,7 +638,7 @@ A 60.0-kg person is exposed to ionizing radiation over their entire body and abs
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Energy per mass
+\textbf{Step 1:} \energy{Energy} per \mass{mass}
 $$\frac{1.80 \text{ J}}{60.0 \text{ kg}} = 0.0300 \text{ J/kg}$$
 
 \pause
@@ -651,7 +652,7 @@ $$\frac{1.80 \text{ J}}{60.0 \text{ kg}} = 0.0300 \text{ J/kg}$$
 $$\text{Dose} = \frac{0.0300 \text{ J/kg}}{0.01 \text{ J/kg per rad}} = \boxed{3.00 \text{ rad}}$$
 
 \pause
-\textbf{Check:} 1.80 J over 60 kg is small energy per mass, so low rad dose. Reasonable!
+\textbf{Check:} 1.80 J over 60 kg is small \energy{energy} per \mass{mass}, so low rad dose. Reasonable!
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "Energy over mass: 1.80 J divided by 60 kg equals 0.03 J per kg"\\\\
 [P2] "Convert using 1 rad equals 0.01 J per kg"\\\\
@@ -731,7 +732,7 @@ Number expressing relative damage from a given type of radiation.
 \frametitle{22.5 The Rem: Dose Equivalent}
 \begin{block}{Roentgen Equivalent Man (rem)}
 $$\text{rem} = \text{rad} \times \text{RBE}$$
-Dose unit accounting for both energy deposited AND biological effectiveness.
+Dose unit accounting for both \energy{energy} deposited AND biological effectiveness.
 \end{block}
 
 \pause
@@ -744,7 +745,7 @@ $$\text{Dose} = 2.00 \text{ rad} \times 20 = 40.0 \text{ rem}$$
 \vspace{0.2cm}
 
 \begin{exampleblock}{The Mental Model}
-Rads measure energy deposited. Rems measure biological damage.
+Rads measure \energy{energy} deposited. Rems measure biological damage.
 \end{exampleblock}
 \note{[P0] "The rem: roentgen equivalent man"\\\\
 [P1] [ALGEBRA] "rem equals rad times RBE"\\\\
@@ -876,7 +877,7 @@ From Rutherford's gold foil to PET scanners in hospitals.
 \pause
 \vspace{0.3cm}
 
-From E = mc$^2$ to cancer therapy.
+From $\energy{E} = \mass{m}c^2$ to cancer therapy.
 
 \pause
 \vspace{0.3cm}

@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -207,9 +208,9 @@ Light: $3 \times 10^8$ m/s \quad Sound: $\sim 340$ m/s in air
 \frametitle{14.1 The Universal Wave Equation}
 \begin{block}{The Law of All Waves}
 \begin{center}
-\Large $\boxed{v = f\lambda}$
+\Large $\boxed{\vel{v} = \freq{f}\wavelen{\lambda}}$
 \end{center}
-Speed equals frequency times wavelength.
+\vel{Speed} equals \freq{frequency} times \wavelen{wavelength}.
 \end{block}
 
 \pause
@@ -217,9 +218,9 @@ Speed equals frequency times wavelength.
 
 \textbf{For sound:}
 \begin{itemize}
-\item $v$ = speed of sound (m/s) - depends on medium
-\item $f$ = frequency (Hz) - set by source
-\item $\lambda$ = wavelength (m) - adjusts automatically
+\item $\vel{v}$ = \vel{speed} of sound (m/s) - depends on medium
+\item $\freq{f}$ = \freq{frequency} (Hz) - set by source
+\item $\wavelen{\lambda}$ = \wavelen{wavelength} (m) - adjusts automatically
 \end{itemize}
 \note{[P0] [THE REVELATION] "Same equation for ALL waves"\\\\
 [P1] "For sound: v depends on medium, f depends on source"\\\\
@@ -237,10 +238,10 @@ Speed equals frequency times wavelength.
 \end{figure}
 
 \pause
-Source vibrates at frequency $f$ $\rightarrow$ propagates at $v$ $\rightarrow$ wavelength $\lambda$
+Source vibrates at \freq{frequency} $\freq{f}$ $\rightarrow$ propagates at $\vel{v}$ $\rightarrow$ \wavelen{wavelength} $\wavelen{\lambda}$
 
 \pause
-Distance between adjacent compressions = one wavelength
+Distance between adjacent compressions = one \wavelen{wavelength}
 \note{[P0][Fig 14.7: A tuning fork vibrates back and forth, creating sound waves] "Sound wave emanating from tuning fork source. Teaching hint: Strike tuning fork, place in water - visible ripples demonstrate invisible sound radiation pattern. Spherical spreading explains why intensity decreases with distance (inverse square law)"\\\\
 [P1] "Source vibrates at f, wave propagates at v, wavelength is lambda"\\\\
 [P2] "Distance between compressions equals one wavelength"\\\\
@@ -251,14 +252,14 @@ Distance between adjacent compressions = one wavelength
 
 \begin{frame}
 \frametitle{14.1 Speed Independent of Frequency}
-\textbf{Critical fact:} Speed of sound is nearly independent of frequency.
+\textbf{Critical fact:} \vel{Speed} of sound is nearly independent of \freq{frequency}.
 
 \pause
 \vspace{0.3cm}
 
 \textbf{Why this matters:}
 
-If high frequencies traveled faster than low frequencies, you'd hear the flute BEFORE the tuba at a concert!
+If high \freq{frequencies} traveled faster than low \freq{frequencies}, you'd hear the flute BEFORE the tuba at a concert!
 
 \pause
 \vspace{0.3cm}
@@ -267,7 +268,7 @@ But all instruments arrive in sync, regardless of distance.
 
 \pause
 \begin{exampleblock}{The Consequence}
-Since $v = f\lambda$ and $v$ is constant, higher frequency means shorter wavelength.
+Since $\vel{v} = \freq{f}\wavelen{\lambda}$ and $\vel{v}$ is constant, higher \freq{frequency} means shorter \wavelen{wavelength}.
 \end{exampleblock}
 \note{[P0] "Speed is nearly independent of frequency"\\\\
 [P1] "If not true, high pitch would arrive before low pitch"\\\\
@@ -286,11 +287,11 @@ Calculate the wavelengths of sounds at the extremes of human hearing, 20 Hz and 
 
 \textbf{Given:}
 \begin{itemize}
-\item $v = 348.7$ m/s
-\item $f_{\text{min}} = 20$ Hz, $f_{\text{max}} = 20,000$ Hz
+\item $\vel{v} = 348.7$ m/s
+\item $\freq{f}_{\text{min}} = 20$ Hz, $\freq{f}_{\text{max}} = 20,000$ Hz
 \end{itemize}
 
-\textbf{Find:} $\lambda_{\text{max}}$ and $\lambda_{\text{min}}$
+\textbf{Find:} $\wavelen{\lambda}_{\text{max}}$ and $\wavelen{\lambda}_{\text{min}}$
 
 \vspace{0.3cm}
 
@@ -311,9 +312,9 @@ Calculate the wavelengths of sounds at the extremes of human hearing, 20 Hz and 
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What equation connects speed, frequency, and wavelength?
-\item How did you solve for wavelength?
-\item Which frequency gives the LONGEST wavelength? Why?
+\item What equation connects \vel{speed}, \freq{frequency}, and \wavelen{wavelength}?
+\item How did you solve for \wavelen{wavelength}?
+\item Which \freq{frequency} gives the LONGEST \wavelen{wavelength}? Why?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -333,19 +334,19 @@ Calculate the wavelengths of sounds at the extremes of human hearing, 20 Hz and 
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $v = f\lambda$ $\rightarrow$ $\lambda = \frac{v}{f}$
+\textbf{Equation:} $\vel{v} = \freq{f}\wavelen{\lambda}$ $\rightarrow$ $\wavelen{\lambda} = \frac{\vel{v}}{\freq{f}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Maximum wavelength (lowest frequency):}
-$$\lambda_{\text{max}} = \frac{348.7 \text{ m/s}}{20 \text{ Hz}} = 17.4 \text{ m} \approx 20 \text{ m}$$
+\textbf{Maximum \wavelen{wavelength} (lowest \freq{frequency}):}
+$$\wavelen{\lambda}_{\text{max}} = \frac{348.7 \text{ m/s}}{20 \text{ Hz}} = 17.4 \text{ m} \approx 20 \text{ m}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Minimum wavelength (highest frequency):}
-$$\lambda_{\text{min}} = \frac{348.7 \text{ m/s}}{20,000 \text{ Hz}} = 0.017 \text{ m} \approx 2 \text{ cm}$$
+\textbf{Minimum \wavelen{wavelength} (highest \freq{frequency}):}
+$$\wavelen{\lambda}_{\text{min}} = \frac{348.7 \text{ m/s}}{20,000 \text{ Hz}} = 0.017 \text{ m} \approx 2 \text{ cm}$$
 
 \pause
 \textbf{Check:} Deep bass (20 Hz) has wavelength of a bus. High treble (20 kHz) is the size of your thumb.
@@ -388,7 +389,7 @@ Loudness relates to how energetically the source vibrates.
 
 \pause
 \begin{exampleblock}{The Connection}
-Louder sound = greater amplitude = more energy transferred
+Louder sound = greater \amplitude{amplitude} = more energy transferred
 \end{exampleblock}
 \note{[P0][Fig 14.9: Multiple lanes of traffic] "Crowded roadway - hard to hear without shouting. Teaching hint: Ask students why city streets require louder voices - background noise masks softer sounds, demonstrating competition between sound sources"\\\\
 [P1] "Loudness relates to energy of vibration"\\\\
@@ -401,26 +402,26 @@ Louder sound = greater amplitude = more energy transferred
 \frametitle{14.2 Sound Intensity}
 \begin{block}{Universal Law: Intensity}
 \begin{center}
-$I = \frac{P}{A}$
+$\intensity{I} = \frac{\power{P}}{\area{A}}$
 \end{center}
-Intensity equals power per unit area.
+\intensity{Intensity} equals \power{power} per unit \area{area}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{itemize}
-\item $I$ = intensity (W/m$^2$) - energy flow per area
-\item $P$ = power (W) - rate of energy transfer
-\item $A$ = area (m$^2$) - surface through which wave passes
+\item $\intensity{I}$ = \intensity{intensity} (W/m$^2$) - energy flow per area
+\item $\power{P}$ = \power{power} (W) - rate of energy transfer
+\item $\area{A}$ = \area{area} (m$^2$) - surface through which wave passes
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Key insight:} $I \propto (\Delta p)^2$ where $\Delta p$ is pressure amplitude.
+\textbf{Key insight:} $\intensity{I} \propto (\Delta p)^2$ where $\Delta p$ is pressure \amplitude{amplitude}.
 
-Intensity is proportional to amplitude squared!
+\intensity{Intensity} is proportional to \amplitude{amplitude} squared!
 \note{[P0][Fig 14.7: A tuning fork vibrates back and forth] [THE REVELATION] "Intensity is power per area. Teaching hint: Spherical wave spreading means area grows as r-squared, so intensity drops as 1/r-squared. Connect to inverse square law from gravity and light"\\\\
 [P1] "Power is rate of energy transfer, area is surface"\\\\
 [P2] "Intensity proportional to amplitude squared"\\\\
@@ -437,7 +438,7 @@ Intensity is proportional to amplitude squared!
 \end{figure}
 
 \pause
-More intense sound has larger pressure maxima and minima, greater forces on objects.
+More \intensity{intense} sound has larger pressure maxima and minima, greater forces on objects.
 \note{[P0][Fig 14.10: This figure has two panels - bird chirping at low and high volume] "Two sound waves with different intensities. Teaching hint: Upper panel (quiet) has small pressure amplitude, lower panel (loud) has large amplitude. Same frequency, different intensity. Students conflate pitch and loudness - use this to separate the concepts"\\\\
 [P1] "More intense sound has larger amplitude oscillations"\\\\
 - Greater pressure variations mean larger forces\\\\
@@ -448,21 +449,21 @@ More intense sound has larger pressure maxima and minima, greater forces on obje
 \begin{frame}
 \frametitle{14.2 Why Decibels?}
 \begin{alertblock}{Civilian View vs. Reality}
-\textbf{Civilian:} "Intensity in W/m$^2$ makes sense."\\
+\textbf{Civilian:} "\intensity{Intensity} in W/m$^2$ makes sense."\\
 \textbf{Physicist:} "Human ears perceive logarithmically, not linearly."
 \end{alertblock}
 
 \pause
 \vspace{0.3cm}
 
-Ears respond to RATIO of intensities, not difference.
+Ears respond to RATIO of \intensity{intensities}, not difference.
 
 \pause
 \begin{block}{The Decibel Scale}
 \begin{center}
-$\beta \text{ (dB)} = 10 \log_{10}\left(\frac{I}{I_0}\right)$
+$\intensity{\beta} \text{ (dB)} = 10 \log_{10}\left(\frac{\intensity{I}}{\intensity{I}_0}\right)$
 \end{center}
-where $I_0 = 10^{-12}$ W/m$^2$ (threshold of human hearing)
+where $\intensity{I}_0 = 10^{-12}$ W/m$^2$ (threshold of human hearing)
 \end{block}
 \note{[P0] [THE CONFLICT] "W/m squared is SI unit, but not how ears work"\\\\
 [P1] "Ears respond to RATIO - logarithmic perception"\\\\
@@ -477,9 +478,9 @@ where $I_0 = 10^{-12}$ W/m$^2$ (threshold of human hearing)
 \textbf{Key patterns:}
 
 \begin{itemize}
-\item Each factor of 10 in intensity = 10 dB \pause
-\item 90 dB is $10^3$ times more intense than 60 dB \pause
-\item Doubling intensity adds about 3 dB \pause
+\item Each factor of 10 in \intensity{intensity} = 10 dB \pause
+\item 90 dB is $10^3$ times more \intensity{intense} than 60 dB \pause
+\item Doubling \intensity{intensity} adds about 3 dB \pause
 \item 0 dB = threshold of hearing ($10^{-12}$ W/m$^2$)
 \end{itemize}
 
@@ -505,19 +506,19 @@ where $I_0 = 10^{-12}$ W/m$^2$ (threshold of human hearing)
 \begin{frame}
 \frametitle{Attempt: Calculating Decibels}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-A sound wave in air at 0$^\circ$C has pressure amplitude 0.656 Pa. Calculate the sound intensity level in decibels.
+A sound wave in air at 0$^\circ$C has pressure \amplitude{amplitude} 0.656 Pa. Calculate the sound \intensity{intensity} level in decibels.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
 \item $\Delta p = 0.656$ Pa
-\item $v = 331$ m/s (air at 0$^\circ$C)
-\item $\rho = 1.29$ kg/m$^3$ (air density)
-\item $I_0 = 10^{-12}$ W/m$^2$
+\item $\vel{v} = 331$ m/s (air at 0$^\circ$C)
+\item $\density{\rho} = 1.29$ kg/m$^3$ (air \density{density})
+\item $\intensity{I}_0 = 10^{-12}$ W/m$^2$
 \end{itemize}
 
-\textbf{Find:} $\beta$ in dB
+\textbf{Find:} $\intensity{\beta}$ in dB
 
 \vspace{0.3cm}
 
@@ -538,9 +539,9 @@ A sound wave in air at 0$^\circ$C has pressure amplitude 0.656 Pa. Calculate the
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What formula did you use to find intensity from pressure?
+\item What formula did you use to find \intensity{intensity} from pressure?
 \item What values did you substitute?
-\item What formula converts intensity to decibels?
+\item What formula converts \intensity{intensity} to decibels?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -560,21 +561,21 @@ A sound wave in air at 0$^\circ$C has pressure amplitude 0.656 Pa. Calculate the
 
 \vspace{0.2cm}
 
-\textbf{Step 1 - Find intensity:} $I = \frac{(\Delta p)^2}{2\rho v}$
+\textbf{Step 1 - Find \intensity{intensity}:} $\intensity{I} = \frac{(\Delta p)^2}{2\density{\rho} \vel{v}}$
 
 \pause
-$$I = \frac{(0.656 \text{ Pa})^2}{2(1.29 \text{ kg/m}^3)(331 \text{ m/s})} = 5.04 \times 10^{-4} \text{ W/m}^2$$
+$$\intensity{I} = \frac{(0.656 \text{ Pa})^2}{2(1.29 \text{ kg/m}^3)(331 \text{ m/s})} = 5.04 \times 10^{-4} \text{ W/m}^2$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2 - Convert to decibels:} $\beta = 10\log_{10}\left(\frac{I}{I_0}\right)$
+\textbf{Step 2 - Convert to decibels:} $\intensity{\beta} = 10\log_{10}\left(\frac{\intensity{I}}{\intensity{I}_0}\right)$
 
 \pause
-$$\beta = 10\log_{10}\left(\frac{5.04 \times 10^{-4}}{10^{-12}}\right) = 10\log_{10}(5.04 \times 10^8)$$
+$$\intensity{\beta} = 10\log_{10}\left(\frac{5.04 \times 10^{-4}}{10^{-12}}\right) = 10\log_{10}(5.04 \times 10^8)$$
 
 \pause
-$$\boxed{\beta = 87.0 \text{ dB}}$$
+$$\boxed{\intensity{\beta} = 87.0 \text{ dB}}$$
 
 \pause
 \textbf{Check:} 87 dB is about as loud as heavy traffic - reasonable.
@@ -687,7 +688,7 @@ Observer on left: longer $\lambda$, lower $f$
 \frametitle{14.3 The Doppler Effect Formula}
 \begin{block}{For Moving Source, Stationary Observer}
 \begin{center}
-$f_{\text{obs}} = f_s\left(\frac{v_w}{v_w \pm v_s}\right)$
+$\freq{f}_{\text{obs}} = \freq{f}_s\left(\frac{\vel{v}_w}{\vel{v}_w \pm \vel{v}_s}\right)$
 \end{center}
 Use minus for motion toward observer, plus for motion away.
 \end{block}
@@ -697,8 +698,8 @@ Use minus for motion toward observer, plus for motion away.
 
 \textbf{Intuition check:}
 \begin{itemize}
-\item Source approaching: denominator smaller $\rightarrow$ frequency higher
-\item Source receding: denominator larger $\rightarrow$ frequency lower
+\item Source approaching: denominator smaller $\rightarrow$ \freq{frequency} higher
+\item Source receding: denominator larger $\rightarrow$ \freq{frequency} lower
 \end{itemize}
 \note{[P0] [THE REVELATION] "Observed frequency depends on source motion"\\\\
 [P1] "Approaching: minus sign makes denominator smaller, frequency higher"\\\\
@@ -709,15 +710,15 @@ Use minus for motion toward observer, plus for motion away.
 
 \begin{frame}
 \frametitle{14.3 Sonic Booms}
-What happens when source speed approaches sound speed?
+What happens when source \vel{speed} approaches sound \vel{speed}?
 
 \pause
 \vspace{0.3cm}
 
-As $v_s \rightarrow v_w$, denominator in $f_{\text{obs}} = f_s\left(\frac{v_w}{v_w - v_s}\right)$ approaches zero...
+As $\vel{v}_s \rightarrow \vel{v}_w$, denominator in $\freq{f}_{\text{obs}} = \freq{f}_s\left(\frac{\vel{v}_w}{\vel{v}_w - \vel{v}_s}\right)$ approaches zero...
 
 \pause
-Observed frequency approaches infinity!
+Observed \freq{frequency} approaches infinity!
 
 \pause
 \vspace{0.3cm}
@@ -725,7 +726,7 @@ Observed frequency approaches infinity!
 \begin{block}{Sonic Boom}
 Constructive interference of sound created by object moving faster than sound.
 
-All waves superimpose at same instant $\rightarrow$ huge amplitude $\rightarrow$ BOOM!
+All waves superimpose at same instant $\rightarrow$ huge \amplitude{amplitude} $\rightarrow$ BOOM!
 \end{block}
 \note{[P0] "What happens at speed of sound?"\\\\
 [P1] "Denominator approaches zero"\\\\
@@ -761,12 +762,12 @@ A train has 150 Hz horn and moves at 35 m/s. Speed of sound is 340 m/s. What fre
 
 \textbf{Given:}
 \begin{itemize}
-\item $f_s = 150$ Hz
-\item $v_s = 35$ m/s
-\item $v_w = 340$ m/s
+\item $\freq{f}_s = 150$ Hz
+\item $\vel{v}_s = 35$ m/s
+\item $\vel{v}_w = 340$ m/s
 \end{itemize}
 
-\textbf{Find:} $f_{\text{obs, approaching}}$ and $f_{\text{obs, receding}}$
+\textbf{Find:} $\freq{f}_{\text{obs, approaching}}$ and $\freq{f}_{\text{obs, receding}}$
 
 \vspace{0.3cm}
 
@@ -810,18 +811,18 @@ A train has 150 Hz horn and moves at 35 m/s. Speed of sound is 340 m/s. What fre
 
 \vspace{0.3cm}
 
-\textbf{Approaching (use minus):} $f_{\text{obs}} = f_s\left(\frac{v_w}{v_w - v_s}\right)$
+\textbf{Approaching (use minus):} $\freq{f}_{\text{obs}} = \freq{f}_s\left(\frac{\vel{v}_w}{\vel{v}_w - \vel{v}_s}\right)$
 
 \pause
-$$f_{\text{obs}} = 150\left(\frac{340}{340-35}\right) = 150\left(\frac{340}{305}\right) = 167 \text{ Hz} \approx 170 \text{ Hz}$$
+$$\freq{f}_{\text{obs}} = 150\left(\frac{340}{340-35}\right) = 150\left(\frac{340}{305}\right) = 167 \text{ Hz} \approx 170 \text{ Hz}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Receding (use plus):} $f_{\text{obs}} = f_s\left(\frac{v_w}{v_w + v_s}\right)$
+\textbf{Receding (use plus):} $\freq{f}_{\text{obs}} = \freq{f}_s\left(\frac{\vel{v}_w}{\vel{v}_w + \vel{v}_s}\right)$
 
 \pause
-$$f_{\text{obs}} = 150\left(\frac{340}{340+35}\right) = 150\left(\frac{340}{375}\right) = 136 \text{ Hz} \approx 140 \text{ Hz}$$
+$$\freq{f}_{\text{obs}} = 150\left(\frac{340}{340+35}\right) = 150\left(\frac{340}{375}\right) = 136 \text{ Hz} \approx 140 \text{ Hz}$$
 
 \pause
 \textbf{Check:} Shift up by 20 Hz, down by 10 Hz. Asymmetric - correct!
@@ -855,7 +856,7 @@ $$f_{\text{obs}} = 150\left(\frac{340}{340+35}\right) = 150\left(\frac{340}{375}
 \begin{frame}
 \frametitle{14.4 Resonance}
 \begin{block}{Universal Law: Resonance}
-Systems oscillate best at their natural frequency. Driving a system at its natural frequency produces resonance.
+Systems oscillate best at their natural \freq{frequency}. Driving a system at its natural \freq{frequency} produces resonance.
 \end{block}
 
 \pause
@@ -863,14 +864,14 @@ Systems oscillate best at their natural frequency. Driving a system at its natur
 
 \textbf{Examples:}
 \begin{itemize}
-\item Piano strings vibrate when you sing at their frequency \pause
-\item Child on swing pushed at swing's natural frequency \pause
-\item Tuning fork and air column resonate at matching frequency
+\item Piano strings vibrate when you sing at their \freq{frequency} \pause
+\item Child on swing pushed at swing's natural \freq{frequency} \pause
+\item Tuning fork and air column resonate at matching \freq{frequency}
 \end{itemize}
 
 \pause
 \begin{exampleblock}{The Mental Model}
-Resonance is when driving frequency matches natural frequency, creating maximum energy transfer.
+Resonance is when driving \freq{frequency} matches natural \freq{frequency}, creating maximum energy transfer.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "Resonance: driving at natural frequency"\\\\
 [P1] "Piano strings sing back at you"\\\\
@@ -888,10 +889,10 @@ Resonance is when driving frequency matches natural frequency, creating maximum 
 \end{figure}
 
 \pause
-Move finger at ball's natural frequency $\rightarrow$ amplitude grows dramatically
+Move finger at ball's natural \freq{frequency} $\rightarrow$ \amplitude{amplitude} grows dramatically
 
 \pause
-Move too slow or too fast $\rightarrow$ amplitude stays small
+Move too slow or too fast $\rightarrow$ \amplitude{amplitude} stays small
 \note{[P0][Fig 14.18: A ball bobs up and down with the greatest amplitude when the finger drives its oscillation] "Paddle ball on elastic band - resonance demonstration. Teaching hint: Let students try this - they feel the difference between on-resonance and off-resonance driving. Kinesthetic learning cements concept better than equations. Connect to pushing swing at right tempo"\\\\
 [P1] "At natural frequency, amplitude increases with each cycle"\\\\
 [P2] "Away from natural frequency, little response"\\\\
@@ -903,18 +904,18 @@ Move too slow or too fast $\rightarrow$ amplitude stays small
 \begin{frame}
 \frametitle{14.4 Beat Frequency}
 \begin{block}{Beats from Superposition}
-Two waves with slightly different frequencies superimpose $\rightarrow$ alternating constructive and destructive interference $\rightarrow$ amplitude varies in time.
+Two waves with slightly different \freq{frequencies} superimpose $\rightarrow$ alternating constructive and destructive interference $\rightarrow$ \amplitude{amplitude} varies in time.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{center}
-$f_B = |f_1 - f_2|$
+$\freq{f}_B = |\freq{f}_1 - \freq{f}_2|$
 \end{center}
 
 \pause
-You hear average frequency getting louder and softer at beat frequency.
+You hear average \freq{frequency} getting louder and softer at beat \freq{frequency}.
 \note{[P0] [THE REVELATION] "Beats: interference pattern in time"\\\\
 [P1] "Beat frequency equals difference of frequencies"\\\\
 [P2] "Hear average pitch wobbling at beat rate"\\\\
@@ -931,7 +932,7 @@ You hear average frequency getting louder and softer at beat frequency.
 \end{figure}
 
 \pause
-Amplitude oscillates at beat frequency while wave oscillates at average frequency.
+\amplitude{Amplitude} oscillates at beat \freq{frequency} while wave oscillates at average \freq{frequency}.
 \note{[P0][Fig 14.20: Wave 1 and wave 2 have different frequencies] "Superposition of two slightly different frequencies produces resultant wave with varying amplitude. Teaching hint: Play two tuning forks with close frequencies (e.g., 256 Hz and 260 Hz) - students can HEAR the 4 Hz beating. Connects visual math to audible phenomenon"\\\\
 [P1] "Amplitude envelope oscillates at beat frequency"\\\\
 - Constructive interference: amplitude maximum\\\\
@@ -953,7 +954,7 @@ Closed end: node (no displacement)
 Open end: antinode (maximum displacement)
 
 \pause
-Fundamental: $\lambda = 4L$ so $f_1 = \frac{v}{4L}$
+Fundamental: $\wavelen{\lambda} = 4\disp{L}$ so $\freq{f}_1 = \frac{\vel{v}}{4\disp{L}}$
 \note{[P0][Fig 14.23: The disturbance is at maximum displacement as it reaches the opening of the tube] "Tube closed at one end - fundamental mode shown. Teaching hint: Use hand gestures - closed fist for node (no motion), open palm for antinode (max motion). Students confuse nodes/antinodes - physical analogy helps. Quarter-wave resonator is minimum length for standing wave"\\\\
 [P1] "Closed end has node, open end has antinode"\\\\
 [P2] "Fundamental wavelength is 4 times length"\\\\
@@ -971,7 +972,7 @@ Fundamental: $\lambda = 4L$ so $f_1 = \frac{v}{4L}$
 \end{figure}
 
 \pause
-\textbf{Closed-pipe resonator:} $f_n = n\frac{v}{4L}$ where $n = 1, 3, 5, \ldots$
+\textbf{Closed-pipe resonator:} $\freq{f}_n = n\frac{\vel{v}}{4\disp{L}}$ where $n = 1, 3, 5, \ldots$
 
 Only odd harmonics!
 \note{[P0][Fig 14.26: The fundamental has a wavelength of 4L] "Fundamental and first three overtones for closed pipe. Teaching hint: Have students trace the standing wave patterns - count nodes and antinodes. Common misconception: students expect even harmonics. Emphasize boundary constraint: closed end MUST be node, open end MUST be antinode - only odd n satisfies both"\\\\
@@ -993,7 +994,7 @@ Only odd harmonics!
 Both ends: antinodes (maximum displacement)
 
 \pause
-\textbf{Open-pipe resonator:} $f_n = n\frac{v}{2L}$ where $n = 1, 2, 3, \ldots$
+\textbf{Open-pipe resonator:} $\freq{f}_n = n\frac{\vel{v}}{2\disp{L}}$ where $n = 1, 2, 3, \ldots$
 
 All harmonics!
 \note{[P0][Fig 14.27: The fundamental frequency is v/2L and has a wavelength of 2L] "Tube open at both ends - showing fundamental and first three overtones. Teaching hint: Compare side-by-side with Fig 14.26 (closed pipe) - students see graphically why open pipe has twice the fundamental frequency and all harmonics vs only odd. Boundary symmetry (antinode-antinode) vs asymmetry (node-antinode) determines harmonic series"\\\\
@@ -1014,11 +1015,11 @@ Sound travels at 344 m/s. What length should a tube closed at one end have for f
 
 \textbf{Given:}
 \begin{itemize}
-\item $f_1 = 128$ Hz (fundamental)
-\item $v = 344$ m/s
+\item $\freq{f}_1 = 128$ Hz (fundamental)
+\item $\vel{v} = 344$ m/s
 \end{itemize}
 
-\textbf{Find:} Length $L$
+\textbf{Find:} \disp{Length} $\disp{L}$
 
 \vspace{0.3cm}
 
@@ -1041,7 +1042,7 @@ Sound travels at 344 m/s. What length should a tube closed at one end have for f
 \begin{enumerate}
 \item Closed pipe or open pipe formula?
 \item What is $n$ for the fundamental?
-\item How did you solve for length $L$?
+\item How did you solve for \disp{length} $\disp{L}$?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -1061,16 +1062,16 @@ Sound travels at 344 m/s. What length should a tube closed at one end have for f
 
 \vspace{0.3cm}
 
-\textbf{Closed-pipe formula:} $f_n = n\frac{v}{4L}$ with $n = 1$ for fundamental
+\textbf{Closed-pipe formula:} $\freq{f}_n = n\frac{\vel{v}}{4\disp{L}}$ with $n = 1$ for fundamental
 
 \pause
-$$f_1 = \frac{v}{4L}$$
+$$\freq{f}_1 = \frac{\vel{v}}{4\disp{L}}$$
 
 \pause
-\textbf{Solve for L:} $L = \frac{v}{4f_1}$
+\textbf{Solve for \disp{L}:} $\disp{L} = \frac{\vel{v}}{4\freq{f}_1}$
 
 \pause
-$$L = \frac{344 \text{ m/s}}{4(128 \text{ Hz})} = \frac{344}{512} = \boxed{0.672 \text{ m} = 67.2 \text{ cm}}$$
+$$\disp{L} = \frac{344 \text{ m/s}}{4(128 \text{ Hz})} = \frac{344}{512} = \boxed{0.672 \text{ m} = 67.2 \text{ cm}}$$
 
 \pause
 \textbf{Check:} About 2 feet - reasonable for a musical instrument.
@@ -1089,11 +1090,11 @@ $$L = \frac{344 \text{ m/s}}{4(128 \text{ Hz})} = \frac{344}{512} = \boxed{0.672
 \begin{block}{The Revelations}
 \begin{enumerate}
 \item Sound = matter disturbed, propagating as longitudinal wave \pause
-\item $v = f\lambda$ connects speed, pitch, and wavelength \pause
-\item Intensity $\propto$ amplitude$^2$, measured in decibels \pause
-\item Doppler effect: motion changes observed frequency \pause
-\item Resonance: driving at natural frequency maximizes energy \pause
-\item Harmonics: geometry restricts allowed frequencies
+\item $\vel{v} = \freq{f}\wavelen{\lambda}$ connects \vel{speed}, pitch, and \wavelen{wavelength} \pause
+\item \intensity{Intensity} $\propto$ \amplitude{amplitude}$^2$, measured in decibels \pause
+\item Doppler effect: motion changes observed \freq{frequency} \pause
+\item Resonance: driving at natural \freq{frequency} maximizes energy \pause
+\item Harmonics: geometry restricts allowed \freq{frequencies}
 \end{enumerate}
 \end{block}
 \note{[P0] "Six revelations about sound"\\\\
@@ -1109,13 +1110,13 @@ $$L = \frac{344 \text{ m/s}}{4(128 \text{ Hz})} = \frac{344}{512} = \boxed{0.672
 \begin{frame}
 \frametitle{Key Equations}
 \begin{align}
-v &= f\lambda \\
-I &= \frac{P}{A} = \frac{(\Delta p)^2}{2\rho v} \\
-\beta \text{ (dB)} &= 10\log_{10}\left(\frac{I}{I_0}\right) \\
-f_{\text{obs}} &= f_s\left(\frac{v_w}{v_w \pm v_s}\right) \\
-f_B &= |f_1 - f_2| \\
-f_n &= n\frac{v}{4L} \text{ (closed)}, \quad n = 1,3,5,\ldots \\
-f_n &= n\frac{v}{2L} \text{ (open)}, \quad n = 1,2,3,\ldots
+\vel{v} &= \freq{f}\wavelen{\lambda} \\
+\intensity{I} &= \frac{\power{P}}{\area{A}} = \frac{(\Delta p)^2}{2\density{\rho} \vel{v}} \\
+\intensity{\beta} \text{ (dB)} &= 10\log_{10}\left(\frac{\intensity{I}}{\intensity{I}_0}\right) \\
+\freq{f}_{\text{obs}} &= \freq{f}_s\left(\frac{\vel{v}_w}{\vel{v}_w \pm \vel{v}_s}\right) \\
+\freq{f}_B &= |\freq{f}_1 - \freq{f}_2| \\
+\freq{f}_n &= n\frac{\vel{v}}{4\disp{L}} \text{ (closed)}, \quad n = 1,3,5,\ldots \\
+\freq{f}_n &= n\frac{\vel{v}}{2\disp{L}} \text{ (open)}, \quad n = 1,2,3,\ldots
 \end{align}
 \note{- Seven key equations for sound\\\\
 - Wave equation, intensity, decibels, Doppler, beats, harmonics\\\\

@@ -1,39 +1,8 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
-\usepackage{xcolor}
 \graphicspath{{../images/}{../../shared/images/}}
-
-% ============================================
-% SEMANTIC PHYSICS COLOR DEFINITIONS
-% Rule: Every physical concept gets a UNIQUE color
-% ============================================
-\definecolor{pressureColor}{RGB}{0,102,204}      % Blue
-\definecolor{volumeColor}{RGB}{0,170,102}        % Green
-\definecolor{particleColor}{RGB}{136,0,170}      % Purple
-\definecolor{constantColor}{RGB}{204,102,0}      % Orange
-\definecolor{tempColor}{RGB}{204,0,0}            % Red
-\definecolor{forceColor}{RGB}{0,136,136}         % Teal
-\definecolor{areaColor}{RGB}{136,102,68}         % Brown
-\definecolor{workColor}{RGB}{0,136,204}          % Steel Blue (mechanical transfer)
-\definecolor{energyColor}{RGB}{170,136,0}        % Gold (stored energy)
-\definecolor{heatColor}{RGB}{255,102,0}          % Bright Orange (thermal transfer)
-\definecolor{entropyColor}{RGB}{204,0,170}       % Magenta
-
-% ============================================
-% SEMANTIC MACROS - Color by physical meaning
-% ============================================
-\newcommand{\pressure}[1]{\textcolor{pressureColor}{#1}}
-\newcommand{\volume}[1]{\textcolor{volumeColor}{#1}}
-\newcommand{\particles}[1]{\textcolor{particleColor}{#1}}
-\newcommand{\constant}[1]{\textcolor{constantColor}{#1}}
-\newcommand{\temp}[1]{\textcolor{tempColor}{#1}}
-\newcommand{\force}[1]{\textcolor{forceColor}{#1}}
-\newcommand{\area}[1]{\textcolor{areaColor}{#1}}
-\newcommand{\work}[1]{\textcolor{workColor}{#1}}
-\newcommand{\energy}[1]{\textcolor{energyColor}{#1}}
-\newcommand{\heat}[1]{\textcolor{heatColor}{#1}}
-\newcommand{\entropy}[1]{\textcolor{entropyColor}{#1}}
 
 \title[Heat and Work]{PHYS11 CH:12 The Universe's Accounting System}
 \subtitle{How Energy Becomes Unavailable}
@@ -275,9 +244,9 @@ Thermal equilibrium requires \textbf{thermal contact} - ability to freely exchan
 \frametitle{12.2 The Ideal Gas Law}
 \begin{block}{Universal Law: Gas Behavior}
 \begin{center}
-\Large $\boxed{\pressure{P}\volume{V} = \particles{N}\constant{k}\temp{T}}$
+\Large $\boxed{\pressure{P}\volume{V} = \particles{N}\boltz{k}\temp{T}}$
 \end{center}
-\pressure{Pressure} times \volume{volume} equals \particles{particles} times \constant{Boltzmann constant} times \temp{absolute temperature}.
+\pressure{Pressure} times \volume{volume} equals \particles{particles} times \boltz{Boltzmann constant} times \temp{absolute temperature}.
 \end{block}
 
 \pause
@@ -288,7 +257,7 @@ Where:
 \item $\pressure{P}$ = \pressure{pressure} (Pa)
 \item $\volume{V}$ = \volume{volume} (m$^3$)
 \item $\particles{N}$ = \particles{number of particles}
-\item $\constant{k} = 1.38 \times 10^{-23}$ J/K (\constant{Boltzmann constant})
+\item $\boltz{k} = 1.38 \times 10^{-23}$ J/K (\boltz{Boltzmann constant})
 \item $\temp{T}$ = \temp{absolute temperature} (K)
 \end{itemize}
 \note{[P0] [ALGEBRA] "P-V equals N-k-T"\\\\
@@ -305,9 +274,9 @@ For fixed amount of gas:
 \vspace{0.3cm}
 
 \begin{itemize}
-\item \textbf{Constant volume:} $P \propto T$ (pressure rises with temperature) \pause
-\item \textbf{Constant temperature:} $P \propto \frac{1}{V}$ (pressure inverse to volume) \pause
-\item \textbf{Constant pressure:} $V \propto T$ (volume rises with temperature)
+\item \textbf{Constant \volume{volume}:} $\pressure{P} \propto \temp{T}$ (\pressure{pressure} rises with \temp{temperature}) \pause
+\item \textbf{Constant \temp{temperature}:} $\pressure{P} \propto \frac{1}{\volume{V}}$ (\pressure{pressure} inverse to \volume{volume}) \pause
+\item \textbf{Constant \pressure{pressure}:} $\volume{V} \propto \temp{T}$ (\volume{volume} rises with \temp{temperature})
 \end{itemize}
 
 \pause
@@ -332,7 +301,7 @@ Pumping tire: volume increases, then pressure builds, tire warms up.
 \end{figure}
 
 \pause
-(a) Volume increases. (b) Pressure increases. (c) Temperature increases.
+(a) \volume{Volume} increases. (b) \pressure{Pressure} increases. (c) \temp{Temperature} increases.
 \note{[P0] [Fig 12.4: (a) When air is] "Three stages of pumping air into deflated tire"\\\\
 - All three variables P, V, T connected by ideal gas law\\\\
 [P1] "Stage a: volume expands. Stage b: walls resist, pressure rises. Stage c: temp rises"\\\\
@@ -368,9 +337,9 @@ Pumping tire: volume increases, then pressure builds, tire warms up.
 \frametitle{12.2 The First Law of Thermodynamics}
 \begin{block}{Universal Law: Energy Conservation}
 \begin{center}
-\Large $\boxed{\Delta \energy{U} = \heat{Q} - \work{W}}$
+\Large $\boxed{\Delta \internal{U} = \heat{Q} - \work{W}}$
 \end{center}
-Change in \energy{internal energy} equals \heat{heat} added minus \work{work} done by system.
+Change in \internal{internal energy} equals \heat{heat} added minus \work{work} done by system.
 \end{block}
 
 \pause
@@ -378,7 +347,7 @@ Change in \energy{internal energy} equals \heat{heat} added minus \work{work} do
 
 Where:
 \begin{itemize}
-\item $\Delta \energy{U}$ = change in \energy{internal energy}
+\item $\Delta \internal{U}$ = change in \internal{internal energy}
 \item $\heat{Q}$ = net \heat{heat} into system (positive if in, negative if out)
 \item $\work{W}$ = net \work{work} by system (positive if out, negative if in)
 \end{itemize}
@@ -399,7 +368,7 @@ Where:
 \frametitle{12.2 Understanding the Signs}
 \begin{columns}[T]
 \column{0.48\textwidth}
-\textbf{Heat Q:}
+\textbf{\heat{Heat} Q:}
 \begin{itemize}
 \item Positive: flows IN\\(adds energy)
 \item Negative: flows OUT\\(removes energy)
@@ -407,7 +376,7 @@ Where:
 
 \pause
 \column{0.48\textwidth}
-\textbf{Work W:}
+\textbf{\work{Work} W:}
 \begin{itemize}
 \item Positive: done BY system\\(removes energy)
 \item Negative: done ON system\\(adds energy)
@@ -418,7 +387,7 @@ Where:
 \vspace{0.5cm}
 
 \begin{alertblock}{Key Insight}
-Positive $Q$ adds energy. Positive $W$ removes energy.
+Positive $\heat{Q}$ adds energy. Positive $\work{W}$ removes energy.
 \end{alertblock}
 \note{[P0] "Sign conventions critical"\\\\
 [P1] "Q positive: heat in, energy up. Q negative: heat out, energy down"\\\\
@@ -435,7 +404,7 @@ Positive $Q$ adds energy. Positive $W$ removes energy.
 
 \vspace{0.3cm}
 
-$Q$ in adds energy. $W$ out removes energy. $\Delta U$ is net change.
+$\heat{Q}$ in adds energy. $\work{W}$ out removes energy. $\Delta \internal{U}$ is net change.
 \note{[Fig 12.8: Two processes produce same ΔU=9J via different Q,W paths] "System like bank account"\\\\
 - Q is deposits and withdrawals\\\\
 - W is spending\\\\
@@ -452,7 +421,7 @@ Later, 25.0 J heat leaves, 4.0 J work done ON system.
 
 \vspace{0.3cm}
 
-\textbf{Find:} Net change in internal energy $\Delta U$
+\textbf{Find:} Net change in \internal{internal energy} $\Delta \internal{U}$
 
 \vspace{0.3cm}
 
@@ -473,9 +442,9 @@ Later, 25.0 J heat leaves, 4.0 J work done ON system.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item What was net heat $Q$? How calculate?
-\item What was net work $W$? Signs correct?
-\item Did you use $\Delta U = Q - W$?
+\item What was net \heat{heat} $\heat{Q}$? How calculate?
+\item What was net \work{work} $\work{W}$? Signs correct?
+\item Did you use $\Delta \internal{U} = \heat{Q} - \work{W}$?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -495,26 +464,26 @@ Later, 25.0 J heat leaves, 4.0 J work done ON system.
 
 \vspace{0.3cm}
 
-\textbf{Step 1 - Net heat:}
-$$Q = 40.0 \text{ J} - 25.0 \text{ J} = 15.0 \text{ J}$$
+\textbf{Step 1 - Net \heat{heat}:}
+$$\heat{Q} = 40.0 \text{ J} - 25.0 \text{ J} = 15.0 \text{ J}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2 - Net work:}
-$$W = 10.0 \text{ J} - 4.0 \text{ J} = 6.0 \text{ J}$$
+\textbf{Step 2 - Net \work{work}:}
+$$\work{W} = 10.0 \text{ J} - 4.0 \text{ J} = 6.0 \text{ J}$$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Step 3 - First law:}
-$$\Delta U = Q - W = 15.0 \text{ J} - 6.0 \text{ J}$$
+$$\Delta \internal{U} = \heat{Q} - \work{W} = 15.0 \text{ J} - 6.0 \text{ J}$$
 
 \pause
-$$\boxed{\Delta U = 9.0 \text{ J}}$$
+$$\boxed{\Delta \internal{U} = 9.0 \text{ J}}$$
 
 \pause
-\textbf{Check:} More heat in than work out $\rightarrow$ internal energy increases.
+\textbf{Check:} More \heat{heat} in than \work{work} out $\rightarrow$ \internal{internal energy} increases.
 \note{[P0] "Self-correct in different color"\\\\
 [P1] [ALGEBRA] "Net heat: 40 in minus 25 out = 15 J"\\\\
 [P2] "Net work: 10 by minus 4 on = 6 J"\\\\
@@ -531,7 +500,7 @@ $$\boxed{\Delta U = 9.0 \text{ J}}$$
 \end{figure}
 
 \pause
-$$\Delta U = Q - W + \text{food energy}$$
+$$\Delta \internal{U} = \heat{Q} - \work{W} + \text{food energy}$$
 
 \pause
 \begin{itemize}
@@ -655,14 +624,14 @@ For any spontaneous process, total entropy of universe either increases or remai
 \pause
 \vspace{0.3cm}
 
-$$\Delta S_{\text{total}} = \Delta S_{\text{system}} + \Delta S_{\text{env}} \geq 0$$
+$$\Delta \entropy{S}_{\text{total}} = \Delta \entropy{S}_{\text{system}} + \Delta \entropy{S}_{\text{env}} \geq 0$$
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{Key Consequences}
 \begin{itemize}
-\item Heat flows spontaneously hot to cold, never cold to hot
+\item \heat{Heat} flows spontaneously hot to cold, never cold to hot
 \item Energy becomes less available over time
 \item Disorder increases
 \end{itemize}
@@ -683,11 +652,11 @@ $$\Delta S_{\text{total}} = \Delta S_{\text{system}} + \Delta S_{\text{env}} \ge
 \end{figure}
 
 \pause
-\textbf{Why heat flows hot to cold:}\\
-Larger entropy increase at low T than decrease at high T.
+\textbf{Why \heat{heat} flows hot to cold:}\\
+Larger \entropy{entropy} increase at low \temp{T} than decrease at high \temp{T}.
 
 \pause
-$$\Delta S = \frac{Q}{T} \rightarrow \text{smaller } T \text{ means larger } \Delta S$$
+$$\Delta \entropy{S} = \frac{\heat{Q}}{\temp{T}} \rightarrow \text{smaller } \temp{T} \text{ means larger } \Delta \entropy{S}$$
 \note{[P0][Fig 12.10: Heat transfers hot→cold, irreversible processes] "Heat always flows hot to cold - why?"\\\\
 [P1] [ALGEBRA] "Delta S = Q/T. Smaller T = larger delta S"\\\\
 [P2] "Cold gains more entropy than hot loses"\\\\
@@ -781,23 +750,23 @@ Find entropy increase when 1.00 kg ice at $0^\circ$C melts to water at $0^\circ$
 
 \vspace{0.3cm}
 
-\textbf{Step 1 - Heat to melt:}
-$$Q = mL_f = (1.00)(334 \text{ kJ/kg}) = 3.34 \times 10^5 \text{ J}$$
+\textbf{Step 1 - \heat{Heat} to melt:}
+$$\heat{Q} = \mass{m}\specheat{L_f} = (1.00)(334 \text{ kJ/kg}) = 3.34 \times 10^5 \text{ J}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2 - Convert temp:}
-$$T = 0^\circ\text{C} = 273 \text{ K}$$
+\textbf{Step 2 - Convert \temp{temp}:}
+$$\temp{T} = 0^\circ\text{C} = 273 \text{ K}$$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 3 - Entropy:}
-$$\Delta S = \frac{Q}{T} = \frac{3.34 \times 10^5}{273}$$
+\textbf{Step 3 - \entropy{Entropy}:}
+$$\Delta \entropy{S} = \frac{\heat{Q}}{\temp{T}} = \frac{3.34 \times 10^5}{273}$$
 
 \pause
-$$\boxed{\Delta S = 1.22 \times 10^3 \text{ J/K}}$$
+$$\boxed{\Delta \entropy{S} = 1.22 \times 10^3 \text{ J/K}}$$
 
 \pause
 \textbf{Check:} Positive - disorder increased as ice melted.
@@ -864,13 +833,13 @@ Machine that converts thermal energy into mechanical work using heat transfer.
 
 \pause
 \begin{enumerate}
-\item Absorb heat $Q_h$ from hot reservoir
-\item Do work $W$
-\item Reject waste heat $Q_c$ to cold reservoir
+\item Absorb \heat{heat} $\heat{Q_h}$ from hot reservoir
+\item Do \work{work} $\work{W}$
+\item Reject waste \heat{heat} $\heat{Q_c}$ to cold reservoir
 \end{enumerate}
 
 \pause
-$$W = Q_h - Q_c$$
+$$\work{W} = \heat{Q_h} - \heat{Q_c}$$
 \note{[P0][Fig 12.14: Heat Qh from hot reservoir, work W output, waste Qc to cold] "Heat engine operation"\\\\
 [P1] "Take heat from hot, do work, dump waste to cold"\\\\
 [P2] [ALGEBRA] "W = Q_h - Q_c"\\\\
@@ -913,15 +882,15 @@ Efficiency equals useful \work{work} divided by \heat{heat} input.
 
 \begin{frame}
 \frametitle{12.4 Why Engines Cannot Be Perfect}
-\textbf{Perfect efficiency requires:} $Q_c = 0$ (no waste heat)
+\textbf{Perfect efficiency requires:} $\heat{Q_c} = 0$ (no waste \heat{heat})
 
 \pause
 \vspace{0.3cm}
 
 \textbf{But second law says:}
 \begin{itemize}
-\item Entropy must increase
-\item Heat MUST flow to cold reservoir
+\item \entropy{Entropy} must increase
+\item \heat{Heat} MUST flow to cold reservoir
 \item Some energy MUST become unavailable
 \end{itemize}
 
@@ -992,17 +961,17 @@ Coal plant absorbs $2.50 \times 10^{14}$ J, releases $1.48 \times 10^{14}$ J as 
 
 \vspace{0.3cm}
 
-\textbf{(a) Work output:}
-$$W = Q_h - Q_c = 2.50 \times 10^{14} - 1.48 \times 10^{14}$$
+\textbf{(a) \work{Work} output:}
+$$\work{W} = \heat{Q_h} - \heat{Q_c} = 2.50 \times 10^{14} - 1.48 \times 10^{14}$$
 
 \pause
-$$\boxed{W = 1.02 \times 10^{14} \text{ J}}$$
+$$\boxed{\work{W} = 1.02 \times 10^{14} \text{ J}}$$
 
 \pause
 \vspace{0.3cm}
 
 \textbf{(b) Efficiency:}
-$$\text{Eff} = \frac{W}{Q_h} = \frac{1.02 \times 10^{14}}{2.50 \times 10^{14}}$$
+$$\text{Eff} = \frac{\work{W}}{\heat{Q_h}} = \frac{1.02 \times 10^{14}}{2.50 \times 10^{14}}$$
 
 \pause
 $$\boxed{\text{Eff} = 0.408 = 40.8\%}$$
@@ -1025,11 +994,11 @@ $$\boxed{\text{Eff} = 0.408 = 40.8\%}$$
 \end{figure}
 
 \pause
-\textbf{Heat engines in reverse:}
+\textbf{\heat{Heat} engines in reverse:}
 \begin{itemize}
-\item Use work to move heat cold to hot
+\item Use \work{work} to move \heat{heat} cold to hot
 \item Refrigerators cool interior, warm exterior
-\item Heat pumps warm house using outside air
+\item \heat{Heat} pumps warm house using outside air
 \end{itemize}
 \note{[P0][Fig 12.15: Complete heat pump cycle - evaporator, compressor, condenser, valve] "Heat pumps/fridges: engines backward"\\\\
 [P1] "Use work to move heat cold to hot - opposite spontaneous"\\\\
@@ -1045,9 +1014,9 @@ $$\boxed{\text{Eff} = 0.408 = 40.8\%}$$
 \frametitle{What You Now Know}
 \begin{block}{Four Laws of Thermodynamics}
 \begin{enumerate}
-\item \textbf{Zeroth:} Temperature equilibrium transitive \pause
-\item \textbf{First:} Energy conserved: $\Delta U = Q - W$ \pause
-\item \textbf{Second:} Entropy always increases \pause
+\item \textbf{Zeroth:} \temp{Temperature} equilibrium transitive \pause
+\item \textbf{First:} Energy conserved: $\Delta \internal{U} = \heat{Q} - \work{W}$ \pause
+\item \textbf{Second:} \entropy{Entropy} always increases \pause
 \item \textbf{Third:} (Not covered) Absolute zero unreachable
 \end{enumerate}
 \end{block}
@@ -1070,9 +1039,9 @@ Energy conserved, but becomes less useful over time.
 \frametitle{Key Equations}
 \begin{align}
 \pressure{P} &= \frac{\force{F}}{\area{A}} \quad \text{(\pressure{Pressure})} \\
-\pressure{P}\volume{V} &= \particles{N}\constant{k}\temp{T} \quad \text{(Ideal gas)} \\
+\pressure{P}\volume{V} &= \particles{N}\boltz{k}\temp{T} \quad \text{(Ideal gas)} \\
 \work{W} &= \pressure{P}\Delta \volume{V} \quad \text{(\pressure{P}-\volume{V} work)} \\
-\Delta \energy{U} &= \heat{Q} - \work{W} \quad \text{(First law)} \\
+\Delta \internal{U} &= \heat{Q} - \work{W} \quad \text{(First law)} \\
 \Delta \entropy{S} &= \frac{\heat{Q}}{\temp{T}} \quad \text{(\entropy{Entropy})} \\
 \text{Eff} &= \frac{\work{W}}{\heat{Q_h}} \quad \text{(Efficiency)}
 \end{align}
@@ -1091,11 +1060,11 @@ Energy conserved, but becomes less useful over time.
 \pause
 \vspace{0.5cm}
 
-\textbf{Entropy increases:}
+\textbf{\entropy{Entropy} increases:}
 \begin{itemize}
 \item Ice melts, doesn't spontaneously freeze
 \item Gas expands, doesn't spontaneously compress
-\item Engines waste heat - cannot recover
+\item Engines waste \heat{heat} - cannot recover
 \item We age - time cannot run backward
 \end{itemize}
 

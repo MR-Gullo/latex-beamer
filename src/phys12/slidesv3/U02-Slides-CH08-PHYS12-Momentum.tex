@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -79,11 +80,11 @@ Football tackles. Car crashes. Rocket launches.
 
 \begin{frame}
 \frametitle{8.1 Mass in Motion}
-\begin{block}{The Universal Law: Momentum}
+\begin{block}{The Universal Law: \mom{Momentum}}
 \begin{center}
-\Large $\boxed{\vec{p} = m\vec{v}}$
+\Large $\boxed{\vec{\mom{p}} = \mass{m}\vec{\vel{v}}}$
 \end{center}
-Momentum equals mass times velocity. The quantity of motion.
+\mom{Momentum} equals \mass{mass} times \vel{velocity}. The quantity of motion.
 \end{block}
 
 \pause
@@ -91,8 +92,8 @@ Momentum equals mass times velocity. The quantity of motion.
 
 \textbf{Key insights:}
 \begin{itemize}
-\item Directly proportional to mass and velocity \pause
-\item Vector - same direction as velocity \pause
+\item Directly proportional to \mass{mass} and \vel{velocity} \pause
+\item Vector - same direction as \vel{velocity} \pause
 \item SI unit: $\text{kg}\cdot\text{m/s}$
 \end{itemize}
 \note{[P0] [THE REVELATION] "Momentum is mass in motion - p equals m v"\\\\
@@ -105,16 +106,16 @@ Momentum equals mass times velocity. The quantity of motion.
 \begin{frame}
 \frametitle{8.1 The Civilian's Mistake}
 \begin{alertblock}{Civilian View vs. Reality}
-\textbf{Civilian:} "Speed is all that matters in a collision."\\
-\textbf{Physicist:} "Mass matters just as much as velocity."
+\textbf{Civilian:} "\vel{Speed} is all that matters in a collision."\\
+\textbf{Physicist:} "\mass{Mass} matters just as much as \vel{velocity}."
 \end{alertblock}
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{The Mental Model}
-A slow-moving truck can have more momentum than a fast-moving bicycle.\\
-Why? Mass wins.
+A slow-moving truck can have more \mom{momentum} than a fast-moving bicycle.\\
+Why? \mass{Mass} wins.
 \end{exampleblock}
 \note{[P0] [THE CONFLICT] "Civilians think only speed matters"\\\\
 [P1] [THE CONNECTION - Kinetic Archetype] "Think about getting hit by a slow truck versus a fast tennis ball"\\\\
@@ -127,20 +128,20 @@ Why? Mass wins.
 \frametitle{8.1 Newton's Hidden Truth}
 \begin{block}{The Original Second Law}
 \begin{center}
-\Large $\boxed{\vec{F}_{\text{net}} = \frac{\Delta\vec{p}}{\Delta t}}$
+\Large $\boxed{\vec{\force{F}}_{\text{net}} = \frac{\Delta\vec{\mom{p}}}{\Delta \tvar{t}}}$
 \end{center}
-Net force equals the rate of change of momentum.
+Net \force{force} equals the rate of change of \mom{momentum}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-This is actually MORE fundamental than $F = ma$.
+This is actually MORE fundamental than $\force{F} = \mass{m}\accel{a}$.
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Why?} This version works even when mass changes (like rockets burning fuel).
+\textbf{Why?} This version works even when \mass{mass} changes (like rockets burning fuel).
 \note{[P0] [THE REVELATION] "Newton actually wrote his second law in terms of momentum"\\\\
 [P1] "F equals m a is just a special case for constant mass"\\\\
 [P2] "This version works for rockets, which lose mass as they burn fuel"\\\\
@@ -151,21 +152,21 @@ This is actually MORE fundamental than $F = ma$.
 \frametitle{8.1 The Force of Time}
 \begin{block}{The Universal Law: Impulse}
 \begin{center}
-\Large $\boxed{J = \vec{F}_{\text{net}}\Delta t = \Delta\vec{p}}$
+\Large $\boxed{\mom{J} = \vec{\force{F}}_{\text{net}}\Delta \tvar{t} = \Delta\vec{\mom{p}}}$
 \end{center}
-Impulse equals force times time equals change in momentum.
+Impulse equals \force{force} times \tvar{time} equals change in \mom{momentum}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Key insight:} A small force over long time $=$ Large force over short time
+\textbf{Key insight:} A small \force{force} over long \tvar{time} $=$ Large \force{force} over short \tvar{time}
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{In the Real World}
-Airbags increase collision time $\rightarrow$ decrease force on your body.
+Airbags increase collision \tvar{time} $\rightarrow$ decrease \force{force} on your body.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "Impulse: J equals F times delta t equals change in momentum"\\\\
 [P1] "Same momentum change can happen with small force over long time or large force over short time"\\\\
@@ -182,9 +183,9 @@ Airbags increase collision time $\rightarrow$ decrease force on your body.
 \end{figure}
 
 \pause
-\textbf{Physics:} $\vec{F}_{\text{net}} = \frac{\Delta\vec{p}}{\Delta t}$
+\textbf{Physics:} $\vec{\force{F}}_{\text{net}} = \frac{\Delta\vec{\mom{p}}}{\Delta \tvar{t}}$
 
-Increase $\Delta t$ $\rightarrow$ Decrease $\vec{F}_{\text{net}}$
+Increase $\Delta \tvar{t}$ $\rightarrow$ Decrease $\vec{\force{F}}_{\text{net}}$
 \note{[Fig 8.2: Deployed airbag with person in seatbelt] "Critical teaching moment: Airbag extends collision time from ~5ms (dashboard) to ~30ms. Ask students to calculate force reduction ratio (6x safer). Connect to F=Δp/Δt algebraically."\\\\
 [P0] "Airbags and crumple zones: pure impulse-momentum theorem"\\\\
 [P1] "Momentum change is the same either way. But by increasing the time, we decrease the force"\\\\
@@ -203,14 +204,14 @@ Why is this foolish?
 \pause
 \vspace{0.3cm}
 
-\textbf{Answer:} Bending knees increases $\Delta t$, which decreases $F$.
+\textbf{Answer:} Bending knees increases $\Delta \tvar{t}$, which decreases $\force{F}$.
 
 \pause
 \vspace{0.3cm}
 
 \begin{exampleblock}{The Mental Model}
-Stiff legs: short collision time $\rightarrow$ HUGE force on bones.\\
-Bent knees: long collision time $\rightarrow$ smaller force, no injury.
+Stiff legs: short collision \tvar{time} $\rightarrow$ HUGE \force{force} on bones.\\
+Bent knees: long collision \tvar{time} $\rightarrow$ smaller \force{force}, no injury.
 \end{exampleblock}
 \note{[P0] [THE CHALLENGE] "Why bend your knees when landing?"\\\\
 [P1] "Bending knees increases the time of impact"\\\\
@@ -228,11 +229,11 @@ A 110 kg football player runs at $8$ m/s.
 
 \textbf{Given:}
 \begin{itemize}
-\item $m = 110$ kg
-\item $v = 8$ m/s
+\item $\mass{m} = 110$ kg
+\item $\vel{v} = 8$ m/s
 \end{itemize}
 
-\textbf{Find:} Momentum $\vec{p}$
+\textbf{Find:} \mom{Momentum} $\vec{\mom{p}}$
 
 \vspace{0.3cm}
 
@@ -254,7 +255,7 @@ A 110 kg football player runs at $8$ m/s.
 \begin{enumerate}
 \item What equation did you use?
 \item Did you include units?
-\item Is momentum a scalar or vector?
+\item Is \mom{momentum} a scalar or vector?
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -274,20 +275,20 @@ A 110 kg football player runs at $8$ m/s.
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $\vec{p} = m\vec{v}$
+\textbf{Equation:} $\vec{\mom{p}} = \mass{m}\vec{\vel{v}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $\vec{p} = (110 \text{ kg})(8 \text{ m/s})$
+\textbf{Substitute:} $\vec{\mom{p}} = (110 \text{ kg})(8 \text{ m/s})$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{\vec{p} = 880 \text{ kg}\cdot\text{m/s}}$$
+$$\boxed{\vec{\mom{p}} = 880 \text{ kg}\cdot\text{m/s}}$$
 
 \pause
-\textbf{Check:} Large mass, moderate speed $\rightarrow$ large momentum. Reasonable!
+\textbf{Check:} Large \mass{mass}, moderate \vel{speed} $\rightarrow$ large \mom{momentum}. Reasonable!
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "p equals m times v"\\\\
 [P2] "110 kilograms times 8 meters per second"\\\\
@@ -304,12 +305,12 @@ Venus Williams hits a 0.057 kg tennis ball. It accelerates from rest to $58$ m/s
 
 \textbf{Given:}
 \begin{itemize}
-\item $m = 0.057$ kg
-\item $v_i = 0$ m/s, $v_f = 58$ m/s
-\item $\Delta t = 5 \times 10^{-3}$ s
+\item $\mass{m} = 0.057$ kg
+\item $\vel{v_i} = 0$ m/s, $\vel{v_f} = 58$ m/s
+\item $\Delta \tvar{t} = 5 \times 10^{-3}$ s
 \end{itemize}
 
-\textbf{Find:} Average force on ball
+\textbf{Find:} Average \force{force} on ball
 
 \textit{Can you decode the power of this serve?}
 \end{exampleblock}
@@ -327,8 +328,8 @@ Venus Williams hits a 0.057 kg tennis ball. It accelerates from rest to $58$ m/s
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item Did you find $\Delta p$ first or jump straight to force?
-\item What's the relationship between impulse and momentum?
+\item Did you find $\Delta \mom{p}$ first or jump straight to \force{force}?
+\item What's the relationship between impulse and \mom{momentum}?
 \item How did you handle the milliseconds?
 \end{enumerate}
 
@@ -346,17 +347,17 @@ Venus Williams hits a 0.057 kg tennis ball. It accelerates from rest to $58$ m/s
 \frametitle{Reveal: The Power Serve}
 \textbf{Self-correct in a different color:}
 
-\textbf{Step 1 - Change in momentum:}
-$$\Delta\vec{p} = m(\vec{v}_f - \vec{v}_i) = (0.057)(58 - 0) = 3.3 \text{ kg}\cdot\text{m/s}$$
+\textbf{Step 1 - Change in \mom{momentum}:}
+$$\Delta\vec{\mom{p}} = \mass{m}(\vec{\vel{v}}_f - \vec{\vel{v}}_i) = (0.057)(58 - 0) = 3.3 \text{ kg}\cdot\text{m/s}$$
 
 \pause
 
-\textbf{Step 2 - Force from impulse:}
-$$\vec{F}_{\text{net}} = \frac{\Delta\vec{p}}{\Delta t} = \frac{3.3}{5 \times 10^{-3}}$$
+\textbf{Step 2 - \force{Force} from impulse:}
+$$\vec{\force{F}}_{\text{net}} = \frac{\Delta\vec{\mom{p}}}{\Delta \tvar{t}} = \frac{3.3}{5 \times 10^{-3}}$$
 
 \pause
 
-$$\boxed{\vec{F}_{\text{net}} = 660 \text{ N}}$$
+$$\boxed{\vec{\force{F}}_{\text{net}} = 660 \text{ N}}$$
 
 \pause
 \textbf{Check:} About 150 pounds of force - that's a powerful serve!
@@ -384,20 +385,20 @@ $$\boxed{\vec{F}_{\text{net}} = 660 \text{ N}}$$
 
 \begin{frame}
 \frametitle{8.2 The Universe's Accounting System}
-\begin{block}{The Universal Law: Conservation of Momentum}
+\begin{block}{The Universal Law: Conservation of \mom{Momentum}}
 For an isolated system:
 \begin{center}
-\Large $\boxed{\vec{p}_{\text{tot}} = \text{constant}}$
+\Large $\boxed{\vec{\mom{p}}_{\text{tot}} = \text{constant}}$
 \end{center}
 or
 \begin{center}
-\Large $\boxed{\vec{p}_{\text{before}} = \vec{p}_{\text{after}}}$
+\Large $\boxed{\vec{\mom{p}}_{\text{before}} = \vec{\mom{p}}_{\text{after}}}$
 \end{center}
-Total momentum is conserved.
+Total \mom{momentum} is conserved.
 \end{block}
 
 \pause
-\textbf{Isolated system:} Net external force is zero.
+\textbf{Isolated system:} Net external \force{force} is zero.
 \note{[P0] [THE REVELATION] "Conservation of momentum: total momentum is constant"\\\\
 [P1] "Works only for isolated systems - no net external force"\\\\
 [THE WONDER] This is one of the deepest laws in physics\\\\
@@ -414,11 +415,11 @@ Total momentum is conserved.
 \end{figure}
 
 \pause
-\textbf{Before:} $\vec{p}_1 + \vec{p}_2 = m_1\vec{v}_1 + m_2\vec{v}_2$
+\textbf{Before:} $\vec{\mom{p}}_1 + \vec{\mom{p}}_2 = \mass{m_1}\vec{\vel{v}}_1 + \mass{m_2}\vec{\vel{v}}_2$
 
-\textbf{After:} $\vec{p}'_1 + \vec{p}'_2 = m_1\vec{v}'_1 + m_2\vec{v}'_2$
+\textbf{After:} $\vec{\mom{p}}'_1 + \vec{\mom{p}}'_2 = \mass{m_1}\vec{\vel{v}}'_1 + \mass{m_2}\vec{\vel{v}}'_2$
 
-\textbf{Conservation:} $m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{v}'_1 + m_2\vec{v}'_2$
+\textbf{Conservation:} $\mass{m_1}\vec{\vel{v}}_1 + \mass{m_2}\vec{\vel{v}}_2 = \mass{m_1}\vec{\vel{v}}'_1 + \mass{m_2}\vec{\vel{v}}'_2$
 \note{[Fig 8.4: Before/after diagram of two cars, showing velocity vectors v₁, v₂, v₁', v₂'] "Use this to introduce vector subscript notation systematically. Trace momentum transfer visually: car 1's lost momentum = car 2's gained momentum. Have students identify which car slows/speeds by comparing vector lengths."\\\\
 - Car 1 slows down, loses momentum\\\\
 - Car 2 speeds up, gains momentum\\\\
@@ -431,7 +432,7 @@ Total momentum is conserved.
 \frametitle{8.2 Why Momentum Seems to Vanish}
 \begin{alertblock}{The Illusion}
 A football player runs into the goalpost and bounces backward.\\
-His momentum changed! Is momentum conserved?
+His \mom{momentum} changed! Is \mom{momentum} conserved?
 \end{alertblock}
 
 \pause
@@ -444,7 +445,7 @@ His momentum changed! Is momentum conserved?
 
 \begin{exampleblock}{The Mental Model}
 Earth recoils backward (imperceptibly) when you push the goalpost.\\
-Player's momentum transfers to the entire planet.
+Player's \mom{momentum} transfers to the entire planet.
 \end{exampleblock}
 \note{[P0] [THE CONFLICT] "Momentum seems to disappear when player hits goalpost"\\\\
 [P1] "Include Earth in the system - momentum is conserved!"\\\\
@@ -461,11 +462,11 @@ Player's momentum transfers to the entire planet.
 \end{figure}
 
 \pause
-\textbf{Angular momentum:} $\vec{L} = I\vec{\omega}$
+\textbf{Angular momentum:} $\vec{L} = I\vec{\angvel{\omega}}$
 
-\textbf{Conservation:} $I_1\omega_1 = I_2\omega_2$
+\textbf{Conservation:} $I_1\angvel{\omega_1} = I_2\angvel{\omega_2}$
 
-Decrease $I$ (pull arms in) $\rightarrow$ Increase $\omega$ (spin faster)
+Decrease $I$ (pull arms in) $\rightarrow$ Increase $\angvel{\omega}$ (spin faster)
 \note{[Fig 8.5: Ice skater in two positions - arms extended (slow spin) vs arms pulled in (fast spin), showing L=Iω equations] "Kinesthetic learning opportunity: Have students stand and spin with arms out, then pull in. They'll feel the speed increase. Connect sensation to I₁ω₁=I₂ω₂. This builds intuition before algebra."\\\\
 [P0] "Angular momentum is the rotational version of linear momentum"\\\\
 [P1] "L equals I omega - moment of inertia times angular velocity"\\\\
@@ -493,21 +494,21 @@ Decrease $I$ (pull arms in) $\rightarrow$ Increase $\omega$ (spin faster)
 \begin{frame}
 \frametitle{8.3 Two Types of Crashes}
 \begin{block}{Elastic Collision}
-Objects bounce off each other. Kinetic energy is conserved.
+Objects bounce off each other. \kenergy{Kinetic energy} is conserved.
 \end{block}
 
 \pause
 
 \begin{block}{Inelastic Collision}
-Objects stick together. Kinetic energy is NOT conserved (converted to heat).
+Objects stick together. \kenergy{Kinetic energy} is NOT conserved (converted to heat).
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{Key Insight}
-Momentum is ALWAYS conserved (if isolated).\\
-Kinetic energy is conserved ONLY in elastic collisions.
+\mom{Momentum} is ALWAYS conserved (if isolated).\\
+\kenergy{Kinetic energy} is conserved ONLY in elastic collisions.
 \end{alertblock}
 \note{[P0] "Elastic: objects bounce, KE conserved"\\\\
 [P1] "Inelastic: objects stick, KE lost as heat"\\\\
@@ -525,12 +526,12 @@ Kinetic energy is conserved ONLY in elastic collisions.
 \end{figure}
 
 \pause
-\textbf{Conservation of momentum:}
-$$m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{v}'_1 + m_2\vec{v}'_2$$
+\textbf{Conservation of \mom{momentum}:}
+$$\mass{m_1}\vec{\vel{v}}_1 + \mass{m_2}\vec{\vel{v}}_2 = \mass{m_1}\vec{\vel{v}}'_1 + \mass{m_2}\vec{\vel{v}}'_2$$
 
 \pause
-\textbf{Conservation of kinetic energy:}
-$$\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m_1v'^2_1 + \frac{1}{2}m_2v'^2_2$$
+\textbf{Conservation of \kenergy{kinetic energy}:}
+$$\frac{1}{2}\mass{m_1}\vel{v_1}^2 + \frac{1}{2}\mass{m_2}\vel{v_2}^2 = \frac{1}{2}\mass{m_1}\vel{v'_1}^2 + \frac{1}{2}\mass{m_2}\vel{v'_2}^2$$
 \note{[Fig 8.6: Before/after elastic collision with two boxes on frictionless surface, showing v₁, v₂, v₁', v₂' vectors] "Emphasize frictionless surface label - this is WHY system is isolated. Point to velocity vectors reversing direction (classic elastic bounce). Use this to contrast with next slide's inelastic collision where vectors don't reverse."\\\\
 [P0] "Elastic collision diagram"\\\\
 [P1] "Momentum conserved: sum of momenta before equals sum after"\\\\
@@ -548,11 +549,11 @@ $$\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m_1v'^2_1 + \frac{1}{2}
 \end{figure}
 
 \pause
-\textbf{Conservation of momentum:}
-$$m_1\vec{v}_1 + m_2\vec{v}_2 = (m_1 + m_2)\vec{v}'$$
+\textbf{Conservation of \mom{momentum}:}
+$$\mass{m_1}\vec{\vel{v}}_1 + \mass{m_2}\vec{\vel{v}}_2 = (\mass{m_1} + \mass{m_2})\vec{\vel{v}}'$$
 
 \pause
-\textbf{Key:} Final velocity $\vec{v}'$ is the same for both objects.
+\textbf{Key:} Final \vel{velocity} $\vec{\vel{v}}'$ is the same for both objects.
 \note{[Fig 8.7: Before/after perfectly inelastic collision, equal-mass boxes stick together, v₁=-v₂ initially, v'=0 finally] "Perfect teaching example: equal masses, equal-opposite velocities → complete stop. Have students predict final velocity BEFORE showing equation. Special case makes conservation visceral: all KE converted to deformation."\\\\
 [P0] "Inelastic collision: objects stick together"\\\\
 [P1] "Momentum still conserved"\\\\
@@ -577,7 +578,7 @@ $\rightarrow$ Inelastic collisions: objects stick together.
 \vspace{0.3cm}
 
 \begin{alertblock}{Common Mistake}
-Don't assume kinetic energy is conserved! Only in elastic collisions.
+Don't assume \kenergy{kinetic energy} is conserved! Only in elastic collisions.
 \end{alertblock}
 \note{- Memory trick helps with terminology\\\\
 - Elastic = bouncy = separate after collision\\\\
@@ -595,11 +596,11 @@ A 70 kg goalie catches a 0.150 kg puck traveling at $35$ m/s. The goalie is init
 
 \textbf{Given:}
 \begin{itemize}
-\item $m_1 = 0.150$ kg, $v_1 = 35$ m/s
-\item $m_2 = 70$ kg, $v_2 = 0$ m/s
+\item $\mass{m_1} = 0.150$ kg, $\vel{v_1} = 35$ m/s
+\item $\mass{m_2} = 70$ kg, $\vel{v_2} = 0$ m/s
 \end{itemize}
 
-\textbf{Find:} Final velocity $v'$ of goalie-plus-puck
+\textbf{Find:} Final \vel{velocity} $\vel{v}'$ of goalie-plus-puck
 
 \textit{Can you predict the recoil?}
 \end{exampleblock}
@@ -636,20 +637,20 @@ A 70 kg goalie catches a 0.150 kg puck traveling at $35$ m/s. The goalie is init
 \frametitle{Reveal: The Recoil}
 \textbf{Self-correct in a different color:}
 
-\textbf{Conservation of momentum (inelastic):}
-$$m_1v_1 + m_2v_2 = (m_1 + m_2)v'$$
+\textbf{Conservation of \mom{momentum} (inelastic):}
+$$\mass{m_1}\vel{v_1} + \mass{m_2}\vel{v_2} = (\mass{m_1} + \mass{m_2})\vel{v}'$$
 
 \pause
 
-\textbf{Substitute ($v_2 = 0$):}
-$$v' = \frac{m_1v_1}{m_1 + m_2} = \frac{(0.150)(35)}{0.150 + 70}$$
+\textbf{Substitute ($\vel{v_2} = 0$):}
+$$\vel{v}' = \frac{\mass{m_1}\vel{v_1}}{\mass{m_1} + \mass{m_2}} = \frac{(0.150)(35)}{0.150 + 70}$$
 
 \pause
 
-$$\boxed{v' = 0.075 \text{ m/s}}$$
+$$\boxed{\vel{v}' = 0.075 \text{ m/s}}$$
 
 \pause
-\textbf{Check:} Tiny recoil - goalie is much more massive than puck!
+\textbf{Check:} Tiny recoil - goalie is much more \mass{massive} than puck!
 \note{[P0] "Inelastic collision equation"\\\\
 [P1] [ALGEBRA] "v-prime equals m1 v1 over (m1 plus m2)"\\\\
 [P2] "Plug in values"\\\\
@@ -666,11 +667,11 @@ Cart 1 (0.350 kg) moving at $2$ m/s collides with cart 2 (0.500 kg) moving at $-
 
 \textbf{Given:}
 \begin{itemize}
-\item $m_1 = 0.350$ kg, $v_1 = 2$ m/s, $v'_1 = -4$ m/s
-\item $m_2 = 0.500$ kg, $v_2 = -0.5$ m/s
+\item $\mass{m_1} = 0.350$ kg, $\vel{v_1} = 2$ m/s, $\vel{v'_1} = -4$ m/s
+\item $\mass{m_2} = 0.500$ kg, $\vel{v_2} = -0.5$ m/s
 \end{itemize}
 
-\textbf{Find:} Final velocity $v'_2$ of cart 2
+\textbf{Find:} Final \vel{velocity} $\vel{v'_2}$ of cart 2
 \end{exampleblock}
 \note{[THE CHALLENGE] Elastic collision - solve for unknown final velocity\\\\
 [SAY] "Use conservation of momentum. This is the hardest one yet."\\\\
@@ -704,21 +705,21 @@ Cart 1 (0.350 kg) moving at $2$ m/s collides with cart 2 (0.500 kg) moving at $-
 \frametitle{Reveal: The Ricochet}
 \textbf{Self-correct in a different color:}
 
-\textbf{Conservation of momentum:}
-$$m_1v_1 + m_2v_2 = m_1v'_1 + m_2v'_2$$
+\textbf{Conservation of \mom{momentum}:}
+$$\mass{m_1}\vel{v_1} + \mass{m_2}\vel{v_2} = \mass{m_1}\vel{v'_1} + \mass{m_2}\vel{v'_2}$$
 
 \pause
 
-\textbf{Solve for $v'_2$:}
-$$v'_2 = \frac{m_1v_1 + m_2v_2 - m_1v'_1}{m_2}$$
+\textbf{Solve for $\vel{v'_2}$:}
+$$\vel{v'_2} = \frac{\mass{m_1}\vel{v_1} + \mass{m_2}\vel{v_2} - \mass{m_1}\vel{v'_1}}{\mass{m_2}}$$
 
 \pause
 
 \textbf{Substitute:}
-$$v'_2 = \frac{(0.350)(2) + (0.500)(-0.5) - (0.350)(-4)}{0.500} = 3.7 \text{ m/s}$$
+$$\vel{v'_2} = \frac{(0.350)(2) + (0.500)(-0.5) - (0.350)(-4)}{0.500} = 3.7 \text{ m/s}$$
 
 \pause
-\textbf{Check:} Positive velocity means cart 2 moves to the right after collision.
+\textbf{Check:} Positive \vel{velocity} means cart 2 moves to the right after collision.
 \note{[P0] "Standard momentum conservation"\\\\
 [P1] [ALGEBRA] "Rearrange to solve for v2-prime"\\\\
 [P2] "Careful with signs: negative 0.5 and negative 4"\\\\
@@ -737,9 +738,9 @@ $$v'_2 = \frac{(0.350)(2) + (0.500)(-0.5) - (0.350)(-4)}{0.500} = 3.7 \text{ m/s
 \pause
 \textbf{Strategy:} Break into components.
 
-\textbf{$x$-direction:} $m_1v_1 = m_1v'_1\cos\theta_1 + m_2v'_2\cos\theta_2$
+\textbf{$x$-direction:} $\mass{m_1}\vel{v_1} = \mass{m_1}\vel{v'_1}\cos\angle{\theta_1} + \mass{m_2}\vel{v'_2}\cos\angle{\theta_2}$
 
-\textbf{$y$-direction:} $0 = m_1v'_1\sin\theta_1 + m_2v'_2\sin\theta_2$
+\textbf{$y$-direction:} $0 = \mass{m_1}\vel{v'_1}\sin\angle{\theta_1} + \mass{m_2}\vel{v'_2}\sin\angle{\theta_2}$
 \note{[Fig 8.8: 2D collision with m₁ hitting stationary m₂, both scatter at angles θ₁ and θ₂] "Component method scaffolding: Draw x/y axes on board, have students identify which velocity vectors contribute to x-direction (cosine terms) vs y-direction (sine terms). Note m₂ initially at rest simplifies y-equation to zero."\\\\
 [P0] "2D collisions are more complex"\\\\
 [P1] "Break momentum into x and y components"\\\\
@@ -754,13 +755,13 @@ $$v'_2 = \frac{(0.350)(2) + (0.500)(-0.5) - (0.350)(-4)}{0.500} = 3.7 \text{ m/s
 \frametitle{What You Now Know}
 \begin{block}{The Revelations}
 \begin{enumerate}
-\item Momentum $\vec{p} = m\vec{v}$ - mass in motion \pause
-\item Impulse $J = \vec{F}\Delta t = \Delta\vec{p}$ - force over time changes momentum \pause
-\item Newton's second law: $\vec{F} = \Delta\vec{p}/\Delta t$ - the original form \pause
-\item Conservation: $\vec{p}_{\text{tot}} = \text{constant}$ in isolated systems \pause
-\item Elastic collisions: objects bounce, KE conserved \pause
-\item Inelastic collisions: objects stick, KE lost \pause
-\item Momentum ALWAYS conserved (if isolated)
+\item \mom{Momentum} $\vec{\mom{p}} = \mass{m}\vec{\vel{v}}$ - \mass{mass} in motion \pause
+\item Impulse $\mom{J} = \vec{\force{F}}\Delta \tvar{t} = \Delta\vec{\mom{p}}$ - \force{force} over \tvar{time} changes \mom{momentum} \pause
+\item Newton's second law: $\vec{\force{F}} = \Delta\vec{\mom{p}}/\Delta \tvar{t}$ - the original form \pause
+\item Conservation: $\vec{\mom{p}}_{\text{tot}} = \text{constant}$ in isolated systems \pause
+\item Elastic collisions: objects bounce, \kenergy{KE} conserved \pause
+\item Inelastic collisions: objects stick, \kenergy{KE} lost \pause
+\item \mom{Momentum} ALWAYS conserved (if isolated)
 \end{enumerate}
 \end{block}
 \note{[P0] "Seven revelations today"\\\\
@@ -776,12 +777,12 @@ $$v'_2 = \frac{(0.350)(2) + (0.500)(-0.5) - (0.350)(-4)}{0.500} = 3.7 \text{ m/s
 \begin{frame}
 \frametitle{Key Equations}
 \begin{align}
-\vec{p} &= m\vec{v} \\
-\vec{F}_{\text{net}} &= \frac{\Delta\vec{p}}{\Delta t} \\
-J &= \vec{F}_{\text{net}}\Delta t = \Delta\vec{p} \\
-\vec{p}_{\text{tot}} &= \text{constant (isolated system)} \\
-m_1v_1 + m_2v_2 &= m_1v'_1 + m_2v'_2 \text{ (elastic)} \\
-m_1v_1 + m_2v_2 &= (m_1 + m_2)v' \text{ (inelastic)}
+\vec{\mom{p}} &= \mass{m}\vec{\vel{v}} \\
+\vec{\force{F}}_{\text{net}} &= \frac{\Delta\vec{\mom{p}}}{\Delta \tvar{t}} \\
+\mom{J} &= \vec{\force{F}}_{\text{net}}\Delta \tvar{t} = \Delta\vec{\mom{p}} \\
+\vec{\mom{p}}_{\text{tot}} &= \text{constant (isolated system)} \\
+\mass{m_1}\vel{v_1} + \mass{m_2}\vel{v_2} &= \mass{m_1}\vel{v'_1} + \mass{m_2}\vel{v'_2} \text{ (elastic)} \\
+\mass{m_1}\vel{v_1} + \mass{m_2}\vel{v_2} &= (\mass{m_1} + \mass{m_2})\vel{v}' \text{ (inelastic)}
 \end{align}
 \note{- Six equations to master\\\\
 - First three: momentum, force, impulse\\\\

@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -210,9 +211,9 @@ The laws of physics are the same in all inertial reference frames.
 
 \begin{block}{Postulate 2: The Cosmic Speed Limit}
 \begin{center}
-\Large $\boxed{c = 3.00 \times 10^8 \text{ m/s}}$
+\Large $\boxed{\vel{c} = 3.00 \times 10^8 \text{ m/s}}$
 \end{center}
-The speed of light is the same in all inertial frames and is NOT affected by the speed of its source.
+The \vel{speed of light} is the same in all inertial frames and is NOT affected by the speed of its source.
 \end{block}
 \note{[P0] [THE REVELATION] "Postulate 1: physics works the same everywhere"\\\\
 - No special frame of reference\\\\
@@ -224,20 +225,20 @@ The speed of light is the same in all inertial frames and is NOT affected by the
 \begin{frame}
 \frametitle{10.1 The Speed of Light}
 \begin{center}
-\Large $c = 299{,}792{,}458 \text{ m/s}$
+\Large $\vel{c} = 299{,}792{,}458 \text{ m/s}$
 \end{center}
 
 \pause
 \vspace{0.3cm}
 
-For most purposes: $c \approx 3.00 \times 10^8 \text{ m/s}$
+For most purposes: $\vel{c} \approx 3.00 \times 10^8 \text{ m/s}$
 
 \pause
 \vspace{0.3cm}
 
 \begin{alertblock}{Civilian View vs. Reality}
 \textbf{Civilian:} "Light from a speeding car goes faster."\\
-\textbf{Physicist:} "Light always travels at $c$, regardless of source speed."
+\textbf{Physicist:} "Light always travels at $\vel{c}$, regardless of source speed."
 \end{alertblock}
 \note{[P0] [ALGEBRA] "c equals 299,792,458 meters per second - exact"\\\\
 [P1] "For calculations, we round to 3.00 times 10 to the 8"\\\\
@@ -277,7 +278,7 @@ A reference frame where objects follow Newton's First Law: Objects at rest stay 
 
 \begin{exampleblock}{The Mental Model}
 You run at 3 m/s and throw a ball forward at 10 m/s.\\
-Ball speed: $3 + 10 = 13$ m/s
+Ball \vel{speed}: $3 + 10 = 13$ m/s
 \end{exampleblock}
 
 \pause
@@ -290,8 +291,8 @@ Ball speed: $3 + 10 = 13$ m/s
 
 \begin{alertblock}{The Illusion}
 Airliner traveling at 200 m/s emits light forward.\\
-\textbf{Your brain says:} Light speed = $c + 200$ m/s\\
-\textbf{Reality:} Light speed = $c$ (always)
+\textbf{Your brain says:} Light \vel{speed} = $\vel{c} + 200$ m/s\\
+\textbf{Reality:} Light \vel{speed} = $\vel{c}$ (always)
 \end{alertblock}
 \note{[P0] "Newtonian mechanics: velocities add together"\\\\
 [P1] [THE CONNECTION - Kinetic Archetype] "You run at 3 m/s and throw at 10 - ball goes 13 m/s"\\\\
@@ -324,22 +325,22 @@ Airliner traveling at 200 m/s emits light forward.\\
 
 \begin{frame}
 \frametitle{10.1 Why Simultaneity Breaks}
-\textbf{Key insight:} $t = \frac{d}{v}$
+\textbf{Key insight:} $\tvar{t} = \frac{\disp{d}}{\vel{v}}$
 
 \pause
 \vspace{0.3cm}
 
-If light speed $c$ is constant for all observers...
+If light \vel{speed} $\vel{c}$ is constant for all observers...
 
 \pause
 \vspace{0.3cm}
 
-...and distance $d$ appears different to different observers...
+...and \disp{distance} $\disp{d}$ appears different to different observers...
 
 \pause
 \vspace{0.3cm}
 
-\alert{...then time $t$ must also be different!}
+\alert{...then \tvar{time} $\tvar{t}$ must also be different!}
 
 \pause
 \vspace{0.3cm}
@@ -364,8 +365,8 @@ The sun is $1.50 \times 10^8$ km from Earth. How long does it take light to trav
 
 \textbf{Given:}
 \begin{itemize}
-\item Distance $d = 1.50 \times 10^8$ km
-\item Speed of light $c = 3.00 \times 10^8$ m/s
+\item \disp{Distance} $\disp{d} = 1.50 \times 10^8$ km
+\item \vel{Speed of light} $\vel{c} = 3.00 \times 10^8$ m/s
 \end{itemize}
 
 \textbf{Find:} Time in seconds and minutes
@@ -411,7 +412,7 @@ The sun is $1.50 \times 10^8$ km from Earth. How long does it take light to trav
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $v = \frac{d}{t}$ so $t = \frac{d}{v}$
+\textbf{Equation:} $\vel{v} = \frac{\disp{d}}{\tvar{t}}$ so $\tvar{t} = \frac{\disp{d}}{\vel{v}}$
 
 \pause
 \vspace{0.2cm}
@@ -421,12 +422,12 @@ The sun is $1.50 \times 10^8$ km from Earth. How long does it take light to trav
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $t = \frac{1.50 \times 10^{11} \text{ m}}{3.00 \times 10^8 \text{ m/s}}$
+\textbf{Substitute:} $\tvar{t} = \frac{1.50 \times 10^{11} \text{ m}}{3.00 \times 10^8 \text{ m/s}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{t = 500 \text{ s} = 8 \text{ min } 20 \text{ s}}$$
+$$\boxed{\tvar{t} = 500 \text{ s} = 8 \text{ min } 20 \text{ s}}$$
 
 \pause
 \textbf{Check:} Sunlight takes 8 minutes to reach Earth. When you see a sunspot, it happened 8 minutes ago!
@@ -460,7 +461,7 @@ $$\boxed{t = 500 \text{ s} = 8 \text{ min } 20 \text{ s}}$$
 \frametitle{10.2 The Relativistic Factor}
 \begin{block}{The Universal Factor}
 \begin{center}
-\Large $\boxed{\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}}$
+\Large $\boxed{\gamma = \frac{1}{\sqrt{1 - \frac{\vel{v}^2}{\vel{c}^2}}}}$
 \end{center}
 $\gamma$ (gamma) is the relativistic factor that appears in ALL relativistic effects.
 \end{block}
@@ -468,10 +469,10 @@ $\gamma$ (gamma) is the relativistic factor that appears in ALL relativistic eff
 \pause
 \vspace{0.3cm}
 
-\textbf{When $v \ll c$:} $\gamma \approx 1$ (classical physics works)
+\textbf{When $\vel{v} \ll \vel{c}$:} $\gamma \approx 1$ (classical physics works)
 
 \pause
-\textbf{When $v \approx c$:} $\gamma \gg 1$ (relativistic effects dominate)
+\textbf{When $\vel{v} \approx \vel{c}$:} $\gamma \gg 1$ (relativistic effects dominate)
 \note{[P0] [THE REVELATION] "Gamma is the master equation of relativity"\\\\
 [ALGEBRA] "Gamma equals 1 over square root of 1 minus v squared over c squared"\\\\
 [P1] "When v much less than c: gamma approximately 1 - classical physics works"\\\\
@@ -481,15 +482,15 @@ $\gamma$ (gamma) is the relativistic factor that appears in ALL relativistic eff
 
 \begin{frame}
 \frametitle{10.2 Testing the Relativistic Factor}
-\textbf{Try some values for $v$:}
+\textbf{Try some values for $\vel{v}$:}
 
 \pause
 \vspace{0.3cm}
 
 \begin{itemize}
-\item Airliner: $v = 225$ m/s $\rightarrow$ $\gamma = 1.0000000003$ \pause
-\item Earth's orbit: $v = 2.98 \times 10^4$ m/s $\rightarrow$ $\gamma = 1.000000005$ \pause
-\item Particle accelerator: $v = 2.99 \times 10^8$ m/s $\rightarrow$ $\gamma = 7.1$
+\item Airliner: $\vel{v} = 225$ m/s $\rightarrow$ $\gamma = 1.0000000003$ \pause
+\item Earth's orbit: $\vel{v} = 2.98 \times 10^4$ m/s $\rightarrow$ $\gamma = 1.000000005$ \pause
+\item Particle accelerator: $\vel{v} = 2.99 \times 10^8$ m/s $\rightarrow$ $\gamma = 7.1$
 \end{itemize}
 
 \pause
@@ -508,18 +509,18 @@ $\gamma$ (gamma) is the relativistic factor that appears in ALL relativistic eff
 \frametitle{10.2 Time Dilation}
 \begin{block}{The Law of Time}
 \begin{center}
-\Large $\boxed{\Delta t = \gamma \Delta t_0}$
+\Large $\boxed{\Delta \tvar{t} = \gamma \Delta \tvar{t_0}}$
 \end{center}
-Time passes MORE SLOWLY for an observer moving relative to you.
+\tvar{Time} passes MORE SLOWLY for an observer moving relative to you.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{itemize}
-\item $\Delta t_0$ = proper time (measured by moving observer) \pause
-\item $\Delta t$ = dilated time (measured by stationary observer) \pause
-\item $\Delta t > \Delta t_0$ always
+\item $\Delta \tvar{t_0}$ = proper \tvar{time} (measured by moving observer) \pause
+\item $\Delta \tvar{t}$ = dilated \tvar{time} (measured by stationary observer) \pause
+\item $\Delta \tvar{t} > \Delta \tvar{t_0}$ always
 \end{itemize}
 \note{[P0] [THE REVELATION] "Time dilation: time passes more slowly for moving observer"\\\\
 [ALGEBRA] "Delta t equals gamma times delta t-zero"\\\\
@@ -538,10 +539,10 @@ Time passes MORE SLOWLY for an observer moving relative to you.
 \end{figure}
 
 \pause
-\textbf{Astronaut measures:} Time $\Delta t_0$ (shorter path)
+\textbf{Astronaut measures:} \tvar{Time} $\Delta \tvar{t_0}$ (shorter path)
 
 \pause
-\textbf{Earth observer measures:} Time $\Delta t$ (longer path)
+\textbf{Earth observer measures:} \tvar{Time} $\Delta \tvar{t}$ (longer path)
 
 \pause
 \alert{Same light, different distances, different times!}
@@ -590,7 +591,7 @@ Atomic clocks on GPS satellites run slower than Earth clocks. GPS must correct f
 \frametitle{10.2 Length Contraction}
 \begin{block}{The Law of Length}
 \begin{center}
-\Large $\boxed{L = \frac{L_0}{\gamma} = L_0\sqrt{1 - \frac{v^2}{c^2}}}$
+\Large $\boxed{\disp{L} = \frac{\disp{L_0}}{\gamma} = \disp{L_0}\sqrt{1 - \frac{\vel{v}^2}{\vel{c}^2}}}$
 \end{center}
 Objects appear SHORTER when moving relative to you.
 \end{block}
@@ -599,9 +600,9 @@ Objects appear SHORTER when moving relative to you.
 \vspace{0.3cm}
 
 \begin{itemize}
-\item $L_0$ = proper length (measured at rest) \pause
-\item $L$ = contracted length (measured by moving observer) \pause
-\item $L < L_0$ always
+\item $\disp{L_0}$ = proper \disp{length} (measured at rest) \pause
+\item $\disp{L}$ = contracted \disp{length} (measured by moving observer) \pause
+\item $\disp{L} < \disp{L_0}$ always
 \end{itemize}
 \note{[P0] [THE REVELATION] "Length contraction: moving objects appear shorter"\\\\
 [ALGEBRA] "L equals L-zero over gamma equals L-zero times square root of 1 minus v squared over c squared"\\\\
@@ -626,7 +627,7 @@ At everyday speeds: You both measure the same distance
 At relativistic speeds: You measure different distances!
 
 \pause
-\alert{Because $v = \frac{d}{t}$ and you agree on $v$ but not on $t$, you must also disagree on $d$!}
+\alert{Because $\vel{v} = \frac{\disp{d}}{\tvar{t}}$ and you agree on $\vel{v}$ but not on $\tvar{t}$, you must also disagree on $\disp{d}$!}
 \note{[Fig 10.6: Empty highway in desert] "Use this familiar scene to anchor abstract concept - ask students to imagine measuring this road from a spaceship at 0.9c. Length contraction becomes visceral when applied to known objects."\\\\
 [P0] "At everyday speeds: you both measure same distance"\\\\
 [P1] "At relativistic speeds: different distances measured"\\\\
@@ -644,11 +645,11 @@ An alien spaceship is 50 m long and travels at 95\% of the speed of light. What 
 
 \textbf{Given:}
 \begin{itemize}
-\item Proper length $L_0 = 50$ m
-\item Velocity $v = 0.95c$
+\item Proper \disp{length} $\disp{L_0} = 50$ m
+\item \vel{Velocity} $\vel{v} = 0.95\vel{c}$
 \end{itemize}
 
-\textbf{Find:} Contracted length $L$
+\textbf{Find:} Contracted \disp{length} $\disp{L}$
 
 \vspace{0.3cm}
 
@@ -691,25 +692,25 @@ An alien spaceship is 50 m long and travels at 95\% of the speed of light. What 
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $L = L_0\sqrt{1 - \frac{v^2}{c^2}}$
+\textbf{Equation:} $\disp{L} = \disp{L_0}\sqrt{1 - \frac{\vel{v}^2}{\vel{c}^2}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $L = 50 \text{ m}\sqrt{1 - \frac{(0.95c)^2}{c^2}}$
+\textbf{Substitute:} $\disp{L} = 50 \text{ m}\sqrt{1 - \frac{(0.95\vel{c})^2}{\vel{c}^2}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Simplify:} $L = 50 \text{ m}\sqrt{1 - (0.95)^2}$
+\textbf{Simplify:} $\disp{L} = 50 \text{ m}\sqrt{1 - (0.95)^2}$
 
 \pause
 \vspace{0.2cm}
 
-$$L = 50 \text{ m}\sqrt{1 - 0.9025} = 50 \text{ m}\sqrt{0.0975}$$
+$$\disp{L} = 50 \text{ m}\sqrt{1 - 0.9025} = 50 \text{ m}\sqrt{0.0975}$$
 
 \pause
-$$\boxed{L = 16 \text{ m}}$$
+$$\boxed{\disp{L} = 16 \text{ m}}$$
 
 \pause
 \textbf{Check:} Ship contracted from 50 m to 16 m - only 32\% of original length!
@@ -725,18 +726,18 @@ $$\boxed{L = 16 \text{ m}}$$
 \frametitle{10.2 Relativistic Momentum}
 \begin{block}{The Law of Momentum}
 \begin{center}
-\Large $\boxed{p = \gamma mu}$
+\Large $\boxed{\mom{p} = \gamma \mass{m}\vel{u}}$
 \end{center}
-Momentum increases without limit as velocity approaches $c$.
+\mom{Momentum} increases without limit as \vel{velocity} approaches $\vel{c}$.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{itemize}
-\item $m$ = rest mass \pause
-\item $u$ = velocity of object \pause
-\item As $u \rightarrow c$, $\gamma \rightarrow \infty$, so $p \rightarrow \infty$
+\item $\mass{m}$ = rest \mass{mass} \pause
+\item $\vel{u}$ = \vel{velocity} of object \pause
+\item As $\vel{u} \rightarrow \vel{c}$, $\gamma \rightarrow \infty$, so $\mom{p} \rightarrow \infty$
 \end{itemize}
 \note{[P0] [THE REVELATION] "Relativistic momentum: classical momentum times gamma"\\\\
 [ALGEBRA] "p equals gamma m u"\\\\
@@ -755,7 +756,7 @@ Momentum increases without limit as velocity approaches $c$.
 \end{figure}
 
 \pause
-\alert{As $v \rightarrow c$, momentum $p \rightarrow \infty$}
+\alert{As $\vel{v} \rightarrow \vel{c}$, \mom{momentum} $\mom{p} \rightarrow \infty$}
 
 \pause
 This is why you can't reach the speed of light!
@@ -771,18 +772,18 @@ This is why you can't reach the speed of light!
 \frametitle{10.2 Mass-Energy Equivalence}
 \begin{block}{The Source Code of Energy}
 \begin{center}
-\Huge $\boxed{E = mc^2}$
+\Huge $\boxed{\energy{E} = \mass{m}\vel{c}^2}$
 \end{center}
-Mass and energy are interchangeable. Matter IS energy.
+\mass{Mass} and \energy{energy} are interchangeable. Matter IS \energy{energy}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \begin{itemize}
-\item $E$ = rest energy (joules) \pause
-\item $m$ = rest mass (kg) \pause
-\item $c$ = speed of light ($3.00 \times 10^8$ m/s)
+\item $\energy{E}$ = rest \energy{energy} (joules) \pause
+\item $\mass{m}$ = rest \mass{mass} (kg) \pause
+\item $\vel{c}$ = \vel{speed of light} ($3.00 \times 10^8$ m/s)
 \end{itemize}
 \note{[P0] [THE REVELATION] "Einstein's most famous equation"\\\\
 [ALGEBRA] "E equals m c squared"\\\\
@@ -793,16 +794,16 @@ Mass and energy are interchangeable. Matter IS energy.
 \end{frame}
 
 \begin{frame}
-\frametitle{10.2 The Power of $c^2$}
-\textbf{How much energy in 1 gram of matter?}
+\frametitle{10.2 The Power of $\vel{c}^2$}
+\textbf{How much \energy{energy} in 1 gram of matter?}
 
 \pause
 \vspace{0.3cm}
 
-$E = mc^2 = (0.001 \text{ kg})(3.00 \times 10^8 \text{ m/s})^2$
+$\energy{E} = \mass{m}\vel{c}^2 = (0.001 \text{ kg})(3.00 \times 10^8 \text{ m/s})^2$
 
 \pause
-$E = 9.0 \times 10^{13}$ J
+$\energy{E} = 9.0 \times 10^{13}$ J
 
 \pause
 \vspace{0.3cm}
@@ -814,7 +815,7 @@ $E = 9.0 \times 10^{13}$ J
 
 \begin{exampleblock}{Comparison}
 Burning 1 gram of coal: 24 J\\
-Converting 1 gram of mass to energy: $9.0 \times 10^{13}$ J
+Converting 1 gram of \mass{mass} to \energy{energy}: $9.0 \times 10^{13}$ J
 \end{exampleblock}
 \note{[P0] "How much energy in 1 gram of matter?"\\\\
 [P1] [ALGEBRA] "E equals 0.001 kg times 3.00 times 10 to the 8 m/s squared"\\\\
@@ -856,14 +857,14 @@ Actual mass: 4.0003 u
 \pause
 \vspace{0.3cm}
 
-\alert{Mass defect: 0.0327 u}
+\alert{\mass{Mass} defect: 0.0327 u}
 
 \pause
 \vspace{0.3cm}
 
-This "missing" mass became binding energy when the nucleus formed:
+This "missing" \mass{mass} became binding \energy{energy} when the nucleus formed:
 
-$E = (5.04 \times 10^{-30} \text{ kg})(3.00 \times 10^8 \text{ m/s})^2 = 4.54 \times 10^{-12}$ J
+$\energy{E} = (5.04 \times 10^{-30} \text{ kg})(3.00 \times 10^8 \text{ m/s})^2 = 4.54 \times 10^{-12}$ J
 \note{[P0] "Helium nucleus: 2 protons plus 2 neutrons"\\\\
 [P1] "Sum of parts: 4.0330 atomic mass units"\\\\
 [P2] "Actual mass: 4.0003 u"\\\\
@@ -882,11 +883,11 @@ When a positron and electron collide, they annihilate and convert completely to 
 
 \textbf{Given:}
 \begin{itemize}
-\item Both particles have rest mass $m = 9.11 \times 10^{-31}$ kg
-\item Total mass: $2 \times 9.11 \times 10^{-31}$ kg
+\item Both particles have rest \mass{mass} $\mass{m} = 9.11 \times 10^{-31}$ kg
+\item Total \mass{mass}: $2 \times 9.11 \times 10^{-31}$ kg
 \end{itemize}
 
-\textbf{Find:} Energy $E$ in joules
+\textbf{Find:} \energy{Energy} $\energy{E}$ in joules
 
 \vspace{0.3cm}
 
@@ -929,25 +930,25 @@ When a positron and electron collide, they annihilate and convert completely to 
 
 \vspace{0.3cm}
 
-\textbf{Equation:} $E = mc^2$
+\textbf{Equation:} $\energy{E} = \mass{m}\vel{c}^2$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Total mass:} $m = 2(9.11 \times 10^{-31} \text{ kg}) = 1.822 \times 10^{-30} \text{ kg}$
+\textbf{Total \mass{mass}:} $\mass{m} = 2(9.11 \times 10^{-31} \text{ kg}) = 1.822 \times 10^{-30} \text{ kg}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $E = (1.822 \times 10^{-30} \text{ kg})(3.00 \times 10^8 \text{ m/s})^2$
+\textbf{Substitute:} $\energy{E} = (1.822 \times 10^{-30} \text{ kg})(3.00 \times 10^8 \text{ m/s})^2$
 
 \pause
 \vspace{0.2cm}
 
-$$E = (1.822 \times 10^{-30})(9.00 \times 10^{16})$$
+$$\energy{E} = (1.822 \times 10^{-30})(9.00 \times 10^{16})$$
 
 \pause
-$$\boxed{E = 1.64 \times 10^{-13} \text{ J}}$$
+$$\boxed{\energy{E} = 1.64 \times 10^{-13} \text{ J}}$$
 
 \pause
 \textbf{Check:} Tiny particles, but enormous energy density. This becomes gamma rays!
@@ -989,16 +990,16 @@ $$\boxed{E = 1.64 \times 10^{-13} \text{ J}}$$
 \frametitle{10.2 Summary of Relativistic Effects}
 \begin{block}{The Three Laws}
 \begin{align*}
-\text{Time Dilation:} \quad & \Delta t = \gamma \Delta t_0 \\
-\text{Length Contraction:} \quad & L = \frac{L_0}{\gamma} \\
-\text{Mass-Energy:} \quad & E = mc^2
+\text{Time Dilation:} \quad & \Delta \tvar{t} = \gamma \Delta \tvar{t_0} \\
+\text{Length Contraction:} \quad & \disp{L} = \frac{\disp{L_0}}{\gamma} \\
+\text{Mass-Energy:} \quad & \energy{E} = \mass{m}\vel{c}^2
 \end{align*}
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Where:} $\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$
+\textbf{Where:} $\gamma = \frac{1}{\sqrt{1 - \frac{\vel{v}^2}{\vel{c}^2}}}$
 
 \pause
 \vspace{0.3cm}
@@ -1018,11 +1019,11 @@ All controlled by the relativistic factor $\gamma$!
 \begin{block}{The Revelations}
 \begin{enumerate}
 \item The ether doesn't exist - light speed is constant \pause
-\item Two postulates: physics is universal, $c$ is constant \pause
+\item Two postulates: physics is universal, $\vel{c}$ is constant \pause
 \item Simultaneity is relative - depends on frame of reference \pause
 \item Time dilates: moving clocks run slow \pause
 \item Length contracts: moving objects shrink \pause
-\item $E = mc^2$: mass and energy are equivalent
+\item $\energy{E} = \mass{m}\vel{c}^2$: \mass{mass} and \energy{energy} are equivalent
 \end{enumerate}
 \end{block}
 \note{[P0] "Six revelations today"\\\\
@@ -1039,12 +1040,12 @@ All controlled by the relativistic factor $\gamma$!
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-\gamma &= \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-\Delta t &= \gamma \Delta t_0 \\
-L &= \frac{L_0}{\gamma} = L_0\sqrt{1 - \frac{v^2}{c^2}} \\
-p &= \gamma mu \\
-E &= mc^2 \\
-c &= 3.00 \times 10^8 \text{ m/s}
+\gamma &= \frac{1}{\sqrt{1 - \frac{\vel{v}^2}{\vel{c}^2}}} \\
+\Delta \tvar{t} &= \gamma \Delta \tvar{t_0} \\
+\disp{L} &= \frac{\disp{L_0}}{\gamma} = \disp{L_0}\sqrt{1 - \frac{\vel{v}^2}{\vel{c}^2}} \\
+\mom{p} &= \gamma \mass{m}\vel{u} \\
+\energy{E} &= \mass{m}\vel{c}^2 \\
+\vel{c} &= 3.00 \times 10^8 \text{ m/s}
 \end{align}
 \note{- These are the foundational equations of special relativity\\\\
 - Gamma controls everything: time, length, momentum\\\\
@@ -1059,11 +1060,11 @@ c &= 3.00 \times 10^8 \text{ m/s}
 
 \vspace{0.3cm}
 
-As $v \rightarrow c$:
+As $\vel{v} \rightarrow \vel{c}$:
 \begin{itemize}
 \item $\gamma \rightarrow \infty$ \pause
-\item Momentum $\rightarrow \infty$ \pause
-\item Energy required $\rightarrow \infty$
+\item \mom{Momentum} $\rightarrow \infty$ \pause
+\item \energy{Energy} required $\rightarrow \infty$
 \end{itemize}
 
 \pause

@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -54,7 +55,7 @@ From nerve impulses in your brain to hydroelectric dams sending power across con
 
 \pause
 \begin{exampleblock}{The Mental Model}
-Electric current is like water flowing through pipes - voltage is the pressure, resistance is the friction.
+Electric \current{current} is like water flowing through pipes - \voltage{voltage} is the pressure, \resist{resistance} is the friction.
 \end{exampleblock}
 \note{[P0][Fig 19.1: Hydroelectric facility with flowing water] "This analogy is pedagogically powerful because students already understand water flow intuitively - leverage this prior knowledge to scaffold abstract electric current concept. Water pressure maps to voltage, flow rate to current, pipe narrowness to resistance. Ask: 'What pushes water through pipes?' then connect to voltage pushing charge."\\\\
 [P1] [THE REVELATION] "Electric current is like water flowing through pipes"\\\\
@@ -87,9 +88,9 @@ Electric current is like water flowing through pipes - voltage is the pressure, 
 \frametitle{19.1 The Flow of Charge}
 \begin{block}{The Definition}
 \begin{center}
-\Large $\boxed{I = \frac{\Delta Q}{\Delta t}}$
+\Large $\boxed{\current{I} = \frac{\Delta \charge{Q}}{\Delta \tvar{t}}}$
 \end{center}
-Current equals charge per unit time. Measured in amperes (A).
+\current{Current} equals \charge{charge} per unit \tvar{time}. Measured in amperes (A).
 \end{block}
 
 \pause
@@ -99,7 +100,7 @@ One ampere = one coulomb per second: $1 \text{ A} = 1 \text{ C/s}$
 
 \pause
 \begin{exampleblock}{The Mental Model}
-If 5 coulombs flow past a point in 1 second, the current is 5 A.
+If 5 coulombs flow past a point in 1 second, the \current{current} is 5 A.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "Current I equals charge Q over time t - rate of charge flow"\\\\
 [P1] "One ampere equals one coulomb per second"\\\\
@@ -117,7 +118,7 @@ If 5 coulombs flow past a point in 1 second, the current is 5 A.
 \pause
 \begin{alertblock}{The Paradox}
 \textbf{Reality:} Electrons flow from negative to positive.\\
-\textbf{Convention:} Current flows from positive to negative.
+\textbf{Convention:} \current{Current} flows from positive to negative.
 \end{alertblock}
 \note{[P0][Fig 19.2: Battery showing electron flow from negative to positive terminal] "Students find this confusing - address misconception explicitly. The diagram shows physical reality (electron movement) vs convention (current direction). Emphasize: both perspectives work mathematically, but we must be consistent. This builds critical thinking about scientific conventions vs physical reality."\\\\
 [P1] [THE CONFLICT] "Electrons carry negative charge, so they flow from negative terminal to positive"\\\\
@@ -166,19 +167,19 @@ If 5 coulombs flow past a point in 1 second, the current is 5 A.
 \frametitle{19.1 The Universal Law of Resistance}
 \begin{block}{Ohm's Law}
 \begin{center}
-\Large $\boxed{V = IR}$
+\Large $\boxed{\voltage{V} = \current{I}\resist{R}}$
 \end{center}
-Voltage equals current times resistance. The pushback equation.
+\voltage{Voltage} equals \current{current} times \resist{resistance}. The pushback equation.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Units:} Resistance measured in ohms ($\Omega$), where $1 \Omega = 1 \text{ V/A}$
+\textbf{Units:} \resist{Resistance} measured in ohms ($\Omega$), where $1 \Omega = 1 \text{ V/A}$
 
 \pause
 \begin{exampleblock}{The Mental Model}
-Resistance is friction for electrons - it converts electrical energy to heat.
+\resist{Resistance} is friction for electrons - it converts electrical energy to heat.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "V equals I R - discovered by Georg Ohm in 1827"\\\\
 [P1] "Resistance measured in ohms - Greek letter omega"\\\\
@@ -196,12 +197,12 @@ A lightning strike transfers $10^{20}$ electrons from cloud to ground in 2 ms.
 
 \textbf{Given:}
 \begin{itemize}
-\item $n = 10^{20}$ electrons
-\item $e = -1.60 \times 10^{-19}$ C
-\item $\Delta t = 2 \times 10^{-3}$ s
+\item $\particles{n} = 10^{20}$ electrons
+\item $\charge{e} = -1.60 \times 10^{-19}$ C
+\item $\Delta \tvar{t} = 2 \times 10^{-3}$ s
 \end{itemize}
 
-\textbf{Find:} Average current $I$
+\textbf{Find:} Average \current{current} $\current{I}$
 
 \vspace{0.3cm}
 
@@ -222,8 +223,8 @@ A lightning strike transfers $10^{20}$ electrons from cloud to ground in 2 ms.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item How did you find the total charge?
-\item What formula did you use for current?
+\item How did you find the total \charge{charge}?
+\item What formula did you use for \current{current}?
 \item What sign did you get for your answer?
 \end{enumerate}
 
@@ -244,20 +245,20 @@ A lightning strike transfers $10^{20}$ electrons from cloud to ground in 2 ms.
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Total charge: $\Delta Q = ne = (10^{20})(-1.60 \times 10^{-19} \text{ C}) = -16.0 \text{ C}$
+\textbf{Step 1:} Total \charge{charge}: $\Delta \charge{Q} = \particles{n}\charge{e} = (10^{20})(-1.60 \times 10^{-19} \text{ C}) = -16.0 \text{ C}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Step 2:} Current: $I = \frac{\Delta Q}{\Delta t}$
+\textbf{Step 2:} \current{Current}: $\current{I} = \frac{\Delta \charge{Q}}{\Delta \tvar{t}}$
 
 \pause
 \vspace{0.2cm}
 
-$$I = \frac{-16.0 \text{ C}}{2 \times 10^{-3} \text{ s}} = \boxed{-8 \text{ kA}}$$
+$$\current{I} = \frac{-16.0 \text{ C}}{2 \times 10^{-3} \text{ s}} = \boxed{-8 \text{ kA}}$$
 
 \pause
-\textbf{Check:} Negative sign means electrons flow down. Conventional current flows up!
+\textbf{Check:} Negative sign means electrons flow down. Conventional \current{current} flows up!
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "Total charge equals n times e - 10 to the 20 times negative 1.6 times 10 to the negative 19"\\\\
 [P2] "Current equals charge over time"\\\\
@@ -275,11 +276,11 @@ An automobile headlight has 2.50 A flowing through it when 12.0 V is applied.
 
 \textbf{Given:}
 \begin{itemize}
-\item $I = 2.50$ A
-\item $V = 12.0$ V
+\item $\current{I} = 2.50$ A
+\item $\voltage{V} = 12.0$ V
 \end{itemize}
 
-\textbf{Find:} Resistance $R$ of the headlight
+\textbf{Find:} \resist{Resistance} $\resist{R}$ of the headlight
 
 \vspace{0.3cm}
 
@@ -301,7 +302,7 @@ An automobile headlight has 2.50 A flowing through it when 12.0 V is applied.
 
 \begin{enumerate}
 \item What equation did you start with?
-\item How did you solve for R?
+\item How did you solve for $\resist{R}$?
 \item What units did you get?
 \end{enumerate}
 
@@ -322,25 +323,25 @@ An automobile headlight has 2.50 A flowing through it when 12.0 V is applied.
 
 \vspace{0.3cm}
 
-\textbf{Start with Ohm's law:} $V = IR$
+\textbf{Start with Ohm's law:} $\voltage{V} = \current{I}\resist{R}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Solve for R:} $R = \frac{V}{I}$
+\textbf{Solve for $\resist{R}$:} $\resist{R} = \frac{\voltage{V}}{\current{I}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $R = \frac{12.0 \text{ V}}{2.50 \text{ A}}$
+\textbf{Substitute:} $\resist{R} = \frac{12.0 \text{ V}}{2.50 \text{ A}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{R = 4.8 \Omega}$$
+$$\boxed{\resist{R} = 4.8 \Omega}$$
 
 \pause
-\textbf{Check:} 4.8 ohms - relatively small resistance for a headlight.
+\textbf{Check:} 4.8 ohms - relatively small \resist{resistance} for a headlight.
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "Start with V equals I R"\\\\
 [P2] "Solve for R - divide both sides by I"\\\\
@@ -398,9 +399,9 @@ $$\boxed{R = 4.8 \Omega}$$
 \pause
 \begin{block}{The Rule for Series}
 \begin{center}
-\Large $\boxed{R_{\text{equiv}} = R_1 + R_2 + R_3}$
+\Large $\boxed{\resist{R}_{\text{equiv}} = \resist{R_1} + \resist{R_2} + \resist{R_3}}$
 \end{center}
-Series resistances add. One path, obstacles accumulate.
+Series \resist{resistances} add. One path, obstacles accumulate.
 \end{block}
 \note{[P0][Fig 19.14: Left shows three resistors in series, right shows equivalent single resistor] "Students struggle visualizing how multiple components reduce to one - this side-by-side comparison builds mental model of equivalence. Point out same current flows through all three, forcing voltage drops to add."\\\\
 [P1] [THE REVELATION] "Series resistances add - R-equiv equals R-1 plus R-2 plus R-3"\\\\
@@ -411,7 +412,7 @@ Series resistances add. One path, obstacles accumulate.
 
 \begin{frame}
 \frametitle{19.2 The Voltage Loop}
-\textbf{Key insight:} Going around a complete loop, voltage changes sum to zero.
+\textbf{Key insight:} Going around a complete loop, \voltage{voltage} changes sum to zero.
 
 \pause
 \vspace{0.3cm}
@@ -423,12 +424,12 @@ Like hiking in hills - total elevation gained equals total elevation lost when y
 \pause
 \vspace{0.3cm}
 
-For series circuit: $V_{\text{battery}} = V_1 + V_2 + V_3$
+For series circuit: $\voltage{V}_{\text{battery}} = \voltage{V_1} + \voltage{V_2} + \voltage{V_3}$
 
 \pause
 \vspace{0.3cm}
 
-Using Ohm's law: $V = I(R_1 + R_2 + R_3)$
+Using Ohm's law: $\voltage{V} = \current{I}(\resist{R_1} + \resist{R_2} + \resist{R_3})$
 \note{[P0] "Voltage loop rule - conservation of energy"\\\\
 [P1] "Like hiking - what goes up must come down"\\\\
 [P2] "Battery voltage equals sum of voltage drops"\\\\
@@ -439,17 +440,17 @@ Using Ohm's law: $V = I(R_1 + R_2 + R_3)$
 \begin{frame}
 \frametitle{Attempt: Series Circuit}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-Three resistors in series: $R_1 = 1.0 \Omega$, $R_2 = 6.0 \Omega$, $R_3 = 13 \Omega$. Battery voltage is 12 V.
+Three resistors in series: $\resist{R_1} = 1.0 \Omega$, $\resist{R_2} = 6.0 \Omega$, $\resist{R_3} = 13 \Omega$. Battery \voltage{voltage} is 12 V.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item $R_1 = 1.0 \Omega$, $R_2 = 6.0 \Omega$, $R_3 = 13 \Omega$
-\item $V = 12$ V
+\item $\resist{R_1} = 1.0 \Omega$, $\resist{R_2} = 6.0 \Omega$, $\resist{R_3} = 13 \Omega$
+\item $\voltage{V} = 12$ V
 \end{itemize}
 
-\textbf{Find:} (a) Equivalent resistance, (b) Current through circuit
+\textbf{Find:} (a) Equivalent \resist{resistance}, (b) \current{Current} through circuit
 
 \vspace{0.3cm}
 
@@ -469,8 +470,8 @@ Three resistors in series: $R_1 = 1.0 \Omega$, $R_2 = 6.0 \Omega$, $R_3 = 13 \Om
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item How did you find equivalent resistance?
-\item What equation did you use for current?
+\item How did you find equivalent \resist{resistance}?
+\item What equation did you use for \current{current}?
 \item Did you get the same values?
 \end{enumerate}
 
@@ -491,21 +492,21 @@ Three resistors in series: $R_1 = 1.0 \Omega$, $R_2 = 6.0 \Omega$, $R_3 = 13 \Om
 
 \vspace{0.3cm}
 
-\textbf{Part (a):} $R_{\text{equiv}} = R_1 + R_2 + R_3$
+\textbf{Part (a):} $\resist{R}_{\text{equiv}} = \resist{R_1} + \resist{R_2} + \resist{R_3}$
 
 \pause
-$$R_{\text{equiv}} = 1.0 \Omega + 6.0 \Omega + 13 \Omega = \boxed{20 \Omega}$$
+$$\resist{R}_{\text{equiv}} = 1.0 \Omega + 6.0 \Omega + 13 \Omega = \boxed{20 \Omega}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Part (b):} $I = \frac{V}{R_{\text{equiv}}}$
+\textbf{Part (b):} $\current{I} = \frac{\voltage{V}}{\resist{R}_{\text{equiv}}}$
 
 \pause
-$$I = \frac{12 \text{ V}}{20 \Omega} = \boxed{0.60 \text{ A}}$$
+$$\current{I} = \frac{12 \text{ V}}{20 \Omega} = \boxed{0.60 \text{ A}}$$
 
 \pause
-\textbf{Check:} Voltage drops: $V_1 = 0.6$ V, $V_2 = 3.6$ V, $V_3 = 7.8$ V. Sum = 12 V!
+\textbf{Check:} \voltage{Voltage} drops: $\voltage{V_1} = 0.6$ V, $\voltage{V_2} = 3.6$ V, $\voltage{V_3} = 7.8$ V. Sum = 12 V!
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "R-equiv equals 1 plus 6 plus 13"\\\\
 [P2] [ANSWER] "20 ohms"\\\\
@@ -541,9 +542,9 @@ $$I = \frac{12 \text{ V}}{20 \Omega} = \boxed{0.60 \text{ A}}$$
 \pause
 \begin{block}{The Rule for Parallel}
 \begin{center}
-\Large $\boxed{R_{\text{equiv}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}}$
+\Large $\boxed{\resist{R}_{\text{equiv}} = \frac{1}{\frac{1}{\resist{R_1}} + \frac{1}{\resist{R_2}} + \frac{1}{\resist{R_3}}}}$
 \end{center}
-Parallel resistance is reciprocal of sum of reciprocals.
+Parallel \resist{resistance} is reciprocal of sum of reciprocals.
 \end{block}
 \note{[P0][Fig 19.16: Left shows three resistors in parallel, right shows equivalent single resistor] "Most counterintuitive concept in circuits - explicitly confront misconception. Diagram shows current splitting into three paths - use traffic analogy: more lanes means less congestion. Critical pedagogical moment: students who memorize formula without understanding the 'why' will fail complex problems. Emphasize: parallel provides MORE paths for charge, reducing effective opposition."\\\\
 [P1] [THE REVELATION] "Parallel resistance uses reciprocals - more complex formula"\\\\
@@ -556,18 +557,18 @@ Parallel resistance is reciprocal of sum of reciprocals.
 \begin{frame}
 \frametitle{19.3 The Parallel Paradox}
 \begin{alertblock}{What Your Brain Gets Wrong}
-\textbf{Intuition:} More resistors means more resistance.\\
-\textbf{Reality:} Parallel resistors provide MORE paths, so LESS resistance!
+\textbf{Intuition:} More resistors means more \resist{resistance}.\\
+\textbf{Reality:} Parallel resistors provide MORE paths, so LESS \resist{resistance}!
 \end{alertblock}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Key insight:} $R_{\text{equiv}}$ is always LESS than smallest resistor in parallel.
+\textbf{Key insight:} $\resist{R}_{\text{equiv}}$ is always LESS than smallest resistor in parallel.
 
 \pause
 \begin{exampleblock}{The Mental Model}
-Three identical resistors $R$ in parallel: $R_{\text{equiv}} = R/3$
+Three identical resistors $\resist{R}$ in parallel: $\resist{R}_{\text{equiv}} = \resist{R}/3$
 \end{exampleblock}
 \note{[P0] [THE CONFLICT] "More resistors, less resistance - seems backwards!"\\\\
 [P1] "Equivalent resistance always less than smallest resistor"\\\\
@@ -578,12 +579,12 @@ Three identical resistors $R$ in parallel: $R_{\text{equiv}} = R/3$
 
 \begin{frame}
 \frametitle{19.3 Current Conservation}
-\textbf{Key principle:} Current entering a junction equals current leaving.
+\textbf{Key principle:} \current{Current} entering a junction equals \current{current} leaving.
 
 \pause
 \vspace{0.3cm}
 
-For parallel resistors: $I = I_1 + I_2 + I_3$
+For parallel resistors: $\current{I} = \current{I_1} + \current{I_2} + \current{I_3}$
 
 \pause
 \vspace{0.3cm}
@@ -595,7 +596,7 @@ Like a river splitting into three channels - total water flow is conserved.
 \pause
 \vspace{0.3cm}
 
-Using Ohm's law on each: $I = V(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3})$
+Using Ohm's law on each: $\current{I} = \voltage{V}(\frac{1}{\resist{R_1}} + \frac{1}{\resist{R_2}} + \frac{1}{\resist{R_3}})$
 \note{[P0] "Charge cannot be created or destroyed"\\\\
 [P1] "Total current equals sum of branch currents"\\\\
 [P2] "Like river splitting into channels"\\\\
@@ -606,17 +607,17 @@ Using Ohm's law on each: $I = V(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3})$
 \begin{frame}
 \frametitle{Attempt: Parallel Circuit}
 \begin{exampleblock}{The Challenge (3 min, silent)}
-Three resistors in parallel: $R_1 = 10 \Omega$, $R_2 = 25 \Omega$, $R_3 = 15 \Omega$. Battery voltage is 3 V.
+Three resistors in parallel: $\resist{R_1} = 10 \Omega$, $\resist{R_2} = 25 \Omega$, $\resist{R_3} = 15 \Omega$. Battery \voltage{voltage} is 3 V.
 
 \vspace{0.3cm}
 
 \textbf{Given:}
 \begin{itemize}
-\item $R_1 = 10 \Omega$, $R_2 = 25 \Omega$, $R_3 = 15 \Omega$
-\item $V = 3$ V
+\item $\resist{R_1} = 10 \Omega$, $\resist{R_2} = 25 \Omega$, $\resist{R_3} = 15 \Omega$
+\item $\voltage{V} = 3$ V
 \end{itemize}
 
-\textbf{Find:} (a) Equivalent resistance, (b) Total current
+\textbf{Find:} (a) Equivalent \resist{resistance}, (b) Total \current{current}
 
 \vspace{0.3cm}
 
@@ -659,18 +660,18 @@ Three resistors in parallel: $R_1 = 10 \Omega$, $R_2 = 25 \Omega$, $R_3 = 15 \Om
 
 \vspace{0.3cm}
 
-\textbf{Part (a):} $R_{\text{equiv}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}}$
+\textbf{Part (a):} $\resist{R}_{\text{equiv}} = \frac{1}{\frac{1}{\resist{R_1}} + \frac{1}{\resist{R_2}} + \frac{1}{\resist{R_3}}}$
 
 \pause
-$$R_{\text{equiv}} = \frac{1}{\frac{1}{10} + \frac{1}{25} + \frac{1}{15}} = \frac{1}{0.1 + 0.04 + 0.0667} = \boxed{4.84 \Omega}$$
+$$\resist{R}_{\text{equiv}} = \frac{1}{\frac{1}{10} + \frac{1}{25} + \frac{1}{15}} = \frac{1}{0.1 + 0.04 + 0.0667} = \boxed{4.84 \Omega}$$
 
 \pause
 \vspace{0.3cm}
 
-\textbf{Part (b):} $I = \frac{V}{R_{\text{equiv}}} = \frac{3 \text{ V}}{4.84 \Omega} = \boxed{0.62 \text{ A}}$
+\textbf{Part (b):} $\current{I} = \frac{\voltage{V}}{\resist{R}_{\text{equiv}}} = \frac{3 \text{ V}}{4.84 \Omega} = \boxed{0.62 \text{ A}}$
 
 \pause
-\textbf{Check:} 4.84 < 10 (smallest resistor). Current splits: $I_1=0.30$ A, $I_2=0.12$ A, $I_3=0.20$ A!
+\textbf{Check:} 4.84 < 10 (smallest resistor). \current{Current} splits: $\current{I_1}=0.30$ A, $\current{I_2}=0.12$ A, $\current{I_3}=0.20$ A!
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "One over open paren 1 over 10 plus 1 over 25 plus 1 over 15 close paren"\\\\
 [P2] [ANSWER] "4.84 ohms - less than 10!"\\\\
@@ -699,9 +700,9 @@ $$R_{\text{equiv}} = \frac{1}{\frac{1}{10} + \frac{1}{25} + \frac{1}{15}} = \fra
 \frametitle{19.4 The Energy Transfer Rate}
 \begin{block}{The Power Law}
 \begin{center}
-\Large $\boxed{P = IV}$
+\Large $\boxed{\power{P} = \current{I}\voltage{V}}$
 \end{center}
-Power equals current times voltage. Energy per unit time.
+\power{Power} equals \current{current} times \voltage{voltage}. Energy per unit time.
 \end{block}
 
 \pause
@@ -711,7 +712,7 @@ Power equals current times voltage. Energy per unit time.
 
 \pause
 \begin{exampleblock}{The Mental Model}
-A 60-W bulb transfers 60 joules per second from electrical energy to light and heat.
+A 60-W bulb transfers 60 joules per second from electrical \energy{energy} to light and heat.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "P equals I V - power equals current times voltage"\\\\
 [P1] "Watts measure energy transfer rate - joules per second"\\\\
@@ -722,15 +723,15 @@ A 60-W bulb transfers 60 joules per second from electrical energy to light and h
 
 \begin{frame}
 \frametitle{19.4 Three Forms of Power}
-Using Ohm's law $V = IR$, we can derive alternate forms:
+Using Ohm's law $\voltage{V} = \current{I}\resist{R}$, we can derive alternate forms:
 
 \pause
 \vspace{0.3cm}
 
 \begin{align}
-P &= IV \\
-P &= I^2R \quad \text{(using } V = IR \text{)} \\
-P &= \frac{V^2}{R} \quad \text{(using } I = \frac{V}{R} \text{)}
+\power{P} &= \current{I}\voltage{V} \\
+\power{P} &= \current{I}^2\resist{R} \quad \text{(using } \voltage{V} = \current{I}\resist{R} \text{)} \\
+\power{P} &= \frac{\voltage{V}^2}{\resist{R}} \quad \text{(using } \current{I} = \frac{\voltage{V}}{\resist{R}} \text{)}
 \end{align}
 
 \pause
@@ -756,7 +757,7 @@ P &= \frac{V^2}{R} \quad \text{(using } I = \frac{V}{R} \text{)}
 
 \pause
 \begin{alertblock}{The Revelation}
-They have DIFFERENT resistances! Using $P = \frac{V^2}{R}$, higher power means LOWER resistance.
+They have DIFFERENT \resist{resistances}! Using $\power{P} = \frac{\voltage{V}^2}{\resist{R}}$, higher \power{power} means LOWER \resist{resistance}.
 \end{alertblock}
 \note{[P0][Fig 19.20: Two bulbs labeled 25W and 60W showing brightness difference] "Visual comparison makes abstract power concept concrete. Students incorrectly assume 'bigger number = more resistance' - this image forces cognitive conflict. Guide reasoning: both see 120V, but 60W dissipates more energy per second, so current must be larger (P=IV), which requires SMALLER resistance (V=IR). This synthesis of multiple equations builds problem-solving sophistication."\\\\
 [P1] "Both operate on 120 V - so why different brightness?"\\\\
@@ -775,11 +776,11 @@ A 60-W incandescent bulb operates on 120 V.
 
 \textbf{Given:}
 \begin{itemize}
-\item $P = 60$ W
-\item $V = 120$ V
+\item $\power{P} = 60$ W
+\item $\voltage{V} = 120$ V
 \end{itemize}
 
-\textbf{Find:} Current through the bulb
+\textbf{Find:} \current{Current} through the bulb
 
 \vspace{0.3cm}
 
@@ -800,8 +801,8 @@ A 60-W incandescent bulb operates on 120 V.
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item Which power formula did you use?
-\item How did you solve for current?
+\item Which \power{power} formula did you use?
+\item How did you solve for \current{current}?
 \item What units did you get?
 \end{enumerate}
 
@@ -822,25 +823,25 @@ A 60-W incandescent bulb operates on 120 V.
 
 \vspace{0.3cm}
 
-\textbf{Start with:} $P = IV$
+\textbf{Start with:} $\power{P} = \current{I}\voltage{V}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Solve for I:} $I = \frac{P}{V}$
+\textbf{Solve for $\current{I}$:} $\current{I} = \frac{\power{P}}{\voltage{V}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{Substitute:} $I = \frac{60 \text{ W}}{120 \text{ V}}$
+\textbf{Substitute:} $\current{I} = \frac{60 \text{ W}}{120 \text{ V}}$
 
 \pause
 \vspace{0.2cm}
 
-$$\boxed{I = 0.50 \text{ A}}$$
+$$\boxed{\current{I} = 0.50 \text{ A}}$$
 
 \pause
-\textbf{Check:} Half an ampere - significant current for a light bulb!
+\textbf{Check:} Half an ampere - significant \current{current} for a light bulb!
 \note{[P0] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "P equals I V"\\\\
 [P2] "Solve for I - divide both sides by V"\\\\
@@ -855,11 +856,11 @@ $$\boxed{I = 0.50 \text{ A}}$$
 \frametitle{What You Now Know}
 \begin{block}{The Revelations}
 \begin{enumerate}
-\item Current = charge per time: $I = \frac{\Delta Q}{\Delta t}$ \pause
-\item Ohm's law = the pushback equation: $V = IR$ \pause
-\item Series resistances add: $R_{\text{equiv}} = R_1 + R_2 + \cdots$ \pause
-\item Parallel uses reciprocals: $R_{\text{equiv}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \cdots}$ \pause
-\item Power = energy transfer rate: $P = IV = I^2R = \frac{V^2}{R}$
+\item \current{Current} = \charge{charge} per \tvar{time}: $\current{I} = \frac{\Delta \charge{Q}}{\Delta \tvar{t}}$ \pause
+\item Ohm's law = the pushback equation: $\voltage{V} = \current{I}\resist{R}$ \pause
+\item Series \resist{resistances} add: $\resist{R}_{\text{equiv}} = \resist{R_1} + \resist{R_2} + \cdots$ \pause
+\item Parallel uses reciprocals: $\resist{R}_{\text{equiv}} = \frac{1}{\frac{1}{\resist{R_1}} + \frac{1}{\resist{R_2}} + \cdots}$ \pause
+\item \power{Power} = energy transfer rate: $\power{P} = \current{I}\voltage{V} = \current{I}^2\resist{R} = \frac{\voltage{V}^2}{\resist{R}}$
 \end{enumerate}
 \end{block}
 \note{[P0] "Five revelations today"\\\\
@@ -875,13 +876,13 @@ $$\boxed{I = 0.50 \text{ A}}$$
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-I &= \frac{\Delta Q}{\Delta t} \quad \text{(current)} \\
-V &= IR \quad \text{(Ohm's law)} \\
-R_{\text{series}} &= R_1 + R_2 + \cdots + R_N \\
-R_{\text{parallel}} &= \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_N}} \\
-P &= IV \\
-P &= I^2R \\
-P &= \frac{V^2}{R}
+\current{I} &= \frac{\Delta \charge{Q}}{\Delta \tvar{t}} \quad \text{(current)} \\
+\voltage{V} &= \current{I}\resist{R} \quad \text{(Ohm's law)} \\
+\resist{R}_{\text{series}} &= \resist{R_1} + \resist{R_2} + \cdots + \resist{R_N} \\
+\resist{R}_{\text{parallel}} &= \frac{1}{\frac{1}{\resist{R_1}} + \frac{1}{\resist{R_2}} + \cdots + \frac{1}{\resist{R_N}}} \\
+\power{P} &= \current{I}\voltage{V} \\
+\power{P} &= \current{I}^2\resist{R} \\
+\power{P} &= \frac{\voltage{V}^2}{\resist{R}}
 \end{align}
 \note{[SAY] "Seven essential equations"\\\\
 - Current definition\\\\

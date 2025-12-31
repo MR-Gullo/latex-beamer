@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -34,7 +35,7 @@
 
 \pause
 \vspace{0.5cm}
-Position, velocity, acceleration—all encoded in curves and slopes.
+\pos{Position}, \vel{velocity}, \accel{acceleration}—all encoded in curves and slopes.
 
 \pause
 \vspace{0.3cm}
@@ -71,8 +72,8 @@ A graph is like a picture—worth a thousand words. It reveals relationships bet
 
 \textbf{Standard graph anatomy:}
 \begin{itemize}
-\item Horizontal axis = independent variable (usually time) \pause
-\item Vertical axis = dependent variable (position, velocity) \pause
+\item Horizontal axis = independent variable (usually \tvar{time}) \pause
+\item Vertical axis = dependent variable (\pos{position}, \vel{velocity}) \pause
 \item Straight line: $y = mx + b$ where $m$ = slope, $b$ = y-intercept
 \end{itemize}
 \note{[P0] [THE REVELATION] "Graphs are the visual language of physics"\\\\
@@ -94,8 +95,8 @@ A graph is like a picture—worth a thousand words. It reveals relationships bet
 \pause
 \textbf{What does this line tell us?}
 \begin{itemize}
-\item Starts at home ($d_0 = 0$)
-\item Ends at school ($d_f = 5$ km)
+\item Starts at home ($\disp{d}_0 = 0$)
+\item Ends at school ($\disp{d}_f = 5$ km)
 \item Takes 10 minutes
 \end{itemize}
 \note{[P0] "Position versus time for drive to school"\\\\
@@ -106,16 +107,16 @@ A graph is like a picture—worth a thousand words. It reveals relationships bet
 
 \begin{frame}
 \frametitle{2.3 Reading the Slope}
-\begin{block}{Universal Law: Slope is Velocity}
-In a position vs. time graph:
-$$\text{slope} = \frac{\text{rise}}{\text{run}} = \frac{\Delta d}{\Delta t} = v_{\text{avg}}$$
+\begin{block}{Universal Law: Slope is \vel{Velocity}}
+In a \pos{position} vs. \tvar{time} graph:
+$$\text{slope} = \frac{\text{rise}}{\text{run}} = \frac{\Delta \disp{d}}{\Delta \tvar{t}} = \vel{v}_{\text{avg}}$$
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
 \textbf{For the drive to school:}
-$$v_{\text{avg}} = \frac{5 \text{ km}}{10 \text{ min}} = 0.5 \text{ km/min}$$
+$$\vel{v}_{\text{avg}} = \frac{5 \text{ km}}{10 \text{ min}} = 0.5 \text{ km/min}$$
 
 \pause
 \begin{exampleblock}{The Anchor}
@@ -139,8 +140,8 @@ Steeper slope = faster motion. Flat line = at rest.
 \textbf{Second leg:}
 \begin{itemize}
 \item Negative slope = moving backward
-\item Returns to $d = 0$ (back home)
-\item Net displacement = 0 km
+\item Returns to $\disp{d} = 0$ (back home)
+\item Net \disp{displacement} = 0 km
 \end{itemize}
 \note{[P0] "Add the return trip to the graph"\\\\
 [P1] "Second leg has negative slope - moving backward. Returns to zero - back home"\\\\
@@ -160,9 +161,9 @@ Steeper slope = faster motion. Flat line = at rest.
 \pause
 \textbf{Reading the graph:}
 \begin{itemize}
-\item At $t = 0$ s: $d = 400$ m
-\item At $t = 1$ s: $d = 650$ m
-\item Slope = velocity = $250$ m/s
+\item At $\tvar{t} = 0$ s: $\disp{d} = 400$ m
+\item At $\tvar{t} = 1$ s: $\disp{d} = 650$ m
+\item Slope = \vel{velocity} = $250$ m/s
 \end{itemize}
 \note{[P0][Fig 2.12: Linear position-time graph with slope] "Jet car on Bonneville Salt Flats - teaching how to read slope as velocity"\\\\
 [P1] "At t equals 0, position is 400 m. At t equals 1 s, position is 650 m"\\\\
@@ -175,9 +176,9 @@ Steeper slope = faster motion. Flat line = at rest.
 \frametitle{2.3 The Position Equation}
 \begin{block}{Universal Law: Linear Motion}
 From the graph equation $y = mx + b$, we get:
-$$\boxed{d = v t + d_0}$$
+$$\boxed{\disp{d} = \vel{v} \tvar{t} + \disp{d}_0}$$
 or equivalently
-$$\boxed{d = d_0 + vt}$$
+$$\boxed{\disp{d} = \disp{d}_0 + \vel{v}\tvar{t}}$$
 \end{block}
 
 \pause
@@ -185,8 +186,8 @@ $$\boxed{d = d_0 + vt}$$
 
 Where:
 \begin{itemize}
-\item $m$ (slope) = velocity $v$
-\item $b$ (y-intercept) = initial position $d_0$
+\item $m$ (slope) = \vel{velocity} $\vel{v}$
+\item $b$ (y-intercept) = initial \pos{position} $\disp{d}_0$
 \end{itemize}
 \note{[P0] [THE REVELATION] "From graph anatomy, we derive motion equation"\\\\
 [P1] "Slope m becomes velocity v. Y-intercept b becomes initial position"\\\\
@@ -205,11 +206,11 @@ Where:
 
 \pause
 \begin{alertblock}{The Conflict}
-When the graph curves, velocity is changing. Slope is not constant!
+When the graph curves, \vel{velocity} is changing. Slope is not constant!
 \end{alertblock}
 
 \pause
-\textbf{Solution:} Use tangent line to find instantaneous velocity at any point.
+\textbf{Solution:} Use tangent line to find instantaneous \vel{velocity} at any point.
 \note{[P0][Fig 2.13: Jet car displacement curve with tangent lines at P and Q] "When object speeds up, graph curves"\\\\
 [P1] [THE CONFLICT] "Slope is not constant - velocity is changing"\\\\
 [P2] "Draw tangent line at any point - its slope is instantaneous velocity"\\\\
@@ -225,8 +226,8 @@ When the graph curves, velocity is changing. Slope is not constant!
 \end{center}
 
 \pause
-\textbf{At point Q ($t = 25$ s):}
-$$v_Q = \frac{3120 - 1300 \text{ m}}{32 - 19 \text{ s}} = \frac{1820 \text{ m}}{13 \text{ s}} = 140 \text{ m/s}$$
+\textbf{At point Q ($\tvar{t} = 25$ s):}
+$$\vel{v}_Q = \frac{3120 - 1300 \text{ m}}{32 - 19 \text{ s}} = \frac{1820 \text{ m}}{13 \text{ s}} = 140 \text{ m/s}$$
 \note{[P0][Fig 2.13: Jet car displacement with tangent triangles showing rise/run] "Two tangent lines shown at different points P and Q"\\\\
 [P1] "At point Q, t equals 25 s. Calculate slope of tangent"\\\\
 - Rise: 1820 m. Run: 13 s\\\\
@@ -245,7 +246,7 @@ $$v_Q = \frac{3120 - 1300 \text{ m}}{32 - 19 \text{ s}} = \frac{1820 \text{ m}}{
 
 \textbf{Given:} The graph above
 
-\textbf{Find:} Average velocity over entire time interval (0 to 20 min)
+\textbf{Find:} Average \vel{velocity} over entire \tvar{time} interval (0 to 20 min)
 
 \vspace{0.2cm}
 \textit{Can you decode this motion? Work silently.}
@@ -287,22 +288,22 @@ $$v_Q = \frac{3120 - 1300 \text{ m}}{32 - 19 \text{ s}} = \frac{1820 \text{ m}}{
 
 \vspace{0.3cm}
 
-\textbf{Step 1:} Identify endpoints: $(t_0, d_0) = (0, 0)$ km and $(t_f, d_f) = (20, 0)$ km
+\textbf{Step 1:} Identify endpoints: $(\tvar{t}_0, \disp{d}_0) = (0, 0)$ km and $(\tvar{t}_f, \disp{d}_f) = (20, 0)$ km
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Step 2:} Calculate slope
-$$v_{\text{avg}} = \frac{\Delta d}{\Delta t} = \frac{d_f - d_0}{t_f - t_0}$$
+$$\vel{v}_{\text{avg}} = \frac{\Delta \disp{d}}{\Delta \tvar{t}} = \frac{\disp{d}_f - \disp{d}_0}{\tvar{t}_f - \tvar{t}_0}$$
 
 \pause
 \vspace{0.2cm}
 
 \textbf{Step 3:} Substitute
-$$v_{\text{avg}} = \frac{0 - 0 \text{ km}}{20 - 0 \text{ min}} = \boxed{0 \text{ km/min}}$$
+$$\vel{v}_{\text{avg}} = \frac{0 - 0 \text{ km}}{20 - 0 \text{ min}} = \boxed{0 \text{ km/min}}$$
 
 \pause
-\textbf{Check:} Zero! Started and ended at same position - net displacement is zero!
+\textbf{Check:} Zero! Started and ended at same \pos{position} - net \disp{displacement} is zero!
 \note{[P0][Fig 2.15: Position vs Time showing round trip] "Self-correct in a different color"\\\\
 [P1] [ALGEBRA] "Identify endpoints - both are zero position"\\\\
 [P2] "Velocity equals change in d over change in t"\\\\
@@ -348,7 +349,7 @@ $$v_{\text{avg}} = \frac{0 - 0 \text{ km}}{20 - 0 \text{ min}} = \boxed{0 \text{
 
 \vspace{0.3cm}
 \pause
-\textbf{Key insight:} Slope of position graph becomes height of velocity graph!
+\textbf{Key insight:} Slope of \pos{position} graph becomes height of \vel{velocity} graph!
 \note{[P0][Fig 2.15: Position vs Time V-shaped graph] [Fig 2.16: Velocity vs Time with positive and negative plateaus] "Position graph on left - V-shaped"\\\\
 [P1] "Velocity graph on right - two horizontal lines"\\\\
 [P2] "Slope of position graph becomes height of velocity graph"\\\\
@@ -360,10 +361,10 @@ $$v_{\text{avg}} = \frac{0 - 0 \text{ km}}{20 - 0 \text{ min}} = \boxed{0 \text{
 \begin{frame}
 \frametitle{2.4 Reading Velocity Graphs}
 \begin{block}{Universal Law: The Dual Nature}
-In a velocity vs. time graph:
+In a \vel{velocity} vs. \tvar{time} graph:
 \begin{enumerate}
-\item \textbf{Slope} = acceleration (rate of velocity change)
-\item \textbf{Area under curve} = displacement
+\item \textbf{Slope} = \accel{acceleration} (rate of \vel{velocity} change)
+\item \textbf{Area under curve} = \disp{displacement}
 \end{enumerate}
 \end{block}
 
@@ -371,7 +372,7 @@ In a velocity vs. time graph:
 \vspace{0.3cm}
 
 \begin{exampleblock}{The Anchor}
-Position graphs give velocity. Velocity graphs give acceleration AND displacement.
+\pos{Position} graphs give \vel{velocity}. \vel{Velocity} graphs give \accel{acceleration} AND \disp{displacement}.
 \end{exampleblock}
 \note{[P0] [THE REVELATION] "Velocity graphs have two powers"\\\\
 [P1] "Slope tells acceleration. Area tells displacement"\\\\
@@ -388,12 +389,12 @@ Position graphs give velocity. Velocity graphs give acceleration AND displacemen
 \end{center}
 
 \pause
-\textbf{Calculate displacement:}
-$$d = v \times t = 0.5 \text{ km/min} \times 10 \text{ min} = 5 \text{ km}$$
+\textbf{Calculate \disp{displacement}:}
+$$\disp{d} = \vel{v} \times \tvar{t} = 0.5 \text{ km/min} \times 10 \text{ min} = 5 \text{ km}$$
 
 \pause
 \textbf{Return trip:}
-$$d = (-0.5 \text{ km/min}) \times 10 \text{ min} = -5 \text{ km}$$
+$$\disp{d} = (-0.5 \text{ km/min}) \times 10 \text{ min} = -5 \text{ km}$$
 
 \pause
 \textbf{Net:} $5 + (-5) = 0$ km. Back where you started!
@@ -406,9 +407,9 @@ $$d = (-0.5 \text{ km/min}) \times 10 \text{ min} = -5 \text{ km}$$
 
 \begin{frame}
 \frametitle{2.4 The Velocity Equation}
-\begin{block}{Universal Law: Velocity with Acceleration}
-From the velocity graph equation $y = mx + b$, we get:
-$$\boxed{v = v_0 + at}$$
+\begin{block}{Universal Law: \vel{Velocity} with \accel{Acceleration}}
+From the \vel{velocity} graph equation $y = mx + b$, we get:
+$$\boxed{\vel{v} = \vel{v}_0 + \accel{a}\tvar{t}}$$
 \end{block}
 
 \pause
@@ -416,15 +417,15 @@ $$\boxed{v = v_0 + at}$$
 
 Where:
 \begin{itemize}
-\item $m$ (slope) = acceleration $a$
-\item $b$ (y-intercept) = initial velocity $v_0$
+\item $m$ (slope) = \accel{acceleration} $\accel{a}$
+\item $b$ (y-intercept) = initial \vel{velocity} $\vel{v}_0$
 \end{itemize}
 
 \pause
 \vspace{0.3cm}
 
 \textbf{And from area:}
-$$\boxed{d = vt} \quad \text{(for constant velocity)}$$
+$$\boxed{\disp{d} = \vel{v}\tvar{t}} \quad \text{(for constant \vel{velocity})}$$
 \note{[P0] [THE REVELATION] "From graph anatomy, we derive velocity equation"\\\\
 [P1] "Slope m becomes acceleration a. Y-intercept b becomes initial velocity"\\\\
 [P2] "Area under curve gives displacement"\\\\
@@ -444,9 +445,9 @@ $$\boxed{d = vt} \quad \text{(for constant velocity)}$$
 \pause
 \textbf{What we can read:}
 \begin{itemize}
-\item Starts at $v_0 = 20$ m/s at $t = 0$
-\item Ends at $v_f = 160$ m/s at $t = 30$ s
-\item Slope = acceleration (constant)
+\item Starts at $\vel{v}_0 = 20$ m/s at $\tvar{t} = 0$
+\item Ends at $\vel{v}_f = 160$ m/s at $\tvar{t} = 30$ s
+\item Slope = \accel{acceleration} (constant)
 \end{itemize}
 \note{[P0][Fig 2.18: Jet Car Velocity - linear graph with positive slope labeled 'Slope equals a'] "Straight line means constant acceleration"\\\\
 [P1] "Starts at 20 m/s, ends at 160 m/s over 30 s"\\\\
@@ -466,7 +467,7 @@ $$\boxed{d = vt} \quad \text{(for constant velocity)}$$
 
 \pause
 \begin{alertblock}{Key Insight}
-Slope = 0 means acceleration = 0. Object moves at constant velocity.
+Slope = 0 means \accel{acceleration} = 0. Object moves at constant \vel{velocity}.
 \end{alertblock}
 
 \pause
@@ -487,12 +488,12 @@ This is what we saw in the drive to school example!
 \small Jet car velocity vs. time
 \end{center}
 
-\textbf{Given:} Velocity graph above (jet car from 0 to 30 s)
+\textbf{Given:} \vel{Velocity} graph above (jet car from 0 to 30 s)
 
 \textbf{Find:}
 \begin{itemize}
-\item (a) Displacement
-\item (b) Acceleration
+\item (a) \disp{Displacement}
+\item (b) \accel{Acceleration}
 \end{itemize}
 
 \vspace{0.2cm}
@@ -513,8 +514,8 @@ This is what we saw in the drive to school example!
 \vspace{0.3cm}
 
 \begin{enumerate}
-\item How did you find displacement? (Hint: area)
-\item How did you find acceleration? (Hint: slope)
+\item How did you find \disp{displacement}? (Hint: area)
+\item How did you find \accel{acceleration}? (Hint: slope)
 \item Did you break the area into shapes?
 \end{enumerate}
 
@@ -535,7 +536,7 @@ This is what we saw in the drive to school example!
 
 \vspace{0.2cm}
 
-\textbf{(a) Displacement = Area under curve}
+\textbf{(a) \disp{Displacement} = Area under curve}
 
 \pause
 Rectangle: $20 \text{ m/s} \times 30 \text{ s} = 600$ m
@@ -544,14 +545,14 @@ Rectangle: $20 \text{ m/s} \times 30 \text{ s} = 600$ m
 Triangle: $\frac{1}{2} \times 30 \text{ s} \times 140 \text{ m/s} = 2100$ m
 
 \pause
-Total: $\boxed{d = 2700 \text{ m}}$
+Total: $\boxed{\disp{d} = 2700 \text{ m}}$
 
 \pause
 \vspace{0.2cm}
 
-\textbf{(b) Acceleration = Slope}
+\textbf{(b) \accel{Acceleration} = Slope}
 \pause
-$$a = \frac{\Delta v}{\Delta t} = \frac{140 \text{ m/s}}{30 \text{ s}} = \boxed{4.67 \text{ m/s}^2}$$
+$$\accel{a} = \frac{\Delta \vel{v}}{\Delta \tvar{t}} = \frac{140 \text{ m/s}}{30 \text{ s}} = \boxed{4.67 \text{ m/s}^2}$$
 \note{[P0][Fig 2.18: Jet Car Velocity linear graph] "Part a: displacement equals area"\\\\
 [P1] "Rectangle: 20 m/s times 30 s equals 600 m"\\\\
 [P2] "Triangle: half times base times height equals 2100 m"\\\\
@@ -571,7 +572,7 @@ $$a = \frac{\Delta v}{\Delta t} = \frac{140 \text{ m/s}}{30 \text{ s}} = \boxed{
 
 \pause
 \begin{alertblock}{The Complication}
-When velocity graph curves, acceleration is changing! Use tangent for instantaneous acceleration.
+When \vel{velocity} graph curves, \accel{acceleration} is changing! Use tangent for instantaneous \accel{acceleration}.
 \end{alertblock}
 \note{[P0][Fig 2.19: Jet Car Velocity curved graph showing initial acceleration then leveling off] "More realistic graph - velocity doesn't jump instantly"\\\\
 [P1] [THE CONFLICT] "Curved means acceleration is changing"\\\\
@@ -591,8 +592,8 @@ When velocity graph curves, acceleration is changing! Use tangent for instantane
 \pause
 \textbf{Interpretation:}
 \begin{itemize}
-\item Positive velocity = moving forward
-\item Negative velocity = moving backward
+\item Positive \vel{velocity} = moving forward
+\item Negative \vel{velocity} = moving backward
 \item Zero crossing = turning point (changes direction)
 \end{itemize}
 \note{[P0][Fig 2.16: Velocity vs Time with positive plateau then negative plateau] "Velocity can be positive or negative"\\\\
@@ -605,9 +606,9 @@ When velocity graph curves, acceleration is changing! Use tangent for instantane
 \begin{frame}
 \frametitle{2.4 Position from Velocity Graph}
 \begin{exampleblock}{The Connection}
-\textbf{From position graph:} slope $\rightarrow$ velocity
+\textbf{From \pos{position} graph:} slope $\rightarrow$ \vel{velocity}
 
-\textbf{From velocity graph:} area $\rightarrow$ displacement
+\textbf{From \vel{velocity} graph:} area $\rightarrow$ \disp{displacement}
 \end{exampleblock}
 
 \pause
@@ -615,16 +616,16 @@ When velocity graph curves, acceleration is changing! Use tangent for instantane
 
 \begin{block}{Circular Relationship}
 \begin{center}
-Position $\xrightarrow{\text{slope}}$ Velocity $\xrightarrow{\text{slope}}$ Acceleration
+\pos{Position} $\xrightarrow{\text{slope}}$ \vel{Velocity} $\xrightarrow{\text{slope}}$ \accel{Acceleration}
 
 \vspace{0.2cm}
 
-Position $\xleftarrow{\text{area}}$ Velocity $\xleftarrow{\text{?}}$ Acceleration
+\pos{Position} $\xleftarrow{\text{area}}$ \vel{Velocity} $\xleftarrow{\text{?}}$ \accel{Acceleration}
 \end{center}
 \end{block}
 
 \pause
-We'll learn about acceleration graphs in the next chapter!
+We'll learn about \accel{acceleration} graphs in the next chapter!
 \note{[P0] [THE REVELATION] "Graphs connect position, velocity, acceleration"\\\\
 [P1] "Slope gives rate of change. Area gives accumulation"\\\\
 [P2] "Next chapter: acceleration graphs complete the picture"\\\\
@@ -638,8 +639,8 @@ We'll learn about acceleration graphs in the next chapter!
 \begin{block}{The Revelations}
 \begin{enumerate}
 \item Graphs are the visual language of motion \pause
-\item Position graph: slope = velocity \pause
-\item Velocity graph: slope = acceleration, area = displacement \pause
+\item \pos{Position} graph: slope = \vel{velocity} \pause
+\item \vel{Velocity} graph: slope = \accel{acceleration}, area = \disp{displacement} \pause
 \item Tangent lines extract instantaneous values \pause
 \item Negative slopes/areas show direction \pause
 \item One graph encodes multiple quantities
@@ -659,11 +660,11 @@ We'll learn about acceleration graphs in the next chapter!
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-\text{Position graph slope} &= \frac{\Delta d}{\Delta t} = v_{\text{avg}} \\
-\text{Position equation} &= d = d_0 + vt \\
-\text{Velocity graph slope} &= \frac{\Delta v}{\Delta t} = a \\
-\text{Velocity equation} &= v = v_0 + at \\
-\text{Displacement from velocity} &= \text{area under } v\text{-}t \text{ curve}
+\text{\pos{Position} graph slope} &= \frac{\Delta \disp{d}}{\Delta \tvar{t}} = \vel{v}_{\text{avg}} \\
+\text{\pos{Position} equation} &: \disp{d} = \disp{d}_0 + \vel{v}\tvar{t} \\
+\text{\vel{Velocity} graph slope} &= \frac{\Delta \vel{v}}{\Delta \tvar{t}} = \accel{a} \\
+\text{\vel{Velocity} equation} &: \vel{v} = \vel{v}_0 + \accel{a}\tvar{t} \\
+\text{\disp{Displacement} from \vel{velocity}} &= \text{area under } \vel{v}\text{-}\tvar{t} \text{ curve}
 \end{align}
 \note{- Five foundational equations from graphs\\\\
 - First two: position graphs\\\\
