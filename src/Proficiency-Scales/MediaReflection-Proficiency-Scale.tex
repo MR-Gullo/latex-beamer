@@ -1,0 +1,117 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+% Define proficiency colors
+\definecolor{emerging}{HTML}{E57373}
+\definecolor{developing}{HTML}{FFB74D}
+\definecolor{proficient}{HTML}{81C784}
+\definecolor{extending}{HTML}{64B5F6}
+
+% Compact list settings
+\setlist[itemize]{nosep, left=0pt, itemsep=1pt, topsep=2pt}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Proficiency box style
+\tcbset{
+  profbox/.style={
+    boxrule=0pt,
+    arc=3pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+    fonttitle=\bfseries\sffamily,
+    coltitle=black,
+    attach boxed title to top left={yshift=-2mm, xshift=4mm},
+    boxed title style={boxrule=0pt, arc=2pt}
+  }
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\sffamily Media Reflection Proficiency Scale}\\[4pt]
+{\small\itshape Interactive media engagement and written reflection}
+\end{center}
+
+\vspace{8pt}
+
+\begin{multicols}{2}
+
+%% EMERGING
+\begin{tcolorbox}[profbox, colback=emerging!15, colframe=emerging!60,
+  title={\colorbox{emerging!80}{\strut\hspace{2pt}EMERGING\hspace{2pt}}}]
+\small\itshape Tries to complete assignment but needs more support
+\tcblower
+\small
+\begin{itemize}
+\item Submits work more than 3 days late without communication
+\item Names which video or lab was used (like ``PHET lab'' or ``Khan Academy video'')
+\item Writes some sentences about what happened but may be unclear or very short
+\item Uses simple words to connect the media to class topics
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% DEVELOPING
+\begin{tcolorbox}[profbox, colback=developing!15, colframe=developing!60,
+  title={\colorbox{developing!80}{\strut\hspace{2pt}DEVELOPING\hspace{2pt}}}]
+\small\itshape Completes most parts with clear sentences about what was learned
+\tcblower
+\small
+\begin{itemize}
+\item Submits 1--2 days late or requests last-minute extensions
+\item Tells what the video or lab was about and names the main topic
+\item Writes 200+ words explaining what was learned with some examples
+\item Writes responses to two classmates using complete sentences
+\end{itemize}
+\end{tcolorbox}
+
+\columnbreak
+
+%% PROFICIENT
+\begin{tcolorbox}[profbox, colback=proficient!15, colframe=proficient!60,
+  title={\colorbox{proficient!80}{\strut\hspace{2pt}PROFICIENT\hspace{2pt}}}]
+\small\itshape Completes all parts well with good understanding
+\tcblower
+\small
+\begin{itemize}
+\item Submits on time with proper formatting and communicates about delays
+\item Explains what the interactive media showed and why it helped with learning
+\item Writes 250--300 words with clear examples of new understanding
+\item Responds to classmates with helpful comments and asks good questions
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% EXTENDING
+\begin{tcolorbox}[profbox, colback=extending!15, colframe=extending!60,
+  title={\colorbox{extending!80}{\strut\hspace{2pt}EXTENDING\hspace{2pt}}}]
+\small\itshape Excellent work that goes beyond requirements
+\tcblower
+\small
+\begin{itemize}
+\item Submits quality work ahead of deadlines with clear communication
+\item Explains the interactive media very clearly and connects to real-life situations
+\item Writes more than 300 words with detailed examples and personal insights
+\item Helps classmates by asking thoughtful questions and giving useful feedback
+\end{itemize}
+\end{tcolorbox}
+
+\end{multicols}
+
+\end{document}

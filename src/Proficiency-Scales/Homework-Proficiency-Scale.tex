@@ -1,0 +1,128 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+% Define proficiency colors
+\definecolor{emerging}{HTML}{E57373}      % soft red
+\definecolor{developing}{HTML}{FFB74D}    % soft orange
+\definecolor{proficient}{HTML}{81C784}    % soft green
+\definecolor{extending}{HTML}{64B5F6}     % soft blue
+
+% Compact list settings
+\setlist[itemize]{nosep, left=0pt, itemsep=1pt, topsep=2pt}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Proficiency box style
+\tcbset{
+  profbox/.style={
+    boxrule=0pt,
+    arc=3pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+    fonttitle=\bfseries\sffamily,
+    coltitle=black,
+    attach boxed title to top left={yshift=-2mm, xshift=4mm},
+    boxed title style={boxrule=0pt, arc=2pt}
+  }
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\sffamily Homework Proficiency Scale}\\[4pt]
+{\small\itshape Timely submission and completion}
+\end{center}
+
+\vspace{8pt}
+
+\begin{multicols}{2}
+
+%% EMERGING
+\begin{tcolorbox}[profbox, colback=emerging!15, colframe=emerging!60,
+  title={\colorbox{emerging!80}{\strut\hspace{2pt}EMERGING\hspace{2pt}}}]
+\small\itshape Minimal effort towards timely submission and completion
+\tcblower
+\small
+\begin{itemize}
+\item Submits work more than 3 days late without communication
+\item Uses incorrect file formats consistently
+\item Leaves significant work incomplete across assignments
+\item Shows little awareness of deadline management
+\item Demonstrates minimal organizational systems
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% DEVELOPING
+\begin{tcolorbox}[profbox, colback=developing!15, colframe=developing!60,
+  title={\colorbox{developing!80}{\strut\hspace{2pt}DEVELOPING\hspace{2pt}}}]
+\small\itshape Shows basic attention to deadlines but struggles with consistency
+\tcblower
+\small
+\begin{itemize}
+\item Submits 1--2 days late or requests last-minute extensions
+\item Generally follows file format requirements with some errors
+\item Completes most work but may rush through final components
+\item Shows emerging awareness of time management needs
+\item Begins to develop basic organizational approaches
+\end{itemize}
+\end{tcolorbox}
+
+\columnbreak
+
+%% PROFICIENT
+\begin{tcolorbox}[profbox, colback=proficient!15, colframe=proficient!60,
+  title={\colorbox{proficient!80}{\strut\hspace{2pt}PROFICIENT\hspace{2pt}}}]
+\small\itshape Consistently reliable with submissions and communication
+\tcblower
+\small
+\begin{itemize}
+\item Submits on time with proper formatting across all assignments
+\item Communicates proactively about potential delays when needed
+\item Completes all components thoroughly and thoughtfully
+\item Demonstrates solid time management and planning skills
+\item Maintains consistent organizational systems
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% EXTENDING
+\begin{tcolorbox}[profbox, colback=extending!15, colframe=extending!60,
+  title={\colorbox{extending!80}{\strut\hspace{2pt}EXTENDING\hspace{2pt}}}]
+\small\itshape Exceptional responsibility in managing work and deadlines
+\tcblower
+\small
+\begin{itemize}
+\item Submits quality work ahead of deadlines consistently
+\item Maintains clear, proactive communication throughout projects
+\item Prepares comprehensively for known absences and transitions
+\item Creates and refines personal systems for tracking requirements
+\item Models excellent organizational practices for others
+\end{itemize}
+\end{tcolorbox}
+
+\end{multicols}
+
+\vspace{8pt}
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!40, boxrule=0.5pt, arc=2pt]
+\small\textbf{Note:} Submit your \textbf{workbook} and \textbf{textbook work} before the \textbf{unit test}.
+You may submit workbook work digitally in your textbook PDF submission or hand it to me at the beginning of the test.
+\end{tcolorbox}
+
+\end{document}

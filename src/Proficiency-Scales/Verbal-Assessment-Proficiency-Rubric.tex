@@ -1,0 +1,113 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+% Define proficiency colors
+\definecolor{emerging}{HTML}{E57373}
+\definecolor{developing}{HTML}{FFB74D}
+\definecolor{proficient}{HTML}{81C784}
+\definecolor{extending}{HTML}{64B5F6}
+
+% Compact list settings
+\setlist[itemize]{nosep, left=0pt, itemsep=1pt, topsep=2pt}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Proficiency box style
+\tcbset{
+  profbox/.style={
+    boxrule=0pt,
+    arc=3pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+    fonttitle=\bfseries\sffamily,
+    coltitle=black,
+    attach boxed title to top left={yshift=-2mm, xshift=4mm},
+    boxed title style={boxrule=0pt, arc=2pt}
+  }
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\sffamily Verbal Assessment Proficiency Rubric}\\[4pt]
+{\small\itshape Oral communication and concept explanation}
+\end{center}
+
+\vspace{8pt}
+
+\begin{multicols}{2}
+
+%% EMERGING
+\begin{tcolorbox}[profbox, colback=emerging!15, colframe=emerging!60,
+  title={\colorbox{emerging!80}{\strut\hspace{2pt}EMERGING\hspace{2pt}}}]
+\small\itshape Beginning understanding, needs significant teacher support
+\tcblower
+\small
+\begin{itemize}
+\item Gives very short answers with help from teacher prompts and questions
+\item Uses simple words but may mix up basic terms and subject concepts
+\item Shows some recognition of familiar problems but cannot explain the steps to solve them
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% DEVELOPING
+\begin{tcolorbox}[profbox, colback=developing!15, colframe=developing!60,
+  title={\colorbox{developing!80}{\strut\hspace{2pt}DEVELOPING\hspace{2pt}}}]
+\small\itshape Growing understanding, participates with some independence
+\tcblower
+\small
+\begin{itemize}
+\item Answers questions with basic explanations but needs occasional teacher guidance
+\item Uses correct vocabulary most of the time and can define important subject terms
+\item Explains simple problem-solving steps but may struggle with more complex connections
+\end{itemize}
+\end{tcolorbox}
+
+\columnbreak
+
+%% PROFICIENT
+\begin{tcolorbox}[profbox, colback=proficient!15, colframe=proficient!60,
+  title={\colorbox{proficient!80}{\strut\hspace{2pt}PROFICIENT\hspace{2pt}}}]
+\small\itshape Solid understanding, communicates knowledge effectively
+\tcblower
+\small
+\begin{itemize}
+\item Provides complete and accurate explanations without teacher prompting
+\item Uses technical vocabulary correctly and can explain terms to others
+\item Demonstrates clear problem-solving strategies and walks through solutions step by step
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% EXTENDING
+\begin{tcolorbox}[profbox, colback=extending!15, colframe=extending!60,
+  title={\colorbox{extending!80}{\strut\hspace{2pt}EXTENDING\hspace{2pt}}}]
+\small\itshape Deep understanding, articulates complex concepts with confidence
+\tcblower
+\small
+\begin{itemize}
+\item Explains difficult concepts in multiple ways and helps other students understand
+\item Uses advanced vocabulary appropriately and creates clear analogies for complex ideas
+\item Makes connections between different concepts and applies learning to real-world situations
+\end{itemize}
+\end{tcolorbox}
+
+\end{multicols}
+
+\end{document}

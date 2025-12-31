@@ -1,0 +1,232 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{fontawesome5}
+
+% Colors
+\definecolor{headerblue}{RGB}{41, 65, 114}
+\definecolor{lightblue}{RGB}{232, 240, 254}
+\definecolor{accentblue}{RGB}{66, 133, 244}
+\definecolor{rowgray}{RGB}{248, 249, 250}
+\definecolor{rowwhite}{RGB}{255, 255, 255}
+\definecolor{successgreen}{RGB}{52, 168, 83}
+\definecolor{warningyellow}{RGB}{251, 188, 4}
+
+% tcolorbox styles
+\tcbset{
+    sharp corners,
+    boxrule=0pt,
+    left=8pt,
+    right=8pt,
+    top=6pt,
+    bottom=6pt
+}
+
+% Section formatting with colored left border
+\titleformat{\section}
+    {\large\bfseries\color{headerblue}}
+    {}
+    {0pt}
+    {\raisebox{0pt}[0pt][0pt]{\textcolor{accentblue}{\rule[-2pt]{3pt}{14pt}}}\hspace{8pt}}
+\titleformat{\subsection}{\normalsize\bfseries\color{headerblue}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+% Remove section numbers
+\setcounter{secnumdepth}{0}
+
+% List styling
+\setlist{nosep, leftmargin=1.5em}
+\setlist[itemize]{label=\textcolor{accentblue}{\footnotesize\faCircle}}
+\setlist[enumerate]{label=\textcolor{accentblue}{\arabic*.}}
+
+% Table styling
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Hyperref setup
+\hypersetup{colorlinks=true, linkcolor=accentblue, urlcolor=accentblue}
+
+\begin{document}
+
+% Title Header
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+    \centering
+    {\color{white}\LARGE\bfseries Physics 11 Course Outline}\\[0.4em]
+    {\color{white!80}\large 2024--2025 \quad\textbar\quad Mr.\ Gullo}
+\end{tcolorbox}
+
+\vspace{1.5em}
+
+\section{Course Description}
+
+This is an introductory course on physics that explores the basics of motion, forces, and energy. Students will first build a foundation on scientific skills necessary for the study of physics. The course then focuses on velocity, acceleration, and forces and how they apply to real life. After this we explore energy, electricity, and optics. The course is designed to prepare students for Physics 12 and later for university.
+
+% Motivational callout box
+\begin{tcolorbox}[colback=lightblue, colframe=accentblue, leftrule=4pt, rightrule=0pt, toprule=0pt, bottomrule=0pt]
+\textbf{\faLightbulb\hspace{0.5em}You Belong in Physics!}\\[0.3em]
+Physics might seem intimidating at first, but here's the truth: \textbf{anyone can succeed} with curiosity, effort, and the right support. You don't need to be a ``math genius'' to excel here---physics is about understanding how the world works.\\[0.3em]
+\textit{Every physicist started exactly where you are now. Questions aren't signs of weakness; they're signs of learning!}
+\end{tcolorbox}
+
+\section{Contact \& Help}
+
+\begin{tabularx}{\textwidth}{@{}L{2.2cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Priority}} & \textcolor{white}{\textbf{How to Get Help}} \\
+\rowcolor{rowgray} \faBook\hspace{0.5em}Option 1 & Check your notes and textbook \\
+\rowcolor{rowwhite} \faUsers\hspace{0.5em}Option 2 & Ask a study partner or classmate \\
+\rowcolor{rowgray} \faEnvelope\hspace{0.5em}Option 3 & Schoology messaging \\
+\rowcolor{rowwhite} \faClock\hspace{0.5em}Option 4 & Office hours \\
+\end{tabularx}
+
+\vspace{0.8em}
+\textbf{\faDesktop\hspace{0.5em}Schoology:} This portal contains all course materials (PPTs, notes, review packages) and your grades.
+
+\section{Course Materials}
+
+\begin{itemize}
+    \item \textbf{Textbook} will be issued as a reference
+    \item \textbf{Assessments:} Paper or Schoology only
+    \item \textbf{Calculator:} Casio fx-991EX ClassWiz (recommended)
+    \item \textbf{Formula sheet} provided---can be used for tests (no additions allowed)
+\end{itemize}
+
+\section{Grading Breakdown}
+
+\begin{tabularx}{\textwidth}{@{}L{3.2cm}C{1.1cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Category}} & \textcolor{white}{\textbf{\%}} & \textcolor{white}{\textbf{Details}} \\
+\rowcolor{rowgray} Unit Tests & 30\% & 1 per unit; 2 periods (80 min) \\
+\rowcolor{rowwhite} Quizzes \& Period Tests & 15\% & 1--2 quizzes ($<$40 min); 1--2 period tests (40 min) per unit \\
+\rowcolor{rowgray} Activities/Labs & 15\% & 1--2 activities per unit; 1 lab per unit \\
+\rowcolor{rowwhite} Homework & 9\% & 1 check per unit \\
+\rowcolor{rowgray} Assessment for Learning & 1\% & Practice and feedback \\
+\rowcolor{rowwhite} Midterm & 10\% & Cumulative \\
+\rowcolor{rowgray} Final Exam & 20\% & Cumulative \\
+\end{tabularx}
+
+\vspace{0.5em}
+\begin{tcolorbox}[colback=rowgray, colframe=rowgray, left=6pt, right=6pt, top=4pt, bottom=4pt]
+\small\textbf{\faPencil*\hspace{0.3em}Written Work:} On unit tests, midterm, and final, written work counts for \textbf{30\%} of the score. Always show your work on quizzes for partial credit!
+\end{tcolorbox}
+
+\section{Topics Covered}
+
+\begin{tabularx}{\textwidth}{@{}C{0.6cm}YC{1.3cm}@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{\#}} & \textcolor{white}{\textbf{Topic}} & \textcolor{white}{\textbf{Ch.}} \\
+\rowcolor{rowgray} 1 & Introduction to Physics and Kinematics & 1, 2, 3 \\
+\rowcolor{rowwhite} 2 & Projectile Motion and 2D Kinematics & 5.1--5.3 \\
+\rowcolor{rowgray} 3 & Dynamics and Newton's Laws & 4, 5.4, 6 \\
+\rowcolor{rowwhite} 4 & Momentum, Work, Energy and Power & 8, 9 \\
+\rowcolor{rowgray} 5 & Simple Machines and Mechanical Advantage & 9 \\
+\rowcolor{rowwhite} 6 & Thermal Physics & 11, 12 \\
+\rowcolor{rowgray} 7 & Waves and Sound & 13, 14, 5.5 \\
+\rowcolor{rowwhite} 8 & Electricity and Circuits & 18, 19 \\
+\end{tabularx}
+
+\section{Classroom Expectations}
+
+\begin{tabularx}{\textwidth}{@{}L{2.8cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Area}} & \textcolor{white}{\textbf{Expectation}} \\
+\rowcolor{rowgray} \faHeart\hspace{0.3em}Respect & Treat teacher, classmates, and yourself with respect. Believe in your potential! \\
+\rowcolor{rowwhite} \faCalendarCheck\hspace{0.3em}Attendance & Attend all classes punctually and prepared. Notify in advance for planned absences. \\
+\rowcolor{rowgray} \faClock\hspace{0.3em}Deadlines & All work due at \textbf{start} of class on the due date. \\
+\rowcolor{rowwhite} \faRestroom\hspace{0.3em}Washrooms & Use before/after class. If needed during class, go quietly. \\
+\end{tabularx}
+
+\section{Making Up Missed Assessments}
+
+\begin{tabularx}{\textwidth}{@{}L{3.2cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Policy}} \\
+\rowcolor{rowgray} Quizzes/Period Tests & Makeup available with advance notice. See me to schedule. \\
+\rowcolor{rowwhite} Unit Tests & Scheduled 1 week ahead---plan accordingly. Group conflicts can be discussed. \\
+\end{tabularx}
+
+\vspace{0.5em}
+\textbf{If you miss an assessment:} (1) Talk to me when you return, (2) We'll find a solution, (3) Bring documentation if medical/family-related.
+
+\section{Lab Safety}
+
+\begin{tcolorbox}[colback=warningyellow!15, colframe=warningyellow, leftrule=4pt, rightrule=0pt, toprule=0pt, bottomrule=0pt]
+\faExclamationTriangle\hspace{0.5em}\textbf{Safety is our top priority.} Failure to follow procedures = removal from lab and possible zero.
+\end{tcolorbox}
+
+\vspace{0.3em}
+\begin{tabularx}{\textwidth}{@{}L{2.2cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Stage}} & \textcolor{white}{\textbf{Requirements}} \\
+\rowcolor{rowgray} Before Lab & Read instructions; ask questions; secure hair, clothing, jewelry \\
+\rowcolor{rowwhite} During Lab & Follow instructions; work with partner; report issues immediately; stay organized \\
+\rowcolor{rowgray} Emergency & Know safety equipment locations; report all injuries; stay calm \\
+\end{tabularx}
+
+\section{Academic Honesty \& AI}
+
+The Nanmo BC Academic Honesty Policy (Course Admin on Schoology) is our primary framework.
+
+\begin{enumerate}
+    \item Suspected cheating: may be asked to demonstrate understanding. Failure = zero.
+    \item Assisting cheating = zero.
+    \item Repeat offenses referred to principal.
+    \item \textbf{Generative AI:} Useful for learning, but \textbf{submitting AI work as your own violates policy.}
+\end{enumerate}
+
+\section{Additional Policies}
+
+\begin{tabularx}{\textwidth}{@{}L{3cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Policy}} & \textcolor{white}{\textbf{Details}} \\
+\rowcolor{rowgray} \faBed\hspace{0.3em}Sleeping & Class time is not for sleep. Repeated issues = homeroom referral. \\
+\rowcolor{rowwhite} \faRedo\hspace{0.3em}Resubmission & One per semester for grades $<$60\% (deadline: 2 weeks before semester end). Max grade: 75\%. \\
+\rowcolor{rowgray} \faUpload\hspace{0.3em}Late Work & Marked ``missing'' (zero) unless extension discussed \textbf{before} due date. \\
+\rowcolor{rowwhite} \faFile\hspace{0.3em}Submissions & Must be a \textbf{single PDF or PPT}---otherwise zero. \\
+\end{tabularx}
+
+\section{Messaging on Schoology}
+
+\textbf{Subject Line Format:} \texttt{Physics 11 - [Section] - [Block]}\\
+\textit{Example:} \texttt{Physics 11 - Section 2 - Block C}
+
+\vspace{0.3em}
+\begin{tabularx}{\textwidth}{@{}L{2.5cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Include}} \\
+\rowcolor{rowgray} Homework & Unit/assignment name; what you tried (photo); specific question \\
+\rowcolor{rowwhite} Lab Questions & Lab name; group \#; which part; relevant data \\
+\end{tabularx}
+
+\vspace{0.3em}
+\textbf{\faReply\hspace{0.3em}Response time:} Within 24 hours (school days); next school day for weekends.
+
+\section{Cell Phone Policy}
+
+All phones must be in the \textbf{phone box} or \textbf{locker}---not in bags, pockets, or desks.
+
+\vspace{0.3em}
+\begin{tabularx}{\textwidth}{@{}L{2.5cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Procedure}} & \textcolor{white}{\textbf{Details}} \\
+\rowcolor{rowgray} Phone Box & Place phone upon entering (off or silent) \\
+\rowcolor{rowwhite} Usage & Teacher approval only; return immediately after \\
+\rowcolor{rowgray} Honor System & Trusted to follow honestly; no individual checks \\
+\rowcolor{rowwhite} Violation & Phone confiscated; school policy followed \\
+\end{tabularx}
+
+\vspace{1.5em}
+
+% Signature Box
+\begin{tcolorbox}[colback=rowgray, colframe=headerblue, boxrule=1pt, arc=2mm, left=12pt, right=12pt, top=10pt, bottom=10pt]
+\textbf{Student Acknowledgment}\\[0.8em]
+I have read and understand the Physics 11 Course Outline and agree to follow the policies described.\\[1.2em]
+\textbf{Student Name:} \underline{\hspace{5.5cm}} \hfill \textbf{Date:} \underline{\hspace{2.5cm}}\\[1em]
+\textbf{Signature:} \underline{\hspace{5.5cm}} \hfill \textbf{Block:} \underline{\hspace{2.5cm}}
+\end{tcolorbox}
+
+\end{document}
