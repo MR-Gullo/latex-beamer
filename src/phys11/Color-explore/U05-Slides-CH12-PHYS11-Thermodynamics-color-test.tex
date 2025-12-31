@@ -1,0 +1,72 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage[overridenote]{pdfpc}
+\usepackage{xcolor}
+\graphicspath{{../images/}{../../shared/images/}}
+
+% ============================================
+% SEMANTIC PHYSICS COLOR DEFINITIONS
+% Rule: Every physical concept gets a UNIQUE color
+% ============================================
+\definecolor{pressureColor}{RGB}{0,102,204}      % Blue
+\definecolor{volumeColor}{RGB}{0,170,102}        % Green
+\definecolor{particleColor}{RGB}{136,0,170}      % Purple
+\definecolor{constantColor}{RGB}{204,102,0}      % Orange
+\definecolor{tempColor}{RGB}{204,0,0}            % Red
+\definecolor{forceColor}{RGB}{0,136,136}         % Teal
+\definecolor{areaColor}{RGB}{136,102,68}         % Brown
+\definecolor{workColor}{RGB}{0,136,204}          % Steel Blue (mechanical transfer)
+\definecolor{energyColor}{RGB}{170,136,0}        % Gold (stored energy)
+\definecolor{heatColor}{RGB}{255,102,0}          % Bright Orange (thermal transfer)
+\definecolor{entropyColor}{RGB}{204,0,170}       % Magenta
+
+% ============================================
+% SEMANTIC MACROS - Color by physical meaning
+% ============================================
+\newcommand{\pressure}[1]{\textcolor{pressureColor}{#1}}
+\newcommand{\volume}[1]{\textcolor{volumeColor}{#1}}
+\newcommand{\particles}[1]{\textcolor{particleColor}{#1}}
+\newcommand{\constant}[1]{\textcolor{constantColor}{#1}}
+\newcommand{\temp}[1]{\textcolor{tempColor}{#1}}
+\newcommand{\force}[1]{\textcolor{forceColor}{#1}}
+\newcommand{\area}[1]{\textcolor{areaColor}{#1}}
+\newcommand{\work}[1]{\textcolor{workColor}{#1}}
+\newcommand{\energy}[1]{\textcolor{energyColor}{#1}}
+\newcommand{\heat}[1]{\textcolor{heatColor}{#1}}
+\newcommand{\entropy}[1]{\textcolor{entropyColor}{#1}}
+
+\title[Semantic Color Test]{Semantic Color Mapping Test}
+\subtitle{Ideal Gas Law Frame Only}
+\author[Mr. Gullo]{Mr. Gullo}
+\date[December 2025]{December 2025}
+
+\begin{document}
+
+\begin{frame}
+\frametitle{12.2 The Ideal Gas Law}
+\begin{block}{Universal Law: Gas Behavior}
+\begin{center}
+\Large $\boxed{\pressure{P}\volume{V} = \particles{N}\constant{k}\temp{T}}$
+\end{center}
+\pressure{Pressure} times \volume{volume} equals \particles{particles} times \constant{Boltzmann constant} times \temp{absolute temperature}.
+\end{block}
+
+\pause
+\vspace{0.3cm}
+
+Where:
+\begin{itemize}
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\volume{V}$ = \volume{volume} (m$^3$)
+\item $\particles{N}$ = \particles{number of particles}
+\item $\constant{k} = 1.38 \times 10^{-23}$ J/K (\constant{Boltzmann constant})
+\item $\temp{T}$ = \temp{absolute temperature} (K)
+\end{itemize}
+\note{[P0] [ALGEBRA] "P-V equals N-k-T"\\\\
+[P1] "One of physics' most important equations"\\\\
+- Works for ideal gases: low pressure, high temp\\\\
+- Boltzmann constant links microscopic to macroscopic\\\\
+[THE WONDER] One equation describes all gases everywhere}
+\end{frame}
+
+\end{document}

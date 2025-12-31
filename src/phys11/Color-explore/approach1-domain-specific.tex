@@ -1,0 +1,263 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{xcolor}
+
+% ============================================
+% APPROACH 1: DOMAIN-SPECIFIC COLORING
+% Each section redefines colors to ensure
+% NO repeating colors within any equation
+% ============================================
+
+% HYBRID PALETTE (our 8 punchy colors)
+\definecolor{cA}{HTML}{D55E00}   % Vermillion
+\definecolor{cB}{HTML}{0072B2}   % Blue
+\definecolor{cC}{HTML}{009E73}   % Teal
+\definecolor{cD}{HTML}{E69F00}   % Orange
+\definecolor{cE}{HTML}{33BBEE}   % Cyan
+\definecolor{cF}{HTML}{EE3377}   % Magenta
+\definecolor{cG}{HTML}{CC3311}   % Red
+\definecolor{cK}{HTML}{000000}   % Black (constants)
+
+% Shorthand macros for colors
+\newcommand{\col}[2]{\textcolor{#1}{#2}}
+
+\begin{document}
+
+% ============================================
+% TITLE
+% ============================================
+\begin{frame}
+\frametitle{APPROACH 1: Domain-Specific Coloring}
+\begin{block}{Strategy}
+Each physics domain redefines color assignments.\\
+\textbf{Guarantee:} No equation has repeating colors.
+\end{block}
+
+\vspace{0.3cm}
+\textbf{Trade-off:}
+\begin{itemize}
+\item[\textcolor{cC}{+}] Every equation is visually distinct
+\item[\textcolor{cC}{+}] Maximum clarity per equation
+\item[\textcolor{cG}{--}] Same letter may have different colors across domains
+\item[\textcolor{cG}{--}] No global "velocity is always cyan" consistency
+\end{itemize}
+\end{frame}
+
+% ============================================
+% KINEMATICS (CH1-3)
+% d=Blue, v=Cyan, a=Vermillion, t=Orange, g=Black
+% ============================================
+\begin{frame}
+\frametitle{CH1-3: Kinematics}
+
+\begin{block}{Color Key}
+$\col{cB}{d}$ = \col{cB}{displacement} \quad $\col{cE}{v}$ = \col{cE}{velocity} \quad $\col{cA}{a}$ = \col{cA}{acceleration} \quad $\col{cD}{t}$ = \col{cD}{time} \quad $\col{cK}{g}$ = \col{cK}{constant}
+\end{block}
+
+\vspace{0.2cm}
+\textbf{Definitions:}
+$$\col{cE}{v} = \frac{\Delta \col{cB}{d}}{\Delta \col{cD}{t}} \qquad \col{cA}{a} = \frac{\Delta \col{cE}{v}}{\Delta \col{cD}{t}}$$
+
+\textbf{Kinematic Equations:}
+\begin{align*}
+\col{cE}{v} &= \col{cE}{v_0} + \col{cA}{a}\col{cD}{t} \\
+\col{cB}{d} &= \col{cB}{d_0} + \col{cE}{v_0}\col{cD}{t} + \frac{1}{2}\col{cA}{a}\col{cD}{t}^2 \\
+\col{cE}{v}^2 &= \col{cE}{v_0}^2 + 2\col{cA}{a}(\col{cB}{d} - \col{cB}{d_0})
+\end{align*}
+\end{frame}
+
+% ============================================
+% DYNAMICS (CH4-6)
+% F=Teal, m=Orange, a=Vermillion, g=Black
+% μ=Magenta, N=Blue, r=Cyan, ω=Red
+% ============================================
+\begin{frame}
+\frametitle{CH4-6: Dynamics \& Circular Motion}
+
+\begin{block}{Color Key}
+$\col{cC}{F}$ = \col{cC}{force} \quad $\col{cD}{m}$ = \col{cD}{mass} \quad $\col{cA}{a}$ = \col{cA}{acceleration} \quad $\col{cF}{\mu}$ = \col{cF}{friction coeff}
+\end{block}
+
+\textbf{Newton's Laws:}
+$$\col{cC}{F}_{\text{net}} = \col{cD}{m}\col{cA}{a} \qquad \col{cC}{W} = \col{cD}{m}\col{cK}{g} \qquad \col{cC}{F}_f = \col{cF}{\mu}\col{cB}{N}$$
+
+\textbf{Circular Motion:}
+$$\col{cA}{a}_c = \frac{\col{cE}{v}^2}{\col{cB}{r}} = \col{cB}{r}\col{cG}{\omega}^2 \qquad \col{cC}{F}_c = \col{cD}{m}\frac{\col{cE}{v}^2}{\col{cB}{r}}$$
+\end{frame}
+
+% ============================================
+% MOMENTUM (CH8)
+% p=Magenta, m=Orange, v=Cyan, F=Teal, t=Blue
+% ============================================
+\begin{frame}
+\frametitle{CH8: Momentum}
+
+\begin{block}{Color Key}
+$\col{cF}{p}$ = \col{cF}{momentum} \quad $\col{cD}{m}$ = \col{cD}{mass} \quad $\col{cE}{v}$ = \col{cE}{velocity} \quad $\col{cC}{F}$ = \col{cC}{force} \quad $\col{cB}{t}$ = \col{cB}{time}
+\end{block}
+
+\textbf{Definitions:}
+$$\col{cF}{p} = \col{cD}{m}\col{cE}{v}$$
+
+\textbf{Impulse-Momentum:}
+$$\Delta \col{cF}{p} = \col{cC}{F}_{\text{net}} \Delta \col{cB}{t}$$
+
+\textbf{Conservation:}
+$$\col{cD}{m_1}\col{cE}{v_1} + \col{cD}{m_2}\col{cE}{v_2} = \col{cD}{m_1}\col{cE}{v_1'} + \col{cD}{m_2}\col{cE}{v_2'}$$
+\end{frame}
+
+% ============================================
+% WORK & ENERGY (CH9)
+% W=Cyan, F=Teal, d=Blue, m=Orange, v=Magenta
+% KE=Vermillion, PE=Red, P=Black
+% ============================================
+\begin{frame}
+\frametitle{CH9: Work, Energy, Power}
+
+\begin{block}{Color Key}
+$\col{cE}{W}$ = \col{cE}{work} \quad $\col{cA}{KE}$ = \col{cA}{kinetic} \quad $\col{cG}{PE}$ = \col{cG}{potential} \quad $\col{cK}{P}$ = \col{cK}{power}
+\end{block}
+
+\textbf{Definitions:}
+$$\col{cE}{W} = \col{cC}{F}\col{cB}{d} \qquad \col{cA}{KE} = \frac{1}{2}\col{cD}{m}\col{cF}{v}^2 \qquad \col{cK}{P} = \frac{\col{cE}{W}}{t}$$
+
+\textbf{Conservation:}
+$$\col{cA}{KE_1} + \col{cG}{PE_1} = \col{cA}{KE_2} + \col{cG}{PE_2}$$
+\end{frame}
+
+% ============================================
+% THERMAL (CH11)
+% Q=Vermillion, m=Orange, c=Teal, T=Magenta
+% ρ=Blue, V=Cyan, L=Red
+% ============================================
+\begin{frame}
+\frametitle{CH11: Thermal Physics}
+
+\begin{block}{Color Key}
+$\col{cA}{Q}$ = \col{cA}{heat} \quad $\col{cD}{m}$ = \col{cD}{mass} \quad $\col{cC}{c}$ = \col{cC}{specific heat} \quad $\col{cF}{T}$ = \col{cF}{temperature}
+\end{block}
+
+\textbf{Heat Transfer:}
+$$\col{cA}{Q} = \col{cD}{m}\col{cC}{c}\Delta \col{cF}{T}$$
+
+\textbf{Phase Change:}
+$$\col{cA}{Q} = \col{cD}{m}\col{cG}{L_f} \qquad \col{cA}{Q} = \col{cD}{m}\col{cG}{L_v}$$
+
+\textbf{Density:}
+$$\col{cB}{\rho} = \frac{\col{cD}{m}}{\col{cE}{V}}$$
+\end{frame}
+
+% ============================================
+% THERMODYNAMICS (CH12)
+% U=Magenta, Q=Vermillion, W=Cyan, P=Teal
+% V=Blue, N=Orange, k=Black, T=Red, S=Magenta
+% ============================================
+\begin{frame}
+\frametitle{CH12: Thermodynamics}
+
+\begin{block}{Color Key}
+$\col{cF}{U}$ = \col{cF}{internal energy} \quad $\col{cA}{Q}$ = \col{cA}{heat} \quad $\col{cE}{W}$ = \col{cE}{work} \quad $\col{cC}{P}$ = \col{cC}{pressure}
+\end{block}
+
+\textbf{First Law:}
+$$\Delta \col{cF}{U} = \col{cA}{Q} - \col{cE}{W} \qquad \col{cE}{W} = \col{cC}{P}\Delta \col{cB}{V}$$
+
+\textbf{Ideal Gas:}
+$$\col{cC}{P}\col{cB}{V} = \col{cD}{N}\col{cK}{k}\col{cG}{T}$$
+
+\textbf{Entropy \& Efficiency:}
+$$\Delta \col{cF}{S} = \frac{\col{cA}{Q}}{\col{cG}{T}} \qquad \text{Eff} = \frac{\col{cE}{W}}{\col{cA}{Q_h}}$$
+\end{frame}
+
+% ============================================
+% WAVES & SOUND (CH13-14)
+% v=Cyan, f=Orange, λ=Blue, T=Magenta
+% I=Vermillion, P=Teal, A=Red, β=Black
+% ============================================
+\begin{frame}
+\frametitle{CH13-14: Waves \& Sound}
+
+\begin{block}{Color Key}
+$\col{cE}{v}$ = \col{cE}{wave speed} \quad $\col{cD}{f}$ = \col{cD}{frequency} \quad $\col{cB}{\lambda}$ = \col{cB}{wavelength} \quad $\col{cF}{T}$ = \col{cF}{period}
+\end{block}
+
+\textbf{Wave Equation:}
+$$\col{cE}{v} = \col{cD}{f}\col{cB}{\lambda} \qquad \col{cF}{T} = \frac{1}{\col{cD}{f}}$$
+
+\textbf{Intensity:}
+$$\col{cA}{I} = \frac{\col{cC}{P}}{\col{cG}{A}} \qquad \col{cK}{\beta} = 10\log_{10}\left(\frac{\col{cA}{I}}{\col{cA}{I_0}}\right)$$
+
+\textbf{Standing Waves:}
+$$\col{cD}{f_n} = n\frac{\col{cE}{v}}{2\col{cB}{L}} \text{ (open)} \qquad \col{cD}{f_n} = n\frac{\col{cE}{v}}{4\col{cB}{L}} \text{ (closed)}$$
+\end{frame}
+
+% ============================================
+% ELECTRIC (CH18)
+% F=Teal, k=Black, q=Orange, r=Blue
+% E=Vermillion, U=Magenta, V=Cyan, C=Red
+% ============================================
+\begin{frame}
+\frametitle{CH18: Electric Fields \& Potential}
+
+\begin{block}{Color Key}
+$\col{cC}{F}$ = \col{cC}{force} \quad $\col{cD}{q}$ = \col{cD}{charge} \quad $\col{cA}{E}$ = \col{cA}{electric field} \quad $\col{cE}{V}$ = \col{cE}{potential}
+\end{block}
+
+\textbf{Coulomb's Law:}
+$$\col{cC}{F} = \col{cK}{k}\frac{\col{cD}{q_1}\col{cD}{q_2}}{\col{cB}{r}^2} \qquad \col{cA}{E} = \frac{\col{cK}{k}|\col{cD}{Q}|}{\col{cB}{r}^2}$$
+
+\textbf{Potential:}
+$$\col{cE}{V} = \frac{\col{cK}{k}\col{cD}{Q}}{\col{cB}{r}} \qquad \col{cF}{U_E} = \frac{\col{cK}{k}\col{cD}{Q}\col{cD}{q}}{\col{cB}{r}}$$
+
+\textbf{Capacitance:}
+$$\col{cG}{C} = \frac{\col{cD}{Q}}{\col{cE}{V}} \qquad \col{cF}{U_E} = \frac{1}{2}\col{cG}{C}\col{cE}{V}^2$$
+\end{frame}
+
+% ============================================
+% CIRCUITS (CH19)
+% I=Cyan, Q=Orange, t=Blue, V=Magenta
+% R=Teal, P=Vermillion
+% ============================================
+\begin{frame}
+\frametitle{CH19: Circuits}
+
+\begin{block}{Color Key}
+$\col{cE}{I}$ = \col{cE}{current} \quad $\col{cF}{V}$ = \col{cF}{voltage} \quad $\col{cC}{R}$ = \col{cC}{resistance} \quad $\col{cA}{P}$ = \col{cA}{power}
+\end{block}
+
+\textbf{Definitions:}
+$$\col{cE}{I} = \frac{\Delta \col{cD}{Q}}{\Delta \col{cB}{t}} \qquad \col{cF}{V} = \col{cE}{I}\col{cC}{R}$$
+
+\textbf{Power:}
+$$\col{cA}{P} = \col{cE}{I}\col{cF}{V} = \col{cE}{I}^2\col{cC}{R} = \frac{\col{cF}{V}^2}{\col{cC}{R}}$$
+
+\textbf{Combinations:}
+$$\col{cC}{R}_{\text{series}} = \col{cC}{R_1} + \col{cC}{R_2} + \cdots \qquad \frac{1}{\col{cC}{R}_{\text{parallel}}} = \frac{1}{\col{cC}{R_1}} + \frac{1}{\col{cC}{R_2}} + \cdots$$
+\end{frame}
+
+% ============================================
+% SUMMARY
+% ============================================
+\begin{frame}
+\frametitle{Approach 1 Summary}
+\begin{block}{Result: Zero Color Collisions}
+Every equation has unique colors for each variable.
+\end{block}
+
+\textbf{Domain Color Assignments:}
+\begin{itemize}
+\item Each chapter defines its own color key
+\item Same letter can have different colors across domains
+\item Example: \col{cF}{V} = voltage (CH19) vs \col{cB}{V} = volume (CH12)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Best for:}
+\begin{itemize}
+\item Formula sheets organized by chapter
+\item Students studying one topic at a time
+\item Maximum visual distinction per equation
+\end{itemize}
+\end{frame}
+
+\end{document}

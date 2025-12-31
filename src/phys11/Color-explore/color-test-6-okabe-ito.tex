@@ -1,0 +1,32 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{xcolor}
+
+% OKABE-ITO v1 - Sky Blue variant
+\definecolor{tempColor}{HTML}{D55E00}
+\definecolor{volumeColor}{HTML}{56B4E9}
+\definecolor{pressureColor}{HTML}{009E73}
+\definecolor{particleColor}{HTML}{E69F00}
+\definecolor{constantColor}{HTML}{999999}
+
+\newcommand{\temp}[1]{\textcolor{tempColor}{#1}}
+\newcommand{\volume}[1]{\textcolor{volumeColor}{#1}}
+\newcommand{\pressure}[1]{\textcolor{pressureColor}{#1}}
+\newcommand{\particles}[1]{\textcolor{particleColor}{#1}}
+\newcommand{\constant}[1]{\textcolor{constantColor}{#1}}
+
+\begin{document}
+\begin{frame}
+\frametitle{6. OKABE-ITO v1 - Scientific}
+\begin{block}{$\boxed{\pressure{P}\volume{V} = \particles{N}\constant{k}\temp{T}}$}
+\pressure{Pressure} $\times$ \volume{volume} $=$ \particles{particles} $\times$ \constant{Boltzmann constant} $\times$ \temp{temperature}
+\end{block}
+\begin{itemize}
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\volume{V}$ = \volume{volume} (m$^3$)
+\item $\particles{N}$ = \particles{number of particles}
+\item $\constant{k}$ = \constant{Boltzmann constant}
+\item $\temp{T}$ = \temp{absolute temperature} (K)
+\end{itemize}
+\end{frame}
+\end{document}

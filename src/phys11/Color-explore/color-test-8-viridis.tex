@@ -1,0 +1,32 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{xcolor}
+
+% VIRIDIS - Data Heatmap
+\definecolor{tempColor}{HTML}{FDE725}
+\definecolor{volumeColor}{HTML}{5EC962}
+\definecolor{pressureColor}{HTML}{21918C}
+\definecolor{particleColor}{HTML}{440154}
+\definecolor{constantColor}{HTML}{2E2E2E}
+
+\newcommand{\temp}[1]{\textcolor{tempColor}{#1}}
+\newcommand{\volume}[1]{\textcolor{volumeColor}{#1}}
+\newcommand{\pressure}[1]{\textcolor{pressureColor}{#1}}
+\newcommand{\particles}[1]{\textcolor{particleColor}{#1}}
+\newcommand{\constant}[1]{\textcolor{constantColor}{#1}}
+
+\begin{document}
+\begin{frame}
+\frametitle{8. VIRIDIS - Data Heatmap}
+\begin{block}{$\boxed{\pressure{P}\volume{V} = \particles{N}\constant{k}\temp{T}}$}
+\pressure{Pressure} $\times$ \volume{volume} $=$ \particles{particles} $\times$ \constant{Boltzmann constant} $\times$ \temp{temperature}
+\end{block}
+\begin{itemize}
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\volume{V}$ = \volume{volume} (m$^3$)
+\item $\particles{N}$ = \particles{number of particles}
+\item $\constant{k}$ = \constant{Boltzmann constant}
+\item $\temp{T}$ = \temp{absolute temperature} (K)
+\end{itemize}
+\end{frame}
+\end{document}

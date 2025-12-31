@@ -1,7 +1,39 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
 \usepackage[overridenote]{pdfpc}
+\usepackage{xcolor}
 \graphicspath{{../images/}{../../shared/images/}}
+
+% ============================================
+% SEMANTIC PHYSICS COLOR DEFINITIONS
+% Rule: Every physical concept gets a UNIQUE color
+% ============================================
+\definecolor{pressureColor}{RGB}{0,102,204}      % Blue
+\definecolor{volumeColor}{RGB}{0,170,102}        % Green
+\definecolor{particleColor}{RGB}{136,0,170}      % Purple
+\definecolor{constantColor}{RGB}{204,102,0}      % Orange
+\definecolor{tempColor}{RGB}{204,0,0}            % Red
+\definecolor{forceColor}{RGB}{0,136,136}         % Teal
+\definecolor{areaColor}{RGB}{136,102,68}         % Brown
+\definecolor{workColor}{RGB}{0,136,204}          % Steel Blue (mechanical transfer)
+\definecolor{energyColor}{RGB}{170,136,0}        % Gold (stored energy)
+\definecolor{heatColor}{RGB}{255,102,0}          % Bright Orange (thermal transfer)
+\definecolor{entropyColor}{RGB}{204,0,170}       % Magenta
+
+% ============================================
+% SEMANTIC MACROS - Color by physical meaning
+% ============================================
+\newcommand{\pressure}[1]{\textcolor{pressureColor}{#1}}
+\newcommand{\volume}[1]{\textcolor{volumeColor}{#1}}
+\newcommand{\particles}[1]{\textcolor{particleColor}{#1}}
+\newcommand{\constant}[1]{\textcolor{constantColor}{#1}}
+\newcommand{\temp}[1]{\textcolor{tempColor}{#1}}
+\newcommand{\force}[1]{\textcolor{forceColor}{#1}}
+\newcommand{\area}[1]{\textcolor{areaColor}{#1}}
+\newcommand{\work}[1]{\textcolor{workColor}{#1}}
+\newcommand{\energy}[1]{\textcolor{energyColor}{#1}}
+\newcommand{\heat}[1]{\textcolor{heatColor}{#1}}
+\newcommand{\entropy}[1]{\textcolor{entropyColor}{#1}}
 
 \title[Heat and Work]{PHYS11 CH:12 The Universe's Accounting System}
 \subtitle{How Energy Becomes Unavailable}
@@ -203,9 +235,9 @@ Thermal equilibrium requires \textbf{thermal contact} - ability to freely exchan
 \frametitle{12.2 Pressure: Force over Area}
 \begin{block}{Definition: Pressure}
 \begin{center}
-\Large $\boxed{P = \frac{F}{A}}$
+\Large $\boxed{\pressure{P} = \frac{\force{F}}{\area{A}}}$
 \end{center}
-Pressure is force per unit area perpendicular to surface.
+\pressure{Pressure} is \force{force} per unit \area{area} perpendicular to surface.
 \end{block}
 
 \pause
@@ -243,9 +275,9 @@ Pressure is force per unit area perpendicular to surface.
 \frametitle{12.2 The Ideal Gas Law}
 \begin{block}{Universal Law: Gas Behavior}
 \begin{center}
-\Large $\boxed{PV = NkT}$
+\Large $\boxed{\pressure{P}\volume{V} = \particles{N}\constant{k}\temp{T}}$
 \end{center}
-Pressure times volume equals particles times Boltzmann constant times absolute temperature.
+\pressure{Pressure} times \volume{volume} equals \particles{particles} times \constant{Boltzmann constant} times \temp{absolute temperature}.
 \end{block}
 
 \pause
@@ -253,11 +285,11 @@ Pressure times volume equals particles times Boltzmann constant times absolute t
 
 Where:
 \begin{itemize}
-\item $P$ = pressure (Pa)
-\item $V$ = volume (m$^3$)
-\item $N$ = number of particles
-\item $k = 1.38 \times 10^{-23}$ J/K (Boltzmann constant)
-\item $T$ = absolute temperature (K)
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\volume{V}$ = \volume{volume} (m$^3$)
+\item $\particles{N}$ = \particles{number of particles}
+\item $\constant{k} = 1.38 \times 10^{-23}$ J/K (\constant{Boltzmann constant})
+\item $\temp{T}$ = \temp{absolute temperature} (K)
 \end{itemize}
 \note{[P0] [ALGEBRA] "P-V equals N-k-T"\\\\
 [P1] "One of physics' most important equations"\\\\
@@ -319,9 +351,9 @@ Pumping tire: volume increases, then pressure builds, tire warms up.
 \pause
 \begin{block}{Nature's Rule for Gases}
 \begin{center}
-\Large $\boxed{W = P\Delta V}$
+\Large $\boxed{\work{W} = \pressure{P}\Delta \volume{V}}$
 \end{center}
-Work equals pressure times change in volume.
+\work{Work} equals \pressure{pressure} times change in \volume{volume}.
 \end{block}
 \note{[P0][Fig 12.5: Piston moves distance d as energy added] "When gas expands, it does work"\\\\
 [P1] [ALGEBRA] "W equals P delta V"\\\\
@@ -336,9 +368,9 @@ Work equals pressure times change in volume.
 \frametitle{12.2 The First Law of Thermodynamics}
 \begin{block}{Universal Law: Energy Conservation}
 \begin{center}
-\Large $\boxed{\Delta U = Q - W}$
+\Large $\boxed{\Delta \energy{U} = \heat{Q} - \work{W}}$
 \end{center}
-Change in internal energy equals heat added minus work done by system.
+Change in \energy{internal energy} equals \heat{heat} added minus \work{work} done by system.
 \end{block}
 
 \pause
@@ -346,9 +378,9 @@ Change in internal energy equals heat added minus work done by system.
 
 Where:
 \begin{itemize}
-\item $\Delta U$ = change in internal energy
-\item $Q$ = net heat into system (positive if in, negative if out)
-\item $W$ = net work by system (positive if out, negative if in)
+\item $\Delta \energy{U}$ = change in \energy{internal energy}
+\item $\heat{Q}$ = net \heat{heat} into system (positive if in, negative if out)
+\item $\work{W}$ = net \work{work} by system (positive if out, negative if in)
 \end{itemize}
 
 \pause
@@ -567,15 +599,15 @@ $$\Delta U = Q - W + \text{food energy}$$
 \frametitle{12.3 Entropy: Measure of Disorder}
 \begin{block}{Definition: Entropy}
 \begin{center}
-\Large $\boxed{\Delta S = \frac{Q}{T}}$
+\Large $\boxed{\Delta \entropy{S} = \frac{\heat{Q}}{\temp{T}}}$
 \end{center}
-Change in entropy equals heat transfer divided by absolute temperature.
+Change in \entropy{entropy} equals \heat{heat} transfer divided by \temp{absolute temperature}.
 \end{block}
 
 \pause
 \vspace{0.3cm}
 
-\textbf{What entropy measures:}
+\textbf{What \entropy{entropy} measures:}
 \begin{itemize}
 \item Disorder in system
 \item Energy unavailable to do work
@@ -851,9 +883,9 @@ $$W = Q_h - Q_c$$
 \frametitle{12.4 Thermal Efficiency}
 \begin{block}{Definition: Efficiency}
 \begin{center}
-\Large $\boxed{\text{Eff} = \frac{W}{Q_h}}$
+\Large $\boxed{\text{Eff} = \frac{\work{W}}{\heat{Q_h}}}$
 \end{center}
-Efficiency equals useful work divided by energy input.
+Efficiency equals useful \work{work} divided by \heat{heat} input.
 \end{block}
 
 \pause
@@ -1037,12 +1069,12 @@ Energy conserved, but becomes less useful over time.
 \begin{frame}[shrink]
 \frametitle{Key Equations}
 \begin{align}
-P &= \frac{F}{A} \quad \text{(Pressure)} \\
-PV &= NkT \quad \text{(Ideal gas)} \\
-W &= P\Delta V \quad \text{(P-V work)} \\
-\Delta U &= Q - W \quad \text{(First law)} \\
-\Delta S &= \frac{Q}{T} \quad \text{(Entropy)} \\
-\text{Eff} &= \frac{W}{Q_h} \quad \text{(Efficiency)}
+\pressure{P} &= \frac{\force{F}}{\area{A}} \quad \text{(\pressure{Pressure})} \\
+\pressure{P}\volume{V} &= \particles{N}\constant{k}\temp{T} \quad \text{(Ideal gas)} \\
+\work{W} &= \pressure{P}\Delta \volume{V} \quad \text{(\pressure{P}-\volume{V} work)} \\
+\Delta \energy{U} &= \heat{Q} - \work{W} \quad \text{(First law)} \\
+\Delta \entropy{S} &= \frac{\heat{Q}}{\temp{T}} \quad \text{(\entropy{Entropy})} \\
+\text{Eff} &= \frac{\work{W}}{\heat{Q_h}} \quad \text{(Efficiency)}
 \end{align}
 \note{- Six key equations\\\\
 - Pressure, ideal gas, work, first law, entropy, efficiency\\\\

@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage{../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/semantic-physics-colors}
 \usepackage[overridenote]{pdfpc}
 \graphicspath{{../images/}{../../shared/images/}}
 
@@ -85,9 +86,9 @@ From the airplane landing to the dragster launching...
 \frametitle{3.1 The Source Code of Change}
 \begin{block}{Nature's Rule for Acceleration}
 \begin{center}
-\Large $\boxed{\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_0}{t_f - t_0}}$
+\Large $\boxed{\bar{\accel{a}} = \frac{\Delta \vel{v}}{\Delta \tvar{t}} = \frac{\vel{v_f} - \vel{v_0}}{\tvar{t_f} - \tvar{t_0}}}$
 \end{center}
-Acceleration equals change in velocity divided by change in time.
+\accel{Acceleration} equals change in \vel{velocity} divided by change in \tvar{time}.
 \end{block}
 
 \pause

@@ -1,0 +1,315 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{xcolor}
+
+% ============================================
+% PAUL TOL VIBRANT COLOR SCHEME
+% 6 punchy colorblind-safe colors + black
+% Rule: Every physical concept gets a UNIQUE color
+% ============================================
+
+% PAUL TOL VIBRANT PALETTE (6 colors)
+\definecolor{tolOrange}{HTML}{EE7733}      % Vivid Orange
+\definecolor{tolBlue}{HTML}{0077BB}        % Strong Blue
+\definecolor{tolCyan}{HTML}{33BBEE}        % Bright Cyan
+\definecolor{tolMagenta}{HTML}{EE3377}     % Hot Magenta
+\definecolor{tolRed}{HTML}{CC3311}         % Deep Red
+\definecolor{tolTeal}{HTML}{009988}        % Rich Teal
+\definecolor{tolBlack}{HTML}{000000}       % Black
+
+% ============================================
+% SEMANTIC PHYSICS COLOR ASSIGNMENTS
+% ============================================
+
+% KINEMATICS CONCEPTS
+\definecolor{displacementColor}{HTML}{0077BB}  % Blue - position/space
+\definecolor{velocityColor}{HTML}{33BBEE}      % Cyan - flow/rate
+\definecolor{accelColor}{HTML}{CC3311}         % Red - intensity/change
+\definecolor{timeColor}{HTML}{EE7733}          % Orange - progress/count
+
+% THERMODYNAMICS CONCEPTS
+\definecolor{pressureColor}{HTML}{009988}      % Teal - force distribution
+\definecolor{volumeColor}{HTML}{0077BB}        % Blue - space (same as displacement)
+\definecolor{tempColor}{HTML}{CC3311}          % Red - intensity (same as accel)
+\definecolor{particleColor}{HTML}{EE7733}      % Orange - count (same as time)
+\definecolor{heatColor}{HTML}{EE3377}          % Magenta - thermal transfer
+\definecolor{workColor}{HTML}{33BBEE}          % Cyan - mechanical transfer (same as velocity)
+\definecolor{energyColor}{HTML}{EE3377}        % Magenta - stored energy (same as heat)
+\definecolor{entropyColor}{HTML}{009988}       % Teal - disorder (same as pressure)
+
+% UNIVERSAL CONCEPTS
+\definecolor{forceColor}{HTML}{009988}         % Teal (same as pressure)
+\definecolor{areaColor}{HTML}{EE7733}          % Orange
+\definecolor{constantColor}{HTML}{000000}      % Black - fixed values
+
+% ============================================
+% SEMANTIC MACROS
+% ============================================
+
+% Kinematics
+\newcommand{\disp}[1]{\textcolor{displacementColor}{#1}}
+\newcommand{\vel}[1]{\textcolor{velocityColor}{#1}}
+\newcommand{\accel}[1]{\textcolor{accelColor}{#1}}
+\newcommand{\tvar}[1]{\textcolor{timeColor}{#1}}
+
+% Thermodynamics
+\newcommand{\pressure}[1]{\textcolor{pressureColor}{#1}}
+\newcommand{\volume}[1]{\textcolor{volumeColor}{#1}}
+\newcommand{\temp}[1]{\textcolor{tempColor}{#1}}
+\newcommand{\particles}[1]{\textcolor{particleColor}{#1}}
+\newcommand{\heat}[1]{\textcolor{heatColor}{#1}}
+\newcommand{\work}[1]{\textcolor{workColor}{#1}}
+\newcommand{\energy}[1]{\textcolor{energyColor}{#1}}
+\newcommand{\entropy}[1]{\textcolor{entropyColor}{#1}}
+
+% Universal
+\newcommand{\force}[1]{\textcolor{forceColor}{#1}}
+\newcommand{\area}[1]{\textcolor{areaColor}{#1}}
+\newcommand{\constant}[1]{\textcolor{constantColor}{#1}}
+
+\begin{document}
+
+% ============================================
+% TITLE FRAME
+% ============================================
+\begin{frame}
+\frametitle{PAUL TOL VIBRANT Palette}
+\begin{block}{Maximum Punch, Full Accessibility}
+6 vivid colors designed for TensorBoard, optimized for print
+\end{block}
+
+\vspace{0.3cm}
+\textbf{Full Palette:}
+\begin{itemize}
+\item \textcolor{tolOrange}{Orange \#EE7733} \quad \textcolor{tolBlue}{Blue \#0077BB} \quad \textcolor{tolCyan}{Cyan \#33BBEE}
+\item \textcolor{tolMagenta}{Magenta \#EE3377} \quad \textcolor{tolRed}{Red \#CC3311} \quad \textcolor{tolTeal}{Teal \#009988}
+\item \textcolor{tolBlack}{Black \#000000}
+\end{itemize}
+\end{frame}
+
+% ============================================
+% COLOR LEGEND
+% ============================================
+\begin{frame}
+\frametitle{Semantic Color Mapping}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{KINEMATICS}
+\begin{itemize}
+\item $\disp{d}$ = \disp{displacement}
+\item $\vel{v}$ = \vel{velocity}
+\item $\accel{a}$ = \accel{acceleration}
+\item $\tvar{t}$ = \tvar{time}
+\item $\constant{g}$ = \constant{gravity}
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{THERMODYNAMICS}
+\begin{itemize}
+\item $\pressure{P}$ = \pressure{pressure}
+\item $\volume{V}$ = \volume{volume}
+\item $\temp{T}$ = \temp{temperature}
+\item $\particles{N}$ = \particles{particles}
+\item $\heat{Q}$ = \heat{heat}
+\item $\work{W}$ = \work{work}
+\item $\energy{U}$ = \energy{internal energy}
+\item $\constant{k}$ = \constant{Boltzmann const}
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% ============================================
+% KINEMATICS EQUATIONS
+% ============================================
+\begin{frame}
+\frametitle{Kinematics: Definition of Acceleration}
+\begin{block}{Nature's Rule for Acceleration}
+\begin{center}
+\Large $\boxed{\bar{\accel{a}} = \frac{\Delta \vel{v}}{\Delta \tvar{t}} = \frac{\vel{v_f} - \vel{v_0}}{\tvar{t_f} - \tvar{t_0}}}$
+\end{center}
+\accel{Acceleration} equals change in \vel{velocity} divided by change in \tvar{time}.
+\end{block}
+
+\vspace{0.3cm}
+\begin{itemize}
+\item $\bar{\accel{a}}$ = average \accel{acceleration} (m/s$^2$)
+\item $\vel{v_f}, \vel{v_0}$ = final and initial \vel{velocity} (m/s)
+\item $\tvar{t_f}, \tvar{t_0}$ = final and initial \tvar{time} (s)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kinematics: The Five Equations}
+\textbf{For constant \accel{acceleration} only:}
+
+\begin{align}
+\disp{d} &= \disp{d_0} + \bar{\vel{v}}\tvar{t} \\[0.2cm]
+\bar{\vel{v}} &= \frac{\vel{v_0} + \vel{v_f}}{2} \\[0.2cm]
+\vel{v} &= \vel{v_0} + \accel{a}\tvar{t} \\[0.2cm]
+\disp{d} &= \disp{d_0} + \vel{v_0}\tvar{t} + \frac{1}{2}\accel{a}\tvar{t}^2 \\[0.2cm]
+\vel{v}^2 &= \vel{v_0}^2 + 2\accel{a}(\disp{d} - \disp{d_0})
+\end{align}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kinematics: Gravitational Acceleration}
+\begin{block}{Nature's Constant}
+\begin{center}
+\Large $\boxed{\constant{g} = 9.80 \text{ m/s}^2}$
+\end{center}
+Near Earth's surface, all objects fall with this \accel{acceleration}.
+\end{block}
+
+\vspace{0.3cm}
+\textbf{Free fall equations:}
+\begin{align}
+\disp{y} &= \disp{y_0} + \vel{v_0}\tvar{t} + \frac{1}{2}(-\constant{g})\tvar{t}^2 \\[0.2cm]
+\vel{v} &= \vel{v_0} - \constant{g}\tvar{t}
+\end{align}
+
+Every second, \vel{velocity} increases by $\constant{9.80}$ m/s downward.
+\end{frame}
+
+% ============================================
+% THERMODYNAMICS EQUATIONS
+% ============================================
+\begin{frame}
+\frametitle{Thermodynamics: Pressure Definition}
+\begin{block}{Definition: Pressure}
+\begin{center}
+\Large $\boxed{\pressure{P} = \frac{\force{F}}{\area{A}}}$
+\end{center}
+\pressure{Pressure} is \force{force} per unit \area{area} perpendicular to surface.
+\end{block}
+
+\vspace{0.3cm}
+\begin{itemize}
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\force{F}$ = \force{force} (N)
+\item $\area{A}$ = \area{area} (m$^2$)
+\item SI unit: Pascal (Pa), where $1 \text{ Pa} = 1 \text{ N/m}^2$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Thermodynamics: Ideal Gas Law}
+\begin{block}{Universal Law: Gas Behavior}
+\begin{center}
+\Large $\boxed{\pressure{P}\volume{V} = \particles{N}\constant{k}\temp{T}}$
+\end{center}
+\pressure{Pressure} $\times$ \volume{volume} = \particles{particles} $\times$ \constant{Boltzmann constant} $\times$ \temp{temperature}
+\end{block}
+
+\vspace{0.3cm}
+\begin{itemize}
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\volume{V}$ = \volume{volume} (m$^3$)
+\item $\particles{N}$ = \particles{number of particles}
+\item $\constant{k} = 1.38 \times 10^{-23}$ J/K (\constant{Boltzmann constant})
+\item $\temp{T}$ = \temp{absolute temperature} (K)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Thermodynamics: Pressure-Volume Work}
+\begin{block}{Nature's Rule for Gases}
+\begin{center}
+\Large $\boxed{\work{W} = \pressure{P}\Delta \volume{V}}$
+\end{center}
+\work{Work} equals \pressure{pressure} times change in \volume{volume}.
+\end{block}
+
+\vspace{0.3cm}
+\begin{itemize}
+\item $\work{W}$ = \work{work} done by gas (J)
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\Delta\volume{V}$ = change in \volume{volume} (m$^3$)
+\end{itemize}
+
+\vspace{0.3cm}
+Gas expands $\rightarrow$ positive \work{work} done BY system
+\end{frame}
+
+\begin{frame}
+\frametitle{Thermodynamics: First Law (Energy Conservation)}
+\begin{block}{Universal Law: Energy Conservation}
+\begin{center}
+\Large $\boxed{\Delta \energy{U} = \heat{Q} - \work{W}}$
+\end{center}
+Change in \energy{internal energy} = \heat{heat} added $-$ \work{work} done by system
+\end{block}
+
+\vspace{0.3cm}
+\begin{itemize}
+\item $\Delta \energy{U}$ = change in \energy{internal energy} (J)
+\item $\heat{Q}$ = net \heat{heat} into system (J)
+\item $\work{W}$ = net \work{work} by system (J)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Signs:} $+\heat{Q}$ adds energy, $+\work{W}$ removes energy
+\end{frame}
+
+\begin{frame}
+\frametitle{Thermodynamics: Entropy (Second Law)}
+\begin{block}{Definition: Entropy}
+\begin{center}
+\Large $\boxed{\Delta \entropy{S} = \frac{\heat{Q}}{\temp{T}}}$
+\end{center}
+Change in \entropy{entropy} = \heat{heat} transfer $\div$ \temp{absolute temperature}
+\end{block}
+
+\vspace{0.3cm}
+\begin{itemize}
+\item $\Delta \entropy{S}$ = change in \entropy{entropy} (J/K)
+\item $\heat{Q}$ = \heat{heat} transfer (J)
+\item $\temp{T}$ = \temp{absolute temperature} (K)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Second Law:} $\Delta \entropy{S}_{\text{total}} \geq 0$ (entropy always increases)
+\end{frame}
+
+\begin{frame}
+\frametitle{Thermodynamics: Heat Engine Efficiency}
+\begin{block}{Definition: Efficiency}
+\begin{center}
+\Large $\boxed{\text{Eff} = \frac{\work{W}}{\heat{Q_h}}}$
+\end{center}
+Efficiency = useful \work{work} output $\div$ \heat{heat} input
+\end{block}
+
+\vspace{0.3cm}
+\begin{itemize}
+\item $\work{W}$ = \work{work} output (J)
+\item $\heat{Q_h}$ = \heat{heat} from hot reservoir (J)
+\item $\work{W} = \heat{Q_h} - \heat{Q_c}$
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Second Law limit:} 100\% efficiency impossible!
+\end{frame}
+
+% ============================================
+% CROSS-DOMAIN COMPARISON
+% ============================================
+\begin{frame}
+\frametitle{Cross-Domain Color Consistency}
+\begin{block}{Semantic Mapping - Paul Tol Vibrant}
+6 colors maximum vibrancy, designed for data visualization
+\end{block}
+
+\vspace{0.3cm}
+\begin{tabular}{l|l|l}
+\textbf{Role} & \textbf{Kinematics} & \textbf{Thermodynamics} \\
+\hline
+\textcolor{tolBlue}{Space/Position} & \disp{displacement} $d$ & \volume{volume} $V$ \\
+\textcolor{tolCyan}{Flow/Transfer} & \vel{velocity} $v$ & \work{work} $W$ \\
+\textcolor{tolRed}{Intensity} & \accel{acceleration} $a$ & \temp{temperature} $T$ \\
+\textcolor{tolOrange}{Count/Progress} & \tvar{time} $t$ & \particles{particles} $N$ \\
+\textcolor{tolTeal}{Distribution} & --- & \pressure{pressure} $P$ \\
+\textcolor{tolMagenta}{Thermal/Stored} & --- & \heat{heat} $Q$, \energy{energy} $U$ \\
+\end{tabular}
+\end{frame}
+
+\end{document}

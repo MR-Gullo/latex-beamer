@@ -1,0 +1,154 @@
+% ============================================
+% SEMANTIC PHYSICS COLORS
+% A LaTeX style file for colorblind-safe physics notation
+%
+% Usage: \usepackage{semantic-physics-colors}
+%
+% Based on Okabe-Ito + Paul Tol Vibrant hybrid palette
+% All colors are scientifically validated for accessibility
+% ============================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{semantic-physics-colors}[2024/12/31 Semantic Physics Color Scheme]
+
+\RequirePackage{xcolor}
+
+% ============================================
+% HYBRID PALETTE: OKABE-ITO + PAUL TOL VIBRANT
+% 8 punchy, colorblind-safe colors
+% ============================================
+
+% Base palette colors
+\definecolor{physSpace}{HTML}{0072B2}        % Blue - position/space/length
+\definecolor{physFlow}{HTML}{33BBEE}         % Cyan - rates/flow/velocity
+\definecolor{physIntensity}{HTML}{D55E00}    % Vermillion - intensity/temperature/field
+\definecolor{physCount}{HTML}{E69F00}        % Orange - count/time/particles
+\definecolor{physForce}{HTML}{009E73}        % Teal - force/pressure/cause
+\definecolor{physTransfer}{HTML}{CC3311}     % Red - energy transfer (Q, W, P)
+\definecolor{physStored}{HTML}{EE3377}       % Magenta - stored energy/state
+\definecolor{physConst}{HTML}{000000}        % Black - constants/properties
+
+% ============================================
+% SEMANTIC CATEGORY MACROS
+% Use these for maximum flexibility
+% ============================================
+
+% SPACE/POSITION (Blue) - "where" or "how much space"
+% Use for: d, x, r, h, L, A, V (volume), lambda, s, wavelength
+\newcommand{\pSpace}[1]{\textcolor{physSpace}{#1}}
+
+% FLOW/RATE (Cyan) - "how fast"
+% Use for: v, omega, I (current), f (frequency), angular velocity
+\newcommand{\pFlow}[1]{\textcolor{physFlow}{#1}}
+
+% INTENSITY (Vermillion) - "how strong/intense"
+% Use for: a, T (temp), E (field), P (pressure), beta, field strength
+\newcommand{\pIntensity}[1]{\textcolor{physIntensity}{#1}}
+
+% COUNT/PROGRESS (Orange) - things that count or mark progress
+% Use for: t, N, n, q (charge), period T (waves context)
+\newcommand{\pCount}[1]{\textcolor{physCount}{#1}}
+
+% FORCE/CAUSE (Teal) - things that push or cause change
+% Use for: F, p (momentum), tau (torque), N (normal force)
+\newcommand{\pForce}[1]{\textcolor{physForce}{#1}}
+
+% TRANSFER (Red) - energy moving between systems
+% Use for: Q (heat), W (work), P (power)
+\newcommand{\pTransfer}[1]{\textcolor{physTransfer}{#1}}
+
+% STORED (Magenta) - energy/state held in a system
+% Use for: U, KE, PE, E (energy), S (entropy), C (capacitance)
+\newcommand{\pStored}[1]{\textcolor{physStored}{#1}}
+
+% CONSTANT/PROPERTY (Black) - fixed values, material properties
+% Use for: g, k, c, mu, rho, m, R, epsilon, kappa
+\newcommand{\pConst}[1]{\textcolor{physConst}{#1}}
+
+% ============================================
+% DOMAIN-SPECIFIC CONVENIENCE MACROS
+% Named by physics concept for intuitive use
+% ============================================
+
+% --- KINEMATICS ---
+\newcommand{\disp}[1]{\pSpace{#1}}           % displacement d, x
+\newcommand{\pos}[1]{\pSpace{#1}}            % position
+\newcommand{\vel}[1]{\pFlow{#1}}             % velocity v
+\newcommand{\accel}[1]{\pIntensity{#1}}      % acceleration a
+\newcommand{\tvar}[1]{\pCount{#1}}           % time t
+
+% --- DYNAMICS ---
+\newcommand{\force}[1]{\pForce{#1}}          % force F
+\newcommand{\mom}[1]{\pForce{#1}}            % momentum p
+\newcommand{\normal}[1]{\pForce{#1}}         % normal force N
+\newcommand{\mass}[1]{\pConst{#1}}           % mass m
+\newcommand{\fric}[1]{\pConst{#1}}           % friction coeff mu
+
+% --- ROTATIONAL ---
+\newcommand{\angvel}[1]{\pFlow{#1}}          % angular velocity omega
+\newcommand{\angacc}[1]{\pIntensity{#1}}     % angular acceleration alpha
+\newcommand{\torque}[1]{\pForce{#1}}         % torque tau
+\newcommand{\radius}[1]{\pSpace{#1}}         % radius r
+\newcommand{\angle}[1]{\pSpace{#1}}          % angle theta
+
+% --- ENERGY ---
+\newcommand{\work}[1]{\pTransfer{#1}}        % work W
+\newcommand{\power}[1]{\pTransfer{#1}}       % power P
+\newcommand{\kenergy}[1]{\pStored{#1}}       % kinetic energy KE
+\newcommand{\penergy}[1]{\pStored{#1}}       % potential energy PE
+\newcommand{\energy}[1]{\pStored{#1}}        % generic energy E, U
+
+% --- THERMODYNAMICS ---
+\newcommand{\pressure}[1]{\pIntensity{#1}}   % pressure P
+\newcommand{\volume}[1]{\pSpace{#1}}         % volume V
+\newcommand{\temp}[1]{\pIntensity{#1}}       % temperature T
+\newcommand{\heat}[1]{\pTransfer{#1}}        % heat Q
+\newcommand{\entropy}[1]{\pStored{#1}}       % entropy S
+\newcommand{\particles}[1]{\pCount{#1}}      % particle count N
+\newcommand{\internal}[1]{\pStored{#1}}      % internal energy U
+
+% --- WAVES ---
+\newcommand{\wavelen}[1]{\pSpace{#1}}        % wavelength lambda
+\newcommand{\freq}[1]{\pFlow{#1}}            % frequency f
+\newcommand{\period}[1]{\pCount{#1}}         % period T (in wave context)
+\newcommand{\intensity}[1]{\pIntensity{#1}}  % intensity I, beta
+\newcommand{\amplitude}[1]{\pSpace{#1}}      % amplitude A
+
+% --- ELECTRICITY ---
+\newcommand{\charge}[1]{\pCount{#1}}         % charge q, Q
+\newcommand{\current}[1]{\pFlow{#1}}         % current I
+\newcommand{\voltage}[1]{\pStored{#1}}       % voltage V (potential)
+\newcommand{\resist}[1]{\pConst{#1}}         % resistance R
+\newcommand{\capac}[1]{\pStored{#1}}         % capacitance C
+\newcommand{\efield}[1]{\pIntensity{#1}}     % electric field E
+
+% --- UNIVERSAL CONSTANTS ---
+\newcommand{\grav}[1]{\pConst{#1}}           % g, G
+\newcommand{\boltz}[1]{\pConst{#1}}          % k (Boltzmann)
+\newcommand{\specheat}[1]{\pConst{#1}}       % c (specific heat)
+\newcommand{\springk}[1]{\pConst{#1}}        % k (spring constant)
+\newcommand{\coulombk}[1]{\pConst{#1}}       % k (Coulomb constant)
+\newcommand{\density}[1]{\pConst{#1}}        % rho (density)
+\newcommand{\area}[1]{\pSpace{#1}}           % area A
+
+% ============================================
+% SEMANTIC MAPPING REFERENCE
+% ============================================
+%
+% CROSS-DOMAIN CONSISTENCY:
+% -------------------------
+% Same conceptual role = same color across all physics
+%
+% | Category      | Color      | Kinematics     | Thermo          | Waves       | Electric    |
+% |---------------|------------|----------------|-----------------|-------------|-------------|
+% | Space         | Blue       | d, r, h        | V (volume)      | lambda, L   | r           |
+% | Flow/Rate     | Cyan       | v, omega       | ---             | f, v_wave   | I (current) |
+% | Intensity     | Vermillion | a              | T, P (pressure) | I, beta     | E (field)   |
+% | Count         | Orange     | t              | N               | n, T(period)| q           |
+% | Force/Cause   | Teal       | F, p           | ---             | ---         | F           |
+% | Transfer      | Red        | ---            | Q, W, P(power)  | P (power)   | P (power)   |
+% | Stored        | Magenta    | ---            | U, S            | ---         | V, U, C     |
+% | Constants     | Black      | g, m           | k, c, rho       | ---         | k, R        |
+%
+% ============================================
+
+\endinput

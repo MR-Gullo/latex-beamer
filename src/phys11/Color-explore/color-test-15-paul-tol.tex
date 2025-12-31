@@ -1,0 +1,32 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{xcolor}
+
+% PAUL TOL BRIGHT - Vibrant Art
+\definecolor{tempColor}{HTML}{EE6677}
+\definecolor{volumeColor}{HTML}{66CCEE}
+\definecolor{pressureColor}{HTML}{AA3377}
+\definecolor{particleColor}{HTML}{228833}
+\definecolor{constantColor}{HTML}{4477AA}
+
+\newcommand{\temp}[1]{\textcolor{tempColor}{#1}}
+\newcommand{\volume}[1]{\textcolor{volumeColor}{#1}}
+\newcommand{\pressure}[1]{\textcolor{pressureColor}{#1}}
+\newcommand{\particles}[1]{\textcolor{particleColor}{#1}}
+\newcommand{\constant}[1]{\textcolor{constantColor}{#1}}
+
+\begin{document}
+\begin{frame}
+\frametitle{15. PAUL TOL - Vibrant Art}
+\begin{block}{$\boxed{\pressure{P}\volume{V} = \particles{N}\constant{k}\temp{T}}$}
+\pressure{Pressure} $\times$ \volume{volume} $=$ \particles{particles} $\times$ \constant{Boltzmann constant} $\times$ \temp{temperature}
+\end{block}
+\begin{itemize}
+\item $\pressure{P}$ = \pressure{pressure} (Pa)
+\item $\volume{V}$ = \volume{volume} (m$^3$)
+\item $\particles{N}$ = \particles{number of particles}
+\item $\constant{k}$ = \constant{Boltzmann constant}
+\item $\temp{T}$ = \temp{absolute temperature} (K)
+\end{itemize}
+\end{frame}
+\end{document}

@@ -1,0 +1,313 @@
+\documentclass{beamer}
+\usepackage{../../../shared/templates/ds9_theme}
+\usepackage{xcolor}
+
+% ============================================
+% APPROACH 2: SEMANTIC GLOBAL COLORING
+% Colors assigned by physics MEANING
+% Same color = same conceptual category
+% ============================================
+
+% HYBRID PALETTE (our 8 punchy colors)
+\definecolor{spaceColor}{HTML}{0072B2}     % Blue - position/space/length
+\definecolor{flowColor}{HTML}{33BBEE}      % Cyan - rates/flow/velocity
+\definecolor{intensityColor}{HTML}{D55E00} % Vermillion - intensity/temperature/field
+\definecolor{countColor}{HTML}{E69F00}     % Orange - count/time/particles
+\definecolor{forceColor}{HTML}{009E73}     % Teal - force/pressure/cause
+\definecolor{transferColor}{HTML}{CC3311}  % Red - energy transfer (Q, W)
+\definecolor{storedColor}{HTML}{EE3377}    % Magenta - stored energy/state
+\definecolor{constColor}{HTML}{000000}     % Black - constants/properties
+
+% ============================================
+% SEMANTIC MACROS - Global definitions
+% ============================================
+
+% SPACE/POSITION (Blue) - things that measure "where" or "how much space"
+\newcommand{\Spc}[1]{\textcolor{spaceColor}{#1}}  % d, x, r, h, L, A, V(volume), lambda, s
+
+% FLOW/RATE (Cyan) - things that measure "how fast"
+\newcommand{\Flw}[1]{\textcolor{flowColor}{#1}}   % v, omega, I(current), f
+
+% INTENSITY (Vermillion) - things that measure "how strong/intense"
+\newcommand{\Int}[1]{\textcolor{intensityColor}{#1}} % a, T(temp), E(field), P(pressure), beta
+
+% COUNT/PROGRESS (Orange) - things that count or mark progress
+\newcommand{\Cnt}[1]{\textcolor{countColor}{#1}}  % t, N, n, q(charge)
+
+% FORCE/CAUSE (Teal) - things that push or cause change
+\newcommand{\Frc}[1]{\textcolor{forceColor}{#1}}  % F, p(momentum), tau
+
+% TRANSFER (Red) - energy moving between systems
+\newcommand{\Xfr}[1]{\textcolor{transferColor}{#1}} % Q(heat), W(work), P(power)
+
+% STORED (Magenta) - energy/state held in a system
+\newcommand{\Sto}[1]{\textcolor{storedColor}{#1}} % U, KE, PE, E(energy), S, C
+
+% CONSTANT/PROPERTY (Black) - fixed values, material properties
+\newcommand{\Con}[1]{\textcolor{constColor}{#1}}  % g, k, c, mu, rho, m, R
+
+\begin{document}
+
+% ============================================
+% TITLE
+% ============================================
+\begin{frame}
+\frametitle{APPROACH 2: Semantic Global Coloring}
+\begin{block}{Strategy}
+Colors assigned by physics MEANING across all domains.\\
+\textbf{Guarantee:} Same concept = same color everywhere.
+\end{block}
+
+\vspace{0.3cm}
+\textbf{Trade-off:}
+\begin{itemize}
+\item[\textcolor{forceColor}{+}] Consistent mental model across all physics
+\item[\textcolor{forceColor}{+}] "Cyan always means rate/flow"
+\item[\textcolor{transferColor}{--}] Some equations may have related concepts with same color
+\item[\textcolor{transferColor}{--}] Overloaded symbols get one canonical meaning
+\end{itemize}
+\end{frame}
+
+% ============================================
+% COLOR LEGEND
+% ============================================
+\begin{frame}
+\frametitle{Semantic Color Categories}
+\begin{columns}[T]
+\column{0.48\textwidth}
+\textbf{\Spc{SPACE/POSITION}}\\
+d, x, r, h, L, A, V, $\lambda$, s
+
+\vspace{0.2cm}
+\textbf{\Flw{FLOW/RATE}}\\
+v, $\omega$, I (current), f
+
+\vspace{0.2cm}
+\textbf{\Int{INTENSITY}}\\
+a, T, E (field), P (pressure)
+
+\vspace{0.2cm}
+\textbf{\Cnt{COUNT/PROGRESS}}\\
+t, N, n, q (charge)
+
+\column{0.48\textwidth}
+\textbf{\Frc{FORCE/CAUSE}}\\
+F, p (momentum), $\tau$
+
+\vspace{0.2cm}
+\textbf{\Xfr{TRANSFER}}\\
+Q (heat), W (work), P (power)
+
+\vspace{0.2cm}
+\textbf{\Sto{STORED}}\\
+U, KE, PE, S, C
+
+\vspace{0.2cm}
+\textbf{\Con{CONSTANT/PROPERTY}}\\
+g, k, c, $\mu$, $\rho$, m, R
+\end{columns}
+
+\vspace{0.3cm}
+\begin{alertblock}{Note}
+Some symbols (P, E) are overloaded. Context determines category.
+\end{alertblock}
+\end{frame}
+
+% ============================================
+% KINEMATICS
+% ============================================
+\begin{frame}
+\frametitle{CH1-3: Kinematics}
+
+\textbf{Definitions:}
+$$\Flw{v} = \frac{\Delta \Spc{d}}{\Delta \Cnt{t}} \qquad \Int{a} = \frac{\Delta \Flw{v}}{\Delta \Cnt{t}}$$
+
+\textbf{Kinematic Equations:}
+\begin{align*}
+\Flw{v} &= \Flw{v_0} + \Int{a}\Cnt{t} \\
+\Spc{d} &= \Spc{d_0} + \Flw{v_0}\Cnt{t} + \frac{1}{2}\Int{a}\Cnt{t}^2 \\
+\Flw{v}^2 &= \Flw{v_0}^2 + 2\Int{a}(\Spc{d} - \Spc{d_0})
+\end{align*}
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Flw{Rate} depends on \Int{intensity} over \Cnt{time}, changing \Spc{position}.
+\end{frame}
+
+% ============================================
+% DYNAMICS
+% ============================================
+\begin{frame}
+\frametitle{CH4-6: Dynamics \& Circular Motion}
+
+\textbf{Newton's Laws:}
+$$\Frc{F}_{\text{net}} = \Con{m}\Int{a} \qquad \Frc{W} = \Con{m}\Con{g} \qquad \Frc{F}_f = \Con{\mu}\Frc{N}$$
+
+\textbf{Circular Motion:}
+$$\Int{a}_c = \frac{\Flw{v}^2}{\Spc{r}} = \Spc{r}\Flw{\omega}^2 \qquad \Frc{F}_c = \Con{m}\frac{\Flw{v}^2}{\Spc{r}}$$
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Frc{Force} causes \Int{intensity of change} in objects with \Con{mass}.
+\end{frame}
+
+% ============================================
+% MOMENTUM
+% ============================================
+\begin{frame}
+\frametitle{CH8: Momentum}
+
+\textbf{Definitions:}
+$$\Frc{p} = \Con{m}\Flw{v}$$
+
+\textbf{Impulse-Momentum:}
+$$\Delta \Frc{p} = \Frc{F}_{\text{net}} \Delta \Cnt{t}$$
+
+\textbf{Conservation:}
+$$\Con{m_1}\Flw{v_1} + \Con{m_2}\Flw{v_2} = \Con{m_1}\Flw{v_1'} + \Con{m_2}\Flw{v_2'}$$
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Frc{Momentum} combines \Con{mass} with \Flw{flow/velocity}.
+\end{frame}
+
+% ============================================
+% WORK & ENERGY
+% ============================================
+\begin{frame}
+\frametitle{CH9: Work, Energy, Power}
+
+\textbf{Definitions:}
+$$\Xfr{W} = \Frc{F}\Spc{d} \qquad \Sto{KE} = \frac{1}{2}\Con{m}\Flw{v}^2 \qquad \Xfr{P} = \frac{\Xfr{W}}{\Cnt{t}}$$
+
+\textbf{Conservation:}
+$$\Sto{KE_1} + \Sto{PE_1} = \Sto{KE_2} + \Sto{PE_2}$$
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Xfr{Work transfers} energy, \Sto{KE/PE stores} it. \Xfr{Power} is \Xfr{transfer} rate.
+
+\vspace{0.2cm}
+\begin{alertblock}{Note: Same Color}
+W and P are both \Xfr{red} because both are energy transfer mechanisms.
+\end{alertblock}
+\end{frame}
+
+% ============================================
+% THERMAL
+% ============================================
+\begin{frame}
+\frametitle{CH11: Thermal Physics}
+
+\textbf{Heat Transfer:}
+$$\Xfr{Q} = \Con{m}\Con{c}\Delta \Int{T}$$
+
+\textbf{Phase Change:}
+$$\Xfr{Q} = \Con{m}\Con{L_f} \qquad \Xfr{Q} = \Con{m}\Con{L_v}$$
+
+\textbf{Density:}
+$$\Con{\rho} = \frac{\Con{m}}{\Spc{V}}$$
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Xfr{Heat transfers} based on \Con{mass/properties} and \Int{temperature intensity}.
+\end{frame}
+
+% ============================================
+% THERMODYNAMICS
+% ============================================
+\begin{frame}
+\frametitle{CH12: Thermodynamics}
+
+\textbf{First Law:}
+$$\Delta \Sto{U} = \Xfr{Q} - \Xfr{W} \qquad \Xfr{W} = \Int{P}\Delta \Spc{V}$$
+
+\textbf{Ideal Gas:}
+$$\Int{P}\Spc{V} = \Cnt{N}\Con{k}\Int{T}$$
+
+\textbf{Entropy \& Efficiency:}
+$$\Delta \Sto{S} = \frac{\Xfr{Q}}{\Int{T}} \qquad \text{Eff} = \frac{\Xfr{W}}{\Xfr{Q_h}}$$
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Sto{Stored energy U} changes via \Xfr{Q and W transfers}. \Int{Pressure} is intensity.
+\end{frame}
+
+% ============================================
+% WAVES & SOUND
+% ============================================
+\begin{frame}
+\frametitle{CH13-14: Waves \& Sound}
+
+\textbf{Wave Equation:}
+$$\Flw{v} = \Flw{f}\Spc{\lambda} \qquad \Cnt{T} = \frac{1}{\Flw{f}}$$
+
+\textbf{Intensity:}
+$$\Int{I} = \frac{\Xfr{P}}{\Spc{A}} \qquad \Int{\beta} = 10\log_{10}\left(\frac{\Int{I}}{\Int{I_0}}\right)$$
+
+\textbf{Standing Waves:}
+$$\Flw{f_n} = \Cnt{n}\frac{\Flw{v}}{2\Spc{L}} \text{ (open)} \qquad \Flw{f_n} = \Cnt{n}\frac{\Flw{v}}{4\Spc{L}} \text{ (closed)}$$
+
+\vspace{0.2cm}
+\textbf{Note:} T (period) is \Cnt{orange/count} here, not \Int{temperature}.
+\end{frame}
+
+% ============================================
+% ELECTRIC
+% ============================================
+\begin{frame}
+\frametitle{CH18: Electric Fields \& Potential}
+
+\textbf{Coulomb's Law:}
+$$\Frc{F} = \Con{k}\frac{\Cnt{q_1}\Cnt{q_2}}{\Spc{r}^2} \qquad \Int{E} = \frac{\Con{k}|\Cnt{Q}|}{\Spc{r}^2}$$
+
+\textbf{Potential:}
+$$\Sto{V} = \frac{\Con{k}\Cnt{Q}}{\Spc{r}} \qquad \Sto{U_E} = \frac{\Con{k}\Cnt{Q}\Cnt{q}}{\Spc{r}}$$
+
+\textbf{Capacitance:}
+$$\Sto{C} = \frac{\Cnt{Q}}{\Sto{V}} \qquad \Sto{U_E} = \frac{1}{2}\Sto{C}\Sto{V}^2$$
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Cnt{Charges} create \Int{fields}, store \Sto{potential energy}.
+\end{frame}
+
+% ============================================
+% CIRCUITS
+% ============================================
+\begin{frame}
+\frametitle{CH19: Circuits}
+
+\textbf{Definitions:}
+$$\Flw{I} = \frac{\Delta \Cnt{Q}}{\Delta \Cnt{t}} \qquad \Sto{V} = \Flw{I}\Con{R}$$
+
+\textbf{Power:}
+$$\Xfr{P} = \Flw{I}\Sto{V} = \Flw{I}^2\Con{R} = \frac{\Sto{V}^2}{\Con{R}}$$
+
+\textbf{Combinations:}
+$$\Con{R}_{\text{series}} = \Con{R_1} + \Con{R_2} + \cdots$$
+
+\vspace{0.2cm}
+\textbf{Semantic reading:} \Flw{Current flows}, \Sto{voltage stores potential}, \Xfr{power transfers} energy.
+\end{frame}
+
+% ============================================
+% COMPARISON
+% ============================================
+\begin{frame}
+\frametitle{Approach 2 Summary}
+\begin{block}{Result: Consistent Meaning}
+Same color = same physics concept across ALL domains.
+\end{block}
+
+\textbf{Cross-Domain Consistency:}
+\begin{itemize}
+\item \Flw{Cyan} = flow/rate: velocity, current, frequency, angular velocity
+\item \Spc{Blue} = space: displacement, radius, wavelength, volume, area
+\item \Int{Vermillion} = intensity: acceleration, temperature, pressure, field
+\item \Xfr{Red} = transfer: heat Q, work W, power P
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Best for:}
+\begin{itemize}
+\item Building unified physics intuition
+\item Seeing connections across domains
+\item Long-term conceptual understanding
+\end{itemize}
+\end{frame}
+
+\end{document}

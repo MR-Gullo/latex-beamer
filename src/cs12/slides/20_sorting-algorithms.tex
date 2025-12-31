@@ -45,29 +45,65 @@
 \end{block}
 \end{frame}
 
+\begin{frame}[fragile]{Helper Function: swap()}
+\begin{block}{Why We Need This}
+Sorting requires swapping elements. We'll build our own swap function.
+\end{block}
+
+\begin{lstlisting}
+void swap(int &a, int &b) {
+    int temp = a;   // Save a's value
+    a = b;          // Overwrite a with b
+    b = temp;       // Put saved value in b
+}
+\end{lstlisting}
+\pause
+\begin{alertblock}{The \& Means Pass-by-Reference}
+Without \texttt{\&}, changes stay inside the function.\\
+With \texttt{\&}, we modify the \textbf{original} variables.
+\end{alertblock}
+\note{[THE BUG] Without \&, swap does nothing to original array\\\\
+[THE PATTERN] Pass-by-reference lets functions modify caller's data\\\\
+[DEBUG] Try removing \& and watch the sort fail}
+\end{frame}
+
 \begin{frame}{Initial Array}
 \begin{block}{Numbers to Sort}
 Our example will use these 9 numbers: [7, 2, 9, 4, 5, 8, 3, 6, 10]
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Bubble Sort}
+\begin{frame}[fragile]{Bubble Sort: The Code}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Repeatedly steps through the list
-\item Compares adjacent elements and swaps them if needed
-\item Continues until no swaps are needed
+\item Compares adjacent elements and swaps if needed
+\item Largest element "bubbles" to the end each pass
 \end{itemize}
 \end{block}
 
 \begin{lstlisting}
 void bubbleSort(int arr[], int n) {
-    for (int i = 0; i < n-1; i++)
-        for (int j = 0; j < n-i-1; j++)
+    for (int i = 0; i < n-1; i++)        // n-1 passes
+        for (int j = 0; j < n-i-1; j++)  // Shrinking range
             if (arr[j] > arr[j+1])
                 swap(arr[j], arr[j+1]);
 }
 \end{lstlisting}
+\note{[TRACE] Outer loop: number of passes. Inner loop: compare adjacent pairs\\\\
+[THE BUG] Why n-i-1? Each pass puts one more element in place\\\\
+[COMPLEXITY] O(n²) - nested loops, each up to n}
+\end{frame}
+
+\begin{frame}{Bubble Sort: Trace Through}
+\begin{exampleblock}{Let's Trace: arr = [5, 3, 8, 1]}
+\textbf{Pass 1:} Compare adjacent, swap if needed\\
+[5,3,8,1] $\rightarrow$ [\textbf{3,5},8,1] $\rightarrow$ [3,5,8,1] $\rightarrow$ [3,5,\textbf{1,8}]\\[0.2cm]
+\textbf{Pass 2:} 8 is in place, work on first 3\\
+[3,5,1,8] $\rightarrow$ [3,5,1,8] $\rightarrow$ [3,\textbf{1,5},8]\\[0.2cm]
+\textbf{Pass 3:} [3,1,5,8] $\rightarrow$ [\textbf{1,3},5,8] \checkmark
+\end{exampleblock}
+\note{[THE PATTERN] After pass i, the last i elements are sorted\\\\
+[DEBUG] Add cout inside inner loop to see swaps happening}
 \end{frame}
 
 \begin{frame}{Bubble Sort Animation}
@@ -82,46 +118,41 @@ Adjacent elements swap until largest "bubbles" to the end.
 \end{block}
 \end{frame}
 
-\begin{frame}{Bubble Sort Steps}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-\hline
-7 & 2 & 9 & 4 & 5 & 8 & 3 & 6 & 10 \\
-\hline
-2 & 7 & 4 & 5 & 8 & 3 & 6 & 9 & 10 \\
-\hline
-2 & 4 & 5 & 7 & 3 & 6 & 8 & 9 & 10 \\
-\hline
-2 & 4 & 5 & 3 & 6 & 7 & 8 & 9 & 10 \\
-\hline
-2 & 4 & 3 & 5 & 6 & 7 & 8 & 9 & 10 \\
-\hline
-2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
-\hline
-\end{tabular}
-\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{Selection Sort}
+\begin{frame}[fragile]{Selection Sort: The Code}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Divides array into sorted and unsorted regions
-\item Finds minimum element in unsorted region
-\item Swaps it with first element of unsorted region
+\item Find minimum in unsorted region
+\item Swap it to the front of unsorted region
 \end{itemize}
 \end{block}
 
 \begin{lstlisting}
 void selectionSort(int arr[], int n) {
     for (int i = 0; i < n-1; i++) {
-        int min_idx = i;
-        for (int j = i+1; j < n; j++)
+        int min_idx = i;              // Assume first is min
+        for (int j = i+1; j < n; j++) // Search rest
             if (arr[j] < arr[min_idx])
-                min_idx = j;
-        swap(arr[min_idx], arr[i]);
+                min_idx = j;          // Found smaller
+        swap(arr[min_idx], arr[i]);   // Move min to front
     }
 }
 \end{lstlisting}
+\note{[TRACE] min\_idx tracks POSITION, not value\\\\
+[THE BUG] Don't confuse arr[min\_idx] (value) with min\_idx (position)\\\\
+[COMPLEXITY] O(n²) - always scans entire unsorted portion}
+\end{frame}
+
+\begin{frame}{Selection Sort: Trace Through}
+\begin{exampleblock}{Let's Trace: arr = [5, 3, 8, 1]}
+\textbf{i=0:} Find min in [5,3,8,1] $\rightarrow$ min\_idx=3 (value 1)\\
+Swap arr[3] with arr[0]: [\textbf{1},3,8,\textbf{5}]\\[0.2cm]
+\textbf{i=1:} Find min in [3,8,5] $\rightarrow$ min\_idx=1 (value 3)\\
+Swap arr[1] with arr[1]: [1,\textbf{3},8,5] (no change)\\[0.2cm]
+\textbf{i=2:} Find min in [8,5] $\rightarrow$ min\_idx=3 (value 5)\\
+Swap arr[3] with arr[2]: [1,3,\textbf{5},\textbf{8}] \checkmark
+\end{exampleblock}
+\note{[THE PATTERN] After i iterations, first i elements are sorted\\\\
+[DEBUG] Print min\_idx after inner loop to verify}
 \end{frame}
 
 \begin{frame}{Selection Sort Animation}
@@ -136,28 +167,43 @@ Find the minimum, swap to front. Repeat for remaining unsorted portion.
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Insertion Sort}
+\begin{frame}[fragile]{Insertion Sort: The Code}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Builds sorted array one element at a time
-\item Takes each element and inserts into correct position
-\item Efficient for small or nearly sorted data
+\item Take element, slide it left until correct position
+\item Like sorting cards in your hand
 \end{itemize}
 \end{block}
 
 \begin{lstlisting}
 void insertionSort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
-        int key = arr[i];
+        int key = arr[i];          // Element to insert
         int j = i - 1;
         while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
+            arr[j + 1] = arr[j];   // Shift right
             j--;
         }
-        arr[j + 1] = key;
+        arr[j + 1] = key;          // Insert in gap
     }
 }
 \end{lstlisting}
+\note{[TRACE] key holds the value while we shift elements right\\\\
+[THE BUG] Why j+1? After loop, j points one BEFORE insertion spot\\\\
+[COMPLEXITY] O(n²) worst, O(n) if nearly sorted}
+\end{frame}
+
+\begin{frame}{Insertion Sort: Trace Through}
+\begin{exampleblock}{Let's Trace: arr = [5, 3, 8, 1]}
+\textbf{i=1:} key=3, compare with 5, shift 5 right\\
+{[}5,\underline{5},8,1] $\rightarrow$ insert key: [\textbf{3},5,8,1]\\[0.2cm]
+\textbf{i=2:} key=8, compare with 5, 8>5 so stop\\
+{[}3,5,\textbf{8},1] (no shifts needed)\\[0.2cm]
+\textbf{i=3:} key=1, shift 8,5,3 all right\\
+{[}3,5,8,\underline{8}] $\rightarrow$ [3,5,\underline{5},8] $\rightarrow$ [3,\underline{3},5,8] $\rightarrow$ [\textbf{1},3,5,8] \checkmark
+\end{exampleblock}
+\note{[THE PATTERN] Left portion always sorted, right portion unsorted\\\\
+[DEBUG] Print array after each insertion to see progress}
 \end{frame}
 
 \begin{frame}{Insertion Sort Animation}
@@ -172,7 +218,7 @@ Each element slides into its correct position in the sorted portion.
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Merge Sort}
+\begin{frame}[fragile]{Merge Sort: The Concept}
 \begin{block}{Algorithm Description}
 \begin{itemize}
 \item Divide and conquer approach
@@ -181,6 +227,50 @@ Each element slides into its correct position in the sorted portion.
 \end{itemize}
 \end{block}
 Time complexity: O(n log n) - consistent performance
+\note{[P0] "Merge sort uses divide and conquer"\\\\
+[THE PATTERN] Split problem in half, solve each half, combine solutions}
+\end{frame}
+
+\begin{frame}[fragile]{Merge Sort: The Merge Function}
+\begin{lstlisting}
+void merge(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+    int L[n1], R[n2];  // Temp arrays
+
+    for (int i = 0; i < n1; i++) L[i] = arr[left + i];
+    for (int j = 0; j < n2; j++) R[j] = arr[mid + 1 + j];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2)
+        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
+    while (i < n1) arr[k++] = L[i++];
+    while (j < n2) arr[k++] = R[j++];
+}
+\end{lstlisting}
+\note{[TRACE] Copy to temp arrays, then merge back in order\\\\
+[THE BUG] Common error: forgetting to copy remaining elements}
+\end{frame}
+
+\begin{frame}[fragile]{Merge Sort: The Recursive Function}
+\begin{lstlisting}
+void mergeSort(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        mergeSort(arr, left, mid);      // Sort left half
+        mergeSort(arr, mid + 1, right); // Sort right half
+        merge(arr, left, mid, right);   // Merge sorted halves
+    }
+}
+\end{lstlisting}
+\pause
+\begin{exampleblock}{Let's Trace: arr = [7, 2, 9, 4]}
+Split: [7,2] and [9,4] $\rightarrow$ [2,7] and [4,9] $\rightarrow$ [2,4,7,9]
+\end{exampleblock}
+\note{[P0] "The recursive part is simple - split and merge"\\\\
+[P1] [TRACE] "Split into halves, sort each, merge back"\\\\
+[THE PATTERN] Base case: left >= right (single element)}
 \end{frame}
 
 \begin{frame}{Merge Sort Animation}
@@ -195,7 +285,7 @@ Split, sort, merge. The "divide and conquer" strategy in action.
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Quick Sort}
+\begin{frame}[fragile]{Quick Sort: The Concept}
 \begin{block}{Algorithm Description}
 \begin{itemize}
 \item Choose a pivot element
@@ -204,6 +294,52 @@ Split, sort, merge. The "divide and conquer" strategy in action.
 \end{itemize}
 \end{block}
 Time complexity: O(n log n) average, O(n²) worst case
+\note{[P0] "Quick sort is usually the fastest in practice"\\\\
+[THE BUG] Worst case O(n²) happens when pivot is always min or max}
+\end{frame}
+
+\begin{frame}[fragile]{Quick Sort: The Partition Function}
+\begin{lstlisting}
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high];  // Choose last element as pivot
+    int i = low - 1;        // Index of smaller element
+
+    for (int j = low; j < high; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[i + 1], arr[high]);
+    return i + 1;  // Return pivot's final position
+}
+\end{lstlisting}
+\begin{alertblock}{Note: Lomuto vs Hoare}
+This is \textbf{Lomuto partition} (simpler). \textbf{Hoare partition} uses two pointers and is ~3x faster but harder to trace.
+\end{alertblock}
+\note{[TRACE] Elements smaller than pivot go left, larger go right\\\\
+[THE PATTERN] Partition returns where pivot ended up\\\\
+Lomuto: pivot ends in final position. Hoare: pivot does NOT}
+\end{frame}
+
+\begin{frame}[fragile]{Quick Sort: The Recursive Function}
+\begin{lstlisting}
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+
+        quickSort(arr, low, pi - 1);   // Sort left of pivot
+        quickSort(arr, pi + 1, high);  // Sort right of pivot
+    }
+}
+\end{lstlisting}
+\pause
+\begin{exampleblock}{Let's Trace: arr = [7, 2, 9, 4]}
+Pivot=4: [2] 4 [7,9] $\rightarrow$ [2] 4 [7] 9 $\rightarrow$ [2,4,7,9]
+\end{exampleblock}
+\note{[P0] "Quick sort is elegant - just partition and recurse"\\\\
+[P1] [TRACE] "Pivot 4 goes to correct position, then sort left and right"\\\\
+[THE PATTERN] Pivot is ALWAYS in final sorted position after partition}
 \end{frame}
 
 \begin{frame}{Quick Sort Animation}
