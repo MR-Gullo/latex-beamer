@@ -1,0 +1,625 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{background}
+\usepackage{amssymb}
+
+% Background image setup
+\backgroundsetup{
+    scale=0.4,
+    opacity=0.08,
+    angle=0,
+    position=current page.center,
+    contents={\includegraphics{media/overview_image1.jpeg}}
+}
+
+% Colors - MR-GULLO Brand
+\definecolor{darkgray}{RGB}{37, 36, 34}
+\definecolor{mediumgray}{RGB}{64, 61, 57}
+\definecolor{offwhite}{RGB}{255, 252, 242}
+\definecolor{accentorange}{RGB}{235, 94, 40}
+\definecolor{lightgray}{RGB}{204, 197, 185}
+\definecolor{headerblue}{RGB}{37, 36, 34}
+% Row colors removed for transparency - background shows through tables
+\definecolor{bcblue}{RGB}{0, 51, 102}
+
+% tcolorbox styles
+\tcbset{
+    sharp corners,
+    boxrule=0pt,
+    left=8pt,
+    right=8pt,
+    top=6pt,
+    bottom=6pt
+}
+
+% Section formatting
+\titleformat{\section}
+    {\large\bfseries\color{darkgray}}
+    {}
+    {0pt}
+    {\raisebox{0pt}[0pt][0pt]{\textcolor{accentorange}{\rule[-2pt]{3pt}{14pt}}}\hspace{8pt}}
+\titleformat{\subsection}{\normalsize\bfseries\color{darkgray}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+\setcounter{secnumdepth}{0}
+
+% List styling
+\setlist{nosep, leftmargin=1.5em}
+\setlist[itemize]{label=\textcolor{lightgray}{\scriptsize$\blacktriangleright$}}
+\setlist[enumerate]{label=\textcolor{accentorange}{\arabic*.}}
+
+% Table styling
+\renewcommand{\arraystretch}{1.4}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\hypersetup{colorlinks=true, linkcolor=accentorange, urlcolor=accentorange}
+
+\begin{document}
+
+% Title Header with Logos
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+    \centering
+    \begin{minipage}{0.2\textwidth}
+        \centering
+        \includegraphics[height=1.2cm]{media/overview_image3.png}
+    \end{minipage}%
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        {\color{white}\Large\bfseries Nanyang Model Highschool}\\[0.2em]
+        {\color{white!80}\small (BC OFFSHORE PROGRAM)}\\[0.5em]
+        {\color{accentorange}\LARGE\bfseries PHYSICS 11 Annual Plan}\\[0.3em]
+        {\color{white}\large 2025--2026}
+    \end{minipage}%
+    \begin{minipage}{0.2\textwidth}
+        \centering
+        \includegraphics[height=1.2cm]{media/overview_image4.jpeg}
+    \end{minipage}
+\end{tcolorbox}
+
+\vspace{0.5em}
+\small
+\textbf{Link to Curriculum:} \url{https://curriculum.gov.bc.ca/sites/curriculum.gov.bc.ca/files/curriculum/science/en_science_11_physics_elab.pdf}
+
+% Course Synopsis
+\begin{tcolorbox}[colback=white, colframe=accentorange, leftrule=4pt, rightrule=0pt, toprule=0pt, bottomrule=0pt, opacityback=0.85]
+\textbf{\faBook\hspace{0.5em}Course Synopsis}\\[0.3em]
+Physics 11 is a hands-on course that looks to explain the workings of the physical world. The aim is to investigate the rules by which nature works. This course takes many of the concepts discussed in mathematics courses and applies them to the world around us.
+\end{tcolorbox}
+
+% Big Ideas
+\section{Big Ideas}
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\hline
+\rowcolor{headerblue}\multicolumn{4}{|c|}{\textcolor{white}{\textbf{Big Ideas}}} \\
+\hline
+An object's motion can be predicted, analyzed, and described. &
+Forces influence the motion of an object. &
+Energy is found in different forms, is conserved, and has the ability to do work. &
+Mechanical waves transfer energy but not matter. \\
+\hline
+\end{tabularx}
+
+% Core Competencies, Curricular Competencies, Content
+\section{Competencies \& Content}
+
+\begin{tabularx}{\textwidth}{|L{0.28\textwidth}|L{0.38\textwidth}|L{0.28\textwidth}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Core Competencies}} &
+\textcolor{white}{\textbf{Curricular Competencies}} &
+\textcolor{white}{\textbf{Content}} \\
+\hline
+\textbf{Communication}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Connect and engage with others
+\item Acquire, interpret, and present information
+\item Collaborate to plan, carry out, and review activities
+\item Explain/recount and reflect on experiences
+\end{itemize}
+
+\textbf{Creative Thinking}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Novelty and value
+\item Generating ideas
+\item Developing ideas
+\end{itemize}
+
+\textbf{Critical Thinking}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Analyze and critique
+\item Question and investigate
+\item Develop and design
+\end{itemize}
+
+\textbf{Personal \& Cultural Identity}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Relationship and cultural contexts
+\item Personal values and choice
+\item Personal strengths and abilities
+\end{itemize}
+
+\textbf{Personal Awareness \& Responsibility}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Self-determination
+\item Self-regulation
+\item Well-being
+\end{itemize}
+
+\textbf{Social Responsibility}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Contributing to community
+\item Solving problems peacefully
+\item Valuing diversity
+\item Building relationships
+\end{itemize}
+&
+\textbf{Questioning and predicting}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Demonstrate sustained intellectual curiosity
+\item Make observations to identify questions
+\item Formulate multiple hypotheses
+\end{itemize}
+
+\textbf{Planning and conducting}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Plan and use appropriate investigation methods
+\item Assess risks and address ethical issues
+\item Use appropriate SI units and equipment
+\item Apply accuracy and precision concepts
+\end{itemize}
+
+\textbf{Processing and analyzing}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Experience and interpret local environment
+\item Apply First Peoples perspectives
+\item Seek patterns, trends, and connections
+\item Construct, analyze, and interpret graphs
+\item Draw evidence-based conclusions
+\item Analyze cause-and-effect relationships
+\end{itemize}
+
+\textbf{Evaluating}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Evaluate methods and identify sources of error
+\item Describe ways to improve investigations
+\item Evaluate validity and limitations of models
+\item Demonstrate awareness of assumptions and bias
+\item Connect scientific explorations to careers
+\end{itemize}
+
+\textbf{Applying and innovating}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Contribute to care for self, others, community
+\item Transfer and apply learning to new situations
+\item Generate new ideas when problem solving
+\end{itemize}
+
+\textbf{Communicating}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Formulate theoretical models
+\item Communicate scientific ideas with evidence
+\item Reflect on experiences and worldviews
+\end{itemize}
+&
+\textbf{Students are expected to know:}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Vector and scalar quantities
+\item Horizontal uniform and accelerated motion
+\item Vertical projectile motion
+\item Contact forces and factors affecting magnitude/direction
+\item Mass, force of gravity, apparent weight
+\item Newton's laws and free-body diagrams
+\item Balanced/unbalanced forces in systems
+\item Law of conservation of energy
+\item Potential energy (PE = mgh)
+\item Kinetic energy (KE = $\frac{1}{2}$mv$^2$)
+\item Transformation of energy
+\item Transfer of energy in closed/open systems
+\item Heat (Q = mc$\Delta$T)
+\item Local/global impacts of energy transformations
+\item Power and efficiency
+\item Simple machines and mechanical advantage
+\item Applications of simple machines by First Peoples
+\item Electric circuits (DC), Ohm's Law, Kirchhoff's Laws
+\item Thermal equilibrium and specific heat capacity
+\item Generation and propagation of waves
+\item Characteristics of waves
+\item Resonance and frequency of sound
+\end{itemize}
+\\
+\hline
+\end{tabularx}
+
+\newpage
+
+% English Language Strategies & Indigenous Learning
+\section{English Language Strategies, Indigenous Learning, Timeline}
+
+\begin{tabularx}{\textwidth}{|L{0.22\textwidth}|X|}
+\hline
+\textbf{English Language Strategies} &
+\begin{itemize}[leftmargin=1em, nosep, topsep=2pt]
+\item Vocabulary words highlighted and practiced
+\item Assessments include vocabulary and language components
+\item Large projects scaffolded with checkpoints
+\item Oral speaking through discussions, think-pair-share, group work
+\item Materials supported by high quality visuals
+\item Lecture notes (animated PowerPoints) available online
+\item Foster open and safe environment for speaking
+\end{itemize}
+\\
+\hline
+\textcolor{darkgray}{\textbf{Indigenous Learning}} &
+\begin{itemize}[leftmargin=1em, nosep, topsep=2pt]
+\item First People's principles embedded throughout course
+\item Learning process: holistic, reflexive, reflective, experiential, relational
+\item Focused on connectedness, reciprocal relationships, sense of place
+\item Learning involves patience and time; learning is different for everyone
+\end{itemize}
+\\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Timeline
+\section{Timeline}
+\begin{tabularx}{\textwidth}{|C{1.2cm}|X|C{2cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Unit}} & \textcolor{white}{\textbf{Title}} & \textcolor{white}{\textbf{Month}} \\
+\hline
+1 & Introduction to Physics and Kinematics & September \\
+\hline
+2 & Projectile Motion and Two-Dimensional Kinematics & October \\
+\hline
+3 & Dynamics and Newton's Laws of Motion & November \\
+\hline
+4 & Momentum, Work, Energy and Power & December \\
+\hline
+5 & Simple Machines and Mechanical Advantage & February \\
+\hline
+6 & Thermal Physics & March \\
+\hline
+7 & Waves and Sound & April \\
+\hline
+8 & Electricity and Circuits & May \\
+\hline
+9 & Review/Buffer Class & June \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Summary of Assessment
+\section{Summary of Assessment}
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Formative Assessments}} &
+\textcolor{white}{\textbf{Self Evaluations}} &
+\textcolor{white}{\textbf{Summative Assessments}} \\
+\hline
+\begin{itemize}[leftmargin=1em, nosep]
+\item Circulating during conceptual questions
+\item Gauging needs based on common homework questions
+\item Verbal checks for understanding
+\item Vocabulary: classroom challenge questions
+\item Homework checks as needed
+\item Demos/conversations
+\end{itemize}
+&
+\begin{itemize}[leftmargin=1em, nosep]
+\item During lectures: students try questions before teacher
+\item Answer keys for pre-tests and tests for self-corrections
+\item Core competency self reflections
+\end{itemize}
+&
+\begin{itemize}[leftmargin=1em, nosep]
+\item Unit tests
+\item Midterm and Final Exams
+\item Student submissions for activities and projects
+\item Labs
+\end{itemize}
+\\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Assessment Weighting
+\section{Assessment Weighting}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Category}} & \textcolor{white}{\textbf{Weight}} \\
+\hline
+Quizzes & 15\% \\
+\hline
+Unit Tests & 30\% \\
+\hline
+Labs and Activities & 15\% \\
+\hline
+Homework & 10\% \\
+\hline
+Midterm & 10\% \\
+\hline
+Final Exam & 20\% \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% Unit Overviews
+\section{Unit Overviews}
+
+% Unit 0
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 0: Skills for Physics}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+Use the scientific method to make predictions &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere with challenging tasks\newline
+\textbf{Creativity:} Design experiment to plot distance vs height\newline
+\textbf{Critical Thinking:} Limits of scientific models &
+\textbf{Graphical methods:}\newline
+- Plotting linear relationships\newline
+- Calculation of slope of line of best fit\newline
+- Significant figures and units &
+\textbf{Assessments:} Quiz, unit tests\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Ball rolling lab \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 1
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 1: Kinematics}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+How can uniform motion and uniform acceleration be modelled? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals\newline
+\textbf{Creativity:} Design experiment to measure g\newline
+\textbf{Critical Thinking:} Distinguish speed vs velocity, distance vs displacement &
+\textbf{Vector/scalar:}\newline
+- Addition and subtraction\newline
+- Right-angle triangle\newline
+\textbf{Uniform/accelerated motion:}\newline
+- Graphical and quantitative\newline
+\textbf{Projectile motion:}\newline
+- Vertical, horizontal, angled launch &
+\textbf{Assessments:} Quiz, unit tests\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Gravity acceleration lab \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 2
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 2: Newton's Laws}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+How can forces change motion?\newline
+How can Newton's laws explain changes in motion? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Contact forces:} normal, spring, tension, friction\newline
+\textbf{Newton's laws:}\newline
+- First: mass as inertia\newline
+- Second: net force\newline
+- Third: action/reaction pairs\newline
+\textbf{Forces in systems:}\newline
+- Multi-body, inclined planes, elevators &
+\textbf{Assessments:} Quiz, unit tests\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Elevator acceleration experiment with scale \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 3
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 3: Momentum}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+Why is an inelastic or elastic collision more dangerous?\newline
+Why does energy appear not conserved in some collisions?\newline
+Why do cars have crumple zones and airbags? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Impulse:} relation to Newton's second law in closed/isolated system\newline
+\textbf{Collisions:} elastic, inelastic, completely inelastic in 1D and 2D\newline
+\textbf{Ballistic pendulums} &
+\textbf{Assessments:} Quiz, unit tests\newline
+\textbf{ESL:} Review Grade 10 vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Air track egg protection \\
+\hline
+\end{tabularx}
+
+\newpage
+
+% Unit 4
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 4: Variable Forces}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+How can forces change the motion of an object? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternatives &
+\textbf{Hooke's Law}\newline
+\textbf{Universal Gravitation Law} &
+\textbf{Assessments:} Quiz, unit tests\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Spring lab \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 5
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 5: Work and Energy}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+What is the relationship between work, energy, and power?\newline
+How are conservation laws applied in circuits?\newline
+Why can't a machine be 100\% efficient? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Power and efficiency:} mechanical and electrical\newline
+\textbf{Simple machines:} lever, ramp, wedge, pulley, screw, wheel and axle\newline
+\textbf{Thermal equilibrium:} as application of conservation of energy (calorimeter) &
+\textbf{Assessments:} Energy Sources Poster\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Activity:} 7E Phases for Science Fair topics \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 6
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 6: Electricity}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+Where do we use electricity in daily life and where does it come from? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Electric circuits (DC), Ohm's law, Kirchhoff's laws:}\newline
+- Terminal voltage vs EMF\newline
+- Safety, power distribution\newline
+- Fuses/breakers, switches\newline
+- Overload, short circuits, alternators &
+\textbf{Assessments:} Quizzes, unit test, Electricity Lab\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Activity:} 7E Phases for Science Fair \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 7
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 7: Waves}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+What factors affect wave behaviours?\newline
+How would you investigate relationships between wave and medium properties?\newline
+How can you determine which harmonics are audible in different instruments? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Propagation:} transverse vs longitudinal, linear vs circular\newline
+\textbf{Properties:} wave vs medium, periodic vs pulse\newline
+\textbf{Behaviours:} reflection, refraction, diffraction, interference, Doppler shift, standing waves\newline
+\textbf{Characteristics:} pitch, volume, speed, sonic boom\newline
+\textbf{Frequency:} harmonic, fundamental, beat &
+\textbf{Assessments:} Energy Sources Poster\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Activity:} Science Fair Preparation \\
+\hline
+\end{tabularx}
+
+\end{document}

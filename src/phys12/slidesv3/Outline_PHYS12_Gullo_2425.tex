@@ -1,490 +1,238 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-\documentclass[
-]{article}
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{longtable,booktabs,array}
-\newcounter{none} % for unnumbered tables
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage{bookmark}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
-\hypersetup{
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{fontawesome5}
 
-\author{}
-\date{}
+% Colors - MR-GULLO Brand
+\definecolor{darkgray}{RGB}{37, 36, 34}       % #252422 - Headers/dark elements
+\definecolor{mediumgray}{RGB}{64, 61, 57}     % #403d39 - Cards/content bg
+\definecolor{offwhite}{RGB}{255, 252, 242}    % #fffcf2 - Primary text
+\definecolor{accentorange}{RGB}{235, 94, 40}  % #eb5e28 - Accent/links/buttons
+\definecolor{lightgray}{RGB}{204, 197, 185}   % #ccc5b9 - Borders/subtle
+% Legacy aliases
+\definecolor{headerblue}{RGB}{37, 36, 34}
+\definecolor{rowgray}{RGB}{245, 243, 238}
+\definecolor{rowwhite}{RGB}{255, 252, 242}
+\definecolor{warningyellow}{RGB}{235, 94, 40}
+
+% tcolorbox styles
+\tcbset{
+    sharp corners,
+    boxrule=0pt,
+    left=8pt,
+    right=8pt,
+    top=6pt,
+    bottom=6pt
+}
+
+% Section formatting with colored left border
+\titleformat{\section}
+    {\large\bfseries\color{darkgray}}
+    {}
+    {0pt}
+    {\raisebox{0pt}[0pt][0pt]{\textcolor{accentorange}{\rule[-2pt]{3pt}{14pt}}}\hspace{8pt}}
+\titleformat{\subsection}{\normalsize\bfseries\color{darkgray}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+% Remove section numbers
+\setcounter{secnumdepth}{0}
+
+% List styling
+\setlist{nosep, leftmargin=1.5em}
+\setlist[itemize]{label=\textcolor{accentorange}{\footnotesize\faCircle}}
+\setlist[enumerate]{label=\textcolor{accentorange}{\arabic*.}}
+
+% Table styling
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Hyperref setup
+\hypersetup{colorlinks=true, linkcolor=accentorange, urlcolor=accentorange}
 
 \begin{document}
 
-{\textbf{Welcome to Physics 12}}
-
-{\textbf{}}\strut \\
-
-{\textbf{}}\strut \\
-
-{\textbf{}}\strut \\
-
-{\textbf{}}\strut \\
-
-{\textbf{Course Description:}}
-
-This is an introductory course on physics that further explores the
-basics of motion, forces, energy, fields, electricity, and optics.
-Students will continue to build a foundation on scientific skills
-necessarily for the study of physics. The course then focuses on the
-topics above with applications to real life.{~ }The course is designed
-to prepare students for university physics.
-
-{\textbf{You Belong in Physics!}}
-
-Physics might seem intimidating at first, but here\textquotesingle s the
-truth: anyone can succeed in physics with curiosity, effort, and the
-right support. This course is designed to build your confidence.
-
-You don\textquotesingle t need to be a "math genius" to excel here.
-Physics is about understanding how the world works, and
-I\textquotesingle m here to help you develop both the problem-solving
-skills and the confidence to tackle any challenge.
-
-\textbf{Remember}: Every physicist started exactly where you are now.
-Questions aren\textquotesingle t signs of weakness;
-they\textquotesingle re signs of learning. I\textquotesingle m excited
-to explore the fascinating world of physics with you this year!
-
-\hfill\break
-
-{\textbf{Contact Information:}}
-
-Instructor:{~ }Mr. Gullo{~}
-
-Option 1: Check your notes and textbook
-
-Option 2: Ask a study partner or classmate
-
-Option 3: Schoology messaging
-
-Option 4: Office hours
-
-{ }
-
-{\textbf{Schoology:}}{ }
-
-This powerful portal is where you will find all the course materials:{~
-}PPTs, notes, review packages, etc.. as well as your grades
-
-{\textbf{Course Materials}}
-
-A textbook will be issued as a reference.{~}
-
-Tests and quizzes are to be done on paper or schoology only.
-
-Calculator: Casio fx-991EX ClassWiz (recommended)
-
-A formula sheet will be given at the beginning of the year.{~ }This can
-be used for tests, but no additional formulas added to the sheet.
-
-\hfill\break
-
-\textbf{Grading}
-
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Unit Tests: 30\%}
-
-\hfill\break
-
-1 per unit
-
-Each test 2 periods (80 min){~}\strut
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Quizzes and Period Tests: 15\%}
-
-\hfill\break
-
-1-2 quizzes per unit{~ }(\textless{} 40 min)
-
-1-2 period test per unit{~ }(40 min)
-
-\hfill\break
-\strut
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Activities/Labs: 15\%}
-
-\hfill\break
-
-1-2 per unit
-
-1 lab per unit\strut
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\textbf{Homework: 10\%}
-
-{}\strut \\
-
-1 check per unit\strut
-\end{minipage} & \textbf{Midterm: 10\%} & \textbf{Final: 20\%} \\
-\end{longtable}
-}
-
-{\textbf{}}\strut \\
-
-{\textbf{Assessment for Learning and Written Work}}
-
--The \textbf{Assessment for Learning} category is worth \textbf{0\% of
-your grade}. It is for practice and feedback only.
-
--On \textbf{quizzes}, you must show your work. If your steps are
-correct, you can get partial marks even if the final answer is wrong.
-
-On \textbf{unit tests,} \textbf{midterm and final exam}, written work
-will be worth \textbf{30\% of the score}. Up to three questions
-specified will be checked for written work.
-
-\hfill\break
-
-{\textbf{What We Will Learn: Topics Covered:}}
-
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}ll@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Unit & Chapters \\
-Unit 1: Introduction to Physics 12 and Advanced Kinematics & 1,2,3 \\
-Unit 2: Advanced Dynamics & 4,5,9 \\
-Unit 3: Advanced Work, energy and power & 7 \\
-Unit 4: Momentum and Conservation Laws & 8 \\
-Unit 5: Circular Motion and Gravitation & 6 \\
-Unit 6: Electrostatics and Electric Fields & 18,19 \\
-Unit 7: Electric Circuits and Electromotive Force & 20,21 \\
-Unit 8: Magnetism and Electromagnetic Induction & 22,23 \\
-Unit 9: Special Relativity & 28 \\
-\end{longtable}
-}
-
-\hfill\break
-
-{~~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~}
-
-\hfill\break
-
-\hfill\break
-
-\hfill\break
-
-{\textbf{}}\strut \\
-
-{\textbf{}}\strut \\
-
-{\textbf{Class Rules and Expectations:}}
-
-{\textbf{Respect and Attitude:}}{~ }Treat the teacher, your classmates,
-and most importantly yourself with respect. Believe in yourself and all
-of your potential and capabilities. You have what it takes to succeed!{~
-}Come to class with a positive attitude and do your best. The general
-aim of this course is to build a community of young scientists who are
-ready and willing to learn as well as help each other succeed.
-
-{\textbf{Late/Attendance:}}{~ }Students are expected to attend all
-classes, be punctual and come prepared. If a student is going to be
-absent (drivers license, visa, etc.), please notify the teacher in
-advance to help with scheduling. Unexcused absences lead to frustrations
-when it comes to testing and this is unfair to other students. Multiple
-absences will result in a talk to the homeroom teacher.
-
-{\textbf{Deadlines:}} \textbf{} All assignments, labs, projects, etc.
-are due at the {start} of the class on which they are due.{~}
-
-{\textbf{Washrooms:}}{~ }It is expected that you will use the washroom
-before or after class.{~ }If you need to use it during class, then do so
-in a way that does not disrupt the lesson.
-
-\textbf{Making Up Missed Assessments:}
-
-I understand that sometimes life gets in the way of school.
-Here\textquotesingle s how we\textquotesingle ll handle missed tests and
-quizzes:
-
-\textbf{Quizzes and Period Tests:} Makeup opportunities available with
-advance notice when possible. See me to schedule.
-
-\textbf{Unit Tests:} These are scheduled with at least one
-week\textquotesingle s notice, so please plan accordingly. If multiple
-students have conflicts, we can discuss rescheduling the test for
-everyone.
-
-\textbf{What to do if you miss an assessment:}
-
-Talk to me as soon as you return
-
-We\textquotesingle ll work together to find a solution
-
-Bring any documentation if the absence was medical or family-related
-
-{~}
-
-\hfill\break
-
-{\textbf{}}\strut \\
-
-\textbf{Lab Safety}
-
-Your safety is our top priority in all lab activities. All students must
-follow these essential safety guidelines:
-
-\textbf{Before Each Lab:}
-
-Read all instructions carefully before beginning
-
-Understand the procedure and ask questions if anything is unclear
-
-Ensure long hair is tied back and loose clothing is secured
-
-Remove or secure jewelry that could interfere with equipment
-
-\textbf{During Lab Activities:}
-
-Follow all written and verbal instructions
-
-Never work alone - always work with your lab partner
-
-Report any accidents, spills, or broken equipment immediately
-
-Keep your workspace clean and organized
-
-Handle all equipment with care
-
-\textbf{Emergency Procedures:}
-
-Know the location of safety equipment (fire extinguisher, first aid kit,
-emergency exits)
-
-Report any injury, no matter how minor, to the teacher immediately
-
-In case of emergency, remain calm and follow teacher instructions
-
-Emergency contact: School office at {[}extension number{]}
-
-\textbf{Consequences:} Students who fail to follow safety procedures
-will be removed from the lab activity and may receive a zero for that
-assignment. Repeated safety violations will result in a meeting with
-administration.
-
-{\textbf{Cheating and Generative AI use:}} {~}
-
-The Nanmo BC Academic Honesty Policy (found under our Course Admin
-folder on Schoology) serves as our primary academic integrity framework
-and supersedes all other policies. In addition to this policy, the
-following specific procedures and guidelines will be implemented:
-
-1. In cases of suspected cheating, while we maintain the principle of
-\textquotesingle innocent until proven guilty\textquotesingle{} students
-may be asked to demonstrate their understanding by answering similar
-questions to verify their knowledge. Inability to demonstrate
-understanding will result in a mark of zero.
-
-2. Assisting others in cheating will also result in a mark of zero.
-
-3. Repeat offenses will be referred to the principal.
-
-4. Regarding Generative AI (like ChatGPT and others): While these are
-valuable academic tools for concept explanation and understanding, they
-can also provide inaccurate information. {\textbf{Submitting
-AI-generated work as your own violates our Academic Honesty Policy.}}
-Use these tools cautiously and responsibly.
-
-\hfill\break
-
-{\textbf{Sleeping}}{~ }It is considered a good habit to get sufficient
-sleep every night.{~ }Part of that means limiting the use of devices and
-avoiding video games.{~ }It also means good planning and time management
-to deal with coursework timely and not stay up late.{~ }\textbf{Class
-time is not a chance to make up lost sleep}.{~ }For those students who
-repeatedly try and sleep in class, we will discuss this with the
-homeroom teacher to find solutions.
-
-{\textbf{Re-submission and Late-submission Policy}}{~}
-
-1. Students are permitted to request a resubmission of one assessment
-that received a grade under 60\% one time each semester via the
-microsoft form {[}Deadlines two weeks before semester end{]}. The
-highest possible grade achievable on a resubmitted assignment is capped
-at 75\%, to maintain fairness and uphold academic standards, while still
-providing a chance for improvement.
-
-2. Late submissions will assigned as ``missing'' and graded zero unless
-an extension is discussed with the instructor before the original due
-date.
-
-3. All student \textbf{submissions must be a single PDF or PPT file},
-otherwise they will receive a grade of zero.
-
-{\textbf{Messaging Procedures for Schoology}}
-
-\textbf{Subject Line:} Physics 12 - {[}Your Section{]} - {[}Your
-Block{]}{~}
-
-Example: "Physics 12 - Section 2 - Block C"
-
-\textbf{For homework or concept questions:}
-
-Tell me which unit or assignment you\textquotesingle re working on
-
-Show me what you\textquotesingle ve tried so far (attach a photo of your
-work)
-
-Ask your specific question
-
-\textbf{For lab questions:}
-
-Name the lab and your group number
-
-Tell me what part you need help with
-
-Include any data or calculations if relevant
-
-\textbf{Response time:} I\textquotesingle ll get back to you within 24
-hours on school days, next school day for weekend messages.
-
-{\textbf{Electronic Device Use Policy}}{~ ~}
-
-We will adhere to the Nanmo BC Electronic Device Use Policy found under
-our Course Admin folder on Schoology.{~}
-
-\hfill\break
-
-{\textbf{Classroom Cell Phone Policy}}
-
-\hfill\break
-
-All cell phones must either be placed in the designated phone box or
-stored in student lockers during class time. No phones are permitted to
-remain with students during class unless explicitly approved by the
-teacher.
-
-\hfill\break
-
-\textbf{Phone Box Procedure}
-
-1. Upon entering class, students who have their phones with them must:
-
-{~~ }- Place their phone in the designated phone box
-
-{~~ }- Ensure their phone is powered off or on silent
-
-{~~}
-
-2. If a student does not place their phone in the box:
-
-{~~ }- It is assumed their phone is stored in their locker
-
-{~~ }- No phones may remain in bags, pockets, or desks
-
-\hfill\break
-
-\textbf{Phone Usage}
-
-- Phones may only be retrieved from the box with explicit teacher
-approval
-
-- Students must state their reason for needing phone access
-
-- Phones must be returned to the box immediately after approved use
-
-- Emergency calls should be directed through the school office
-
-\hfill\break
-
-\textbf{Honor System Guidelines}
-
-- Students are trusted to follow this policy honestly
-
-- No individual phone checks will be conducted
-
-- Students are expected to demonstrate integrity by:
-
-{~ }- Either placing phones in the box or leaving them in lockers
-
-{~ }- Not accessing phones without permission
-
-{~ }- Being truthful about phone possession and usage
-
-\hfill\break
-
-\textbf{Consequences}
-
-If a student is found using or possessing a phone during class without
-approval:
-
-1. The phone will be confiscated
-
-2. School disciplinary policy regarding unauthorized phone use will be
-followed
-
-\hfill\break
-
-Student Name:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\hfill\break
-
-\hfill\break
-
-\hfill\break
+% Title Header
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+    \centering
+    {\color{white}\LARGE\bfseries Physics 12 Course Outline}\\[0.4em]
+    {\color{white!80}\large 2025--2026 \quad\textbar\quad Mr.\ Gullo}
+\end{tcolorbox}
+
+\vspace{1.5em}
+
+\section{Course Description}
+
+This is an advanced course on physics that further explores motion, forces, energy, fields, electricity, and modern physics. Students will continue to build scientific skills while tackling more challenging concepts including momentum, gravitation, electromagnetism, and relativity.
+
+\textbf{Important:} Physics 12 is \textbf{required for Engineering and Science programs} at Canadian universities (UBC, UofT, Waterloo, etc.). Your performance in this course is a key factor in university admissions.
+
+% Motivational callout box
+\begin{tcolorbox}[colback=rowgray, colframe=accentorange, leftrule=4pt, rightrule=0pt, toprule=0pt, bottomrule=0pt]
+\textbf{\faLightbulb\hspace{0.5em}You Belong in Physics!}\\[0.3em]
+Physics might seem intimidating at first, but here's the truth: \textbf{anyone can succeed} with curiosity, effort, and the right support. You don't need to be a ``math genius'' to excel here---physics is about understanding how the world works.\\[0.3em]
+\textit{Every physicist started exactly where you are now. Questions aren't signs of weakness; they're signs of learning!}
+\end{tcolorbox}
+
+\section{Contact \& Help}
+
+\begin{tabularx}{\textwidth}{@{}L{2.2cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Priority}} & \textcolor{white}{\textbf{How to Get Help}} \\
+\rowcolor{rowgray} \faBook\hspace{0.5em}Option 1 & Check your notes and textbook \\
+\rowcolor{rowwhite} \faUsers\hspace{0.5em}Option 2 & Ask a study partner or classmate \\
+\rowcolor{rowgray} \faEnvelope\hspace{0.5em}Option 3 & Schoology messaging \\
+\rowcolor{rowwhite} \faClock\hspace{0.5em}Option 4 & Office hours \\
+\end{tabularx}
+
+\vspace{0.8em}
+\textbf{\faDesktop\hspace{0.5em}Schoology:} This portal contains all course materials (PPTs, notes, review packages) and your grades.
+
+\section{Course Materials}
+
+\begin{itemize}
+    \item \textbf{Textbook} will be issued as a reference
+    \item \textbf{Assessments:} Paper or Schoology only
+    \item \textbf{Calculator:} Casio fx-991EX ClassWiz (recommended)
+    \item \textbf{Formula sheet} provided---can be used for tests (no additions allowed)
+\end{itemize}
+
+\section{Grading Breakdown}
+
+\begin{tabularx}{\textwidth}{@{}L{3.2cm}C{1.1cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Category}} & \textcolor{white}{\textbf{\%}} & \textcolor{white}{\textbf{Details}} \\
+\rowcolor{rowgray} Unit Tests & 30\% & 1 per unit; 2 periods (80 min) \\
+\rowcolor{rowwhite} Quizzes \& Period Tests & 15\% & 1--2 quizzes ($<$40 min); 1--2 period tests (40 min) per unit \\
+\rowcolor{rowgray} Activities/Labs & 15\% & 1--2 activities per unit; 1 lab per unit \\
+\rowcolor{rowwhite} Homework & 9\% & 1 check per unit \\
+\rowcolor{rowgray} Assessment for Learning & 1\% & Practice and feedback \\
+\rowcolor{rowwhite} Midterm & 10\% & Cumulative \\
+\rowcolor{rowgray} Final Exam & 20\% & Cumulative \\
+\end{tabularx}
+
+\vspace{0.5em}
+\begin{tcolorbox}[colback=rowgray, colframe=rowgray, left=6pt, right=6pt, top=4pt, bottom=4pt]
+\small\textbf{\faPencil*\hspace{0.3em}Written Work:} On unit tests, midterm, and final, written work counts for \textbf{30\%} of the score. Always show your work on quizzes for partial credit!
+\end{tcolorbox}
+
+\section{Topics Covered}
+
+\begin{tabularx}{\textwidth}{@{}C{0.6cm}YL{3.2cm}@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{\#}} & \textcolor{white}{\textbf{Unit Title}} & \textcolor{white}{\textbf{Resources}} \\
+\rowcolor{rowgray} 1 & Vectors \& 2D Kinematics & [OS] Ch 5.1--5.3 \\
+\rowcolor{rowwhite} 2 & Momentum \& Impulse & [OS] Ch 8 \\
+\rowcolor{rowgray} 3 & Rigid Body Mechanics & [OS] Ch 6, 9.3 \\
+\rowcolor{rowwhite} 4 & Gravitation \& Astrophysics & [OS] Ch 7, 22.5 \\
+\rowcolor{rowgray} 5 & Electrostatics & [OS] Ch 18.2--18.5 \\
+\rowcolor{rowwhite} 6 & Electromagnetism & [OS] Ch 20 \\
+\rowcolor{rowgray} 7 & Atomic \& Nuclear Physics & [OS] Ch 21, 22.1--22.4 \\
+\rowcolor{rowwhite} 8 & Relativity \& Particles & [OS] Ch 10, 23 \\
+\end{tabularx}
+
+\section{Classroom Expectations}
+
+\begin{tabularx}{\textwidth}{@{}L{2.8cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Area}} & \textcolor{white}{\textbf{Expectation}} \\
+\rowcolor{rowgray} \faHeart\hspace{0.3em}Respect & Treat teacher, classmates, and yourself with respect. Believe in your potential! \\
+\rowcolor{rowwhite} \faCalendarCheck\hspace{0.3em}Attendance & Attend all classes punctually and prepared. Notify in advance for planned absences. \\
+\rowcolor{rowgray} \faClock\hspace{0.3em}Deadlines & All work due at \textbf{start} of class on the due date. \\
+\rowcolor{rowwhite} \faRestroom\hspace{0.3em}Washrooms & Use before/after class. If needed during class, go quietly. \\
+\end{tabularx}
+
+\section{Making Up Missed Assessments}
+
+\begin{tabularx}{\textwidth}{@{}L{3.2cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Policy}} \\
+\rowcolor{rowgray} Quizzes/Period Tests & Makeup available with advance notice. See me to schedule. \\
+\rowcolor{rowwhite} Unit Tests & Scheduled 1 week ahead---plan accordingly. Group conflicts can be discussed. \\
+\end{tabularx}
+
+\vspace{0.5em}
+\textbf{If you miss an assessment:} (1) Talk to me when you return, (2) We'll find a solution, (3) Bring documentation if medical/family-related.
+
+\section{Lab Safety}
+
+\begin{tcolorbox}[colback=warningyellow!15, colframe=warningyellow, leftrule=4pt, rightrule=0pt, toprule=0pt, bottomrule=0pt]
+\faExclamationTriangle\hspace{0.5em}\textbf{Safety is our top priority.} Failure to follow procedures = removal from lab and possible zero.
+\end{tcolorbox}
+
+\vspace{0.3em}
+\begin{tabularx}{\textwidth}{@{}L{2.2cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Stage}} & \textcolor{white}{\textbf{Requirements}} \\
+\rowcolor{rowgray} Before Lab & Read instructions; ask questions; secure hair, clothing, jewelry \\
+\rowcolor{rowwhite} During Lab & Follow instructions; work with partner; report issues immediately; stay organized \\
+\rowcolor{rowgray} Emergency & Know safety equipment locations; report all injuries; stay calm \\
+\end{tabularx}
+
+\section{Academic Honesty \& AI}
+
+The Nanmo BC Academic Honesty Policy (Course Admin on Schoology) is our primary framework.
+
+\begin{enumerate}
+    \item Suspected cheating: may be asked to demonstrate understanding. Failure = zero.
+    \item Assisting cheating = zero.
+    \item Repeat offenses referred to principal.
+    \item \textbf{Generative AI:} Useful for learning, but \textbf{submitting AI work as your own violates policy.}
+\end{enumerate}
+
+\section{Additional Policies}
+
+\begin{tabularx}{\textwidth}{@{}L{3cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Policy}} & \textcolor{white}{\textbf{Details}} \\
+\rowcolor{rowgray} \faBed\hspace{0.3em}Sleeping & Class time is not for sleep. Repeated issues = homeroom referral. \\
+\rowcolor{rowwhite} \faRedo\hspace{0.3em}Resubmission & One per semester for grades $<$60\% (deadline: 2 weeks before semester end). Max grade: 75\%. \\
+\rowcolor{rowgray} \faUpload\hspace{0.3em}Late Work & Marked ``missing'' (zero) unless extension requested \textbf{24+ hours before} due date. \\
+\rowcolor{rowwhite} \faFile\hspace{0.3em}Submissions & Must be a \textbf{single PDF or PPT}---otherwise zero. \\
+\end{tabularx}
+
+\newpage
+\section{Messaging on Schoology}
+
+\textbf{Subject Line Format:} \texttt{Physics 12 - [Section] - [Block]}\\
+\textit{Example:} \texttt{Physics 12 - Section 2 - Block C}
+
+\vspace{0.3em}
+\begin{tabularx}{\textwidth}{@{}L{2.5cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Type}} & \textcolor{white}{\textbf{Include}} \\
+\rowcolor{rowgray} Homework & Unit/assignment name; what you tried (photo); specific question \\
+\rowcolor{rowwhite} Lab Questions & Lab name; group \#; which part; relevant data \\
+\end{tabularx}
+
+\vspace{0.3em}
+\textbf{\faReply\hspace{0.3em}Response time:} Within 24 hours (school days); next school day for weekends.
+
+\section{Cell Phone Policy}
+
+All phones must be in the \textbf{phone box} or \textbf{locker}---not in bags, pockets, or desks.
+
+\vspace{0.3em}
+\begin{tabularx}{\textwidth}{@{}L{2.5cm}Y@{}}
+\rowcolor{headerblue}\textcolor{white}{\textbf{Procedure}} & \textcolor{white}{\textbf{Details}} \\
+\rowcolor{rowgray} Phone Box & Place phone upon entering (off or silent) \\
+\rowcolor{rowwhite} Usage & Teacher approval only; return immediately after \\
+\rowcolor{rowgray} Compliance & Random checks may occur \\
+\rowcolor{rowwhite} Violation & Phone confiscated; school policy followed \\
+\end{tabularx}
+
+\vspace{1.5em}
+
+% Signature Box
+\begin{tcolorbox}[colback=rowgray, colframe=darkgray, boxrule=1pt, arc=2mm, left=12pt, right=12pt, top=10pt, bottom=10pt]
+\textbf{Student Acknowledgment}\\[0.8em]
+I have read and understand the Physics 12 Course Outline and agree to follow the policies described.\\[1.2em]
+\textbf{Student Name:} \underline{\hspace{5.5cm}} \hfill \textbf{Date:} \underline{\hspace{2.5cm}}\\[1em]
+\textbf{Signature:} \underline{\hspace{5.5cm}} \hfill \textbf{Block:} \underline{\hspace{2.5cm}}
+\end{tcolorbox}
 
 \end{document}
