@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ascii"?>
+<p:properties xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:p="http://schemas.microsoft.com/office/2006/metadata/properties" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+ 
+  <documentManagement>
+    
+  
+    <DocType xmlns="42549473-42c6-46df-b0c2-1bf3c074b0fe">General Document</DocType>
+    
+  
+    <Unit xmlns="42549473-42c6-46df-b0c2-1bf3c074b0fe"/>
+    
+  
+    <Lesson xmlns="42549473-42c6-46df-b0c2-1bf3c074b0fe"/>
+    
+ 
+  </documentManagement>
+  
+
+</p:properties>
