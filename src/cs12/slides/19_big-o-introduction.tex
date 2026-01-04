@@ -3,10 +3,13 @@
 \usepackage{../../../shared/templates/ds9_theme}
 \definecolor{ds9blue}{HTML}{0066CC}
 \definecolor{ds9red}{HTML}{CC0000}
+\definecolor{ds9gold}{HTML}{CC9900}
 
 % Additional packages for code
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage[T1]{fontenc}  % Fix for quotes in listings
+\usepackage[overridenote]{pdfpc}  % Speaker notes for pdfpc
 
 % VS Code One Dark style syntax highlighting
 \definecolor{codepurple}{HTML}{C678DD}
@@ -51,16 +54,22 @@
 
 % Key Terms (ESL Vocabulary Scaffolding)
 \begin{frame}{Key Terms for This Lesson}
+    \note{[SCAFFOLD] Read each term aloud, have students repeat\\\\
+    [ESL TIP] Use hand gestures - algorithm = steps on fingers\\\\
+    [CHECK] Ask: What does efficiency mean in everyday life?}
     \begin{block}{Vocabulary}
-        \textbf{Algorithm}: A step-by-step set of instructions to solve a problem\\[0.5em]
-        \textbf{Efficiency}: How fast and how little memory an algorithm uses\\[0.5em]
-        \textbf{Input size (n)}: The amount of data the algorithm works with\\[0.5em]
+        \textbf{Algorithm}: A step-by-step set of instructions to solve a problem\pause\\[0.5em]
+        \textbf{Efficiency}: How fast and how little memory an algorithm uses\pause\\[0.5em]
+        \textbf{Input size (n)}: The amount of data the algorithm works with\pause\\[0.5em]
         \textbf{Complexity}: How the time or space grows as n gets bigger
     \end{block}
 \end{frame}
 
 % Learning objectives
 \begin{frame}{Learning Objectives}
+    \note{[GOALS] These map to the I Do, We Do, You Do structure\\\\
+    [PREVIEW] We will analyze real code together today\\\\
+    [MOTIVATION] This skill is tested in job interviews}
     By the end of this lesson, you will be able to:
     \begin{itemize}
         \item Define algorithm efficiency in your own words\pause
@@ -72,6 +81,9 @@
 
 % Introduction to Big O
 \begin{frame}{What is Big O Notation?}
+    \note{[KEY CONCEPT] Big O = worst case performance\\\\
+    [ANALOGY] Like measuring top speed of a car, not average\\\\
+    [EMPHASIZE] We ignore constants - 2n and 5n are both O(n)}
     \begin{block}{Definition}
         Big O notation measures how long an algorithm takes or how much memory it uses as the input size grows.
     \end{block}
@@ -85,23 +97,78 @@
     \end{itemize}
 \end{frame}
 
-% Visual comparison
-\begin{frame}{How Different Algorithms Grow}
-    \begin{center}
-    \begin{tikzpicture}[scale=0.6]
-        \draw[->] (0,0) -- (6,0) node[right] {input size};
-        \draw[->] (0,0) -- (0,6) node[above] {time};
-        \draw[ds9blue, thick] (0,0) -- (5,0.5) node[right] {O(1)};
-        \draw[ds9gold, thick] (0,0) -- (5,5) node[right] {O(n)};
-        \draw[ds9red, thick] (0,0) to[out=0,in=270] (5,5.5) node[right] {O(n²)};
+% What is Worst Case?
+\begin{frame}{What is Worst Case?}
+    \note{[KEY CONCEPT] Big O measures the WORST possible situation\\\\
+    [TRACE] Walk through the array - target 99 is at the END\\\\
+    [QUESTION] What if target was at position 0? Still O(n) because we measure worst case}
+    \begin{block}{Why do we care about worst case?}
+        Big O describes the \textbf{maximum} time an algorithm could take.
+    \end{block}
+    \pause
 
-        \node[below] at (3,-0.5) {As input grows...};
+    \textbf{Example: Searching for 99 in this array:}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \foreach \x/\val in {0/12, 1/5, 2/23, 3/7, 4/42, 5/15, 6/8, 7/31, 8/99} {
+            \draw (\x,0) rectangle (\x+1,1);
+            \node at (\x+0.5,0.5) {\val};
+            \node[below] at (\x+0.5,0) {\tiny \x};
+        }
     \end{tikzpicture}
     \end{center}
+    \pause
+
+    \begin{itemize}
+        \item Linear search checks: 12, 5, 23, 7, 42, 15, 8, 31, \textbf{99}\pause
+        \item \textbf{Worst case}: Target is at the END (or not there at all)\pause
+        \item We had to check \textbf{all 9 elements} = O(n) operations
+    \end{itemize}
+\end{frame}
+
+% Best vs Worst Case
+\begin{frame}{Best Case vs Worst Case}
+    \note{[COMPARE] Best case = target at index 0, worst = at end or missing\\\\
+    [EMPHASIZE] We use worst case because it guarantees performance\\\\
+    [ANALOGY] Like planning for traffic - assume worst to never be late}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \foreach \x/\val in {0/12, 1/5, 2/23, 3/7, 4/42, 5/15, 6/8, 7/31, 8/99} {
+            \draw (\x,0) rectangle (\x+1,1);
+            \node at (\x+0.5,0.5) {\val};
+        }
+    \end{tikzpicture}
+    \end{center}
+
+    \begin{columns}
+        \column{0.5\textwidth}
+        \textbf{Best Case: O(1)}
+        \begin{itemize}
+            \item Target = 12 (first element)
+            \item Found in 1 check!
+        \end{itemize}
+        \pause
+
+        \column{0.5\textwidth}
+        \textbf{Worst Case: O(n)}
+        \begin{itemize}
+            \item Target = 99 (last element)
+            \item Takes 9 checks
+            \item Or target not in array!
+        \end{itemize}
+    \end{columns}
+    \pause
+
+    \begin{alertblock}{Why Worst Case?}
+        We plan for the worst so our program never surprises us with slow performance.
+    \end{alertblock}
 \end{frame}
 
 % Big O Complexity Comparison Image
 \begin{frame}{Big O Complexity Comparison}
+    \note{[CHART] Point to green zone = good, red zone = avoid\\\\
+    [SCALE] Notice y-axis is logarithmic - differences are huge\\\\
+    [REAL WORLD] Google processes billions of items - O(n squared) would take years}
     \begin{center}
     \includegraphics[width=0.9\textwidth,height=0.65\textheight,keepaspectratio]{big-o-complexity-chart.png}
     \end{center}
@@ -111,6 +178,10 @@
 
 % Real-world analogies
 \begin{frame}{Understanding Through Real Examples}
+    \note{[ANALOGIES] Use physical gestures for each example\\\\
+    [O(1)] Snap fingers - instant, no matter how many books\\\\
+    [O(log n)] Show halving motion - dictionary splits in half each time\\\\
+    [CHECK] Have students give their own real-world examples}
     \begin{columns}
         \column{0.5\textwidth}
         \textbf{O(1) - Constant Time}
@@ -130,24 +201,282 @@
         \pause
         \textbf{O(n²) - Quadratic Time}
         \begin{itemize}
-            \item Comparing every book with others
+            \item Everyone shakes hands with everyone
             \item Bubble sort algorithm
         \end{itemize}
         \pause
 
         \textbf{O(log n) - Logarithmic Time}
         \begin{itemize}
-            \item Finding word in dictionary
-            \item Binary search
+            \item Guessing a number 1-100 by halving
+            \item Binary search (sorted data only!)
         \end{itemize}
     \end{columns}
 \end{frame}
 
+% Linear Search Visualization
+\begin{frame}{Linear Search: Check Every Element}
+    \note{[VISUAL] Point to each element being checked in order\\\\
+    [KEY] Must check EVERY element until found - no shortcuts\\\\
+    [WORST CASE] If target is last or missing, check all n elements}
+
+    \textbf{Searching for 42:}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.7]
+        \foreach \x/\val/\check in {0/12/yes, 1/5/yes, 2/23/yes, 3/7/yes, 4/42/found, 5/15/no, 6/8/no, 7/31/no, 8/99/no} {
+            \ifnum\x<4
+                \draw[fill=red!20] (\x,0) rectangle (\x+1,1);
+            \else
+                \ifnum\x=4
+                    \draw[fill=green!40] (\x,0) rectangle (\x+1,1);
+                \else
+                    \draw[fill=gray!10] (\x,0) rectangle (\x+1,1);
+                \fi
+            \fi
+            \node at (\x+0.5,0.5) {\val};
+        }
+        \draw[->,thick,red] (0.5,1.5) -- (0.5,1.1);
+        \draw[->,thick,red] (1.5,1.5) -- (1.5,1.1);
+        \draw[->,thick,red] (2.5,1.5) -- (2.5,1.1);
+        \draw[->,thick,red] (3.5,1.5) -- (3.5,1.1);
+        \draw[->,thick,green!60!black] (4.5,1.5) -- (4.5,1.1);
+        \node[above] at (4.5,1.5) {\textbf{Found!}};
+    \end{tikzpicture}
+    \end{center}
+    \pause
+
+    \begin{itemize}
+        \item Check index 0, 1, 2, 3... until we find 42\pause
+        \item \textbf{5 checks} to find element at index 4
+    \end{itemize}
+    \pause
+    \textbf{O(n)}: In worst case, we check every single element.
+\end{frame}
+
+% Binary Search Visualization
+\begin{frame}{Binary Search: Divide and Conquer}
+    \note{[VISUAL] Show how we eliminate HALF the data each step\\\\
+    [REQUIREMENT] Data MUST be sorted for binary search to work\\\\
+    [COMPARE] 1000 items: linear = 1000 checks, binary = 10 checks}
+    \begin{center}
+    \includegraphics[width=0.9\textwidth,height=0.5\textheight,keepaspectratio]{binary_search_depiction.pdf}
+    \end{center}
+    \pause
+    \textbf{O(log n)}: Each step eliminates \textbf{half} the remaining elements.
+
+    \vspace{0.3em}
+    \begin{alertblock}{Requirement}
+        Binary search only works on \textbf{sorted} data!
+    \end{alertblock}
+
+    \small{Image: Wikimedia Commons}
+\end{frame}
+
+% What is a Logarithm?
+\begin{frame}{What is a Logarithm?}
+    \note{[MATH] log base 2 asks: how many times do we halve?\\\\
+    [CONCRETE] 8 items = 3 halves, 16 items = 4 halves\\\\
+    [KEY] Logarithm is the INVERSE of exponentiation}
+
+    \begin{block}{Simple Definition}
+        $\log_2(n)$ = ``How many times can we divide n by 2?''
+    \end{block}
+    \pause
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.9]
+        % Show 8 -> 4 -> 2 -> 1
+        \node[draw,minimum width=2cm] at (0,0) {8 items};
+        \draw[->,thick] (1.2,0) -- (2,0);
+        \node[draw,minimum width=1.5cm] at (3,0) {4};
+        \draw[->,thick] (3.9,0) -- (4.7,0);
+        \node[draw,minimum width=1cm] at (5.5,0) {2};
+        \draw[->,thick] (6.1,0) -- (6.9,0);
+        \node[draw,minimum width=0.8cm] at (7.5,0) {1};
+
+        \node[below] at (1.6,0) {\tiny $\div 2$};
+        \node[below] at (4.3,0) {\tiny $\div 2$};
+        \node[below] at (6.5,0) {\tiny $\div 2$};
+
+        \node[below] at (3.75,-0.8) {\textbf{3 divisions} $\rightarrow$ $\log_2(8) = 3$};
+    \end{tikzpicture}
+    \end{center}
+    \pause
+
+    \begin{exampleblock}{The Pattern}
+        \begin{tabular}{rcl}
+        $2^3 = 8$ & $\Leftrightarrow$ & $\log_2(8) = 3$ \\
+        $2^4 = 16$ & $\Leftrightarrow$ & $\log_2(16) = 4$ \\
+        $2^{10} = 1024$ & $\Leftrightarrow$ & $\log_2(1024) = 10$
+        \end{tabular}
+    \end{exampleblock}
+\end{frame}
+
+% Logarithm Growth - The Numbers
+\begin{frame}{Why Logarithms are Amazing}
+    \note{[WOW FACTOR] 1 billion items = only 30 checks!\\\\
+    [COMPARE] Linear would take 1 billion checks\\\\
+    [REAL WORLD] Google searches billions of pages in milliseconds}
+
+    \begin{center}
+    \begin{tabular}{|r|r|r|}
+    \hline
+    \textbf{n (items)} & \textbf{O(n) checks} & \textbf{O(log n) checks} \\
+    \hline
+    8 & 8 & 3 \\ \hline
+    16 & 16 & 4 \\ \hline
+    256 & 256 & 8 \\ \hline
+    1,024 & 1,024 & 10 \\ \hline
+    1,000,000 & 1,000,000 & 20 \\ \hline
+    1,000,000,000 & 1,000,000,000 & 30 \\ \hline
+    \end{tabular}
+    \end{center}
+    \pause
+
+    \begin{alertblock}{Mind-Blowing}
+        \textbf{1 billion items} with binary search = only \textbf{30 checks!}
+    \end{alertblock}
+\end{frame}
+
+% Graph: Logarithm vs Linear
+\begin{frame}{Graph: O(log n) vs O(n)}
+    \note{[VISUAL] log n barely rises while n shoots up\\\\
+    [SCALE] At n=100, linear=100 but log=7\\\\
+    [EMPHASIZE] The gap gets BIGGER as n grows}
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.65]
+        \begin{axis}[
+            xlabel={Input size (n)},
+            ylabel={Operations},
+            xmin=0, xmax=110,
+            ymin=0, ymax=110,
+            legend pos=north west,
+            grid=major,
+            width=12cm,
+            height=8cm
+        ]
+        % O(n) - linear
+        \addplot[ds9red, thick, domain=1:100, samples=50] {x};
+        \addlegendentry{O(n) linear}
+
+        % O(log n)
+        \addplot[ds9blue, thick, domain=1:100, samples=50] {ln(x)/ln(2)};
+        \addlegendentry{O(log n)}
+
+        % O(1)
+        \addplot[green!60!black, thick, dashed, domain=1:100] {1};
+        \addlegendentry{O(1) constant}
+        \end{axis}
+    \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+% Binary Search Step by Step
+\begin{frame}{Binary Search: Halving in Action}
+    \note{[TRACE] Walk through each step slowly\\\\
+    [VISUAL] Show how much we eliminate each time\\\\
+    [COUNT] 16 items but only 4 checks needed}
+
+    \textbf{Find 44 in sorted array of 16 elements:}
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.45]
+        % Step 1: Full array
+        \node[left] at (-1,0) {\tiny Step 1:};
+        \foreach \x/\val in {0/3,1/7,2/12,3/19,4/23,5/31,6/38,7/42,8/44,9/51,10/56,11/62,12/71,13/78,14/85,15/99} {
+            \ifnum\x>7
+                \draw[fill=yellow!30] (\x*0.8,0) rectangle (\x*0.8+0.75,0.6);
+            \else
+                \draw[fill=gray!20] (\x*0.8,0) rectangle (\x*0.8+0.75,0.6);
+            \fi
+            \node[font=\tiny] at (\x*0.8+0.375,0.3) {\val};
+        }
+        \node[right,font=\tiny] at (13,0.3) {check 42, go RIGHT};
+    \end{tikzpicture}
+
+    \pause
+    \begin{tikzpicture}[scale=0.45]
+        % Step 2
+        \node[left] at (-1,0) {\tiny Step 2:};
+        \foreach \x/\val in {8/44,9/51,10/56,11/62,12/71,13/78,14/85,15/99} {
+            \ifnum\x<12
+                \draw[fill=yellow!30] (\x*0.8-6.4,0) rectangle (\x*0.8+0.75-6.4,0.6);
+            \else
+                \draw[fill=gray!20] (\x*0.8-6.4,0) rectangle (\x*0.8+0.75-6.4,0.6);
+            \fi
+            \node[font=\tiny] at (\x*0.8+0.375-6.4,0.3) {\val};
+        }
+        \node[right,font=\tiny] at (7,0.3) {check 56, go LEFT};
+    \end{tikzpicture}
+
+    \pause
+    \begin{tikzpicture}[scale=0.45]
+        % Step 3
+        \node[left] at (-1,0) {\tiny Step 3:};
+        \foreach \x/\val in {8/44,9/51,10/56,11/62} {
+            \ifnum\x<10
+                \draw[fill=yellow!30] (\x*0.8-6.4,0) rectangle (\x*0.8+0.75-6.4,0.6);
+            \else
+                \draw[fill=gray!20] (\x*0.8-6.4,0) rectangle (\x*0.8+0.75-6.4,0.6);
+            \fi
+            \node[font=\tiny] at (\x*0.8+0.375-6.4,0.3) {\val};
+        }
+        \node[right,font=\tiny] at (3.5,0.3) {check 51, go LEFT};
+    \end{tikzpicture}
+
+    \pause
+    \begin{tikzpicture}[scale=0.45]
+        % Step 4: Found!
+        \node[left] at (-1,0) {\tiny Step 4:};
+        \draw[fill=green!40] (0,0) rectangle (0.75,0.6);
+        \node[font=\tiny] at (0.375,0.3) {44};
+        \node[right,font=\tiny] at (1,0.3) {\textbf{FOUND! Only 4 checks for 16 items}};
+    \end{tikzpicture}
+    \end{center}
+
+    \pause
+    \vspace{0.5em}
+    $\log_2(16) = 4$ checks \quad vs \quad Linear: up to 16 checks
+\end{frame}
+
+% Linear vs Binary Search Comparison
+\begin{frame}{Linear vs Binary Search}
+    \note{[COMPARE] Same task, very different efficiency\\\\
+    [NUMBERS] n=1000: linear checks 1000, binary checks about 10\\\\
+    [TRADEOFF] Binary is faster but requires sorted data}
+    \begin{center}
+    \includegraphics[width=0.5\textwidth,height=0.55\textheight,keepaspectratio]{binary_search_vs_linear_search_example_svg.pdf}
+    \end{center}
+
+    \begin{columns}
+        \column{0.5\textwidth}
+        \textbf{Linear Search}
+        \begin{itemize}
+            \item Works on any data
+            \item O(n) time
+        \end{itemize}
+
+        \column{0.5\textwidth}
+        \textbf{Binary Search}
+        \begin{itemize}
+            \item Requires sorted data
+            \item O(log n) time
+        \end{itemize}
+    \end{columns}
+
+    \small{Image: Wikimedia Commons}
+\end{frame}
+
 % I Do Example
 \begin{frame}[fragile]{I Do: Analyzing Linear Search}
+    \note{[I DO] Model your thinking out loud\\\\
+    [TRACE] Walk through: if x is last element, loop runs n times\\\\
+    [KEY] Count the loop - one loop over n elements = O(n)}
     \begin{block}{Problem}
         Let's analyze this linear search algorithm:
     \end{block}
+    \pause
     \begin{lstlisting}[language=C++, basicstyle=\small]
 int linearSearch(int arr[], int n, int x) {
     for(int i = 0; i < n; i++) {
@@ -167,13 +496,17 @@ int linearSearch(int arr[], int n, int x) {
 
 % We Do Example
 \begin{frame}[fragile]{We Do: Let's Analyze Together}
+    \note{[WE DO] Ask students to identify the loops first\\\\
+    [PROMPT] How many times does outer loop run? Inner loop?\\\\
+    [PATTERN] Nested loops = multiply the counts = n times n}
     \begin{block}{What's the time complexity?}
     \end{block}
+    \pause
     \begin{lstlisting}[language=C++, basicstyle=\small]
 void printPairs(int arr[], int n) {
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
-            cout << arr[i] << "," 
+            cout << arr[i] << ","
                  << arr[j] << endl;
         }
     }
@@ -184,25 +517,29 @@ void printPairs(int arr[], int n) {
         \item Let's count the operations...\pause
         \item Outer loop runs n times\pause
         \item For each outer loop, inner loop runs n times\pause
-        \item Total operations: n × n = n²
+        \item Total operations: n times n = n squared
     \end{itemize}
 \end{frame}
 
 % You Do Example
 \begin{frame}{You Do: Practice Time!}
+    \note{[YOU DO] Give 2-3 minutes for individual work\\\\
+    [CIRCULATE] Check for understanding, help struggling students\\\\
+    [DEBRIEF] Ask volunteers to explain their reasoning}
     \begin{block}{Analyze These Operations}
         Determine the Big O notation for:
     \end{block}
+    \pause
     \begin{enumerate}
-        \item Getting the first element of an array
-        \item Finding the maximum value in an unsorted array
+        \item Getting the first element of an array\pause
+        \item Finding the maximum value in an unsorted array\pause
         \item Checking if a number is even or odd
     \end{enumerate}
     \pause
     \begin{alertblock}{Solutions}
         \begin{enumerate}
-            \item O(1) - Direct access, no matter the size
-            \item O(n) - Must check every element once
+            \item O(1) - Direct access, no matter the size\pause
+            \item O(n) - Must check every element once\pause
             \item O(1) - Single operation, size independent
         \end{enumerate}
     \end{alertblock}
@@ -210,6 +547,9 @@ void printPairs(int arr[], int n) {
 
 % Big O Quick Reference Table
 \begin{frame}{Big O Quick Reference}
+    \note{[REFERENCE] Students can photograph this for studying\\\\
+    [SHOCK VALUE] Exponential = more than atoms in universe\\\\
+    [PRACTICAL] Most interview problems want O(n) or O(n log n)}
     \begin{center}
     \begin{tabular}{|l|l|l|}
     \hline
@@ -229,15 +569,18 @@ void printPairs(int arr[], int n) {
 
 % Summary
 \begin{frame}{Key Takeaways}
+    \note{[SUMMARY] Recap the 3 main complexities with hand signals\\\\
+    [CONNECT] Next lesson: sorting algorithms and their Big O\\\\
+    [EXIT TICKET] Have students write one thing they learned}
     \begin{block}{Remember These Points}
         \begin{itemize}
             \item Big O notation helps us measure efficiency\pause
-            \item Most common notations: O(1), O(n), O(n²)\pause
+            \item Most common notations: O(1), O(n), O(n squared)\pause
             \item Consider how performance changes with input size\pause
             \item Different problems require different solutions
         \end{itemize}
     \end{block}
-    
+    \pause
     \begin{alertblock}{Practice Makes Perfect}
         Try analyzing algorithms you write in your own code!
     \end{alertblock}
