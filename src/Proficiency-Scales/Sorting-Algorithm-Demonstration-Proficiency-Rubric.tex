@@ -1,0 +1,120 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+% Define proficiency colors
+\definecolor{emerging}{HTML}{E57373}
+\definecolor{developing}{HTML}{FFB74D}
+\definecolor{proficient}{HTML}{81C784}
+\definecolor{extending}{HTML}{64B5F6}
+
+% Compact list settings
+\setlist[itemize]{nosep, left=0pt, itemsep=1pt, topsep=2pt}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Proficiency box style
+\tcbset{
+  profbox/.style={
+    boxrule=0pt,
+    arc=3pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+    fonttitle=\bfseries\sffamily,
+    coltitle=black,
+    attach boxed title to top left={yshift=-2mm, xshift=4mm},
+    boxed title style={boxrule=0pt, arc=2pt}
+  }
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\sffamily Sorting Algorithm Demonstration Proficiency Rubric}\\[4pt]
+{\small\itshape Live demonstration of sorting algorithms with playing cards}
+\end{center}
+
+\vspace{8pt}
+
+\begin{multicols}{2}
+
+%% EMERGING
+\begin{tcolorbox}[profbox, colback=emerging!15, colframe=emerging!60,
+  title={\colorbox{emerging!80}{\strut\hspace{2pt}EMERGING\hspace{2pt}}}]
+\small\itshape Unable to complete the sorting process correctly for one or both algorithms
+\tcblower
+\small
+\begin{itemize}
+\item Gets stuck or uses wrong steps; cannot complete the sort without significant help
+\item Cannot explain what they are doing; moves cards without describing the process
+\item Confuses one algorithm with another or invents steps not part of the algorithm
+\item Misses scheduled demonstration without communication or refuses to attempt
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% DEVELOPING
+\begin{tcolorbox}[profbox, colback=developing!15, colframe=developing!60,
+  title={\colorbox{developing!80}{\strut\hspace{2pt}DEVELOPING\hspace{2pt}}}]
+\small\itshape Completes sorting with some errors or needs occasional prompts
+\tcblower
+\small
+\begin{itemize}
+\item Sorts cards correctly but skips steps or makes minor errors; may need a hint to continue
+\item Explains some steps but struggles to describe why comparisons or swaps happen
+\item Shows basic understanding but cannot answer follow-up questions about the algorithm
+\item Arrives late to demonstration or needs to reschedule at last minute
+\end{itemize}
+\end{tcolorbox}
+
+\columnbreak
+
+%% PROFICIENT
+\begin{tcolorbox}[profbox, colback=proficient!15, colframe=proficient!60,
+  title={\colorbox{proficient!80}{\strut\hspace{2pt}PROFICIENT\hspace{2pt}}}]
+\small\itshape Completes both algorithms correctly with clear verbal explanation
+\tcblower
+\small
+\begin{itemize}
+\item Sorts cards using correct steps for both algorithms without errors or prompts
+\item Clearly explains each step as it happens: what is being compared, why cards swap or move
+\item Answers follow-up questions correctly showing genuine understanding, not memorization
+\item Arrives on time and ready; communicates if rescheduling is needed
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% EXTENDING
+\begin{tcolorbox}[profbox, colback=extending!15, colframe=extending!60,
+  title={\colorbox{extending!80}{\strut\hspace{2pt}EXTENDING\hspace{2pt}}}]
+\small\itshape Demonstrates deep understanding and can explain algorithm behavior
+\tcblower
+\small
+\begin{itemize}
+\item Executes algorithms smoothly while explaining; identifies sorted/unsorted regions clearly
+\item Can explain edge cases: what if cards were already sorted? What if all cards were the same?
+\item Compares algorithms: explains why quick/merge sort is faster for large lists
+\item Prepared and confident; could teach the algorithm to another student
+\end{itemize}
+\end{tcolorbox}
+
+\end{multicols}
+
+\vspace{4pt}
+\noindent\small\textbf{Assessment Note:} You will demonstrate two randomly selected algorithms using 9 playing cards (2--10). One algorithm from \{bubble, selection, insertion\} and one from \{quick, merge\}. Explain each step as you sort. Be prepared for follow-up questions to show understanding.
+
+\end{document}

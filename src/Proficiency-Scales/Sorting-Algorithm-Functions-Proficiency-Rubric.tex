@@ -1,0 +1,120 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+% Define proficiency colors
+\definecolor{emerging}{HTML}{E57373}
+\definecolor{developing}{HTML}{FFB74D}
+\definecolor{proficient}{HTML}{81C784}
+\definecolor{extending}{HTML}{64B5F6}
+
+% Compact list settings
+\setlist[itemize]{nosep, left=0pt, itemsep=1pt, topsep=2pt}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Proficiency box style
+\tcbset{
+  profbox/.style={
+    boxrule=0pt,
+    arc=3pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+    fonttitle=\bfseries\sffamily,
+    coltitle=black,
+    attach boxed title to top left={yshift=-2mm, xshift=4mm},
+    boxed title style={boxrule=0pt, arc=2pt}
+  }
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\sffamily Sorting Algorithm Functions Proficiency Rubric}\\[4pt]
+{\small\itshape C++ implementations and Big-O efficiency analysis}
+\end{center}
+
+\vspace{8pt}
+
+\begin{multicols}{2}
+
+%% EMERGING
+\begin{tcolorbox}[profbox, colback=emerging!15, colframe=emerging!60,
+  title={\colorbox{emerging!80}{\strut\hspace{2pt}EMERGING\hspace{2pt}}}]
+\small\itshape Missing algorithms or major errors in code and analysis
+\tcblower
+\small
+\begin{itemize}
+\item Fewer than 5 algorithms completed; code has major errors or does not compile
+\item Big-O values incorrect for most cases; explanations missing or wrong
+\item Bubble sort line-by-line analysis missing or shows no understanding of counting operations
+\item Submits more than 3 days late, wrong format, or major sections left empty
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% DEVELOPING
+\begin{tcolorbox}[profbox, colback=developing!15, colframe=developing!60,
+  title={\colorbox{developing!80}{\strut\hspace{2pt}DEVELOPING\hspace{2pt}}}]
+\small\itshape All algorithms attempted but code or analysis has errors
+\tcblower
+\small
+\begin{itemize}
+\item All 5 functions written but some have bugs or do not sort correctly
+\item Big-O values mostly correct but explanations are vague or incomplete
+\item Bubble sort analysis attempted but line counts or Big-O per line has errors
+\item Submits 1--2 days late or last-minute extension; most sections filled but rushed
+\end{itemize}
+\end{tcolorbox}
+
+\columnbreak
+
+%% PROFICIENT
+\begin{tcolorbox}[profbox, colback=proficient!15, colframe=proficient!60,
+  title={\colorbox{proficient!80}{\strut\hspace{2pt}PROFICIENT\hspace{2pt}}}]
+\small\itshape All algorithms work correctly with accurate Big-O analysis
+\tcblower
+\small
+\begin{itemize}
+\item All 5 sorting functions compile and sort arrays correctly
+\item Big-O tables complete with correct values and clear explanations for best/average/worst
+\item Bubble sort line-by-line analysis correctly counts operations and derives total Big-O
+\item Submits on time as notebook, communicates delays, helper functions included where needed
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% EXTENDING
+\begin{tcolorbox}[profbox, colback=extending!15, colframe=extending!60,
+  title={\colorbox{extending!80}{\strut\hspace{2pt}EXTENDING\hspace{2pt}}}]
+\small\itshape Deep understanding shown through code quality and insightful analysis
+\tcblower
+\small
+\begin{itemize}
+\item Code is clean, well-commented, and uses efficient implementations (e.g., early exit in bubble sort)
+\item Explanations connect Big-O to algorithm behavior: why best case differs from worst case
+\item Line-by-line analysis shows understanding of nested loops and how input size affects runtime
+\item Submits quality work early; could explain the analysis to another student
+\end{itemize}
+\end{tcolorbox}
+
+\end{multicols}
+
+\vspace{4pt}
+\noindent\small\textbf{Assessment Note:} Complete the notebook with working C++ functions for all 5 sorting algorithms. Fill in the Big-O summary tables with best, average, and worst case analysis. Bubble sort requires a detailed line-by-line analysis showing how you calculated the total Big-O.
+
+\end{document}
