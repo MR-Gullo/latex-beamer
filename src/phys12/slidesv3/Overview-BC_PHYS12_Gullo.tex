@@ -1,0 +1,610 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{background}
+\usepackage{amssymb}
+
+% Background image setup
+\backgroundsetup{
+    scale=0.4,
+    opacity=0.08,
+    angle=0,
+    position=current page.center,
+    contents={\includegraphics{media/overview_image1.jpeg}}
+}
+
+% Colors - MR-GULLO Brand
+\definecolor{darkgray}{RGB}{37, 36, 34}
+\definecolor{mediumgray}{RGB}{64, 61, 57}
+\definecolor{offwhite}{RGB}{255, 252, 242}
+\definecolor{accentorange}{RGB}{235, 94, 40}
+\definecolor{lightgray}{RGB}{204, 197, 185}
+\definecolor{headerblue}{RGB}{37, 36, 34}
+% Row colors removed for transparency - background shows through tables
+\definecolor{bcblue}{RGB}{0, 51, 102}
+
+% tcolorbox styles
+\tcbset{
+    sharp corners,
+    boxrule=0pt,
+    left=8pt,
+    right=8pt,
+    top=6pt,
+    bottom=6pt
+}
+
+% Section formatting
+\titleformat{\section}
+    {\large\bfseries\color{darkgray}}
+    {}
+    {0pt}
+    {\raisebox{0pt}[0pt][0pt]{\textcolor{accentorange}{\rule[-2pt]{3pt}{14pt}}}\hspace{8pt}}
+\titleformat{\subsection}{\normalsize\bfseries\color{darkgray}}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{2ex plus 1ex minus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+\setcounter{secnumdepth}{0}
+
+% List styling
+\setlist{nosep, leftmargin=1.5em}
+\setlist[itemize]{label=\textcolor{lightgray}{\scriptsize$\blacktriangleright$}}
+\setlist[enumerate]{label=\textcolor{accentorange}{\arabic*.}}
+
+% Table styling
+\renewcommand{\arraystretch}{1.4}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\hypersetup{colorlinks=true, linkcolor=accentorange, urlcolor=accentorange}
+
+\begin{document}
+
+% Title Header with Logos
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+    \centering
+    \begin{minipage}{0.2\textwidth}
+        \centering
+        \includegraphics[height=1.2cm]{media/overview_image3.png}
+    \end{minipage}%
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        {\color{white}\Large\bfseries Shanghai Nanyang Model Private School}\\[0.2em]
+        {\color{white!80}\small (BC OFFSHORE PROGRAM)}\\[0.5em]
+        {\color{accentorange}\LARGE\bfseries PHYSICS 12 Annual Plan}\\[0.3em]
+        {\color{white}\large 2025--2026}
+    \end{minipage}%
+    \begin{minipage}{0.2\textwidth}
+        \centering
+        \includegraphics[height=1.2cm]{media/overview_image4.jpeg}
+    \end{minipage}
+\end{tcolorbox}
+
+\vspace{0.5em}
+\small
+\textbf{Link to Curriculum:} \url{https://curriculum.gov.bc.ca/sites/curriculum.gov.bc.ca/files/curriculum/science/en_science_12_physics_elab.pdf}
+
+% Course Synopsis
+\begin{tcolorbox}[colback=white, colframe=accentorange, leftrule=4pt, rightrule=0pt, toprule=0pt, bottomrule=0pt, opacityback=0.85]
+\textbf{\faBook\hspace{0.5em}Course Synopsis}\\[0.3em]
+The course starts from where Physics 11 left off with the study of motion. Students will explore dynamics, circular motion, energy, electricity and magnetism. The course requires a strong foundation in mathematics. The course emphasizes problem-solving and exploration.
+\end{tcolorbox}
+
+% Big Ideas
+\section{Big Ideas}
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\hline
+\rowcolor{headerblue}\multicolumn{4}{|c|}{\textcolor{white}{\textbf{Big Ideas}}} \\
+\hline
+Measurement of motion depends on our frame of reference. &
+Forces can cause linear and circular motion. &
+Forces and energy interactions occur within fields. &
+Momentum is conserved within a closed and isolated system. \\
+\hline
+\end{tabularx}
+
+% Core Competencies, Curricular Competencies, Content
+\section{Competencies \& Content}
+
+\begin{tabularx}{\textwidth}{|L{0.28\textwidth}|L{0.38\textwidth}|L{0.28\textwidth}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Core Competencies}} &
+\textcolor{white}{\textbf{Curricular Competencies}} &
+\textcolor{white}{\textbf{Content}} \\
+\hline
+\textbf{Communication}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Connect and engage with others
+\item Acquire, interpret, and present information
+\item Collaborate to plan, carry out, and review activities
+\item Explain/recount and reflect on experiences
+\end{itemize}
+
+\textbf{Creative Thinking}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Novelty and value
+\item Generating ideas
+\item Developing ideas
+\end{itemize}
+
+\textbf{Critical Thinking}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Analyze and critique
+\item Question and investigate
+\item Develop and design
+\end{itemize}
+
+\textbf{Personal \& Cultural Identity}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Relationship and cultural contexts
+\item Personal values and choice
+\item Personal strengths and abilities
+\end{itemize}
+
+\textbf{Personal Awareness \& Responsibility}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Self-determination
+\item Self-regulation
+\item Well-being
+\end{itemize}
+
+\textbf{Social Responsibility}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Contributing to community
+\item Solving problems peacefully
+\item Valuing diversity
+\item Building relationships
+\end{itemize}
+&
+\textbf{Questioning and predicting}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Demonstrate sustained intellectual curiosity
+\item Make observations to identify questions
+\item Formulate multiple hypotheses
+\end{itemize}
+
+\textbf{Planning and conducting}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Plan and use appropriate investigation methods
+\item Assess risks and address ethical issues
+\item Use appropriate SI units and equipment
+\item Apply accuracy and precision concepts
+\end{itemize}
+
+\textbf{Processing and analyzing}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Experience and interpret local environment
+\item Apply First Peoples perspectives
+\item Seek patterns, trends, and connections
+\item Construct, analyze, and interpret graphs
+\item Draw evidence-based conclusions
+\item Analyze cause-and-effect relationships
+\end{itemize}
+
+\textbf{Evaluating}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Evaluate methods and identify sources of error
+\item Describe ways to improve investigations
+\item Evaluate validity and limitations of models
+\item Demonstrate awareness of assumptions and bias
+\item Connect scientific explorations to careers
+\end{itemize}
+
+\textbf{Applying and innovating}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Contribute to care for self, others, community
+\item Transfer and apply learning to new situations
+\item Generate new ideas when problem solving
+\end{itemize}
+
+\textbf{Communicating}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Formulate theoretical models
+\item Communicate scientific ideas with evidence
+\item Reflect on experiences and worldviews
+\end{itemize}
+&
+\textbf{Students are expected to know:}
+\begin{itemize}[leftmargin=1em, nosep]
+\item Frames of reference
+\item Relative motion within a stationary reference frame
+\item Postulates of special relativity
+\item Relativistic effects within a moving reference frame
+\item Static equilibrium
+\item Uniform circular motion: centripetal force and acceleration
+\item Changes to apparent weight
+\item First Peoples knowledge and applications of forces
+\item Gravitational field and Newton's law of universal gravitation
+\item Gravitational potential energy
+\item Gravitational dynamics and energy relationships
+\item Electric field and Coulomb's law
+\item Electric potential energy, potential, and potential difference
+\item Electrostatic dynamics and energy relationships
+\item Magnetic field and magnetic force
+\item Electromagnetic induction
+\item Applications of electromagnetic induction
+\item Impulse and momentum
+\item Conservation of momentum and energy in collisions
+\item Graphical methods in physics
+\end{itemize}
+\\
+\hline
+\end{tabularx}
+
+\newpage
+
+% English Language Strategies & Indigenous Learning
+\section{English Language Strategies, Indigenous Learning, Timeline}
+
+\begin{tabularx}{\textwidth}{|L{0.22\textwidth}|X|}
+\hline
+\textbf{English Language Strategies} &
+\begin{itemize}[leftmargin=1em, nosep, topsep=2pt]
+\item Vocabulary words highlighted and practiced
+\item Assessments include vocabulary and language components
+\item Large projects scaffolded with checkpoints
+\item Oral speaking through discussions, think-pair-share, group work
+\item Materials supported by high quality visuals
+\item Lecture notes (animated PowerPoints) available online
+\item Foster open and safe environment for speaking
+\end{itemize}
+\\
+\hline
+\textcolor{darkgray}{\textbf{Indigenous Learning}} &
+\begin{itemize}[leftmargin=1em, nosep, topsep=2pt]
+\item First People's principles embedded throughout course
+\item Learning process: holistic, reflexive, reflective, experiential, relational
+\item Focused on connectedness, reciprocal relationships, sense of place
+\item Learning involves patience and time; learning is different for everyone
+\end{itemize}
+\\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Timeline
+\section{Timeline}
+\begin{tabularx}{\textwidth}{|C{1.2cm}|X|C{2cm}|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Unit}} & \textcolor{white}{\textbf{Title}} & \textcolor{white}{\textbf{Month}} \\
+\hline
+1 & Introduction to Physics and Kinematics & September \\
+\hline
+2 & Dynamics: Forces and Newton's Laws & October \\
+\hline
+3 & Work, Energy and Power & November \\
+\hline
+4 & Momentum and Conservation Laws & December \\
+\hline
+5 & Circular Motion and Gravitation & February \\
+\hline
+6 & Electrostatics and Electric Fields & March \\
+\hline
+7 & Electric Circuits and Electromotive Force & April \\
+\hline
+8 & Magnetism and Electromagnetic Induction & May \\
+\hline
+9 & Special Relativity & June \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Summary of Assessment
+\section{Summary of Assessment}
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Formative Assessments}} &
+\textcolor{white}{\textbf{Self Evaluations}} &
+\textcolor{white}{\textbf{Summative Assessments}} \\
+\hline
+\begin{itemize}[leftmargin=1em, nosep]
+\item Circulating during conceptual questions
+\item Gauging needs based on common homework questions
+\item Verbal checks for understanding
+\item Vocabulary: classroom challenge questions
+\item Homework checks as needed
+\item Demos/conversations
+\end{itemize}
+&
+\begin{itemize}[leftmargin=1em, nosep]
+\item During lectures: students try questions before teacher
+\item Answer keys for pre-tests and tests for self-corrections
+\item Core competency self reflections
+\end{itemize}
+&
+\begin{itemize}[leftmargin=1em, nosep]
+\item Unit tests
+\item Midterm and Final Exams
+\item Student submissions for activities and projects
+\item Labs
+\end{itemize}
+\\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Assessment Weighting
+\section{Assessment Weighting}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\rowcolor{headerblue}
+\textcolor{white}{\textbf{Category}} & \textcolor{white}{\textbf{Weight}} \\
+\hline
+Quizzes & 15\% \\
+\hline
+Unit Tests & 30\% \\
+\hline
+Labs and Activities & 15\% \\
+\hline
+Homework & 10\% \\
+\hline
+Midterm & 10\% \\
+\hline
+Final Exam & 20\% \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% Unit Overviews
+\section{Unit Overviews}
+
+% Unit 1
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 1: Kinematics}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+How can uniform motion and uniform acceleration be modelled?\newline
+When are measurements considered to be relative?\newline
+How is vector addition different from scalar addition? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Design experiment to plot distance vs height\newline
+\textbf{Critical Thinking:} Limits of scientific models &
+\textbf{Vector/scalar:}\newline
+- Addition and subtraction\newline
+- Right-angle triangle\newline
+\textbf{Uniform/accelerated motion:}\newline
+- Graphical and quantitative\newline
+\textbf{Projectile motion:}\newline
+- Vertical, horizontal, angled launch &
+\textbf{Assessments:} Quiz, unit tests, project, lab\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Water balloon launcher \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 2
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 2: Newton's Laws}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+How can forces change motion?\newline
+How can Newton's laws explain changes in motion? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Design water balloon launch experiment\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Contact forces:} normal, spring, tension, friction\newline
+\textbf{Newton's laws of motion}\newline
+\textbf{Forces in systems:}\newline
+- One-body and multi-body systems\newline
+- Inclined planes\newline
+- Angled forces\newline
+- Elevators &
+\textbf{Assessments:} Quiz, unit tests, project\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Elevator acceleration experiment with scale \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 3
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 3: Equilibrium}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+When is an object in equilibrium?\newline
+What are the implications for building structures? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Design experiment to plot distance vs height\newline
+\textbf{Critical Thinking:} Limits of scientific models &
+\textbf{Static equilibrium:}\newline
+- Translational: sum of all forces equals zero (vertical and horizontal)\newline
+- Rotational: sum of all torques equals zero, location of centre of gravity of a uniform body &
+\textbf{Assessments:} Quiz, unit tests, project, lab\newline
+\textbf{ESL:} Review Grade 10 vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Torque lab \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 4
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 4: Uniform Circular Motion}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+Why do you feel a sideways sliding motion when you speed around a corner?\newline
+Why must the ``orbiting electron'' model of the atom be false? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Design a pendulum experiment\newline
+\textbf{Critical Thinking:} Limits of scientific models &
+\textbf{Uniform circular motion:} both horizontal and vertical circles\newline
+\textbf{Changes to apparent weight:} vertical and horizontal circles &
+\textbf{Assessments:} Quiz, unit tests, projects\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Lab:} Pendulum Lab \\
+\hline
+\end{tabularx}
+
+\newpage
+
+% Unit 5
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 5: Fields and Forces}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+Why is gravity considered a fundamental force?\newline
+Explain similarities and differences between electrostatic and gravitational force.\newline
+How are electric fields similar to magnetic and gravitational fields?\newline
+What is the relationship between the moon orbiting Earth and an apple falling? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Gravitational field:}\newline
+- Vector field, interacts with mass\newline
+- Attractive only\newline
+- Gravitational dynamics: satellite motion, orbits, escape velocity\newline
+\textbf{Electric field:}\newline
+- Vector field, interacts with charge\newline
+- Attractive or repulsive\newline
+- Point charges and parallel plates\newline
+\textbf{Magnetic field:}\newline
+- Induced by moving charges\newline
+- Permanent magnets, wires, solenoids\newline
+\textbf{Magnetic force:}\newline
+- On moving charge or current-carrying wire\newline
+- Right-hand rules &
+\textbf{Assessments:} Quiz, unit test, project\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Activity:} 7E Phases for Science Fair topics \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 6
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 6: Energy in Fields and Interactions}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+How can a conductor and a magnet be used to generate electricity?\newline
+How are electric fields similar to gravitational fields? &
+\textbf{Communication:} Lab report writing\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Gravitational dynamics:} satellite motion, orbit changes, launch/escape velocity\newline
+\textbf{Electrostatic dynamics:}\newline
+- Force, charge, distance relationships\newline
+- 1D and 2D with other charges\newline
+- In orbits, between parallel plates\newline
+- Conservation of energy applications (CRT, mass spectrometer, particle accelerator)\newline
+\textbf{Electromagnetic induction:}\newline
+- Faraday's law, Lenz's law\newline
+- Current induced by changing magnetic flux\newline
+\textbf{Applications:} back EMF, DC motors, generators, transformers &
+\textbf{Assessments:} Quizzes, unit test, Electricity Lab\newline
+\textbf{ESL:} Review vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Activity:} 7E Phases for Science Fair \\
+\hline
+\end{tabularx}
+
+\vspace{1em}
+
+% Unit 8
+\begin{tcolorbox}[colback=headerblue, colframe=headerblue, width=\textwidth, arc=0mm]
+\centering{\color{white}\large\bfseries Unit 8: Special Relativity}
+\end{tcolorbox}
+\vspace{-0.5em}
+\begin{tabularx}{\textwidth}{|L{0.18\textwidth}|L{0.32\textwidth}|L{0.18\textwidth}|L{0.26\textwidth}|}
+\hline
+\cellcolor{headerblue}\textcolor{white}{\textbf{Big Idea(s)}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Core Competencies}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Content}} &
+\cellcolor{headerblue}\textcolor{white}{\textbf{Activities}} \\
+\hline
+What are the implications of the theory of special relativity? &
+\textbf{Communication:} Research project\newline
+\textbf{Personal Awareness:} Set realistic goals, persevere\newline
+\textbf{Creativity:} Build skills to make ideas work\newline
+\textbf{Critical Thinking:} Consider alternative approaches &
+\textbf{Relativistic effects:}\newline
+- Changes in time\newline
+- Changes in length\newline
+- Changes in mass &
+\textbf{Assessments:} Quiz, unit tests\newline
+\textbf{ESL:} Review Grade 10 vocabulary\newline
+\textbf{Indigenous:} As outlined above\newline
+\textbf{Activity:} Research project \\
+\hline
+\end{tabularx}
+
+\end{document}

@@ -1,14 +1,16 @@
 \documentclass{beamer}
 % Use DS9 global theme
-\usepackage{../../../../shared/templates/ds9_theme}
+\usepackage{../../../shared/templates/ds9_theme}
 \definecolor{ds9blue}{HTML}{0066CC}
 \definecolor{ds9red}{HTML}{CC0000}
+\definecolor{ds9grey}{HTML}{666666}
 
 % Additional packages for algorithms
 \usepackage{listings}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{multimedia}  % For pdfpc video playback
+\usepackage[overridenote]{pdfpc}  % Speaker notes for pdfpc
 \graphicspath{{images/}}
 
 % Title page configuration
@@ -37,12 +39,15 @@
 \begin{frame}{Learning Objectives}
 \begin{block}{After this presentation, you will:}
 \begin{itemize}
-\item Understand five different sorting algorithms
-\item Be able to implement each sorting algorithm in C++
-\item Know the advantages and disadvantages of each method
+\item Understand five different sorting algorithms \pause
+\item Be able to implement each sorting algorithm in C++ \pause
+\item Know the advantages and disadvantages of each method \pause
 \item Recognize the time complexity of different algorithms
 \end{itemize}
 \end{block}
+\note{[P0] Today: 5 sorting algorithms, simple to advanced\\\\
+Focus on UNDERSTANDING, not memorizing code\\\\
+Ask: "Who's sorted cards by hand?" - that's insertion sort}
 \end{frame}
 
 \begin{frame}[fragile]{Helper Function: swap()}
@@ -62,25 +67,27 @@ void swap(int &a, int &b) {
 Without \texttt{\&}, changes stay inside the function.\\
 With \texttt{\&}, we modify the \textbf{original} variables.
 \end{alertblock}
-\note{[THE BUG] Without \&, swap does nothing to original array\\\\
+\note{[THE BUG] Without &, swap does nothing to original array\\\\
 [THE PATTERN] Pass-by-reference lets functions modify caller's data\\\\
-[DEBUG] Try removing \& and watch the sort fail}
+[DEBUG] Try removing & and watch the sort fail}
 \end{frame}
 
 \begin{frame}{Initial Array}
 \begin{block}{Numbers to Sort}
 Our example will use these 9 numbers: [7, 2, 9, 4, 5, 8, 3, 6, 10]
 \end{block}
+\note{[P0] Same array for all algorithms - compare behavior\\\\
+Ask students to predict: which will need most swaps?}
 \end{frame}
 
 \begin{frame}[fragile]{Bubble Sort: The Code}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Compares adjacent elements and swaps if needed
+\item Compares adjacent elements and swaps if needed \pause
 \item Largest element "bubbles" to the end each pass
 \end{itemize}
 \end{block}
-
+\pause
 \begin{lstlisting}
 void bubbleSort(int arr[], int n) {
     for (int i = 0; i < n-1; i++)        // n-1 passes
@@ -97,9 +104,13 @@ void bubbleSort(int arr[], int n) {
 \begin{frame}{Bubble Sort: Trace Through}
 \begin{exampleblock}{Let's Trace: arr = [5, 3, 8, 1]}
 \textbf{Pass 1:} Compare adjacent, swap if needed\\
-[5,3,8,1] $\rightarrow$ [\textbf{3,5},8,1] $\rightarrow$ [3,5,8,1] $\rightarrow$ [3,5,\textbf{1,8}]\\[0.2cm]
+[5,3,8,1] $\rightarrow$ [\textbf{3,5},8,1] $\rightarrow$ [3,5,8,1] $\rightarrow$ [3,5,\textbf{1,8}]
+\pause
+\\[0.2cm]
 \textbf{Pass 2:} 8 is in place, work on first 3\\
-[3,5,1,8] $\rightarrow$ [3,5,1,8] $\rightarrow$ [3,\textbf{1,5},8]\\[0.2cm]
+[3,5,1,8] $\rightarrow$ [3,5,1,8] $\rightarrow$ [3,\textbf{1,5},8]
+\pause
+\\[0.2cm]
 \textbf{Pass 3:} [3,1,5,8] $\rightarrow$ [\textbf{1,3},5,8] \checkmark
 \end{exampleblock}
 \note{[THE PATTERN] After pass i, the last i elements are sorted\\\\
@@ -116,16 +127,19 @@ void bubbleSort(int arr[], int n) {
 \begin{block}{Watch}
 Adjacent elements swap until largest "bubbles" to the end.
 \end{block}
+\note{[P0] Watch largest element bubble to right each pass\\\\
+Count swaps - bubble sort does MANY\\\\
+Ask: "Why called bubble?" - big values rise like bubbles}
 \end{frame}
 
 \begin{frame}[fragile]{Selection Sort: The Code}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Find minimum in unsorted region
+\item Find minimum in unsorted region \pause
 \item Swap it to the front of unsorted region
 \end{itemize}
 \end{block}
-
+\pause
 \begin{lstlisting}
 void selectionSort(int arr[], int n) {
     for (int i = 0; i < n-1; i++) {
@@ -137,22 +151,26 @@ void selectionSort(int arr[], int n) {
     }
 }
 \end{lstlisting}
-\note{[TRACE] min\_idx tracks POSITION, not value\\\\
-[THE BUG] Don't confuse arr[min\_idx] (value) with min\_idx (position)\\\\
-[COMPLEXITY] O(n²) - always scans entire unsorted portion}
+\note{[TRACE] min_idx tracks POSITION, not value\\\\
+[THE BUG] Don't confuse arr[min_idx] (value) with min_idx (position)\\\\
+[COMPLEXITY] O(n squared) - always scans entire unsorted portion}
 \end{frame}
 
 \begin{frame}{Selection Sort: Trace Through}
 \begin{exampleblock}{Let's Trace: arr = [5, 3, 8, 1]}
 \textbf{i=0:} Find min in [5,3,8,1] $\rightarrow$ min\_idx=3 (value 1)\\
-Swap arr[3] with arr[0]: [\textbf{1},3,8,\textbf{5}]\\[0.2cm]
+Swap arr[3] with arr[0]: [\textbf{1},3,8,\textbf{5}]
+\pause
+\\[0.2cm]
 \textbf{i=1:} Find min in [3,8,5] $\rightarrow$ min\_idx=1 (value 3)\\
-Swap arr[1] with arr[1]: [1,\textbf{3},8,5] (no change)\\[0.2cm]
+Swap arr[1] with arr[1]: [1,\textbf{3},8,5] (no change)
+\pause
+\\[0.2cm]
 \textbf{i=2:} Find min in [8,5] $\rightarrow$ min\_idx=3 (value 5)\\
 Swap arr[3] with arr[2]: [1,3,\textbf{5},\textbf{8}] \checkmark
 \end{exampleblock}
 \note{[THE PATTERN] After i iterations, first i elements are sorted\\\\
-[DEBUG] Print min\_idx after inner loop to verify}
+[DEBUG] Print min_idx after inner loop to verify}
 \end{frame}
 
 \begin{frame}{Selection Sort Animation}
@@ -165,16 +183,19 @@ Swap arr[3] with arr[2]: [1,3,\textbf{5},\textbf{8}] \checkmark
 \begin{block}{Watch}
 Find the minimum, swap to front. Repeat for remaining unsorted portion.
 \end{block}
+\note{[P0] Selection does exactly n-1 swaps regardless of input\\\\
+Contrast with bubble: fewer swaps but same comparisons\\\\
+Good when swaps are expensive (large objects)}
 \end{frame}
 
 \begin{frame}[fragile]{Insertion Sort: The Code}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Take element, slide it left until correct position
+\item Take element, slide it left until correct position \pause
 \item Like sorting cards in your hand
 \end{itemize}
 \end{block}
-
+\pause
 \begin{lstlisting}
 void insertionSort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
@@ -196,9 +217,13 @@ void insertionSort(int arr[], int n) {
 \begin{frame}{Insertion Sort: Trace Through}
 \begin{exampleblock}{Let's Trace: arr = [5, 3, 8, 1]}
 \textbf{i=1:} key=3, compare with 5, shift 5 right\\
-{[}5,\underline{5},8,1] $\rightarrow$ insert key: [\textbf{3},5,8,1]\\[0.2cm]
+{[}5,\underline{5},8,1] $\rightarrow$ insert key: [\textbf{3},5,8,1]
+\pause
+\\[0.2cm]
 \textbf{i=2:} key=8, compare with 5, 8>5 so stop\\
-{[}3,5,\textbf{8},1] (no shifts needed)\\[0.2cm]
+{[}3,5,\textbf{8},1] (no shifts needed)
+\pause
+\\[0.2cm]
 \textbf{i=3:} key=1, shift 8,5,3 all right\\
 {[}3,5,8,\underline{8}] $\rightarrow$ [3,5,\underline{5},8] $\rightarrow$ [3,\underline{3},5,8] $\rightarrow$ [\textbf{1},3,5,8] \checkmark
 \end{exampleblock}
@@ -216,16 +241,20 @@ void insertionSort(int arr[], int n) {
 \begin{block}{Watch}
 Each element slides into its correct position in the sorted portion.
 \end{block}
+\note{[P0] Best for nearly-sorted data - O(n) in best case!\\\\
+"Sorting cards" analogy: pick up one, slide into place\\\\
+Only O(n²) algorithm that's adaptive}
 \end{frame}
 
 \begin{frame}[fragile]{Merge Sort: The Concept}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Divide and conquer approach
-\item Splits array in half recursively
+\item Divide and conquer approach \pause
+\item Splits array in half recursively \pause
 \item Merges sorted halves back together
 \end{itemize}
 \end{block}
+\pause
 Time complexity: O(n log n) - consistent performance
 \note{[P0] "Merge sort uses divide and conquer"\\\\
 [THE PATTERN] Split problem in half, solve each half, combine solutions}
@@ -283,16 +312,20 @@ Split: [7,2] and [9,4] $\rightarrow$ [2,7] and [4,9] $\rightarrow$ [2,4,7,9]
 \begin{block}{Watch}
 Split, sort, merge. The "divide and conquer" strategy in action.
 \end{block}
+\note{[P0] First O(n log n) algorithm - BIG improvement\\\\
+Notice: split phase does nothing, merge does all work\\\\
+Tradeoff: needs extra memory for temp arrays}
 \end{frame}
 
 \begin{frame}[fragile]{Quick Sort: The Concept}
 \begin{block}{Algorithm Description}
 \begin{itemize}
-\item Choose a pivot element
-\item Partition: smaller elements left, larger elements right
+\item Choose a pivot element \pause
+\item Partition: smaller elements left, larger elements right \pause
 \item Recursively sort the partitions
 \end{itemize}
 \end{block}
+\pause
 Time complexity: O(n log n) average, O(n²) worst case
 \note{[P0] "Quick sort is usually the fastest in practice"\\\\
 [THE BUG] Worst case O(n²) happens when pivot is always min or max}
@@ -314,6 +347,7 @@ int partition(int arr[], int low, int high) {
     return i + 1;  // Return pivot's final position
 }
 \end{lstlisting}
+\pause
 \begin{alertblock}{Note: Lomuto vs Hoare}
 This is \textbf{Lomuto partition} (simpler). \textbf{Hoare partition} uses two pointers and is ~3x faster but harder to trace.
 \end{alertblock}
@@ -352,6 +386,9 @@ Pivot=4: [2] 4 [7,9] $\rightarrow$ [2] 4 [7] 9 $\rightarrow$ [2,4,7,9]
 \begin{block}{Watch}
 Pick pivot, partition, recurse. Generally the fastest in practice.
 \end{block}
+\note{[P0] Most-used sort in practice - C++ sort() uses it\\\\
+Opposite of merge: partition does work, merge trivial\\\\
+Watch how pivot choice affects performance}
 \end{frame}
 
 % Continue with remaining frames similarly...
@@ -359,25 +396,31 @@ Pick pivot, partition, recurse. Generally the fastest in practice.
 \begin{frame}{Time Complexity Comparison}
 \begin{block}{Time Complexity}
 \begin{itemize}
-\item Bubble Sort: O(n²)
-\item Selection Sort: O(n²)
-\item Insertion Sort: O(n²)
-\item Quick Sort: O(n log n) average, O(n²) worst case
+\item Bubble Sort: O(n²) \pause
+\item Selection Sort: O(n²) \pause
+\item Insertion Sort: O(n²) \pause
+\item Quick Sort: O(n log n) average, O(n²) worst case \pause
 \item Merge Sort: O(n log n)
 \end{itemize}
 \end{block}
+\note{[P0] O(n²) vs O(n log n): 1000 elements = 1M vs 10K operations\\\\
+Why quick over merge? Cache-friendly, in-place\\\\
+Ask: "When would you choose insertion sort?" - small/nearly sorted}
 \end{frame}
 
 \begin{frame}{Summary}
 \begin{block}{Key Points}
 \begin{itemize}
-\item Bubble Sort: Simple but inefficient
-\item Selection Sort: Simple and performs well on small lists
-\item Insertion Sort: Efficient for small data sets
-\item Quick Sort: Generally the fastest in practice
+\item Bubble Sort: Simple but inefficient \pause
+\item Selection Sort: Simple and performs well on small lists \pause
+\item Insertion Sort: Efficient for small data sets \pause
+\item Quick Sort: Generally the fastest in practice \pause
 \item Merge Sort: Consistent performance but requires extra space
 \end{itemize}
 \end{block}
+\note{[P0] Real world: sort() uses introsort (quick+heap+insertion)\\\\
+Interview prep: know bubble/selection/insertion by heart\\\\
+Next class: implement one algorithm from scratch}
 \end{frame}
 
 \end{document}
