@@ -1,0 +1,116 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+% Define proficiency colors
+\definecolor{emerging}{HTML}{E57373}
+\definecolor{developing}{HTML}{FFB74D}
+\definecolor{proficient}{HTML}{81C784}
+\definecolor{extending}{HTML}{64B5F6}
+
+% Compact list settings
+\setlist[itemize]{nosep, left=0pt, itemsep=1pt, topsep=2pt}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries\sffamily}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Proficiency box style
+\tcbset{
+  profbox/.style={
+    boxrule=0pt,
+    arc=3pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+  }
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\sffamily Graded Study Block Proficiency Rubric}\\[4pt]
+{\small\itshape English-only practice: engagement, behavior, and language use}
+\end{center}
+
+\vspace{8pt}
+
+\begin{multicols}{2}
+
+%% EMERGING
+\begin{tcolorbox}[profbox, colback=emerging!15, colframe=emerging!60]
+{\large\bfseries\sffamily EMERGING}\\[2pt]
+\small\itshape Major behavior issues prevent productive study and English practice.
+\tcblower
+\small
+\begin{itemize}
+\item Sleeps or rests head on desk during study time
+\item Refuses to speak English after reminders; misses practice opportunities
+\item Uses AI in native language instead of practicing English communication
+\item Completely off-task: gaming, social media, or unrelated activities
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% DEVELOPING
+\begin{tcolorbox}[profbox, colback=developing!15, colframe=developing!60]
+{\large\bfseries\sffamily DEVELOPING}\\[2pt]
+\small\itshape Needs frequent reminders to stay on task and use English.
+\tcblower
+\small
+\begin{itemize}
+\item Sometimes slips into native language; switches to English when reminded
+\item Sometimes off-task but returns to work when prompted
+\item Volume too loud; disrupts nearby students
+\item Uses AI but makes some effort to practice English communication
+\end{itemize}
+\end{tcolorbox}
+
+\columnbreak
+
+%% PROFICIENT
+\begin{tcolorbox}[profbox, colback=proficient!15, colframe=proficient!60]
+{\large\bfseries\sffamily PROFICIENT}\\[2pt]
+\small\itshape Stays on task and communicates in English with minor lapses.
+\tcblower
+\small
+\begin{itemize}
+\item Uses English for all communication; rare single-word slips only
+\item Stays focused on study materials throughout the block
+\item Maintains appropriate volume; does not disturb others
+\item Uses AI appropriately in English to support learning
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{6pt}
+
+%% EXTENDING
+\begin{tcolorbox}[profbox, colback=extending!15, colframe=extending!60]
+{\large\bfseries\sffamily EXTENDING}\\[2pt]
+\small\itshape Fully engaged; models excellent English communication for peers.
+\tcblower
+\small
+\begin{itemize}
+\item Speaks only English; encourages classmates to use English too
+\item Actively engaged: asking questions, helping peers, practicing skills
+\item Works quietly and productively; contributes to positive atmosphere
+\item Uses English to explain concepts to classmates who need help
+\end{itemize}
+\end{tcolorbox}
+
+\end{multicols}
+
+\vspace{4pt}
+\noindent\small\textbf{Note:} Everyone starts at 100\%. Points are deducted for off-task behavior, excessive noise, not practicing English, sleeping, or misusing AI. Use English for all communication.
+
+\end{document}
